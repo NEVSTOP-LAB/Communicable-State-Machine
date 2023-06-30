@@ -11,20 +11,14 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
-		<Item Name="Build State String with Arguments Plus.vi" Type="VI" URL="../Build State String with Arguments Plus.vi"/>
-		<Item Name="Def-Cross JKI StateMachine State Data.ctl" Type="VI" URL="../Def-Cross JKI StateMachine State Data.ctl"/>
-		<Item Name="Def-Cross JKI StateMachine State Response.ctl" Type="VI" URL="../Def-Cross JKI StateMachine State Response.ctl"/>
-		<Item Name="Parse State Queue Plus.vi" Type="VI" URL="../Parse State Queue Plus.vi"/>
 		<Item Name="JKI State Machine A.vi" Type="VI" URL="../JKI State Machine A.vi"/>
 		<Item Name="JKI State Machine B.vi" Type="VI" URL="../JKI State Machine B.vi"/>
 		<Item Name="JKI State Machine++.vi" Type="VI" URL="../JKI State Machine++.vi"/>
 		<Item Name="Untitled 2.vi" Type="VI" URL="../Untitled 2.vi"/>
-		<Item Name="_Create Data Queeue.vi" Type="VI" URL="../_Create Data Queeue.vi"/>
-		<Item Name="_Create Resp Queeue.vi" Type="VI" URL="../_Create Resp Queeue.vi"/>
+		<Item Name="JKI-State-Machine-Plus.lvlib" Type="Library" URL="../JKI-State-Machine-Plus.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="String History Cacher_nevstop.vi" Type="VI" URL="/&lt;userlib&gt;/NEVSTOP-Programming-Palette/String/String History Cacher_nevstop.vi"/>
-				<Item Name="Generate UUID_nevstop.vi" Type="VI" URL="/&lt;userlib&gt;/NEVSTOP-Programming-Palette/String/Generate UUID_nevstop.vi"/>
 			</Item>
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Add State(s) to Queue__JKI_lib_State_Machine.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/State Machine/_JKI_lib_State_Machine.llb/Add State(s) to Queue__JKI_lib_State_Machine.vi"/>
