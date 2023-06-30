@@ -14,6 +14,7 @@
 		<Item Name="JKI State Machine A.vi" Type="VI" URL="../JKI State Machine A.vi"/>
 		<Item Name="JKI State Machine B.vi" Type="VI" URL="../JKI State Machine B.vi"/>
 		<Item Name="JKI State Machine++.vi" Type="VI" URL="../JKI State Machine++.vi"/>
+		<Item Name="JKI State Machine C.vi" Type="VI" URL="../JKI State Machine C.vi"/>
 		<Item Name="Untitled 2.vi" Type="VI" URL="../Untitled 2.vi"/>
 		<Item Name="JKI-State-Machine-Plus.lvlib" Type="Library" URL="../JKI-State-Machine-Plus.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
