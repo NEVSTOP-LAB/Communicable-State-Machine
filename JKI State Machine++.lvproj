@@ -13,9 +13,8 @@
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="JKI State Machine A.vi" Type="VI" URL="../JKI State Machine A.vi"/>
 		<Item Name="JKI State Machine B.vi" Type="VI" URL="../JKI State Machine B.vi"/>
-		<Item Name="JKI State Machine++.vi" Type="VI" URL="../JKI State Machine++.vi"/>
-		<Item Name="JKI State Machine C.vi" Type="VI" URL="../JKI State Machine C.vi"/>
-		<Item Name="Untitled 2.vi" Type="VI" URL="../Untitled 2.vi"/>
+		<Item Name="JKI State Machine Main.vi" Type="VI" URL="../JKI State Machine Main.vi"/>
+		<Item Name="Test Parse State.vi" Type="VI" URL="../Test Parse State.vi"/>
 		<Item Name="JKI-State-Machine-Plus.lvlib" Type="Library" URL="../JKI-State-Machine-Plus.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">

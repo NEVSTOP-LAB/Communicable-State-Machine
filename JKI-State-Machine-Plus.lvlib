@@ -7,19 +7,24 @@
 	<Item Name="Support" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		<Property Name="NI.SortType" Type="Int">3</Property>
-		<Item Name="_Create Data Queue.vi" Type="VI" URL="../_Create Data Queue.vi"/>
-		<Item Name="_Create Resp Queue.vi" Type="VI" URL="../_Create Resp Queue.vi"/>
+		<Item Name="JKISMQ" Type="Folder">
+			<Item Name="_Create Data Queue.vi" Type="VI" URL="../_Create Data Queue.vi"/>
+			<Item Name="_Create Resp Queue.vi" Type="VI" URL="../_Create Resp Queue.vi"/>
+			<Item Name="_Obtain JKISMQ.vi" Type="VI" URL="../_Obtain JKISMQ.vi"/>
+			<Item Name="_Unlock JKISMQ.vi" Type="VI" URL="../_Unlock JKISMQ.vi"/>
+			<Item Name="_Dequeue JKISMQ.vi" Type="VI" URL="../_Dequeue JKISMQ.vi"/>
+			<Item Name="_Enqueue JKISMQ.vi" Type="VI" URL="../_Enqueue JKISMQ.vi"/>
+			<Item Name="_LockState JKISMQ.vi" Type="VI" URL="../_LockState JKISMQ.vi"/>
+			<Item Name="_JKISMQ.ctl" Type="VI" URL="../_JKISMQ.ctl"/>
+			<Item Name="_JKISMQFGV.vi" Type="VI" URL="../_JKISMQFGV.vi"/>
+			<Item Name="_JKISMQFGVOPER.ctl" Type="VI" URL="../_JKISMQFGVOPER.ctl"/>
+		</Item>
 		<Item Name="_Cross JKI StateMachine State Data.ctl" Type="VI" URL="../_Cross JKI StateMachine State Data.ctl"/>
 		<Item Name="_Cross JKI StateMachine State Response.ctl" Type="VI" URL="../_Cross JKI StateMachine State Response.ctl"/>
-		<Item Name="_Obtain JKISMQ.vi" Type="VI" URL="../_Obtain JKISMQ.vi"/>
-		<Item Name="_Unlock JKISMQ.vi" Type="VI" URL="../_Unlock JKISMQ.vi"/>
-		<Item Name="_Dequeue JKISMQ.vi" Type="VI" URL="../_Dequeue JKISMQ.vi"/>
-		<Item Name="_Enqueue JKISMQ.vi" Type="VI" URL="../_Enqueue JKISMQ.vi"/>
-		<Item Name="_LockState JKISMQ.vi" Type="VI" URL="../_LockState JKISMQ.vi"/>
-		<Item Name="_JKISMQ.ctl" Type="VI" URL="../_JKISMQ.ctl"/>
-		<Item Name="_JKISMQFGV.vi" Type="VI" URL="../_JKISMQFGV.vi"/>
-		<Item Name="_JKISMQFGVOPER.ctl" Type="VI" URL="../_JKISMQFGVOPER.ctl"/>
 		<Item Name="_uuid.vi" Type="VI" URL="../_uuid.vi"/>
+	</Item>
+	<Item Name="Templates" Type="Folder">
+		<Item Name="JKI State Machine ++ With Event Structure.vi" Type="VI" URL="../JKI State Machine ++ With Event Structure.vi"/>
 	</Item>
 	<Item Name="_List JKISMQ.vi" Type="VI" URL="../_List JKISMQ.vi"/>
 	<Item Name="Build State String with Arguments Plus.vi" Type="VI" URL="../Build State String with Arguments Plus.vi"/>
