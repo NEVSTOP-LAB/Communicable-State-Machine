@@ -4,6 +4,7 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">536903680</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">false</Property>
+	<Property Name="NI.SortType" Type="Int">3</Property>
 	<Item Name="Support" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		<Property Name="NI.SortType" Type="Int">3</Property>
@@ -26,7 +27,9 @@
 	<Item Name="Templates" Type="Folder">
 		<Item Name="JKI State Machine ++ With Event Structure.vi" Type="VI" URL="../JKI State Machine ++ With Event Structure.vi"/>
 	</Item>
-	<Item Name="_List JKISMQ.vi" Type="VI" URL="../_List JKISMQ.vi"/>
-	<Item Name="Build State String with Arguments Plus.vi" Type="VI" URL="../Build State String with Arguments Plus.vi"/>
-	<Item Name="Parse State Queue Plus.vi" Type="VI" URL="../Parse State Queue Plus.vi"/>
+	<Item Name="Advance" Type="Folder">
+		<Item Name="List JKISM++.vi" Type="VI" URL="../List JKISM++.vi"/>
+		<Item Name="Build State String with Arguments Plus.vi" Type="VI" URL="../Build State String with Arguments Plus.vi"/>
+	</Item>
+	<Item Name="Parse State Queue++.vi" Type="VI" URL="../Parse State Queue++.vi"/>
 </Library>
