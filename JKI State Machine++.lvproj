@@ -11,11 +11,14 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
-		<Item Name="JKI State Machine A.vi" Type="VI" URL="../src/Example/JKI State Machine A.vi"/>
-		<Item Name="JKI State Machine B.vi" Type="VI" URL="../src/Example/JKI State Machine B.vi"/>
-		<Item Name="JKI State Machine Main.vi" Type="VI" URL="../src/Example/JKI State Machine Main.vi"/>
-		<Item Name="Test Parse State.vi" Type="VI" URL="../src/Example/Test Parse State.vi"/>
+		<Item Name="Example" Type="Folder">
+			<Item Name="JKI State Machine A.vi" Type="VI" URL="../src/Example/JKI State Machine A.vi"/>
+			<Item Name="JKI State Machine B.vi" Type="VI" URL="../src/Example/JKI State Machine B.vi"/>
+			<Item Name="JKI State Machine Main.vi" Type="VI" URL="../src/Example/JKI State Machine Main.vi"/>
+			<Item Name="Test Parse State.vi" Type="VI" URL="../src/Example/Test Parse State.vi"/>
+		</Item>
 		<Item Name="JKI-State-Machine-Plus.lvlib" Type="Library" URL="../src/JKI-State-Machine-Plus.lvlib"/>
+		<Item Name="JKI State Machine ++.vipb" Type="Document" URL="../JKI State Machine ++.vipb"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Add State(s) to Queue__JKI_lib_State_Machine.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/State Machine/_JKI_lib_State_Machine.llb/Add State(s) to Queue__JKI_lib_State_Machine.vi"/>
