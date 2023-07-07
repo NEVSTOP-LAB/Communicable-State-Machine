@@ -30,6 +30,7 @@
 	</Item>
 	<Item Name="Advance" Type="Folder">
 		<Item Name="List JKISM++.vi" Type="VI" URL="../AdvanceAPI/List JKISM++.vi"/>
+		<Item Name="JKISM++ Post Message.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Post Message.vi"/>
 	</Item>
 	<Item Name="Parse State Queue++.vi" Type="VI" URL="../Parse State Queue++.vi"/>
 	<Item Name="Add State(s) to Queue++.vi" Type="VI" URL="../Add State(s) to Queue++.vi"/>
