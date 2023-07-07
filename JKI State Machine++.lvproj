@@ -1,5 +1,8 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
 <Project Type="Project" LVVersion="14008000">
+	<Property Name="CCSymbols" Type="Str"></Property>
+	<Property Name="NI.LV.All.SourceOnly" Type="Bool">false</Property>
+	<Property Name="NI.Project.Description" Type="Str"></Property>
 	<Item Name="My Computer" Type="My Computer">
 		<Property Name="NI.SortType" Type="Int">3</Property>
 		<Property Name="server.app.propertiesEnabled" Type="Bool">true</Property>
@@ -17,7 +20,12 @@
 			<Item Name="JKI State Machine Main.vi" Type="VI" URL="../src/Example/JKI State Machine Main.vi"/>
 			<Item Name="Test Parse State.vi" Type="VI" URL="../src/Example/Test Parse State.vi"/>
 		</Item>
-		<Item Name="JKI-State-Machine-Plus.lvlib" Type="Library" URL="../src/JKI-State-Machine-Plus.lvlib"/>
+		<Item Name="vi.lib" Type="Folder" URL="../src/vi.lib">
+			<Property Name="NI.DISK" Type="Bool">true</Property>
+		</Item>
+		<Item Name="user.lib" Type="Folder" URL="../src/user.lib">
+			<Property Name="NI.DISK" Type="Bool">true</Property>
+		</Item>
 		<Item Name="JKI State Machine ++.vipb" Type="Document" URL="../JKI State Machine ++.vipb"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">

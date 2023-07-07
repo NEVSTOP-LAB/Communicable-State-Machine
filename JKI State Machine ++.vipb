@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2023-07-07 11:01:15" Creator="liyao" Comments="" ID="05fa330be4fa06b7f3ffef182c07d8cc">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2023-07-07 16:20:53" Creator="liyao" Comments="" ID="9e4c892752598ef179e1fbe7e7cc78bd">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_JKI_State_Machine++</Package_File_Name>
-    <Library_Version>0.0.0.2</Library_Version>
+    <Library_Version>0.0.0.3</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>src</Library_Source_Folder>
     <Library_Output_Folder>vip</Library_Output_Folder>
@@ -33,14 +33,14 @@
       <Description/>
       <Copyright/>
       <Packager>NEVSTOP</Packager>
-      <URL>https://github.com/NEVSTOP-LAB/NEVSTOP-LabVIEW-Environment</URL>
+      <URL>https://github.com/NEVSTOP-LAB</URL>
       <Release_Notes/>
     </Description>
     <Destinations>
       <Toolkit_VIs>
         <LLB>false</LLB>
         <Preserve_Hierarchy>true</Preserve_Hierarchy>
-        <Path>&lt;user.lib&gt;\_NEVSTOP\JKI State Machine ++</Path>
+        <Path>&lt;application&gt;</Path>
       </Toolkit_VIs>
       <Examples>
         <LLB>false</LLB>
@@ -95,24 +95,12 @@
         <Preserve_Hierarchy>true</Preserve_Hierarchy>
         <Path/>
       </QuickDrop_Plugins>
-      <Additional_Destination>
-        <Name>LabVIEW</Name>
-        <LLB>false</LLB>
-        <Preserve_Hierarchy>true</Preserve_Hierarchy>
-        <Path>&lt;application&gt;</Path>
-      </Additional_Destination>
     </Destinations>
     <Source_Files>
       <Destination_Overrides>
         <Path>.</Path>
         <Destination>0</Destination>
         <Additional_Destination>false</Additional_Destination>
-        <Additional_Destination_Index>0</Additional_Destination_Index>
-      </Destination_Overrides>
-      <Destination_Overrides>
-        <Path>vi.lib</Path>
-        <Destination>0</Destination>
-        <Additional_Destination>true</Additional_Destination>
         <Additional_Destination_Index>0</Additional_Destination_Index>
       </Destination_Overrides>
       <Password_Overrides>
