@@ -15,15 +15,16 @@
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="Example" Type="Folder">
-			<Item Name="JKI State Machine A.vi" Type="VI" URL="../src/Example/JKI State Machine A.vi"/>
-			<Item Name="JKI State Machine B.vi" Type="VI" URL="../src/Example/JKI State Machine B.vi"/>
-			<Item Name="JKI State Machine Main.vi" Type="VI" URL="../src/Example/JKI State Machine Main.vi"/>
-			<Item Name="Test Parse State.vi" Type="VI" URL="../src/Example/Test Parse State.vi"/>
+			<Item Name="JKISM+ Worker Module.vi" Type="VI" URL="../src/Example/JKISM+ Worker Module.vi"/>
+			<Item Name="JKISM+ TopMain.vi" Type="VI" URL="../src/Example/JKISM+ TopMain.vi"/>
 		</Item>
 		<Item Name="vi.lib" Type="Folder" URL="../src/vi.lib">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
 		<Item Name="user.lib" Type="Folder" URL="../src/user.lib">
+			<Property Name="NI.DISK" Type="Bool">true</Property>
+		</Item>
+		<Item Name="_TEST" Type="Folder" URL="../src/_TEST">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
 		<Item Name="JKI State Machine ++.vipb" Type="Document" URL="../JKI State Machine ++.vipb"/>
