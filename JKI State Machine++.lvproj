@@ -18,6 +18,7 @@
 			<Item Name="JKISM+ Worker Module.vi" Type="VI" URL="../src/Example/JKISM+ Worker Module.vi"/>
 			<Item Name="JKISM+ TopMain.vi" Type="VI" URL="../src/Example/JKISM+ TopMain.vi"/>
 			<Item Name="String History Cacher.vi" Type="VI" URL="../src/Example/String History Cacher.vi"/>
+			<Item Name="JKISM+ TopMain2.vi" Type="VI" URL="../src/Example/JKISM+ TopMain2.vi"/>
 		</Item>
 		<Item Name="vi.lib" Type="Folder" URL="../src/vi.lib">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
@@ -29,7 +30,6 @@
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
 		<Item Name="JKI State Machine ++.vipb" Type="Document" URL="../JKI State Machine ++.vipb"/>
-		<Item Name="JKISM+ TopMain2.vi" Type="VI" URL="../src/Example/JKISM+ TopMain2.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Add State(s) to Queue__JKI_lib_State_Machine.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/State Machine/_JKI_lib_State_Machine.llb/Add State(s) to Queue__JKI_lib_State_Machine.vi"/>
