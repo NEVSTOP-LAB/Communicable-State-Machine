@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2023-07-14 08:47:26" Creator="liyao" Comments="" ID="acfba17c9893547fa1c51dc969a0b923">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2023-07-14 09:02:59" Creator="liyao" Comments="" ID="44af7c15cbb62dae5368153d75d4198c">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_JKI_State_Machine++</Package_File_Name>
     <Library_Version>0.0.0.3</Library_Version>
@@ -100,6 +100,12 @@
       <Destination_Overrides>
         <Path>.</Path>
         <Destination>0</Destination>
+        <Additional_Destination>false</Additional_Destination>
+        <Additional_Destination_Index>0</Additional_Destination_Index>
+      </Destination_Overrides>
+      <Destination_Overrides>
+        <Path>Example</Path>
+        <Destination>1</Destination>
         <Additional_Destination>false</Additional_Destination>
         <Additional_Destination_Index>0</Additional_Destination_Index>
       </Destination_Overrides>
