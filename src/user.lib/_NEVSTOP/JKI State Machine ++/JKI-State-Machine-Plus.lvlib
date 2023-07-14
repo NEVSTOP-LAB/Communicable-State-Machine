@@ -31,10 +31,13 @@
 	<Item Name="Advance" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 		<Item Name="JKISM++ List Modules.vi" Type="VI" URL="../AdvanceAPI/JKISM++ List Modules.vi"/>
+		<Item Name="JKISM++ Send Message and Wait for Reply.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Send Message and Wait for Reply.vi"/>
 		<Item Name="JKISM++ Post Message.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Post Message.vi"/>
 		<Item Name="JKISM++ Start Async Call.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Start Async Call.vi"/>
 		<Item Name="JKISM++ Synchronized Call.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Synchronized Call.vi"/>
-		<Item Name="Build Internal State String.vi" Type="VI" URL="../AdvanceAPI/Build Internal State String.vi"/>
+	</Item>
+	<Item Name="Utility" Type="Folder">
+		<Item Name="Build Internal State String.vi" Type="VI" URL="../Utility/Build Internal State String.vi"/>
 	</Item>
 	<Item Name="Parse State Queue++.vi" Type="VI" URL="../Parse State Queue++.vi"/>
 	<Item Name="Add State(s) to Queue++.vi" Type="VI" URL="../Add State(s) to Queue++.vi"/>
