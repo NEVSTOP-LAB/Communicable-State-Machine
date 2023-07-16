@@ -29,7 +29,7 @@
 		<Item Name="_TEST" Type="Folder" URL="../src/_TEST">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
-		<Item Name="_scripts" Type="Folder" URL="../src/_scripts">
+		<Item Name="_vipm" Type="Folder" URL="../src/_vipm">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
 		<Item Name="JKI State Machine ++.vipb" Type="Document" URL="../JKI State Machine ++.vipb"/>
