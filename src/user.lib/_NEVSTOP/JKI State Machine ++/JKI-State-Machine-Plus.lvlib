@@ -31,6 +31,10 @@
 	</Item>
 	<Item Name="Advance" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
+		<Item Name="Args" Type="Folder">
+			<Item Name="JKISM++ Convert Data to HexStr.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Convert Data to HexStr.vi"/>
+			<Item Name="JKISM++ Convert HexStr to Data.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Convert HexStr to Data.vi"/>
+		</Item>
 		<Item Name="JKISM++ List Modules.vi" Type="VI" URL="../AdvanceAPI/JKISM++ List Modules.vi"/>
 		<Item Name="JKISM++ Send Message and Wait for Reply.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Send Message and Wait for Reply.vi"/>
 		<Item Name="JKISM++ Post Message.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Post Message.vi"/>
