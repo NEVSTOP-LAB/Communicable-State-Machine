@@ -27,6 +27,7 @@
 	<Item Name="Templates" Type="Folder">
 		<Item Name="JKI State Machine ++ With Event Structure.vi" Type="VI" URL="../Templates/JKI State Machine ++ With Event Structure.vi"/>
 		<Item Name="JKI State Machine ++ No Event Structure.vi" Type="VI" URL="../Templates/JKI State Machine ++ No Event Structure.vi"/>
+		<Item Name="JKI State Machine ++ Slave Mode Template.vi" Type="VI" URL="../Templates/JKI State Machine ++ Slave Mode Template.vi"/>
 	</Item>
 	<Item Name="Advance" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">1</Property>

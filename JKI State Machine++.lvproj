@@ -17,8 +17,8 @@
 		<Item Name="Example" Type="Folder">
 			<Item Name="JKISM+ Worker Module.vi" Type="VI" URL="../src/Example/JKISM+ Worker Module.vi"/>
 			<Item Name="JKISM+ TopMain.vi" Type="VI" URL="../src/Example/JKISM+ TopMain.vi"/>
-			<Item Name="String History Cacher.vi" Type="VI" URL="../src/Example/String History Cacher.vi"/>
 			<Item Name="JKISM+ TopMain2.vi" Type="VI" URL="../src/Example/JKISM+ TopMain2.vi"/>
+			<Item Name="String History Cacher.vi" Type="VI" URL="../src/Example/String History Cacher.vi"/>
 		</Item>
 		<Item Name="vi.lib" Type="Folder" URL="../src/vi.lib">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
