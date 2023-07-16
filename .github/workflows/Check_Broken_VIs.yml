@@ -1,0 +1,36 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Check_Broken_VIs
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    paths-ignore:
+      - '**.md'
+      - '**.txt'
+      - '**.drawio'
+      - '**.vipb'
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  Check_Broken_VIs:
+    # The type of runner that the job will run on
+    runs-on: [self-hosted, lv2014]
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      # Runs a set of commands using the runners shell
+      - id: Check_Broken_VIs
+        uses: LV-APT/lvCICD@main
+        with:
+          LabVIEW_Version: 2014
+          Operation: VIAn_CheckBrokenVIs
+          Parameter1: ${{ github.workspace }}
+          Parameter2: NOPASSWORD
+          Parameter3: YES
+          Parameter4: -placeContent
