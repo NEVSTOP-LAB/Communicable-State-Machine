@@ -17,6 +17,7 @@
 		<Item Name="Example" Type="Folder">
 			<Item Name="JKISM+ Worker Module.vi" Type="VI" URL="../src/Example/JKISM+ Worker Module.vi"/>
 			<Item Name="JKISM+ TopMain.vi" Type="VI" URL="../src/Example/JKISM+ TopMain.vi"/>
+			<Item Name="JKISM+ TopMain2.vi" Type="VI" URL="../src/Example/JKISM+ TopMain2.vi"/>
 			<Item Name="String History Cacher.vi" Type="VI" URL="../src/Example/String History Cacher.vi"/>
 		</Item>
 		<Item Name="vi.lib" Type="Folder" URL="../src/vi.lib">
@@ -68,6 +69,9 @@
 				<Item Name="Set Cursor (Cursor ID).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/cursorutil.llb/Set Cursor (Cursor ID).vi"/>
 				<Item Name="Set Cursor (Icon Pict).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/cursorutil.llb/Set Cursor (Icon Pict).vi"/>
 				<Item Name="Set Busy.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/cursorutil.llb/Set Busy.vi"/>
+			</Item>
+			<Item Name="user.lib" Type="Folder">
+				<Item Name="Build Error Cluster__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/error/error.llb/Build Error Cluster__ogtk.vi"/>
 			</Item>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
