@@ -40,6 +40,8 @@
 		<Item Name="JKISM++ Start Async Call.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Start Async Call.vi"/>
 		<Item Name="JKISM++ Synchronized Call.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Synchronized Call.vi"/>
 		<Item Name="JKISM++ Get New State Notifier Event.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Get New State Notifier Event.vi"/>
+		<Item Name="JKISM++ Documenatation QuickDrop.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Documenatation QuickDrop.vi"/>
+		<Item Name="JKISM++ Copyright QuickDrop.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Copyright QuickDrop.vi"/>
 	</Item>
 	<Item Name="Utility" Type="Folder">
 		<Item Name="Build Internal State String.vi" Type="VI" URL="../Utility/Build Internal State String.vi"/>
