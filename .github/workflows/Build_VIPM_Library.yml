@@ -62,5 +62,5 @@ jobs:
           username: ${{ secrets.VIPM_FTP_USER }}
           password: ${{ secrets.VIPM_FTP_PASSWORD }}
           secure: false
-          server_dir: /${{ env.CI_REPOSITORY_OWNER_SLUG }}.private/${{ env.CI_REPOSITORY_NAME }}/${{ env.CI_ACTION_REF_NAME }}/
+          server_dir: /${{ env.CI_REPOSITORY_OWNER_SLUG }}/${{ env.CI_REPOSITORY_NAME }}/${{ env.CI_ACTION_REF_NAME }}/
           local_dir: ./vip/
