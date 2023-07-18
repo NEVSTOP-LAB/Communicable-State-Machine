@@ -41,12 +41,18 @@
 			<Item Name="JKISM++ Documenatation QuickDrop.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Documenatation QuickDrop.vi"/>
 			<Item Name="JKISM++ Copyright QuickDrop.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Copyright QuickDrop.vi"/>
 		</Item>
-		<Item Name="JKISM++ List Modules.vi" Type="VI" URL="../AdvanceAPI/JKISM++ List Modules.vi"/>
-		<Item Name="JKISM++ Send Message and Wait for Reply.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Send Message and Wait for Reply.vi"/>
-		<Item Name="JKISM++ Post Message.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Post Message.vi"/>
-		<Item Name="JKISM++ Start Async Call.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Start Async Call.vi"/>
-		<Item Name="JKISM++ Synchronized Call.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Synchronized Call.vi"/>
-		<Item Name="JKISM++ Get New State Notifier Event.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Get New State Notifier Event.vi"/>
+		<Item Name="Send/Post Message" Type="Folder">
+			<Item Name="JKISM++ Send Message and Wait for Reply.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Send Message and Wait for Reply.vi"/>
+			<Item Name="JKISM++ Post Message.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Post Message.vi"/>
+		</Item>
+		<Item Name="Framework API" Type="Folder">
+			<Item Name="JKISM++ List Modules.vi" Type="VI" URL="../AdvanceAPI/JKISM++ List Modules.vi"/>
+			<Item Name="JKISM++ Start Async Call.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Start Async Call.vi"/>
+			<Item Name="JKISM++ Synchronized Call.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Synchronized Call.vi"/>
+		</Item>
+		<Item Name="JKISM-Support" Type="Folder">
+			<Item Name="JKISM++ Get New State Notifier Event.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Get New State Notifier Event.vi"/>
+		</Item>
 	</Item>
 	<Item Name="Utility" Type="Folder">
 		<Item Name="Build Internal State String.vi" Type="VI" URL="../Utility/Build Internal State String.vi"/>
