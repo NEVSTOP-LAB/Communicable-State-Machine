@@ -19,6 +19,7 @@
 			<Item Name="_Dequeue JKISMQ.vi" Type="VI" URL="../_Support/_Dequeue JKISMQ.vi"/>
 			<Item Name="_Enqueue JKISMQ.vi" Type="VI" URL="../_Support/_Enqueue JKISMQ.vi"/>
 			<Item Name="_LockState JKISMQ.vi" Type="VI" URL="../_Support/_LockState JKISMQ.vi"/>
+			<Item Name="_Release JKISMQ.vi" Type="VI" URL="../_Support/_Release JKISMQ.vi"/>
 			<Item Name="_JKISMQ.ctl" Type="VI" URL="../_Support/_JKISMQ.ctl"/>
 			<Item Name="_JKISMQFGV.vi" Type="VI" URL="../_Support/_JKISMQFGV.vi"/>
 			<Item Name="_JKISMQFGVOPER.ctl" Type="VI" URL="../_Support/_JKISMQFGVOPER.ctl"/>
