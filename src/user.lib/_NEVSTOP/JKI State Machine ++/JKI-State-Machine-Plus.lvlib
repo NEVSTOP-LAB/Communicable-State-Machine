@@ -28,19 +28,11 @@
 		<Item Name="_Cross JKI StateMachine State Response.ctl" Type="VI" URL="../_Support/_Cross JKI StateMachine State Response.ctl"/>
 		<Item Name="_uuid.vi" Type="VI" URL="../_Support/_uuid.vi"/>
 	</Item>
-	<Item Name="Templates" Type="Folder">
-		<Item Name="JKI State Machine ++ With Event Structure.vi" Type="VI" URL="../Templates/JKI State Machine ++ With Event Structure.vi"/>
-		<Item Name="JKI State Machine ++ Slave Mode Template.vi" Type="VI" URL="../Templates/JKI State Machine ++ Slave Mode Template.vi"/>
-	</Item>
 	<Item Name="Advance" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 		<Item Name="Args" Type="Folder">
 			<Item Name="JKISM++ Convert Data to HexStr.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Convert Data to HexStr.vi"/>
 			<Item Name="JKISM++ Convert HexStr to Data.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Convert HexStr to Data.vi"/>
-		</Item>
-		<Item Name="Documentation" Type="Folder">
-			<Item Name="JKISM++ Documenatation QuickDrop.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Documenatation QuickDrop.vi"/>
-			<Item Name="JKISM++ Copyright QuickDrop.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Copyright QuickDrop.vi"/>
 		</Item>
 		<Item Name="Send/Post Message" Type="Folder">
 			<Item Name="JKISM++ Send Message and Wait for Reply.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Send Message and Wait for Reply.vi"/>
