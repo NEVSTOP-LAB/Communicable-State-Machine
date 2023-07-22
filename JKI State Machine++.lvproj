@@ -14,12 +14,8 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
-		<Item Name="Example" Type="Folder">
-			<Item Name="JKISM+ Worker Module.vi" Type="VI" URL="../src/Example/JKISM+ Worker Module.vi"/>
-			<Item Name="JKISM+ TopMain.vi" Type="VI" URL="../src/Example/JKISM+ TopMain.vi"/>
-			<Item Name="JKISM+ TopMain2.vi" Type="VI" URL="../src/Example/JKISM+ TopMain2.vi"/>
-			<Item Name="JKISM+ Duplicate Modules.vi" Type="VI" URL="../src/Example/JKISM+ Duplicate Modules.vi"/>
-			<Item Name="JKISM+ EventJKISM Module Example.vi" Type="VI" URL="../src/Example/JKISM+ EventJKISM Module Example.vi"/>
+		<Item Name="Example" Type="Folder" URL="../src/Example">
+			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
 		<Item Name="vi.lib" Type="Folder" URL="../src/vi.lib">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
@@ -73,8 +69,9 @@
 				<Item Name="Simple Error Handler.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Simple Error Handler.vi"/>
 				<Item Name="List Directory and LLBs.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/List Directory and LLBs.vi"/>
 				<Item Name="Recursive File List.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/Recursive File List.vi"/>
-				<Item Name="General Error Handler CORE.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/General Error Handler CORE.vi"/>
 				<Item Name="Trim Whitespace.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Trim Whitespace.vi"/>
+				<Item Name="General Error Handler Core CORE.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/General Error Handler Core CORE.vi"/>
+				<Item Name="LVRectTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVRectTypeDef.ctl"/>
 			</Item>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
