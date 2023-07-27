@@ -24,6 +24,11 @@
 			<Item Name="_JKISMQFGV.vi" Type="VI" URL="../_Support/_JKISMQFGV.vi"/>
 			<Item Name="_JKISMQFGVOPER.ctl" Type="VI" URL="../_Support/_JKISMQFGVOPER.ctl"/>
 		</Item>
+		<Item Name="FGV-BroadcastRegistry" Type="Folder">
+			<Item Name="FGV-BroadcastRegistry.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/FGV-BroadcastRegistry.vi"/>
+			<Item Name="global-BroadcastCacheChangeTStamp.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/global-BroadcastCacheChangeTStamp.vi"/>
+			<Item Name="Oper-BroadcastRegistry.ctl" Type="VI" URL="../_Support/FGV-BroadcastRegistry/Oper-BroadcastRegistry.ctl"/>
+		</Item>
 		<Item Name="_Cross JKI StateMachine State Data.ctl" Type="VI" URL="../_Support/_Cross JKI StateMachine State Data.ctl"/>
 		<Item Name="_Cross JKI StateMachine State Response.ctl" Type="VI" URL="../_Support/_Cross JKI StateMachine State Response.ctl"/>
 		<Item Name="_uuid.vi" Type="VI" URL="../_Support/_uuid.vi"/>
