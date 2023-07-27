@@ -9,7 +9,7 @@
 
 </Property>
 	<Item Name="Support" Type="Folder">
-		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 		<Property Name="NI.SortType" Type="Int">3</Property>
 		<Item Name="JKISMQ" Type="Folder">
 			<Item Name="_Create Data Queue.vi" Type="VI" URL="../_Support/_Create Data Queue.vi"/>
@@ -24,9 +24,16 @@
 			<Item Name="_JKISMQFGV.vi" Type="VI" URL="../_Support/_JKISMQFGV.vi"/>
 			<Item Name="_JKISMQFGVOPER.ctl" Type="VI" URL="../_Support/_JKISMQFGVOPER.ctl"/>
 		</Item>
+		<Item Name="FGV-BroadcastRegistry" Type="Folder">
+			<Item Name="FGV-BroadcastRegistry.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/FGV-BroadcastRegistry.vi"/>
+			<Item Name="global-BroadcastCacheChangeTStamp.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/global-BroadcastCacheChangeTStamp.vi"/>
+			<Item Name="Oper-BroadcastRegistry.ctl" Type="VI" URL="../_Support/FGV-BroadcastRegistry/Oper-BroadcastRegistry.ctl"/>
+		</Item>
 		<Item Name="_Cross JKI StateMachine State Data.ctl" Type="VI" URL="../_Support/_Cross JKI StateMachine State Data.ctl"/>
 		<Item Name="_Cross JKI StateMachine State Response.ctl" Type="VI" URL="../_Support/_Cross JKI StateMachine State Response.ctl"/>
 		<Item Name="_uuid.vi" Type="VI" URL="../_Support/_uuid.vi"/>
+		<Item Name="Cache-BroadcastReg Search Result.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/Cache-BroadcastReg Search Result.vi"/>
+		<Item Name="_JKISM_MSG_TYPE.ctl" Type="VI" URL="../_Support/_JKISM_MSG_TYPE.ctl"/>
 	</Item>
 	<Item Name="Advance" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
@@ -43,6 +50,9 @@
 			<Item Name="JKISM++ Check If Module Exists.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Check If Module Exists.vi"/>
 			<Item Name="JKISM++ Start Async Call.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Start Async Call.vi"/>
 			<Item Name="JKISM++ Synchronized Call.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Synchronized Call.vi"/>
+			<Item Name="JKISM++ Registrer Status Change.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Registrer Status Change.vi"/>
+			<Item Name="JKISM++ Unregistrer Status Change.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Unregistrer Status Change.vi"/>
+			<Item Name="JKISM++ Broadcast Status Change.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Broadcast Status Change.vi"/>
 		</Item>
 		<Item Name="JKISM-Support" Type="Folder">
 			<Item Name="JKISM++ Get New State Notifier Event.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Get New State Notifier Event.vi"/>
