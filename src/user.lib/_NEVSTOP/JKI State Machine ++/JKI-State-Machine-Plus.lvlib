@@ -9,7 +9,7 @@
 
 </Property>
 	<Item Name="Support" Type="Folder">
-		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 		<Property Name="NI.SortType" Type="Int">3</Property>
 		<Item Name="JKISMQ" Type="Folder">
 			<Item Name="_Create Data Queue.vi" Type="VI" URL="../_Support/_Create Data Queue.vi"/>
