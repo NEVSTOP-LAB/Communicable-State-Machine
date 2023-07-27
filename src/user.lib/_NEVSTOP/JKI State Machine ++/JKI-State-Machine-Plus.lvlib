@@ -43,6 +43,8 @@
 			<Item Name="JKISM++ Check If Module Exists.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Check If Module Exists.vi"/>
 			<Item Name="JKISM++ Start Async Call.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Start Async Call.vi"/>
 			<Item Name="JKISM++ Synchronized Call.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Synchronized Call.vi"/>
+			<Item Name="JKISM++ Registrer Status Change.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Registrer Status Change.vi"/>
+			<Item Name="JKISM++ Unregistrer Status Change.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Unregistrer Status Change.vi"/>
 		</Item>
 		<Item Name="JKISM-Support" Type="Folder">
 			<Item Name="JKISM++ Get New State Notifier Event.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Get New State Notifier Event.vi"/>
