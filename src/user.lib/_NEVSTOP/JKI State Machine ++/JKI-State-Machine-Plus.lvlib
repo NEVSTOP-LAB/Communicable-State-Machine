@@ -59,6 +59,7 @@
 		</Item>
 	</Item>
 	<Item Name="Utility" Type="Folder">
+		<Item Name="Timeout Selector.vi" Type="VI" URL="../Utility/Timeout Selector.vi"/>
 		<Item Name="Build Internal State String.vi" Type="VI" URL="../Utility/Build Internal State String.vi"/>
 		<Item Name="String History Cacher.vi" Type="VI" URL="../Utility/String History Cacher.vi"/>
 		<Item Name="Build Error Cluster.vi" Type="VI" URL="../Utility/Build Error Cluster.vi"/>
