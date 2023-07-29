@@ -1,5 +1,6 @@
 # JKI State Machine ++
-基于 JKISM 的过程编程框架
+
+LabVIEW Application Framework extended from JKI State Machine(JKISM).
 
 ![image](https://github.com/NEVSTOP-LAB/JKI-State-Machine-Plus/assets/8196752/5d8a8962-cd7b-4b19-bf9a-fb4e092829a8)
 
