@@ -1,7 +1,7 @@
 # JKI State Machine ++
 基于 JKISM 的过程编程框架
 
-![a9cc73d7003a07e4a3c8f40fd18126a](https://github.com/NEVSTOP-LAB/JKI-State-Machine-Plus/assets/8196752/5b98dd21-2fc6-46ef-81d1-3e80bf57a716)
+![image](https://github.com/NEVSTOP-LAB/JKI-State-Machine-Plus/assets/8196752/5d8a8962-cd7b-4b19-bf9a-fb4e092829a8)
 
 ### Documentation
 
