@@ -12,17 +12,17 @@
 		<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 		<Property Name="NI.SortType" Type="Int">3</Property>
 		<Item Name="JKISMQ" Type="Folder">
-			<Item Name="_Create Data Queue.vi" Type="VI" URL="../_Support/_Create Data Queue.vi"/>
-			<Item Name="_Create Resp Queue.vi" Type="VI" URL="../_Support/_Create Resp Queue.vi"/>
-			<Item Name="_Obtain JKISMQ.vi" Type="VI" URL="../_Support/_Obtain JKISMQ.vi"/>
-			<Item Name="_Unlock JKISMQ.vi" Type="VI" URL="../_Support/_Unlock JKISMQ.vi"/>
-			<Item Name="_Dequeue JKISMQ.vi" Type="VI" URL="../_Support/_Dequeue JKISMQ.vi"/>
-			<Item Name="_Enqueue JKISMQ.vi" Type="VI" URL="../_Support/_Enqueue JKISMQ.vi"/>
-			<Item Name="_LockState JKISMQ.vi" Type="VI" URL="../_Support/_LockState JKISMQ.vi"/>
-			<Item Name="_Release JKISMQ.vi" Type="VI" URL="../_Support/_Release JKISMQ.vi"/>
-			<Item Name="_JKISMQ.ctl" Type="VI" URL="../_Support/_JKISMQ.ctl"/>
-			<Item Name="_JKISMQFGV.vi" Type="VI" URL="../_Support/_JKISMQFGV.vi"/>
-			<Item Name="_JKISMQFGVOPER.ctl" Type="VI" URL="../_Support/_JKISMQFGVOPER.ctl"/>
+			<Item Name="_Create Data Queue.vi" Type="VI" URL="../_Support/JKISMQ/_Create Data Queue.vi"/>
+			<Item Name="_Create Resp Queue.vi" Type="VI" URL="../_Support/JKISMQ/_Create Resp Queue.vi"/>
+			<Item Name="_Obtain JKISMQ.vi" Type="VI" URL="../_Support/JKISMQ/_Obtain JKISMQ.vi"/>
+			<Item Name="_Unlock JKISMQ.vi" Type="VI" URL="../_Support/JKISMQ/_Unlock JKISMQ.vi"/>
+			<Item Name="_Dequeue JKISMQ.vi" Type="VI" URL="../_Support/JKISMQ/_Dequeue JKISMQ.vi"/>
+			<Item Name="_Enqueue JKISMQ.vi" Type="VI" URL="../_Support/JKISMQ/_Enqueue JKISMQ.vi"/>
+			<Item Name="_LockState JKISMQ.vi" Type="VI" URL="../_Support/JKISMQ/_LockState JKISMQ.vi"/>
+			<Item Name="_Release JKISMQ.vi" Type="VI" URL="../_Support/JKISMQ/_Release JKISMQ.vi"/>
+			<Item Name="_JKISMQ.ctl" Type="VI" URL="../_Support/JKISMQ/_JKISMQ.ctl"/>
+			<Item Name="_JKISMQFGV.vi" Type="VI" URL="../_Support/JKISMQ/_JKISMQFGV.vi"/>
+			<Item Name="_JKISMQFGVOPER.ctl" Type="VI" URL="../_Support/JKISMQ/_JKISMQFGVOPER.ctl"/>
 		</Item>
 		<Item Name="FGV-BroadcastRegistry" Type="Folder">
 			<Item Name="FGV-BroadcastRegistry.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/FGV-BroadcastRegistry.vi"/>
@@ -31,10 +31,11 @@
 			<Item Name="Cache-BroadcastReg Search Result.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/Cache-BroadcastReg Search Result.vi"/>
 			<Item Name="_BroadCastItemKey.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/_BroadCastItemKey.vi"/>
 		</Item>
-		<Item Name="_Cross JKI StateMachine State Data.ctl" Type="VI" URL="../_Support/_Cross JKI StateMachine State Data.ctl"/>
-		<Item Name="_Cross JKI StateMachine State Response.ctl" Type="VI" URL="../_Support/_Cross JKI StateMachine State Response.ctl"/>
-		<Item Name="_uuid.vi" Type="VI" URL="../_Support/_uuid.vi"/>
-		<Item Name="_JKISM_MSG_TYPE.ctl" Type="VI" URL="../_Support/_JKISM_MSG_TYPE.ctl"/>
+		<Item Name="Typedef" Type="Folder">
+			<Item Name="_Cross JKI StateMachine State Data.ctl" Type="VI" URL="../_Support/Typedef/_Cross JKI StateMachine State Data.ctl"/>
+			<Item Name="_Cross JKI StateMachine State Response.ctl" Type="VI" URL="../_Support/Typedef/_Cross JKI StateMachine State Response.ctl"/>
+			<Item Name="_JKISM_MSG_TYPE.ctl" Type="VI" URL="../_Support/Typedef/_JKISM_MSG_TYPE.ctl"/>
+		</Item>
 	</Item>
 	<Item Name="Advance" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
@@ -65,6 +66,7 @@
 		<Item Name="String History Cacher.vi" Type="VI" URL="../Utility/String History Cacher.vi"/>
 		<Item Name="Build Error Cluster.vi" Type="VI" URL="../Utility/Build Error Cluster.vi"/>
 		<Item Name="Trim Both Whitespace.vi" Type="VI" URL="../Utility/Trim Both Whitespace.vi"/>
+		<Item Name="uuid.vi" Type="VI" URL="../Utility/uuid.vi"/>
 	</Item>
 	<Item Name="Parse State Queue++.vi" Type="VI" URL="../Parse State Queue++.vi"/>
 	<Item Name="Add State(s) to Queue++.vi" Type="VI" URL="../Add State(s) to Queue++.vi"/>
