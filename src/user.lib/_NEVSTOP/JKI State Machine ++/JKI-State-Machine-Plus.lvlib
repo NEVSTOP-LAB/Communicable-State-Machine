@@ -29,6 +29,7 @@
 			<Item Name="global-BroadcastCacheChangeTStamp.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/global-BroadcastCacheChangeTStamp.vi"/>
 			<Item Name="Oper-BroadcastRegistry.ctl" Type="VI" URL="../_Support/FGV-BroadcastRegistry/Oper-BroadcastRegistry.ctl"/>
 			<Item Name="Cache-BroadcastReg Search Result.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/Cache-BroadcastReg Search Result.vi"/>
+			<Item Name="_BroadCastItemKey.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/_BroadCastItemKey.vi"/>
 		</Item>
 		<Item Name="_Cross JKI StateMachine State Data.ctl" Type="VI" URL="../_Support/_Cross JKI StateMachine State Data.ctl"/>
 		<Item Name="_Cross JKI StateMachine State Response.ctl" Type="VI" URL="../_Support/_Cross JKI StateMachine State Response.ctl"/>
