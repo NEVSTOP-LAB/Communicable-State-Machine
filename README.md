@@ -8,11 +8,11 @@ LabVIEW Application Framework extended from JKI State Machine(JKISM).
 
 ```      
 State Syntax:
-StateCategory: State >> Argument @|-> JKISMName
+StateCategory: State >> Argument -@|-> JKISMName
 Line Terminator: Line feed
 
 Example:
-UI: Help >> About @Main
+UI: Help >> About -@Main
 UI: Help >> About ->Main
 
 Where "UI" is the state category
@@ -20,7 +20,7 @@ Where "Help" is the state
 Where "About" is the argument
 Where "Main" is the Name of JKISM,which actually run the "UI: Help >> About"
 
-    "@" stands for sync state. Current JKISM will wait 
+    "-@" stands for sync state. Current JKISM will wait 
     until the state is finished. 
             - if "Main" named JKISM does not exist, "Target Error" will occur.
             - if "Main" named JKISM is in another sync remote state, "Target Buzy Error" will occur.
