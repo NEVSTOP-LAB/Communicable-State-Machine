@@ -73,7 +73,13 @@
 		<Item Name="Trim Both Whitespace.vi" Type="VI" URL="../Utility/Trim Both Whitespace.vi"/>
 		<Item Name="uuid.vi" Type="VI" URL="../Utility/uuid.vi"/>
 	</Item>
+	<Item Name="Polymophic" Type="Folder">
+		<Item Name="Add State(s) to Queue By BOOL(Element).vi" Type="VI" URL="../_Polymophic/Add State(s) to Queue By BOOL(Element).vi"/>
+		<Item Name="Add State(s) to Queue By BOOL(Array Left).vi" Type="VI" URL="../_Polymophic/Add State(s) to Queue By BOOL(Array Left).vi"/>
+		<Item Name="Add State(s) to Queue By BOOL(Array Right).vi" Type="VI" URL="../_Polymophic/Add State(s) to Queue By BOOL(Array Right).vi"/>
+		<Item Name="Add State(s) to Queue By BOOL(Array All).vi" Type="VI" URL="../_Polymophic/Add State(s) to Queue By BOOL(Array All).vi"/>
+	</Item>
 	<Item Name="Parse State Queue++.vi" Type="VI" URL="../Parse State Queue++.vi"/>
-	<Item Name="Add State(s) to Queue++.vi" Type="VI" URL="../Add State(s) to Queue++.vi"/>
+	<Item Name="Add State(s) to Queue By BOOL++.vi" Type="VI" URL="../Add State(s) to Queue By BOOL++.vi"/>
 	<Item Name="Build State String with Arguments++.vi" Type="VI" URL="../Build State String with Arguments++.vi"/>
 </Library>
