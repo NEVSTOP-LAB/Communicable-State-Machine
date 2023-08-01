@@ -59,6 +59,7 @@
 			<Item Name="JKISM++ Unregistrer Status Change.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Unregistrer Status Change.vi"/>
 			<Item Name="JKISM++ Broadcast Status Change.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Broadcast Status Change.vi"/>
 			<Item Name="JKISM++ Module Status.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Module Status.vi"/>
+			<Item Name="JKISM++ Compact Multiple States.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Compact Multiple States.vi"/>
 		</Item>
 		<Item Name="JKISM-Support" Type="Folder">
 			<Item Name="JKISM++ Get New State Notifier Event.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Get New State Notifier Event.vi"/>
