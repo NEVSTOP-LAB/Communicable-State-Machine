@@ -33,11 +33,15 @@
 			<Item Name="Cache-BroadcastReg Search Result.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/Cache-BroadcastReg Search Result.vi"/>
 			<Item Name="_BroadCastItemKey.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/_BroadCastItemKey.vi"/>
 		</Item>
+		<Item Name="GlobalEvent" Type="Folder">
+			<Item Name="FGV-GlobalEventRef.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GlobalEventRef.vi"/>
+		</Item>
 		<Item Name="Typedef" Type="Folder">
 			<Item Name="_Cross JKI StateMachine State Data.ctl" Type="VI" URL="../_Support/Typedef/_Cross JKI StateMachine State Data.ctl"/>
 			<Item Name="_Cross JKI StateMachine State Response.ctl" Type="VI" URL="../_Support/Typedef/_Cross JKI StateMachine State Response.ctl"/>
 			<Item Name="_JKISM_MSG_TYPE.ctl" Type="VI" URL="../_Support/Typedef/_JKISM_MSG_TYPE.ctl"/>
 			<Item Name="_JKISM_MODE.ctl" Type="VI" URL="../_Support/Typedef/_JKISM_MODE.ctl"/>
+			<Item Name="_JKI StateMachine Current State.ctl" Type="VI" URL="../_Support/Typedef/_JKI StateMachine Current State.ctl"/>
 		</Item>
 	</Item>
 	<Item Name="Advance" Type="Folder">
