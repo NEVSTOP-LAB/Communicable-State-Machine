@@ -69,6 +69,9 @@
 		<Item Name="JKISM-Support" Type="Folder">
 			<Item Name="JKISM++ Get New State Notifier Event.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Get New State Notifier Event.vi"/>
 		</Item>
+		<Item Name="GlobalEvent" Type="Folder">
+			<Item Name="JKISM++ Global Log Event.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Global Log Event.vi"/>
+		</Item>
 	</Item>
 	<Item Name="Utility" Type="Folder">
 		<Item Name="Timeout Selector.vi" Type="VI" URL="../Utility/Timeout Selector.vi"/>
