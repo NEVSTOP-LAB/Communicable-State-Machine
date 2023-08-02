@@ -23,4 +23,5 @@
 	<Item Name="_State 1.ctl" Type="Ability VI" URL="../_xnode_jkism_tool_support/_State 1.ctl">
 		<Property Name="NI.XItem.Name" Type="Str">State</Property>
 	</Item>
+	<Item Name="JKISM++ DebugTool Dialog.vi" Type="VI" URL="../_xnode_jkism_tool_support/JKISM++ DebugTool Dialog.vi"/>
 </XNode>
