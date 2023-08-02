@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2023-07-31 21:19:51" Creator="liyao" Comments="" ID="2f182486e6e12f0c574a138d80dff2ef">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2023-08-02 22:57:13" Creator="liyao" Comments="" ID="ea79c3aab1fc449d94444e323da22270">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_JKI_State_Machine++</Package_File_Name>
     <Library_Version>0.0.0.3</Library_Version>
@@ -20,7 +20,7 @@
       <Additional_External_Dependencies>jki_lib_state_machine &gt;=2018.0.7.45</Additional_External_Dependencies>
     </Package_Dependencies>
     <Custom_Action_VIs>
-      <Pre-Build_VI/>
+      <Pre-Build_VI>src\_vipm\Pre-Build Custom Action.vi</Pre-Build_VI>
       <Post-Build_VI/>
       <Pre-Install_VI/>
       <Post-Install_VI>src\_vipm\Post-Install Custom Action.vi</Post-Install_VI>
