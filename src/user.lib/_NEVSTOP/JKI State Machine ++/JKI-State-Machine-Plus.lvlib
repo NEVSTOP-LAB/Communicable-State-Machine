@@ -42,6 +42,7 @@
 			<Item Name="_JKISM_MSG_TYPE.ctl" Type="VI" URL="../_Support/Typedef/_JKISM_MSG_TYPE.ctl"/>
 			<Item Name="_JKISM_MODE.ctl" Type="VI" URL="../_Support/Typedef/_JKISM_MODE.ctl"/>
 			<Item Name="_JKI StateMachine Current State.ctl" Type="VI" URL="../_Support/Typedef/_JKI StateMachine Current State.ctl"/>
+			<Item Name="_JKISM_Broadcast_ActingMsg_info.ctl" Type="VI" URL="../_Support/Typedef/_JKISM_Broadcast_ActingMsg_info.ctl"/>
 		</Item>
 	</Item>
 	<Item Name="Advance" Type="Folder">
