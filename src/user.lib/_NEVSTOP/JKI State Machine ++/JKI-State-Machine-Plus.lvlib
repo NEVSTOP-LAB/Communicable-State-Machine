@@ -72,6 +72,7 @@
 		</Item>
 		<Item Name="GlobalEvent" Type="Folder">
 			<Item Name="JKISM++ Global Log Event.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Global Log Event.vi"/>
+			<Item Name="JKISM++ Destroy Global Log Event.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Destroy Global Log Event.vi"/>
 		</Item>
 	</Item>
 	<Item Name="Utility" Type="Folder">
