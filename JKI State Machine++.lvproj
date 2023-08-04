@@ -16,6 +16,7 @@
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="Example" Type="Folder" URL="../src/Example">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
+			<Property Name="NI.SortType" Type="Int">0</Property>
 		</Item>
 		<Item Name="vi.lib" Type="Folder" URL="../src/vi.lib">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
