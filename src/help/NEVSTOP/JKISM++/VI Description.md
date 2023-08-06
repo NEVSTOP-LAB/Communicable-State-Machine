@@ -1,8 +1,19 @@
+## JKI State Machine ++ No-Event Structure.vi
+
+Template for building JKISM++ Module without User Interface.
+## JKI State Machine ++ With Event Structure.vi
+
+Template for building JKISM++ Module with User Interface. Event Structure is included in template for processing user operations.
+## JKI State Machine ++ With Event Structure - Tiny.vi
+
+Template for building JKISM++ Module with User Interface. Event Structure is included in template for processing user operations. Block Diagram is smaller.
+
 ## Add State(s) to Queue By BOOL++.vi
 
-
+Add the state(s) to String Queue according to the boolean input.
 
 ## Build State String with Arguments++.vi
+
 Builds a state string that contains arguments for the JKI State Machine.
 <B>For Example:</B> If State = A and Arguments = B then State with Arguments = A >> B
 
@@ -17,16 +28,8 @@ http://jkisoft.com/state-machine/
      <B>State with Arguments:</B> This output returns the new string that contains the State and the Argument. <B>For Example:</B> If State = A and Arguments = B then State with Arguments = A >> B
 
 
-
-## JKI State Machine ++ No-Event Structure.vi
-
-
-
-## JKI State Machine ++ With Event Structure.vi
-
-
-
 ## Parse State Queue++.vi
+
 Parses the JKI State Machine state queue and returns the current state that will execute next with the associated arguments.
 
 For instructions on how to use the JKI State Machine, examples and video tutorials, visit:
@@ -62,39 +65,26 @@ UI: Initialize // This initializes the UI
 // Another comment line
 
 ## JKISM++ Broadcast Status Change.vi
-Concatenates states in the JKI State Machine. Unwired inputs are safely ignored and will not be added to the state queue.
 
-For instructions on how to use the JKI State Machine, examples and video tutorials, visit:
-http://jkisoft.com/state-machine/
-
-<B>Inputs:</B>
-     <B>State(s) in Front:</B> This allows you to place new states in the front of the state machine queue. The default is an empty string.
-     <B>State(s) in:</B> Wire the existing states to this input. The default is an empty string.
-     <B>State(s) in Back:</B> This allows you to place new states in the back of the state machine queue.  The default is an empty string.
-
-<B>Outputs:</B>
-     <B>States Out:</B>This output returns a concatenation of all the inputs seperated by a line feed character. The line feed character is required by the JKI State Machine.
-
-
+Broadcast the status change to system. The JKISM++ Module who registered the status will receive the status change.
 
 ## JKISM++ Check If Module Exists.vi
 
-
+Check if module with specified name exists.
 
 ## JKISM++ Compact Multiple States.vi
 
-
+Compact multiple states to a single string for input.
 
 ## JKISM++ Convert Data to HexStr.vi
 
-
+Convert complex argument(variant) to hex string, which could be safely used as state argument without broking the string queue logic.
 
 ## JKISM++ Convert HexStr to Data.vi
 
-
+Convert hex string arguments back to variant.
 
 ## JKISM++ Destroy Global Log Event.vi
-
 
 
 ## JKISM++ Get New State Notifier Event.vi
@@ -107,41 +97,33 @@ http://jkisoft.com/state-machine/
 
 ## JKISM++ List Modules.vi
 
-
+List all JKISM++ Modules alive in system.
 
 ## JKISM++ Mark As Worker Module.vi
 
-
+Append '#' to JKISM Name, to mark this module is a worker, who shares the same message queue with workers with the same name. A real name with uuid generated will be assigned to this JKISM module.
 
 ## JKISM++ Module Status.vi
 
 
-
-## JKISM++ Post Message.vi
-
-
-
-## JKISM++ Registrer Status Change.vi
-
-
-
 ## JKISM++ Send Message and Wait for Reply.vi
 
+Send a message to JKISM specified and wait for the reply with timeout.
+## JKISM++ Post Message.vi
+
+Post a message to JKISM specified.
+
+## JKISM++ Register Status Change.vi
+
+
+## JKISM++ Unregister Status Change.vi
 
 
 ## JKISM++ Start Async Call.vi
 
 
-
 ## JKISM++ Synchronized Call.vi
 
-
-
-## JKISM++ Unregistrer Status Change.vi
-
-
-
-## JKI State Machine ++ With Event Structure - Tiny.vi
 
 
 
@@ -155,18 +137,6 @@ Optional 'String to Prepend to source ("")' string input is used to add extra de
 
 ## Build Internal State String.vi
 Builds a state string that contains arguments for the JKI State Machine.
-<B>For Example:</B> If State = A and Arguments = B then State with Arguments = A >> B
-
-For instructions on how to use the JKI State Machine, examples and video tutorials, visit:
-http://jkisoft.com/state-machine/
-
-<B>Inputs:</B>
-     <B>State:</B> The State string that requires the argument.
-     <B>Arguments:</B> The Argument string to add to the state. The default is an empty string. If Argument is an empty string then State will be returned to the output. <B>Note:</B> The arguments input must not contain any unprintable characters like linefeed or carriage return.
-
-<B>Outputs:</B>
-     <B>State with Arguments:</B> This output returns the new string that contains the State and the Argument. <B>For Example:</B> If State = A and Arguments = B then State with Arguments = A >> B
-
 
 
 ## String History Cacher.vi
