@@ -72,78 +72,6 @@ Copyright (C) 2005-2018, JKI <info@jki.net>
 ALL RIGHTS RESERVED
 
 
-## JKISM++ Copyright QuickDrop.vi
-
-
-
-## JKISM++ Documenatation QuickDrop.vi
-
-
-
-## Add State(s) to Queue By BOOL(Array All).vi
-Depending on the High Priority and Bool input, this VI generates a concatenated state of TRUE/False and Remaning States. The High Priority input determines if the TRUE or False string concatenates before/after the remaining states. The Bool input determines whether TRUE or False string to be concatenated.
-
-
-## Add State(s) to Queue By BOOL(Array Left).vi
-Depending on the High Priority and Bool input, this VI generates a concatenated state of TRUE/False and Remaning States. The High Priority input determines if the TRUE or False string concatenates before/after the remaining states. The Bool input determines whether TRUE or False string to be concatenated.
-
-
-## Add State(s) to Queue By BOOL(Array Right).vi
-Depending on the High Priority and Bool input, this VI generates a concatenated state of TRUE/False and Remaning States. The High Priority input determines if the TRUE or False string concatenates before/after the remaining states. The Bool input determines whether TRUE or False string to be concatenated.
-
-
-## Add State(s) to Queue By BOOL(Element).vi
-Depending on the High Priority and Bool input, this VI generates a concatenated state of TRUE/False and Remaning States. The High Priority input determines if the TRUE or False string concatenates before/after the remaining states. The Bool input determines whether TRUE or False string to be concatenated.
-
-
-## FixJKIHelper.vi
-
-
-
-## Cache-BroadcastReg Search Result.vi
-
-
-
-## FGV-BroadcastRegistry.vi
-
-
-
-## global-BroadcastCacheChangeTStamp.vi
-
-
-
-## global-JKISMQFGVChangeTStamp.vi
-
-
-
-## FGV-GlobalEventRef.vi
-
-
-
-## JKISM++ Running Log - DebugTool.vi
-
-
-
-## JKISM++ State Dashboard - DebugTool.vi
-
-
-
-## Script - JKISM to JKISM++.vi
-
-
-
-## DashboardCell-Resize.vi
-
-
-
-## DashboardCell2 Array Resize.vi
-
-
-
-## JKISM++ DebugTool Dialog.vi
-
-
-
 ## JKISM++ Broadcast Status Change.vi
 Concatenates states in the JKI State Machine. Unwired inputs are safely ignored and will not be added to the state queue.
 
@@ -274,10 +202,6 @@ Removes all ASCII white space (spaces, tabs, carriage returns, and linefeeds) fr
 
 ## uuid.vi
 Generate <b>Universally Unique Identifier(UUID)</b> according to the standard methods.
-
-
-## Oper-BroadcastRegistry.ctl
-
 
 
 ## JKISM++ Broadcast Message Type.ctl
