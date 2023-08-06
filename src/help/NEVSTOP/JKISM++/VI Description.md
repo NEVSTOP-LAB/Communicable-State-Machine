@@ -16,10 +16,6 @@ http://jkisoft.com/state-machine/
 <B>Outputs:</B>
      <B>State with Arguments:</B> This output returns the new string that contains the State and the Argument. <B>For Example:</B> If State = A and Arguments = B then State with Arguments = A >> B
 
-JKI State Machine™ 2018.0.7.45
-http://jki.net/state-machine/
-Copyright (C) 2005-2018, JKI <info@jki.net>
-ALL RIGHTS RESERVED
 
 
 ## JKI State Machine ++ No-Event Structure.vi
@@ -60,17 +56,10 @@ UI: Initialize
 Help >> About
 
 <B>Commenting:</B>
-To add a comment use "//" or "#" and all text to the right will be ignored
+To add a comment use "//"and all text to the right will be ignored
      <B>Commenting Example:</B>
 UI: Initialize // This initializes the UI
-# This whole line is a comment
 // Another comment line
-
-JKI State Machine™ 2018.0.7.45
-http://jki.net/state-machine/
-Copyright (C) 2005-2018, JKI <info@jki.net>
-ALL RIGHTS RESERVED
-
 
 ## JKISM++ Broadcast Status Change.vi
 Concatenates states in the JKI State Machine. Unwired inputs are safely ignored and will not be added to the state queue.
@@ -86,10 +75,6 @@ http://jkisoft.com/state-machine/
 <B>Outputs:</B>
      <B>States Out:</B>This output returns a concatenation of all the inputs seperated by a line feed character. The line feed character is required by the JKI State Machine.
 
-JKI State Machine™ 2018.0.7.45
-http://jki.net/state-machine/
-Copyright (C) 2005-2018, JKI <info@jki.net>
-ALL RIGHTS RESERVED
 
 
 ## JKISM++ Check If Module Exists.vi
@@ -182,10 +167,6 @@ http://jkisoft.com/state-machine/
 <B>Outputs:</B>
      <B>State with Arguments:</B> This output returns the new string that contains the State and the Argument. <B>For Example:</B> If State = A and Arguments = B then State with Arguments = A >> B
 
-JKI State Machine™ 2018.0.7.45
-http://jki.net/state-machine/
-Copyright (C) 2005-2018, JKI <info@jki.net>
-ALL RIGHTS RESERVED
 
 
 ## String History Cacher.vi
