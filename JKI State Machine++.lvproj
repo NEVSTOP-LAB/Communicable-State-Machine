@@ -39,6 +39,9 @@
 		<Item Name="_vipm" Type="Folder" URL="../src/_vipm">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
+		<Item Name="help" Type="Folder" URL="../src/help">
+			<Property Name="NI.DISK" Type="Bool">true</Property>
+		</Item>
 		<Item Name="JKI State Machine ++.vipb" Type="Document" URL="../JKI State Machine ++.vipb"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
