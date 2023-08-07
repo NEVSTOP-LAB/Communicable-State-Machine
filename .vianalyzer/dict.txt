@@ -23,3 +23,7 @@ TxtFile
 tTargetOrSource
 Performant
 subModule
+un
+hexstr
+mistyped
+HexStr
