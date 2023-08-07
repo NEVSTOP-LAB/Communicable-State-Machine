@@ -4,7 +4,7 @@
 Template for building JKISM++ Module without User Interface.
 
 <b>Inputs:</b>
-- <b>Name("" to use uuid)</b>: Module Name will be used.
+- <b>Name("" to use uuid)</b>: Module Name
    - If Input is "", an uuid will be used for module name. The module is marked as stand-alone mode and will not be included in module list.
    - If Input end with '#', the module will worked in worker mode. Modules with the same name will shared the same message queue. Any external message will be processed by one of the modules, depends on who is free.
    - Otherwise, the input string will be used as module name, which should be unique in system. JKISM will go to "Critical Error" state if duplicated module name is used in system.
@@ -17,7 +17,7 @@ Template for building JKISM++ Module without User Interface.
 Template for building JKISM++ Module with User Interface. Event Structure is included in template for processing user operations.
 
 <b>Inputs:</b>
- - <b>Name("" to use uuid)</b>: Module Name will be used.
+ - <b>Name("" to use uuid)</b>: Module Name
    - If Input is "", an uuid will be used for module name. The module is marked as stand-alone mode and will not be included in module list.
    - Fi Input end with '#', the module will worked in worker mode. Modules with the same name will shared the same message queue. Any external message will be processed by one of the modules, depending who is free.
    - Otherwise, the input string will be used as module name, which should be unique in system. JKISM will  go to "Critical Error" state if duplicated module name is used in system.
@@ -31,7 +31,7 @@ Template for building JKISM++ Module with User Interface. Event Structure is inc
 Template for building JKISM++ Module without User Interface.
 
 <b>Inputs:</b>
-- <b>Name("" to use uuid)</b>: Module Name will be used.
+- <b>Name("" to use uuid)</b>: Module Name
    - If Input is "", an uuid will be used for module name. The module is marked as stand-alone mode and will not be included in module list.
    - Fi Input end with '#', the module will worked in worker mode. Modules with the same name will shared the same message queue. Any external message will be processed by one of the modules, depends on who is free.
    - Otherwise, the input string will be used as module name, which should be unique in system. JKISM will go to "Critical Error" state if duplicated module name is used in system.
@@ -47,58 +47,54 @@ Parses the JKI State Machine state queue and returns the current state that will
 <b>Inputs:</b>
  - <b>State Queue</b>: The entire state queue is wired to this input. This should come from the main JKI State Machine shift register.
  - <b>Error In (no error)</b>: The error cluster from the JKI State Machine is wired to this input. If an error occures and appears on this input, the current state output returns the "Error Handler" state.
- - <b>Name("" to use uuid)</b>:
- - <b>Response Timeout(5000ms)</b>:
- - <b>Dequeue Timeout(0ms)</b>:
- - <b>Response Arguments</b>:
+ - <b>Name("" to use uuid)</b>: Module Name
+   - If Input is "", an uuid will be used for module name. The module is marked as stand-alone mode and will not be included in module list.
+   - Fi Input end with '#', the module will worked in worker mode. Modules with the same name will shared the same message queue. Any external message will be processed by one of the modules, depends on who is free.
+   - Otherwise, the input string will be used as module name, which should be unique in system. JKISM will go to "Critical Error" state if duplicated module name is used in system.
+ - <b>Response Timeout(5000ms)</b>: The timeout of waiting for response of sync-call from outside.
+ - <b>Dequeue Timeout(0ms)</b>: The timeout of checking JKISM message queue.
+ - <b>Response Arguments</b>: The response arguments from last state. It should come from the JKISM shift register.
 
 <b>Outputs:</b>
  - <b>Remaining States</b>:  Returns all the next states that should execute after the current state completes. These should be passed through the current state in the state machine. These can also be modified or augmented within the current state if necessary.
- - <b>Arguments</b>: Returns any argument(s) that may be used in the current state string. These arguments come after the ">>" characters. <B>Note:</B> The arguments variable must not contain any unprintable characters like linefeed or carriage return.
- - <b>Current State</b>:
- - <b>From Who</b>:
- - <b>Argument - State</b>:
- - <b>Name Used</b>:
+ - <b>Arguments</b>: Returns any argument(s) that may be used in the current state string. These arguments come after the ">>" characters. <b>Note:</b> The arguments variable must not contain any unprintable characters like linefeed or carriage return.
+ - <b>Current State</b>: The state to be processed
+ - <b>Name Used</b>: The actual name assigned to this JKISM module
+ - <b>Argument - State</b>: If any core error occurs, this is the source state name
+ - <b>From Who</b>: If <b>Current State</b> is called by ouside, this is the source JKISM module name.
 
-<B>State Syntax:</B>
-
-    StateCategory: State >> Argument
-    Line Terminator: Line feed
-
-    <B>Example:</B>
-        UI: Help >> About
-     - Where "UI" is the state category
-     - Where "Help" is the state
-     - Where "About" is the argument
-
-    <B>Other Examples:</B>
-
-    App Data: Initialize
-    UI: Initialize
-    Help >> About
-
-    <B>Commenting:</B>
-    To add a comment use "//"and all text to the right will be ignored
-
-    <B>Commenting Example:</B>
-    UI: Initialize // This initializes the UI
-    // Another comment line
 
 ## Build State String with Arguments++.vi
 
 Builds a state string that contains arguments for the JKI State Machine.
-<B>For Example:</B> If State = A and Arguments = B then State with Arguments = A >> B
-For instructions on how to use the JKI State Machine, examples and video tutorials, visit:
-http://jkisoft.com/state-machine/
+
+<B>For Example:</B>
+
+For local JKISM, <b>Target Module ("")</b> is empty.
+
+      If State = A and no argument, then <b>State with Arguments</b> = A
+      If State = A and Arguments = B then <b>State with Arguments</b> = A >> B
+
+For sending message to other JKISM, suppose <b>Target Module ("")</b> is "Target"
+
+   - For Sync-Call:
+
+         If State = A and no argument, then <b>State with Arguments</b> = A -@target
+         If State = A and Arguments = B then <b>State with Arguments</b> = A >> B -@target
+
+   - For Async-Call:
+
+         If State = A and no argument, then <b>State with Arguments</b> = A ->target
+         If State = A and Arguments = B then <b>State with Arguments</b> = A >> B ->target
 
 <b>Inputs:</b>
- - <b>State</b>:
- - <b>Arguments ("")</b>:
- - <b>Target Module ("")</b>:
- - <b>Sync-Call(-@) T By Default/Async-Call(->) F</b>:
+ - <b>State</b>: The State or message string
+ - <b>Arguments ("")</b>: The argument for <b>State</b>
+ - <b>Target Module ("")</b>: The target JKISM module for the message to be sent to.
+ - <b>Sync-Call(-@) T By Default/Async-Call(->) F</b>: For sync call, use "TRUE"; For Async call, use "FALSE"
 
 <b>Outputs:</b>
- - <b>State with Arguments</b>:
+ - <b>State with Arguments</b>: String stands for state with arguments
 
 
 ## JKISM++ Broadcast Status Change.vi
@@ -175,11 +171,11 @@ Release JKISM++ Global Log Event Reference.
 ## JKISM++ Get New State Notifier Event.vi
 
 <b>Inputs:</b>
- - <b>Name("" to use uuid) in</b>:
+ - <b>Name("" to use uuid) in</b>: JKISM module name
  - <b>Error in</b>: Error cluster
 
 <b>Outputs:</b>
- - <b>New State Notifier Event</b>:
+ - <b>New State Notifier Event</b>: User event to break JKISM module from waiting in event structure when message is received.
  - <b>Error out</b>: Error cluster
 
 
@@ -191,7 +187,7 @@ Obtain JKISM++ Global Log Event Reference.
  - <b>Error in</b>: Error cluster
 
 <b>Outputs:</b>
- - <b>JKISM Global Log Event</b>:
+ - <b>JKISM Global Log Event</b>: User event reference for JKISM global log.
  - <b>Error out</b>: Error cluster
 
 ## JKISM++ List Modules.vi
@@ -203,7 +199,7 @@ List all JKISM++ Modules alive in system.
  - <b>Error in</b>: Error cluster
 
 <b>Outputs:</b>
- - <b>Name</b>:
+ - <b>Module Names</b>: Module Names
  - <b>Error out</b>: Error cluster
 
 
@@ -239,12 +235,12 @@ Post a message to JKISM specified.
 
 <b>Inputs:</b>
  - <b>Target Module</b>:Target JKISM Module name.
- - <b>States</b>: Message to post.
+ - <b>State</b>: Message to post.
  - <b>Arguments ("")</b>: Argument of the message.
  - <b>Error In (no error)</b>: Error cluster
 
 <b>Outputs:</b>
- - <b>error IO</b>: Error cluster
+ - <b>error out</b>: Error cluster
 
 
 ## JKISM++ Send Message and Wait for Reply.vi
@@ -253,14 +249,14 @@ Send a message to JKISM specified and wait for the reply with timeout.
 
 <b>Inputs:</b>
  - <b>Target Module</b>: Target JKISM Module name.
- - <b>States</b>: Message to send
+ - <b>State</b>: Message to send
  - <b>Arguments ("")</b>: Argument of the message.
- - <b>Response Timeout(1000ms)</b>: Timeout for waiting the response.
+ - <b>Response Timeout(5000ms)</b>: Timeout for waiting the response.
  - <b>Error In (no error)</b>: Error cluster
 
 <b>Outputs:</b>
  - <b>Arguments</b>: Response returned.
- - <b>error IO</b>: Error cluster
+ - <b>error out</b>: Error cluster
 
 
 ## JKISM++ Register Status Change.vi
@@ -323,8 +319,8 @@ Creates an error cluster, building the source string from the calling VIs call c
 Optional 'String to Prepend to source ("")' string input is used to add extra descriptive info to the source string.  This string, if present, will be enclosed in parenthesis and prepended to the source string.
 
 <b>Inputs:</b>
- - <b>code</b>:
- - <b>String to Prepend to source ("")</b>:
+ - <b>code</b>: error code
+ - <b>String to Prepend to source ("")</b>: error string
 
 <b>Outputs:</b>
  - <b>error out</b>: Error cluster
@@ -349,12 +345,12 @@ Build a state string that contains arguments for the JKI State Machine.
 Return the <b>String Cache</b> containing <b>length</b> number of characters, including the new input <b>String</b>.
 
 <b>Inputs:</b>
- - <b>String</b>:
- - <b>length</b>:
- - <b>Include Timestamp(F)</b>:
+ - <b>String</b>: History item string
+ - <b>length</b>: max history length of cache.
+ - <b>Include Timestamp(F)</b>: Include timestamp in the from of every line or not
 
 <b>Outputs:</b>
- - <b>String Cache</b>:
+ - <b>String Cache</b>: The history string
 s
 
 ## Timeout Selector.vi
@@ -362,11 +358,11 @@ s
 Used in User Event Template VI.
 
 <b>Inputs:</b>
- - <b>Timeout Expected</b>:
- - <b>Remaining States</b>:
+ - <b>Timeout Expected</b>: Expected timeout
+ - <b>Remaining States</b>: If any remaining states left, output will be 0, otherwise, output is the expected value.
 
 <b>Outputs:</b>
- - <b>Timeout</b>:
+ - <b>Timeout</b>: timeout will be used.
 
 
 ## Trim Both Whitespace.vi
