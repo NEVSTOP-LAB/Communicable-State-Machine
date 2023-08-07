@@ -15,13 +15,6 @@ http://jkisoft.com/state-machine/
 <B>State with Arguments:</B> This output returns the new string that contains the State and the Argument. <B>For Example:</B> If State = A and Arguments = B then State with Arguments = A >> B
 
 
-## JKI State Machine ++ No-Event Structure.vi
-Template for building JKISM++ Module without User Interface.
-
-
-## JKI State Machine ++ With Event Structure.vi
-Template for building JKISM++ Module with User Interface. Event Structure is included in template for processing user operations.
-
 
 ## Parse State Queue++.vi
 Parses the JKI State Machine state queue and returns the current state that will execute next with the associated arguments.
@@ -121,9 +114,6 @@ VI snippet for dropping sync call template code from LabVIEW Quick Drop.
 Unregister the notification of other JKISM++ Module's status change.
 
 
-## JKI State Machine ++ With Event Structure - Tiny.vi
-Template for building JKISM++ Module with User Interface. Event Structure is included in template for processing user operations. Block Diagram is smaller.
-
 
 ## Build Error Cluster.vi
 Creates an error cluster, building the source string from the calling VIs call chain in a standard LabVIEW fashon.  Builds source string as:
@@ -155,4 +145,15 @@ Generate <b>Universally Unique Identifier(UUID)</b> according to the standard me
 Broadcast Message Type definition.
 - High Priority: Interrupt
 - Normal Priority: Status
+
+## JKISM++ No-Event Structure Template.vi
+Template for building JKISM++ Module without User Interface.
+
+
+## JKISM++ With Event Structure Template.vi
+Template for building JKISM++ Module with User Interface. Event Structure is included in template for processing user operations.
+
+
+## JKISM++ With Event Structure Template - Tiny.vi
+Template for building JKISM++ Module with User Interface. Event Structure is included in template for processing user operations. Block Diagram is smaller.
 
