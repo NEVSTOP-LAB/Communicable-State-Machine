@@ -1,4 +1,4 @@
-# JKISM++
+# JKI State Machine++ (JKISM++)
 
 LabVIEW Application Framework extended from JKI State Machine(JKISM).
 
