@@ -37,12 +37,12 @@
 			<Item Name="FGV-GlobalEventRef.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GlobalEventRef.vi"/>
 		</Item>
 		<Item Name="Typedef" Type="Folder">
-			<Item Name="_Cross JKI StateMachine State Data.ctl" Type="VI" URL="../_Support/Typedef/_Cross JKI StateMachine State Data.ctl"/>
-			<Item Name="_Cross JKI StateMachine State Response.ctl" Type="VI" URL="../_Support/Typedef/_Cross JKI StateMachine State Response.ctl"/>
+			<Item Name="_Cross JKISM State Data.ctl" Type="VI" URL="../_Support/Typedef/_Cross JKISM State Data.ctl"/>
+			<Item Name="_Cross JKISM State Response.ctl" Type="VI" URL="../_Support/Typedef/_Cross JKISM State Response.ctl"/>
 			<Item Name="_JKISM_MSG_TYPE.ctl" Type="VI" URL="../_Support/Typedef/_JKISM_MSG_TYPE.ctl"/>
 			<Item Name="_JKISM_MODE.ctl" Type="VI" URL="../_Support/Typedef/_JKISM_MODE.ctl"/>
-			<Item Name="_JKI StateMachine Current State.ctl" Type="VI" URL="../_Support/Typedef/_JKI StateMachine Current State.ctl"/>
-			<Item Name="_JKISM_Broadcast_ActingMsg_info.ctl" Type="VI" URL="../_Support/Typedef/_JKISM_Broadcast_ActingMsg_info.ctl"/>
+			<Item Name="_JKISM Current State.ctl" Type="VI" URL="../_Support/Typedef/_JKISM Current State.ctl"/>
+			<Item Name="_JKISM_Broadcast_Response_Message_info.ctl" Type="VI" URL="../_Support/Typedef/_JKISM_Broadcast_Response_Message_info.ctl"/>
 		</Item>
 	</Item>
 	<Item Name="Advance" Type="Folder">
