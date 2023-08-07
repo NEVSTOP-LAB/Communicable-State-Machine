@@ -10,7 +10,6 @@ Template for building JKISM++ Module without User Interface.
    - Otherwise, the input string will be used as module name, which should be unique in system. JKISM will go to "Critical Error" state if duplicated module name is used in system.
 
 <b>Outputs:</b>
-
  - N/A
 
 ## JKISM++ With Event Structure Template.vi
@@ -24,7 +23,6 @@ Template for building JKISM++ Module with User Interface. Event Structure is inc
    - Otherwise, the input string will be used as module name, which should be unique in system. JKISM will  go to "Critical Error" state if duplicated module name is used in system.
 
 <b>Outputs:</b>
-
  - N/A
 
 
@@ -39,7 +37,6 @@ Template for building JKISM++ Module without User Interface.
    - Otherwise, the input string will be used as module name, which should be unique in system. JKISM will go to "Critical Error" state if duplicated module name is used in system.
 
 <b>Outputs:</b>
-
  - N/A
 
 ## Parse State Queue++.vi
@@ -122,13 +119,13 @@ Broadcast the status change to system. The JKISM++ Module who registered the sta
 Check if module with specified name exists.
 
 <b>Inputs:</b>
- - <b>Error in</b>:
- - <b>JKISM Name</b>:
+ - <b>JKISM Name</b>: JKISM Module Name
+ - <b>Error in</b>: Error cluster
 
 <b>Outputs:</b>
- - <b>Error out</b>:
  - <b>Exist?</b>:
  - <b>JKISM Name(dup)</b>:
+ - <b>Error out</b>: Error cluster
 
 
 ## JKISM++ Compact Multiple States.vi
@@ -169,22 +166,22 @@ Convert hex string arguments back to variant.
 Release JKISM++ Global Log Event Reference.
 
 <b>Inputs:</b>
- - <b>Error in</b>:
  - <b>JKISM Global Log Event</b>:
+ - <b>Error in</b>: Error cluster
 
 <b>Outputs:</b>
- - <b>Error out</b>:
+ - <b>Error out</b>: Error cluster
 
 
 ## JKISM++ Get New State Notifier Event.vi
 
 <b>Inputs:</b>
- - <b>Error in</b>:
  - <b>Name("" to use uuid) in</b>:
+ - <b>Error in</b>: Error cluster
 
 <b>Outputs:</b>
- - <b>Error out</b>:
  - <b>New State Notifier Event</b>:
+ - <b>Error out</b>: Error cluster
 
 
 ## JKISM++ Global Log Event.vi
@@ -192,24 +189,23 @@ Release JKISM++ Global Log Event Reference.
 Obtain JKISM++ Global Log Event Reference.
 
 <b>Inputs:</b>
- - <b>Error in</b>:
+ - <b>Error in</b>: Error cluster
 
 <b>Outputs:</b>
- - <b>Error out</b>:
  - <b>JKISM Global Log Event</b>:
-
+ - <b>Error out</b>: Error cluster
 
 ## JKISM++ List Modules.vi
 
 List all JKISM++ Modules alive in system.
 
 <b>Inputs:</b>
- - <b>Error in</b>:
  - <b>Exclude Standalone JKISM(T)</b>:
+ - <b>Error in</b>: Error cluster
 
 <b>Outputs:</b>
- - <b>Error out</b>:
  - <b>Name</b>:
+ - <b>Error out</b>: Error cluster
 
 
 ## JKISM++ Mark As Worker Module.vi
@@ -228,16 +224,15 @@ Append '#' to JKISM Name, to mark this module is a worker, who shares the same m
 Get the JKISM+ Module Status
 
 <b>Inputs:</b>
- - <b>Error in</b>:
  - <b>JKISM Name</b>:
+ - <b>Error in</b>: Error cluster
 
 <b>Outputs:</b>
- - <b>Error out</b>:
  - <b>Mode</b>:
  - <b>#As Worker</b>:
  - <b>#msg to be processed</b>:
  - <b>JKISM Name(dup)</b>:
-
+ - <b>Error out</b>: Error cluster
 
 ## JKISM++ Post Message.vi
 
@@ -245,12 +240,12 @@ Post a message to JKISM specified.
 
 <b>Inputs:</b>
  - <b>States</b>:
- - <b>Error In (no error)</b>:
  - <b>Arguments ("")</b>:
  - <b>Target Module</b>:
+ - <b>Error In (no error)</b>: Error cluster
 
 <b>Outputs:</b>
- - <b>error IO</b>:
+ - <b>error IO</b>: Error cluster
 
 
 ## JKISM++ Register Status Change.vi
@@ -258,16 +253,16 @@ Post a message to JKISM specified.
 Register for notification of other JKISM++ Module's status change. If "Response Message" is not connected or "" is the input, the same state name will be used for acting message.
 
 <b>Inputs:</b>
- - <b>Error in</b>:
  - <b>Source JKISM Name (* as Default)</b>:
  - <b>JKISM Name</b>:
  - <b>Status</b>:
  - <b>Response Message (if "", same as Source Message)</b>:
  - <b>Priority(T:As Status,F:As Interrupt)</b>:
+ - <b>Error in</b>: Error cluster
 
 <b>Outputs:</b>
- - <b>Error out</b>:
  - <b>JKISM Name(dup)</b>:
+ - <b>Error out</b>: Error cluster
 
 
 ## JKISM++ Send Message and Wait for Reply.vi
@@ -276,14 +271,14 @@ Send a message to JKISM specified and wait for the reply with timeout.
 
 <b>Inputs:</b>
  - <b>States</b>:
- - <b>Error In (no error)</b>:
  - <b>Response Timeout(1000ms)</b>:
  - <b>Target Module</b>:
  - <b>Arguments ("")</b>:
+ - <b>Error In (no error)</b>: Error cluster
 
 <b>Outputs:</b>
- - <b>error IO</b>:
  - <b>Arguments</b>:
+ - <b>error IO</b>: Error cluster
 
 
 ## JKISM++ Start Async Call.vi
@@ -291,10 +286,10 @@ Send a message to JKISM specified and wait for the reply with timeout.
 VI snippet for dropping start async call template code from LabVIEW Quick Drop.
 
 <b>Inputs:</b>
-
+ - N/A
 
 <b>Outputs:</b>
-
+ - N/A
 
 
 ## JKISM++ Synchronized Call.vi
@@ -302,10 +297,10 @@ VI snippet for dropping start async call template code from LabVIEW Quick Drop.
 VI snippet for dropping sync call template code from LabVIEW Quick Drop.
 
 <b>Inputs:</b>
-
-
+ - N/A
+ -
 <b>Outputs:</b>
-
+ - N/A
 
 
 ## JKISM++ Unregister Status Change.vi
@@ -313,15 +308,14 @@ VI snippet for dropping sync call template code from LabVIEW Quick Drop.
 Unregister the notification of other JKISM++ Module's status change.
 
 <b>Inputs:</b>
- - <b>Error in</b>:
  - <b>JKISM Name</b>:
  - <b>Source JKISM Name</b>:
  - <b>Status</b>:
+ - <b>Error in</b>: Error cluster
 
 <b>Outputs:</b>
- - <b>Error out</b>:
  - <b>JKISM Name(dup)</b>:
-
+ - <b>Error out</b>: Error cluster
 
 ## Build Error Cluster.vi
 
@@ -334,7 +328,7 @@ Optional 'String to Prepend to source ("")' string input is used to add extra de
  - <b>String to Prepend to source ("")</b>:
 
 <b>Outputs:</b>
- - <b>error out</b>:
+ - <b>error out</b>: Error cluster
 
 
 ## Build Internal State String.vi
