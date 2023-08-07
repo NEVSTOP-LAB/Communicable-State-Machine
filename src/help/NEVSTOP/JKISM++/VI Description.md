@@ -1,6 +1,7 @@
 ## JKI State Machine ++ No-Event Structure.vi
 
 Template for building JKISM++ Module without User Interface.
+
 ## JKI State Machine ++ With Event Structure.vi
 
 Template for building JKISM++ Module with User Interface. Event Structure is included in template for processing user operations.
@@ -84,16 +85,15 @@ Convert complex argument(variant) to hex string, which could be safely used as s
 
 Convert hex string arguments back to variant.
 
-## JKISM++ Destroy Global Log Event.vi
-
-
-## JKISM++ Get New State Notifier Event.vi
-
-
-
 ## JKISM++ Global Log Event.vi
 
+Obtain JKISM++ Global Log Event Reference.
 
+## JKISM++ Destroy Global Log Event.vi
+
+Release JKISM++ Global Log Event Reference.
+
+## JKISM++ Get New State Notifier Event.vi
 
 ## JKISM++ List Modules.vi
 
@@ -105,29 +105,34 @@ Append '#' to JKISM Name, to mark this module is a worker, who shares the same m
 
 ## JKISM++ Module Status.vi
 
+Get the JKISM+ Module Status
 
 ## JKISM++ Send Message and Wait for Reply.vi
 
 Send a message to JKISM specified and wait for the reply with timeout.
+
 ## JKISM++ Post Message.vi
 
 Post a message to JKISM specified.
 
 ## JKISM++ Register Status Change.vi
 
+Register for notification of other JKISM++ Module's status change. If "ActingMsg" is not connected or "" is the input, the same state name will be used for acting message.
 
 ## JKISM++ Unregister Status Change.vi
 
+Unregister the notification of other JKISM++ Module's status change.
 
 ## JKISM++ Start Async Call.vi
 
+VI snippet for dropping start async call template code from LabVIEW Quick Drop.
 
 ## JKISM++ Synchronized Call.vi
 
-
-
+VI snippet for dropping sync call template code from LabVIEW Quick Drop.
 
 ## Build Error Cluster.vi
+
 Creates an error cluster, building the source string from the calling VIs call chain in a standard LabVIEW fashon.  Builds source string as:
 
 "<B>Calling VI</B> in <B>Calling VI's Caller</B>-><B>Calling VI's Caller's Caller</B>->etc...->etc..."
@@ -136,25 +141,29 @@ Optional 'String to Prepend to source ("")' string input is used to add extra de
 
 
 ## Build Internal State String.vi
-Builds a state string that contains arguments for the JKI State Machine.
 
+Build a state string that contains arguments for the JKI State Machine.
 
 ## String History Cacher.vi
-Return the <b>String Cache</b> containing <b>length</b> number of characters, including the new input <b>String</b>.
 
+Return the <b>String Cache</b> containing <b>length</b> number of characters, including the new input <b>String</b>.
 
 ## Timeout Selector.vi
 
-
+Used in User Event Template VI.
 
 ## Trim Both Whitespace.vi
+
 Removes all ASCII white space (spaces, tabs, carriage returns, and linefeeds) from the beginning, end, or both ends of <B>string</B>. The Trim Whitespace VI does not remove double byte characters.
 
-
 ## uuid.vi
-Generate <b>Universally Unique Identifier(UUID)</b> according to the standard methods.
 
+Generate <b>Universally Unique Identifier(UUID)</b> according to the standard methods.
 
 ## JKISM++ Broadcast Message Type.ctl
 
+Broadcast Message Type definition.
+
+ - High Priority: Interrupt
+ - Normal Priority: Status
 
