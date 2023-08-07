@@ -1,4 +1,4 @@
-# JKISM++
+# JKI State Machine++ (JKISM++)
 
 LabVIEW Application Framework extended from JKI State Machine(JKISM).
 
@@ -23,7 +23,7 @@ Where "Main" is the Name of JKISM,which actually run the "UI: Help >> About"
     "-@" stands for sync state. Current JKISM will wait
     until the state is finished.
             - if "Main" named JKISM does not exist, "Target Error" will occur.
-            - if "Main" named JKISM is in another sync remote state, "Target Buzy Error" will occur.
+            - if "Main" named JKISM is in another sync remote state, "Target Busy Error" will occur.
             - if "Main" named JKISM could not finish the state in time, "Target Timeout Error" will occur.
             - if everything is right. "Response" will occur with Argument back from "Main" named JKISM.
 
