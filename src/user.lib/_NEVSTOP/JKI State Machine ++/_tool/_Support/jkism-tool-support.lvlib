@@ -4,6 +4,6 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">335577088</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
-	<Item Name="DashboardCell-Resize.vi" Type="VI" URL="../DashboardCell-Resize.vi"/>
-	<Item Name="DashboardCell2 Array Resize.vi" Type="VI" URL="../DashboardCell2 Array Resize.vi"/>
+	<Item Name="Dashboard Cell Resize.vi" Type="VI" URL="../Dashboard Cell Resize.vi"/>
+	<Item Name="Dashboard Cell2 Array Resize.vi" Type="VI" URL="../Dashboard Cell2 Array Resize.vi"/>
 </Library>

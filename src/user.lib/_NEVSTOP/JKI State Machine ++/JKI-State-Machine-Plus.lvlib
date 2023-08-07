@@ -18,20 +18,20 @@
 			<Item Name="_Unlock JKISMQ.vi" Type="VI" URL="../_Support/JKISMQ/_Unlock JKISMQ.vi"/>
 			<Item Name="_Dequeue JKISMQ.vi" Type="VI" URL="../_Support/JKISMQ/_Dequeue JKISMQ.vi"/>
 			<Item Name="_Enqueue JKISMQ.vi" Type="VI" URL="../_Support/JKISMQ/_Enqueue JKISMQ.vi"/>
-			<Item Name="_LockState JKISMQ.vi" Type="VI" URL="../_Support/JKISMQ/_LockState JKISMQ.vi"/>
+			<Item Name="_Lock State JKISMQ.vi" Type="VI" URL="../_Support/JKISMQ/_Lock State JKISMQ.vi"/>
 			<Item Name="_Release JKISMQ.vi" Type="VI" URL="../_Support/JKISMQ/_Release JKISMQ.vi"/>
 			<Item Name="_JKISMQ.ctl" Type="VI" URL="../_Support/JKISMQ/_JKISMQ.ctl"/>
 			<Item Name="_JKISMQFGV.vi" Type="VI" URL="../_Support/JKISMQ/_JKISMQFGV.vi"/>
 			<Item Name="_JKISMQFGVOPER.ctl" Type="VI" URL="../_Support/JKISMQ/_JKISMQFGVOPER.ctl"/>
-			<Item Name="_InputName to JKISM Mode.vi" Type="VI" URL="../_Support/JKISMQ/_InputName to JKISM Mode.vi"/>
-			<Item Name="global-JKISMQFGVChangeTStamp.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/global-JKISMQFGVChangeTStamp.vi"/>
+			<Item Name="_Input Name to JKISM Mode.vi" Type="VI" URL="../_Support/JKISMQ/_Input Name to JKISM Mode.vi"/>
+			<Item Name="global-JKISMQ FGV Change Flag.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/global-JKISMQ FGV Change Flag.vi"/>
 		</Item>
 		<Item Name="FGV-BroadcastRegistry" Type="Folder">
 			<Item Name="FGV-BroadcastRegistry.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/FGV-BroadcastRegistry.vi"/>
-			<Item Name="global-BroadcastCacheChangeTStamp.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/global-BroadcastCacheChangeTStamp.vi"/>
-			<Item Name="Oper-BroadcastRegistry.ctl" Type="VI" URL="../_Support/FGV-BroadcastRegistry/Oper-BroadcastRegistry.ctl"/>
-			<Item Name="Cache-BroadcastReg Search Result.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/Cache-BroadcastReg Search Result.vi"/>
-			<Item Name="_BroadCastItemKey.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/_BroadCastItemKey.vi"/>
+			<Item Name="global-Broadcast Cache Change Flag.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/global-Broadcast Cache Change Flag.vi"/>
+			<Item Name="Operation-BroadcastRegistry.ctl" Type="VI" URL="../_Support/FGV-BroadcastRegistry/Operation-BroadcastRegistry.ctl"/>
+			<Item Name="Cache-Broadcast Registry Search Result.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/Cache-Broadcast Registry Search Result.vi"/>
+			<Item Name="_Broadcast Item Key.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/_Broadcast Item Key.vi"/>
 		</Item>
 		<Item Name="GlobalEvent" Type="Folder">
 			<Item Name="FGV-GlobalEventRef.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GlobalEventRef.vi"/>
