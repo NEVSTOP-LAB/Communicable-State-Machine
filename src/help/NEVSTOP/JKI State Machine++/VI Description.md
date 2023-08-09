@@ -124,7 +124,7 @@ Convert hex string arguments back to variant.
 Broadcast the status change to system. The JKISM++ Module who registered the status will receive the status change.
 
 <b>Inputs:</b>
- - <b>Status with Arguments</b>: The entire state queue is wired to this input.
+ - <b>Status with Arguments</b>: Status with arguments to publish
  - <b>State Queue("")</b>: The entire state queue is wired to this input.
  - <b>Broadcast(T)</b>: Trigger for broadcast or not.
 
@@ -399,3 +399,19 @@ Generate <b>Universally Unique Identifier(UUID)</b> according to the standard me
 Broadcast Message Type definition.
 - <b>Interrupt:</b> High Priority
 - <b>Status:</b> Normal Priority
+
+
+## Add State(s) to Queue By BOOL++.vi
+
+Depending on the High Priority and Bool input, this VI generates a concatenated state of TRUE/False and Remaining States. The High Priority input determines if the TRUE or False string concatenates before/after the remaining states. The Bool input determines whether TRUE or False string to be concatenated.
+
+<b>Inputs:</b>
+ - <b>State Queue("")</b>: The entire state queue is wired to this input.
+ - <b>TRUE("")</b>: State to insert when <b>Bool</b> is True.
+ - <b>False("")</b>: State to insert when <b>Bool</b> is False.
+ - <b>Bool</b>: Flag for choosing State String connected to TRUE terminal or False terminal.
+ - <b>High Priority(FALSE)</b>: If True, The state will be inserted to the top of the <b>State Queue("")</b>. If False, It's appended to the tail.
+
+<b>Outputs:</b>
+ - <b>State Queue Out</b>: Returns all the next states that should execute after the current state completes.
+

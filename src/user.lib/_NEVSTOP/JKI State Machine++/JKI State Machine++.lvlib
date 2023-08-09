@@ -45,6 +45,12 @@
 			<Item Name="_JKISM_Broadcast_Response_Message_info.ctl" Type="VI" URL="../_Support/Typedef/_JKISM_Broadcast_Response_Message_info.ctl"/>
 		</Item>
 	</Item>
+	<Item Name="Polymophic" Type="Folder">
+		<Item Name="Add State(s) to Queue By BOOL(Element).vi" Type="VI" URL="../_Polymophic/Add State(s) to Queue By BOOL(Element).vi"/>
+		<Item Name="Add State(s) to Queue By BOOL(Array Left).vi" Type="VI" URL="../_Polymophic/Add State(s) to Queue By BOOL(Array Left).vi"/>
+		<Item Name="Add State(s) to Queue By BOOL(Array Right).vi" Type="VI" URL="../_Polymophic/Add State(s) to Queue By BOOL(Array Right).vi"/>
+		<Item Name="Add State(s) to Queue By BOOL(Array All).vi" Type="VI" URL="../_Polymophic/Add State(s) to Queue By BOOL(Array All).vi"/>
+	</Item>
 	<Item Name="Advance" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 		<Item Name="Args" Type="Folder">
@@ -83,12 +89,6 @@
 		<Item Name="Build Error Cluster.vi" Type="VI" URL="../Utility/Build Error Cluster.vi"/>
 		<Item Name="Trim Both Whitespace.vi" Type="VI" URL="../Utility/Trim Both Whitespace.vi"/>
 		<Item Name="uuid.vi" Type="VI" URL="../Utility/uuid.vi"/>
-	</Item>
-	<Item Name="Polymophic" Type="Folder">
-		<Item Name="Add State(s) to Queue By BOOL(Element).vi" Type="VI" URL="../_Polymophic/Add State(s) to Queue By BOOL(Element).vi"/>
-		<Item Name="Add State(s) to Queue By BOOL(Array Left).vi" Type="VI" URL="../_Polymophic/Add State(s) to Queue By BOOL(Array Left).vi"/>
-		<Item Name="Add State(s) to Queue By BOOL(Array Right).vi" Type="VI" URL="../_Polymophic/Add State(s) to Queue By BOOL(Array Right).vi"/>
-		<Item Name="Add State(s) to Queue By BOOL(Array All).vi" Type="VI" URL="../_Polymophic/Add State(s) to Queue By BOOL(Array All).vi"/>
 	</Item>
 	<Item Name="Parse State Queue++.vi" Type="VI" URL="../Parse State Queue++.vi"/>
 	<Item Name="Add State(s) to Queue By BOOL++.vi" Type="VI" URL="../Add State(s) to Queue By BOOL++.vi"/>
