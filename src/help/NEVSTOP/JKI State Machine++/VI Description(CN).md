@@ -1,7 +1,7 @@
 
 ## JKISM++ No-Event Structure Template.vi
 
-Template for building JKISM++ Module without User Interface.
+用于创建具有无用户界面的 JKISM 模块的模板
 
 <b>输入控件:</b>
 - <b>Name("" to use uuid)</b>: JKISM 模块名称
@@ -14,7 +14,7 @@ Template for building JKISM++ Module without User Interface.
 
 ## JKISM++ With Event Structure Template.vi
 
-Template for building JKISM++ Module with User Interface. Event Structure is included in template for processing user operations.
+用于创建具有用户界面的 JKISM 模块的模板，模板中包含用户事件结构用于响应用户操作。
 
 <b>输入控件:</b>
  - <b>Name("" to use uuid)</b>: JKISM 模块名称
@@ -28,7 +28,7 @@ Template for building JKISM++ Module with User Interface. Event Structure is inc
 
 ## JKISM++ With Event Structure Template - Tiny.vi
 
-Template for building JKISM++ Module without User Interface.
+用于创建具有用户界面的 JKISM 模块的模板，模板中包含用户事件结构用于响应用户操作。此模板的代码比较紧凑。
 
 <b>输入控件:</b>
 - <b>Name("" to use uuid)</b>: JKISM 模块名称
@@ -41,57 +41,57 @@ Template for building JKISM++ Module without User Interface.
 
 ## Parse State Queue++.vi
 
-Parses the JKI State Machine state queue and returns the current state that will execute next with the associated arguments.
+解析JKI状态机状态队列，返回将执行的下一个当前状态、参数等信息。
 
 
 <b>输入控件:</b>
- - <b>State Queue</b>: The entire state queue is wired to this input. This should come from the main JKI State Machine shift register.
- - <b>Error In (no error)</b>: The error cluster from the JKI State Machine is wired to this input. If an error occures and appears on this input, the current state output returns the "Error Handler" state.
+ - <b>State Queue</b>: 整个状态队列被连接到此输入。这应该来自 JKISM 的移位寄存器。
+ - <b>Error In (no error)</b>: 来自JKI状态机的错误簇被连接到此输入。如果发生错误并出现在此输入上，则当前状态输出将返回 "Error Handler" 状态。
  - <b>Name("" to use uuid)</b>: JKISM 模块名称
-   - If Input is "", an uuid will be used for module name. The module is marked as stand-alone mode and will not be included in module list.
-   - Fi Input end with '#', the module will worked in worker mode. Modules with the same name will shared the same message queue. Any external message will be processed by one of the modules, depends on who is free.
-   - Otherwise, the input string will be used as module name, which should be unique in system. JKISM will go to "Critical Error" state if duplicated module name is used in system.
- - <b>Response Timeout(5000ms)</b>: The timeout of waiting for response of sync-call from outside.
- - <b>Dequeue Timeout(0ms)</b>: The timeout of checking JKISM message queue.
- - <b>Response Arguments</b>: The response arguments from last state. It should come from the JKISM shift register.
+    - 如果输入为 ""，将使用 UUID 作为模块名称。该模块被标记为独立模式，不会包含在模块列表中。
+   - 如果输入以 '#' 结尾，则该模块将在工作模式下运行。具有相同名称的模块将共享同一消息队列。任何外部消息将由其中一个模块处理，取决于哪个模块空闲。
+   - 否则，输入字符串将被用作模块名称，该名称应在系统中保持唯一。如果在系统中使用重复的模块名称，JKISM 将进入 "Critical Error" 状态。
+ - <b>Response Timeout(5000ms)</b>:同步调用时的响应超时设置，默认 5000 ms.
+ - <b>Dequeue Timeout(0ms)</b>: 检查 JKISM 消息队列的超时设置，默认为0，不进行等待。
+ - <b>Response Arguments</b>: 来自上一个状态的响应参数。它应该来连接 JKISM 的移位寄存器，用于传递外部调用的返回值。
 
 <b>输出控件:</b>
  - <b>Remaining States</b>:  返回继续执行的所有状态及参数。 These should be passed through the current state in the state machine. These can also be modified or augmented within the current state if necessary.
- - <b>Arguments</b>: Returns any argument(s) that may be used in the current state string. These arguments come after the ">>" characters. <b>Note:</b> The arguments variable must not contain any unprintable characters like linefeed or carriage return.
- - <b>Current State</b>: The state to be processed
- - <b>Name Used</b>: The actual name assigned to this JKISM module
- - <b>Argument - State</b>: If any core error occurs, this is the source state name
- - <b>From Who</b>: If <b>Current State</b> is called by ouside, this is the source JKISM module name.
+ - <b>Arguments</b>: 返回可能在当前状态字符串中使用的任何参数。这些参数位于“>>”字符之后。<b>注意：</b>参数变量不得包含任何不可打印的字符，比如换行符或回车符。
+ - <b>Current State</b>: 将执行的下一个当前状态
+ - <b>Name Used</b>: 分配给此JKISM模块的实际名称
+ - <b>Argument - State</b>: 如果是 JKISM++ 定义的内置状态，此参数表示此状态的前状态
+ - <b>From Who</b>: 如果<b>Current State</b> 是由外部发送的，则这是源JKISM模块名称。
 
 
 ## Build State String with Arguments++.vi
 
-Builds a state string that contains arguments for the JKI State Machine.
+构建一个包含JKI状态机参数的状态字符串。
 
 <B>例如:</B>
 
-For local JKISM, <b>Target Module ("")</b> is empty.
+发送给本地状态机时, <b>Target Module ("")</b> 应该为空.
 
-      If State = A and no argument, then <b>State with Arguments</b> = A
-      If State = A and Arguments = B then <b>State with Arguments</b> = A >> B
+      If State = A 并且没有参数, 那么 <b>State with Arguments</b> = A
+      If State = A , Arguments = B 那么 <b>State with Arguments</b> = A >> B
 
-For sending message to other JKISM, suppose <b>Target Module ("")</b> is "Target"
+在发送给其他JKISM的情况下, 假设 <b>Target Module ("")</b> 的名称是 "Target"
 
-   - For Sync-Call:
+   - 同步调用，发送的消息后等待返回:
 
-         If State = A and no argument, then <b>State with Arguments</b> = A -@target
-         If State = A and Arguments = B then <b>State with Arguments</b> = A >> B -@target
+         If State = A 并且没有参数, 那么 <b>State with Arguments</b> = A -@target
+         If State = A , Arguments = B 那么 <b>State with Arguments</b> = A >> B -@target
 
-   - For Async-Call:
+   - 异步调用，发送消息后，将进入"Async Message Posted" 状态，当外部模块处理完毕后，本地模块将收到 "Async Response" 消息:
 
-         If State = A and no argument, then <b>State with Arguments</b> = A ->target
-         If State = A and Arguments = B then <b>State with Arguments</b> = A >> B ->target
+         If State = A 并且没有参数, 那么 <b>State with Arguments</b> = A ->target
+         If State = A , Arguments = B 那么 <b>State with Arguments</b> = A >> B ->target
 
 <b>输入控件:</b>
  - <b>State</b>: 状态或消息名称字符串
  - <b>Arguments ("")</b>: <b>State</b> 的参数
- - <b>Target Module ("")</b>: The target JKISM module for the message to be sent to.
- - <b>Sync-Call(-@) T By Default/Async-Call(->) F</b>: For sync call, use "TRUE"; For Async call, use "FALSE"
+ - <b>Target Module ("")</b>: 此消息发送的目标 JKISM 模块名称
+ - <b>Sync-Call(-@) T By Default/Async-Call(->) F</b>: 同步调用输入"TRUE"; 异步调用输入"FALSE"
 
 <b>输出控件:</b>
  - <b>State with Arguments</b>: 包含 JKI 状态机状态、参数等信息的字符串
@@ -99,7 +99,7 @@ For sending message to other JKISM, suppose <b>Target Module ("")</b> is "Target
 
 ## JKISM++ Convert Data to HexStr.vi
 
-Convert complex argument(variant) to hex string, which could be safely used as state argument without broking the string queue logic.
+将复杂参数（变体）转换为十六进制字符串，该字符串可以安全地用作状态参数，而不会破坏字符串队列逻辑。
 
 <b>输入控件:</b>
  - <b>Variant</b>: 数据，保存为变体(variant)格式
@@ -109,7 +109,7 @@ Convert complex argument(variant) to hex string, which could be safely used as s
 
 ## JKISM++ Convert HexStr to Data.vi
 
-Convert hex string arguments back to variant.
+将十六进制字符串参数转换回变体数据。
 
 <b>输入控件:</b>
  - <b>HEX String</b>: Hex字符串格式，不包含不可见字符，符合 JKISM 的参数要求
@@ -121,11 +121,11 @@ Convert hex string arguments back to variant.
 
 ## JKISM++ Broadcast Status Change.vi
 
-Broadcast the status change to system. The JKISM++ Module who registered the status will receive the status change.
+向系统广播状态更改。已注册状态的 JKISM 模块将接收到状态更改。
 
 <b>输入控件:</b>
- - <b>Status with Arguments</b>: The entire state queue is wired to this input.
- - <b>State Queue("")</b>: The entire state queue is wired to this input.
+ - <b>Status with Arguments</b>: 将被广播的状态及参数
+ - <b>State Queue("")</b>: 整个状态队列被连接到此输入
  - <b>Broadcast(T)</b>: 控制是否广播的开关输入
 
 <b>输出控件:</b>
@@ -134,12 +134,12 @@ Broadcast the status change to system. The JKISM++ Module who registered the sta
 
 ## JKISM++ Post Message.vi
 
-Post a message to JKISM specified.
+向指定的JKISM发布一条消息，相当于异步调用，但不等待返回参数。
 
 <b>输入控件:</b>
- - <b>Target Module</b>:Target JKISM Module name.
- - <b>State</b>: Message to post.
- - <b>Arguments ("")</b>: Argument of the message.
+ - <b>Target Module</b>:目标 JKISM 模块名称
+ - <b>State</b>: 消息字符串
+ - <b>Arguments ("")</b>: 消息参数
  - <b>Error In (no error)</b>: 错误簇
 
 <b>输出控件:</b>
@@ -148,13 +148,13 @@ Post a message to JKISM specified.
 
 ## JKISM++ Send Message and Wait for Reply.vi
 
-Send a message to JKISM specified and wait for the reply with timeout.
+向指定的JKISM发布一条消息并等待回复，相当于同步调用，在指定超时内没有收到返回，将返回超时错误。
 
 <b>输入控件:</b>
- - <b>Target Module</b>: Target JKISM Module name.
- - <b>State</b>: Message to send
- - <b>Arguments ("")</b>: Argument of the message.
- - <b>Response Timeout(5000ms)</b>: Timeout for waiting the response.
+ - <b>Target Module</b>: 目标 JKISM 模块名称
+ - <b>State</b>: 消息字符串
+ - <b>Arguments ("")</b>: 消息参数
+ - <b>Response Timeout(5000ms)</b>: 等待返回的超时设置，默认 5000ms.
  - <b>Error In (no error)</b>: 错误簇
 
 <b>输出控件:</b>
@@ -164,18 +164,18 @@ Send a message to JKISM specified and wait for the reply with timeout.
 
 ## JKISM++ Mark As Worker Module.vi
 
-Append '#' to JKISM Name, to mark this module is a worker, who shares the same message queue with workers with the same name. A real name with uuid generated will be assigned to this JKISM module.
+在JKISM名称后添加“＃”，以标记此模块为工作者，其与具有相同名称的其他工作者共享相同的消息队列。一个带有生成的UUID的实际名称将被分配给此JKISM模块。
 
 <b>输入控件:</b>
  - <b>JKISM Name</b>: JKISM 模块名称
 
 <b>输出控件:</b>
- - <b>JKISM Name(marked as worker)</b>: JKISM 模块名称 with '#' appended.
+ - <b>JKISM Name(marked as worker)</b>: 添加“＃”标记 的JKISM 模块名称
 
 
 ## JKISM++ Check If Module Exists.vi
 
-Check if module with specified name exists.
+检查 JKISM 模块是否存在
 
 <b>输入控件:</b>
  - <b>JKISM Name</b>: JKISM 模块名称
@@ -189,10 +189,10 @@ Check if module with specified name exists.
 
 ## JKISM++ List Modules.vi
 
-List all JKISM++ Modules alive in system.
+列出系统中所有活动的JKISM模块。
 
 <b>输入控件:</b>
- - <b>Exclude Standalone JKISM(T)</b>: 'TRUE' to exclude standalone JKISM module, and 'FALSE' to include them.
+ - <b>Exclude Standalone JKISM(T)</b>: 是否包含独立工作模式的模块
  - <b>Error in</b>: 错误簇
 
 <b>输出控件:</b>
@@ -201,49 +201,49 @@ List all JKISM++ Modules alive in system.
 
 ## JKISM++ Module Status.vi
 
-Get the JKISM+ Module Status
+获取JKISM模块的状态
 
 <b>输入控件:</b>
  - <b>JKISM Name</b>: JKISM 模块名称.
  - <b>Error in</b>: 错误簇
 
 <b>输出控件:</b>
- - <b>Mode</b>: Return the mode of JKISM Module. It might be "Stand-alone", "JKISM" or "Action Worker".
- - <b>#As Worker</b>: Number of the workers if module in "Action Worker" mode.
- - <b>#msg to be processed</b>: The number of message in JKISM Message Queue.
- - <b>JKISM Name(dup)</b>: Return <b>JKISM Name</b>
+ - <b>Mode</b>: 返回模块的工作模式："Stand-alone", "JKISM" 或 "Action Worker".
+ - <b>#As Worker</b>: 工作者模式下，此模块的工作者数量
+ - <b>#msg to be processed</b>: JKISM消息队列中的待处理消息个数
+ - <b>JKISM Name(dup)</b>: 返回 <b>JKISM Name</b>
  - <b>Error out</b>: 错误簇
 
 
 ## JKISM++ Register Status Change.vi
 
-Register for notification of other JKISM++ Module's status change. If "Response Message" is not connected or "" is the input, the same state name will be used for acting message.
+注册以接收其他JKISM++模块状态更改的通知。如果未连接 “Response Message” 或输入为空，则将使用相同的<b>Status</b> 名称作为响应消息。
 
 <b>输入控件:</b>
  - <b>JKISM Name</b>: JKISM 模块名称.
- - <b>Source JKISM Name (* as Default)</b>: JKISM who generates the status. You can use '*' for all modules generated the same <b>Status</b>
+ - <b>Source JKISM Name (* as Default)</b>: 生成状态的JKISM模块。您可以使用“*”来表示所有生成相同状态的模块。
  - <b>Status</b>: 状态字符串
- - <b>Response Message (if "", same as Source Message)</b>: After registered, If status change, this message will be received.
- - <b>Priority(T:As Status,F:As Interrupt)</b>: The Response Message will be inserted to the front of state queue if it's False, otherwise it wil be append to the tail.
+ - <b>Response Message (if "", same as Source Message)</b>: 注册后，如果状态发生变化，将接收到此消息。
+ - <b>Priority(T:As Status,F:As Interrupt)</b>: 如果响应消息为False，则将其插入到状态队列的前面；否则，将其附加到队列的尾部。
  - <b>Error in</b>: 错误簇
 
 <b>输出控件:</b>
- - <b>JKISM Name(dup)</b>: Return <b>JKISM Name</b>
+ - <b>JKISM Name(dup)</b>: 返回 <b>JKISM Name</b>
  - <b>Error out</b>: 错误簇
 
 
 ## JKISM++ Unregister Status Change.vi
 
-Unregister the notification of other JKISM++ Module's status change.
+取消注册其他 JKISM 模块状态更改的通知。
 
 <b>输入控件:</b>
  - <b>JKISM Name</b>: JKISM 模块名称.
- - <b>Source JKISM Name</b>: JKISM who generates the status. You can use '*' for all modules generated the same <b>Status</b>
+ - <b>Source JKISM Name</b>: 生成状态的JKISM模块。您可以使用“*”来表示所有生成相同状态的模块。
  - <b>Status</b>: 状态字符串
  - <b>Error in</b>: 错误簇
 
 <b>输出控件:</b>
- - <b>JKISM Name(dup)</b>: return <b>JKISM Name</b>
+ - <b>JKISM Name(dup)</b>: 返回 <b>JKISM Name</b>
  - <b>Error out</b>: 错误簇
 
 
