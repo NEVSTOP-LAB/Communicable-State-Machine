@@ -10,7 +10,7 @@ LabVIEW Application Framework extended from JKI State Machine(JKISM).
 
 API Description:
 [EN](src/help/NEVSTOP/JKI%20State%20Machine%2B%2B/VI%20Description.md) |
-[CN](src/help/NEVSTOP/JKI%20State%20Machine%2B%2B/VI%20Description.md)
+[CN](src/help/NEVSTOP/JKI%20State%20Machine%2B%2B/VI%20Description(CN).md)
 
 ### Documentation
 
