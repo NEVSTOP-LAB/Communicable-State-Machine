@@ -400,3 +400,17 @@
 广播消息类型定义。
 - <b>Interrupt:</b> 高优先级，作为中端
 - <b>Status:</b> 普通优先级，作为消息
+
+## Add State(s) to Queue By BOOL++.vi
+
+根据高优先级和Bool输入，此VI生成TRUE/False和剩余状态的连接状态。High Priority输入决定是否在剩余状态之前或之后连接TRUE或False字符串。Bool输入决定要连接的字符串是TRUE还是False。
+
+<b>Inputs:</b>
+ - <b>State Queue("")</b>: 整个状态队列被连接到此输入
+ - <b>TRUE("")</b>: <b>Bool</b> 为 True 时插入的状态字符串
+ - <b>False("")</b>: <b>Bool</b> 为 False 时插入的状态字符串
+ - <b>Bool</b>: 选择连接到TRUE终端或False终端的状态字符串的标志。
+ - <b>High Priority(FALSE)</b>: 如果为True，状态将被插入到<b>State Queue("")</b>的顶部。如果为False，它被附加到尾部。
+
+<b>Outputs:</b>
+ - <b>State Queue Out</b>: 返回继续执行的所有状态及参数。
