@@ -57,6 +57,8 @@
 		<Item Name="Args" Type="Folder">
 			<Item Name="JKISM++ Convert Data to HexStr.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Convert Data to HexStr.vi"/>
 			<Item Name="JKISM++ Convert HexStr to Data.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Convert HexStr to Data.vi"/>
+			<Item Name="JKISM++ Make String Argument Safe.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Make String Argument Safe.vi"/>
+			<Item Name="JKISM++ Revert Argument-Safe String.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Revert Argument-Safe String.vi"/>
 		</Item>
 		<Item Name="Send/Post Message" Type="Folder">
 			<Item Name="JKISM++ Broadcast Message Type.ctl" Type="VI" URL="../AdvanceAPI/JKISM++ Broadcast Message Type.ctl"/>
