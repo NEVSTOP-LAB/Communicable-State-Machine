@@ -44,6 +44,7 @@
 			<Item Name="_JKISM Current State.ctl" Type="VI" URL="../_Support/Typedef/_JKISM Current State.ctl"/>
 			<Item Name="_JKISM_Broadcast_Response_Message_info.ctl" Type="VI" URL="../_Support/Typedef/_JKISM_Broadcast_Response_Message_info.ctl"/>
 		</Item>
+		<Item Name="JKISM++ Dummy Module.vi" Type="VI" URL="../_Support/JKISM++ Dummy Module.vi"/>
 	</Item>
 	<Item Name="Polymophic" Type="Folder">
 		<Item Name="Add State(s) to Queue By BOOL(Element).vi" Type="VI" URL="../_Polymophic/Add State(s) to Queue By BOOL(Element).vi"/>
@@ -64,10 +65,12 @@
 			<Item Name="JKISM++ Post Message.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Post Message.vi"/>
 		</Item>
 		<Item Name="Framework API" Type="Folder">
+			<Item Name="QuickDrop" Type="Folder">
+				<Item Name="JKISM++ Start Async Call.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Start Async Call.vi"/>
+				<Item Name="JKISM++ Synchronized Call.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Synchronized Call.vi"/>
+			</Item>
 			<Item Name="JKISM++ List Modules.vi" Type="VI" URL="../AdvanceAPI/JKISM++ List Modules.vi"/>
 			<Item Name="JKISM++ Check If Module Exists.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Check If Module Exists.vi"/>
-			<Item Name="JKISM++ Start Async Call.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Start Async Call.vi"/>
-			<Item Name="JKISM++ Synchronized Call.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Synchronized Call.vi"/>
 			<Item Name="JKISM++ Register Status Change.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Register Status Change.vi"/>
 			<Item Name="JKISM++ Unregister Status Change.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Unregister Status Change.vi"/>
 			<Item Name="JKISM++ Module Status.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Module Status.vi"/>
