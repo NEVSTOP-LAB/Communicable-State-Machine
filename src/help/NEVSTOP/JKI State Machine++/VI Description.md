@@ -415,3 +415,65 @@ Depending on the High Priority and Bool input, this VI generates a concatenated 
 <b>Outputs:</b>
  - <b>State Queue Out</b>: Returns all the next states that should execute after the current state completes.
 
+## JKISM++ Make String Arguments Safe.vi
+
+'->','->|','-@','-&','<-" are key words in JKISM++, which should not be included in arguments. You can use this vi to make your arguments safe.
+
+<b>Inputs:</b>
+ - <b>Argurment String</b>: Arguments might include '->','->|','-@','-&','<-".
+
+<b>Outputs:</b>
+ - <b>Safe Argurment String</b>: Arguments safe for JKISM.
+
+
+
+## JKISM++ Revert Arguments-Safe String.vi
+
+'->','->|','-@','-&','<-" are key words in JKISM++, which should not be included in arguments. You can use <b>JKISM++ Make String Arguments Safe.vi</b> to make your arguments safe. This VI is used for converting the safe arguments back to the origin string.
+
+<b>Inputs:</b>
+ - <b>Safe Argurment String</b>: Arguments safe for JKISM.
+
+<b>Outputs:</b>
+ - <b>Origin Argurment String</b>: Origin arguments might include '->','->|','-@','-&','<-".
+
+
+## JKISM++ Message Type.ctl
+
+Message Type definition.
+- <b>Async:</b> Async Message (->)
+- <b>Async without Reply:</b> Async Message without reply (->|)
+- <b>Sync:</b> Sync Message (-@)
+
+
+## JKISM++ Request JKISM to Post Message.vi
+
+Request JKISM to Post a message to JKISM specified. This is usually used in sub-loops with a JKISM for acting as a holistic module.
+
+<b>Inputs:</b>
+ - <b>Status</b>: Message to post.
+ - <b>Arguments ("")</b>: Argument of the message.
+ - <b>Target Module</b>:Target JKISM Module name.
+ - <b>Module Name</b>:Host Module Name
+ - <b>Error In (no error)</b>: Error cluster
+
+<b>Outputs:</b>
+ - <b>error out</b>: Error cluster
+
+## JKISM++ Request JKISM to Broadcast Status Change.vi
+
+Request JKISM to publish status change to JKISM specified. This is usually used in sub-loops with a JKISM for acting as a holistic module.
+
+<b>Inputs:</b>
+ - <b>Status</b>: status to broadcast.
+ - <b>Arguments ("")</b>: Argument of the status.
+ - <b>Module Name</b>:Host Module Name
+ - <b>Broadcast(T)</b>: Trigger for broadcast or not.
+ - <b>Error In (no error)</b>: Error cluster
+
+<b>Outputs:</b>
+ - <b>error out</b>: Error cluster
+
+
+
+
