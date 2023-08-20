@@ -414,3 +414,63 @@
 
 <b>Outputs:</b>
  - <b>State Queue Out</b>: 返回继续执行的所有状态及参数。
+
+
+## JKISM++ Make String Arguments Safe.vi
+
+'->','->|','-@','-&','<-" 是关键字，不能出现在参数中。使用此 VI 保证参数安全。
+
+<b>Inputs:</b>
+ - <b>Argurment String</b>: 可能包含关键字的参数 '->','->|','-@','-&','<-".
+
+<b>Outputs:</b>
+ - <b>Safe Argurment String</b>: 安全参数
+
+
+
+## JKISM++ Revert Arguments-Safe String.vi
+
+'->','->|','-@','-&','<-" 是关键字，不能出现在参数中。使用<b>JKISM++ Make String Arguments Safe.vi</b>保证参数安全。此VI用于将安全参数转换为原始参数。
+
+<b>Inputs:</b>
+ - <b>Safe Argurment String</b>: 安全参数
+
+<b>Outputs:</b>
+ - <b>Origin Argurment String</b>: 可能包含关键字的参数 '->','->|','-@','-&','<-".
+
+
+## JKISM++ Message Type.ctl
+
+消息类型定义。
+- <b>Async:</b> 异步消息 (->)
+- <b>Async without Reply:</b> 无返回异步消息 (->|)
+- <b>Sync:</b> 同步消息 (-@)
+
+## JKISM++ Request JKISM to Post Message.vi
+
+申请 JKISM 发送消息。通常用于和JKISM并行的功能循环，这些功能循环和 JKISM 一起完成完整模块功能。
+
+<b>Inputs:</b>
+ - <b>Module Name</b>:发送状态的JKISM
+ - <b>Status</b>: 将被广播的状态
+ - <b>Arguments ("")</b>: 将被广播的状态参数
+ - <b>Target Module</b>:目标模块
+ - <b>Error In (no error)</b>: 错误簇
+ -
+<b>Outputs:</b>
+ - <b>error out</b>: 错误簇
+
+
+## JKISM++ Request JKISM to Broadcast Status Change.vi
+
+申请 JKISM 发布状态。通常用于和JKISM并行的功能循环，这些功能循环和 JKISM 一起完成完整模块功能。
+
+<b>Inputs:</b>
+ - <b>Module Name</b>:发送状态的JKISM
+ - <b>Status</b>: 将被广播的状态
+ - <b>Arguments ("")</b>: 将被广播的状态参数
+ - <b>Error In (no error)</b>: 错误簇
+
+<b>Outputs:</b>
+ - <b>error out</b>: 错误簇
+
