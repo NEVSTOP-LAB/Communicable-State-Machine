@@ -65,12 +65,12 @@
 		</Item>
 		<Item Name="Send/Post Message" Type="Folder">
 			<Item Name="JKISM++ Broadcast Message Type.ctl" Type="VI" URL="../AdvanceAPI/JKISM++ Broadcast Message Type.ctl"/>
+			<Item Name="JKISM++ Message Type.ctl" Type="VI" URL="../AdvanceAPI/JKISM++ Message Type.ctl"/>
 			<Item Name="JKISM++ Broadcast Status Change.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Broadcast Status Change.vi"/>
 			<Item Name="JKISM++ Send Message and Wait for Reply.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Send Message and Wait for Reply.vi"/>
 			<Item Name="JKISM++ Post Message.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Post Message.vi"/>
 			<Item Name="JKISM++ Request JKISM to Post Message.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Request JKISM to Post Message.vi"/>
 			<Item Name="JKISM++ Request JKISM to Broadcast Status Change.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Request JKISM to Broadcast Status Change.vi"/>
-			<Item Name="JKISM++ Message Type.ctl" Type="VI" URL="../AdvanceAPI/JKISM++ Message Type.ctl"/>
 		</Item>
 		<Item Name="Framework API" Type="Folder">
 			<Item Name="QuickDrop" Type="Folder">

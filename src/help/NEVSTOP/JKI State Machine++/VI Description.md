@@ -468,6 +468,7 @@ Request JKISM to publish status change to JKISM specified. This is usually used 
  - <b>Status</b>: status to broadcast.
  - <b>Arguments ("")</b>: Argument of the status.
  - <b>Module Name</b>:Host Module Name
+ - <b>Broadcast(T)</b>: Trigger for broadcast or not.
  - <b>Error In (no error)</b>: Error cluster
 
 <b>Outputs:</b>

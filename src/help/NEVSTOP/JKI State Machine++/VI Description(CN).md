@@ -469,6 +469,7 @@
  - <b>Module Name</b>:发送状态的JKISM
  - <b>Status</b>: 将被广播的状态
  - <b>Arguments ("")</b>: 将被广播的状态参数
+ - <b>Broadcast(T)</b>: 控制是否广播的开关输入
  - <b>Error In (no error)</b>: 错误簇
 
 <b>Outputs:</b>
