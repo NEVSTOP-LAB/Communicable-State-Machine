@@ -2,11 +2,11 @@
 
 LabVIEW Application Framework extended from JKI State Machine(JKISM).
 
-![image](https://github.com/NEVSTOP-LAB/JKI-State-Machine-Plus/assets/8196752/5d8a8962-cd7b-4b19-bf9a-fb4e092829a8)
+![image](/.doc/JKISM%2B%2B%20With%20Event%20Structure%20Template.png)
 
 ## JKISM++ API
 
-![image](https://github.com/NEVSTOP-LAB/JKI-State-Machine-Plus-Plus/assets/8196752/32b42184-f7c1-4148-b4a7-c18fad737dfd)
+![image](.doc/JKISM%2B%2B%20Palette.png)
 
 API Description:
 [EN](src/help/NEVSTOP/JKI%20State%20Machine%2B%2B/VI%20Description.md) |
