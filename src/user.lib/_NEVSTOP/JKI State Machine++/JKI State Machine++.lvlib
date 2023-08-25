@@ -78,7 +78,6 @@
 				<Item Name="JKISM++ Synchronized Call.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Synchronized Call.vi"/>
 			</Item>
 			<Item Name="JKISM++ List Modules.vi" Type="VI" URL="../AdvanceAPI/JKISM++ List Modules.vi"/>
-			<Item Name="JKISM++ Check If Module Exists.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Check If Module Exists.vi"/>
 			<Item Name="JKISM++ Register Status Change.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Register Status Change.vi"/>
 			<Item Name="JKISM++ Unregister Status Change.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Unregister Status Change.vi"/>
 			<Item Name="JKISM++ Module Status.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Module Status.vi"/>
@@ -87,6 +86,8 @@
 		</Item>
 		<Item Name="JKISM-Support" Type="Folder">
 			<Item Name="JKISM++ Get New State Notifier Event.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Get New State Notifier Event.vi"/>
+			<Item Name="JKISM++ Check If Module Exists.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Check If Module Exists.vi"/>
+			<Item Name="JKISM++ Module Turns Invalid.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Module Turns Invalid.vi"/>
 		</Item>
 		<Item Name="GlobalEvent" Type="Folder">
 			<Item Name="JKISM++ Global Log Event.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Global Log Event.vi"/>
