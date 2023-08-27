@@ -6,7 +6,7 @@ Do not edit the VI found in the palette.  Only edit the state machine after it i
 
 For instructions on how to use the JKI State Machine, examples and video tutorials, visit: http://jki.net/state-machine/
 
-JKI State Machine�
+JKI State Machine™
 http://jki.net/state-machine/
 Copyright (C) 2005-2018, JKI <info@jki.net>
 ALL RIGHTS RESERVED
@@ -14,27 +14,27 @@ ALL RIGHTS RESERVED
 For information about JKISM++, visit: https://github.com/NEVSTOP-LAB
 
 ## State Syntax
-Examples:
-    // Local Message Example
+文本描述示例:
+    // 本地消息示例
     DoSth: DoA >> Arguments
 
-    // Sync Call Example
+    // 同步调用示例
     API: xxxx >> Arguments -@ TargetModule
 
-    // Async Call Example
+    // 异步调用示例
     API: xxxx >> Arguments -> TargetModule
 
-    // Async Call without Reply Example
+    // 没有返回值的异步调用示例
     API: xxxx >> Arguments ->| TargetModule
 
-    // Broadcast Status:
+    // 状态发布示例
     Status >> StatusArguments  -> <all>
 
 
 ## Commenting
-To add a comment use "//" or "#" and all text to the right will be ignored
+要添加注释，使用"//"，右边的所有文本将被忽略
 
-Commenting Example:
+注释示例:
 UI: Initialize // This initializes the UI
 // Another comment line
 

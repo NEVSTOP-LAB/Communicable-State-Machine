@@ -1,22 +1,22 @@
 # JKI State Machine++ (JKISM++)
 
-LabVIEW Application Framework extended from JKI State Machine(JKISM). 
+LabVIEW Application Framework extended from JKI State Machine(JKISM).
 
 ```
 #JKISM++ State Syntax
 
     // Local Message Example
     DoSth: DoA >> Arguments
-    
+
     // Sync Call Example
     API: xxxx >> Arguments -@ TargetModule
-    
+
     // Async Call Example
     API: xxxx >> Arguments -> TargetModule
-    
+
     // Async Call without Reply Example
     API: xxxx >> Arguments ->| TargetModule
-    
+
     // Broadcast Status:
     Status >> StatusArguments  -> <all>
 
@@ -32,7 +32,7 @@ To add a comment use "//" and all text to the right will be ignored
 
 Template Description:
 [EN](src/help/NEVSTOP/JKI%20State%20Machine%2B%2B/Template%20Description.md) |
-[CN](src/help/NEVSTOP/JKI%20State%20Machine%2B%2B/Template%20Description.md)(later)
+[CN](src/help/NEVSTOP/JKI%20State%20Machine%2B%2B/Template%20Description(CN).md)
 
 ## JKISM++ API
 

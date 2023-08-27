@@ -6,7 +6,7 @@ Do not edit the VI found in the palette.  Only edit the state machine after it i
 
 For instructions on how to use the JKI State Machine, examples and video tutorials, visit: http://jki.net/state-machine/
 
-JKI State Machine™
+JKI State Machineâ„¢
 http://jki.net/state-machine/
 Copyright (C) 2005-2018, JKI <info@jki.net>
 ALL RIGHTS RESERVED
