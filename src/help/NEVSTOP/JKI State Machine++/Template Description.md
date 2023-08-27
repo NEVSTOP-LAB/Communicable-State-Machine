@@ -38,10 +38,6 @@ Commenting Example:
 UI: Initialize // This initializes the UI
 // Another comment line
 
-
-## Idle/Event Handler
-executes when the state queue is empty
-
 ### Name of the JKISM
 If you won't post any state from other JKISM,  leave this control blank.
 
@@ -49,122 +45,126 @@ If you won't post any state from other JKISM,  leave this control blank.
 ### This controls the loop rate
 It means wait forever until new state is coming or user operation is detected in Event Structure
 
+## Case Description
+### Idle/Event Handler
+executes when the state queue is empty
 
-### "New State Notifier Event"
+
+#### "New State Notifier Event"
 This user event is used to break out JKISM from waiting in the event structure, to process the next state from external. DO NOT place any code here unless you really need to.
 
 
-### Discard Panel Close?
+#### Discard Panel Close?
 Discard the event because we'll close the front panel ourselves in Macro: Exit
 
 
-## Documentation
+### Documentation
 Case for Holding documentation
 
 
-## "Error Handler"
+### "Error Handler"
 You can also output any states to clean-up after errors occur
 
 
-## "Critical Error"
+### "Critical Error"
 When any un-recoverable error occurs, JKISM goes into this case.
 
 
-### Stop in Critical Error
+#### Stop in Critical Error
 When Critical Error occurs, Stop the loop immediately. Do NOT change this unless you fully understand the impact.
 
 
-## "Target Busy Error"
+### "Target Busy Error"
 When this JKISM try to communicate with a Busy target, this JKISM goes into this case.
 
 
-## "Target Timeout Error"
+### "Target Timeout Error"
 When this JKISM could not get the sync-call response in time, this JKISM goes into this case.
 
 
-## "Target Error"
+### "Target Error"
 When this JKISM try to communicate with an un-existed JKISM, this JKISM goes into this case.
 
 
-## "Async Response"
+### "Async Response"
 Handle Async-call Response ("Async Response" for ->)
 
 
-## "Response"
+### "Response"
 Handle Sync-call Response ("Response" for -@)
 
 
-## Response
+### Response
 Connect this to return the response of your API
 
 
-## "Async Message Posted"
+### "Async Message Posted"
 After Async Message is posted (-> or ->| ), JKISM+ goes to this state for post-action.
 You can use Argument - State to tell which Async Message is called.
 
 
-## "Initialize Core Data"
+### "Initialize Core Data"
 This is used to determine panel behavior on exit
 
 
-## "Exit"
+### "Exit"
 Case for exiting the loop. No errors that occur here will be handled.
 
 
-## "Data: Initialize"
+### "Data: Initialize"
 Initialize the shift-register data, here.
 (data names are defined by what you wire into the bundle function)
 
 
-## "Data: Cleanup"
+### "Data: Cleanup"
 Cleanup any data and references, here.
 (this is called automatically, by the Macro: Exit)
 
 
-## "Events: Register"
+### "Events: Register"
 
 
-## Register New Message Event
+### Register New Message Event
 Register message event to break Waiting in Event structure.
 
 
-## "Events: Unregister"
+### "Events: Unregister"
 
 
-## "UI: Initialize"
+### "UI: Initialize"
 Initialize the User Interface, here.
 (this is called automatically, by the Macro: Init)
 
 
-## "UI: Cursor Set"
+### "UI: Cursor Set"
 Set and Unset Cursor Busy.
 (Usage: "UI: Cursor Set >> Busy|Idle")
 
 
-## "UI: Front Panel State"
+### "UI: Front Panel State"
 Set Front Panel Open or Closed
 (Usage: "UI: Front Panel State >> Open|Close")
 
 
-## "Macro: Initialize"
+### "Macro: Initialize"
 Initialization Macro (This is called once, when the VI starts)
 
 
-## "Macro: Exit"
+### "Macro: Exit"
 Exit Macro (This is called once, when the VI exits)
 
 
-## API Example
+### API Example
 Copy/Rename this case for your own API
 
-### >> From Who >>
+#### >> From Who >>
 If you need to tell who triggered this state , use this string. If it's this case itself, this string is "".
 
 
-### >> Arguments >>
+#### >> Arguments >>
 Deal with the parameter if any
 
 
-### Response
+#### Response
 Connect this to return the response of your API
 
