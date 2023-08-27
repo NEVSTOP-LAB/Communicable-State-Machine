@@ -39,7 +39,7 @@ UI: Initialize // This initializes the UI
 // Another comment line
 
 ### Name of the JKISM
-If you won't post any state from other JKISM, leave this control blank.
+If you won't post any state from other JKISM,  leave this control blank.
 
 
 ### This controls the loop rate
