@@ -32,23 +32,22 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB
 
 
 ## Commenting
-要添加注释，使用"//"，右边的所有文本将被忽略
+要添加注释，使用 "//", 右边的所有文本将被忽略
 
 注释示例:
 UI: Initialize // This initializes the UI
 // Another comment line
 
 ### Name of the JKISM
-If you won't post any state from other JKISM,  leave this control blank.
-
+模块名称。如果不接受其他模块的消息，可以使用""作为名称。
 
 ### This controls the loop rate
-It means wait forever until new state is coming or user operation is detected in Event Structure
+"-1" 表示永远等待新状态的到来或用户操作在事件结构中被检测到
 
 ## Case Description
-### Idle/Event Handler
-executes when the state queue is empty
 
+### "Idle/Event Handler"
+当状态队列为空时执行此分支逻辑
 
 #### "New State Notifier Event"
 This user event is used to break out JKISM from waiting in the event structure, to process the next state from external. DO NOT place any code here unless you really need to.
@@ -59,113 +58,91 @@ Discard the event because we'll close the front panel ourselves in Macro: Exit
 
 
 ### Documentation
-Case for Holding documentation
+无其他意义，保存JKISM++文档供参考
 
 
 ### "Error Handler"
-You can also output any states to clean-up after errors occur
-
+处理模块错误
 
 ### "Critical Error"
-When any un-recoverable error occurs, JKISM goes into this case.
-
+当不可恢复错误发生时，模块进入此分支
 
 #### Stop in Critical Error
-When Critical Error occurs, Stop the loop immediately. Do NOT change this unless you fully understand the impact.
-
+当严重错误发生时，直接停止循环。除非完全了解修改带来的影响，不要修改此逻辑。
 
 ### "Target Busy Error"
-When this JKISM try to communicate with a Busy target, this JKISM goes into this case.
-
-
+当此模块尝试与忙碌的模块通讯时，模块将进入此分支处理，在此分支处理此错误逻辑
 ### "Target Timeout Error"
-When this JKISM could not get the sync-call response in time, this JKISM goes into this case.
-
+当此模块与其他模块消息超时未获得反馈时，模块将进入此分支处理，在此分支处理此错误逻辑
 
 ### "Target Error"
-When this JKISM try to communicate with an un-existed JKISM, this JKISM goes into this case.
-
+当此模块尝试与不存在的模块通讯时，模块将进入此分支处理，在此分支处理此错误逻辑
 
 ### "Async Response"
-Handle Async-call Response ("Async Response" for ->)
+处理异步调用响应 ("Async Response" for ->)
 
 
 ### "Response"
-Handle Sync-call Response ("Response" for -@)
+处理同步调用响应 ("Response" for -@)
 
 
-### Response
-Connect this to return the response of your API
-
+#### Response Comments
+当Message被执行后，JKISM+进入此状态以接收响应
+    对于异步调用(->), "Async Response"分支被执行. "Async Message Posted"在异步调用消息发送后此模块，当消息被执行完毕后，"Async Response"分支被执行.
+    对于同步调用(-@), 此模块在发送完同步消息后，将等待，消息被执行完毕后，"Response"分支被立即执行.
 
 ### "Async Message Posted"
-After Async Message is posted (-> or ->| ), JKISM+ goes to this state for post-action.
-You can use Argument - State to tell which Async Message is called.
+在异步调用消息发送后 (-> or ->| ), 此分支被执行，用于处理消息发送后事件。
+可以使用 "Argument - State" 分辨发送的异步消息内容.
 
 
 ### "Initialize Core Data"
-This is used to determine panel behavior on exit
-
+此分支用于确定退出时面板的行为
 
 ### "Exit"
-Case for exiting the loop. No errors that occur here will be handled.
-
+此分支用于退出循环。这里发生的任何错误都不会被处理。
 
 ### "Data: Initialize"
-Initialize the shift-register data, here.
-(data names are defined by what you wire into the bundle function)
-
+初始化移位寄存器的数据，数据名称由连接到bundle函数中的内容决定。
 
 ### "Data: Cleanup"
-Cleanup any data and references, here.
-(this is called automatically, by the Macro: Exit)
-
+此分支用于清除所有数据和引用，由Macro: Exit自动调用的。
 
 ### "Events: Register"
-Register user event. New Message Event is registered to break JKISM waiting in event structure by default.
-
+注册用户事件。默认情况下，注册 "New Message Event" 以打破事件结构中的JKISM等待。
 
 #### Register New Message Event
-Register message event to break Waiting in Event structure.
-
+注册消息事件以打破事件结构中的等待状态。
 
 ### "Events: Unregister"
-Unregister user event.
+注销用户事件
 
 ### "UI: Initialize"
-Initialize the User Interface, here.
-(this is called automatically, by the Macro: Init)
-
+此分支用于初始化界面(由Macro: Init自动调用)
 
 ### "UI: Cursor Set"
-Set and Unset Cursor Busy.
-(Usage: "UI: Cursor Set >> Busy|Idle")
-
+设置鼠标忙碌或空闲
+(用法: "UI: Cursor Set >> Busy|Idle")
 
 ### "UI: Front Panel State"
-Set Front Panel Open or Closed
-(Usage: "UI: Front Panel State >> Open|Close")
-
+前面板打开或关闭
+(用法: "UI: Front Panel State >> Open|Close")
 
 ### "Macro: Initialize"
-Initialization Macro (This is called once, when the VI starts)
-
+初始化宏(在VI启动时调用一次)
 
 ### "Macro: Exit"
-Exit Macro (This is called once, when the VI exits)
-
+退出宏(当VI退出时调用一次)
 
 ### API Example
-Copy/Rename this case for your own API
+复制/重命名创建API
 
 #### >> From Who >>
-If you need to tell who triggered this state , use this string. If it's this case itself, this string is "".
+用于区分是谁发送的此消息. 如果是本模块，字符串为"".
 
 
 #### >> Arguments >>
-Deal with the parameter if any
-
+调用参数
 
 #### Response
-Connect this to return the response of your API
-
+连接的字符串将作为响应返回给调用模块

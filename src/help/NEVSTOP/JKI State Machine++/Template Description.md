@@ -46,7 +46,8 @@ If you won't post any state from other JKISM, leave this control blank.
 It means wait forever until new state is coming or user operation is detected in Event Structure
 
 ## Case Description
-### Idle/Event Handler
+
+### "Idle/Event Handler"
 executes when the state queue is empty
 
 
@@ -94,8 +95,10 @@ Handle Async-call Response ("Async Response" for ->)
 Handle Sync-call Response ("Response" for -@)
 
 
-### Response
-Connect this to return the response of your API
+#### Response Comments
+After Message is executed, JKISM+ goes to this state for receive the response.
+    For Async Message(->), "Async Response" is used. This JKISM will goes to "Async Message Posted" immediately and receive the "Async Response" after the callee finishes the message.
+    For Sync Message(@),  This JKISM will wait until the message is done and immediately goes to "Response"
 
 
 ### "Async Message Posted"
