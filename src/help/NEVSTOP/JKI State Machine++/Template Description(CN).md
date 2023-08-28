@@ -46,6 +46,12 @@ UI: Initialize // This initializes the UI
 
 ## Case Description
 
+## "Default"
+本分支用于捕获未处理的状态、消息和打字错误
+
+### "Documentation"
+无其他意义，保存JKISM++文档供参考
+
 ### "Idle/Event Handler"
 当状态队列为空时执行此分支逻辑
 
@@ -55,11 +61,6 @@ This user event is used to break out JKISM from waiting in the event structure, 
 
 #### Discard Panel Close?
 Discard the event because we'll close the front panel ourselves in Macro: Exit
-
-
-### "Documentation"
-无其他意义，保存JKISM++文档供参考
-
 
 ### "Error Handler"
 处理模块错误
@@ -72,6 +73,7 @@ Discard the event because we'll close the front panel ourselves in Macro: Exit
 
 ### "Target Busy Error"
 当此模块尝试与忙碌的模块通讯时，模块将进入此分支处理，在此分支处理此错误逻辑
+
 ### "Target Timeout Error"
 当此模块与其他模块消息超时未获得反馈时，模块将进入此分支处理，在此分支处理此错误逻辑
 

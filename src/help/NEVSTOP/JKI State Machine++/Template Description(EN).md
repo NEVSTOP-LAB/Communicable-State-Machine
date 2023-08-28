@@ -6,7 +6,7 @@ Do not edit the VI found in the palette.  Only edit the state machine after it i
 
 For instructions on how to use the JKI State Machine, examples and video tutorials, visit: http://jki.net/state-machine/
 
-JKI State Machine™
+JKI State Machine?
 http://jki.net/state-machine/
 Copyright (C) 2005-2018, JKI <info@jki.net>
 ALL RIGHTS RESERVED
@@ -47,21 +47,20 @@ It means wait forever until new state is coming or user operation is detected in
 
 ## Case Description
 
+## "Default"
+this is used to capture unhandled states and typos
+
+## "Documentation"
+Case for holding JKISM++ Documenation
+
 ### "Idle/Event Handler"
 executes when the state queue is empty
-
 
 #### "New State Notifier Event"
 This user event is used to break out JKISM from waiting in the event structure, to process the next state from external. DO NOT place any code here unless you really need to.
 
-
 #### Discard Panel Close?
 Discard the event because we'll close the front panel ourselves in Macro: Exit
-
-
-### Documentation
-Case for Holding documentation
-
 
 ### "Error Handler"
 You can also output any states to clean-up after errors occur
