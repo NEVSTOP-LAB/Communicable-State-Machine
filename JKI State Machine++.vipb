@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2023-08-07 22:58:06" Creator="liyao" Comments="" ID="9fbf0e2a265043b3330bc61013ad7489">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2023-08-28 14:46:32" Creator="liyao" Comments="" ID="83c89c68b228cd6fdf20f0daf4041ab5">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_JKI_State_Machine++</Package_File_Name>
     <Library_Version>0.0.0.3</Library_Version>
@@ -30,11 +30,56 @@
     <VI_Package_Configuration_File>JKI State Machine++.vipc</VI_Package_Configuration_File>
     <Description>
       <One_Line_Description_Summary>LabVIEW Application Framework extended from JKI State Machine(JKISM)</One_Line_Description_Summary>
-      <Description/>
+      <Description>&lt;b&gt;JKISM++&lt;/b&gt;:  LabVIEW Application Framework extended from JKI State Machine(JKISM).
+
+#JKISM++ State Syntax
+
+    // Local Message Example
+    DoSth: DoA &gt;&gt; Arguments
+
+    // Sync Call Example
+    API: xxxx &gt;&gt; Arguments -@ TargetModule
+
+    // Async Call Example
+    API: xxxx &gt;&gt; Arguments -&gt; TargetModule
+
+    // Async Call without Reply Example
+    API: xxxx &gt;&gt; Arguments -&gt;| TargetModule
+
+    // Broadcast Status:
+    Status &gt;&gt; StatusArguments  -&gt; &lt;all&gt;
+
+#JKISM++ Commenting
+
+    To add a comment use "//" and all text to the right will be ignored
+
+    UI: Initialize // This initializes the UI
+    // Another comment line
+</Description>
       <Copyright/>
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
-      <Release_Notes/>
+      <Release_Notes>1. Template of JKISM++ Module
+    - With Event Structure Template
+    - No-Event Strcture Template
+
+2. Advance API for Module Managment
+    - List Modules
+    - Check if Module Exists
+    - Start Async/Sync Call 
+
+3. Examples
+    - QMH Example  
+    - RPC Example
+    - Worker Example
+    - Status Publish/Subscribe Example
+    - Call from other framework Example
+    - Work with Submodule Example
+
+4. Tools
+    - Localization API/Template Tool
+    - Debug Tool for monitoring system change
+    - Debug Tool for status dashboard</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
