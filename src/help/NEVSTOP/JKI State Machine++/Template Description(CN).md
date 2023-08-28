@@ -57,7 +57,7 @@ This user event is used to break out JKISM from waiting in the event structure, 
 Discard the event because we'll close the front panel ourselves in Macro: Exit
 
 
-### Documentation
+### "Documentation"
 无其他意义，保存JKISM++文档供参考
 
 
