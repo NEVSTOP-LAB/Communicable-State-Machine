@@ -1,7 +1,7 @@
 # JKI State Machine++ (JKISM++)
 
-LabVIEW Application Framework extended from JKI State Machine(JKISM).
-
+LabVIEW Application Framework extended from JKI State Machine(JKISM). [Wiki for JKISM++](https://github.com/NEVSTOP-LAB/JKI-State-Machine-Plus-Plus/wiki)
+ 
 ```
 #JKISM++ State Syntax
 
