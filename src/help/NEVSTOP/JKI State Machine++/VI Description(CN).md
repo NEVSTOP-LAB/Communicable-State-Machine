@@ -416,6 +416,66 @@
  - <b>State Queue Out</b>: 返回继续执行的所有状态及参数。
 
 
+## Add State(s) to Queue By BOOL(Element).vi
+
+根据高优先级和Bool输入，此VI生成TRUE/False和剩余状态的连接状态。High Priority输入决定是否在剩余状态之前或之后连接TRUE或False字符串。Bool输入决定要连接的字符串是TRUE还是False。
+
+<b>Inputs:</b>
+ - <b>State Queue("")</b>: 整个状态队列被连接到此输入
+ - <b>TRUE("")</b>: <b>Bool</b> 为 True 时插入的状态字符串
+ - <b>False("")</b>: <b>Bool</b> 为 False 时插入的状态字符串
+ - <b>Bool</b>: 选择连接到TRUE终端或False终端的状态字符串的标志。
+ - <b>High Priority(FALSE)</b>: 如果为True，状态将被插入到<b>State Queue("")</b>的顶部。如果为False，它被附加到尾部。
+
+<b>Outputs:</b>
+ - <b>State Queue Out</b>: 返回继续执行的所有状态及参数。
+
+
+## Add State(s) to Queue By BOOL(Array Left).vi
+
+根据高优先级和Bool输入，此VI生成TRUE/False和剩余状态的连接状态。High Priority输入决定是否在剩余状态之前或之后连接TRUE或False字符串。Bool输入决定要连接的字符串是TRUE还是False。
+
+<b>Inputs:</b>
+ - <b>State Queue("")</b>: 整个状态队列被连接到此输入
+ - <b>TRUE("")</b>: <b>Bool</b> 为 True 时插入的状态字符串
+ - <b>False("")</b>: <b>Bool</b> 为 False 时插入的状态字符串
+ - <b>Bool</b>: 选择连接到TRUE终端或False终端的状态字符串的标志。
+ - <b>High Priority(FALSE)</b>: 如果为True，状态将被插入到<b>State Queue("")</b>的顶部。如果为False，它被附加到尾部。
+
+<b>Outputs:</b>
+ - <b>State Queue Out</b>: 返回继续执行的所有状态及参数。
+
+
+## Add State(s) to Queue By BOOL(Array Right).vi
+
+根据高优先级和Bool输入，此VI生成TRUE/False和剩余状态的连接状态。High Priority输入决定是否在剩余状态之前或之后连接TRUE或False字符串。Bool输入决定要连接的字符串是TRUE还是False。
+
+<b>Inputs:</b>
+ - <b>State Queue("")</b>: 整个状态队列被连接到此输入
+ - <b>TRUE("")</b>: <b>Bool</b> 为 True 时插入的状态字符串
+ - <b>False("")</b>: <b>Bool</b> 为 False 时插入的状态字符串
+ - <b>Bool</b>: 选择连接到TRUE终端或False终端的状态字符串的标志。
+ - <b>High Priority(FALSE)</b>: 如果为True，状态将被插入到<b>State Queue("")</b>的顶部。如果为False，它被附加到尾部。
+
+<b>Outputs:</b>
+ - <b>State Queue Out</b>: 返回继续执行的所有状态及参数。
+
+
+## Add State(s) to Queue By BOOL(Array All).vi
+
+根据高优先级和Bool输入，此VI生成TRUE/False和剩余状态的连接状态。High Priority输入决定是否在剩余状态之前或之后连接TRUE或False字符串。Bool输入决定要连接的字符串是TRUE还是False。
+
+<b>Inputs:</b>
+ - <b>State Queue("")</b>: 整个状态队列被连接到此输入
+ - <b>TRUE("")</b>: <b>Bool</b> 为 True 时插入的状态字符串
+ - <b>False("")</b>: <b>Bool</b> 为 False 时插入的状态字符串
+ - <b>Bool</b>: 选择连接到TRUE终端或False终端的状态字符串的标志。
+ - <b>High Priority(FALSE)</b>: 如果为True，状态将被插入到<b>State Queue("")</b>的顶部。如果为False，它被附加到尾部。
+
+<b>Outputs:</b>
+ - <b>State Queue Out</b>: 返回继续执行的所有状态及参数。
+
+
 ## JKISM++ Make String Arguments Safe.vi
 
 '->','->|','-@','-&','<-" 是关键字，不能出现在参数中。使用此 VI 保证参数安全。
@@ -475,3 +535,196 @@
 <b>Outputs:</b>
  - <b>error out</b>: 错误簇
 
+
+## JKISM++ Module Turns Invalid.vi
+
+检查JKISM是否已经退出。通常用于和JKISM并行的功能循环，这些功能循环和 JKISM 一起完成完整模块功能。 本VI用于并行循环的退出条件。
+
+<b>Inputs:</b>
+ - <b>JKISM Name</b>: 模块名称
+
+<b>Outputs:</b>
+ - <b>Turn Invalid(Exit)?</b>: 是否已经退出	
+
+## Build Message with Arguments++.vi
+
+Builds a message that contains arguments for JKISM. This VI will parse "State with Arguments" for message type, message string, arguments and target module from input <b>State with Arguments</b> and replace corresponding parts in the message with input values. Different message type symbol(->|,->,-@) will be used in different Polymophic Vi instance.
+
+Polymophic Option:
+ - Build Message with Arguments(Auto Check).vi
+ - Build Asynchronous Message with Arguments.vi
+ - Build No-Reply Asynchronous Message with Arguments.vi
+ - Build Synchronous Message with Arguments.vi
+
+<b>Inputs:</b>
+ - <b>State with Arguments</b>: Input Message which might contain Arguments or target Module
+ - <b>Arguments ("")</b>: The arguments which will be used to replace arguments in <b>State with Arguments</b>. if empty, no arguments will be included in output strings.
+ - <b>Target Module ("")</b>: The target which will be used to replace target in <b>State with Arguments</b>. if empty, target in <b>State with Arguments</b> will be used.
+
+<b>Outputs:</b>
+ - <b>State with Arguments</b>: String stands for state with arguments
+
+<b>Inputs:</b>
+
+
+<b>Outputs:</b>
+
+
+## Build Message with Arguments(Auto Check).vi
+
+Builds a message that contains arguments for JKISM. This VI will parse "State with Arguments" for message type, message string, arguments and target module from input <b>State with Arguments</b> and replace corresponding parts in the message with input values. The message type from input <b>State with Arguments</b> will be used.
+
+<B>For Example:</B>
+
+If <b>State with Arguments</b> input is "API: DoSth"
+<b>Arguments ("")</b> input is "Arguments"
+<b>Target Module ("")</b> input is "Callee"
+Then result string is "API: DoSth >> Arguments" as no message symbol is detected.
+
+If <b>State with Arguments</b> input is "API: DoSth >> Arguments -> Callee"
+<b>Arguments ("")</b> input is "NewArguments"
+<b>Target Module ("")</b> input is ""
+Then result string is "API: DoSth >> NewArguments -> Callee"
+
+If <b>State with Arguments</b> input is "API: DoSth >> Arguments -> Callee"
+<b>Arguments ("")</b> input is "NewArguments"
+<b>Target Module ("")</b> input is "NewCallee"
+Then result string is "API: DoSth >> NewArguments -> NewCallee"
+
+If <b>State with Arguments</b> input is "API: DoSth >> Arguments -> Callee"
+<b>Arguments ("")</b> input is ""
+<b>Target Module ("")</b> input is "NewCallee"
+Then result string is "API: DoSth -> NewCallee"
+
+If <b>State with Arguments</b> input is "API: DoSth >> Arguments -@ Callee"
+<b>Arguments ("")</b> input is "NewArguments"
+<b>Target Module ("")</b> input is ""
+Then result string is "API: DoSth >> NewArguments -@ Callee"
+
+<b>Inputs:</b>
+ - <b>State with Arguments</b>: Input Message which might contain Arguments or target Module
+ - <b>Arguments ("")</b>: The arguments which will be used to replace arguments in <b>State with Arguments</b>. if empty, no arguments will be included in output strings.
+ - <b>Target Module ("")</b>: The target which will be used to replace target in <b>State with Arguments</b>. if empty, target in <b>State with Arguments</b> will be used.
+
+<b>Outputs:</b>
+ - <b>State with Arguments</b>: String stands for state with arguments
+
+
+## Build Asynchronous Message with Arguments.vi
+
+Builds a message that contains arguments for JKISM. This VI will parse "State with Arguments" for message string, arguments and target module from input <b>State with Arguments</b> and replace corresponding parts in the message with input values with asyc-message symobol "->" if <b>Target Module ("")</b> is specified.
+
+<B>For Example:</B>
+
+If <b>State with Arguments</b> input is "API: DoSth"
+<b>Arguments ("")</b> input is "Arguments"
+<b>Target Module ("")</b> input is "Callee"
+Then result string is "API: DoSth >> Arguments -> Callee". It's different with Build Message with Arguments(Auto Check).vi. . Message Type Symbol is replaced with "->".
+
+If <b>State with Arguments</b> input is "API: DoSth >> Arguments -> Callee"
+<b>Arguments ("")</b> input is "NewArguments"
+<b>Target Module ("")</b> input is ""
+Then result string is "API: DoSth >> NewArguments -> Callee"
+
+If <b>State with Arguments</b> input is "API: DoSth >> Arguments -> Callee"
+<b>Arguments ("")</b> input is "NewArguments"
+<b>Target Module ("")</b> input is "NewCallee"
+Then result string is "API: DoSth >> NewArguments -> NewCallee"
+
+If <b>State with Arguments</b> input is "API: DoSth >> Arguments -> Callee"
+<b>Arguments ("")</b> input is ""
+<b>Target Module ("")</b> input is "NewCallee"
+Then result string is "API: DoSth -> NewCallee"
+
+If <b>State with Arguments</b> input is "API: DoSth >> Arguments -@ Callee"
+<b>Arguments ("")</b> input is "NewArguments"
+<b>Target Module ("")</b> input is ""
+Then result string is "API: DoSth >> NewArguments -> Callee". Message Type Symbol is replaced with "->".
+
+<b>Inputs:</b>
+ - <b>State with Arguments</b>: Input Message which might contain Arguments or target Module
+ - <b>Arguments ("")</b>: The arguments which will be used to replace arguments in <b>State with Arguments</b>. if empty, no arguments will be included in output strings.
+ - <b>Target Module ("")</b>: The target which will be used to replace target in <b>State with Arguments</b>. if empty, target in <b>State with Arguments</b> will be used.
+
+<b>Outputs:</b>
+ - <b>State with Arguments</b>: String stands for state with arguments
+
+
+## Build No-Reply Asynchronous Message with Arguments.vi
+
+Builds a message that contains arguments for JKISM. This VI will parse "State with Arguments" for message string, arguments and target module from input <b>State with Arguments</b> and replace corresponding parts in the message with input values with No-Reply asyc-message symobol "->|" if <b>Target Module ("")</b> is specified.
+
+<B>For Example:</B>
+
+If <b>State with Arguments</b> input is "API: DoSth"
+<b>Arguments ("")</b> input is "Arguments"
+<b>Target Module ("")</b> input is "Callee"
+Then result string is "API: DoSth >> Arguments ->| Callee". It's different with Build Message with Arguments(Auto Check).vi. Message Type Symbol is replaced with "->|".
+
+If <b>State with Arguments</b> input is "API: DoSth >> Arguments -> Callee"
+<b>Arguments ("")</b> input is "NewArguments"
+<b>Target Module ("")</b> input is ""
+Then result string is "API: DoSth >> NewArguments ->| Callee". Message Type Symbol is replaced with "->|".
+
+If <b>State with Arguments</b> input is "API: DoSth >> Arguments -> Callee"
+<b>Arguments ("")</b> input is "NewArguments"
+<b>Target Module ("")</b> input is "NewCallee"
+Then result string is "API: DoSth >> NewArguments ->| NewCallee". Message Type Symbol is replaced with "->|".
+
+If <b>State with Arguments</b> input is "API: DoSth >> Arguments -> Callee"
+<b>Arguments ("")</b> input is ""
+<b>Target Module ("")</b> input is "NewCallee"
+Then result string is "API: DoSth ->| NewCallee". Message Type Symbol is replaced with "->|".
+
+If <b>State with Arguments</b> input is "API: DoSth >> Arguments -@ Callee"
+<b>Arguments ("")</b> input is "NewArguments"
+<b>Target Module ("")</b> input is ""
+Then result string is "API: DoSth >> NewArguments ->| Callee". Message Type Symbol is replaced with "->|".
+
+<b>Inputs:</b>
+ - <b>State with Arguments</b>: Input Message which might contain Arguments or target Module
+ - <b>Arguments ("")</b>: The arguments which will be used to replace arguments in <b>State with Arguments</b>. if empty, no arguments will be included in output strings.
+ - <b>Target Module ("")</b>: The target which will be used to replace target in <b>State with Arguments</b>. if empty, target in <b>State with Arguments</b> will be used.
+
+<b>Outputs:</b>
+ - <b>State with Arguments</b>: String stands for state with arguments
+
+
+## Build Synchronous Message with Arguments.vi
+
+Builds a message that contains arguments for JKISM. This VI will parse "State with Arguments" for message string, arguments and target module from input <b>State with Arguments</b> and replace corresponding parts in the message with input values with sync-message symobol "-@" if <b>Target Module ("")</b> is specified.
+
+<B>For Example:</B>
+
+If <b>State with Arguments</b> input is "API: DoSth"
+<b>Arguments ("")</b> input is "Arguments"
+<b>Target Module ("")</b> input is "Callee"
+Then result string is "API: DoSth >> Arguments ->| Callee". It's different with Build Message with Arguments(Auto Check).vi. Message Type Symbol is replaced with "-@".
+
+If <b>State with Arguments</b> input is "API: DoSth >> Arguments -> Callee"
+<b>Arguments ("")</b> input is "NewArguments"
+<b>Target Module ("")</b> input is ""
+Then result string is "API: DoSth >> NewArguments ->| Callee". Message Type Symbol is replaced with "-@".
+
+If <b>State with Arguments</b> input is "API: DoSth >> Arguments -> Callee"
+<b>Arguments ("")</b> input is "NewArguments"
+<b>Target Module ("")</b> input is "NewCallee"
+Then result string is "API: DoSth >> NewArguments -@ NewCallee". Message Type Symbol is replaced with "-@".
+
+If <b>State with Arguments</b> input is "API: DoSth >> Arguments -> Callee"
+<b>Arguments ("")</b> input is ""
+<b>Target Module ("")</b> input is "NewCallee"
+Then result string is "API: DoSth -@ NewCallee". Message Type Symbol is replaced with "-@".
+
+If <b>State with Arguments</b> input is "API: DoSth >> Arguments -@ Callee"
+<b>Arguments ("")</b> input is "NewArguments"
+<b>Target Module ("")</b> input is ""
+Then result string is "API: DoSth >> NewArguments -@ Callee".
+
+<b>Inputs:</b>
+ - <b>State with Arguments</b>: Input Message which might contain Arguments or target Module
+ - <b>Arguments ("")</b>: The arguments which will be used to replace arguments in <b>State with Arguments</b>. if empty, no arguments will be included in output strings.
+ - <b>Target Module ("")</b>: The target which will be used to replace target in <b>State with Arguments</b>. if empty, target in <b>State with Arguments</b> will be used.
+
+<b>Outputs:</b>
+ - <b>State with Arguments</b>: String stands for state with arguments
