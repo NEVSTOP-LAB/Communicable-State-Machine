@@ -47,6 +47,9 @@
 		<Item Name="NamingConvention" Type="Folder">
 			<Item Name="Naming Check.vi" Type="VI" URL="../_Support/Naming Check.vi"/>
 		</Item>
+		<Item Name="Message" Type="Folder">
+			<Item Name="Parse State with Arguments String.vi" Type="VI" URL="../_Support/Message/Parse State with Arguments String.vi"/>
+		</Item>
 		<Item Name="JKISM++ Dummy Module.vi" Type="VI" URL="../_Support/JKISM++ Dummy Module.vi"/>
 	</Item>
 	<Item Name="Polymophic" Type="Folder">
@@ -54,6 +57,10 @@
 		<Item Name="Add State(s) to Queue By BOOL(Array Left).vi" Type="VI" URL="../_Polymophic/Add State(s) to Queue By BOOL(Array Left).vi"/>
 		<Item Name="Add State(s) to Queue By BOOL(Array Right).vi" Type="VI" URL="../_Polymophic/Add State(s) to Queue By BOOL(Array Right).vi"/>
 		<Item Name="Add State(s) to Queue By BOOL(Array All).vi" Type="VI" URL="../_Polymophic/Add State(s) to Queue By BOOL(Array All).vi"/>
+		<Item Name="Build Synchronous Message with Arguments.vi" Type="VI" URL="../_Polymophic/Build Synchronous Message with Arguments.vi"/>
+		<Item Name="Build Asynchronous Message with Arguments.vi" Type="VI" URL="../_Polymophic/Build Asynchronous Message with Arguments.vi"/>
+		<Item Name="Build No-Reply Asynchronous Message with Arguments.vi" Type="VI" URL="../_Polymophic/Build No-Reply Asynchronous Message with Arguments.vi"/>
+		<Item Name="Build Message with Arguments(Auto Check).vi" Type="VI" URL="../_Polymophic/Build Message with Arguments(Auto Check).vi"/>
 	</Item>
 	<Item Name="Advance" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
@@ -105,4 +112,5 @@
 	<Item Name="Parse State Queue++.vi" Type="VI" URL="../Parse State Queue++.vi"/>
 	<Item Name="Add State(s) to Queue By BOOL++.vi" Type="VI" URL="../Add State(s) to Queue By BOOL++.vi"/>
 	<Item Name="Build State String with Arguments++.vi" Type="VI" URL="../Build State String with Arguments++.vi"/>
+	<Item Name="Build Message with Arguments++.vi" Type="VI" URL="../Build Message with Arguments++.vi"/>
 </Library>
