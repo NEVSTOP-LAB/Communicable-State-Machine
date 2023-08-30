@@ -544,187 +544,183 @@
  - <b>JKISM Name</b>: 模块名称
 
 <b>Outputs:</b>
- - <b>Turn Invalid(Exit)?</b>: 是否已经退出	
+ - <b>Turn Invalid(Exit)?</b>: 是否已经退出
 
 ## Build Message with Arguments++.vi
 
-Builds a message that contains arguments for JKISM. This VI will parse "State with Arguments" for message type, message string, arguments and target module from input <b>State with Arguments</b> and replace corresponding parts in the message with input values. Different message type symbol(->|,->,-@) will be used in different Polymophic Vi instance.
+构建一个包含 JKISM 参数的消息。此 VI 将解析 "<b>State with Arguments</b>" 中的消息类型、消息字符串、参数和目标模块，并将消息中相应部分替换为输入值。不同的消息类型符号（->|、->、-@）将在不同的多态 VI 实例中使用。
 
-Polymophic Option:
+多态选项：
+
  - Build Message with Arguments(Auto Check).vi
  - Build Asynchronous Message with Arguments.vi
  - Build No-Reply Asynchronous Message with Arguments.vi
  - Build Synchronous Message with Arguments.vi
 
-<b>Inputs:</b>
- - <b>State with Arguments</b>: Input Message which might contain Arguments or target Module
- - <b>Arguments ("")</b>: The arguments which will be used to replace arguments in <b>State with Arguments</b>. if empty, no arguments will be included in output strings.
- - <b>Target Module ("")</b>: The target which will be used to replace target in <b>State with Arguments</b>. if empty, target in <b>State with Arguments</b> will be used.
+<b>Input：</b>
+ - <b>State with Arguments</b>：可能包含参数或目标模块的输入消息
+ - <b>Arguments ("")</b>：将用于替换 <b>State with Arguments</b> 中的参数。如果为空，则输出字符串中不会包含参数。
+ - <b>Target Module ("")</b>：将用于替换 <b>State with Arguments</b> 中的目标。如果为空，则将使用 <b>State with Arguments</b> 中的目标。
 
-<b>Outputs:</b>
- - <b>State with Arguments</b>: String stands for state with arguments
-
-<b>Inputs:</b>
-
-
-<b>Outputs:</b>
+<b>output：</b>
+- <b>State with Arguments</b>：代表带有参数的字符串状态
 
 
 ## Build Message with Arguments(Auto Check).vi
 
-Builds a message that contains arguments for JKISM. This VI will parse "State with Arguments" for message type, message string, arguments and target module from input <b>State with Arguments</b> and replace corresponding parts in the message with input values. The message type from input <b>State with Arguments</b> will be used.
+构建一个包含 JKISM 参数的消息。此 VI 将解析 "State with Arguments" 中的消息类型、消息字符串、参数和目标模块，并将消息中相应部分替换为输入值。将使用来自输入 "State with Arguments" 的消息类型。
 
-<B>For Example:</B>
+<B>示例：</B>
 
-If <b>State with Arguments</b> input is "API: DoSth"
-<b>Arguments ("")</b> input is "Arguments"
-<b>Target Module ("")</b> input is "Callee"
-Then result string is "API: DoSth >> Arguments" as no message symbol is detected.
+      如果 "State with Arguments" 输入为 "API: DoSth"
+      <b>Arguments ("")</b> 输入为 "Arguments"
+      <b>Target Module ("")</b> 输入为 "Callee"
+      则结果字符串为 "API: DoSth >> Arguments"，因为未检测到消息符号。
 
-If <b>State with Arguments</b> input is "API: DoSth >> Arguments -> Callee"
-<b>Arguments ("")</b> input is "NewArguments"
-<b>Target Module ("")</b> input is ""
-Then result string is "API: DoSth >> NewArguments -> Callee"
+      如果 "State with Arguments" 输入为 "API: DoSth >> Arguments -> Callee"
+      <b>Arguments ("")</b> 输入为 "NewArguments"
+      <b>Target Module ("")</b> 输入为空
+      则结果字符串为 "API: DoSth >> NewArguments -> Callee"
 
-If <b>State with Arguments</b> input is "API: DoSth >> Arguments -> Callee"
-<b>Arguments ("")</b> input is "NewArguments"
-<b>Target Module ("")</b> input is "NewCallee"
-Then result string is "API: DoSth >> NewArguments -> NewCallee"
+      如果 "State with Arguments" 输入为 "API: DoSth >> Arguments -> Callee"
+      <b>Arguments ("")</b> 输入为 "NewArguments"
+      <b>Target Module ("")</b> 输入为 "NewCallee"
+      则结果字符串为 "API: DoSth >> NewArguments -> NewCallee"
 
-If <b>State with Arguments</b> input is "API: DoSth >> Arguments -> Callee"
-<b>Arguments ("")</b> input is ""
-<b>Target Module ("")</b> input is "NewCallee"
-Then result string is "API: DoSth -> NewCallee"
+      如果 "State with Arguments" 输入为 "API: DoSth >> Arguments -> Callee"
+      <b>Arguments ("")</b> 输入为空
+      <b>Target Module ("")</b> 输入为 "NewCallee"
+      则结果字符串为 "API: DoSth -> NewCallee"
 
-If <b>State with Arguments</b> input is "API: DoSth >> Arguments -@ Callee"
-<b>Arguments ("")</b> input is "NewArguments"
-<b>Target Module ("")</b> input is ""
-Then result string is "API: DoSth >> NewArguments -@ Callee"
+      如果 "State with Arguments" 输入为 "API: DoSth >> Arguments -@ Callee"
+      <b>Arguments ("")</b> 输入为 "NewArguments"
+      <b>Target Module ("")</b> 输入为空
+      则结果字符串为 "API: DoSth >> NewArguments -@ Callee"
 
-<b>Inputs:</b>
- - <b>State with Arguments</b>: Input Message which might contain Arguments or target Module
- - <b>Arguments ("")</b>: The arguments which will be used to replace arguments in <b>State with Arguments</b>. if empty, no arguments will be included in output strings.
- - <b>Target Module ("")</b>: The target which will be used to replace target in <b>State with Arguments</b>. if empty, target in <b>State with Arguments</b> will be used.
+<b>输入：</b>
+ - <b>State with Arguments</b>：可能包含参数或目标模块的输入消息
+ - <b>Arguments ("")</b>：将用于替换 <b>State with Arguments</b> 中的参数。如果为空，则输出字符串中不会包含参数。
+ - <b>Target Module ("")</b>：将用于替换 <b>State with Arguments</b> 中的目标。如果为空，则将使用 <b>State with Arguments</b> 中的目标。
 
-<b>Outputs:</b>
- - <b>State with Arguments</b>: String stands for state with arguments
+<b>输出：</b>
+ - <b>State with Arguments</b>：代表带有参数的字符串状态
 
 
 ## Build Asynchronous Message with Arguments.vi
 
-Builds a message that contains arguments for JKISM. This VI will parse "State with Arguments" for message string, arguments and target module from input <b>State with Arguments</b> and replace corresponding parts in the message with input values with asyc-message symobol "->" if <b>Target Module ("")</b> is specified.
+构建一个包含 JKISM 参数的消息。此 VI 将解析 "<b>State with Arguments</b>" 中的消息字符串、参数和目标模块，并将消息中相应部分从输入的 "<b>State with Arguments</b>" 中替换为输入值，如果指定了目标模块，则使用异步消息符号 "->"。
 
-<B>For Example:</B>
+<B>例如：</B>
 
-If <b>State with Arguments</b> input is "API: DoSth"
-<b>Arguments ("")</b> input is "Arguments"
-<b>Target Module ("")</b> input is "Callee"
-Then result string is "API: DoSth >> Arguments -> Callee". It's different with Build Message with Arguments(Auto Check).vi. . Message Type Symbol is replaced with "->".
+      如果 "<b>State with Arguments</b>" 输入为 "API: DoSth"
+      <b>Arguments ("")</b> 输入为 "Arguments"
+      <b>Target Module ("")</b> 输入为 "Callee"
+      则结果字符串为 "API: DoSth >> Arguments -> Callee"。与 "Build Message with Arguments(Auto Check).vi" 不同。消息类型符号被替换为 "->"。
 
-If <b>State with Arguments</b> input is "API: DoSth >> Arguments -> Callee"
-<b>Arguments ("")</b> input is "NewArguments"
-<b>Target Module ("")</b> input is ""
-Then result string is "API: DoSth >> NewArguments -> Callee"
+      如果 "<b>State with Arguments</b>" 输入为 "API: DoSth >> Arguments -> Callee"
+      <b>Arguments ("")</b> 输入为 "NewArguments"
+      <b>Target Module ("")</b> 输入为空
+      则结果字符串为 "API: DoSth >> NewArguments -> Callee"
 
-If <b>State with Arguments</b> input is "API: DoSth >> Arguments -> Callee"
-<b>Arguments ("")</b> input is "NewArguments"
-<b>Target Module ("")</b> input is "NewCallee"
-Then result string is "API: DoSth >> NewArguments -> NewCallee"
+      如果 "<b>State with Arguments</b>" 输入为 "API: DoSth >> Arguments -> Callee"
+      <b>Arguments ("")</b> 输入为 "NewArguments"
+      <b>Target Module ("")</b> 输入为 "NewCallee"
+      则结果字符串为 "API: DoSth >> NewArguments -> NewCallee"
 
-If <b>State with Arguments</b> input is "API: DoSth >> Arguments -> Callee"
-<b>Arguments ("")</b> input is ""
-<b>Target Module ("")</b> input is "NewCallee"
-Then result string is "API: DoSth -> NewCallee"
+      如果 "<b>State with Arguments</b>" 输入为 "API: DoSth >> Arguments -> Callee"
+      <b>Arguments ("")</b> 输入为空
+      <b>Target Module ("")</b> 输入为 "NewCallee"
+      则结果字符串为 "API: DoSth -> NewCallee"
 
-If <b>State with Arguments</b> input is "API: DoSth >> Arguments -@ Callee"
-<b>Arguments ("")</b> input is "NewArguments"
-<b>Target Module ("")</b> input is ""
-Then result string is "API: DoSth >> NewArguments -> Callee". Message Type Symbol is replaced with "->".
+      如果 "<b>State with Arguments</b>" 输入为 "API: DoSth >> Arguments -@ Callee"
+      <b>Arguments ("")</b> 输入为 "NewArguments"
+      <b>Target Module ("")</b> 输入为空
+      则结果字符串为 "API: DoSth >> NewArguments -> Callee"。消息类型符号被替换为 "->"。
 
-<b>Inputs:</b>
- - <b>State with Arguments</b>: Input Message which might contain Arguments or target Module
- - <b>Arguments ("")</b>: The arguments which will be used to replace arguments in <b>State with Arguments</b>. if empty, no arguments will be included in output strings.
- - <b>Target Module ("")</b>: The target which will be used to replace target in <b>State with Arguments</b>. if empty, target in <b>State with Arguments</b> will be used.
+<b>输入：</b>
+ - <b>State with Arguments</b>：可能包含参数或目标模块的输入消息
+ - <b>Arguments ("")</b>：用于替换 <b>State with Arguments</b> 中参数的参数。如果为空，则输出字符串中不包含参数。
+ - <b>Target Module ("")</b>：用于替换 <b>State with Arguments</b> 中目标的目标。如果为空，则将使用 <b>State with Arguments</b> 中的目标。
 
-<b>Outputs:</b>
- - <b>State with Arguments</b>: String stands for state with arguments
+<b>输出：</b>
+ - <b>State with Arguments</b>：表示带有参数的字符串状态
 
 
 ## Build No-Reply Asynchronous Message with Arguments.vi
 
-Builds a message that contains arguments for JKISM. This VI will parse "State with Arguments" for message string, arguments and target module from input <b>State with Arguments</b> and replace corresponding parts in the message with input values with No-Reply asyc-message symobol "->|" if <b>Target Module ("")</b> is specified.
+构建一个包含 JKISM 参数的消息。此 VI 将解析 "<b>State with Arguments</b>" 中的消息字符串、参数和目标模块，并将消息中相应部分从输入的 "<b>State with Arguments</b>" 中替换为输入值，如果指定了目标模块，则使用 No-Reply 异步消息符号 "->|"。
 
-<B>For Example:</B>
+<B>例如：</B>
 
-If <b>State with Arguments</b> input is "API: DoSth"
-<b>Arguments ("")</b> input is "Arguments"
-<b>Target Module ("")</b> input is "Callee"
-Then result string is "API: DoSth >> Arguments ->| Callee". It's different with Build Message with Arguments(Auto Check).vi. Message Type Symbol is replaced with "->|".
+      如果 "<b>State with Arguments</b>" 输入为 "API: DoSth"
+      <b>Arguments ("")</b> 输入为 "Arguments"
+      <b>Target Module ("")</b> 输入为 "Callee"
+      则结果字符串为 "API: DoSth >> Arguments ->| Callee"。与 "Build Message with Arguments(Auto Check).vi" 不同。消息类型符号被替换为 "->|"。
 
-If <b>State with Arguments</b> input is "API: DoSth >> Arguments -> Callee"
-<b>Arguments ("")</b> input is "NewArguments"
-<b>Target Module ("")</b> input is ""
-Then result string is "API: DoSth >> NewArguments ->| Callee". Message Type Symbol is replaced with "->|".
+      如果 "<b>State with Arguments</b>" 输入为 "API: DoSth >> Arguments -> Callee"
+      <b>Arguments ("")</b> 输入为 "NewArguments"
+      <b>Target Module ("")</b> 输入为空
+      则结果字符串为 "API: DoSth >> NewArguments ->| Callee"。消息类型符号被替换为 "->|"。
 
-If <b>State with Arguments</b> input is "API: DoSth >> Arguments -> Callee"
-<b>Arguments ("")</b> input is "NewArguments"
-<b>Target Module ("")</b> input is "NewCallee"
-Then result string is "API: DoSth >> NewArguments ->| NewCallee". Message Type Symbol is replaced with "->|".
+      如果 "<b>State with Arguments</b>" 输入为 "API: DoSth >> Arguments -> Callee"
+      <b>Arguments ("")</b> 输入为 "NewArguments"
+      <b>Target Module ("")</b> 输入为 "NewCallee"
+      则结果字符串为 "API: DoSth >> NewArguments ->| NewCallee"。消息类型符号被替换为 "->|"。
 
-If <b>State with Arguments</b> input is "API: DoSth >> Arguments -> Callee"
-<b>Arguments ("")</b> input is ""
-<b>Target Module ("")</b> input is "NewCallee"
-Then result string is "API: DoSth ->| NewCallee". Message Type Symbol is replaced with "->|".
+      如果 "<b>State with Arguments</b>" 输入为 "API: DoSth >> Arguments -> Callee"
+      <b>Arguments ("")</b> 输入为空
+      <b>Target Module ("")</b> 输入为 "NewCallee"
+      则结果字符串为 "API: DoSth ->| NewCallee"。消息类型符号被替换为 "->|"。
 
-If <b>State with Arguments</b> input is "API: DoSth >> Arguments -@ Callee"
-<b>Arguments ("")</b> input is "NewArguments"
-<b>Target Module ("")</b> input is ""
-Then result string is "API: DoSth >> NewArguments ->| Callee". Message Type Symbol is replaced with "->|".
+      如果 "<b>State with Arguments</b>" 输入为 "API: DoSth >> Arguments -@ Callee"
+      <b>Arguments ("")</b> 输入为 "NewArguments"
+      <b>Target Module ("")</b> 输入为空
+      则结果字符串为 "API: DoSth >> NewArguments ->| Callee"。消息类型符号被替换为 "->|"。
 
-<b>Inputs:</b>
- - <b>State with Arguments</b>: Input Message which might contain Arguments or target Module
- - <b>Arguments ("")</b>: The arguments which will be used to replace arguments in <b>State with Arguments</b>. if empty, no arguments will be included in output strings.
- - <b>Target Module ("")</b>: The target which will be used to replace target in <b>State with Arguments</b>. if empty, target in <b>State with Arguments</b> will be used.
+<b>输入：</b>
+ - <b>State with Arguments</b>：可能包含参数或目标模块的输入消息
+ - <b>Arguments ("")</b>：用于替换 <b>State with Arguments</b> 中参数的参数。如果为空，则输出字符串中不包含参数。
+ - <b>Target Module ("")</b>：用于替换 <b>State with Arguments</b> 中目标的目标。如果为空，则将使用 <b>State with Arguments</b> 中的目标。
 
-<b>Outputs:</b>
- - <b>State with Arguments</b>: String stands for state with arguments
+<b>输出：</b>
+ - <b>State with Arguments</b>：表示带有参数的字符串状态
 
 
 ## Build Synchronous Message with Arguments.vi
 
-Builds a message that contains arguments for JKISM. This VI will parse "State with Arguments" for message string, arguments and target module from input <b>State with Arguments</b> and replace corresponding parts in the message with input values with sync-message symobol "-@" if <b>Target Module ("")</b> is specified.
+构建一个包含 JKISM 参数的消息。此 VI 将解析 "<b>State with Arguments</b>" 中的消息字符串、参数和目标模块，并将消息中相应部分从输入的 "<b>State with Arguments</b>" 中替换为输入值，如果指定了目标模块，则使用同步消息符号 "-@"。
 
-<B>For Example:</B>
+<B>例如：</B>
 
-If <b>State with Arguments</b> input is "API: DoSth"
-<b>Arguments ("")</b> input is "Arguments"
-<b>Target Module ("")</b> input is "Callee"
-Then result string is "API: DoSth >> Arguments ->| Callee". It's different with Build Message with Arguments(Auto Check).vi. Message Type Symbol is replaced with "-@".
+      如果 "<b>State with Arguments</b>" 输入为 "API: DoSth"
+      <b>Arguments ("")</b> 输入为 "Arguments"
+      <b>Target Module ("")</b> 输入为 "Callee"
+      则结果字符串为 "API: DoSth >> Arguments ->| Callee"。与 "Build Message with Arguments(Auto Check).vi" 不同。消息类型符号被替换为 "-@"。
 
-If <b>State with Arguments</b> input is "API: DoSth >> Arguments -> Callee"
-<b>Arguments ("")</b> input is "NewArguments"
-<b>Target Module ("")</b> input is ""
-Then result string is "API: DoSth >> NewArguments ->| Callee". Message Type Symbol is replaced with "-@".
+      如果 "<b>State with Arguments</b>" 输入为 "API: DoSth >> Arguments -> Callee"
+      <b>Arguments ("")</b> 输入为 "NewArguments"
+      <b>Target Module ("")</b> 输入为空
+      则结果字符串为 "API: DoSth >> NewArguments ->| Callee"。消息类型符号被替换为 "-@"。
 
-If <b>State with Arguments</b> input is "API: DoSth >> Arguments -> Callee"
-<b>Arguments ("")</b> input is "NewArguments"
-<b>Target Module ("")</b> input is "NewCallee"
-Then result string is "API: DoSth >> NewArguments -@ NewCallee". Message Type Symbol is replaced with "-@".
+      如果 "<b>State with Arguments</b>" 输入为 "API: DoSth >> Arguments -> Callee"
+      <b>Arguments ("")</b> 输入为 "NewArguments"
+      <b>Target Module ("")</b> 输入为 "NewCallee"
+      则结果字符串为 "API: DoSth >> NewArguments -@ NewCallee"。消息类型符号被替换为 "-@"。
 
-If <b>State with Arguments</b> input is "API: DoSth >> Arguments -> Callee"
-<b>Arguments ("")</b> input is ""
-<b>Target Module ("")</b> input is "NewCallee"
-Then result string is "API: DoSth -@ NewCallee". Message Type Symbol is replaced with "-@".
+      如果 "<b>State with Arguments</b>" 输入为 "API: DoSth >> Arguments -> Callee"
+      <b>Arguments ("")</b> 输入为空
+      <b>Target Module ("")</b> 输入为 "NewCallee"
+      则结果字符串为 "API: DoSth -@ NewCallee"。消息类型符号被替换为 "-@"。
 
-If <b>State with Arguments</b> input is "API: DoSth >> Arguments -@ Callee"
-<b>Arguments ("")</b> input is "NewArguments"
-<b>Target Module ("")</b> input is ""
-Then result string is "API: DoSth >> NewArguments -@ Callee".
+      如果 "<b>State with Arguments</b>" 输入为 "API: DoSth >> Arguments -@ Callee"
+      <b>Arguments ("")</b> 输入为 "NewArguments"
+      <b>Target Module ("")</b> 输入为空
+      则结果字符串为 "API: DoSth >> NewArguments -@ Callee"。
 
-<b>Inputs:</b>
- - <b>State with Arguments</b>: Input Message which might contain Arguments or target Module
- - <b>Arguments ("")</b>: The arguments which will be used to replace arguments in <b>State with Arguments</b>. if empty, no arguments will be included in output strings.
- - <b>Target Module ("")</b>: The target which will be used to replace target in <b>State with Arguments</b>. if empty, target in <b>State with Arguments</b> will be used.
+<b>输入：</b>
+ - <b>State with Arguments</b>：可能包含参数或目标模块的输入消息
+ - <b>Arguments ("")</b>：用于替换 <b>State with Arguments</b> 中参数的参数。如果为空，则输出字符串中不包含参数。
+ - <b>Target Module ("")</b>：用于替换 <b>State with Arguments</b> 中目标的目标。如果为空，则将使用 <b>State with Arguments</b> 中的目标。
 
-<b>Outputs:</b>
- - <b>State with Arguments</b>: String stands for state with arguments
+<b>输出：</b>
+ - <b>State with Arguments</b>：表示带有参数的字符串状态
