@@ -1,16 +1,10 @@
 # Template Description
 
 ## README FIRST
-This VI template should be used by dragging & dropping it from the Functions palette onto the Block Diagram of a new, blank VI, which will place it's contents into the blank VI.
-Do not edit the VI found in the palette.  Only edit the state machine after it is placed into your blank VI.
 
-For instructions on how to use the JKI State Machine, examples and video tutorials, visit: http://jki.net/state-machine/
+JKISM++ is a LabVIEW Application Framework extended from JKI State Machine(JKISM). It follows the JKSIM's pattern and extends the Key words to describe message communication between modules including the concepts of Sync-Message, Async-Message, Subscription/Unsubscription of status, which is essential elements for creating re-use code modules. More information, please visit wiki of JKISM++: https://github.com/NEVSTOP-LAB/JKI-State-Machine-Plus-Plus/wiki
 
-JKI State Machine?
-http://jki.net/state-machine/
-Copyright (C) 2005-2018, JKI <info@jki.net>
-ALL RIGHTS RESERVED
-
+For instructions on JKI State Machine, visit: http://jki.net/state-machine/
 For information about JKISM++, visit: https://github.com/NEVSTOP-LAB
 
 ## State Syntax

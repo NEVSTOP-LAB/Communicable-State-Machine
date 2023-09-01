@@ -44,8 +44,6 @@ API Description:
 
 ## JKISM++ Arguments Support
 
-
-
 | a | b |Description|
 |---|---|---|
 | Safe String Parameter | Build-in | "-> -@ & <- , ; []{}`"  wil be replaced with %[HEXCODE] |
