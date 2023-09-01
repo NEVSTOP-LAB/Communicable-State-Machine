@@ -1,7 +1,7 @@
 # JKI State Machine++ (JKISM++)
 
 LabVIEW Application Framework extended from JKI State Machine(JKISM). [Wiki for JKISM++](https://github.com/NEVSTOP-LAB/JKI-State-Machine-Plus-Plus/wiki)
- 
+
 ```
 #JKISM++ State Syntax
 
@@ -41,3 +41,14 @@ Template Description:
 API Description:
 [EN](src/help/NEVSTOP/JKI%20State%20Machine%2B%2B/VI%20Description(EN).md) |
 [CN](src/help/NEVSTOP/JKI%20State%20Machine%2B%2B/VI%20Description(CN).md)
+
+## JKISM++ Arguments Support
+
+
+
+| a | b |Description|
+|---|---|---|
+| Safe String Parameter | Build-in | "-> -@ & <- , ; []{}`"  wil be replaced with %[HEXCODE] |
+| HexStr Parameter | Build-in | Data will be converted as variant and changed to Hex String as paramter |
+|[ArrayData Parameter](https://github.com/NEVSTOP-LAB/JKISMPP-Array-Parameter-Support) |Addons|Pass the StartPos with array-length of a cirlce buffer for numeric array data|
+|[MassData Parameter](https://github.com/NEVSTOP-LAB/JKISMPP-MassData-Parameter-Support) |Addons|Data will be converted to memory and saved in a cricle byffer. Pass the StartPos with length as parameter. |
