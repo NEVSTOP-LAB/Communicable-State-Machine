@@ -65,6 +65,13 @@ Discard the event because we'll close the front panel ourselves in Macro: Exit
 ### "Error Handler"
 You can also output any states to clean-up after errors occur
 
+#### Internal Error Handler Case
+If any error Occurred, "Error Occurred"
+status update will be broadcasted to system.
+Parameter is Error Cluster.
+
+#### External Error Handler Case
+Usually, it's because this JKISM register others' "Error Occurred" status with "Error Handler". If other JKISM have any error, the error will be passed here for central handling.
 
 ### "Critical Error"
 When any un-recoverable error occurs, JKISM goes into this case.
@@ -167,7 +174,9 @@ If you need to tell who triggered this state , use this string. If it's this cas
 #### >> Arguments >>
 Deal with the parameter if any
 
-
 #### Response
 Connect this to return the response of your API
 
+## Debug User Event
+(No-Event Template Only)
+Stop by posting "Macro: Exit" Message to lower JKISM Module. Remove this code after dropping to your block diagram.

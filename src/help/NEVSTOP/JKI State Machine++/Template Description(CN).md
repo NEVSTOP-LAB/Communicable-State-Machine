@@ -65,6 +65,13 @@ Discard the event because we'll close the front panel ourselves in Macro: Exit
 ### "Error Handler"
 处理模块错误
 
+#### Internal Error Handler Case
+如果发生了错误，"Error Occurred" 状态将被广播到整个系统。参数是HexStr格式的错误簇.
+
+#### External Error Handler Case
+此分支的执行是由于本模块订阅了其他模块的 "Error Occurred" 状态并关联到 "Error Handler".
+如果其他模块发生了错误，错误也将被传递到这里进行集中式的处理。
+
 ### "Critical Error"
 当不可恢复错误发生时，模块进入此分支
 
@@ -148,3 +155,7 @@ Discard the event because we'll close the front panel ourselves in Macro: Exit
 
 #### Response
 连接的字符串将作为响应返回给调用模块
+
+## Debug User Event
+(No-Event Template Only)
+通过发送 "Macro: Exit" 消息停止下方的 JKISM 模块。当开发完毕后，应该移除此部分逻辑
