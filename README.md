@@ -46,7 +46,7 @@ API Description:
 
 | a | b |Description|
 |---|---|---|
-| Safe String Parameter | Build-in | "-> -@ & <- , ; []{}`"  wil be replaced with %[HEXCODE] |
-| HexStr Parameter | Build-in | Data will be converted as variant and changed to Hex String as paramter |
-|[ArrayData Parameter](https://github.com/NEVSTOP-LAB/JKISMPP-Array-Parameter-Support) |Addons|Pass the StartPos with array-length of a cirlce buffer for numeric array data|
-|[MassData Parameter](https://github.com/NEVSTOP-LAB/JKISMPP-MassData-Parameter-Support) |Addons|Data will be converted to memory and saved in a cricle byffer. Pass the StartPos with length as parameter. |
+| Safe String | Build-in | "->\| -> -@ & <- , ; []{}`"  wil be replaced with %[HEXCODE] |
+| HexStr | Build-in | Data will be converted as variant and changed to Hex String as paramter |
+|[ArrayData](https://github.com/NEVSTOP-LAB/JKISMPP-Array-Parameter-Support) |Addons|Pass the StartPos with array-length of a cirlce buffer for numeric array data|
+|[MassData](https://github.com/NEVSTOP-LAB/JKISMPP-MassData-Parameter-Support) |Addons|Data will be converted to memory and saved in a cricle byffer. Pass the StartPos with length as parameter. |
