@@ -178,3 +178,6 @@ Connect this to return the response of your API
 Stop by posting "Macro: Exit" Message to lower JKISM Module. Remove this code after dropping to your block diagram.
 
 
+## "Internal State"
+This category is used for holding internal states
+

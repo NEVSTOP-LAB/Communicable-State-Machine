@@ -156,3 +156,6 @@ Discard the event because we'll close the front panel ourselves in Macro: Exit
 ## Debug User Event
 (No-Event Template Only)
 通过发送 "Macro: Exit" 消息停止下方的 JKISM 模块. 当开发完毕后, 应该移除此部分逻辑
+
+## "Internal State"
+此分支用于实现模块的内部逻辑状态
