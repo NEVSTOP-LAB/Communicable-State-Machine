@@ -1,16 +1,10 @@
 # Template Description
 
 ## README FIRST
-This VI template should be used by dragging & dropping it from the Functions palette onto the Block Diagram of a new, blank VI, which will place it's contents into the blank VI.
-Do not edit the VI found in the palette.  Only edit the state machine after it is placed into your blank VI.
 
-For instructions on how to use the JKI State Machine, examples and video tutorials, visit: http://jki.net/state-machine/
+JKISM++ is a LabVIEW Application Framework extended from JKI State Machine(JKISM). It follows the JKSIM's pattern and extends the Key words to describe message communication between modules including the concepts of Sync-Message, Async-Message, Subscription/Unsubscription of status, which is essential elements for creating re-use code modules. More information, please visit wiki of JKISM++: https://github.com/NEVSTOP-LAB/JKI-State-Machine-Plus-Plus/wiki
 
-JKI State Machine?
-http://jki.net/state-machine/
-Copyright (C) 2005-2018, JKI <info@jki.net>
-ALL RIGHTS RESERVED
-
+For instructions on JKI State Machine, visit: http://jki.net/state-machine/
 For information about JKISM++, visit: https://github.com/NEVSTOP-LAB
 
 ## State Syntax
@@ -65,6 +59,13 @@ Discard the event because we'll close the front panel ourselves in Macro: Exit
 ### "Error Handler"
 You can also output any states to clean-up after errors occur
 
+#### Internal Error Handler Case
+If any error Occurred, "Error Occurred"
+status update will be broadcasted to system.
+Parameter is Error Cluster.
+
+#### External Error Handler Case
+Usually, it's because this JKISM register others' "Error Occurred" status with "Error Handler". If other JKISM have any error, the error will be passed here for central handling.
 
 ### "Critical Error"
 When any un-recoverable error occurs, JKISM goes into this case.
@@ -112,6 +113,8 @@ This is used to determine panel behavior on exit
 ### "Exit"
 Case for exiting the loop. No errors that occur here will be handled.
 
+## "Category Seperator"
+Do not put any code in this frame.
 
 ### "Data: Initialize"
 Initialize the shift-register data, here.
@@ -167,7 +170,14 @@ If you need to tell who triggered this state , use this string. If it's this cas
 #### >> Arguments >>
 Deal with the parameter if any
 
-
 #### Response
 Connect this to return the response of your API
+
+## Debug User Event
+(No-Event Template Only)
+Stop by posting "Macro: Exit" Message to lower JKISM Module. Remove this code after dropping to your block diagram.
+
+
+## "Internal State"
+This category is used for holding internal states
 

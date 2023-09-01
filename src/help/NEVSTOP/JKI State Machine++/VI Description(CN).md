@@ -416,6 +416,66 @@
  - <b>State Queue Out</b>: 返回继续执行的所有状态及参数。
 
 
+## Add State(s) to Queue By BOOL(Element).vi
+
+根据高优先级和Bool输入，此VI生成TRUE/False和剩余状态的连接状态。High Priority输入决定是否在剩余状态之前或之后连接TRUE或False字符串。Bool输入决定要连接的字符串是TRUE还是False。
+
+<b>Inputs:</b>
+ - <b>State Queue("")</b>: 整个状态队列被连接到此输入
+ - <b>TRUE("")</b>: <b>Bool</b> 为 True 时插入的状态字符串
+ - <b>False("")</b>: <b>Bool</b> 为 False 时插入的状态字符串
+ - <b>Bool</b>: 选择连接到TRUE终端或False终端的状态字符串的标志。
+ - <b>High Priority(FALSE)</b>: 如果为True，状态将被插入到<b>State Queue("")</b>的顶部。如果为False，它被附加到尾部。
+
+<b>Outputs:</b>
+ - <b>State Queue Out</b>: 返回继续执行的所有状态及参数。
+
+
+## Add State(s) to Queue By BOOL(Array Left).vi
+
+根据高优先级和Bool输入，此VI生成TRUE/False和剩余状态的连接状态。High Priority输入决定是否在剩余状态之前或之后连接TRUE或False字符串。Bool输入决定要连接的字符串是TRUE还是False。
+
+<b>Inputs:</b>
+ - <b>State Queue("")</b>: 整个状态队列被连接到此输入
+ - <b>TRUE("")</b>: <b>Bool</b> 为 True 时插入的状态字符串
+ - <b>False("")</b>: <b>Bool</b> 为 False 时插入的状态字符串
+ - <b>Bool</b>: 选择连接到TRUE终端或False终端的状态字符串的标志。
+ - <b>High Priority(FALSE)</b>: 如果为True，状态将被插入到<b>State Queue("")</b>的顶部。如果为False，它被附加到尾部。
+
+<b>Outputs:</b>
+ - <b>State Queue Out</b>: 返回继续执行的所有状态及参数。
+
+
+## Add State(s) to Queue By BOOL(Array Right).vi
+
+根据高优先级和Bool输入，此VI生成TRUE/False和剩余状态的连接状态。High Priority输入决定是否在剩余状态之前或之后连接TRUE或False字符串。Bool输入决定要连接的字符串是TRUE还是False。
+
+<b>Inputs:</b>
+ - <b>State Queue("")</b>: 整个状态队列被连接到此输入
+ - <b>TRUE("")</b>: <b>Bool</b> 为 True 时插入的状态字符串
+ - <b>False("")</b>: <b>Bool</b> 为 False 时插入的状态字符串
+ - <b>Bool</b>: 选择连接到TRUE终端或False终端的状态字符串的标志。
+ - <b>High Priority(FALSE)</b>: 如果为True，状态将被插入到<b>State Queue("")</b>的顶部。如果为False，它被附加到尾部。
+
+<b>Outputs:</b>
+ - <b>State Queue Out</b>: 返回继续执行的所有状态及参数。
+
+
+## Add State(s) to Queue By BOOL(Array All).vi
+
+根据高优先级和Bool输入，此VI生成TRUE/False和剩余状态的连接状态。High Priority输入决定是否在剩余状态之前或之后连接TRUE或False字符串。Bool输入决定要连接的字符串是TRUE还是False。
+
+<b>Inputs:</b>
+ - <b>State Queue("")</b>: 整个状态队列被连接到此输入
+ - <b>TRUE("")</b>: <b>Bool</b> 为 True 时插入的状态字符串
+ - <b>False("")</b>: <b>Bool</b> 为 False 时插入的状态字符串
+ - <b>Bool</b>: 选择连接到TRUE终端或False终端的状态字符串的标志。
+ - <b>High Priority(FALSE)</b>: 如果为True，状态将被插入到<b>State Queue("")</b>的顶部。如果为False，它被附加到尾部。
+
+<b>Outputs:</b>
+ - <b>State Queue Out</b>: 返回继续执行的所有状态及参数。
+
+
 ## JKISM++ Make String Arguments Safe.vi
 
 '->','->|','-@','-&','<-" 是关键字，不能出现在参数中。使用此 VI 保证参数安全。
@@ -475,3 +535,192 @@
 <b>Outputs:</b>
  - <b>error out</b>: 错误簇
 
+
+## JKISM++ Module Turns Invalid.vi
+
+检查JKISM是否已经退出。通常用于和JKISM并行的功能循环，这些功能循环和 JKISM 一起完成完整模块功能。 本VI用于并行循环的退出条件。
+
+<b>Inputs:</b>
+ - <b>JKISM Name</b>: 模块名称
+
+<b>Outputs:</b>
+ - <b>Turn Invalid(Exit)?</b>: 是否已经退出
+
+## Build Message with Arguments++.vi
+
+构建一个包含 JKISM 参数的消息。此 VI 将解析 "<b>State with Arguments</b>" 中的消息类型、消息字符串、参数和目标模块，并将消息中相应部分替换为输入值。不同的消息类型符号（->|、->、-@）将在不同的多态 VI 实例中使用。
+
+多态选项：
+
+ - Build Message with Arguments(Auto Check).vi
+ - Build Asynchronous Message with Arguments.vi
+ - Build No-Reply Asynchronous Message with Arguments.vi
+ - Build Synchronous Message with Arguments.vi
+
+<b>Input：</b>
+ - <b>State with Arguments</b>：可能包含参数或目标模块的输入消息
+ - <b>Arguments ("")</b>：将用于替换 <b>State with Arguments</b> 中的参数。如果为空，则输出字符串中不会包含参数。
+ - <b>Target Module ("")</b>：将用于替换 <b>State with Arguments</b> 中的目标。如果为空，则将使用 <b>State with Arguments</b> 中的目标。
+
+<b>output：</b>
+- <b>State with Arguments</b>：代表带有参数的字符串状态
+
+
+## Build Message with Arguments(Auto Check).vi
+
+构建一个包含 JKISM 参数的消息。此 VI 将解析 "State with Arguments" 中的消息类型、消息字符串、参数和目标模块，并将消息中相应部分替换为输入值。将使用来自输入 "State with Arguments" 的消息类型。
+
+<B>示例：</B>
+
+      如果 "State with Arguments" 输入为 "API: DoSth"
+      <b>Arguments ("")</b> 输入为 "Arguments"
+      <b>Target Module ("")</b> 输入为 "Callee"
+      则结果字符串为 "API: DoSth >> Arguments"，因为未检测到消息符号。
+
+      如果 "State with Arguments" 输入为 "API: DoSth >> Arguments -> Callee"
+      <b>Arguments ("")</b> 输入为 "NewArguments"
+      <b>Target Module ("")</b> 输入为空
+      则结果字符串为 "API: DoSth >> NewArguments -> Callee"
+
+      如果 "State with Arguments" 输入为 "API: DoSth >> Arguments -> Callee"
+      <b>Arguments ("")</b> 输入为 "NewArguments"
+      <b>Target Module ("")</b> 输入为 "NewCallee"
+      则结果字符串为 "API: DoSth >> NewArguments -> NewCallee"
+
+      如果 "State with Arguments" 输入为 "API: DoSth >> Arguments -> Callee"
+      <b>Arguments ("")</b> 输入为空
+      <b>Target Module ("")</b> 输入为 "NewCallee"
+      则结果字符串为 "API: DoSth -> NewCallee"
+
+      如果 "State with Arguments" 输入为 "API: DoSth >> Arguments -@ Callee"
+      <b>Arguments ("")</b> 输入为 "NewArguments"
+      <b>Target Module ("")</b> 输入为空
+      则结果字符串为 "API: DoSth >> NewArguments -@ Callee"
+
+<b>输入：</b>
+ - <b>State with Arguments</b>：可能包含参数或目标模块的输入消息
+ - <b>Arguments ("")</b>：将用于替换 <b>State with Arguments</b> 中的参数。如果为空，则输出字符串中不会包含参数。
+ - <b>Target Module ("")</b>：将用于替换 <b>State with Arguments</b> 中的目标。如果为空，则将使用 <b>State with Arguments</b> 中的目标。
+
+<b>输出：</b>
+ - <b>State with Arguments</b>：代表带有参数的字符串状态
+
+
+## Build Asynchronous Message with Arguments.vi
+
+构建一个包含 JKISM 参数的消息。此 VI 将解析 "<b>State with Arguments</b>" 中的消息字符串、参数和目标模块，并将消息中相应部分从输入的 "<b>State with Arguments</b>" 中替换为输入值，如果指定了目标模块，则使用异步消息符号 "->"。
+
+<B>例如：</B>
+
+      如果 "<b>State with Arguments</b>" 输入为 "API: DoSth"
+      <b>Arguments ("")</b> 输入为 "Arguments"
+      <b>Target Module ("")</b> 输入为 "Callee"
+      则结果字符串为 "API: DoSth >> Arguments -> Callee"。与 "Build Message with Arguments(Auto Check).vi" 不同。消息类型符号被替换为 "->"。
+
+      如果 "<b>State with Arguments</b>" 输入为 "API: DoSth >> Arguments -> Callee"
+      <b>Arguments ("")</b> 输入为 "NewArguments"
+      <b>Target Module ("")</b> 输入为空
+      则结果字符串为 "API: DoSth >> NewArguments -> Callee"
+
+      如果 "<b>State with Arguments</b>" 输入为 "API: DoSth >> Arguments -> Callee"
+      <b>Arguments ("")</b> 输入为 "NewArguments"
+      <b>Target Module ("")</b> 输入为 "NewCallee"
+      则结果字符串为 "API: DoSth >> NewArguments -> NewCallee"
+
+      如果 "<b>State with Arguments</b>" 输入为 "API: DoSth >> Arguments -> Callee"
+      <b>Arguments ("")</b> 输入为空
+      <b>Target Module ("")</b> 输入为 "NewCallee"
+      则结果字符串为 "API: DoSth -> NewCallee"
+
+      如果 "<b>State with Arguments</b>" 输入为 "API: DoSth >> Arguments -@ Callee"
+      <b>Arguments ("")</b> 输入为 "NewArguments"
+      <b>Target Module ("")</b> 输入为空
+      则结果字符串为 "API: DoSth >> NewArguments -> Callee"。消息类型符号被替换为 "->"。
+
+<b>输入：</b>
+ - <b>State with Arguments</b>：可能包含参数或目标模块的输入消息
+ - <b>Arguments ("")</b>：用于替换 <b>State with Arguments</b> 中参数的参数。如果为空，则输出字符串中不包含参数。
+ - <b>Target Module ("")</b>：用于替换 <b>State with Arguments</b> 中目标的目标。如果为空，则将使用 <b>State with Arguments</b> 中的目标。
+
+<b>输出：</b>
+ - <b>State with Arguments</b>：表示带有参数的字符串状态
+
+
+## Build No-Reply Asynchronous Message with Arguments.vi
+
+构建一个包含 JKISM 参数的消息。此 VI 将解析 "<b>State with Arguments</b>" 中的消息字符串、参数和目标模块，并将消息中相应部分从输入的 "<b>State with Arguments</b>" 中替换为输入值，如果指定了目标模块，则使用 No-Reply 异步消息符号 "->|"。
+
+<B>例如：</B>
+
+      如果 "<b>State with Arguments</b>" 输入为 "API: DoSth"
+      <b>Arguments ("")</b> 输入为 "Arguments"
+      <b>Target Module ("")</b> 输入为 "Callee"
+      则结果字符串为 "API: DoSth >> Arguments ->| Callee"。与 "Build Message with Arguments(Auto Check).vi" 不同。消息类型符号被替换为 "->|"。
+
+      如果 "<b>State with Arguments</b>" 输入为 "API: DoSth >> Arguments -> Callee"
+      <b>Arguments ("")</b> 输入为 "NewArguments"
+      <b>Target Module ("")</b> 输入为空
+      则结果字符串为 "API: DoSth >> NewArguments ->| Callee"。消息类型符号被替换为 "->|"。
+
+      如果 "<b>State with Arguments</b>" 输入为 "API: DoSth >> Arguments -> Callee"
+      <b>Arguments ("")</b> 输入为 "NewArguments"
+      <b>Target Module ("")</b> 输入为 "NewCallee"
+      则结果字符串为 "API: DoSth >> NewArguments ->| NewCallee"。消息类型符号被替换为 "->|"。
+
+      如果 "<b>State with Arguments</b>" 输入为 "API: DoSth >> Arguments -> Callee"
+      <b>Arguments ("")</b> 输入为空
+      <b>Target Module ("")</b> 输入为 "NewCallee"
+      则结果字符串为 "API: DoSth ->| NewCallee"。消息类型符号被替换为 "->|"。
+
+      如果 "<b>State with Arguments</b>" 输入为 "API: DoSth >> Arguments -@ Callee"
+      <b>Arguments ("")</b> 输入为 "NewArguments"
+      <b>Target Module ("")</b> 输入为空
+      则结果字符串为 "API: DoSth >> NewArguments ->| Callee"。消息类型符号被替换为 "->|"。
+
+<b>输入：</b>
+ - <b>State with Arguments</b>：可能包含参数或目标模块的输入消息
+ - <b>Arguments ("")</b>：用于替换 <b>State with Arguments</b> 中参数的参数。如果为空，则输出字符串中不包含参数。
+ - <b>Target Module ("")</b>：用于替换 <b>State with Arguments</b> 中目标的目标。如果为空，则将使用 <b>State with Arguments</b> 中的目标。
+
+<b>输出：</b>
+ - <b>State with Arguments</b>：表示带有参数的字符串状态
+
+
+## Build Synchronous Message with Arguments.vi
+
+构建一个包含 JKISM 参数的消息。此 VI 将解析 "<b>State with Arguments</b>" 中的消息字符串、参数和目标模块，并将消息中相应部分从输入的 "<b>State with Arguments</b>" 中替换为输入值，如果指定了目标模块，则使用同步消息符号 "-@"。
+
+<B>例如：</B>
+
+      如果 "<b>State with Arguments</b>" 输入为 "API: DoSth"
+      <b>Arguments ("")</b> 输入为 "Arguments"
+      <b>Target Module ("")</b> 输入为 "Callee"
+      则结果字符串为 "API: DoSth >> Arguments ->| Callee"。与 "Build Message with Arguments(Auto Check).vi" 不同。消息类型符号被替换为 "-@"。
+
+      如果 "<b>State with Arguments</b>" 输入为 "API: DoSth >> Arguments -> Callee"
+      <b>Arguments ("")</b> 输入为 "NewArguments"
+      <b>Target Module ("")</b> 输入为空
+      则结果字符串为 "API: DoSth >> NewArguments ->| Callee"。消息类型符号被替换为 "-@"。
+
+      如果 "<b>State with Arguments</b>" 输入为 "API: DoSth >> Arguments -> Callee"
+      <b>Arguments ("")</b> 输入为 "NewArguments"
+      <b>Target Module ("")</b> 输入为 "NewCallee"
+      则结果字符串为 "API: DoSth >> NewArguments -@ NewCallee"。消息类型符号被替换为 "-@"。
+
+      如果 "<b>State with Arguments</b>" 输入为 "API: DoSth >> Arguments -> Callee"
+      <b>Arguments ("")</b> 输入为空
+      <b>Target Module ("")</b> 输入为 "NewCallee"
+      则结果字符串为 "API: DoSth -@ NewCallee"。消息类型符号被替换为 "-@"。
+
+      如果 "<b>State with Arguments</b>" 输入为 "API: DoSth >> Arguments -@ Callee"
+      <b>Arguments ("")</b> 输入为 "NewArguments"
+      <b>Target Module ("")</b> 输入为空
+      则结果字符串为 "API: DoSth >> NewArguments -@ Callee"。
+
+<b>输入：</b>
+ - <b>State with Arguments</b>：可能包含参数或目标模块的输入消息
+ - <b>Arguments ("")</b>：用于替换 <b>State with Arguments</b> 中参数的参数。如果为空，则输出字符串中不包含参数。
+ - <b>Target Module ("")</b>：用于替换 <b>State with Arguments</b> 中目标的目标。如果为空，则将使用 <b>State with Arguments</b> 中的目标。
+
+<b>输出：</b>
+ - <b>State with Arguments</b>：表示带有参数的字符串状态
