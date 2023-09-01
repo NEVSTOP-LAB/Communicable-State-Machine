@@ -51,6 +51,7 @@
 			<Item Name="Parse State with Arguments String.vi" Type="VI" URL="../_Support/Message/Parse State with Arguments String.vi"/>
 		</Item>
 		<Item Name="JKISM++ Dummy Module.vi" Type="VI" URL="../_Support/JKISM++ Dummy Module.vi"/>
+		<Item Name="KeyWords.vi" Type="VI" URL="../_Support/KeyWords.vi"/>
 	</Item>
 	<Item Name="Polymophic" Type="Folder">
 		<Item Name="Add State(s) to Queue By BOOL(Element).vi" Type="VI" URL="../_Polymophic/Add State(s) to Queue By BOOL(Element).vi"/>
