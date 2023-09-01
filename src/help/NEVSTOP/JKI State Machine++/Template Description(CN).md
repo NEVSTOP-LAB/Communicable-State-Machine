@@ -105,6 +105,9 @@ Discard the event because we'll close the front panel ourselves in Macro: Exit
 ### "Exit"
 此分支用于退出循环. 这里发生的任何错误都不会被处理.
 
+## "Category Seperator"
+分隔分支,不要在这个分支中放入任何代码。
+
 ### "Data: Initialize"
 初始化移位寄存器的数据, 数据名称由连接到bundle函数中的内容决定.
 

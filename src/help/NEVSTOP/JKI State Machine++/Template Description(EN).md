@@ -113,6 +113,8 @@ This is used to determine panel behavior on exit
 ### "Exit"
 Case for exiting the loop. No errors that occur here will be handled.
 
+## "Category Seperator"
+Do not put any code in this frame.
 
 ### "Data: Initialize"
 Initialize the shift-register data, here.
@@ -174,3 +176,5 @@ Connect this to return the response of your API
 ## Debug User Event
 (No-Event Template Only)
 Stop by posting "Macro: Exit" Message to lower JKISM Module. Remove this code after dropping to your block diagram.
+
+
