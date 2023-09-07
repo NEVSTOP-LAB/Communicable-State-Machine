@@ -50,3 +50,4 @@ API Description:
 | HexStr | Build-in | Data will be converted as variant and changed to Hex String as paramter |
 |[ArrayData](https://github.com/NEVSTOP-LAB/JKISMPP-Array-Parameter-Support) |Addons|Pass the StartPos with array-length of a cirlce buffer for numeric array data|
 |[MassData](https://github.com/NEVSTOP-LAB/JKISMPP-MassData-Parameter-Support) |Addons|Data will be converted to memory and saved in a cricle byffer. Pass the StartPos with length as parameter. |
+|[API String Arguments](https://github.com/NEVSTOP-LAB/JKISMPP-API-String-Arugments-Support) |Addons|Support plain string as JKISM++ API parameter|
