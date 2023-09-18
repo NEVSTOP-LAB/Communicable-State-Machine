@@ -116,6 +116,7 @@
 
 <b>输出控件:</b>
  - <b>Variant</b>: 数据，保存为变体(variant)格式
+ - <b>error out</b>: 错误簇
 
 
 
