@@ -68,6 +68,8 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 		<Item Name="Build Asynchronous Message with Arguments.vi" Type="VI" URL="../_Polymophic/Build Asynchronous Message with Arguments.vi"/>
 		<Item Name="Build No-Reply Asynchronous Message with Arguments.vi" Type="VI" URL="../_Polymophic/Build No-Reply Asynchronous Message with Arguments.vi"/>
 		<Item Name="Build Message with Arguments(Auto Check).vi" Type="VI" URL="../_Polymophic/Build Message with Arguments(Auto Check).vi"/>
+		<Item Name="Build Register Status Message.vi" Type="VI" URL="../_Polymophic/Build Register Status Message.vi"/>
+		<Item Name="Build Unregister Status Message.vi" Type="VI" URL="../_Polymophic/Build Unregister Status Message.vi"/>
 	</Item>
 	<Item Name="Advance" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
