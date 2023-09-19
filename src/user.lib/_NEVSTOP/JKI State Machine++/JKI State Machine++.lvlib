@@ -101,6 +101,8 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="JKISM++ Module Status.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Module Status.vi"/>
 			<Item Name="JKISM++ Compact Multiple States.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Compact Multiple States.vi"/>
 			<Item Name="JKISM++ Mark As Worker Module.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Mark As Worker Module.vi"/>
+			<Item Name="JKISM++ Status Change Event.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Status Change Event.vi"/>
+			<Item Name="JKISM++ Destroy Status Change Event.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Destroy Status Change Event.vi"/>
 		</Item>
 		<Item Name="JKISM-Support" Type="Folder">
 			<Item Name="JKISM++ Get New State Notifier Event.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Get New State Notifier Event.vi"/>
@@ -111,8 +113,6 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="JKISM++ Global Log Event.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Global Log Event.vi"/>
 			<Item Name="JKISM++ Destroy Global Log Event.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Destroy Global Log Event.vi"/>
 		</Item>
-		<Item Name="JKISM++ Status Change Event.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Status Change Event.vi"/>
-		<Item Name="JKISM++ Destroy Status Change Event.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Destroy Status Change Event.vi"/>
 	</Item>
 	<Item Name="Utility" Type="Folder">
 		<Item Name="Timeout Selector.vi" Type="VI" URL="../Utility/Timeout Selector.vi"/>
