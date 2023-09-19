@@ -29,6 +29,7 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="_JKISMQ.ctl" Type="VI" URL="../_Support/JKISMQ/_JKISMQ.ctl"/>
 			<Item Name="_JKISMQFGV.vi" Type="VI" URL="../_Support/JKISMQ/_JKISMQFGV.vi"/>
 			<Item Name="_JKISMQFGVOPER.ctl" Type="VI" URL="../_Support/JKISMQ/_JKISMQFGVOPER.ctl"/>
+			<Item Name="FGV-StatusChangeEventRef.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-StatusChangeEventRef.vi"/>
 			<Item Name="_Input Name to JKISM Mode.vi" Type="VI" URL="../_Support/JKISMQ/_Input Name to JKISM Mode.vi"/>
 			<Item Name="global-JKISMQ FGV Change Flag.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/global-JKISMQ FGV Change Flag.vi"/>
 		</Item>
