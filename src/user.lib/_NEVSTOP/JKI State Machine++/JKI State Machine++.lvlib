@@ -49,6 +49,7 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="_JKISM_MODE.ctl" Type="VI" URL="../_Support/Typedef/_JKISM_MODE.ctl"/>
 			<Item Name="_JKISM Current State.ctl" Type="VI" URL="../_Support/Typedef/_JKISM Current State.ctl"/>
 			<Item Name="_JKISM_Broadcast_Response_Message_info.ctl" Type="VI" URL="../_Support/Typedef/_JKISM_Broadcast_Response_Message_info.ctl"/>
+			<Item Name="_JKISM Status Change Event Data.ctl" Type="VI" URL="../_Support/Typedef/_JKISM Status Change Event Data.ctl"/>
 		</Item>
 		<Item Name="NamingConvention" Type="Folder">
 			<Item Name="Naming Check.vi" Type="VI" URL="../_Support/Naming Check.vi"/>
@@ -109,6 +110,8 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="JKISM++ Global Log Event.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Global Log Event.vi"/>
 			<Item Name="JKISM++ Destroy Global Log Event.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Destroy Global Log Event.vi"/>
 		</Item>
+		<Item Name="JKISM++ Status Change Event.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Status Change Event.vi"/>
+		<Item Name="JKISM++ Destroy Status Change Event.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Destroy Status Change Event.vi"/>
 	</Item>
 	<Item Name="Utility" Type="Folder">
 		<Item Name="Timeout Selector.vi" Type="VI" URL="../Utility/Timeout Selector.vi"/>
