@@ -81,37 +81,39 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="JKISM++ Make String Arguments Safe.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Make String Arguments Safe.vi"/>
 			<Item Name="JKISM++ Revert Arguments-Safe String.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Revert Arguments-Safe String.vi"/>
 		</Item>
-		<Item Name="Send/Post Message" Type="Folder">
+		<Item Name="Non-Message Mode API" Type="Folder">
 			<Item Name="JKISM++ Broadcast Message Type.ctl" Type="VI" URL="../AdvanceAPI/JKISM++ Broadcast Message Type.ctl"/>
 			<Item Name="JKISM++ Message Type.ctl" Type="VI" URL="../AdvanceAPI/JKISM++ Message Type.ctl"/>
-			<Item Name="JKISM++ Broadcast Status Change.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Broadcast Status Change.vi"/>
 			<Item Name="JKISM++ Send Message and Wait for Reply.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Send Message and Wait for Reply.vi"/>
 			<Item Name="JKISM++ Post Message.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Post Message.vi"/>
-			<Item Name="JKISM++ Request JKISM to Post Message.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Request JKISM to Post Message.vi"/>
-			<Item Name="JKISM++ Request JKISM to Broadcast Status Change.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Request JKISM to Broadcast Status Change.vi"/>
+			<Item Name="JKISM++ Status Change Event.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Status Change Event.vi"/>
+			<Item Name="JKISM++ Destroy Status Change Event.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Destroy Status Change Event.vi"/>
 		</Item>
 		<Item Name="Framework API" Type="Folder">
 			<Item Name="QuickDrop" Type="Folder">
 				<Item Name="JKISM++ Start Async Call.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Start Async Call.vi"/>
 				<Item Name="JKISM++ Synchronized Call.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Synchronized Call.vi"/>
 			</Item>
-			<Item Name="JKISM++ List Modules.vi" Type="VI" URL="../AdvanceAPI/JKISM++ List Modules.vi"/>
-			<Item Name="JKISM++ Register Status Change.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Register Status Change.vi"/>
-			<Item Name="JKISM++ Unregister Status Change.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Unregister Status Change.vi"/>
-			<Item Name="JKISM++ Module Status.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Module Status.vi"/>
+			<Item Name="JKISM++ Broadcast Status Change.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Broadcast Status Change.vi"/>
 			<Item Name="JKISM++ Compact Multiple States.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Compact Multiple States.vi"/>
 			<Item Name="JKISM++ Mark As Worker Module.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Mark As Worker Module.vi"/>
-			<Item Name="JKISM++ Status Change Event.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Status Change Event.vi"/>
-			<Item Name="JKISM++ Destroy Status Change Event.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Destroy Status Change Event.vi"/>
 		</Item>
 		<Item Name="JKISM-Support" Type="Folder">
 			<Item Name="JKISM++ Get New State Notifier Event.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Get New State Notifier Event.vi"/>
 			<Item Name="JKISM++ Check If Module Exists.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Check If Module Exists.vi"/>
-			<Item Name="JKISM++ Module Turns Invalid.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Module Turns Invalid.vi"/>
+			<Item Name="JKISM++ Register Status Change.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Register Status Change.vi"/>
+			<Item Name="JKISM++ Unregister Status Change.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Unregister Status Change.vi"/>
+			<Item Name="JKISM++ List Modules.vi" Type="VI" URL="../AdvanceAPI/JKISM++ List Modules.vi"/>
+			<Item Name="JKISM++ Module Status.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Module Status.vi"/>
 		</Item>
 		<Item Name="GlobalEvent" Type="Folder">
 			<Item Name="JKISM++ Global Log Event.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Global Log Event.vi"/>
 			<Item Name="JKISM++ Destroy Global Log Event.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Destroy Global Log Event.vi"/>
+		</Item>
+		<Item Name="Side-Loop Support" Type="Folder">
+			<Item Name="JKISM++ Request JKISM to Post Message.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Request JKISM to Post Message.vi"/>
+			<Item Name="JKISM++ Request JKISM to Broadcast Status Change.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Request JKISM to Broadcast Status Change.vi"/>
+			<Item Name="JKISM++ Module Turns Invalid.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Module Turns Invalid.vi"/>
 		</Item>
 	</Item>
 	<Item Name="Utility" Type="Folder">
