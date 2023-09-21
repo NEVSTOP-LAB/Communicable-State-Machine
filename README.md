@@ -17,8 +17,17 @@ LabVIEW Application Framework extended from JKI State Machine(JKISM). [Wiki for 
     // Async Call without Reply Example
     API: xxxx >> Arguments ->| TargetModule
 
-    // Broadcast Status:
-    Status >> StatusArguments  -> <all>
+    // Broadcast normal status:
+    Status >> StatusArguments  -> <status>
+
+    // Broadcast Interrupt status:
+    Interrupt >> StatusArguments  -> <interrupt>
+
+    // Register Source Module's status to Handler Module
+    Status@Source Module >> Handler Module@Handler Module -><register>
+
+    // Unegister Source Module's status
+    Status@Source Module >> Handler Module -><unregister>
 
 #JKISM++ Commenting
 To add a comment use "//" and all text to the right will be ignored

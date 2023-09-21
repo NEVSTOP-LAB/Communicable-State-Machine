@@ -116,7 +116,7 @@ Convert hex string arguments back to variant.
 
 <b>Outputs:</b>
  - <b>Variant</b>: Complex data in variant format.
-
+ - <b>error out</b>: Error output
 
 
 ## JKISM++ Broadcast Status Change.vi
