@@ -111,6 +111,7 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 		</Item>
 		<Item Name="GlobalEvent" Type="Folder">
 			<Item Name="JKISM++ Global Log Event.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Global Log Event.vi"/>
+			<Item Name="JKISM++ Generate User Global Log.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Generate User Global Log.vi"/>
 			<Item Name="JKISM++ Destroy Global Log Event.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Destroy Global Log Event.vi"/>
 		</Item>
 		<Item Name="Side-Loop Support" Type="Folder">
