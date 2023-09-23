@@ -48,9 +48,10 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="_Cross JKISM State Response.ctl" Type="VI" URL="../_Support/Typedef/_Cross JKISM State Response.ctl"/>
 			<Item Name="_JKISM_MSG_TYPE.ctl" Type="VI" URL="../_Support/Typedef/_JKISM_MSG_TYPE.ctl"/>
 			<Item Name="_JKISM_MODE.ctl" Type="VI" URL="../_Support/Typedef/_JKISM_MODE.ctl"/>
-			<Item Name="_JKISM Current State.ctl" Type="VI" URL="../_Support/Typedef/_JKISM Current State.ctl"/>
 			<Item Name="_JKISM_Broadcast_Response_Message_info.ctl" Type="VI" URL="../_Support/Typedef/_JKISM_Broadcast_Response_Message_info.ctl"/>
 			<Item Name="_JKISM Status Change Event Data.ctl" Type="VI" URL="../_Support/Typedef/_JKISM Status Change Event Data.ctl"/>
+			<Item Name="_JKISM_GlobalLog_MSG.ctl" Type="VI" URL="../_Support/Typedef/_JKISM_GlobalLog_MSG.ctl"/>
+			<Item Name="_JKISM_GlobalLog_MSG_TYPE.ctl" Type="VI" URL="../_Support/Typedef/_JKISM_GlobalLog_MSG_TYPE.ctl"/>
 		</Item>
 		<Item Name="NamingConvention" Type="Folder">
 			<Item Name="Naming Check.vi" Type="VI" URL="../_Support/Naming Check.vi"/>
@@ -110,6 +111,7 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 		</Item>
 		<Item Name="GlobalEvent" Type="Folder">
 			<Item Name="JKISM++ Global Log Event.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Global Log Event.vi"/>
+			<Item Name="JKISM++ Generate User Global Log.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Generate User Global Log.vi"/>
 			<Item Name="JKISM++ Destroy Global Log Event.vi" Type="VI" URL="../AdvanceAPI/JKISM++ Destroy Global Log Event.vi"/>
 		</Item>
 		<Item Name="Side-Loop Support" Type="Folder">
@@ -125,6 +127,7 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 		<Item Name="Build Error Cluster.vi" Type="VI" URL="../Utility/Build Error Cluster.vi"/>
 		<Item Name="Trim Both Whitespace.vi" Type="VI" URL="../Utility/Trim Both Whitespace.vi"/>
 		<Item Name="uuid.vi" Type="VI" URL="../Utility/uuid.vi"/>
+		<Item Name="Global Log To String.vi" Type="VI" URL="../Utility/Global Log To String.vi"/>
 	</Item>
 	<Item Name="Parse State Queue++.vi" Type="VI" URL="../Parse State Queue++.vi"/>
 	<Item Name="Add State(s) to Queue By BOOL++.vi" Type="VI" URL="../Add State(s) to Queue By BOOL++.vi"/>
