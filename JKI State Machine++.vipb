@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2023-08-30 23:49:16" Creator="liyao" Comments="" ID="9bef0cd98845e12ee0f898700d772d99">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2023-09-25 16:12:45" Creator="liyao" Comments="" ID="ed6e32d49a212fddd12672b3ea2cdfb1">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_JKI_State_Machine++</Package_File_Name>
     <Library_Version>0.0.0.3</Library_Version>
@@ -30,31 +30,10 @@
     <VI_Package_Configuration_File>JKI State Machine++.vipc</VI_Package_Configuration_File>
     <Description>
       <One_Line_Description_Summary>LabVIEW Application Framework extended from JKI State Machine(JKISM)</One_Line_Description_Summary>
-      <Description>&lt;b&gt;JKISM++&lt;/b&gt;:  LabVIEW Application Framework extended from JKI State Machine(JKISM).
+      <Description>&lt;b&gt;JKISM++&lt;/b&gt;:  is a LabVIEW application framework that builds upon JKI State Machine (JKISM). It follows the pattern of JKISM and extends the keywords to describe message communication between JKISM modules, including concepts such as Sync-Message, Async-Message, Subscription/Unsubscription of status - essential elements for creating reusable code modules. For more information, please visit the JKISM++ wiki: https://github.com/NEVSTOP-LAB/JKI-State-Machine-Plus-Plus/wiki
 
-#JKISM++ State Syntax
-
-    // Local Message Example
-    DoSth: DoA &gt;&gt; Arguments
-
-    // Sync Call Example
-    API: xxxx &gt;&gt; Arguments -@ TargetModule
-
-    // Async Call Example
-    API: xxxx &gt;&gt; Arguments -&gt; TargetModule
-
-    // Async Call without Reply Example
-    API: xxxx &gt;&gt; Arguments -&gt;| TargetModule
-
-    // Broadcast Status:
-    Status &gt;&gt; StatusArguments  -&gt; &lt;all&gt;
-
-#JKISM++ Commenting
-
-    To add a comment use "//" and all text to the right will be ignored
-
-    UI: Initialize // This initializes the UI
-    // Another comment line
+For instructions on JKI State Machine, visit: http://jki.net/state-machine/
+For information about JKISM++, visit: https://github.com/NEVSTOP-LAB
 </Description>
       <Copyright/>
       <Packager>NEVSTOP</Packager>
@@ -169,6 +148,9 @@
       </Exclusions>
       <Exclusions>
         <Path>API Tree.vi</Path>
+      </Exclusions>
+      <Exclusions>
+        <Path>_vipm</Path>
       </Exclusions>
       <Place_Folder_Contents>
         <Path/>
