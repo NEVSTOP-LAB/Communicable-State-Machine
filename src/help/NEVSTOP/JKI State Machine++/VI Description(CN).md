@@ -126,7 +126,7 @@ Polymophic Option:
 <b>Outputs:</b>
 
 
-### Build Message with Arguments(Auto Check).vi
+#### Build Message with Arguments(Auto Check).vi
 
 Builds a message that contains arguments for JKISM. This VI will parse "State with Arguments" for message type, message string, arguments and target module from input <b>State with Arguments</b> and replace corresponding parts in the message with input values. The message type from input <b>State with Arguments</b> will be used.
 
@@ -166,7 +166,7 @@ Then result string is "API: DoSth >> NewArguments -@ Callee"
  - <b>State with Arguments</b>: String stands for state with arguments
 
 
-### Build Asynchronous Message with Arguments.vi
+#### Build Asynchronous Message with Arguments.vi
 
 Builds a message that contains arguments for JKISM. This VI will parse "State with Arguments" for message string, arguments and target module from input <b>State with Arguments</b> and replace corresponding parts in the message with input values with asyc-message symobol "->" if <b>Target Module ("")</b> is specified.
 
@@ -206,7 +206,7 @@ Then result string is "API: DoSth >> NewArguments -> Callee". Message Type Symbo
  - <b>State with Arguments</b>: String stands for state with arguments
 
 
-### Build No-Reply Asynchronous Message with Arguments.vi
+#### Build No-Reply Asynchronous Message with Arguments.vi
 
 Builds a message that contains arguments for JKISM. This VI will parse "State with Arguments" for message string, arguments and target module from input <b>State with Arguments</b> and replace corresponding parts in the message with input values with No-Reply asyc-message symobol "->|" if <b>Target Module ("")</b> is specified.
 
@@ -246,7 +246,7 @@ Then result string is "API: DoSth >> NewArguments ->| Callee". Message Type Symb
  - <b>State with Arguments</b>: String stands for state with arguments
 
 
-### Build Synchronous Message with Arguments.vi
+#### Build Synchronous Message with Arguments.vi
 
 Builds a message that contains arguments for JKISM. This VI will parse "State with Arguments" for message string, arguments and target module from input <b>State with Arguments</b> and replace corresponding parts in the message with input values with sync-message symobol "-@" if <b>Target Module ("")</b> is specified.
 
@@ -283,37 +283,10 @@ Then result string is "API: DoSth >> NewArguments -@ Callee".
  - <b>Target Module ("")</b>: The target which will be used to replace target in <b>State with Arguments</b>. if empty, target in <b>State with Arguments</b> will be used.
 
 <b>Outputs:</b>
- - <b>State with Arguments</b>: String stands for state with arguments	 
+ - <b>State with Arguments</b>: String stands for state with arguments
 
 
-### Build Interrupt Status Message.vi
-
-Builds a message that contains arguments for JKISM. This VI will parse "State with Arguments" for message type, message string, arguments and target module from input <b>State with Arguments</b> and replace corresponding parts in the message with input values. The message type from input <b>State with Arguments</b> will be used.
-<B>For Example:</B>
-If <b>State with Arguments</b> input is "API: DoSth"
-Then result string is "API: DoSth >> Arguments" as no message symbol is detected.
-If <b>State with Arguments</b> input is "API: DoSth >> Arguments -> Callee"
-Then result string is "API: DoSth >> NewArguments -> Callee"
-If <b>State with Arguments</b> input is "API: DoSth >> Arguments -> Callee"
-Then result string is "API: DoSth >> NewArguments -> NewCallee"
-If <b>State with Arguments</b> input is "API: DoSth >> Arguments -> Callee"
-Then result string is "API: DoSth -> NewCallee"
-If <b>State with Arguments</b> input is "API: DoSth >> Arguments -@ Callee"
-Then result string is "API: DoSth >> NewArguments -@ Callee"
-- <b>State with Arguments</b>: Input Message which might contain Arguments or target Module
-- <b>Arguments ("")</b>: The arguments which will be used to replace arguments in <b>State with Arguments</b>. if empty, no arguments will be included in output strings.
-- <b>Target Module ("")</b>: The target which will be used to replace target in <b>State with Arguments</b>. if empty, target in <b>State with Arguments</b> will be used.
-- <b>State with Arguments</b>: String stands for state with arguments
-
-<b>Inputs:</b>
- - <b>State with Arguments</b>:
- - <b>Arguments ("")</b>:
-
-<b>Outputs:</b>
- - <b>State with Arguments</b>:
-
-
-### Build Normal Status Message.vi
+#### Build Interrupt Status Message.vi
 
 Builds a message that contains arguments for JKISM. This VI will parse "State with Arguments" for message type, message string, arguments and target module from input <b>State with Arguments</b> and replace corresponding parts in the message with input values. The message type from input <b>State with Arguments</b> will be used.
 <B>For Example:</B>
@@ -340,7 +313,34 @@ Then result string is "API: DoSth >> NewArguments -@ Callee"
  - <b>State with Arguments</b>:
 
 
-### Build Register Status Message.vi
+#### Build Normal Status Message.vi
+
+Builds a message that contains arguments for JKISM. This VI will parse "State with Arguments" for message type, message string, arguments and target module from input <b>State with Arguments</b> and replace corresponding parts in the message with input values. The message type from input <b>State with Arguments</b> will be used.
+<B>For Example:</B>
+If <b>State with Arguments</b> input is "API: DoSth"
+Then result string is "API: DoSth >> Arguments" as no message symbol is detected.
+If <b>State with Arguments</b> input is "API: DoSth >> Arguments -> Callee"
+Then result string is "API: DoSth >> NewArguments -> Callee"
+If <b>State with Arguments</b> input is "API: DoSth >> Arguments -> Callee"
+Then result string is "API: DoSth >> NewArguments -> NewCallee"
+If <b>State with Arguments</b> input is "API: DoSth >> Arguments -> Callee"
+Then result string is "API: DoSth -> NewCallee"
+If <b>State with Arguments</b> input is "API: DoSth >> Arguments -@ Callee"
+Then result string is "API: DoSth >> NewArguments -@ Callee"
+- <b>State with Arguments</b>: Input Message which might contain Arguments or target Module
+- <b>Arguments ("")</b>: The arguments which will be used to replace arguments in <b>State with Arguments</b>. if empty, no arguments will be included in output strings.
+- <b>Target Module ("")</b>: The target which will be used to replace target in <b>State with Arguments</b>. if empty, target in <b>State with Arguments</b> will be used.
+- <b>State with Arguments</b>: String stands for state with arguments
+
+<b>Inputs:</b>
+ - <b>State with Arguments</b>:
+ - <b>Arguments ("")</b>:
+
+<b>Outputs:</b>
+ - <b>State with Arguments</b>:
+
+
+#### Build Register Status Message.vi
 
 Builds register status message. The message looks like:
 [source-state]@[source-module] >> [response-message]@[response-module] -><register>
@@ -360,7 +360,7 @@ DownloadFinished@* >> StartPlay@Player -><register> // Any Module's DownloadFini
  - <b>State with Arguments</b>:
 
 
-### Build Unregister Status Message.vi
+#### Build Unregister Status Message.vi
 
 Builds unregister status message. The message looks like:
 [source-state]@[source-module] >> [response-module] -><unregister>
@@ -392,7 +392,7 @@ DownloadFinished@Downloader  -><unregister>
  - <b>State Queue Out</b>: 返回继续执行的所有状态及参数。
 
 
-### Add State(s) to Queue By BOOL(Element).vi
+#### Add State(s) to Queue By BOOL(Element).vi
 
 根据高优先级和Bool输入，此VI生成TRUE/False和剩余状态的连接状态。High Priority输入决定是否在剩余状态之前或之后连接TRUE或False字符串。Bool输入决定要连接的字符串是TRUE还是False。
 
@@ -407,7 +407,7 @@ DownloadFinished@Downloader  -><unregister>
  - <b>State Queue Out</b>: 返回继续执行的所有状态及参数。
 
 
-### Add State(s) to Queue By BOOL(Array Left).vi
+#### Add State(s) to Queue By BOOL(Array Left).vi
 
 根据高优先级和Bool输入，此VI生成TRUE/False和剩余状态的连接状态。High Priority输入决定是否在剩余状态之前或之后连接TRUE或False字符串。Bool输入决定要连接的字符串是TRUE还是False。
 
@@ -422,7 +422,7 @@ DownloadFinished@Downloader  -><unregister>
  - <b>State Queue Out</b>: 返回继续执行的所有状态及参数。
 
 
-### Add State(s) to Queue By BOOL(Array Right).vi
+#### Add State(s) to Queue By BOOL(Array Right).vi
 
 根据高优先级和Bool输入，此VI生成TRUE/False和剩余状态的连接状态。High Priority输入决定是否在剩余状态之前或之后连接TRUE或False字符串。Bool输入决定要连接的字符串是TRUE还是False。
 
@@ -437,7 +437,7 @@ DownloadFinished@Downloader  -><unregister>
  - <b>State Queue Out</b>: 返回继续执行的所有状态及参数。
 
 
-### Add State(s) to Queue By BOOL(Array All).vi
+#### Add State(s) to Queue By BOOL(Array All).vi
 
 根据高优先级和Bool输入，此VI生成TRUE/False和剩余状态的连接状态。High Priority输入决定是否在剩余状态之前或之后连接TRUE或False字符串。Bool输入决定要连接的字符串是TRUE还是False。
 
@@ -489,7 +489,7 @@ DownloadFinished@Downloader  -><unregister>
  - <b>Safe Argurment String</b>: 安全参数
 
 <b>Outputs:</b>
- - <b>Origin Argurment String</b>: 可能包含关键字的参数 '->','->|','-@','-&','<-".	 
+ - <b>Origin Argurment String</b>: 可能包含关键字的参数 '->','->|','-@','-&','<-".
 
 ### JKISM++ Convert Data to HexStr.vi
 
@@ -510,7 +510,7 @@ DownloadFinished@Downloader  -><unregister>
 
 <b>输出控件:</b>
  - <b>Variant</b>: 数据，保存为变体(variant)格式
- - <b>error out</b>: 错误簇  
+ - <b>error out</b>: 错误簇
 
 
 ## Advance APIs
@@ -535,7 +535,7 @@ DownloadFinished@Downloader  -><unregister>
  - 无
  -
 <b>输出控件:</b>
- - 无				   
+ - 无
 
 
 ### JKISM++ Mark As Worker Module.vi
@@ -546,7 +546,7 @@ DownloadFinished@Downloader  -><unregister>
  - <b>JKISM Name</b>: JKISM 模块名称
 
 <b>输出控件:</b>
- - <b>JKISM Name(marked as worker)</b>: 添加“＃”标记 的JKISM 模块名称	
+ - <b>JKISM Name(marked as worker)</b>: 添加“＃”标记 的JKISM 模块名称
 
 
 ### JKISM++ Compact Multiple States.vi
@@ -643,7 +643,7 @@ DownloadFinished@Downloader  -><unregister>
 <b>输出控件:</b>
  - <b>New State Notifier Event</b>: 用户事件句柄，用来当收到消息时，使用JKISM模块中断在事件结构中的等待
  - <b>Error out</b>: 错误簇
-																																  
+
 
 ## Non-JKISM Support
 
@@ -675,7 +675,7 @@ DownloadFinished@Downloader  -><unregister>
 <b>输出控件:</b>
  - <b>Arguments</b>: Response returned.
  - <b>error out</b>: 错误簇
- 	  
+
 
 ### JKISM++ Status Change Event.vi
 
@@ -706,7 +706,7 @@ Release JKISM++ Global Log Event Reference.
 
 <b>Outputs:</b>
  - <b>Error out</b>:
-						   
+
 
 ## Side-Loop Support
 
@@ -778,7 +778,7 @@ Release JKISM++ Global Log Event Reference.
 <b>输出控件:</b>
  - <b>Error out</b>: 错误簇
 
-	
+
 ### JKISM++ Generate User Global Log.vi
 
 
@@ -792,7 +792,7 @@ Release JKISM++ Global Log Event Reference.
 
 <b>Outputs:</b>
  - <b>error out</b>:
- 
+
 
 
 
