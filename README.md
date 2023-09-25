@@ -22,7 +22,7 @@ Creating a reusable module typically does not require message interaction with o
 
 In JKISM++ modules, all cases can be considered as messages for invocation, but it is recommended to use API category as external interfaces. When sending status updates, notify external entities of changes by sending either Status or Interrupt Status.
 
-Go to */Example/1. Create a reusable module* to learn how to create a JKISM++ module.
+Go to ***/Example/1. Create a reusable module*** to learn how to create a JKISM++ module.
 
 
 ## Use JKISM++ as application framework Scenario
@@ -45,10 +45,10 @@ In this scenario, inter-module communication solely relies on message string que
     API: xxxx >> Arguments ->| TargetModule
 
     // Broadcast normal status:
-    Status >> StatusArguments  -> <status>
+    Status >> StatusArguments  -><status>
 
     // Broadcast Interrupt status:
-    Interrupt >> StatusArguments  -> <interrupt>
+    Interrupt >> StatusArguments  -><interrupt>
 
     // Register Source Module's status to Handler Module
     Status@Source Module >> Handler Module@Handler Module -><register>
@@ -57,19 +57,19 @@ In this scenario, inter-module communication solely relies on message string que
     Status@Source Module >> Handler Module -><unregister>
 
 #JKISM++ Commenting
-To add a comment use "//" and all text to the right will be ignored
+    To add a comment use "//" and all text to the right will be ignored
 
     UI: Initialize // This initializes the UI
     // Another comment line
 ```
 
-Go to */Example/2. Caller is JKISM Scenario* to find an example for this scenario.
+Go to ***/Example/2. Caller is JKISM Scenario*** to find an example for this scenario.
 
 ## Reuse JKISM++ Module in another Application Framework
 
 In this scenario, inter-module communication solely relies on Post/Send Message API and module status change user event.
 
-Go to */Example/3. Caller is Other Framework Scenario* to find an example for this scenario.
+Go to ***/Example/3. Caller is Other Framework Scenario*** to find an example for this scenario.
 
 ## JKISM++ Arguments Support
 
@@ -83,5 +83,3 @@ JKISM only supports the STRING TYPE as a parameter, but there is a wide variety 
 |[MassData](https://github.com/NEVSTOP-LAB/JKISMPP-MassData-Parameter-Support) |Addons|Data will be converted to memory and saved in a cricle byffer. Pass the StartPos with length as parameter. |
 |[API String Arguments](https://github.com/NEVSTOP-LAB/JKISMPP-API-String-Arugments-Support) |Addons|Support plain string as JKISM++ API parameter|
 
-
-s
