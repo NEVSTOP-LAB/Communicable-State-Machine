@@ -600,6 +600,49 @@ DownloadFinished@Downloader  -><unregister>
  - <b>#msg to be processed</b>: JKISM消息队列中的待处理消息个数
  - <b>JKISM Name(dup)</b>: 返回 <b>JKISM Name</b>
  - <b>Error out</b>: 错误簇
+
+
+### JKISM++ Register Status Change.vi
+
+注册以接收其他JKISM++模块状态更改的通知。如果未连接 “Response Message” 或输入为空，则将使用相同的<b>Status</b> 名称作为响应消息。
+
+<b>输入控件:</b>
+ - <b>JKISM Name</b>: JKISM 模块名称.
+ - <b>Source JKISM Name (* as Default)</b>: 生成状态的JKISM模块。您可以使用“*”来表示所有生成相同状态的模块。
+ - <b>Status</b>: 状态字符串
+ - <b>Response Message (if "", same as Source Message)</b>: 注册后，如果状态发生变化，将接收到此消息。
+ - <b>Priority(T:As Status,F:As Interrupt)</b>: 如果响应消息为False，则将其插入到状态队列的前面；否则，将其附加到队列的尾部。
+ - <b>Error in</b>: 错误簇
+
+<b>输出控件:</b>
+ - <b>JKISM Name(dup)</b>: 返回 <b>JKISM Name</b>
+ - <b>Error out</b>: 错误簇
+
+
+### JKISM++ Unregister Status Change.vi
+
+取消注册其他 JKISM 模块状态更改的通知。
+
+<b>输入控件:</b>
+ - <b>JKISM Name</b>: JKISM 模块名称.
+ - <b>Source JKISM Name</b>: 生成状态的JKISM模块。您可以使用“*”来表示所有生成相同状态的模块。
+ - <b>Status</b>: 状态字符串
+ - <b>Error in</b>: 错误簇
+
+<b>输出控件:</b>
+ - <b>JKISM Name(dup)</b>: 返回 <b>JKISM Name</b>
+ - <b>Error out</b>: 错误簇
+
+
+### JKISM++ Get New State Notifier Event.vi
+
+<b>输入控件:</b>
+ - <b>Name("" to use uuid) in</b>: JKISM 模块名称
+ - <b>Error in</b>: 错误簇
+
+<b>输出控件:</b>
+ - <b>New State Notifier Event</b>: 用户事件句柄，用来当收到消息时，使用JKISM模块中断在事件结构中的等待
+ - <b>Error out</b>: 错误簇
 																																  
 
 ## Non-JKISM Support
@@ -708,48 +751,6 @@ Release JKISM++ Global Log Event Reference.
 <b>Outputs:</b>
  - <b>Turn Invalid(Exit)?</b>: 是否已经退出
 
-
-### JKISM++ Register Status Change.vi
-
-注册以接收其他JKISM++模块状态更改的通知。如果未连接 “Response Message” 或输入为空，则将使用相同的<b>Status</b> 名称作为响应消息。
-
-<b>输入控件:</b>
- - <b>JKISM Name</b>: JKISM 模块名称.
- - <b>Source JKISM Name (* as Default)</b>: 生成状态的JKISM模块。您可以使用“*”来表示所有生成相同状态的模块。
- - <b>Status</b>: 状态字符串
- - <b>Response Message (if "", same as Source Message)</b>: 注册后，如果状态发生变化，将接收到此消息。
- - <b>Priority(T:As Status,F:As Interrupt)</b>: 如果响应消息为False，则将其插入到状态队列的前面；否则，将其附加到队列的尾部。
- - <b>Error in</b>: 错误簇
-
-<b>输出控件:</b>
- - <b>JKISM Name(dup)</b>: 返回 <b>JKISM Name</b>
- - <b>Error out</b>: 错误簇
-
-
-### JKISM++ Unregister Status Change.vi
-
-取消注册其他 JKISM 模块状态更改的通知。
-
-<b>输入控件:</b>
- - <b>JKISM Name</b>: JKISM 模块名称.
- - <b>Source JKISM Name</b>: 生成状态的JKISM模块。您可以使用“*”来表示所有生成相同状态的模块。
- - <b>Status</b>: 状态字符串
- - <b>Error in</b>: 错误簇
-
-<b>输出控件:</b>
- - <b>JKISM Name(dup)</b>: 返回 <b>JKISM Name</b>
- - <b>Error out</b>: 错误簇
-
-
-### JKISM++ Get New State Notifier Event.vi
-
-<b>输入控件:</b>
- - <b>Name("" to use uuid) in</b>: JKISM 模块名称
- - <b>Error in</b>: 错误簇
-
-<b>输出控件:</b>
- - <b>New State Notifier Event</b>: 用户事件句柄，用来当收到消息时，使用JKISM模块中断在事件结构中的等待
- - <b>Error out</b>: 错误簇
 
 ## Global Log Event
 

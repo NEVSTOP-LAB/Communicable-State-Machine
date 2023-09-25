@@ -599,6 +599,49 @@ Get the JKISM+ Module Status
  - <b>JKISM Name(dup)</b>: Return <b>JKISM Name</b>
  - <b>Error out</b>: Error cluster
 
+
+### JKISM++ Register Status Change.vi
+
+Register for notification of other JKISM++ Module's status change. If "Response Message" is not connected or "" is the input, the same state name will be used for acting message.
+
+<b>Inputs:</b>
+ - <b>JKISM Name</b>: JKISM Module name.
+ - <b>Source JKISM Name (* as Default)</b>: JKISM who generates the status. You can use '*' for all modules generated the same <b>Status</b>
+ - <b>Status</b>: The status string
+ - <b>Response Message (if "", same as Source Message)</b>: After registered, If status change, this message will be received.
+ - <b>Priority(T:As Status,F:As Interrupt)</b>: The Response Message will be inserted to the front of state queue if it's False, otherwise it wil be append to the tail.
+ - <b>Error in</b>: Error cluster
+
+<b>Outputs:</b>
+ - <b>JKISM Name(dup)</b>: Return <b>JKISM Name</b>
+ - <b>Error out</b>: Error cluster
+
+
+### JKISM++ Unregister Status Change.vi
+
+Unregister the notification of other JKISM++ Module's status change.
+
+<b>Inputs:</b>
+ - <b>JKISM Name</b>: JKISM Module name.
+ - <b>Source JKISM Name</b>: JKISM who generates the status. You can use '*' for all modules generated the same <b>Status</b>
+ - <b>Status</b>: The status string
+ - <b>Error in</b>: Error cluster
+
+<b>Outputs:</b>
+ - <b>JKISM Name(dup)</b>: return <b>JKISM Name</b>
+ - <b>Error out</b>: Error cluster
+
+
+### JKISM++ Get New State Notifier Event.vi
+
+<b>Inputs:</b>
+ - <b>Name("" to use uuid) in</b>: JKISM module name
+ - <b>Error in</b>: Error cluster
+
+<b>Outputs:</b>
+ - <b>New State Notifier Event</b>: User event to break JKISM module from waiting in event structure when message is received.
+ - <b>Error out</b>: Error cluster
+
  
 ## Non-JKISM Support
 
@@ -705,48 +748,6 @@ Check if JKISM module is not valid any more. This is usually used in sub-loops w
 <b>Outputs:</b>
  - <b>Turn Invalid(Exit)?</b>: JKISM Module turns invalid
 
-
-### JKISM++ Register Status Change.vi
-
-Register for notification of other JKISM++ Module's status change. If "Response Message" is not connected or "" is the input, the same state name will be used for acting message.
-
-<b>Inputs:</b>
- - <b>JKISM Name</b>: JKISM Module name.
- - <b>Source JKISM Name (* as Default)</b>: JKISM who generates the status. You can use '*' for all modules generated the same <b>Status</b>
- - <b>Status</b>: The status string
- - <b>Response Message (if "", same as Source Message)</b>: After registered, If status change, this message will be received.
- - <b>Priority(T:As Status,F:As Interrupt)</b>: The Response Message will be inserted to the front of state queue if it's False, otherwise it wil be append to the tail.
- - <b>Error in</b>: Error cluster
-
-<b>Outputs:</b>
- - <b>JKISM Name(dup)</b>: Return <b>JKISM Name</b>
- - <b>Error out</b>: Error cluster
-
-
-### JKISM++ Unregister Status Change.vi
-
-Unregister the notification of other JKISM++ Module's status change.
-
-<b>Inputs:</b>
- - <b>JKISM Name</b>: JKISM Module name.
- - <b>Source JKISM Name</b>: JKISM who generates the status. You can use '*' for all modules generated the same <b>Status</b>
- - <b>Status</b>: The status string
- - <b>Error in</b>: Error cluster
-
-<b>Outputs:</b>
- - <b>JKISM Name(dup)</b>: return <b>JKISM Name</b>
- - <b>Error out</b>: Error cluster
-
-
-### JKISM++ Get New State Notifier Event.vi
-
-<b>Inputs:</b>
- - <b>Name("" to use uuid) in</b>: JKISM module name
- - <b>Error in</b>: Error cluster
-
-<b>Outputs:</b>
- - <b>New State Notifier Event</b>: User event to break JKISM module from waiting in event structure when message is received.
- - <b>Error out</b>: Error cluster
 
 
 ## Global Log Event
