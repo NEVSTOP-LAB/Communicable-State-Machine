@@ -80,7 +80,7 @@ Go to ***/Example/3. Caller is Other Framework Scenario*** to find an example fo
 
 JKISM only supports the STRING TYPE as a parameter, but there is a wide variety of data that needs to be transmitted. Therefore, support for parameters is crucial. The table below lists some of the current ways in which different data types are supported, with some being built-in within JKISM++ and others requiring additional installation through addons.
 
-| a | b |Description|
+| Arguments | Type | Description |
 |---|---|---|
 | Safe String | Build-in | "->\| -> -@ & <- , ; []{}`"  wil be replaced with %[HEXCODE] |
 | HexStr | Build-in | Data will be converted as variant and changed to Hex String as paramter |
