@@ -1,5 +1,7 @@
 # JKI State Machine++ (JKISM++)
 
+[![Image](https://www.vipm.io/package/nevstop_lib_jki_state_machine++/badge.svg?metric=installs)](https://www.vipm.io/package/nevstop_lib_jki_state_machine++/) [![Image](https://www.vipm.io/package/nevstop_lib_jki_state_machine++/badge.svg?metric=stars)](https://www.vipm.io/package/nevstop_lib_jki_state_machine++/)
+
 JKISM++ is a LabVIEW application framework that builds upon JKI State Machine (JKISM). It follows the pattern of JKISM and extends the keywords to describe message communication between JKISM modules, including concepts such as Sync-Message, Async-Message, Subscription/Unsubscription of status - essential elements for creating reusable code modules. For more information, please visit the JKISM++ wiki: https://github.com/NEVSTOP-LAB/JKI-State-Machine-Plus-Plus/wiki
 
 - For instructions on JKI State Machine, visit: http://jki.net/state-machine/    
