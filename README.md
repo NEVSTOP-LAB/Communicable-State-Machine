@@ -1,4 +1,4 @@
-# Communicable State Machine (CSM)
+# Communicable State Machine(CSM)
 
 [![Image](https://www.vipm.io/package/nevstop_lib_jki_state_machine++/badge.svg?metric=installs)](https://www.vipm.io/package/nevstop_lib_jki_state_machine++/) [![Image](https://www.vipm.io/package/nevstop_lib_jki_state_machine++/badge.svg?metric=stars)](https://www.vipm.io/package/nevstop_lib_jki_state_machine++/)
 
