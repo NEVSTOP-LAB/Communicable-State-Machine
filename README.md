@@ -2,26 +2,24 @@
 
 [![Image](https://www.vipm.io/package/nevstop_lib_jki_state_machine++/badge.svg?metric=installs)](https://www.vipm.io/package/nevstop_lib_jki_state_machine++/) [![Image](https://www.vipm.io/package/nevstop_lib_jki_state_machine++/badge.svg?metric=stars)](https://www.vipm.io/package/nevstop_lib_jki_state_machine++/)
 
-Communicable State Machine(CSM) is a LabVIEW application framework that builds upon JKI State Machine (JKISM). It follows the pattern of JKISM and extends the keywords to describe message communication between JKISM modules, including concepts such as Sync-Message, Async-Message, Subscription/Unsubscription of status - essential elements for creating reusable code modules. For more information, please visit the JKISM++ wiki: https://github.com/NEVSTOP-LAB/JKI-State-Machine-Plus-Plus/wiki
+Communicable State Machine(CSM) is a LabVIEW application framework that builds upon JKI State Machine (JKISM). It follows the pattern of JKISM and extends the keywords to describe message communication between JKISM modules, including concepts such as Sync-Message, Async-Message, Subscription/Unsubscription of status - essential elements for creating reusable code modules. For more information, please visit the JKISM++ wiki: https://github.com/NEVSTOP-LAB/Communicable-State-Machine/wiki
 
 - For instructions on JKI State Machine, visit: http://jki.net/state-machine/
 - For information about CSM, visit: https://github.com/NEVSTOP-LAB
 
 **CSM Templates**
 
-![image](/.doc/JKISM%2B%2B%20With%20Event%20Structure%20Template.png)
+![image](/.doc/CSM%20With%20Event%20Structure%20Template.png)
 
 Template Description:
-[EN](src/help/NEVSTOP/JKI%20State%20Machine%2B%2B/Template%20Description(EN).md) |
-[CN](src/help/NEVSTOP/JKI%20State%20Machine%2B%2B/Template%20Description(CN).md)
+[EN](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/Template%20Description(EN).md) | [CN](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/Template%20Description(CN).md)
 
 **CSM API**
 
-![image](.doc/JKISM%2B%2B%20Palette.png)
+![image](.doc/CSM%20Palette.png)
 
 API Description:
-[EN](src/help/NEVSTOP/JKI%20State%20Machine%2B%2B/VI%20Description(EN).md) |
-[CN](src/help/NEVSTOP/JKI%20State%20Machine%2B%2B/VI%20Description(CN).md)
+[EN](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/VI%20Description(EN).md) | [CN](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/VI%20Description(CN).md)
 
 ## Create Reuseable Modules
 
