@@ -18,19 +18,19 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 		<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 		<Property Name="NI.SortType" Type="Int">3</Property>
 		<Item Name="CSMQ" Type="Folder">
-			<Item Name="_Create Data Queue.vi" Type="VI" URL="../_Support/JKISMQ/_Create Data Queue.vi"/>
-			<Item Name="_Create Resp Queue.vi" Type="VI" URL="../_Support/JKISMQ/_Create Resp Queue.vi"/>
-			<Item Name="_Obtain CSMQ.vi" Type="VI" URL="../_Support/JKISMQ/_Obtain CSMQ.vi"/>
-			<Item Name="_Unlock CSMQ.vi" Type="VI" URL="../_Support/JKISMQ/_Unlock CSMQ.vi"/>
-			<Item Name="_Dequeue CSMQ.vi" Type="VI" URL="../_Support/JKISMQ/_Dequeue CSMQ.vi"/>
-			<Item Name="_Enqueue CSMQ.vi" Type="VI" URL="../_Support/JKISMQ/_Enqueue CSMQ.vi"/>
-			<Item Name="_Lock State CSMQ.vi" Type="VI" URL="../_Support/JKISMQ/_Lock State CSMQ.vi"/>
-			<Item Name="_Release CSMQ.vi" Type="VI" URL="../_Support/JKISMQ/_Release CSMQ.vi"/>
-			<Item Name="_CSMQ.ctl" Type="VI" URL="../_Support/JKISMQ/_CSMQ.ctl"/>
-			<Item Name="_CSMQFGV.vi" Type="VI" URL="../_Support/JKISMQ/_CSMQFGV.vi"/>
-			<Item Name="_CSMQFGVOPER.ctl" Type="VI" URL="../_Support/JKISMQ/_CSMQFGVOPER.ctl"/>
+			<Item Name="_Create Data Queue.vi" Type="VI" URL="../_Support/CSMQ/_Create Data Queue.vi"/>
+			<Item Name="_Create Resp Queue.vi" Type="VI" URL="../_Support/CSMQ/_Create Resp Queue.vi"/>
+			<Item Name="_Obtain CSMQ.vi" Type="VI" URL="../_Support/CSMQ/_Obtain CSMQ.vi"/>
+			<Item Name="_Unlock CSMQ.vi" Type="VI" URL="../_Support/CSMQ/_Unlock CSMQ.vi"/>
+			<Item Name="_Dequeue CSMQ.vi" Type="VI" URL="../_Support/CSMQ/_Dequeue CSMQ.vi"/>
+			<Item Name="_Enqueue CSMQ.vi" Type="VI" URL="../_Support/CSMQ/_Enqueue CSMQ.vi"/>
+			<Item Name="_Lock State CSMQ.vi" Type="VI" URL="../_Support/CSMQ/_Lock State CSMQ.vi"/>
+			<Item Name="_Release CSMQ.vi" Type="VI" URL="../_Support/CSMQ/_Release CSMQ.vi"/>
+			<Item Name="_CSMQ.ctl" Type="VI" URL="../_Support/CSMQ/_CSMQ.ctl"/>
+			<Item Name="_CSMQFGV.vi" Type="VI" URL="../_Support/CSMQ/_CSMQFGV.vi"/>
+			<Item Name="_CSMQFGVOPER.ctl" Type="VI" URL="../_Support/CSMQ/_CSMQFGVOPER.ctl"/>
 			<Item Name="FGV-StatusChangeEventRef.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-StatusChangeEventRef.vi"/>
-			<Item Name="_Input Name to CSM Mode.vi" Type="VI" URL="../_Support/JKISMQ/_Input Name to CSM Mode.vi"/>
+			<Item Name="_Input Name to CSM Mode.vi" Type="VI" URL="../_Support/CSMQ/_Input Name to CSM Mode.vi"/>
 			<Item Name="global-CSMQ FGV Change Flag.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/global-CSMQ FGV Change Flag.vi"/>
 		</Item>
 		<Item Name="FGV-BroadcastRegistry" Type="Folder">
@@ -44,8 +44,8 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="FGV-GlobalEventRef.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GlobalEventRef.vi"/>
 		</Item>
 		<Item Name="Typedef" Type="Folder">
-			<Item Name="_Cross JKISM State Data.ctl" Type="VI" URL="../_Support/Typedef/_Cross JKISM State Data.ctl"/>
-			<Item Name="_Cross JKISM State Response.ctl" Type="VI" URL="../_Support/Typedef/_Cross JKISM State Response.ctl"/>
+			<Item Name="_Cross CSM State Data.ctl" Type="VI" URL="../_Support/Typedef/_Cross CSM State Data.ctl"/>
+			<Item Name="_Cross CSM State Response.ctl" Type="VI" URL="../_Support/Typedef/_Cross CSM State Response.ctl"/>
 			<Item Name="_CSM_MSG_TYPE.ctl" Type="VI" URL="../_Support/Typedef/_CSM_MSG_TYPE.ctl"/>
 			<Item Name="_CSM_MODE.ctl" Type="VI" URL="../_Support/Typedef/_CSM_MODE.ctl"/>
 			<Item Name="_CSM_Broadcast_Response_Message_info.ctl" Type="VI" URL="../_Support/Typedef/_CSM_Broadcast_Response_Message_info.ctl"/>
