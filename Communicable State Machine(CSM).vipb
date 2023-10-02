@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2023-10-02 11:33:27" Creator="liyao" Comments="" ID="9ccf5da9fa1329bcc6116bd1ba6bec67">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2023-10-02 11:46:38" Creator="liyao" Comments="" ID="a0039cc8c9e8cabe440fe35edb69178f">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>0.0.0.3</Library_Version>
@@ -18,6 +18,7 @@
   <Advanced_Settings>
     <Package_Dependencies>
       <Additional_External_Dependencies>jki_lib_state_machine &gt;=2018.0.7.45</Additional_External_Dependencies>
+      <Package_Conflicts>nevstop_lib_jki_state_machine++ &gt;=2023.7.1.113641</Package_Conflicts>
     </Package_Dependencies>
     <Custom_Action_VIs>
       <Pre-Build_VI>src\_vipm\Pre-Build Custom Action.vi</Pre-Build_VI>
