@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2023-10-02 11:46:38" Creator="liyao" Comments="" ID="a0039cc8c9e8cabe440fe35edb69178f">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2023-10-02 21:53:57" Creator="liyao" Comments="" ID="7e8985e965bab893b65200e21cc0d370">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>0.0.0.3</Library_Version>
@@ -31,14 +31,14 @@
     <VI_Package_Configuration_File>Communicable State Machine(CSM).vipc</VI_Package_Configuration_File>
     <Description>
       <One_Line_Description_Summary>LabVIEW Application Framework extended from JKI State Machine(JKISM)</One_Line_Description_Summary>
-      <Description>&lt;b&gt;Communicable State Machine(CSM)&lt;/b&gt; is a LabVIEW application framework that builds upon JKI State Machine (JKISM). It follows the pattern of JKISM and extends the keywords to describe message communication between JKISM modules, including concepts such as Sync-Message, Async-Message, Subscription/Unsubscription of status - essential elements for creating reusable code modules. For more information, please visit the JKISM++ wiki: https://github.com/NEVSTOP-LAB/Communicable-State-Machine/wiki
+      <Description>&lt;b&gt;Communicable State Machine(CSM)&lt;/b&gt; is a LabVIEW application framework that builds upon JKI State Machine (JKISM). It follows the pattern of JKISM and extends the keywords to describe message communication between modules, including concepts such as Sync-Message, Async-Message, Subscription/Unsubscription of status - essential elements for creating reusable code modules. For more information, please visit the CSM wiki: https://github.com/NEVSTOP-LAB/Communicable-State-Machine/wiki
 
 - For instructions on &lt;b&gt;JKI State Machine(JKISM)&lt;/b&gt;, visit: http://jki.net/state-machine/
 - For information on &lt;b&gt;Communicable State Machine(CSM)&lt;/b&gt;, visit: https://github.com/NEVSTOP-LAB</Description>
       <Copyright/>
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
-      <Release_Notes>1. Template of JKISM++ Module
+      <Release_Notes>1. Template of CSM Module
     - With Event Structure Template
     - No-Event Strcture Template
     - With Event Structure Template(Tiny)
