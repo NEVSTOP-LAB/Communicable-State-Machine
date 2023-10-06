@@ -68,7 +68,7 @@ In this scenario, inter-module communication solely relies on message string que
     // Another comment line
 ```
 
-Go to ***/Example/2. Caller is JKISM Scenario*** to find an example for this scenario.
+Go to ***/Example/2. Caller is CSM Scenario*** to find an example for this scenario.
 
 ## Reuse CSM Module in another Application Framework
 
@@ -84,7 +84,7 @@ JKISM only supports the STRING TYPE as a parameter, but there is a wide variety 
 |---|---|---|
 | Safe String | Build-in | "->\| -> -@ & <- , ; []{}`"  wil be replaced with %[HEXCODE] |
 | HexStr | Build-in | Data will be converted as variant and changed to Hex String as paramter |
-|[ArrayData](https://github.com/NEVSTOP-LAB/JKISMPP-Array-Parameter-Support) |Addons|Pass the StartPos with array-length of a cirlce buffer for numeric array data|
-|[MassData](https://github.com/NEVSTOP-LAB/JKISMPP-MassData-Parameter-Support) |Addons|Data will be converted to memory and saved in a cricle byffer. Pass the StartPos with length as parameter. |
-|[API String Arguments](https://github.com/NEVSTOP-LAB/JKISMPP-API-String-Arugments-Support) |Addons|Support plain string as JKISM++ API parameter|
+|[ArrayData](https://github.com/NEVSTOP-LAB/CSM-Array-Parameter-Support) |Addons|Pass the StartPos with array-length of a cirlce buffer for numeric array data|
+|[MassData](https://github.com/NEVSTOP-LAB/CSM-MassData-Parameter-Support) |Addons|Data will be converted to memory and saved in a cricle byffer. Pass the StartPos with length as parameter. |
+|[API String Arguments](https://github.com/NEVSTOP-LAB/CSM-API-String-Arugments-Support) |Addons|Support plain string as CSM API parameter|
 
