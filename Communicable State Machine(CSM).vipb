@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2023-10-02 21:53:57" Creator="liyao" Comments="" ID="7e8985e965bab893b65200e21cc0d370">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2023-10-08 18:38:15" Creator="liyao" Comments="" ID="cbe60d8c9a4d34765a59e62cc5d8398e">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>0.0.0.3</Library_Version>
@@ -34,11 +34,11 @@
       <Description>&lt;b&gt;Communicable State Machine(CSM)&lt;/b&gt; is a LabVIEW application framework that builds upon JKI State Machine (JKISM). It follows the pattern of JKISM and extends the keywords to describe message communication between modules, including concepts such as Sync-Message, Async-Message, Subscription/Unsubscription of status - essential elements for creating reusable code modules. For more information, please visit the CSM wiki: https://github.com/NEVSTOP-LAB/Communicable-State-Machine/wiki
 
 - For instructions on &lt;b&gt;JKI State Machine(JKISM)&lt;/b&gt;, visit: http://jki.net/state-machine/
-- For information on &lt;b&gt;Communicable State Machine(CSM)&lt;/b&gt;, visit: https://github.com/NEVSTOP-LAB</Description>
-      <Copyright/>
-      <Packager>NEVSTOP</Packager>
-      <URL>https://github.com/NEVSTOP-LAB</URL>
-      <Release_Notes>1. Template of CSM Module
+- For information on &lt;b&gt;Communicable State Machine(CSM)&lt;/b&gt;, visit: https://github.com/NEVSTOP-LAB
+
+&lt;b&gt;Hightlights:&lt;/b&gt;
+
+1. Template of CSM Module
     - With Event Structure Template
     - No-Event Strcture Template
     - With Event Structure Template(Tiny)
@@ -51,16 +51,22 @@
 3. Examples
     - Base Concepts
     - Create a reuse Module
-    - Caller is JKISM Scenario
+    - Caller is CSM Scenario
     - Caller is Other Framework Scenario
     - Advance Examples
-        - JKISM with Side Loop as a Module
+        - CSM with Side Loop as a Module
         - Action Workers Example
 
 4. Tools
     - Localization API/Template Tool
     - Debug Tool for monitoring system change
-    - Debug Tool for status dashboard</Release_Notes>
+    - Debug Tool for status dashboard</Description>
+      <Copyright/>
+      <Packager>NEVSTOP</Packager>
+      <URL>https://github.com/NEVSTOP-LAB</URL>
+      <Release_Notes>#154 Create stub folder [labview]\templates\Communicable State Machine(CSM) for template VIs
+#153 Small fix and update to templates
+#150 Fix description in pages of vipm.io</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -89,7 +95,7 @@
       <Template_VIs>
         <LLB>false</LLB>
         <Preserve_Hierarchy>true</Preserve_Hierarchy>
-        <Path/>
+        <Path>&lt;application&gt;\templates\Communicable State Machine(CSM)</Path>
       </Template_VIs>
       <File_Menu>
         <LLB>false</LLB>
@@ -135,6 +141,12 @@
         <Additional_Destination>false</Additional_Destination>
         <Additional_Destination_Index>0</Additional_Destination_Index>
       </Destination_Overrides>
+      <Destination_Overrides>
+        <Path>templates</Path>
+        <Destination>5</Destination>
+        <Additional_Destination>false</Additional_Destination>
+        <Additional_Destination_Index>0</Additional_Destination_Index>
+      </Destination_Overrides>
       <Password_Overrides>
         <Path>.</Path>
         <Password/>
@@ -162,6 +174,9 @@
       </Place_Folder_Contents>
       <Place_Folder_Contents>
         <Path>help</Path>
+      </Place_Folder_Contents>
+      <Place_Folder_Contents>
+        <Path>templates</Path>
       </Place_Folder_Contents>
     </Source_Files>
     <License_Agreement_Filepath/>
