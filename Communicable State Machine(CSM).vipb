@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2023-10-26 16:11:44" Creator="liyao" Comments="" ID="8eda6a4941d827aa0740aef6506f0936">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2023-10-26 16:51:32" Creator="liyao" Comments="" ID="97db7206c1011a4aad6baf89c4a882f7">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>0.0.0.3</Library_Version>
@@ -70,6 +70,7 @@
 [add] #154 Create stub folder [labview]\templates\Communicable State Machine(CSM) for template VIs
 [add] Apache License 2.0 License
 [add] update More template palette tool
+[add] Example of demostration of build-in error handling framework
 [improve] #160 improve debug tools of CSM
 [improve]#174 Show all keyword in template 
 [fix] #153 Small fix and update to templates 
