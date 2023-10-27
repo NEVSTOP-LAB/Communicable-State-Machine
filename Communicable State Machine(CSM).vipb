@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2023-10-26 22:18:59" Creator="liyao" Comments="" ID="83a278e6a2e3e9b117a8f57feff5a9fa">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2023-10-27 12:30:28" Creator="liyao" Comments="" ID="50194bd2055dc16b4bd8c32f05ea2b85">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>0.0.0.3</Library_Version>
@@ -65,7 +65,8 @@
       <Copyright/>
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
-      <Release_Notes>[add] #158 Add State Table - DebugTool
+      <Release_Notes>[critical]#169 show both source message and arguments for response/async response, which will broken old module but easy to fix.
+[add] #158 Add State Table - DebugTool
 [add] #156 Create CSM_Tool_Launcher entry in Tool Menu
 [add] #154 Create stub folder [labview]\templates\Communicable State Machine(CSM) for template VIs
 [add] Apache License 2.0 License
