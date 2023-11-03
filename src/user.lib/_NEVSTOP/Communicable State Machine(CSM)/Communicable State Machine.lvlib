@@ -59,6 +59,9 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 		<Item Name="Message" Type="Folder">
 			<Item Name="Parse State with Arguments String.vi" Type="VI" URL="../_Support/Message/Parse State with Arguments String.vi"/>
 		</Item>
+		<Item Name="Priority Queue" Type="Folder">
+			<Item Name="Priority Queue.lvclass" Type="LVClass" URL="../_Support/Priority Queue/Priority Queue.lvclass"/>
+		</Item>
 		<Item Name="CSM Dummy Module.vi" Type="VI" URL="../_Support/CSM Dummy Module.vi"/>
 		<Item Name="KeyWords.vi" Type="VI" URL="../_Support/KeyWords.vi"/>
 	</Item>
