@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2023-11-03 18:51:51" Creator="liyao" Comments="" ID="67be362efe290243fbc2ca04850ba321">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2023-11-04 20:35:32" Creator="liyao" Comments="" ID="da5fcfd0b13d5946a01b34afdca7c1e0">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>0.0.0.3</Library_Version>
@@ -67,6 +67,7 @@
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
       <Release_Notes>[add] #184 add CSM - Keywords.vi for exposing keywords of CSM
+[fix] #173 fix bug that sync message(-@) is blocking by mass of async message(-&gt;).
 [fix] template - #179 Show documentation case by default
 [fix] documentation - #180 Update description of quick-drop VIs in documentation palette</Release_Notes>
     </Description>
