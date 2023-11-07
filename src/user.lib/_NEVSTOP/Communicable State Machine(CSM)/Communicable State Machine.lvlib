@@ -62,6 +62,11 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 		<Item Name="Priority Queue" Type="Folder">
 			<Item Name="Priority Queue.lvclass" Type="LVClass" URL="../_Support/Priority Queue/Priority Queue.lvclass"/>
 		</Item>
+		<Item Name="Common" Type="Folder">
+			<Item Name="Trim Single line Text.vi" Type="VI" URL="../_Support/Common/Trim Single line Text.vi"/>
+			<Item Name="Remove Comments from Line.vi" Type="VI" URL="../_Support/Common/Remove Comments from Line.vi"/>
+			<Item Name="Splite Single-line Message.vi" Type="VI" URL="../_Support/Common/Splite Single-line Message.vi"/>
+		</Item>
 		<Item Name="CSM Dummy Module.vi" Type="VI" URL="../_Support/CSM Dummy Module.vi"/>
 	</Item>
 	<Item Name="Polymophic" Type="Folder">
