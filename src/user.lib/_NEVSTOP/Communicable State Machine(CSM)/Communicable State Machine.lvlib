@@ -17,16 +17,26 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 	<Item Name="Support" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 		<Property Name="NI.SortType" Type="Int">3</Property>
+		<Item Name="Priority Queue" Type="Folder">
+			<Item Name="Priority Queue.lvclass" Type="LVClass" URL="../_Support/Priority Queue/Priority Queue.lvclass"/>
+		</Item>
+		<Item Name="Common" Type="Folder">
+			<Item Name="Trim Single line Text.vi" Type="VI" URL="../_Support/Common/Trim Single line Text.vi"/>
+			<Item Name="Remove Comments from Line.vi" Type="VI" URL="../_Support/Common/Remove Comments from Line.vi"/>
+			<Item Name="Splite Single-line Message.vi" Type="VI" URL="../_Support/Common/Splite Single-line Message.vi"/>
+		</Item>
 		<Item Name="CSMQ" Type="Folder">
+			<Item Name="CSM-Obj" Type="Folder">
+				<Item Name="_CSMObj.ctl" Type="VI" URL="../_Support/CSMQ/_CSMObj.ctl"/>
+				<Item Name="_CSMObj-Unlock.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Unlock.vi"/>
+				<Item Name="_CSMObj-Lock State.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Lock State.vi"/>
+				<Item Name="_CSMObj-Enqueue Cross-Module Message.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Enqueue Cross-Module Message.vi"/>
+			</Item>
 			<Item Name="_Create Data Queue.vi" Type="VI" URL="../_Support/CSMQ/_Create Data Queue.vi"/>
 			<Item Name="_Create Resp Queue.vi" Type="VI" URL="../_Support/CSMQ/_Create Resp Queue.vi"/>
 			<Item Name="_Obtain CSMQ.vi" Type="VI" URL="../_Support/CSMQ/_Obtain CSMQ.vi"/>
-			<Item Name="_Unlock CSMQ.vi" Type="VI" URL="../_Support/CSMQ/_Unlock CSMQ.vi"/>
 			<Item Name="_Dequeue CSMQ.vi" Type="VI" URL="../_Support/CSMQ/_Dequeue CSMQ.vi"/>
-			<Item Name="_Enqueue CSMQ.vi" Type="VI" URL="../_Support/CSMQ/_Enqueue CSMQ.vi"/>
-			<Item Name="_Lock State CSMQ.vi" Type="VI" URL="../_Support/CSMQ/_Lock State CSMQ.vi"/>
 			<Item Name="_Release CSMQ.vi" Type="VI" URL="../_Support/CSMQ/_Release CSMQ.vi"/>
-			<Item Name="_CSMQ.ctl" Type="VI" URL="../_Support/CSMQ/_CSMQ.ctl"/>
 			<Item Name="_CSMQFGV.vi" Type="VI" URL="../_Support/CSMQ/_CSMQFGV.vi"/>
 			<Item Name="_CSMQFGVOPER.ctl" Type="VI" URL="../_Support/CSMQ/_CSMQFGVOPER.ctl"/>
 			<Item Name="FGV-StatusChangeEventRef.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-StatusChangeEventRef.vi"/>
@@ -58,14 +68,6 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 		</Item>
 		<Item Name="Message" Type="Folder">
 			<Item Name="Parse State with Arguments String.vi" Type="VI" URL="../_Support/Message/Parse State with Arguments String.vi"/>
-		</Item>
-		<Item Name="Priority Queue" Type="Folder">
-			<Item Name="Priority Queue.lvclass" Type="LVClass" URL="../_Support/Priority Queue/Priority Queue.lvclass"/>
-		</Item>
-		<Item Name="Common" Type="Folder">
-			<Item Name="Trim Single line Text.vi" Type="VI" URL="../_Support/Common/Trim Single line Text.vi"/>
-			<Item Name="Remove Comments from Line.vi" Type="VI" URL="../_Support/Common/Remove Comments from Line.vi"/>
-			<Item Name="Splite Single-line Message.vi" Type="VI" URL="../_Support/Common/Splite Single-line Message.vi"/>
 		</Item>
 		<Item Name="CSM Dummy Module.vi" Type="VI" URL="../_Support/CSM Dummy Module.vi"/>
 	</Item>
