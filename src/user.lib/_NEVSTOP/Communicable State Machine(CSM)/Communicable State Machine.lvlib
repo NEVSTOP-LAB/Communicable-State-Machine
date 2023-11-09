@@ -73,6 +73,7 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="_Cross CSM State Response.ctl" Type="VI" URL="../_Support/Typedef/_Cross CSM State Response.ctl"/>
 			<Item Name="_CSM_MSG_TYPE.ctl" Type="VI" URL="../_Support/Typedef/_CSM_MSG_TYPE.ctl"/>
 			<Item Name="_CSM_MODE.ctl" Type="VI" URL="../_Support/Typedef/_CSM_MODE.ctl"/>
+			<Item Name="_CSM_Response Source Message.ctl" Type="VI" URL="../_Support/Typedef/_CSM_Response Source Message.ctl"/>
 			<Item Name="_CSM_Broadcast_Response_Message_info.ctl" Type="VI" URL="../_Support/Typedef/_CSM_Broadcast_Response_Message_info.ctl"/>
 			<Item Name="_CSM Status Change Event Data.ctl" Type="VI" URL="../_Support/Typedef/_CSM Status Change Event Data.ctl"/>
 			<Item Name="_CSM_GlobalLog_MSG.ctl" Type="VI" URL="../_Support/Typedef/_CSM_GlobalLog_MSG.ctl"/>
