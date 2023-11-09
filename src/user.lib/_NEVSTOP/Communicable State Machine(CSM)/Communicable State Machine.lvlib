@@ -27,8 +27,11 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="Splite Reason String Part.vi" Type="VI" URL="../_Support/Common/Splite Reason String Part.vi"/>
 			<Item Name="CSM-Name to CSM-Mode.vi" Type="VI" URL="../_Support/Common/CSM-Name to CSM-Mode.vi"/>
 		</Item>
-		<Item Name="CSMQ" Type="Folder">
-			<Item Name="CSM-Obj" Type="Folder">
+		<Item Name="CSM-Core" Type="Folder">
+			<Item Name="Support" Type="Folder">
+				<Item Name="_Obtain CSM Data Queue.vi" Type="VI" URL="../_Support/CSMQ/_Obtain CSM Data Queue.vi"/>
+			</Item>
+			<Item Name="CSMObj" Type="Folder">
 				<Item Name="_CSMObj.ctl" Type="VI" URL="../_Support/CSMQ/_CSMObj.ctl"/>
 				<Item Name="_CSMObj-Obtain.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Obtain.vi"/>
 				<Item Name="_CSMObj-Clone Worker.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Clone Worker.vi"/>
@@ -37,12 +40,13 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 				<Item Name="_CSMObj-Enqueue Cross-Module Message.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Enqueue Cross-Module Message.vi"/>
 				<Item Name="_CSMObj-Release.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Release.vi"/>
 			</Item>
-			<Item Name="_Create Data Queue.vi" Type="VI" URL="../_Support/CSMQ/_Create Data Queue.vi"/>
-			<Item Name="_Obtain CSMQ.vi" Type="VI" URL="../_Support/CSMQ/_Obtain CSMQ.vi"/>
+			<Item Name="CSMOFGV" Type="Folder">
+				<Item Name="_CSMOFGV.vi" Type="VI" URL="../_Support/CSMQ/_CSMOFGV.vi"/>
+				<Item Name="_CSMOFGVOPER.ctl" Type="VI" URL="../_Support/CSMQ/_CSMOFGVOPER.ctl"/>
+				<Item Name="_CSMOFGV Obtain.vi" Type="VI" URL="../_Support/CSMQ/_CSMOFGV Obtain.vi"/>
+				<Item Name="_CSMOFGV Release.vi" Type="VI" URL="../_Support/CSMQ/_CSMOFGV Release.vi"/>
+			</Item>
 			<Item Name="_Dequeue CSMQ.vi" Type="VI" URL="../_Support/CSMQ/_Dequeue CSMQ.vi"/>
-			<Item Name="_Release CSMQ.vi" Type="VI" URL="../_Support/CSMQ/_Release CSMQ.vi"/>
-			<Item Name="_CSMQFGV.vi" Type="VI" URL="../_Support/CSMQ/_CSMQFGV.vi"/>
-			<Item Name="_CSMQFGVOPER.ctl" Type="VI" URL="../_Support/CSMQ/_CSMQFGVOPER.ctl"/>
 			<Item Name="FGV-StatusChangeEventRef.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-StatusChangeEventRef.vi"/>
 			<Item Name="global-CSMQ FGV Change Flag.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/global-CSMQ FGV Change Flag.vi"/>
 		</Item>
