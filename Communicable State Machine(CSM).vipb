@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2023-11-10 14:36:53" Creator="liyao" Comments="" ID="2ae650a3be8e3917f36e395f9461476d">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2023-11-11 00:44:05" Creator="liyao" Comments="" ID="16dc6d56fc5477c043c8b1c78394c2bb">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>0.0.0.3</Library_Version>
@@ -69,6 +69,7 @@
       <Release_Notes># Core
 [add] add CSM - Break Down Multiple States String.vi
 [add] #184 add CSM - Keywords.vi for exposing keywords of CSM
+[improve] make Parse State Queue++.vi block diagram clear 
 [fix] #173 fix bug that sync message(-@) is blocking by mass of async message(-&gt;).
 [fix] fix No source module name for  "Macro: Exit"  
 [fix] show pre-state argument for Response(sync-call)
