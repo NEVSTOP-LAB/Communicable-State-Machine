@@ -27,6 +27,7 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="Splite Reason String Part.vi" Type="VI" URL="../_Support/Common/Splite Reason String Part.vi"/>
 			<Item Name="CSM-Name to CSM-Mode.vi" Type="VI" URL="../_Support/Common/CSM-Name to CSM-Mode.vi"/>
 			<Item Name="Parse Next Single-line State.vi" Type="VI" URL="../_Support/Common/Parse Next Single-line State.vi"/>
+			<Item Name="Concatenate State with Arguments.vi" Type="VI" URL="../_Support/Common/Concatenate State with Arguments.vi"/>
 		</Item>
 		<Item Name="CSM-Core" Type="Folder">
 			<Item Name="Support" Type="Folder">
@@ -34,6 +35,7 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 			</Item>
 			<Item Name="CSMObj" Type="Folder">
 				<Item Name="_CSMObj.ctl" Type="VI" URL="../_Support/CSMQ/_CSMObj.ctl"/>
+				<Item Name="_CSMObj-Data.ctl" Type="VI" URL="../_Support/CSMQ/_CSMObj-Data.ctl"/>
 				<Item Name="_CSMObj-Obtain.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Obtain.vi"/>
 				<Item Name="_CSMObj-Clone Worker.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Clone Worker.vi"/>
 				<Item Name="_CSMObj-Unlock.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Unlock.vi"/>
@@ -50,7 +52,8 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="CSM-Process" Type="Folder">
 				<Item Name="CSMP-Sync Call.vi" Type="VI" URL="../_Support/Process/CSMP-Sync Call.vi"/>
 				<Item Name="CSMP-Async Call.vi" Type="VI" URL="../_Support/Process/CSMP-Async Call.vi"/>
-				<Item Name="CSMP-Template.vi" Type="VI" URL="../_Support/Process/CSMP-Template.vi"/>
+				<Item Name="CSMP-Register Status.vi" Type="VI" URL="../_Support/Process/CSMP-Register Status.vi"/>
+				<Item Name="CSMP-Unregister Status.vi" Type="VI" URL="../_Support/Process/CSMP-Unregister Status.vi"/>
 			</Item>
 			<Item Name="_Dequeue CSMQ.vi" Type="VI" URL="../_Support/CSMQ/_Dequeue CSMQ.vi"/>
 			<Item Name="FGV-StatusChangeEventRef.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-StatusChangeEventRef.vi"/>
@@ -113,6 +116,8 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="CSM - Convert HexStr to Data.vi" Type="VI" URL="../AdvanceAPI/CSM - Convert HexStr to Data.vi"/>
 			<Item Name="CSM - Make String Arguments Safe.vi" Type="VI" URL="../AdvanceAPI/CSM - Make String Arguments Safe.vi"/>
 			<Item Name="CSM - Revert Arguments-Safe String.vi" Type="VI" URL="../AdvanceAPI/CSM - Revert Arguments-Safe String.vi"/>
+			<Item Name="CSM - Convert Error to Argument.vi" Type="VI" URL="../AdvanceAPI/CSM - Convert Error to Argument.vi"/>
+			<Item Name="CSM - Convert Argument to Error.vi" Type="VI" URL="../AdvanceAPI/CSM - Convert Argument to Error.vi"/>
 		</Item>
 		<Item Name="Non-Message Mode API" Type="Folder">
 			<Item Name="CSM - Broadcast Message Type.ctl" Type="VI" URL="../AdvanceAPI/CSM - Broadcast Message Type.ctl"/>
