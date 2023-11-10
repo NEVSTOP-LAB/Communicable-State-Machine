@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2023-11-10 09:42:05" Creator="liyao" Comments="" ID="7513b53700d3f782e9e6b66290b863cc">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2023-11-10 10:05:02" Creator="liyao" Comments="" ID="b36f0dcec7f3e3fdacf9bca7f47081fe">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>0.0.0.3</Library_Version>
@@ -72,6 +72,7 @@
 [fix] #173 fix bug that sync message(-@) is blocking by mass of async message(-&gt;).
 [fix] fix No source module name for  "Macro: Exit"  
 [fix] show pre-state argument for Response(sync-call)
+[fix] show pre-state/pre-argument for "Target Error","Target Timeout Error" or "Traget Busy Error"
 
 # Template
 [update] #186 show "Init State("Macro: Initialize")" control for templates
