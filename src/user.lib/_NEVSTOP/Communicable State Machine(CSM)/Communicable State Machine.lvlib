@@ -54,6 +54,7 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 				<Item Name="CSMP-Async Call.vi" Type="VI" URL="../_Support/Process/CSMP-Async Call.vi"/>
 				<Item Name="CSMP-Register Status.vi" Type="VI" URL="../_Support/Process/CSMP-Register Status.vi"/>
 				<Item Name="CSMP-Unregister Status.vi" Type="VI" URL="../_Support/Process/CSMP-Unregister Status.vi"/>
+				<Item Name="CSMP-Broadcast.vi" Type="VI" URL="../_Support/Process/CSMP-Broadcast.vi"/>
 			</Item>
 			<Item Name="_Dequeue CSMQ.vi" Type="VI" URL="../_Support/CSMQ/_Dequeue CSMQ.vi"/>
 			<Item Name="FGV-StatusChangeEventRef.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-StatusChangeEventRef.vi"/>
