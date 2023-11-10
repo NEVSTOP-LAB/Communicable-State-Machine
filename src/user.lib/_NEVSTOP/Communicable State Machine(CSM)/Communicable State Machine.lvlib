@@ -47,6 +47,10 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 				<Item Name="_CSMOFGV Obtain.vi" Type="VI" URL="../_Support/CSMQ/_CSMOFGV Obtain.vi"/>
 				<Item Name="_CSMOFGV Release.vi" Type="VI" URL="../_Support/CSMQ/_CSMOFGV Release.vi"/>
 			</Item>
+			<Item Name="CSM-Process" Type="Folder">
+				<Item Name="CSMP-Sync Call.vi" Type="VI" URL="../_Support/Process/CSMP-Sync Call.vi"/>
+				<Item Name="CSMP-Template.vi" Type="VI" URL="../_Support/Process/CSMP-Template.vi"/>
+			</Item>
 			<Item Name="_Dequeue CSMQ.vi" Type="VI" URL="../_Support/CSMQ/_Dequeue CSMQ.vi"/>
 			<Item Name="FGV-StatusChangeEventRef.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-StatusChangeEventRef.vi"/>
 			<Item Name="global-CSMQ FGV Change Flag.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/global-CSMQ FGV Change Flag.vi"/>
