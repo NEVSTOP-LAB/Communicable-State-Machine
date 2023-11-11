@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2023-11-11 21:02:37" Creator="liyao" Comments="" ID="68fdbfef87de40decdb7fec23e1d6d14">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2023-11-11 21:35:51" Creator="liyao" Comments="" ID="17ec6e499108974f3faaaafa4f535dae">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>0.0.0.3</Library_Version>
@@ -69,7 +69,7 @@
       <Release_Notes># Core
 [add] add CSM - Break Down Multiple States String.vi
 [add] #184 add CSM - Keywords.vi for exposing keywords of CSM
-[add] #161 Response/Async Response carry the Error information from target CSM modulec
+[add] #161 Response/Async Response carry the Error information from target CSM module
 [improve] make Parse State Queue++.vi block diagram clear 
 [fix] #173 fix bug that sync message(-@) is blocking by mass of async message(-&gt;).
 [fix] fix No source module name for  "Macro: Exit"  
@@ -80,6 +80,7 @@
 [add] Convert Error with Argument API and example
 
 # Template
+[critical] Change Error Status Arguments to SafeString as Default in template
 [update] #186 show "Init State("Macro: Initialize")" control for templates
 [fix] #179 Show documentation case by default
 
