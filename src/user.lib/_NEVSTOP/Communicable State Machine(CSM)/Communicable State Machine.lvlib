@@ -17,37 +17,75 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 	<Item Name="Support" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 		<Property Name="NI.SortType" Type="Int">3</Property>
-		<Item Name="CSMQ" Type="Folder">
-			<Item Name="_Create Data Queue.vi" Type="VI" URL="../_Support/CSMQ/_Create Data Queue.vi"/>
-			<Item Name="_Create Resp Queue.vi" Type="VI" URL="../_Support/CSMQ/_Create Resp Queue.vi"/>
-			<Item Name="_Obtain CSMQ.vi" Type="VI" URL="../_Support/CSMQ/_Obtain CSMQ.vi"/>
-			<Item Name="_Unlock CSMQ.vi" Type="VI" URL="../_Support/CSMQ/_Unlock CSMQ.vi"/>
-			<Item Name="_Dequeue CSMQ.vi" Type="VI" URL="../_Support/CSMQ/_Dequeue CSMQ.vi"/>
-			<Item Name="_Enqueue CSMQ.vi" Type="VI" URL="../_Support/CSMQ/_Enqueue CSMQ.vi"/>
-			<Item Name="_Lock State CSMQ.vi" Type="VI" URL="../_Support/CSMQ/_Lock State CSMQ.vi"/>
-			<Item Name="_Release CSMQ.vi" Type="VI" URL="../_Support/CSMQ/_Release CSMQ.vi"/>
-			<Item Name="_CSMQ.ctl" Type="VI" URL="../_Support/CSMQ/_CSMQ.ctl"/>
-			<Item Name="_CSMQFGV.vi" Type="VI" URL="../_Support/CSMQ/_CSMQFGV.vi"/>
-			<Item Name="_CSMQFGVOPER.ctl" Type="VI" URL="../_Support/CSMQ/_CSMQFGVOPER.ctl"/>
+		<Item Name="Priority Queue" Type="Folder">
+			<Item Name="Priority Queue.lvclass" Type="LVClass" URL="../_Support/Priority Queue/Priority Queue.lvclass"/>
+		</Item>
+		<Item Name="Common" Type="Folder">
+			<Item Name="Trim Single line Text.vi" Type="VI" URL="../_Support/Common/Trim Single line Text.vi"/>
+			<Item Name="Remove Comments from Line.vi" Type="VI" URL="../_Support/Common/Remove Comments from Line.vi"/>
+			<Item Name="Splite Single-line Message.vi" Type="VI" URL="../_Support/Common/Splite Single-line Message.vi"/>
+			<Item Name="Splite Reason String Part.vi" Type="VI" URL="../_Support/Common/Splite Reason String Part.vi"/>
+			<Item Name="CSM-Name to CSM-Mode.vi" Type="VI" URL="../_Support/Common/CSM-Name to CSM-Mode.vi"/>
+			<Item Name="Parse Next Single-line State.vi" Type="VI" URL="../_Support/Common/Parse Next Single-line State.vi"/>
+			<Item Name="Concatenate State with Arguments.vi" Type="VI" URL="../_Support/Common/Concatenate State with Arguments.vi"/>
+		</Item>
+		<Item Name="CSM-Core" Type="Folder">
+			<Item Name="Support" Type="Folder">
+				<Item Name="_Obtain CSM Data Queue.vi" Type="VI" URL="../_Support/CSMQ/_Obtain CSM Data Queue.vi"/>
+			</Item>
+			<Item Name="CSMObj" Type="Folder">
+				<Item Name="_CSMObj.ctl" Type="VI" URL="../_Support/CSMQ/_CSMObj.ctl"/>
+				<Item Name="_CSMObj-Data.ctl" Type="VI" URL="../_Support/CSMQ/_CSMObj-Data.ctl"/>
+				<Item Name="_CSMObj-Obtain.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Obtain.vi"/>
+				<Item Name="_CSMObj-Clone Worker.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Clone Worker.vi"/>
+				<Item Name="_CSMObj-Unlock.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Unlock.vi"/>
+				<Item Name="_CSMObj-Lock State.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Lock State.vi"/>
+				<Item Name="_CSMObj-Log Error if in a Remote Session.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Log Error if in a Remote Session.vi"/>
+				<Item Name="_CSMObj-Enqueue Cross-Module Message.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Enqueue Cross-Module Message.vi"/>
+				<Item Name="_CSMObj-Release.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Release.vi"/>
+			</Item>
+			<Item Name="CSMOFGV" Type="Folder">
+				<Item Name="_CSMOFGV.vi" Type="VI" URL="../_Support/CSMQ/_CSMOFGV.vi"/>
+				<Item Name="_CSMOFGVOPER.ctl" Type="VI" URL="../_Support/CSMQ/_CSMOFGVOPER.ctl"/>
+				<Item Name="_CSMOFGV Obtain.vi" Type="VI" URL="../_Support/CSMQ/_CSMOFGV Obtain.vi"/>
+				<Item Name="_CSMOFGV Dequeue.vi" Type="VI" URL="../_Support/CSMQ/_CSMOFGV Dequeue.vi"/>
+				<Item Name="_CSMOFGV Release.vi" Type="VI" URL="../_Support/CSMQ/_CSMOFGV Release.vi"/>
+			</Item>
+			<Item Name="CSM-Process" Type="Folder">
+				<Item Name="CSMP-Sync Call.vi" Type="VI" URL="../_Support/Process/CSMP-Sync Call.vi"/>
+				<Item Name="CSMP-Async Call.vi" Type="VI" URL="../_Support/Process/CSMP-Async Call.vi"/>
+				<Item Name="CSMP-Register Status.vi" Type="VI" URL="../_Support/Process/CSMP-Register Status.vi"/>
+				<Item Name="CSMP-Unregister Status.vi" Type="VI" URL="../_Support/Process/CSMP-Unregister Status.vi"/>
+				<Item Name="CSMP-Broadcast.vi" Type="VI" URL="../_Support/Process/CSMP-Broadcast.vi"/>
+				<Item Name="CSMP-PostSendMsg.vi" Type="VI" URL="../_Support/Process/CSMP-PostSendMsg.vi"/>
+				<Item Name="CSMP-PostPostMsg.vi" Type="VI" URL="../_Support/Process/CSMP-PostPostMsg.vi"/>
+			</Item>
 			<Item Name="FGV-StatusChangeEventRef.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-StatusChangeEventRef.vi"/>
-			<Item Name="_Input Name to CSM Mode.vi" Type="VI" URL="../_Support/CSMQ/_Input Name to CSM Mode.vi"/>
 			<Item Name="global-CSMQ FGV Change Flag.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/global-CSMQ FGV Change Flag.vi"/>
 		</Item>
 		<Item Name="FGV-BroadcastRegistry" Type="Folder">
 			<Item Name="FGV-BroadcastRegistry.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/FGV-BroadcastRegistry.vi"/>
-			<Item Name="global-Broadcast Cache Change Flag.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/global-Broadcast Cache Change Flag.vi"/>
 			<Item Name="Operation-BroadcastRegistry.ctl" Type="VI" URL="../_Support/FGV-BroadcastRegistry/Operation-BroadcastRegistry.ctl"/>
+			<Item Name="global-Broadcast Cache Change Flag.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/global-Broadcast Cache Change Flag.vi"/>
 			<Item Name="Cache-Broadcast Registry Search Result.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/Cache-Broadcast Registry Search Result.vi"/>
 			<Item Name="_Broadcast Item Key.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/_Broadcast Item Key.vi"/>
 		</Item>
 		<Item Name="GlobalEvent" Type="Folder">
 			<Item Name="FGV-GlobalEventRef.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GlobalEventRef.vi"/>
+			<Item Name="GEvt-Generate Complete Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate Complete Log.vi"/>
+			<Item Name="GEvt-Generate State Change Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate State Change Log.vi"/>
+			<Item Name="GEvt-Generate Remaining States Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate Remaining States Log.vi"/>
+			<Item Name="GEvt-Generate Status Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate Status Log.vi"/>
+			<Item Name="GEvt-Generate Interrupt Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate Interrupt Log.vi"/>
+			<Item Name="GEvt-Generate Register Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate Register Log.vi"/>
+			<Item Name="GEvt-Generate Unregister Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate Unregister Log.vi"/>
 		</Item>
 		<Item Name="Typedef" Type="Folder">
 			<Item Name="_Cross CSM State Data.ctl" Type="VI" URL="../_Support/Typedef/_Cross CSM State Data.ctl"/>
 			<Item Name="_Cross CSM State Response.ctl" Type="VI" URL="../_Support/Typedef/_Cross CSM State Response.ctl"/>
 			<Item Name="_CSM_MSG_TYPE.ctl" Type="VI" URL="../_Support/Typedef/_CSM_MSG_TYPE.ctl"/>
 			<Item Name="_CSM_MODE.ctl" Type="VI" URL="../_Support/Typedef/_CSM_MODE.ctl"/>
+			<Item Name="_CSM_Response Source Message.ctl" Type="VI" URL="../_Support/Typedef/_CSM_Response Source Message.ctl"/>
 			<Item Name="_CSM_Broadcast_Response_Message_info.ctl" Type="VI" URL="../_Support/Typedef/_CSM_Broadcast_Response_Message_info.ctl"/>
 			<Item Name="_CSM Status Change Event Data.ctl" Type="VI" URL="../_Support/Typedef/_CSM Status Change Event Data.ctl"/>
 			<Item Name="_CSM_GlobalLog_MSG.ctl" Type="VI" URL="../_Support/Typedef/_CSM_GlobalLog_MSG.ctl"/>
@@ -58,9 +96,6 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 		</Item>
 		<Item Name="Message" Type="Folder">
 			<Item Name="Parse State with Arguments String.vi" Type="VI" URL="../_Support/Message/Parse State with Arguments String.vi"/>
-		</Item>
-		<Item Name="Priority Queue" Type="Folder">
-			<Item Name="Priority Queue.lvclass" Type="LVClass" URL="../_Support/Priority Queue/Priority Queue.lvclass"/>
 		</Item>
 		<Item Name="CSM Dummy Module.vi" Type="VI" URL="../_Support/CSM Dummy Module.vi"/>
 	</Item>
@@ -85,6 +120,8 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="CSM - Convert HexStr to Data.vi" Type="VI" URL="../AdvanceAPI/CSM - Convert HexStr to Data.vi"/>
 			<Item Name="CSM - Make String Arguments Safe.vi" Type="VI" URL="../AdvanceAPI/CSM - Make String Arguments Safe.vi"/>
 			<Item Name="CSM - Revert Arguments-Safe String.vi" Type="VI" URL="../AdvanceAPI/CSM - Revert Arguments-Safe String.vi"/>
+			<Item Name="CSM - Convert Error to Argument.vi" Type="VI" URL="../AdvanceAPI/CSM - Convert Error to Argument.vi"/>
+			<Item Name="CSM - Convert Argument to Error.vi" Type="VI" URL="../AdvanceAPI/CSM - Convert Argument to Error.vi"/>
 		</Item>
 		<Item Name="Non-Message Mode API" Type="Folder">
 			<Item Name="CSM - Broadcast Message Type.ctl" Type="VI" URL="../AdvanceAPI/CSM - Broadcast Message Type.ctl"/>
