@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2023-11-13 12:53:04" Creator="liyao" Comments="" ID="fd6ac25726152de2ffccf35a2dbde013">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2023-11-13 22:52:17" Creator="liyao" Comments="" ID="fb2b907e016403c3bb7ea8162d98ca27">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>0.0.0.3</Library_Version>
@@ -70,6 +70,7 @@
 [add] add CSM - Break Down Multiple States String.vi
 [add] #184 add CSM - Keywords.vi for exposing keywords of CSM
 [add] #161 Response/Async Response carry the Error information from target CSM module
+[add] Allowed Messages(Empty for all) terminal for Parse State Queue++.vi
 [improve] make Parse State Queue++.vi block diagram clear 
 [imporve] #140 Improve CSM - Send Message and Wait for Reply.vi and CSM - Post Message.vi
 [fix] #173 fix bug that sync message(-@) is blocking by mass of async message(-&gt;).
