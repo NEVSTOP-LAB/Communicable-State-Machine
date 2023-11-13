@@ -127,7 +127,9 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="CSM - Broadcast Message Type.ctl" Type="VI" URL="../AdvanceAPI/CSM - Broadcast Message Type.ctl"/>
 			<Item Name="CSM - Message Type.ctl" Type="VI" URL="../AdvanceAPI/CSM - Message Type.ctl"/>
 			<Item Name="CSM - Send Message and Wait for Reply.vi" Type="VI" URL="../AdvanceAPI/CSM - Send Message and Wait for Reply.vi"/>
+			<Item Name="CSM - Send Message and Wait for Reply(SimMode).vi" Type="VI" URL="../AdvanceAPI/CSM - Send Message and Wait for Reply(SimMode).vi"/>
 			<Item Name="CSM - Post Message.vi" Type="VI" URL="../AdvanceAPI/CSM - Post Message.vi"/>
+			<Item Name="CSM - Post Message(SimMode).vi" Type="VI" URL="../AdvanceAPI/CSM - Post Message(SimMode).vi"/>
 			<Item Name="CSM - Status Change Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Status Change Event.vi"/>
 			<Item Name="CSM - Destroy Status Change Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Destroy Status Change Event.vi"/>
 		</Item>
