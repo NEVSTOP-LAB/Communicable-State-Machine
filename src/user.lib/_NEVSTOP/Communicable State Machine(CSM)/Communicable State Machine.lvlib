@@ -143,6 +143,7 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="CSM - Compact Multiple States.vi" Type="VI" URL="../AdvanceAPI/CSM - Compact Multiple States.vi"/>
 			<Item Name="CSM - Break Down Multiple States String.vi" Type="VI" URL="../AdvanceAPI/CSM - Break Down Multiple States String.vi"/>
 			<Item Name="CSM - Mark As Worker Module.vi" Type="VI" URL="../AdvanceAPI/CSM - Mark As Worker Module.vi"/>
+			<Item Name="CSM - Keywords.vi" Type="VI" URL="../AdvanceAPI/CSM - Keywords.vi"/>
 		</Item>
 		<Item Name="CSM-Support" Type="Folder">
 			<Item Name="CSM - Get New State Notifier Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Get New State Notifier Event.vi"/>
@@ -151,7 +152,6 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="CSM - Unregister Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Unregister Status Change.vi"/>
 			<Item Name="CSM - List Modules.vi" Type="VI" URL="../AdvanceAPI/CSM - List Modules.vi"/>
 			<Item Name="CSM - Module Status.vi" Type="VI" URL="../AdvanceAPI/CSM - Module Status.vi"/>
-			<Item Name="CSM - Keywords.vi" Type="VI" URL="../AdvanceAPI/CSM - Keywords.vi"/>
 		</Item>
 		<Item Name="GlobalEvent" Type="Folder">
 			<Item Name="CSM - Global Log Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Global Log Event.vi"/>
