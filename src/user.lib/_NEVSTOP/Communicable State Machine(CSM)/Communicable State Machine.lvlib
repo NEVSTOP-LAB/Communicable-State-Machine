@@ -45,6 +45,12 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 				<Item Name="_CSMObj-Enqueue Cross-Module Message.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Enqueue Cross-Module Message.vi"/>
 				<Item Name="_CSMObj-Release.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Release.vi"/>
 			</Item>
+			<Item Name="CSMOMgr" Type="Folder">
+				<Item Name="Def-CSMOMgr.ctl" Type="VI" URL="../_Support/Def-CSMOMgr.ctl"/>
+				<Item Name="CSMOMgr-Delete.vi" Type="VI" URL="../_Support/CSMOMgr/CSMOMgr-Delete.vi"/>
+				<Item Name="CSMOMgr-Duplication Check.vi" Type="VI" URL="../_Support/CSMOMgr/CSMOMgr-Duplication Check.vi"/>
+				<Item Name="CSMOMgr-Get CSMO.vi" Type="VI" URL="../_Support/CSMOMgr/CSMOMgr-Get CSMO.vi"/>
+			</Item>
 			<Item Name="CSMOFGV" Type="Folder">
 				<Item Name="_CSMOFGV.vi" Type="VI" URL="../_Support/CSMQ/_CSMOFGV.vi"/>
 				<Item Name="_CSMOFGVOPER.ctl" Type="VI" URL="../_Support/CSMQ/_CSMOFGVOPER.ctl"/>
@@ -142,7 +148,6 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="CSM - Broadcast Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Broadcast Status Change.vi"/>
 			<Item Name="CSM - Compact Multiple States.vi" Type="VI" URL="../AdvanceAPI/CSM - Compact Multiple States.vi"/>
 			<Item Name="CSM - Break Down Multiple States String.vi" Type="VI" URL="../AdvanceAPI/CSM - Break Down Multiple States String.vi"/>
-			<Item Name="CSM - Mark As Worker Module.vi" Type="VI" URL="../AdvanceAPI/CSM - Mark As Worker Module.vi"/>
 			<Item Name="CSM - Keywords.vi" Type="VI" URL="../AdvanceAPI/CSM - Keywords.vi"/>
 		</Item>
 		<Item Name="CSM-Support" Type="Folder">
@@ -162,6 +167,12 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="CSM - Request CSM to Post Message.vi" Type="VI" URL="../AdvanceAPI/CSM - Request CSM to Post Message.vi"/>
 			<Item Name="CSM - Request CSM to Broadcast Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Request CSM to Broadcast Status Change.vi"/>
 			<Item Name="CSM - Module Turns Invalid.vi" Type="VI" URL="../AdvanceAPI/CSM - Module Turns Invalid.vi"/>
+		</Item>
+		<Item Name="Worker Mode" Type="Folder">
+			<Item Name="CSM - Mark As Worker Module.vi" Type="VI" URL="../AdvanceAPI/CSM - Mark As Worker Module.vi"/>
+		</Item>
+		<Item Name="Chain Mode" Type="Folder">
+			<Item Name="CSM - Mark As Chain Module.vi" Type="VI" URL="../AdvanceAPI/CSM - Mark As Chain Module.vi"/>
 		</Item>
 	</Item>
 	<Item Name="Utility" Type="Folder">
