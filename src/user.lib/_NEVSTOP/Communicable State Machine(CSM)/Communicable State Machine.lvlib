@@ -36,11 +36,11 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="CSMObj" Type="Folder">
 				<Item Name="_CSMObj.ctl" Type="VI" URL="../_Support/CSMQ/_CSMObj.ctl"/>
 				<Item Name="_CSMObj-Data.ctl" Type="VI" URL="../_Support/CSMQ/_CSMObj-Data.ctl"/>
+				<Item Name="_CSMObj-ModeData.ctl" Type="VI" URL="../_Support/CSMQ/_CSMObj-ModeData.ctl"/>
 				<Item Name="_CSMObj-Obtain.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Obtain.vi"/>
 				<Item Name="_CSMObj-Unlock.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Unlock.vi"/>
 				<Item Name="_CSMObj-Lock State.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Lock State.vi"/>
 				<Item Name="_CSMObj-Message Check.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Message Check.vi"/>
-				<Item Name="_CSMObj-Generate Worker Agent.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Generate Worker Agent.vi"/>
 				<Item Name="_CSMObj-Clone Worker.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Clone Worker.vi"/>
 				<Item Name="_CSMObj-Create Status Event.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Create Status Event.vi"/>
 				<Item Name="_CSMObj-Destroy Status Event.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Destroy Status Event.vi"/>
