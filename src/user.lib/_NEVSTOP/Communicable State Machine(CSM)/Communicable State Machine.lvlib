@@ -37,24 +37,30 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 				<Item Name="_CSMObj.ctl" Type="VI" URL="../_Support/CSMQ/_CSMObj.ctl"/>
 				<Item Name="_CSMObj-Data.ctl" Type="VI" URL="../_Support/CSMQ/_CSMObj-Data.ctl"/>
 				<Item Name="_CSMObj-Obtain.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Obtain.vi"/>
-				<Item Name="_CSMObj-Clone Worker.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Clone Worker.vi"/>
 				<Item Name="_CSMObj-Unlock.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Unlock.vi"/>
 				<Item Name="_CSMObj-Lock State.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Lock State.vi"/>
 				<Item Name="_CSMObj-Message Check.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Message Check.vi"/>
+				<Item Name="_CSMObj-Generate Worker Agent.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Generate Worker Agent.vi"/>
+				<Item Name="_CSMObj-Clone Worker.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Clone Worker.vi"/>
+				<Item Name="_CSMObj-Create Status Event.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Create Status Event.vi"/>
+				<Item Name="_CSMObj-Destroy Status Event.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Destroy Status Event.vi"/>
 				<Item Name="_CSMObj-Log Error if in a Remote Session.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Log Error if in a Remote Session.vi"/>
 				<Item Name="_CSMObj-Enqueue Cross-Module Message.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Enqueue Cross-Module Message.vi"/>
 				<Item Name="_CSMObj-Release.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Release.vi"/>
 			</Item>
 			<Item Name="CSMOMgr" Type="Folder">
 				<Item Name="Def-CSMOMgr.ctl" Type="VI" URL="../_Support/Def-CSMOMgr.ctl"/>
-				<Item Name="CSMOMgr-Delete.vi" Type="VI" URL="../_Support/CSMOMgr/CSMOMgr-Delete.vi"/>
-				<Item Name="CSMOMgr-Duplication Check.vi" Type="VI" URL="../_Support/CSMOMgr/CSMOMgr-Duplication Check.vi"/>
+				<Item Name="CSMOMgr-Create CSMO.vi" Type="VI" URL="../_Support/CSMOMgr/CSMOMgr-Create CSMO.vi"/>
 				<Item Name="CSMOMgr-Get CSMO.vi" Type="VI" URL="../_Support/CSMOMgr/CSMOMgr-Get CSMO.vi"/>
+				<Item Name="CSMOMgr-Duplication Check.vi" Type="VI" URL="../_Support/CSMOMgr/CSMOMgr-Duplication Check.vi"/>
+				<Item Name="CSMOMgr-Update CSMO.vi" Type="VI" URL="../_Support/CSMOMgr/CSMOMgr-Update CSMO.vi"/>
+				<Item Name="CSMOMgr-Delete.vi" Type="VI" URL="../_Support/CSMOMgr/CSMOMgr-Delete.vi"/>
 			</Item>
 			<Item Name="CSMOFGV" Type="Folder">
 				<Item Name="_CSMOFGV.vi" Type="VI" URL="../_Support/CSMQ/_CSMOFGV.vi"/>
 				<Item Name="_CSMOFGVOPER.ctl" Type="VI" URL="../_Support/CSMQ/_CSMOFGVOPER.ctl"/>
 				<Item Name="_CSMOFGV Obtain.vi" Type="VI" URL="../_Support/CSMQ/_CSMOFGV Obtain.vi"/>
+				<Item Name="_CSMOFGV Get.vi" Type="VI" URL="../_Support/CSMQ/_CSMOFGV Get.vi"/>
 				<Item Name="_CSMOFGV Dequeue.vi" Type="VI" URL="../_Support/CSMQ/_CSMOFGV Dequeue.vi"/>
 				<Item Name="_CSMOFGV Release.vi" Type="VI" URL="../_Support/CSMQ/_CSMOFGV Release.vi"/>
 			</Item>
