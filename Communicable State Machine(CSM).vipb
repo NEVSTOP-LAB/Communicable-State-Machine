@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2023-11-14 18:29:03" Creator="liyao" Comments="" ID="8da2a6a458e6097acfef3096d0617dcf">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2023-11-16 10:15:54" Creator="liyao" Comments="" ID="ea11af822a8f327d6bbfb83241389fe6">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>0.0.0.3</Library_Version>
@@ -67,6 +67,7 @@
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
       <Release_Notes># Core
+[add] #144 add build-in chain of responsibility mode "$" as key words in module name.
 [add] add CSM - Break Down Multiple States String.vi
 [add] #184 add CSM - Keywords.vi for exposing keywords of CSM
 [add] #161 Response/Async Response carry the Error information from target CSM module
@@ -85,6 +86,7 @@
 [critical] Change Error Status Arguments to SafeString as Default in template
 [add] add a stub string constant which is for exiting sub-modules
 [update] #186 show "Init State("Macro: Initialize")" control for templates
+[update] init error shift resgister in front of loop
 [fix] #179 Show documentation case by default
 
 # documentation
