@@ -36,18 +36,35 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="CSMObj" Type="Folder">
 				<Item Name="_CSMObj.ctl" Type="VI" URL="../_Support/CSMQ/_CSMObj.ctl"/>
 				<Item Name="_CSMObj-Data.ctl" Type="VI" URL="../_Support/CSMQ/_CSMObj-Data.ctl"/>
+				<Item Name="_CSMObj-ModeData.ctl" Type="VI" URL="../_Support/CSMQ/_CSMObj-ModeData.ctl"/>
 				<Item Name="_CSMObj-Obtain.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Obtain.vi"/>
-				<Item Name="_CSMObj-Clone Worker.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Clone Worker.vi"/>
+				<Item Name="_CSMObj-Obtain Chain.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Obtain Chain.vi"/>
 				<Item Name="_CSMObj-Unlock.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Unlock.vi"/>
 				<Item Name="_CSMObj-Lock State.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Lock State.vi"/>
+				<Item Name="_CSMObj-Message Check.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Message Check.vi"/>
+				<Item Name="_CSMObj-Clone Worker.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Clone Worker.vi"/>
+				<Item Name="_CSMObj-Append Chain Node.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Append Chain Node.vi"/>
+				<Item Name="_CSMObj-Remove Chain Node.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Remove Chain Node.vi"/>
+				<Item Name="_CSMObj-Create Status Event.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Create Status Event.vi"/>
+				<Item Name="_CSMObj-Destroy Status Event.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Destroy Status Event.vi"/>
 				<Item Name="_CSMObj-Log Error if in a Remote Session.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Log Error if in a Remote Session.vi"/>
 				<Item Name="_CSMObj-Enqueue Cross-Module Message.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Enqueue Cross-Module Message.vi"/>
 				<Item Name="_CSMObj-Release.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Release.vi"/>
+				<Item Name="_Chain Mapping Map.vi" Type="VI" URL="../_Support/CSMQ/_Chain Mapping Map.vi"/>
+			</Item>
+			<Item Name="CSMOMgr" Type="Folder">
+				<Item Name="Def-CSMOMgr.ctl" Type="VI" URL="../_Support/Def-CSMOMgr.ctl"/>
+				<Item Name="CSMOMgr-Create CSMO.vi" Type="VI" URL="../_Support/CSMOMgr/CSMOMgr-Create CSMO.vi"/>
+				<Item Name="CSMOMgr-Get CSMO.vi" Type="VI" URL="../_Support/CSMOMgr/CSMOMgr-Get CSMO.vi"/>
+				<Item Name="CSMOMgr-Duplication Check.vi" Type="VI" URL="../_Support/CSMOMgr/CSMOMgr-Duplication Check.vi"/>
+				<Item Name="CSMOMgr-Update CSMO.vi" Type="VI" URL="../_Support/CSMOMgr/CSMOMgr-Update CSMO.vi"/>
+				<Item Name="CSMOMgr-Delete CSMO.vi" Type="VI" URL="../_Support/CSMOMgr/CSMOMgr-Delete CSMO.vi"/>
 			</Item>
 			<Item Name="CSMOFGV" Type="Folder">
 				<Item Name="_CSMOFGV.vi" Type="VI" URL="../_Support/CSMQ/_CSMOFGV.vi"/>
 				<Item Name="_CSMOFGVOPER.ctl" Type="VI" URL="../_Support/CSMQ/_CSMOFGVOPER.ctl"/>
 				<Item Name="_CSMOFGV Obtain.vi" Type="VI" URL="../_Support/CSMQ/_CSMOFGV Obtain.vi"/>
+				<Item Name="_CSMOFGV Get.vi" Type="VI" URL="../_Support/CSMQ/_CSMOFGV Get.vi"/>
 				<Item Name="_CSMOFGV Dequeue.vi" Type="VI" URL="../_Support/CSMQ/_CSMOFGV Dequeue.vi"/>
 				<Item Name="_CSMOFGV Release.vi" Type="VI" URL="../_Support/CSMQ/_CSMOFGV Release.vi"/>
 			</Item>
@@ -141,7 +158,7 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="CSM - Broadcast Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Broadcast Status Change.vi"/>
 			<Item Name="CSM - Compact Multiple States.vi" Type="VI" URL="../AdvanceAPI/CSM - Compact Multiple States.vi"/>
 			<Item Name="CSM - Break Down Multiple States String.vi" Type="VI" URL="../AdvanceAPI/CSM - Break Down Multiple States String.vi"/>
-			<Item Name="CSM - Mark As Worker Module.vi" Type="VI" URL="../AdvanceAPI/CSM - Mark As Worker Module.vi"/>
+			<Item Name="CSM - Keywords.vi" Type="VI" URL="../AdvanceAPI/CSM - Keywords.vi"/>
 		</Item>
 		<Item Name="CSM-Support" Type="Folder">
 			<Item Name="CSM - Get New State Notifier Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Get New State Notifier Event.vi"/>
@@ -150,7 +167,6 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="CSM - Unregister Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Unregister Status Change.vi"/>
 			<Item Name="CSM - List Modules.vi" Type="VI" URL="../AdvanceAPI/CSM - List Modules.vi"/>
 			<Item Name="CSM - Module Status.vi" Type="VI" URL="../AdvanceAPI/CSM - Module Status.vi"/>
-			<Item Name="CSM - Keywords.vi" Type="VI" URL="../AdvanceAPI/CSM - Keywords.vi"/>
 		</Item>
 		<Item Name="GlobalEvent" Type="Folder">
 			<Item Name="CSM - Global Log Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Global Log Event.vi"/>
@@ -161,6 +177,12 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="CSM - Request CSM to Post Message.vi" Type="VI" URL="../AdvanceAPI/CSM - Request CSM to Post Message.vi"/>
 			<Item Name="CSM - Request CSM to Broadcast Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Request CSM to Broadcast Status Change.vi"/>
 			<Item Name="CSM - Module Turns Invalid.vi" Type="VI" URL="../AdvanceAPI/CSM - Module Turns Invalid.vi"/>
+		</Item>
+		<Item Name="Worker Mode" Type="Folder">
+			<Item Name="CSM - Mark As Worker Module.vi" Type="VI" URL="../AdvanceAPI/CSM - Mark As Worker Module.vi"/>
+		</Item>
+		<Item Name="Chain Mode" Type="Folder">
+			<Item Name="CSM - Mark As Chain Module.vi" Type="VI" URL="../AdvanceAPI/CSM - Mark As Chain Module.vi"/>
 		</Item>
 	</Item>
 	<Item Name="Utility" Type="Folder">
