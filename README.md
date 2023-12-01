@@ -12,14 +12,14 @@ Communicable State Machine(CSM) is a LabVIEW application framework that builds u
 
 **CSM Templates**
 
-![image](/.doc/CSM%20With%20Event%20Structure%20Template.png)
+![image](/.doc/_img/CSM%20With%20Event%20Structure%20Template.png)
 
 Template Description:
 [EN](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/Template%20Description(EN).md) | [CN](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/Template%20Description(CN).md)
 
 **CSM API**
 
-![image](.doc/CSM%20Palette.png)
+![image](.doc/_img/CSM%20Palette.png)
 
 API Description:
 [EN](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/VI%20Description(EN).md) | [CN](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/VI%20Description(CN).md)
