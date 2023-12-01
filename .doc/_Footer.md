@@ -1,0 +1,1 @@
+JKI-SM Copyright ?2018 JKI - [http://jki.net/state-machine](http://jki.net/state-machine) CSM Copyright ?2023 NEVSTOP [https://github.com/NEVSTOP-LAB](https://github.com/NEVSTOP-LAB)
