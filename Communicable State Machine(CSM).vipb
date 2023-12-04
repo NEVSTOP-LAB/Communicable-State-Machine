@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2023-12-03 12:30:59" Creator="liyao" Comments="" ID="8a38658180402c9e0918dd3d5df9b3c7">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2023-12-04 09:31:34" Creator="liyao" Comments="" ID="d0f86d7c6127a155d661d5bfef04fd2f">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>0.0.0.3</Library_Version>
@@ -66,7 +66,10 @@
       <Copyright/>
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
-      <Release_Notes># Core
+      <Release_Notes>[Critical] #207 ¡°Target Busy Error¡± is absolete. Now a sync-call message will not generate "Target Busy Error" but waiting until timeout.
+
+# Core
+[fix] #197 172 fix the bug that timeout behavior of CSM - Send Message and Wait for Reply.vi
 [fix] #196 fix the bug that tatus of agent(worker Mode) could not trigger registered action
 
 # Installer 

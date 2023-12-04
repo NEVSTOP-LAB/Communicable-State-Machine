@@ -28,6 +28,8 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="CSM-Name to CSM-Mode.vi" Type="VI" URL="../_Support/Common/CSM-Name to CSM-Mode.vi"/>
 			<Item Name="Parse Next Single-line State.vi" Type="VI" URL="../_Support/Common/Parse Next Single-line State.vi"/>
 			<Item Name="Concatenate State with Arguments.vi" Type="VI" URL="../_Support/Common/Concatenate State with Arguments.vi"/>
+			<Item Name="Hex Str to U8 Data.vi" Type="VI" URL="../_Support/Common/Hex Str to U8 Data.vi"/>
+			<Item Name="U8 Data to Hex Str.vi" Type="VI" URL="../_Support/Common/U8 Data to Hex Str.vi"/>
 		</Item>
 		<Item Name="CSM-Core" Type="Folder">
 			<Item Name="Support" Type="Folder">

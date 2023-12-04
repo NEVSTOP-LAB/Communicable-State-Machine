@@ -51,6 +51,9 @@
 		<Item Name="project" Type="Folder" URL="../src/project">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
+		<Item Name=".doc" Type="Folder" URL="../.doc">
+			<Property Name="NI.DISK" Type="Bool">true</Property>
+		</Item>
 		<Item Name="API Tree.vi" Type="VI" URL="../src/API Tree.vi"/>
 		<Item Name="Communicable State Machine(CSM).vipb" Type="Document" URL="../Communicable State Machine(CSM).vipb"/>
 		<Item Name="Dependencies" Type="Dependencies">
