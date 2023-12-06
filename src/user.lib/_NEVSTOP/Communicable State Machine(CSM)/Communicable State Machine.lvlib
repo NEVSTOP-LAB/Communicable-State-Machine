@@ -174,6 +174,7 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 		<Item Name="GlobalEvent" Type="Folder">
 			<Item Name="CSM - Global Log Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Global Log Event.vi"/>
 			<Item Name="CSM - Generate User Global Log.vi" Type="VI" URL="../AdvanceAPI/CSM - Generate User Global Log.vi"/>
+			<Item Name="CSM - Global Log Error Handler.vi" Type="VI" URL="../AdvanceAPI/CSM - Global Log Error Handler.vi"/>
 			<Item Name="CSM - Destroy Global Log Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Destroy Global Log Event.vi"/>
 		</Item>
 		<Item Name="Side-Loop Support" Type="Folder">
