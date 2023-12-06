@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2023-12-04 09:31:34" Creator="liyao" Comments="" ID="d0f86d7c6127a155d661d5bfef04fd2f">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2023-12-06 13:13:45" Creator="liyao" Comments="" ID="a03567742a5e6305655c978a184088fa">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>0.0.0.3</Library_Version>
@@ -73,7 +73,10 @@
 [fix] #196 fix the bug that tatus of agent(worker Mode) could not trigger registered action
 
 # Installer 
-[improvement] #203 Change VIPM-Action to JKISM</Release_Notes>
+[improvement] #203 Change VIPM-Action to JKISM
+
+# Template
+[minor update] #211</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
