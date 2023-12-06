@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2023-12-06 13:36:45" Creator="liyao" Comments="" ID="a300f19d6739371048b601467c21c712">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2023-12-06 21:19:59" Creator="liyao" Comments="" ID="a4f54acff9abf486aa36e24f4402dc17">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>0.0.0.3</Library_Version>
@@ -74,6 +74,9 @@
 
 #GlobalLog
 [fix] #212 Remove some meaningless items in log
+
+#Utility
+[add] #209 add Build Exit Messages of CSMs.vi
 
 # Installer 
 [improvement] #203 Change VIPM-Action to JKISM
