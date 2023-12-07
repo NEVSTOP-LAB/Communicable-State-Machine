@@ -170,6 +170,8 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="CSM - Unregister Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Unregister Status Change.vi"/>
 			<Item Name="CSM - List Modules.vi" Type="VI" URL="../AdvanceAPI/CSM - List Modules.vi"/>
 			<Item Name="CSM - Module Status.vi" Type="VI" URL="../AdvanceAPI/CSM - Module Status.vi"/>
+			<Item Name="CSM - Wait for All Modules to be Alive.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait for All Modules to be Alive.vi"/>
+			<Item Name="CSM - Wait for All Modules to Exit.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait for All Modules to Exit.vi"/>
 		</Item>
 		<Item Name="GlobalEvent" Type="Folder">
 			<Item Name="CSM - Global Log Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Global Log Event.vi"/>
