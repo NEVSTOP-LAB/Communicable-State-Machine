@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2023-12-04 09:31:34" Creator="liyao" Comments="" ID="d0f86d7c6127a155d661d5bfef04fd2f">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2023-12-08 15:42:50" Creator="liyao" Comments="" ID="f1a3efaa1e58bab8addda6ae01d72816">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>0.0.0.3</Library_Version>
@@ -69,11 +69,25 @@
       <Release_Notes>[Critical] #207 ¡°Target Busy Error¡± is absolete. Now a sync-call message will not generate "Target Busy Error" but waiting until timeout.
 
 # Core
-[fix] #197 172 fix the bug that timeout behavior of CSM - Send Message and Wait for Reply.vi
+[add] #216 add two sync-up VI: CSM - Wait for All Modules to Exit.and CSM - Wait for All Modules to be Alive
+[fix] #219 fix bug that the cache system is ineffective when CSMs start/exit in the same microsecond
+[fix] #197 fix the bug that timeout behavior of CSM - Send Message and Wait for Reply.vi
 [fix] #196 fix the bug that tatus of agent(worker Mode) could not trigger registered action
+[fix] #215 now CSM - Module Turns Invalid (CSM) support Agent &amp; Chain
+[fix] #217 fix the bug that Single Character could not be used as module name
+
+#GlobalLog
+[add] #214 add Error Handler which logs error in global log if any.
+[fix] #212 Remove some meaningless items in log
+
+#Utility
+[add] #209 add Build Exit Messages of CSMs.vi
 
 # Installer 
-[improvement] #203 Change VIPM-Action to JKISM</Release_Notes>
+[improvement] #203 Change VIPM-Action to JKISM
+
+# Template
+[minor update] #211</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>

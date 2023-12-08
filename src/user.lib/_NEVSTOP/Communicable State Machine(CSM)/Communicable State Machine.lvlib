@@ -170,10 +170,13 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="CSM - Unregister Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Unregister Status Change.vi"/>
 			<Item Name="CSM - List Modules.vi" Type="VI" URL="../AdvanceAPI/CSM - List Modules.vi"/>
 			<Item Name="CSM - Module Status.vi" Type="VI" URL="../AdvanceAPI/CSM - Module Status.vi"/>
+			<Item Name="CSM - Wait for All Modules to be Alive.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait for All Modules to be Alive.vi"/>
+			<Item Name="CSM - Wait for All Modules to Exit.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait for All Modules to Exit.vi"/>
 		</Item>
 		<Item Name="GlobalEvent" Type="Folder">
 			<Item Name="CSM - Global Log Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Global Log Event.vi"/>
 			<Item Name="CSM - Generate User Global Log.vi" Type="VI" URL="../AdvanceAPI/CSM - Generate User Global Log.vi"/>
+			<Item Name="CSM - Global Log Error Handler.vi" Type="VI" URL="../AdvanceAPI/CSM - Global Log Error Handler.vi"/>
 			<Item Name="CSM - Destroy Global Log Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Destroy Global Log Event.vi"/>
 		</Item>
 		<Item Name="Side-Loop Support" Type="Folder">
@@ -196,6 +199,7 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 		<Item Name="Trim Both Whitespace.vi" Type="VI" URL="../Utility/Trim Both Whitespace.vi"/>
 		<Item Name="uuid.vi" Type="VI" URL="../Utility/uuid.vi"/>
 		<Item Name="Global Log To String.vi" Type="VI" URL="../Utility/Global Log To String.vi"/>
+		<Item Name="Build Exit Messages of CSMs.vi" Type="VI" URL="../Utility/Build Exit Messages of CSMs.vi"/>
 	</Item>
 	<Item Name="Parse State Queue++.vi" Type="VI" URL="../Parse State Queue++.vi"/>
 	<Item Name="Add State(s) to Queue By BOOL++.vi" Type="VI" URL="../Add State(s) to Queue By BOOL++.vi"/>
