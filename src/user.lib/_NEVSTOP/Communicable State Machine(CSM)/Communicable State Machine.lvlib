@@ -159,9 +159,6 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 				<Item Name="CSM - Synchronized Call.vi" Type="VI" URL="../AdvanceAPI/CSM - Synchronized Call.vi"/>
 			</Item>
 			<Item Name="CSM - Broadcast Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Broadcast Status Change.vi"/>
-			<Item Name="CSM - Compact Multiple States.vi" Type="VI" URL="../AdvanceAPI/CSM - Compact Multiple States.vi"/>
-			<Item Name="CSM - Break Down Multiple States String.vi" Type="VI" URL="../AdvanceAPI/CSM - Break Down Multiple States String.vi"/>
-			<Item Name="CSM - Keywords.vi" Type="VI" URL="../AdvanceAPI/CSM - Keywords.vi"/>
 		</Item>
 		<Item Name="CSM-Support" Type="Folder">
 			<Item Name="CSM - Get New State Notifier Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Get New State Notifier Event.vi"/>
@@ -190,6 +187,12 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 		<Item Name="Chain Mode" Type="Folder">
 			<Item Name="CSM - Mark As Chain Module.vi" Type="VI" URL="../AdvanceAPI/CSM - Mark As Chain Module.vi"/>
 		</Item>
+		<Item Name="HelperVIs" Type="Folder">
+			<Item Name="CSM - Build Exit Messages of CSMs.vi" Type="VI" URL="../AdvanceAPI/CSM - Build Exit Messages of CSMs.vi"/>
+			<Item Name="CSM - Compact Multiple States.vi" Type="VI" URL="../AdvanceAPI/CSM - Compact Multiple States.vi"/>
+			<Item Name="CSM - Break Down Multiple States String.vi" Type="VI" URL="../AdvanceAPI/CSM - Break Down Multiple States String.vi"/>
+			<Item Name="CSM - Keywords.vi" Type="VI" URL="../AdvanceAPI/CSM - Keywords.vi"/>
+		</Item>
 	</Item>
 	<Item Name="Utility" Type="Folder">
 		<Item Name="Timeout Selector.vi" Type="VI" URL="../Utility/Timeout Selector.vi"/>
@@ -199,7 +202,6 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 		<Item Name="Trim Both Whitespace.vi" Type="VI" URL="../Utility/Trim Both Whitespace.vi"/>
 		<Item Name="uuid.vi" Type="VI" URL="../Utility/uuid.vi"/>
 		<Item Name="Global Log To String.vi" Type="VI" URL="../Utility/Global Log To String.vi"/>
-		<Item Name="Build Exit Messages of CSMs.vi" Type="VI" URL="../Utility/Build Exit Messages of CSMs.vi"/>
 	</Item>
 	<Item Name="Parse State Queue++.vi" Type="VI" URL="../Parse State Queue++.vi"/>
 	<Item Name="Add State(s) to Queue By BOOL++.vi" Type="VI" URL="../Add State(s) to Queue By BOOL++.vi"/>
