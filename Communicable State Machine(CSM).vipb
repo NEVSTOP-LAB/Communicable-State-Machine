@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2023-12-18 10:27:12" Creator="liyao" Comments="" ID="54fde4ab4e425bb51973b6336904606e">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2023-12-18 13:48:37" Creator="liyao" Comments="" ID="ddc9acc4dc9a393e5e699a958e2ef857">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>0.0.0.3</Library_Version>
@@ -42,6 +42,7 @@
     - With Event Structure Template
     - No-Event Strcture Template
     - With Event Structure Template(Tiny)
+    - No-Event Structure Template(Tiny)
 
 2. Advance API for Module Managment
     - List Modules
@@ -54,9 +55,10 @@
     - Caller is CSM Scenario
     - Caller is Other Framework Scenario
     - Advance Examples
-        - CSM with Side Loop as a Module
-        - Action Workers Example
-        - Build-in Error Handler framework example
+    --- CSM with Side Loop as a Module
+    --- Action Workers Example
+    --- Responsibility Chain Example 
+    --- Build-in Error Handler framework example
 
 4. Tools
     - Localization API/Template Tool
@@ -69,8 +71,8 @@
       <Release_Notes># Core
 [Critical] #207 ¡°Target Busy Error¡± is absolete. Now a sync-call message will not generate "Target Busy Error" but waiting until timeout.
 [fix] #219 #225 #226 fix bug that the cache system is ineffective when CSMs start/exit in the same microsecond
-[fix] #197 fix the bug that timeout behavior of CSM - Send Message and Wait for Reply.vi
-[fix] #196 fix the bug that tatus of agent(worker Mode) could not trigger registered action
+[fix] #197 fix the bug of timeout behavior of CSM - Send Message and Wait for Reply.vi
+[fix] #196 fix the bug that status of agent(worker Mode) could not trigger registered action
 [fix] #215 now CSM - Module Turns Invalid (CSM) support Agent &amp; Chain
 [fix] #217 fix the bug that Single Character could not be used as module name
 
@@ -89,7 +91,9 @@
 [update] #228 show relative path in post-install action window
 
 # Template
-[minor update] #211 #223</Release_Notes>
+[add] add CSM - No-Event Structure Template - Tiny.vi
+[minor update] #211 #223
+</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -266,6 +270,7 @@
       <close_labview_before_install>true</close_labview_before_install>
       <restart_labview_after_install>false</restart_labview_after_install>
       <skip_mass_compile_after_install>false</skip_mass_compile_after_install>
+      <install_into_global_environment>false</install_into_global_environment>
     </LabVIEW>
     <VI_Docs>
       <Edit_VI_Description>true</Edit_VI_Description>
