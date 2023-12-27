@@ -17,14 +17,14 @@
 ![image](/.doc/_img/CSM%20Without%20Event%20Structure%20Template.png)
 
 CSM 代码模板介绍:
-[EN](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/Template%20Description(EN).md) | [CN](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/Template%20Description(CN).md)
+[English](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/Template%20Description(EN).md) | [中文](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/Template%20Description(CN).md)
 
 **CSM 函数面板**
 
 ![image](.doc/_img/CSM%20Palette.png)
 
 CSM API 介绍:
-[EN](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/VI%20Description(EN).md) | [CN](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/VI%20Description(CN).md)
+[English](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/VI%20Description(EN).md) | [中文](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/VI%20Description(CN).md)
 
 ## 创建基于 CSM 的可重用模块
 
