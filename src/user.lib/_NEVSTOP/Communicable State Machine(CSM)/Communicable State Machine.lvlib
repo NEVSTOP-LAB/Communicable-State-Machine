@@ -192,6 +192,8 @@ For information about JKISM++, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="CSM - Compact Multiple States.vi" Type="VI" URL="../AdvanceAPI/CSM - Compact Multiple States.vi"/>
 			<Item Name="CSM - Break Down Multiple States String.vi" Type="VI" URL="../AdvanceAPI/CSM - Break Down Multiple States String.vi"/>
 			<Item Name="CSM - Keywords.vi" Type="VI" URL="../AdvanceAPI/CSM - Keywords.vi"/>
+			<Item Name="CSM - Remove Duplicated Following Messages.vi" Type="VI" URL="../AdvanceAPI/CSM - Remove Duplicated Following Messages.vi"/>
+			<Item Name="CSM - Replace Substitution Marks in Messages.vi" Type="VI" URL="../AdvanceAPI/CSM - Replace Substitution Marks in Messages.vi"/>
 		</Item>
 	</Item>
 	<Item Name="Utility" Type="Folder">
