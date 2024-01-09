@@ -8,26 +8,25 @@ Template for building CSM Module without User Interface.
 
 <b>Inputs:</b>
 - <b>Name("" to use uuid)</b>: Module Name
-   - If Input is "", an uuid will be used for module name. The module is marked as stand-alone mode and will not be included in module list.
-   - If Input end with '#', the module will worked in worker mode. Modules with the same name will shared the same message queue. Any external message will be processed by one of the modules, depends on who is free.
-   - Otherwise, the input string will be used as module name, which should be unique in system. CSM will go to "Critical Error" state if duplicated module name is used in system.
+  - If Input is "", an uuid will be used for module name. The module is marked as stand-alone mode and will not be included in module list.
+  - If Input end with '#', the module will worked in worker mode. Modules with the same name will shared the same message queue. Any external message will be processed by one of the modules, depends on who is free.
+  - Otherwise, the input string will be used as module name, which should be unique in system. CSM will go to "Critical Error" state if duplicated module name is used in system.
 
 <b>Outputs:</b>
- - N/A
+- N/A
 
 ### CSM - With Event Structure Template.vi
 
 Template for building CSM Module with User Interface. Event Structure is included in template for processing user operations.
 
 <b>Inputs:</b>
- - <b>Name("" to use uuid)</b>: Module Name
-   - If Input is "", an uuid will be used for module name. The module is marked as stand-alone mode and will not be included in module list.
-   - Fi Input end with '#', the module will worked in worker mode. Modules with the same name will shared the same message queue. Any external message will be processed by one of the modules, depending who is free.
-   - Otherwise, the input string will be used as module name, which should be unique in system. CSM will go to "Critical Error" state if duplicated module name is used in system.
+- <b>Name("" to use uuid)</b>: Module Name
+  - If Input is "", an uuid will be used for module name. The module is marked as stand-alone mode and will not be included in module list.
+  - Fi Input end with '#', the module will worked in worker mode. Modules with the same name will shared the same message queue. Any external message will be processed by one of the modules, depending who is free.
+  - Otherwise, the input string will be used as module name, which should be unique in system. CSM will go to "Critical Error" state if duplicated module name is used in system.
 
 <b>Outputs:</b>
- - N/A
-
+- N/A
 
 ### CSM - With Event Structure Template - Tiny.vi
 
@@ -35,12 +34,12 @@ Template for building CSM Module without User Interface.
 
 <b>Inputs:</b>
 - <b>Name("" to use uuid)</b>: Module Name
-   - If Input is "", an uuid will be used for module name. The module is marked as stand-alone mode and will not be included in module list.
-   - Fi Input end with '#', the module will worked in worker mode. Modules with the same name will shared the same message queue. Any external message will be processed by one of the modules, depends on who is free.
-   - Otherwise, the input string will be used as module name, which should be unique in system. CSM will go to "Critical Error" state if duplicated module name is used in system.
+  - If Input is "", an uuid will be used for module name. The module is marked as stand-alone mode and will not be included in module list.
+  - Fi Input end with '#', the module will worked in worker mode. Modules with the same name will shared the same message queue. Any external message will be processed by one of the modules, depends on who is free.
+  - Otherwise, the input string will be used as module name, which should be unique in system. CSM will go to "Critical Error" state if duplicated module name is used in system.
 
 <b>Outputs:</b>
- - N/A
+- N/A
 
 ## Basics APIs
 
@@ -48,26 +47,24 @@ Template for building CSM Module without User Interface.
 
 Parses the CSM state queue and returns the current state that will execute next with the associated arguments.
 
-
 <b>Inputs:</b>
- - <b>State Queue</b>: The entire state queue is wired to this input. This should come from the main CSM shift register.
- - <b>Error In (no error)</b>: The error cluster from the CSM is wired to this input. If an error occures and appears on this input, the current state output returns the "Error Handler" state.
- - <b>Name("" to use uuid)</b>: Module Name
-   - If Input is "", an uuid will be used for module name. The module is marked as stand-alone mode and will not be included in module list.
-   - Fi Input end with '#', the module will worked in worker mode. Modules with the same name will shared the same message queue. Any external message will be processed by one of the modules, depends on who is free.
-   - Otherwise, the input string will be used as module name, which should be unique in system. CSM will go to "Critical Error" state if duplicated module name is used in system.
- - <b>Response Timeout(5000ms)</b>: The timeout of waiting for response of sync-call from outside.
- - <b>Dequeue Timeout(0ms)</b>: The timeout of checking CSM message queue.
- - <b>Response Arguments</b>: The response arguments from last state. It should come from the CSM shift register.
+- <b>State Queue</b>: The entire state queue is wired to this input. This should come from the main CSM shift register.
+- <b>Error In (no error)</b>: The error cluster from the CSM is wired to this input. If an error occurs and appears on this input, the current state output returns the "Error Handler" state.
+- <b>Name("" to use uuid)</b>: Module Name
+  - If Input is "", an uuid will be used for module name. The module is marked as stand-alone mode and will not be included in module list.
+  - Fi Input end with '#', the module will worked in worker mode. Modules with the same name will shared the same message queue. Any external message will be processed by one of the modules, depends on who is free.
+  - Otherwise, the input string will be used as module name, which should be unique in system. CSM will go to "Critical Error" state if duplicated module name is used in system.
+- <b>Response Timeout(5000ms)</b>: The timeout of waiting for response of sync-call from outside.
+- <b>Dequeue Timeout(0ms)</b>: The timeout of checking CSM message queue.
+- <b>Response Arguments</b>: The response arguments from last state. It should come from the CSM shift register.
 
 <b>Outputs:</b>
- - <b>Remaining States</b>:  Returns all the next states that should execute after the current state completes. These should be passed through the current state in the state machine. These can also be modified or augmented within the current state if necessary.
- - <b>Arguments</b>: Returns any argument(s) that may be used in the current state string. These arguments come after the ">>" characters. <b>Note:</b> The arguments variable must not contain any unprintable characters like linefeed or carriage return.
- - <b>Current State</b>: The state to be processed
- - <b>Name Used</b>: The actual name assigned to this CSM module
- - <b>Argument - State</b>: If any core error occurs, this is the source state name
- - <b>From Who</b>: If <b>Current State</b> is called by ouside, this is the source CSM module name.
-
+- <b>Remaining States</b>:  Returns all the next states that should execute after the current state completes. These should be passed through the current state in the state machine. These can also be modified or augmented within the current state if necessary.
+- <b>Arguments</b>: Returns any argument(s) that may be used in the current state string. These arguments come after the ">>" characters. <b>Note:</b> The arguments variable must not contain any unprintable characters like linefeed or carriage return.
+- <b>Current State</b>: The state to be processed
+- <b>Name Used</b>: The actual name assigned to this CSM module
+- <b>Argument - State</b>: If any core error occurs, this is the source state name
+- <b>From Who</b>: If <b>Current State</b> is called by outside, this is the source CSM module name.
 
 ### Build State String with Arguments++.vi
 
@@ -82,49 +79,46 @@ For local CSM, <b>Target Module ("")</b> is empty.
 
 For sending message to other CSM, suppose <b>Target Module ("")</b> is "Target"
 
-   - For Sync-Call:
+- For Sync-Call:
 
          If State = A and no argument, then <b>State with Arguments</b> = A -@target
          If State = A and Arguments = B then <b>State with Arguments</b> = A >> B -@target
 
-   - For Async-Call:
+- For Async-Call:
 
          If State = A and no argument, then <b>State with Arguments</b> = A ->target
          If State = A and Arguments = B then <b>State with Arguments</b> = A >> B ->target
 
 <b>Inputs:</b>
- - <b>State</b>: The State or message string
- - <b>Arguments ("")</b>: The argument for <b>State</b>
- - <b>Target Module ("")</b>: The target CSM module for the message to be sent to.
- - <b>Sync-Call(-@) T By Default/Async-Call(->) F</b>: For sync call, use "TRUE"; For Async call, use "FALSE"
+- <b>State</b>: The State or message string
+- <b>Arguments ("")</b>: The argument for <b>State</b>
+- <b>Target Module ("")</b>: The target CSM module for the message to be sent to.
+- <b>Sync-Call(-@) T By Default/Async-Call(->) F</b>: For sync call, use "TRUE"; For Async call, use "FALSE"
 
 <b>Outputs:</b>
- - <b>State with Arguments</b>: String stands for state with arguments
-
+- <b>State with Arguments</b>: String stands for state with arguments
 
 ### Build Message with Arguments++.vi
 
-Builds a message that contains arguments for CSM. This VI will parse "State with Arguments" for message type, message string, arguments and target module from input <b>State with Arguments</b> and replace corresponding parts in the message with input values. Different message type symbol(->|,->,-@) will be used in different Polymophic Vi instance.
+Builds a message that contains arguments for CSM. This VI will parse "State with Arguments" for message type, message string, arguments and target module from input <b>State with Arguments</b> and replace corresponding parts in the message with input values. Different message type symbol(->|,->,-@) will be used in different Polymorphic Vi instance.
 
-Polymophic Option:
- - Build Message with Arguments(Auto Check).vi
- - Build Asynchronous Message with Arguments.vi
- - Build No-Reply Asynchronous Message with Arguments.vi
- - Build Synchronous Message with Arguments.vi
-
-<b>Inputs:</b>
- - <b>State with Arguments</b>: Input Message which might contain Arguments or target Module
- - <b>Arguments ("")</b>: The arguments which will be used to replace arguments in <b>State with Arguments</b>. if empty, no arguments will be included in output strings.
- - <b>Target Module ("")</b>: The target which will be used to replace target in <b>State with Arguments</b>. if empty, target in <b>State with Arguments</b> will be used.
-
-<b>Outputs:</b>
- - <b>State with Arguments</b>: String stands for state with arguments
+Polymorphic Option:
+- Build Message with Arguments(Auto Check).vi
+- Build Asynchronous Message with Arguments.vi
+- Build No-Reply Asynchronous Message with Arguments.vi
+- Build Synchronous Message with Arguments.vi
 
 <b>Inputs:</b>
-
+- <b>State with Arguments</b>: Input Message which might contain Arguments or target Module
+- <b>Arguments ("")</b>: The arguments which will be used to replace arguments in <b>State with Arguments</b>. if empty, no arguments will be included in output strings.
+- <b>Target Module ("")</b>: The target which will be used to replace target in <b>State with Arguments</b>. if empty, target in <b>State with Arguments</b> will be used.
 
 <b>Outputs:</b>
+- <b>State with Arguments</b>: String stands for state with arguments
 
+<b>Inputs:</b>
+
+<b>Outputs:</b>
 
 #### Build Message with Arguments(Auto Check).vi
 
@@ -158,17 +152,16 @@ If <b>State with Arguments</b> input is "API: DoSth >> Arguments -@ Callee"
 Then result string is "API: DoSth >> NewArguments -@ Callee"
 
 <b>Inputs:</b>
- - <b>State with Arguments</b>: Input Message which might contain Arguments or target Module
- - <b>Arguments ("")</b>: The arguments which will be used to replace arguments in <b>State with Arguments</b>. if empty, no arguments will be included in output strings.
- - <b>Target Module ("")</b>: The target which will be used to replace target in <b>State with Arguments</b>. if empty, target in <b>State with Arguments</b> will be used.
+- <b>State with Arguments</b>: Input Message which might contain Arguments or target Module
+- <b>Arguments ("")</b>: The arguments which will be used to replace arguments in <b>State with Arguments</b>. if empty, no arguments will be included in output strings.
+- <b>Target Module ("")</b>: The target which will be used to replace target in <b>State with Arguments</b>. if empty, target in <b>State with Arguments</b> will be used.
 
 <b>Outputs:</b>
- - <b>State with Arguments</b>: String stands for state with arguments
-
+- <b>State with Arguments</b>: String stands for state with arguments
 
 #### Build Asynchronous Message with Arguments.vi
 
-Builds a message that contains arguments for CSM. This VI will parse "State with Arguments" for message string, arguments and target module from input <b>State with Arguments</b> and replace corresponding parts in the message with input values with asyc-message symobol "->" if <b>Target Module ("")</b> is specified.
+Builds a message that contains arguments for CSM. This VI will parse "State with Arguments" for message string, arguments and target module from input <b>State with Arguments</b> and replace corresponding parts in the message with input values with async-message symbol "->" if <b>Target Module ("")</b> is specified.
 
 <B>For Example:</B>
 
@@ -198,17 +191,16 @@ If <b>State with Arguments</b> input is "API: DoSth >> Arguments -@ Callee"
 Then result string is "API: DoSth >> NewArguments -> Callee". Message Type Symbol is replaced with "->".
 
 <b>Inputs:</b>
- - <b>State with Arguments</b>: Input Message which might contain Arguments or target Module
- - <b>Arguments ("")</b>: The arguments which will be used to replace arguments in <b>State with Arguments</b>. if empty, no arguments will be included in output strings.
- - <b>Target Module ("")</b>: The target which will be used to replace target in <b>State with Arguments</b>. if empty, target in <b>State with Arguments</b> will be used.
+- <b>State with Arguments</b>: Input Message which might contain Arguments or target Module
+- <b>Arguments ("")</b>: The arguments which will be used to replace arguments in <b>State with Arguments</b>. if empty, no arguments will be included in output strings.
+- <b>Target Module ("")</b>: The target which will be used to replace target in <b>State with Arguments</b>. if empty, target in <b>State with Arguments</b> will be used.
 
 <b>Outputs:</b>
- - <b>State with Arguments</b>: String stands for state with arguments
-
+- <b>State with Arguments</b>: String stands for state with arguments
 
 #### Build No-Reply Asynchronous Message with Arguments.vi
 
-Builds a message that contains arguments for CSM. This VI will parse "State with Arguments" for message string, arguments and target module from input <b>State with Arguments</b> and replace corresponding parts in the message with input values with No-Reply asyc-message symobol "->|" if <b>Target Module ("")</b> is specified.
+Builds a message that contains arguments for CSM. This VI will parse "State with Arguments" for message string, arguments and target module from input <b>State with Arguments</b> and replace corresponding parts in the message with input values with No-Reply async-message symbol "->|" if <b>Target Module ("")</b> is specified.
 
 <B>For Example:</B>
 
@@ -238,17 +230,16 @@ If <b>State with Arguments</b> input is "API: DoSth >> Arguments -@ Callee"
 Then result string is "API: DoSth >> NewArguments ->| Callee". Message Type Symbol is replaced with "->|".
 
 <b>Inputs:</b>
- - <b>State with Arguments</b>: Input Message which might contain Arguments or target Module
- - <b>Arguments ("")</b>: The arguments which will be used to replace arguments in <b>State with Arguments</b>. if empty, no arguments will be included in output strings.
- - <b>Target Module ("")</b>: The target which will be used to replace target in <b>State with Arguments</b>. if empty, target in <b>State with Arguments</b> will be used.
+- <b>State with Arguments</b>: Input Message which might contain Arguments or target Module
+- <b>Arguments ("")</b>: The arguments which will be used to replace arguments in <b>State with Arguments</b>. if empty, no arguments will be included in output strings.
+- <b>Target Module ("")</b>: The target which will be used to replace target in <b>State with Arguments</b>. if empty, target in <b>State with Arguments</b> will be used.
 
 <b>Outputs:</b>
- - <b>State with Arguments</b>: String stands for state with arguments
-
+- <b>State with Arguments</b>: String stands for state with arguments
 
 #### Build Synchronous Message with Arguments.vi
 
-Builds a message that contains arguments for CSM. This VI will parse "State with Arguments" for message string, arguments and target module from input <b>State with Arguments</b> and replace corresponding parts in the message with input values with sync-message symobol "-@" if <b>Target Module ("")</b> is specified.
+Builds a message that contains arguments for CSM. This VI will parse "State with Arguments" for message string, arguments and target module from input <b>State with Arguments</b> and replace corresponding parts in the message with input values with sync-message symbol "-@" if <b>Target Module ("")</b> is specified.
 
 <B>For Example:</B>
 
@@ -278,13 +269,12 @@ If <b>State with Arguments</b> input is "API: DoSth >> Arguments -@ Callee"
 Then result string is "API: DoSth >> NewArguments -@ Callee".
 
 <b>Inputs:</b>
- - <b>State with Arguments</b>: Input Message which might contain Arguments or target Module
- - <b>Arguments ("")</b>: The arguments which will be used to replace arguments in <b>State with Arguments</b>. if empty, no arguments will be included in output strings.
- - <b>Target Module ("")</b>: The target which will be used to replace target in <b>State with Arguments</b>. if empty, target in <b>State with Arguments</b> will be used.
+- <b>State with Arguments</b>: Input Message which might contain Arguments or target Module
+- <b>Arguments ("")</b>: The arguments which will be used to replace arguments in <b>State with Arguments</b>. if empty, no arguments will be included in output strings.
+- <b>Target Module ("")</b>: The target which will be used to replace target in <b>State with Arguments</b>. if empty, target in <b>State with Arguments</b> will be used.
 
 <b>Outputs:</b>
- - <b>State with Arguments</b>: String stands for state with arguments
-
+- <b>State with Arguments</b>: String stands for state with arguments
 
 #### Build Interrupt Status Message.vi
 
@@ -306,12 +296,11 @@ Then result string is "API: DoSth >> NewArguments -@ Callee"
 - <b>State with Arguments</b>: String stands for state with arguments
 
 <b>Inputs:</b>
- - <b>State with Arguments</b>:
- - <b>Arguments ("")</b>:
+- <b>State with Arguments</b>:
+- <b>Arguments ("")</b>:
 
 <b>Outputs:</b>
- - <b>State with Arguments</b>:
-
+- <b>State with Arguments</b>:
 
 #### Build Normal Status Message.vi
 
@@ -333,12 +322,11 @@ Then result string is "API: DoSth >> NewArguments -@ Callee"
 - <b>State with Arguments</b>: String stands for state with arguments
 
 <b>Inputs:</b>
- - <b>State with Arguments</b>:
- - <b>Arguments ("")</b>:
+- <b>State with Arguments</b>:
+- <b>Arguments ("")</b>:
 
 <b>Outputs:</b>
- - <b>State with Arguments</b>:
-
+- <b>State with Arguments</b>:
 
 #### Build Register Status Message.vi
 
@@ -351,14 +339,13 @@ DownloadFinished@Downloader  -><register> // response-module is current module. 
 DownloadFinished@* >> StartPlay@Player -><register> // Any Module's DownloadFinished is registered to Player's StartPlay state.
 
 <b>Inputs:</b>
- - <b>Source CSM Name (* as Default)</b>:
- - <b>CSM Name</b>:
- - <b>Status</b>:
- - <b>Response Message (if "", same as Source Message)</b>:
+- <b>Source CSM Name (* as Default)</b>:
+- <b>CSM Name</b>:
+- <b>Status</b>:
+- <b>Response Message (if "", same as Source Message)</b>:
 
 <b>Outputs:</b>
- - <b>State with Arguments</b>:
-
+- <b>State with Arguments</b>:
 
 #### Build Unregister Status Message.vi
 
@@ -369,172 +356,159 @@ DownloadFinished@Downloader >> StartPlay -><unregister>
 DownloadFinished@Downloader  -><unregister>
 
 <b>Inputs:</b>
- - <b>Source CSM Name (* as Default)</b>:
- - <b>CSM Name</b>:
- - <b>Status</b>:
+- <b>Source CSM Name (* as Default)</b>:
+- <b>CSM Name</b>:
+- <b>Status</b>:
 
 <b>Outputs:</b>
- - <b>State with Arguments</b>:
-
+- <b>State with Arguments</b>:
 
 ### Add State(s) to Queue By BOOL++.vi
 
 Depending on the High Priority and Bool input, this VI generates a concatenated state of TRUE/False and Remaining States. The High Priority input determines if the TRUE or False string concatenates before/after the remaining states. The Bool input determines whether TRUE or False string to be concatenated.
 
 <b>Inputs:</b>
- - <b>State Queue("")</b>: The entire state queue is wired to this input.
- - <b>TRUE("")</b>: State to insert when <b>Bool</b> is True.
- - <b>False("")</b>: State to insert when <b>Bool</b> is False.
- - <b>Bool</b>: Flag for choosing State String connected to TRUE terminal or False terminal.
- - <b>High Priority(FALSE)</b>: If True, The state will be inserted to the top of the <b>State Queue("")</b>. If False, It's appended to the tail.
+- <b>State Queue("")</b>: The entire state queue is wired to this input.
+- <b>TRUE("")</b>: State to insert when <b>Bool</b> is True.
+- <b>False("")</b>: State to insert when <b>Bool</b> is False.
+- <b>Bool</b>: Flag for choosing State String connected to TRUE terminal or False terminal.
+- <b>High Priority(FALSE)</b>: If True, The state will be inserted to the top of the <b>State Queue("")</b>. If False, It's appended to the tail.
 
 <b>Outputs:</b>
- - <b>State Queue Out</b>: Returns all the next states that should execute after the current state completes.
-
+- <b>State Queue Out</b>: Returns all the next states that should execute after the current state completes.
 
 #### Add State(s) to Queue By BOOL(Element).vi
 
 Depending on the High Priority and Bool input, this VI generates a concatenated state of TRUE/False and Remaining States. The High Priority input determines if the TRUE or False string concatenates before/after the remaining states. The Bool input determines whether TRUE or False string to be concatenated.
 
 <b>Inputs:</b>
- - <b>State Queue("")</b>: The entire state queue is wired to this input.
- - <b>TRUE("")</b>: State to insert when <b>Bool</b> is True.
- - <b>False("")</b>: State to insert when <b>Bool</b> is False.
- - <b>Bool</b>: Flag for choosing State String connected to TRUE terminal or False terminal.
- - <b>High Priority(FALSE)</b>: If True, The state will be inserted to the top of the <b>State Queue("")</b>. If False, It's appended to the tail.
+- <b>State Queue("")</b>: The entire state queue is wired to this input.
+- <b>TRUE("")</b>: State to insert when <b>Bool</b> is True.
+- <b>False("")</b>: State to insert when <b>Bool</b> is False.
+- <b>Bool</b>: Flag for choosing State String connected to TRUE terminal or False terminal.
+- <b>High Priority(FALSE)</b>: If True, The state will be inserted to the top of the <b>State Queue("")</b>. If False, It's appended to the tail.
 
 <b>Outputs:</b>
- - <b>State Queue Out</b>: Returns all the next states that should execute after the current state completes.
-
+- <b>State Queue Out</b>: Returns all the next states that should execute after the current state completes.
 
 #### Add State(s) to Queue By BOOL(Array Left).vi
 
 Depending on the High Priority and Bool input, this VI generates a concatenated state of TRUE/False and Remaining States. The High Priority input determines if the TRUE or False string concatenates before/after the remaining states. The Bool input determines whether TRUE or False string to be concatenated.
 
 <b>Inputs:</b>
- - <b>State Queue("")</b>: The entire state queue is wired to this input.
- - <b>TRUE("")</b>: State to insert when <b>Bool</b> is True.
- - <b>False("")</b>: State to insert when <b>Bool</b> is False.
- - <b>Bool</b>: Flag for choosing State String connected to TRUE terminal or False terminal.
- - <b>High Priority(FALSE)</b>: If True, The state will be inserted to the top of the <b>State Queue("")</b>. If False, It's appended to the tail.
+- <b>State Queue("")</b>: The entire state queue is wired to this input.
+- <b>TRUE("")</b>: State to insert when <b>Bool</b> is True.
+- <b>False("")</b>: State to insert when <b>Bool</b> is False.
+- <b>Bool</b>: Flag for choosing State String connected to TRUE terminal or False terminal.
+- <b>High Priority(FALSE)</b>: If True, The state will be inserted to the top of the <b>State Queue("")</b>. If False, It's appended to the tail.
 
 <b>Outputs:</b>
- - <b>State Queue Out</b>: Returns all the next states that should execute after the current state completes.
-
+- <b>State Queue Out</b>: Returns all the next states that should execute after the current state completes.
 
 #### Add State(s) to Queue By BOOL(Array Right).vi
 
 Depending on the High Priority and Bool input, this VI generates a concatenated state of TRUE/False and Remaining States. The High Priority input determines if the TRUE or False string concatenates before/after the remaining states. The Bool input determines whether TRUE or False string to be concatenated.
 
 <b>Inputs:</b>
- - <b>State Queue("")</b>: The entire state queue is wired to this input.
- - <b>TRUE("")</b>: State to insert when <b>Bool</b> is True.
- - <b>False("")</b>: State to insert when <b>Bool</b> is False.
- - <b>Bool</b>: Flag for choosing State String connected to TRUE terminal or False terminal.
- - <b>High Priority(FALSE)</b>: If True, The state will be inserted to the top of the <b>State Queue("")</b>. If False, It's appended to the tail.
+- <b>State Queue("")</b>: The entire state queue is wired to this input.
+- <b>TRUE("")</b>: State to insert when <b>Bool</b> is True.
+- <b>False("")</b>: State to insert when <b>Bool</b> is False.
+- <b>Bool</b>: Flag for choosing State String connected to TRUE terminal or False terminal.
+- <b>High Priority(FALSE)</b>: If True, The state will be inserted to the top of the <b>State Queue("")</b>. If False, It's appended to the tail.
 
 <b>Outputs:</b>
- - <b>State Queue Out</b>: Returns all the next states that should execute after the current state completes.
-
+- <b>State Queue Out</b>: Returns all the next states that should execute after the current state completes.
 
 #### Add State(s) to Queue By BOOL(Array All).vi
 
 Depending on the High Priority and Bool input, this VI generates a concatenated state of TRUE/False and Remaining States. The High Priority input determines if the TRUE or False string concatenates before/after the remaining states. The Bool input determines whether TRUE or False string to be concatenated.
 
 <b>Inputs:</b>
- - <b>State Queue("")</b>: The entire state queue is wired to this input.
- - <b>TRUE("")</b>: State to insert when <b>Bool</b> is True.
- - <b>False("")</b>: State to insert when <b>Bool</b> is False.
- - <b>Bool</b>: Flag for choosing State String connected to TRUE terminal or False terminal.
- - <b>High Priority(FALSE)</b>: If True, The state will be inserted to the top of the <b>State Queue("")</b>. If False, It's appended to the tail.
+- <b>State Queue("")</b>: The entire state queue is wired to this input.
+- <b>TRUE("")</b>: State to insert when <b>Bool</b> is True.
+- <b>False("")</b>: State to insert when <b>Bool</b> is False.
+- <b>Bool</b>: Flag for choosing State String connected to TRUE terminal or False terminal.
+- <b>High Priority(FALSE)</b>: If True, The state will be inserted to the top of the <b>State Queue("")</b>. If False, It's appended to the tail.
 
 <b>Outputs:</b>
- - <b>State Queue Out</b>: Returns all the next states that should execute after the current state completes.
-
+- <b>State Queue Out</b>: Returns all the next states that should execute after the current state completes.
 
 ### CSM - Broadcast Status Change.vi
 
 Broadcast the status change to system. The CSM Module who registered the status will receive the status change.
 
 <b>Inputs:</b>
- - <b>Status with Arguments</b>: Status with arguments to publish
- - <b>State Queue("")</b>: The entire state queue is wired to this input.
- - <b>Broadcast(T)</b>: Trigger for broadcast or not.
+- <b>Status with Arguments</b>: Status with arguments to publish
+- <b>State Queue("")</b>: The entire state queue is wired to this input.
+- <b>Broadcast(T)</b>: Trigger for broadcast or not.
 
 <b>Outputs:</b>
- - <b>Remaining States</b>: Returns all the next states that should execute after the current state completes.
+- <b>Remaining States</b>: Returns all the next states that should execute after the current state completes.
 
 ## Arguments
-
 
 ### CSM - Make String Arguments Safe.vi
 
 '->','->|','-@','-&','<-" are key words in CSM, which should not be included in arguments. You can use this vi to make your arguments safe.
 
 <b>Inputs:</b>
- - <b>Argurment String</b>: Arguments might include '->','->|','-@','-&','<-".
+- <b>Argument String</b>: Arguments might include '->','->|','-@','-&','<-".
 
 <b>Outputs:</b>
- - <b>Safe Argurment String</b>: Arguments safe for CSM.
-
-
+- <b>Safe Argument String</b>: Arguments safe for CSM.
 
 ### CSM - Revert Arguments-Safe String.vi
 
 '->','->|','-@','-&','<-" are key words in CSM, which should not be included in arguments. You can use <b>CSM Make String Arguments Safe.vi</b> to make your arguments safe. This VI is used for converting the safe arguments back to the origin string.
 
 <b>Inputs:</b>
- - <b>Safe Argurment String</b>: Arguments safe for CSM.
+- <b>Safe Argument String</b>: Arguments safe for CSM.
 
 <b>Outputs:</b>
- - <b>Origin Argurment String</b>: Origin arguments might include '->','->|','-@','-&','<-".
+- <b>Origin Argument String</b>: Origin arguments might include '->','->|','-@','-&','<-".
 
 ### CSM - Convert Data to HexStr.vi
 
 Convert complex argument(variant) to hex string, which could be safely used as state argument without broking the string queue logic.
 
 <b>Inputs:</b>
- - <b>Variant</b>: Complex data in variant format.
+- <b>Variant</b>: Complex data in variant format.
 
 <b>Outputs:</b>
- - <b>HEX String (0-9,A-F)</b>: Hex String, which contains no invisible string following CSM's rule
+- <b>HEX String (0-9,A-F)</b>: Hex String, which contains no invisible string following CSM's rule
 
 ### CSM - Convert HexStr to Data.vi
 
 Convert hex string arguments back to variant.
 
 <b>Inputs:</b>
- - <b>HEX String</b>: Hex String, which contains no invisible string following CSM's rule
+- <b>HEX String</b>: Hex String, which contains no invisible string following CSM's rule
 
 <b>Outputs:</b>
- - <b>Variant</b>: Complex data in variant format.
- - <b>error out</b>: Error output
-
+- <b>Variant</b>: Complex data in variant format.
+- <b>error out</b>: Error output
 
 ## Advance APIs
-
 
 ### CSM - Start Async Call.vi
 
 VI snippet for dropping start async call template code from LabVIEW Quick Drop.
 
 <b>Inputs:</b>
- - N/A
+- N/A
 
 <b>Outputs:</b>
- - N/A
-
+- N/A
 
 ### CSM - Synchronized Call.vi
 
 VI snippet for dropping sync call template code from LabVIEW Quick Drop.
 
 <b>Inputs:</b>
- - N/A
+- N/A
  -
 <b>Outputs:</b>
  - N/A
-
 
 ### CSM - Mark As Worker Module.vi
 
@@ -546,7 +520,6 @@ Append '#' to CSM Name, to mark this module is a worker, who shares the same mes
 <b>Outputs:</b>
  - <b>CSM Name(marked as worker)</b>: CSM module name with '#' appended.
 
-
 ### CSM - Compact Multiple States.vi
 
 Compact multiple states to a single string for input.
@@ -557,7 +530,6 @@ Compact multiple states to a single string for input.
 <b>Outputs:</b>
  - <b>States</b>: State String contains all the input state(s)
 
-
 ### CSM - Check If Module Exists.vi
 
 Check if module with specified name exists.
@@ -567,10 +539,9 @@ Check if module with specified name exists.
  - <b>Error in</b>: Error cluster
 
 <b>Outputs:</b>
- - <b>Exist?</b>: Return True if spcified module exists.
+ - <b>Exist?</b>: Return True if specified module exists.
  - <b>CSM Name(dup)</b>: Return <b>CSM Name</b>
  - <b>Error out</b>: Error cluster
-
 
 ### CSM - List Modules.vi
 
@@ -599,14 +570,13 @@ Get the CSM+ Module Status
  - <b>CSM Name(dup)</b>: Return <b>CSM Name</b>
  - <b>Error out</b>: Error cluster
 
-
 ### CSM - Register Status Change.vi
 
 Register for notification of other CSM Module's status change. If "Response Message" is not connected or "" is the input, the same state name will be used for acting message.
 
 <b>Inputs:</b>
  - <b>CSM Name</b>: CSM Module name.
- - <b>Source CSM Name (* as Default)</b>: CSM who generates the status. You can use '*' for all modules generated the same <b>Status</b>
+ - <b>Source CSM Name ('*' as Default)</b>: CSM who generates the status. You can use '*' for all modules generated the same <b>Status</b>
  - <b>Status</b>: The status string
  - <b>Response Message (if "", same as Source Message)</b>: After registered, If status change, this message will be received.
  - <b>Priority(T:As Status,F:As Interrupt)</b>: The Response Message will be inserted to the front of state queue if it's False, otherwise it wil be append to the tail.
@@ -615,7 +585,6 @@ Register for notification of other CSM Module's status change. If "Response Mess
 <b>Outputs:</b>
  - <b>CSM Name(dup)</b>: Return <b>CSM Name</b>
  - <b>Error out</b>: Error cluster
-
 
 ### CSM - Unregister Status Change.vi
 
@@ -631,7 +600,6 @@ Unregister the notification of other CSM Module's status change.
  - <b>CSM Name(dup)</b>: return <b>CSM Name</b>
  - <b>Error out</b>: Error cluster
 
-
 ### CSM - Get New State Notifier Event.vi
 
 <b>Inputs:</b>
@@ -641,7 +609,6 @@ Unregister the notification of other CSM Module's status change.
 <b>Outputs:</b>
  - <b>New State Notifier Event</b>: User event to break CSM module from waiting in event structure when message is received.
  - <b>Error out</b>: Error cluster
-
 
 ## Non-CSM Support
 
@@ -658,7 +625,6 @@ Post a message to CSM specified.
 <b>Outputs:</b>
  - <b>error out</b>: Error cluster
 
-
 ### CSM - Send Message and Wait for Reply.vi
 
 Send a message to CSM specified and wait for the reply with timeout.
@@ -673,7 +639,6 @@ Send a message to CSM specified and wait for the reply with timeout.
 <b>Outputs:</b>
  - <b>Arguments</b>: Response returned.
  - <b>error out</b>: Error cluster
-
 
 ### CSM - Status Change Event.vi
 
@@ -690,7 +655,6 @@ Obtain CSM Global Log Event Reference.
  - <b>Error out</b>:
  - <b>Status Change Event</b>:
 
-
 ### CSM - Destroy Status Change Event.vi
 
 Release CSM Global Log Event Reference.
@@ -705,9 +669,7 @@ Release CSM Global Log Event Reference.
 <b>Outputs:</b>
  - <b>Error out</b>:
 
-
 ## Side-Loop Support
-
 
 ### CSM - Request CSM to Post Message.vi
 
@@ -737,7 +699,6 @@ Request CSM to publish status change to CSM specified. This is usually used in s
 <b>Outputs:</b>
  - <b>error out</b>: Error cluster
 
-
 ### CSM - Module Turns Invalid.vi
 
 Check if CSM module is not valid any more. This is usually used in sub-loops with a CSM for acting as a holistic module. It's used for exit condition of the sub-loops.
@@ -747,8 +708,6 @@ Check if CSM module is not valid any more. This is usually used in sub-loops wit
 
 <b>Outputs:</b>
  - <b>Turn Invalid(Exit)?</b>: CSM Module turns invalid
-
-
 
 ## Global Log Event
 
@@ -763,7 +722,6 @@ Obtain CSM Global Log Event Reference.
  - <b>CSM Global Log Event</b>: User event reference for CSM global log.
  - <b>Error out</b>: Error cluster
 
-
 ### CSM - Destroy Global Log Event.vi
 
 Release CSM Global Log Event Reference.
@@ -775,10 +733,7 @@ Release CSM Global Log Event Reference.
 <b>Outputs:</b>
  - <b>Error out</b>: Error cluster
 
-
 ### CSM - Generate User Global Log.vi
-
-
 
 <b>Inputs:</b>
  - <b>Error in</b>:
@@ -790,14 +745,11 @@ Release CSM Global Log Event Reference.
 <b>Outputs:</b>
  - <b>error out</b>:
 
-
-
 ## Utility VIs
-
 
 ### Build Error Cluster.vi
 
-Creates an error cluster, building the source string from the calling VIs call chain in a standard LabVIEW fashon.  Builds source string as:
+Creates an error cluster, building the source string from the calling VIs call chain in a standard LabVIEW fashion.  Builds source string as:
 "<B>Calling VI</B> in <B>Calling VI's Caller</B>-><B>Calling VI's Caller's Caller</B>->etc...->etc..."
 Optional 'String to Prepend to source ("")' string input is used to add extra descriptive info to the source string.  This string, if present, will be enclosed in parenthesis and prepended to the source string.
 
@@ -807,7 +759,6 @@ Optional 'String to Prepend to source ("")' string input is used to add extra de
 
 <b>Outputs:</b>
  - <b>error out</b>: Error cluster
-
 
 ### Build Internal State String.vi
 
@@ -822,7 +773,6 @@ Build a state string that contains arguments for the CSM.
 <b>Outputs:</b>
  - <b>State with Arguments</b>: String stands for state with arguments
 
-
 ### String History Cacher.vi
 
 Return the <b>String Cache</b> containing <b>length</b> number of characters, including the new input <b>String</b>.
@@ -835,7 +785,6 @@ Return the <b>String Cache</b> containing <b>length</b> number of characters, in
 <b>Outputs:</b>
  - <b>String Cache</b>: The history string
 
-
 ### Timeout Selector.vi
 
 Used in User Event Template VI.
@@ -847,17 +796,15 @@ Used in User Event Template VI.
 <b>Outputs:</b>
  - <b>Timeout</b>: timeout will be used.
 
-
 ### Trim Both Whitespace.vi
 
-Removes all ASCII white space (spaces, tabs, carriage returns, and linefeeds) from the beginning, end, or both ends of <B>string</B>. The Trim Whitespace VI does not remove double byte characters.
+Removes all ASCII white space (spaces, tabs, carriage returns, and linefeed) from the beginning, end, or both ends of <B>string</B>. The Trim Whitespace VI does not remove double byte characters.
 
 <b>Inputs:</b>
  - <b>string</b>
 
 <b>Outputs:</b>
  - <b>trimmed string</b>
-
 
 ### uuid.vi
 
@@ -873,13 +820,11 @@ Generate <b>Universally Unique Identifier(UUID)</b> according to the standard me
 <b>Outputs:</b>
  - <b>UUID</b>: Generated UUID
 
-
 ### CSM - Broadcast Message Type.ctl
 
 Broadcast Message Type definition.
 - <b>Interrupt:</b> High Priority
 - <b>Status:</b> Normal Priority
-
 
 ### CSM - Message Type.ctl
 
@@ -888,9 +833,7 @@ Message Type definition.
 - <b>Async without Reply:</b> Async Message without reply (->|)
 - <b>Sync:</b> Sync Message (-@)
 
-
 ### Global Log To String.vi
-
 
 <b>Inputs:</b>
  - <b>Log</b>:

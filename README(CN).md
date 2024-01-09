@@ -7,19 +7,19 @@
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![GitHub all releases](https://img.shields.io/github/downloads/NEVSTOP-LAB/Communicable-State-Machine/total)](https://github.com/NEVSTOP-LAB/Communicable-State-Machine/releases)
 
-可通信状态机（CSM）是一个基于JKI状态机（JKISM）的LabVIEW应用框架。它遵循 JKISM 的模式，扩展了关键词以描述模块之间的消息通信，包括同步消息、异步消息、状态订阅/取消订阅等概念-这些是创建可重用代码模块所必需的要素。请访问CSM Wiki页面了解更多信息: https://github.com/NEVSTOP-LAB/Communicable-State-Machine/wiki
+可通信状态机（CSM）是一个基于JKI状态机（JKISM）的LabVIEW应用框架。它遵循 JKISM 的模式，扩展了关键词以描述模块之间的消息通信，包括同步消息、异步消息、状态订阅/取消订阅等概念-这些是创建可重用代码模块所必需的要素。请访问CSM Wiki页面了解更多信息: <https://github.com/NEVSTOP-LAB/Communicable-State-Machine/wiki>
 
-- 关于 JKI State Machine(JKISM) 更多信息, 请访问: http://jki.net/state-machine/
-- 关于 Communicable State Machine(CSM) 更多信息, 请访问: https://github.com/NEVSTOP-LAB
+- 关于 JKI State Machine(JKISM) 更多信息, 请访问: <http://jki.net/state-machine/>
+- 关于 Communicable State Machine(CSM) 更多信息, 请访问: <https://github.com/NEVSTOP-LAB>
 
-**CSM 代码模板**
+_**CSM 代码模板**_
 
 ![image](/.doc/_img/CSM%20Without%20Event%20Structure%20Template.png)
 
 CSM 代码模板介绍:
 [English](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/Template%20Description(EN).md) | [中文](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/Template%20Description(CN).md)
 
-**CSM 函数面板**
+_**CSM 函数面板**_
 
 ![image](.doc/_img/CSM%20Palette.png)
 
@@ -32,14 +32,13 @@ CSM API 介绍:
 
  在CSM模块中，所有 case 分支都可以被视为调用的消息，但建议使用 API 分组作为外部接口。当发送状态更新时，通过发送 Status 或 Interrupt Status 来通知外部模块内部的状态变化。
 
-可参考范例 ***/Example/1. Create a reusable module***.
-
+可参考范例 _**/Example/1. Create a reusable module**_.
 
 ## 使用 CSM 作为应用框架场景
 
 在这种情况下，模块之间的通信完全依赖于消息字符串队列操作，你可以使用 **Build Message with Arguments++.vi** 函数生成一个 Message 字符串，或者，如果你熟悉规则，你可以直接使用编写用于描述通讯的字符串。
 
-```
+``` c
 #CSM 状态语法
     // 本地消息示例
     DoSth: DoA >> 参数
@@ -72,13 +71,13 @@ CSM API 介绍:
 
 ```
 
-可参考范例 ***/Example/2. Caller is CSM Scenario***.
+可参考范例 _**/Example/2. Caller is CSM Scenario**_.
 
 ## Reuse CSM Module in another Application Framework
 
 在这种情况下，模块之间的通信完全依赖于Post/Send Message API和模块状态更改用户事件。
 
-可参考范例 ***/Example/3. Caller is Other Framework Scenario***.
+可参考范例 _**/Example/3. Caller is Other Framework Scenario**_.
 
 ## CSM Arguments Support
 
