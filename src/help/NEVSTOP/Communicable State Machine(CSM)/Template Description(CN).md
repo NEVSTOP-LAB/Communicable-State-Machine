@@ -2,10 +2,10 @@
 
 ## README FIRST
 
-Communicable State Machine(CSM) 是一个基于 JKI State Machine（JKISM）扩展的 LabVIEW 应用框架. 它遵循 JKISM 的模式, 并扩展了关键词, 用于描述模块之间的消息通信, 包括同步消息、异步消息、状态订阅/取消订阅等概念, 这些是创建可重用代码模块的基本要素. 更多信息, 请访问 CSM 的维基页面: <https://github.com/NEVSTOP-LAB/JKI-State-Machine-Plus-Plus/wiki>
+Communicable State Machine(CSM) 是一个基于 JKI State Machine（JKISM）扩展的 LabVIEW 应用框架. 它遵循 JKISM 的模式, 并扩展了关键词, 用于描述模块之间的消息通信, 包括同步消息、异步消息、状态订阅/取消订阅等概念, 这些是创建可重用代码模块的基本要素. 更多信息, 请访问 CSM 的维基页面: <https://nevstop-lab.github.io/CSM-Wiki/>
 
 - 有关 JKI State Machine 的使用说明, 请访问: <http://jki.net/state-machine/>
-- 有关 CSM 的信息, 请访问: <https://github.com/NEVSTOP-LAB>
+- 有关 NEVSTOP-LAB 的信息, 请访问: <https://github.com/NEVSTOP-LAB>
 
 ## State Syntax
 
