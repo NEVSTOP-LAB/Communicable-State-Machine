@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-01-09 18:37:38" Creator="liyao" Comments="" ID="09c37f7197ebd22da4926644e804c7d3">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-01-17 10:57:25" Creator="liyao" Comments="" ID="b8baf8444632d9bcd9e696faf0d5f100">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>0.0.0.3</Library_Version>
@@ -70,6 +70,7 @@
       <URL>https://github.com/NEVSTOP-LAB</URL>
       <Release_Notes>#Arguments
 [fix] Fix the error input of "CSM - Convert HexStr to Data.vi"
+[fix] minor fix #237
 
 #Utility
 [add] Add "CSM - Remove Duplicated Following Messages.vi", to remove duplicated message
