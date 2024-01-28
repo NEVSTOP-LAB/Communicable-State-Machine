@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-01-28 11:54:55" Creator="liyao" Comments="" ID="af88db32fd3e6b60bf5d56ad68b4d614">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-01-28 17:50:49" Creator="liyao" Comments="" ID="fa350d3d40b7e3417e5032df99c78d7d">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>0.0.0.3</Library_Version>
@@ -77,6 +77,7 @@
 [fix] minor fix #237
 
 #Global Event
+[add] #240 add "Module Created" and "Module Destroyed" log to global log system
 [fix] #238 Align global event ref lifecycle with a background thread, rather than the caller VI
 
 #Utility
