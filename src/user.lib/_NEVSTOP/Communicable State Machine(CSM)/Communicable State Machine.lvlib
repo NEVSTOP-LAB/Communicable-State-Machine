@@ -90,7 +90,9 @@
 			<Item Name="_Broadcast Item Key.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/_Broadcast Item Key.vi"/>
 		</Item>
 		<Item Name="GlobalEvent" Type="Folder">
+			<Item Name="GEvt-RequestDef.ctl" Type="VI" URL="../_Support/GlobalEvent/GEvt-RequestDef.ctl"/>
 			<Item Name="FGV-GlobalEventRef.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GlobalEventRef.vi"/>
+			<Item Name="GEvt-BackgroundThread.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-BackgroundThread.vi"/>
 			<Item Name="GEvt-Generate Complete Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate Complete Log.vi"/>
 			<Item Name="GEvt-Generate State Change Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate State Change Log.vi"/>
 			<Item Name="GEvt-Generate Remaining States Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate Remaining States Log.vi"/>
@@ -98,6 +100,8 @@
 			<Item Name="GEvt-Generate Interrupt Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate Interrupt Log.vi"/>
 			<Item Name="GEvt-Generate Register Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate Register Log.vi"/>
 			<Item Name="GEvt-Generate Unregister Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate Unregister Log.vi"/>
+			<Item Name="GEvt-Generate Module Created Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate Module Created Log.vi"/>
+			<Item Name="GEvt-Generate Module Destroyed Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate Module Destroyed Log.vi"/>
 		</Item>
 		<Item Name="Typedef" Type="Folder">
 			<Item Name="_Cross CSM State Data.ctl" Type="VI" URL="../_Support/Typedef/_Cross CSM State Data.ctl"/>
