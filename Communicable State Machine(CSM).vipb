@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-01-26 15:51:37" Creator="liyao" Comments="" ID="271a81e86be1301e8864ae12430f9781">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-01-28 11:54:55" Creator="liyao" Comments="" ID="af88db32fd3e6b60bf5d56ad68b4d614">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>0.0.0.3</Library_Version>
@@ -75,6 +75,9 @@
 #Arguments
 [fix] Fix the error input of "CSM - Convert HexStr to Data.vi"
 [fix] minor fix #237
+
+#Global Event
+[fix] #238 Align global event ref lifecycle with a background thread, rather than the caller VI
 
 #Utility
 [add] Add "CSM - Remove Duplicated Following Messages.vi", to remove duplicated message

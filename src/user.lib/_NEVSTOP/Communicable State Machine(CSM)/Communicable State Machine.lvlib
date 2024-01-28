@@ -98,6 +98,7 @@
 			<Item Name="GEvt-Generate Interrupt Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate Interrupt Log.vi"/>
 			<Item Name="GEvt-Generate Register Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate Register Log.vi"/>
 			<Item Name="GEvt-Generate Unregister Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate Unregister Log.vi"/>
+			<Item Name="GEvt-BackgroundThread.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-BackgroundThread.vi"/>
 		</Item>
 		<Item Name="Typedef" Type="Folder">
 			<Item Name="_Cross CSM State Data.ctl" Type="VI" URL="../_Support/Typedef/_Cross CSM State Data.ctl"/>
