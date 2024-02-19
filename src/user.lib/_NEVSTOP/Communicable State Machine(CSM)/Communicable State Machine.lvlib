@@ -192,6 +192,7 @@
 			<Item Name="CSM - Mark As Chain Module.vi" Type="VI" URL="../AdvanceAPI/CSM - Mark As Chain Module.vi"/>
 		</Item>
 		<Item Name="HelperVIs" Type="Folder">
+			<Item Name="CSM - Filter Messages to Non-Existing Modules.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter Messages to Non-Existing Modules.vi"/>
 			<Item Name="CSM - Build Exit Messages of CSMs.vi" Type="VI" URL="../AdvanceAPI/CSM - Build Exit Messages of CSMs.vi"/>
 			<Item Name="CSM - Compact Multiple States.vi" Type="VI" URL="../AdvanceAPI/CSM - Compact Multiple States.vi"/>
 			<Item Name="CSM - Break Down Multiple States String.vi" Type="VI" URL="../AdvanceAPI/CSM - Break Down Multiple States String.vi"/>
