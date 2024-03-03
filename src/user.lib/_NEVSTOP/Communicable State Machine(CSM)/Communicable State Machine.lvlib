@@ -92,7 +92,9 @@
 		<Item Name="GlobalEvent" Type="Folder">
 			<Item Name="GEvt-RequestDef.ctl" Type="VI" URL="../_Support/GlobalEvent/GEvt-RequestDef.ctl"/>
 			<Item Name="FGV-GlobalEventRef.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GlobalEventRef.vi"/>
+			<Item Name="Gevt-ThreadQueueName.vi" Type="VI" URL="../_Support/GlobalEvent/Gevt-ThreadQueueName.vi"/>
 			<Item Name="GEvt-BackgroundThread.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-BackgroundThread.vi"/>
+			<Item Name="GEvt-WatchdogThread.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-WatchdogThread.vi"/>
 			<Item Name="GEvt-Generate Complete Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate Complete Log.vi"/>
 			<Item Name="GEvt-Generate State Change Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate State Change Log.vi"/>
 			<Item Name="GEvt-Generate Remaining States Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate Remaining States Log.vi"/>
