@@ -165,8 +165,6 @@
 				<Item Name="CSM - Synchronized Call.vi" Type="VI" URL="../AdvanceAPI/CSM - Synchronized Call.vi"/>
 			</Item>
 			<Item Name="CSM - Broadcast Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Broadcast Status Change.vi"/>
-		</Item>
-		<Item Name="CSM-Support" Type="Folder">
 			<Item Name="CSM - Get New State Notifier Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Get New State Notifier Event.vi"/>
 			<Item Name="CSM - Check If Module Exists.vi" Type="VI" URL="../AdvanceAPI/CSM - Check If Module Exists.vi"/>
 			<Item Name="CSM - Register Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Register Status Change.vi"/>
