@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-03-12 20:29:13" Creator="liyao" Comments="" ID="cea11e4a72bbbadf0d7922b4358c19ee">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-03-13 09:49:49" Creator="liyao" Comments="" ID="d91b6f8656e9484de6b2f71d9a553731">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2024.3.0.3</Library_Version>
@@ -69,7 +69,7 @@
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
       <Release_Notes>#DebugTool
-[improve] LogViewer: 1. Add Clear History Button; 2. Add History Length Entry
+[improve] LogViewer: 1. Add Clear History Button; 2. Add History Length Entry; 3. Add Back to Top Button
 
 #documentation
 [improve] #260 improve pre-build action script to fix palette VI names
