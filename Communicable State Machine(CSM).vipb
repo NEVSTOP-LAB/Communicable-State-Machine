@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-03-20 18:18:37" Creator="liyao" Comments="" ID="0e907a051060485179366923f2334a48">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-03-22 22:44:03" Creator="liyao" Comments="" ID="2bb703391d60d72729caa44fcaa7cd8c">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2024.3.0.3</Library_Version>
@@ -71,6 +71,9 @@
       <Release_Notes>#Core
 [fix] #258 Terminated CSM will not be included in CSM - List Modules.vi any more.
 [fix] #262 Advanced operation(register,unregister,status,interrupt..) will not be filtered by CSM - Filter Messages to Non-Existing Modules.vi any more.
+
+#Side-Loop Support
+[add] Add option of immediately(F) option for CSM - Request CSM to Post Message.vi and CSM - Request CSM to Broadcast Status Change.vi
 
 #DebugTool
 [improve] LogViewer: 1. Add Clear History Button; 2. Add History Length Entry; 3. Add Back to Top Button
