@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-03-22 22:44:03" Creator="liyao" Comments="" ID="2bb703391d60d72729caa44fcaa7cd8c">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-03-22 23:49:56" Creator="liyao" Comments="" ID="d1b87866124e3bd1ed117e5766671cbc">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2024.3.0.3</Library_Version>
@@ -76,6 +76,7 @@
 [add] Add option of immediately(F) option for CSM - Request CSM to Post Message.vi and CSM - Request CSM to Broadcast Status Change.vi
 
 #DebugTool
+[add] IMPORTANT: add a new tool: CSM Debug Console.
 [improve] LogViewer: 1. Add Clear History Button; 2. Add History Length Entry; 3. Add Back to Top Button
 [improve] Improved names for built-in tools in the tool launcher.
 
