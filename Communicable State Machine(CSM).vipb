@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-03-24 14:07:09" Creator="liyao" Comments="" ID="33e4bd465169fc863a934c6f5221796e">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-03-24 21:56:37" Creator="liyao" Comments="" ID="4ae5ac6b37ac397b5d281077260e206a">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2024.3.0.3</Library_Version>
@@ -71,7 +71,7 @@
       <Release_Notes>#Core
 [fix] #258 Terminated CSM will not be included in CSM - List Modules.vi any more.
 [fix] #262 Advanced operation(register,unregister,status,interrupt..) will not be filtered by CSM - Filter Messages to Non-Existing Modules.vi any more.
-[important] #259 User defined operation "-&gt;&lt;user-defined&gt;" is permitted. You can now assign a user-defined tag to a local CSM message, which offers greater flexibility for creating add-ons.
+[add] IMPORTANT: #259 User defined operation "-&gt;&lt;user-defined&gt;" is permitted. You can now assign a user-defined tag to a local CSM message, which offers greater flexibility for creating add-ons.
 
 #Side-Loop Support
 [add] Add option of immediately(F) option for CSM - Request CSM to Post Message.vi and CSM - Request CSM to Broadcast Status Change.vi
