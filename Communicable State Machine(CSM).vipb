@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-03-24 21:56:37" Creator="liyao" Comments="" ID="4ae5ac6b37ac397b5d281077260e206a">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-03-25 21:26:38" Creator="liyao" Comments="" ID="67f51258be6d3ddfd2fbeb455578e349">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2024.3.0.3</Library_Version>
@@ -76,6 +76,7 @@
 #Side-Loop Support
 [add] Add option of immediately(F) option for CSM - Request CSM to Post Message.vi and CSM - Request CSM to Broadcast Status Change.vi
 [add] Add CSM - Module Exit Event.vi for triggering Non-CSM side loop exit.
+[add] #249 Add "CSM - Flood of Events Handler Side Loop" template
 
 #DebugTool
 [add] IMPORTANT: add a new tool: CSM Debug Console.
