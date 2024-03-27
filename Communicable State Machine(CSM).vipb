@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-03-25 21:26:38" Creator="liyao" Comments="" ID="67f51258be6d3ddfd2fbeb455578e349">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-03-27 23:03:13" Creator="liyao" Comments="" ID="e9e7ce1592caff6128f3b7faabafbd78">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2024.3.0.3</Library_Version>
@@ -82,6 +82,7 @@
 [add] IMPORTANT: add a new tool: CSM Debug Console.
 [improve] LogViewer: 1. Add Clear History Button; 2. Add History Length Entry; 3. Add Back to Top Button
 [improve] Improved names for built-in tools in the tool launcher.
+[improve] all tool window will be open in the center the primitive screen.
 
 #documentation
 [improve] #260 improve pre-build action script to fix palette VI names
