@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-03-27 23:03:13" Creator="liyao" Comments="" ID="e9e7ce1592caff6128f3b7faabafbd78">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-03-28 11:23:03" Creator="liyao" Comments="" ID="547b224171a2131c267e71a197719b98">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2024.3.0.3</Library_Version>
@@ -80,9 +80,13 @@
 
 #DebugTool
 [add] IMPORTANT: add a new tool: CSM Debug Console.
-[improve] LogViewer: 1. Add Clear History Button; 2. Add History Length Entry; 3. Add Back to Top Button
+[improve] LogViewer: 1. Add Clear History Button; 2. Add History Length Entry; 3. Add Back to Top Button; 4. Add Log File Support
 [improve] Improved names for built-in tools in the tool launcher.
 [improve] all tool window will be open in the center the primitive screen.
+
+#Addons
+[add] LoopSupport: addon to define a loop in CSM, which is used in NEVSTOP-Lab project
+[add] FileLoggerSupport: addon to log CSM activities to log file.
 
 #documentation
 [improve] #260 improve pre-build action script to fix palette VI names
