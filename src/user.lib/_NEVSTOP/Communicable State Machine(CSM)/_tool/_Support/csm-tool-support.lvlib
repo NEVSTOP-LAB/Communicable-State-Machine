@@ -4,8 +4,11 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">335577088</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
+	<Property Name="NI.SortType" Type="Int">3</Property>
 	<Item Name="Autosize All MultiListbox Columns (Uniform Text).vi" Type="VI" URL="../Autosize All MultiListbox Columns (Uniform Text).vi"/>
 	<Item Name="Dashboard Cell Resize.vi" Type="VI" URL="../Dashboard Cell Resize.vi"/>
 	<Item Name="Dashboard Cell2 Array Resize.vi" Type="VI" URL="../Dashboard Cell2 Array Resize.vi"/>
 	<Item Name="Select Greater_nevstop.vi" Type="VI" URL="../Select Greater_nevstop.vi"/>
+	<Item Name="Open CSM BD.vi" Type="VI" URL="../Open CSM BD.vi"/>
+	<Item Name="Open CSM FP.vi" Type="VI" URL="../Open CSM FP.vi"/>
 </Library>

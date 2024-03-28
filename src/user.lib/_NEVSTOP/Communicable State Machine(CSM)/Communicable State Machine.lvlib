@@ -160,13 +160,7 @@
 			<Item Name="CSM - Destroy Status Change Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Destroy Status Change Event.vi"/>
 		</Item>
 		<Item Name="Framework API" Type="Folder">
-			<Item Name="QuickDrop" Type="Folder">
-				<Item Name="CSM - Start Async Call.vi" Type="VI" URL="../AdvanceAPI/CSM - Start Async Call.vi"/>
-				<Item Name="CSM - Synchronized Call.vi" Type="VI" URL="../AdvanceAPI/CSM - Synchronized Call.vi"/>
-			</Item>
 			<Item Name="CSM - Broadcast Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Broadcast Status Change.vi"/>
-		</Item>
-		<Item Name="CSM-Support" Type="Folder">
 			<Item Name="CSM - Get New State Notifier Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Get New State Notifier Event.vi"/>
 			<Item Name="CSM - Check If Module Exists.vi" Type="VI" URL="../AdvanceAPI/CSM - Check If Module Exists.vi"/>
 			<Item Name="CSM - Register Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Register Status Change.vi"/>
@@ -186,6 +180,9 @@
 			<Item Name="CSM - Request CSM to Post Message.vi" Type="VI" URL="../AdvanceAPI/CSM - Request CSM to Post Message.vi"/>
 			<Item Name="CSM - Request CSM to Broadcast Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Request CSM to Broadcast Status Change.vi"/>
 			<Item Name="CSM - Module Turns Invalid.vi" Type="VI" URL="../AdvanceAPI/CSM - Module Turns Invalid.vi"/>
+			<Item Name="CSM - Module Exit Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Module Exit Event.vi"/>
+			<Item Name="CSM - Forward States to CSM.vi" Type="VI" URL="../AdvanceAPI/CSM - Forward States to CSM.vi"/>
+			<Item Name="CSM - Forward UI Operations to CSM.vi" Type="VI" URL="../AdvanceAPI/CSM - Forward UI Operations to CSM.vi"/>
 		</Item>
 		<Item Name="Worker Mode" Type="Folder">
 			<Item Name="CSM - Mark As Worker Module.vi" Type="VI" URL="../AdvanceAPI/CSM - Mark As Worker Module.vi"/>
@@ -194,13 +191,19 @@
 			<Item Name="CSM - Mark As Chain Module.vi" Type="VI" URL="../AdvanceAPI/CSM - Mark As Chain Module.vi"/>
 		</Item>
 		<Item Name="HelperVIs" Type="Folder">
-			<Item Name="CSM - Filter Messages to Non-Existing Modules.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter Messages to Non-Existing Modules.vi"/>
+			<Item Name="QuickDrop" Type="Folder">
+				<Item Name="CSM - Start Async Call.vi" Type="VI" URL="../AdvanceAPI/CSM - Start Async Call.vi"/>
+				<Item Name="CSM - Synchronized Call.vi" Type="VI" URL="../AdvanceAPI/CSM - Synchronized Call.vi"/>
+				<Item Name="CSM - Flood of Events Handler Side Loop.vi" Type="VI" URL="../AdvanceAPI/CSM - Flood of Events Handler Side Loop.vi"/>
+			</Item>
+			<Item Name="CSM - Keywords.vi" Type="VI" URL="../AdvanceAPI/CSM - Keywords.vi"/>
 			<Item Name="CSM - Build Exit Messages of CSMs.vi" Type="VI" URL="../AdvanceAPI/CSM - Build Exit Messages of CSMs.vi"/>
 			<Item Name="CSM - Compact Multiple States.vi" Type="VI" URL="../AdvanceAPI/CSM - Compact Multiple States.vi"/>
 			<Item Name="CSM - Break Down Multiple States String.vi" Type="VI" URL="../AdvanceAPI/CSM - Break Down Multiple States String.vi"/>
-			<Item Name="CSM - Keywords.vi" Type="VI" URL="../AdvanceAPI/CSM - Keywords.vi"/>
-			<Item Name="CSM - Remove Duplicated Following Messages.vi" Type="VI" URL="../AdvanceAPI/CSM - Remove Duplicated Following Messages.vi"/>
 			<Item Name="CSM - Replace Substitution Marks in Messages.vi" Type="VI" URL="../AdvanceAPI/CSM - Replace Substitution Marks in Messages.vi"/>
+			<Item Name="CSM - Filter Messages to Non-Existing Modules.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter Messages to Non-Existing Modules.vi"/>
+			<Item Name="CSM - Filter Duplicate Messages By Name.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter Duplicate Messages By Name.vi"/>
+			<Item Name="CSM - Remove Duplicated Following Messages.vi" Type="VI" URL="../AdvanceAPI/CSM - Remove Duplicated Following Messages.vi"/>
 		</Item>
 	</Item>
 	<Item Name="Utility" Type="Folder">
