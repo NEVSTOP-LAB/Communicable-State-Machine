@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-03-28 11:23:03" Creator="liyao" Comments="" ID="547b224171a2131c267e71a197719b98">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-04-01 10:11:28" Creator="liyao" Comments="" ID="4d0ba7190a1f7b6f7af88d877dc6d727">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2024.3.0.3</Library_Version>
@@ -68,32 +68,8 @@
       <Copyright/>
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
-      <Release_Notes>#Core
-[fix] #258 Terminated CSM will not be included in CSM - List Modules.vi any more.
-[fix] #262 Advanced operation(register,unregister,status,interrupt..) will not be filtered by CSM - Filter Messages to Non-Existing Modules.vi any more.
-[add] IMPORTANT: #259 User defined operation "-&gt;&lt;user-defined&gt;" is permitted. You can now assign a user-defined tag to a local CSM message, which offers greater flexibility for creating add-ons.
-
-#Side-Loop Support
-[add] Add option of immediately(F) option for CSM - Request CSM to Post Message.vi and CSM - Request CSM to Broadcast Status Change.vi
-[add] Add CSM - Module Exit Event.vi for triggering Non-CSM side loop exit.
-[add] #249 Add "CSM - Flood of Events Handler Side Loop" template
-
-#DebugTool
-[add] IMPORTANT: add a new tool: CSM Debug Console.
-[improve] LogViewer: 1. Add Clear History Button; 2. Add History Length Entry; 3. Add Back to Top Button; 4. Add Log File Support
-[improve] Improved names for built-in tools in the tool launcher.
-[improve] all tool window will be open in the center the primitive screen.
-
-#Addons
-[add] LoopSupport: addon to define a loop in CSM, which is used in NEVSTOP-Lab project
-[add] FileLoggerSupport: addon to log CSM activities to log file.
-
-#documentation
-[improve] #260 improve pre-build action script to fix palette VI names
-
-#installer
-[improve] #257 reduce installation time
-[improve] Improvement according to vi-analyzer</Release_Notes>
+      <Release_Notes>#DebugTool
+[update] some minor improvements</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -270,7 +246,6 @@
       <close_labview_before_install>true</close_labview_before_install>
       <restart_labview_after_install>false</restart_labview_after_install>
       <skip_mass_compile_after_install>false</skip_mass_compile_after_install>
-      <install_into_global_environment>false</install_into_global_environment>
     </LabVIEW>
     <VI_Docs>
       <Edit_VI_Description>true</Edit_VI_Description>
