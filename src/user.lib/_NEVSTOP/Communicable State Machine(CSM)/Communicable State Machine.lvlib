@@ -207,6 +207,11 @@
 		</Item>
 	</Item>
 	<Item Name="Utility" Type="Folder">
+		<Item Name="_Support" Type="Folder">
+			<Item Name="CSM Data Type String to Enum(String).vi" Type="VI" URL="../Utility/_support/CSM Data Type String to Enum(String).vi"/>
+			<Item Name="CSM Data Type String to Enum(TypeEnum).vi" Type="VI" URL="../Utility/_support/CSM Data Type String to Enum(TypeEnum).vi"/>
+			<Item Name="CSM Data Type String to Enum(RefnumEnum).vi" Type="VI" URL="../Utility/_support/CSM Data Type String to Enum(RefnumEnum).vi"/>
+		</Item>
 		<Item Name="Timeout Selector.vi" Type="VI" URL="../Utility/Timeout Selector.vi"/>
 		<Item Name="Build Internal State String.vi" Type="VI" URL="../Utility/Build Internal State String.vi"/>
 		<Item Name="String History Cacher.vi" Type="VI" URL="../Utility/String History Cacher.vi"/>
@@ -216,6 +221,7 @@
 		<Item Name="Global Log To String.vi" Type="VI" URL="../Utility/Global Log To String.vi"/>
 		<Item Name="Random Change Flag.vi" Type="VI" URL="../Utility/Random Change Flag.vi"/>
 		<Item Name="CSM Data Type String.vi" Type="VI" URL="../Utility/CSM Data Type String.vi"/>
+		<Item Name="CSM Data Type String to Enum.vi" Type="VI" URL="../Utility/CSM Data Type String to Enum.vi"/>
 	</Item>
 	<Item Name="Parse State Queue++.vi" Type="VI" URL="../Parse State Queue++.vi"/>
 	<Item Name="Add State(s) to Queue By BOOL++.vi" Type="VI" URL="../Add State(s) to Queue By BOOL++.vi"/>
