@@ -22,7 +22,7 @@ jobs:
   # This workflow contains a single job called "build"
   Build_VIPM_Library:
     # The type of runner that the job will run on
-    runs-on: [self-hosted, lv2014]
+    runs-on: [self-hosted, lv2017]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -39,11 +39,11 @@ jobs:
         id: build-vip
         uses: NEVSTOP-LAB/vipm-BuildViPackage@main
         with:
-          LabVIEW_Version: 2014
+          LabVIEW_Version: 2017
           VipbPath: ${{ github.workspace }}
 
       - name: Upload a Build Artifact
-        uses: actions/upload-artifact@v3.0.0
+        uses: actions/upload-artifact@v4.3.2
         with:
           # Artifact name
           name: ${{ steps.build-vip.outputs.vipName }}
