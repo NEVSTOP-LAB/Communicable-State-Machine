@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-04-22 23:10:08" Creator="liyao" Comments="" ID="828d29bc5bf6282bb13023298f227ca1">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-04-24 17:21:19" Creator="liyao" Comments="" ID="f6df21f0e390fd247ee8253003161318">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2024.4.0.3</Library_Version>
@@ -78,6 +78,7 @@
 [change] change csm log file extension to .csmlog
 
 #DebugTool
+[add] add CSM - Remove all CSM Bookmarks tool to remove all comment bookmarks of CSM template
 [update] add error log window in LogViewer to highlight error occurred
 [update] some minor improvements
 
@@ -260,6 +261,7 @@
       <close_labview_before_install>true</close_labview_before_install>
       <restart_labview_after_install>false</restart_labview_after_install>
       <skip_mass_compile_after_install>false</skip_mass_compile_after_install>
+      <install_into_global_environment>false</install_into_global_environment>
     </LabVIEW>
     <VI_Docs>
       <Edit_VI_Description>true</Edit_VI_Description>
