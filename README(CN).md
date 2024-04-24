@@ -12,19 +12,18 @@
 - 关于 JKI State Machine(JKISM) 更多信息, 请访问: <http://jki.net/state-machine/>
 - 关于 NEVSTOP-LAB 更多信息, 请访问: <https://github.com/NEVSTOP-LAB>
 
-_**CSM 代码模板**_
-
-![image](/.doc/_img/CSM%20Without%20Event%20Structure%20Template.png)
-
-CSM 代码模板介绍:
-[English](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/Template%20Description(EN).md) | [中文](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/Template%20Description(CN).md)
+![image](https://github.com/NEVSTOP-LAB/Communicable-State-Machine/assets/8196752/318b9363-083c-40e2-86ef-0106e567b2b3)
 
 _**CSM 函数面板**_
 
 ![image](.doc/_img/CSM%20Palette.png)
 
+CSM 代码模板介绍:
+[English](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/Template%20Description(EN).md) | [中文](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/Template%20Description(CN).md)
+
 CSM API 介绍:
 [English](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/VI%20Description(EN).md) | [中文](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/VI%20Description(CN).md)
+
 
 ## 创建基于 CSM 的可重用模块
 
