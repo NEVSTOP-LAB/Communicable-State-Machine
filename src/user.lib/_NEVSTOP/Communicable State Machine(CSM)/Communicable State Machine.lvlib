@@ -1,13 +1,13 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
-<Library LVVersion="14008000">
+<Library LVVersion="17008000">
 	<Property Name="NI.Lib.Description" Type="Str">Communicable State Machine(CSM) is a LabVIEW Application Framework extended from JKI State Machine(JKISM). It follows the JKISM's pattern and extends the Key words to describe message communication between modules including the concepts of Sync-Message, Async-Message, Subscription/Unsubscription of status, which is essential elements for creating re-use code modules. More information, please visit wiki of CSM: &lt;https://nevstop-lab.github.io/CSM-Wiki/&gt;
 
 - For instructions on JKI State Machine, visit: &lt;http://jki.net/state-machine/&gt;
 - For information about NEVSTOP-LAB, visit: &lt;https://github.com/NEVSTOP-LAB&gt;</Property>
 	<Property Name="NI.Lib.HelpPath" Type="Str"></Property>
-	<Property Name="NI.Lib.Icon" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!)(!!!*Q(C=\&gt;4.&lt;2MR&amp;-4RS==B6X51K)88AFJ1#[_$1&amp;@\JB;G"&lt;7A3QK9&amp;N3#7F$_:!D$*_]F$A,%J#FL:\F]0X%8+]XW4@KKZ]XWYYWW=8J-?/`T7\[.JI`WU@\P^P49;/^0_#3./I^(''9UIT2+0U)?]J#(0/1B.\H*47ZSEZO]S:O]S:O]S:O]S)O]S)O]S)N]&gt;H+2CVTEE%,R5#AM'B9)E[%I@!20]!20](#IY!G?Y!G?Y''+AC&gt;YAC&gt;YAI@,&amp;$T"%TT"%TQM.37:H2R0],#]D-&gt;YD-&gt;YD)?3-BY$--8-QG92'$)HT2@D-2\DY;O-RXC-RXC-B^-S(O-R(O-R(C[:O_+J':U=$]OI]43?RN.Y'A^,K`%UHM&lt;4?"I0Z&gt;2Y'E_$;!IWCU.1=V%TI4FI0)W(@WI]D;@R.*\'Q[FZBXLOT.#-4I[H]"3?QF.Y#A^,K0!5HM*4?!I0S[LQ&amp;*\#5XA+$[65?!J0Y3EA26(+KVCMO,#96!3&amp;B\`ZN.3]3Z[3GFV;$[`71[HVM'E^2&amp;I0B^:.V\K:7D&gt;*;`/V.F6LM\1W1?P(;;'V-&amp;J&amp;N#Y?%X8H]];Y-C[--_0%/$)/D$VD.S\^QR0P^\NONZOOV[MOFYP/Z\./JZ//R[-/BY0W_\VWO^X,;_!\`?7&amp;]0O^^&amp;0[]M4R[T'SP`.?_B@?D@KMVX89IV_BU3H-!!!!!!</Property>
+	<Property Name="NI.Lib.Icon" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!)(!!!*Q(C=\&gt;4.&lt;2MR&amp;-4RS==B6X51K)88AFJ1#[_$1&amp;@\JB;G"&lt;7A3QK9&amp;N3#7F$_:!D$*_]F$A,%J#FL:\F]0X%8+]XW4@KKZ]XWYYWW=8J-?/`T7\[.JI`WU@\P^P49;/^0_#3./I^(''9UIT2+0U)?]J#(0/1B.\H*47ZSEZO]S:O]S:O]S:O]S)O]S)O]S)N]&gt;H+2CVTEE%,R5#AM'B9)E[%I@!20]!20](#IY!G?Y!G?Y''+AC&gt;YAC&gt;YAI@,&amp;$T"%TT"%TQM.37:H2R0],#]D-&gt;YD-&gt;YD)?3-BY$--8-QG92'$)HT2@D-2\DY;O-RXC-RXC-B^-S(O-R(O-R(C[:O_+J':U=$]OI]43?RN.Y'A^,K`%UHM&lt;4?"I0Z&gt;2Y'E_$;!IWCU.1=V%TI4FI0)W(@WI]D;@R.*\'Q[FZBXLOT.#-4I[H]"3?QF.Y#A^,K0!5HM*4?!I0S[LQ&amp;*\#5XA+$[65?!J0Y3EA26(+KVCMO,#96!3&amp;B\`ZN.3]3Z[3GFV;$[`71[HVM'E^2&amp;I0B^:.V\K:7D&gt;*;`/V.F6LM\1W1?P(;;'V-&amp;J&amp;N#Y?%X8H]];Y-C[--_0%/$)/D$VD.S\^QR0P^\NONZOOV[MOFYP/Z\./JZ//R[-/BY0W_\VWO^X,;_!\`?7&amp;]0O^^&amp;0[]M4R[T'SP`.?_B@?D@KMVX89IV_BU3H-!!!!!!</Property>
 	<Property Name="NI.Lib.LocalName" Type="Str">CSM</Property>
-	<Property Name="NI.Lib.SourceVersion" Type="Int">335577088</Property>
+	<Property Name="NI.Lib.SourceVersion" Type="Int">385908736</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Property Name="NI.SortType" Type="Int">3</Property>
@@ -141,6 +141,17 @@
 	</Item>
 	<Item Name="Advance" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
+		<Item Name="Framework API" Type="Folder">
+			<Item Name="CSM - List Modules.vi" Type="VI" URL="../AdvanceAPI/CSM - List Modules.vi"/>
+			<Item Name="CSM - Module Status.vi" Type="VI" URL="../AdvanceAPI/CSM - Module Status.vi"/>
+			<Item Name="CSM - Check If Module Exists.vi" Type="VI" URL="../AdvanceAPI/CSM - Check If Module Exists.vi"/>
+			<Item Name="CSM - Broadcast Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Broadcast Status Change.vi"/>
+			<Item Name="CSM - Get New State Notifier Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Get New State Notifier Event.vi"/>
+			<Item Name="CSM - Register Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Register Status Change.vi"/>
+			<Item Name="CSM - Unregister Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Unregister Status Change.vi"/>
+			<Item Name="CSM - Wait for All Modules to be Alive.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait for All Modules to be Alive.vi"/>
+			<Item Name="CSM - Wait for All Modules to Exit.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait for All Modules to Exit.vi"/>
+		</Item>
 		<Item Name="Args" Type="Folder">
 			<Item Name="CSM - Convert Data to HexStr.vi" Type="VI" URL="../AdvanceAPI/CSM - Convert Data to HexStr.vi"/>
 			<Item Name="CSM - Convert HexStr to Data.vi" Type="VI" URL="../AdvanceAPI/CSM - Convert HexStr to Data.vi"/>
@@ -158,17 +169,6 @@
 			<Item Name="CSM - Post Message(SimMode).vi" Type="VI" URL="../AdvanceAPI/CSM - Post Message(SimMode).vi"/>
 			<Item Name="CSM - Status Change Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Status Change Event.vi"/>
 			<Item Name="CSM - Destroy Status Change Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Destroy Status Change Event.vi"/>
-		</Item>
-		<Item Name="Framework API" Type="Folder">
-			<Item Name="CSM - Broadcast Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Broadcast Status Change.vi"/>
-			<Item Name="CSM - Get New State Notifier Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Get New State Notifier Event.vi"/>
-			<Item Name="CSM - Check If Module Exists.vi" Type="VI" URL="../AdvanceAPI/CSM - Check If Module Exists.vi"/>
-			<Item Name="CSM - Register Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Register Status Change.vi"/>
-			<Item Name="CSM - Unregister Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Unregister Status Change.vi"/>
-			<Item Name="CSM - List Modules.vi" Type="VI" URL="../AdvanceAPI/CSM - List Modules.vi"/>
-			<Item Name="CSM - Module Status.vi" Type="VI" URL="../AdvanceAPI/CSM - Module Status.vi"/>
-			<Item Name="CSM - Wait for All Modules to be Alive.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait for All Modules to be Alive.vi"/>
-			<Item Name="CSM - Wait for All Modules to Exit.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait for All Modules to Exit.vi"/>
 		</Item>
 		<Item Name="GlobalEvent" Type="Folder">
 			<Item Name="CSM - Global Log Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Global Log Event.vi"/>
@@ -207,6 +207,11 @@
 		</Item>
 	</Item>
 	<Item Name="Utility" Type="Folder">
+		<Item Name="_Support" Type="Folder">
+			<Item Name="CSM Data Type String to Enum(String).vi" Type="VI" URL="../Utility/_support/CSM Data Type String to Enum(String).vi"/>
+			<Item Name="CSM Data Type String to Enum(TypeEnum).vi" Type="VI" URL="../Utility/_support/CSM Data Type String to Enum(TypeEnum).vi"/>
+			<Item Name="CSM Data Type String to Enum(RefnumEnum).vi" Type="VI" URL="../Utility/_support/CSM Data Type String to Enum(RefnumEnum).vi"/>
+		</Item>
 		<Item Name="Timeout Selector.vi" Type="VI" URL="../Utility/Timeout Selector.vi"/>
 		<Item Name="Build Internal State String.vi" Type="VI" URL="../Utility/Build Internal State String.vi"/>
 		<Item Name="String History Cacher.vi" Type="VI" URL="../Utility/String History Cacher.vi"/>
@@ -215,6 +220,8 @@
 		<Item Name="uuid.vi" Type="VI" URL="../Utility/uuid.vi"/>
 		<Item Name="Global Log To String.vi" Type="VI" URL="../Utility/Global Log To String.vi"/>
 		<Item Name="Random Change Flag.vi" Type="VI" URL="../Utility/Random Change Flag.vi"/>
+		<Item Name="CSM Data Type String.vi" Type="VI" URL="../Utility/CSM Data Type String.vi"/>
+		<Item Name="CSM Data Type String to Enum.vi" Type="VI" URL="../Utility/CSM Data Type String to Enum.vi"/>
 	</Item>
 	<Item Name="Parse State Queue++.vi" Type="VI" URL="../Parse State Queue++.vi"/>
 	<Item Name="Add State(s) to Queue By BOOL++.vi" Type="VI" URL="../Add State(s) to Queue By BOOL++.vi"/>
