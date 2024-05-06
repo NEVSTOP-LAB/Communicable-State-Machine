@@ -24,7 +24,6 @@ CSM 代码模板介绍:
 CSM API 介绍:
 [English](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/VI%20Description(EN).md) | [中文](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/VI%20Description(CN).md)
 
-
 ## 创建基于 CSM 的可重用模块
 
 创建一个可重用模块通常不需要与其他模块进行消息交互；它只需要提供外部接口和发布模块的状态变化。因此，只要明确描述了这两个方面，就可以在不了解内部实现细节的情况下，调用可重用模块。
@@ -58,10 +57,11 @@ CSM API 介绍:
     Interrupt >> StatusArguments -><interrupt>
 
     // 将源模块的状态注册到处理程序模块
-    Status@Source Module >> Handler Module@Handler Module -><register>
+    Status@Source Module >> API@Handler Module -><register>
 
     // 取消注册源模块的状态
-    Status@Source Module >> Handler Module -><unregister>
+    Status@Source Module >> API@Handler Module -><unregister>
+    Status@Source Module >> Handler Module -><unregister> // API Name可以缺省
 
 #CSM 注释
     // 要添加注释，请使用 "//"，右边的所有文本将被忽略。
