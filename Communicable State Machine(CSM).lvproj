@@ -56,6 +56,10 @@
 		</Item>
 		<Item Name="API Tree.vi" Type="VI" URL="../src/API Tree.vi"/>
 		<Item Name="Communicable State Machine(CSM).vipb" Type="Document" URL="../Communicable State Machine(CSM).vipb"/>
+		<Item Name="CONTRIBUTING.md" Type="Document" URL="../CONTRIBUTING.md"/>
+		<Item Name="LICENSE" Type="Document" URL="../LICENSE"/>
+		<Item Name="README(CN).md" Type="Document" URL="../README(CN).md"/>
+		<Item Name="README.md" Type="Document" URL="../README.md"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Add State(s) to Queue__JKI_lib_State_Machine.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/State Machine/_JKI_lib_State_Machine.llb/Add State(s) to Queue__JKI_lib_State_Machine.vi"/>

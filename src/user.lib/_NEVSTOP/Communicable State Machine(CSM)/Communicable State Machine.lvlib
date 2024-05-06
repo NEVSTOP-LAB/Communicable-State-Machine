@@ -124,6 +124,7 @@
 		</Item>
 		<Item Name="Message" Type="Folder">
 			<Item Name="Parse State with Arguments String.vi" Type="VI" URL="../_Support/Message/Parse State with Arguments String.vi"/>
+			<Item Name="Parse Unregister Message.vi" Type="VI" URL="../Parse Unregister Message.vi"/>
 		</Item>
 		<Item Name="CSM Dummy Module.vi" Type="VI" URL="../_Support/CSM Dummy Module.vi"/>
 	</Item>
