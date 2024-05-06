@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-05-05 23:11:45" Creator="liyao" Comments="" ID="aee9abf3852bc515322a776599cb1fef">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-05-06 14:50:56" Creator="liyao" Comments="" ID="af53493dfd7f5b1eedb7e539bdfc10d4">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2024.5.0.3</Library_Version>
@@ -70,6 +70,7 @@
       <URL>https://github.com/NEVSTOP-LAB</URL>
       <Release_Notes>#Core
 [fix] #239 The registration status of a module can now be linked to two messages from a single CSM module.
+[fix] #268  Fix bug that CSM of chain type is not included in result of CSM - List Modules.vi
 
 #Template
 [update] Update descriptions in all templates</Release_Notes>
