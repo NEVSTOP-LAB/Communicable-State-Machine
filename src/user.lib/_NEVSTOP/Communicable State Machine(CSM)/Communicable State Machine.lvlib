@@ -155,6 +155,9 @@
 			<Item Name="CSM - Unregister Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Unregister Status Change.vi"/>
 			<Item Name="CSM - Wait for All Modules to be Alive.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait for All Modules to be Alive.vi"/>
 			<Item Name="CSM - Wait for All Modules to Exit.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait for All Modules to Exit.vi"/>
+			<Item Name="CSM - Check Broadcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - Check Broadcast Registry.vi"/>
+			<Item Name="CSM - List Status in Broadcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - List Status in Broadcast Registry.vi"/>
+			<Item Name="CSM - All Relationships of Broadcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - All Relationships of Broadcast Registry.vi"/>
 		</Item>
 		<Item Name="Args" Type="Folder">
 			<Item Name="CSM - Convert Data to HexStr.vi" Type="VI" URL="../AdvanceAPI/CSM - Convert Data to HexStr.vi"/>
