@@ -30,7 +30,7 @@
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 	</Item>
 	<Item Name="HelperVI" Type="Folder">
-		<Item Name="Preview.vi" Type="VI" URL="../Preview.vi">
+		<Item Name="Preview.vi" Type="VI" URL="../HelperVI/Preview.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!'1!!!!#A!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!!Z!5QB3:7&gt;J=X2S?1!!8%"Q!"Y!!$QA1W^N&lt;86O;7.B9GRF)&amp;.U982F)%VB9WBJ&lt;G5O&lt;(:M;7):1H*P972D98.U5G6H;8.U=HEO&lt;(:D&lt;'&amp;T=Q!!&amp;5*S&lt;W&amp;E9W&amp;T&gt;&amp;*F:WFT&gt;(*Z)'^V&gt;!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!&amp;R!=!!?!!!])%.P&lt;7VV&lt;GFD97*M:3"4&gt;'&amp;U:3".97.I;7ZF,GRW&lt;'FC'5*S&lt;W&amp;E9W&amp;T&gt;&amp;*F:WFT&gt;(*Z,GRW9WRB=X-!!"2#=G^B:'.B=X23:7&gt;J=X2S?3"J&lt;A!!91$Q!!Q!!Q!%!!5!"A!%!!1!"!!%!!=!"!!%!!A#!!"Y!!!.#!!!!!!!!!E!!!!.#Q!!!!!!!!!!!!!!!!!!!!!!!!A!!!!!!!!!!!!!!"!!!!U!!!!-!!!!!!!!!!!!!!%!#1!!!!!</Property>
 			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
