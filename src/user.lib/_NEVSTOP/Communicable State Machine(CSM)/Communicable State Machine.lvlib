@@ -151,13 +151,15 @@
 			<Item Name="CSM - Check If Module Exists.vi" Type="VI" URL="../AdvanceAPI/CSM - Check If Module Exists.vi"/>
 			<Item Name="CSM - Broadcast Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Broadcast Status Change.vi"/>
 			<Item Name="CSM - Get New State Notifier Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Get New State Notifier Event.vi"/>
-			<Item Name="CSM - Register Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Register Status Change.vi"/>
-			<Item Name="CSM - Unregister Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Unregister Status Change.vi"/>
 			<Item Name="CSM - Wait for All Modules to be Alive.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait for All Modules to be Alive.vi"/>
 			<Item Name="CSM - Wait for All Modules to Exit.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait for All Modules to Exit.vi"/>
-			<Item Name="CSM - Check Broadcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - Check Broadcast Registry.vi"/>
+		</Item>
+		<Item Name="Broadcast Registry" Type="Folder">
+			<Item Name="CSM - Register Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Register Status Change.vi"/>
+			<Item Name="CSM - Unregister Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Unregister Status Change.vi"/>
+			<Item Name="CSM - Check Status Registration.vi" Type="VI" URL="../AdvanceAPI/CSM - Check Status Registration.vi"/>
 			<Item Name="CSM - List Status in Broadcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - List Status in Broadcast Registry.vi"/>
-			<Item Name="CSM - All Relationships of Broadcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - All Relationships of Broadcast Registry.vi"/>
+			<Item Name="CSM - List All Status Registration.vi" Type="VI" URL="../AdvanceAPI/CSM - List All Status Registration.vi"/>
 		</Item>
 		<Item Name="Args" Type="Folder">
 			<Item Name="CSM - Convert Data to HexStr.vi" Type="VI" URL="../AdvanceAPI/CSM - Convert Data to HexStr.vi"/>
