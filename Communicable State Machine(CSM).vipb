@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-05-14 13:53:03" Creator="liyao" Comments="" ID="4018d74a7914588ca464535719be9713">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-05-14 17:20:54" Creator="liyao" Comments="" ID="f90dc54d8cb7c708fd27cd388a7e9d53">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2024.5.0.3</Library_Version>
@@ -75,6 +75,7 @@
 
 #Tool
 [add] #270 Show status registration information in LogViewer
+[add] Add "Highlight All CSM Scripts" in popup menu plugin
 
 #Template
 [update] Update descriptions in all templates
