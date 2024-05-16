@@ -14,4 +14,5 @@
 		<Item Name="CSM-Logger-Thread.vi" Type="VI" URL="../CSM-Logger-Thread.vi"/>
 	</Item>
 	<Item Name="CSM - Start File Logger.vi" Type="VI" URL="../CSM - Start File Logger.vi"/>
+	<Item Name="CSM File Logger Limit.ctl" Type="VI" URL="../CSM File Logger Limit.ctl"/>
 </Library>
