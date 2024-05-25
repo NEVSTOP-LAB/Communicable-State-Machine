@@ -221,6 +221,19 @@
 			<Item Name="CSM Data Type String to Enum(TypeEnum).vi" Type="VI" URL="../Utility/_support/CSM Data Type String to Enum(TypeEnum).vi"/>
 			<Item Name="CSM Data Type String to Enum(RefnumEnum).vi" Type="VI" URL="../Utility/_support/CSM Data Type String to Enum(RefnumEnum).vi"/>
 		</Item>
+		<Item Name="_openG" Type="Folder">
+			<Item Name="1D Array to String_csm.vi" Type="VI" URL="../Utility/_openG/1D Array to String_csm.vi"/>
+			<Item Name="Array of VData to VCluster_csm.vi" Type="VI" URL="../Utility/_openG/Array of VData to VCluster_csm.vi"/>
+			<Item Name="End of Line Constant (bug fix)_csm.vi" Type="VI" URL="../Utility/_openG/End of Line Constant (bug fix)_csm.vi"/>
+			<Item Name="Get Data Name_csm.vi" Type="VI" URL="../Utility/_openG/Get Data Name_csm.vi"/>
+			<Item Name="Get Header from TD_csm.vi" Type="VI" URL="../Utility/_openG/Get Header from TD_csm.vi"/>
+			<Item Name="Get Last PString_csm.vi" Type="VI" URL="../Utility/_openG/Get Last PString_csm.vi"/>
+			<Item Name="Get PString_csm.vi" Type="VI" URL="../Utility/_openG/Get PString_csm.vi"/>
+			<Item Name="Get Strings from Enum_csm.vi" Type="VI" URL="../Utility/_openG/Get Strings from Enum_csm.vi"/>
+			<Item Name="Set Data Name_csm.vi" Type="VI" URL="../Utility/_openG/Set Data Name_csm.vi"/>
+			<Item Name="Set Enum String Value_csm.vi" Type="VI" URL="../Utility/_openG/Set Enum String Value_csm.vi"/>
+			<Item Name="String to 1D Array_csm.vi" Type="VI" URL="../Utility/_openG/String to 1D Array_csm.vi"/>
+		</Item>
 		<Item Name="Timeout Selector.vi" Type="VI" URL="../Utility/Timeout Selector.vi"/>
 		<Item Name="Build Internal State String.vi" Type="VI" URL="../Utility/Build Internal State String.vi"/>
 		<Item Name="String History Cacher.vi" Type="VI" URL="../Utility/String History Cacher.vi"/>
