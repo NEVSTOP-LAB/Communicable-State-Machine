@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-05-27 10:12:17" Creator="liyao" Comments="" ID="93bd8365834da0e1d974d258314132c8">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-05-27 10:19:28" Creator="liyao" Comments="" ID="e5037b95b7385d71f6514232c89e2ca5">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2024.5.0.3</Library_Version>
@@ -80,6 +80,7 @@
 [update] improve tool launcher dialog
 
 #Template
+[update] Change templates names to make it more comprehensible
 [update] Update descriptions in all templates
 
 #Addon-Logger
