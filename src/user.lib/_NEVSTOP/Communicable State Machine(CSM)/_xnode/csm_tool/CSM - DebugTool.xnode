@@ -24,5 +24,4 @@
 	<Item Name="_State 1.ctl" Type="Ability VI" URL="../_xnode_csm_tool_support/_State 1.ctl">
 		<Property Name="NI.XItem.Name" Type="Str">State</Property>
 	</Item>
-	<Item Name="CSM DebugTool Dialog.vi" Type="VI" URL="../_xnode_csm_tool_support/CSM DebugTool Dialog.vi"/>
 </XNode>
