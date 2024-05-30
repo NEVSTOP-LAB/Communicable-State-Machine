@@ -20,6 +20,9 @@
 		<Item Name="Priority Queue" Type="Folder">
 			<Item Name="Priority Queue.lvclass" Type="LVClass" URL="../_Support/Priority Queue/Priority Queue.lvclass"/>
 		</Item>
+		<Item Name="BroadcastRegistry" Type="Folder">
+			<Item Name="BroadcastRegistry.lvclass" Type="LVClass" URL="../_Support/BroadcastRegistry/BroadcastRegistry.lvclass"/>
+		</Item>
 		<Item Name="Common" Type="Folder">
 			<Item Name="Trim Single line Text.vi" Type="VI" URL="../_Support/Common/Trim Single line Text.vi"/>
 			<Item Name="Remove Comments from Line.vi" Type="VI" URL="../_Support/Common/Remove Comments from Line.vi"/>
@@ -87,7 +90,6 @@
 			<Item Name="Operation-BroadcastRegistry.ctl" Type="VI" URL="../_Support/FGV-BroadcastRegistry/Operation-BroadcastRegistry.ctl"/>
 			<Item Name="global-Broadcast Cache Change Flag.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/global-Broadcast Cache Change Flag.vi"/>
 			<Item Name="Cache-Broadcast Registry Search Result.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/Cache-Broadcast Registry Search Result.vi"/>
-			<Item Name="_Broadcast Item Key.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/_Broadcast Item Key.vi"/>
 		</Item>
 		<Item Name="GlobalEvent" Type="Folder">
 			<Item Name="GEvt-RequestDef.ctl" Type="VI" URL="../_Support/GlobalEvent/GEvt-RequestDef.ctl"/>
@@ -122,6 +124,8 @@
 		</Item>
 		<Item Name="Message" Type="Folder">
 			<Item Name="Parse State with Arguments String.vi" Type="VI" URL="../_Support/Message/Parse State with Arguments String.vi"/>
+			<Item Name="Parse Unregister Message.vi" Type="VI" URL="../_Support/Message/Parse Unregister Message.vi"/>
+			<Item Name="Parse Register Message.vi" Type="VI" URL="../_Support/Message/Parse Register Message.vi"/>
 		</Item>
 		<Item Name="CSM Dummy Module.vi" Type="VI" URL="../_Support/CSM Dummy Module.vi"/>
 	</Item>
@@ -147,10 +151,15 @@
 			<Item Name="CSM - Check If Module Exists.vi" Type="VI" URL="../AdvanceAPI/CSM - Check If Module Exists.vi"/>
 			<Item Name="CSM - Broadcast Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Broadcast Status Change.vi"/>
 			<Item Name="CSM - Get New State Notifier Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Get New State Notifier Event.vi"/>
-			<Item Name="CSM - Register Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Register Status Change.vi"/>
-			<Item Name="CSM - Unregister Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Unregister Status Change.vi"/>
 			<Item Name="CSM - Wait for All Modules to be Alive.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait for All Modules to be Alive.vi"/>
 			<Item Name="CSM - Wait for All Modules to Exit.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait for All Modules to Exit.vi"/>
+		</Item>
+		<Item Name="Broadcast Registry" Type="Folder">
+			<Item Name="CSM - Register Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Register Status Change.vi"/>
+			<Item Name="CSM - Unregister Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Unregister Status Change.vi"/>
+			<Item Name="CSM - Check Status Registration.vi" Type="VI" URL="../AdvanceAPI/CSM - Check Status Registration.vi"/>
+			<Item Name="CSM - List Status in Broadcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - List Status in Broadcast Registry.vi"/>
+			<Item Name="CSM - List All Status Registration.vi" Type="VI" URL="../AdvanceAPI/CSM - List All Status Registration.vi"/>
 		</Item>
 		<Item Name="Args" Type="Folder">
 			<Item Name="CSM - Convert Data to HexStr.vi" Type="VI" URL="../AdvanceAPI/CSM - Convert Data to HexStr.vi"/>
@@ -211,6 +220,19 @@
 			<Item Name="CSM Data Type String to Enum(String).vi" Type="VI" URL="../Utility/_support/CSM Data Type String to Enum(String).vi"/>
 			<Item Name="CSM Data Type String to Enum(TypeEnum).vi" Type="VI" URL="../Utility/_support/CSM Data Type String to Enum(TypeEnum).vi"/>
 			<Item Name="CSM Data Type String to Enum(RefnumEnum).vi" Type="VI" URL="../Utility/_support/CSM Data Type String to Enum(RefnumEnum).vi"/>
+		</Item>
+		<Item Name="_openG" Type="Folder">
+			<Item Name="1D Array to String_csm.vi" Type="VI" URL="../Utility/_openG/1D Array to String_csm.vi"/>
+			<Item Name="Array of VData to VCluster_csm.vi" Type="VI" URL="../Utility/_openG/Array of VData to VCluster_csm.vi"/>
+			<Item Name="End of Line Constant (bug fix)_csm.vi" Type="VI" URL="../Utility/_openG/End of Line Constant (bug fix)_csm.vi"/>
+			<Item Name="Get Data Name_csm.vi" Type="VI" URL="../Utility/_openG/Get Data Name_csm.vi"/>
+			<Item Name="Get Header from TD_csm.vi" Type="VI" URL="../Utility/_openG/Get Header from TD_csm.vi"/>
+			<Item Name="Get Last PString_csm.vi" Type="VI" URL="../Utility/_openG/Get Last PString_csm.vi"/>
+			<Item Name="Get PString_csm.vi" Type="VI" URL="../Utility/_openG/Get PString_csm.vi"/>
+			<Item Name="Get Strings from Enum_csm.vi" Type="VI" URL="../Utility/_openG/Get Strings from Enum_csm.vi"/>
+			<Item Name="Set Data Name_csm.vi" Type="VI" URL="../Utility/_openG/Set Data Name_csm.vi"/>
+			<Item Name="Set Enum String Value_csm.vi" Type="VI" URL="../Utility/_openG/Set Enum String Value_csm.vi"/>
+			<Item Name="String to 1D Array_csm.vi" Type="VI" URL="../Utility/_openG/String to 1D Array_csm.vi"/>
 		</Item>
 		<Item Name="Timeout Selector.vi" Type="VI" URL="../Utility/Timeout Selector.vi"/>
 		<Item Name="Build Internal State String.vi" Type="VI" URL="../Utility/Build Internal State String.vi"/>
