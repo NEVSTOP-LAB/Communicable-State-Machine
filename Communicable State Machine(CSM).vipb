@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-06-09 17:19:30" Creator="liyao" Comments="" ID="18f51b8309a75f27c2b170082f617e8a">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-06-09 17:33:17" Creator="liyao" Comments="" ID="24e222576331b2f618bad74090dbc1b1">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2024.6.0.3</Library_Version>
@@ -73,7 +73,10 @@
 [update] #275 `,` and `;`  are added to keyword list
 
 ##Tool
-[update] #277 Response Timeout could be modified. The value is stored in LabVIEW.ini as "CSM.Tool.DebugPanel.Response Timeout"</Release_Notes>
+[update] #277 Response Timeout could be modified. The value is stored in LabVIEW.ini as "CSM.Tool.DebugPanel.Response Timeout"
+
+##Documentation
+[update] minor update to examples #274</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
