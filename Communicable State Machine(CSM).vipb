@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-06-21 22:49:41" Creator="liyao" Comments="" ID="fabdd98f351e4df2de1b5d208842c1ba">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-07-04 22:07:34" Creator="liyao" Comments="" ID="f65b23e254d6f9ebf3536f3b8a3f3e90">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
-    <Library_Version>2024.6.0.3</Library_Version>
+    <Library_Version>2024.7.0.3</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>src</Library_Source_Folder>
     <Library_Output_Folder>vip</Library_Output_Folder>
@@ -68,23 +68,8 @@
       <Copyright/>
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
-      <Release_Notes>
-##Arguments
-[update] #275 `,` and `;`  are added to keyword list
-
-##Tool
-[update] #277 Response Timeout could be modified. The value is stored in LabVIEW.ini as "CSM.Tool.DebugPanel.Response Timeout"
-[update] #278 More History for CSM-DebugConsole
-[update] Create Tool Btn for CSM - Mermaid Tool 
-
-##Addon
-[fix] #280 Loop Support: fix bug in CSMLS - Remove Loop Tag and previous State(s) to Break.vi
-
-##Documentation
-[update] minor update to examples #274
-
-##Utility
-[update] all embedded OpenG SubVI is marked as subroutine</Release_Notes>
+      <Release_Notes>##Utility
+[fix] Ignore case in Set Enum String Value Utility VI to improve user experience</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -261,6 +246,7 @@
       <close_labview_before_install>true</close_labview_before_install>
       <restart_labview_after_install>false</restart_labview_after_install>
       <skip_mass_compile_after_install>false</skip_mass_compile_after_install>
+      <install_into_global_environment>false</install_into_global_environment>
     </LabVIEW>
     <VI_Docs>
       <Edit_VI_Description>true</Edit_VI_Description>
