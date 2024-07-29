@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-07-22 13:36:28" Creator="liyao" Comments="" ID="3e2a0e8ae727462ded16f3048cbdf053">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-07-29 20:58:42" Creator="liyao" Comments="" ID="a19174280ee2f0eb737b96daa1f95306">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2024.7.0.3</Library_Version>
@@ -76,6 +76,7 @@
 
 ##Template
 [update] #281 Connect last Response to Response in Error Handler Case.
+[update] Remove most error wires as it's not necessary for most cases.
 
 ##Utility
 [fix] Ignore case in Set Enum String Value Utility VI to improve user experience
