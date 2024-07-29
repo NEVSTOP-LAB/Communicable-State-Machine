@@ -33,6 +33,7 @@
 			<Item Name="Concatenate State with Arguments.vi" Type="VI" URL="../_Support/Common/Concatenate State with Arguments.vi"/>
 			<Item Name="Hex Str to U8 Data.vi" Type="VI" URL="../_Support/Common/Hex Str to U8 Data.vi"/>
 			<Item Name="U8 Data to Hex Str.vi" Type="VI" URL="../_Support/Common/U8 Data to Hex Str.vi"/>
+			<Item Name="Format Timestamp.vi" Type="VI" URL="../_Support/Common/Format Timestamp.vi"/>
 		</Item>
 		<Item Name="CSM-Core" Type="Folder">
 			<Item Name="Support" Type="Folder">
@@ -126,6 +127,14 @@
 			<Item Name="Parse State with Arguments String.vi" Type="VI" URL="../_Support/Message/Parse State with Arguments String.vi"/>
 			<Item Name="Parse Unregister Message.vi" Type="VI" URL="../_Support/Message/Parse Unregister Message.vi"/>
 			<Item Name="Parse Register Message.vi" Type="VI" URL="../_Support/Message/Parse Register Message.vi"/>
+		</Item>
+		<Item Name="Error" Type="Folder">
+			<Item Name="CSM Unhandled State Error.vi" Type="VI" URL="../_Support/Error/CSM Unhandled State Error.vi"/>
+			<Item Name="CSM Critical Error.vi" Type="VI" URL="../_Support/Error/CSM Critical Error.vi"/>
+			<Item Name="CSM Target Error.vi" Type="VI" URL="../_Support/Error/CSM Target Error.vi"/>
+			<Item Name="CSM Target Timeout Error.vi" Type="VI" URL="../_Support/Error/CSM Target Timeout Error.vi"/>
+			<Item Name="CSM No Target Error.vi" Type="VI" URL="../_Support/Error/CSM No Target Error.vi"/>
+			<Item Name="CSM Not Allowed Message.vi" Type="VI" URL="../_Support/Error/CSM Not Allowed Message.vi"/>
 		</Item>
 		<Item Name="CSM Dummy Module.vi" Type="VI" URL="../_Support/CSM Dummy Module.vi"/>
 	</Item>
