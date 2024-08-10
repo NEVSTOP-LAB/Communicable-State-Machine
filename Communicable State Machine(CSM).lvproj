@@ -54,6 +54,9 @@
 		<Item Name=".doc" Type="Folder" URL="../.doc">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
+		<Item Name="_obsolete" Type="Folder" URL="../src/_obsolete">
+			<Property Name="NI.DISK" Type="Bool">true</Property>
+		</Item>
 		<Item Name="API Tree.vi" Type="VI" URL="../src/API Tree.vi"/>
 		<Item Name="Communicable State Machine(CSM).vipb" Type="Document" URL="../Communicable State Machine(CSM).vipb"/>
 		<Item Name="CONTRIBUTING.md" Type="Document" URL="../CONTRIBUTING.md"/>
