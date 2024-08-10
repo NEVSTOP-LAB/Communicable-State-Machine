@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-08-10 14:08:31" Creator="liyao" Comments="" ID="385e4c17595ecaccaa47055d539f0d21">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-08-10 14:41:19" Creator="liyao" Comments="" ID="9cbb3ada9503e0d41745550642a54910">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2024.8.0.3</Library_Version>
@@ -68,7 +68,10 @@
       <Copyright/>
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
-      <Release_Notes>#addon
+      <Release_Notes>#Core
+[fix] #291 The Registry of status should not be removed after CSM exit. It should be unregistered explicitly.
+
+#addon
 [update] #290 add appending or not optional input for "CSMLS - Append Continious State (CSM)"</Release_Notes>
     </Description>
     <Destinations>
