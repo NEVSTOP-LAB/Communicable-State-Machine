@@ -154,6 +154,10 @@
 	</Item>
 	<Item Name="Advance" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
+		<Item Name="obsolete and hide" Type="Folder">
+			<Item Name="CSM - List All Status Registration.vi" Type="VI" URL="../AdvanceAPI/CSM - List All Status Registration.vi"/>
+			<Item Name="CSM - Check Status Registration.vi" Type="VI" URL="../AdvanceAPI/CSM - Check Status Registration.vi"/>
+		</Item>
 		<Item Name="Framework API" Type="Folder">
 			<Item Name="CSM - List Modules.vi" Type="VI" URL="../AdvanceAPI/CSM - List Modules.vi"/>
 			<Item Name="CSM - Module Status.vi" Type="VI" URL="../AdvanceAPI/CSM - Module Status.vi"/>
@@ -166,9 +170,11 @@
 		<Item Name="Broadcast Registry" Type="Folder">
 			<Item Name="CSM - Register Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Register Status Change.vi"/>
 			<Item Name="CSM - Unregister Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Unregister Status Change.vi"/>
-			<Item Name="CSM - Check Status Registration.vi" Type="VI" URL="../AdvanceAPI/CSM - Check Status Registration.vi"/>
+			<Item Name="CSM - Remove Module in Boradcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - Remove Module in Boradcast Registry.vi"/>
+			<Item Name="CSM - List Rules in Broadcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - List Rules in Broadcast Registry.vi"/>
 			<Item Name="CSM - List Status in Broadcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - List Status in Broadcast Registry.vi"/>
-			<Item Name="CSM - List All Status Registration.vi" Type="VI" URL="../AdvanceAPI/CSM - List All Status Registration.vi"/>
+			<Item Name="CSM - List Mapping Relationships in Broadcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - List Mapping Relationships in Broadcast Registry.vi"/>
+			<Item Name="CSM - Check Mapping Relastionship in Broadcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - Check Mapping Relastionship in Broadcast Registry.vi"/>
 		</Item>
 		<Item Name="Args" Type="Folder">
 			<Item Name="CSM - Convert Data to HexStr.vi" Type="VI" URL="../AdvanceAPI/CSM - Convert Data to HexStr.vi"/>
