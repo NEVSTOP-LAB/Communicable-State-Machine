@@ -187,6 +187,7 @@
 			<Item Name="CSM - Post Message(SimMode).vi" Type="VI" URL="../AdvanceAPI/CSM - Post Message(SimMode).vi"/>
 			<Item Name="CSM - Status Change Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Status Change Event.vi"/>
 			<Item Name="CSM - Destroy Status Change Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Destroy Status Change Event.vi"/>
+			<Item Name="CSM - Run Script.vi" Type="VI" URL="../AdvanceAPI/CSM - Run Script.vi"/>
 		</Item>
 		<Item Name="GlobalEvent" Type="Folder">
 			<Item Name="CSM - Global Log Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Global Log Event.vi"/>
