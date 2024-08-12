@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-08-12 13:13:38" Creator="liyao" Comments="" ID="5ebec5c80949f82ebce46eaed2e7270a">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-08-12 14:04:26" Creator="liyao" Comments="" ID="e6f3f16d26f04c318e5e91eef036add2">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2024.8.0.3</Library_Version>
@@ -82,7 +82,8 @@
 
 #addon
 [add] add CSM Watchdog to ensure all CSM modules exit after application is exited.
-[update] #290 add appending or not optional input for "CSMLS - Append Continious State (CSM)"</Release_Notes>
+[update] #290 add appending or not optional input for "CSMLS - Append Continious State (CSM)"
+[fix] #293 corner case in csm logger thread.</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>

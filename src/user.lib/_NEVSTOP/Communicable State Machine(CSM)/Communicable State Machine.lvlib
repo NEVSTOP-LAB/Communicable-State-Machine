@@ -261,6 +261,7 @@
 		<Item Name="Random Change Flag.vi" Type="VI" URL="../Utility/Random Change Flag.vi"/>
 		<Item Name="CSM Data Type String.vi" Type="VI" URL="../Utility/CSM Data Type String.vi"/>
 		<Item Name="CSM Data Type String to Enum.vi" Type="VI" URL="../Utility/CSM Data Type String to Enum.vi"/>
+		<Item Name="Replace Tag with Array.vi" Type="VI" URL="../Utility/Replace Tag with Array.vi"/>
 	</Item>
 	<Item Name="Parse State Queue++.vi" Type="VI" URL="../Parse State Queue++.vi"/>
 	<Item Name="Add State(s) to Queue By BOOL++.vi" Type="VI" URL="../Add State(s) to Queue By BOOL++.vi"/>
