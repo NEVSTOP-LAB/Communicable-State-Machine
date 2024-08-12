@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-08-11 22:38:46" Creator="liyao" Comments="" ID="4048d111cfe9d0ea6ab219b88ceca033">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-08-12 13:13:38" Creator="liyao" Comments="" ID="5ebec5c80949f82ebce46eaed2e7270a">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2024.8.0.3</Library_Version>
@@ -70,6 +70,7 @@
       <URL>https://github.com/NEVSTOP-LAB</URL>
       <Release_Notes>#Core
 [important] Reorganize all broadcast registry APIs to make them more user-friendly.
+[add] #289 Add two more api for Send/Post Message to CSM.
 [add] add CSM - Run Script VI to execute multiple states once.
 [fix] #291 The Registry of status should not be removed after CSM exit. It should be unregistered explicitly.
 

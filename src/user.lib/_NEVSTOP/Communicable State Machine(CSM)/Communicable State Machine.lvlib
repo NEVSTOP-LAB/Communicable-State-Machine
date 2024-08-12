@@ -189,6 +189,9 @@
 			<Item Name="CSM - Message Type.ctl" Type="VI" URL="../AdvanceAPI/CSM - Message Type.ctl"/>
 			<Item Name="CSM - Send Message and Wait for Reply.vi" Type="VI" URL="../AdvanceAPI/CSM - Send Message and Wait for Reply.vi"/>
 			<Item Name="CSM - Post Message.vi" Type="VI" URL="../AdvanceAPI/CSM - Post Message.vi"/>
+			<Item Name="CSM - Wait for Module to Be Alive.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait for Module to Be Alive.vi"/>
+			<Item Name="CSM - Wait and Send Message for Reply.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait and Send Message for Reply.vi"/>
+			<Item Name="CSM - Wait and Post Message.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait and Post Message.vi"/>
 			<Item Name="CSM - Status Change Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Status Change Event.vi"/>
 			<Item Name="CSM - Destroy Status Change Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Destroy Status Change Event.vi"/>
 			<Item Name="CSM - Run Script.vi" Type="VI" URL="../AdvanceAPI/CSM - Run Script.vi"/>
