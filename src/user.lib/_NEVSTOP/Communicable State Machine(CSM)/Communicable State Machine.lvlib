@@ -152,7 +152,7 @@
 		<Item Name="Build Normal Status Message.vi" Type="VI" URL="../_Polymophic/Build Normal Status Message.vi"/>
 		<Item Name="Build Interrupt Status Message.vi" Type="VI" URL="../_Polymophic/Build Interrupt Status Message.vi"/>
 	</Item>
-	<Item Name="Advance" Type="Folder">
+	<Item Name="AdvanceAPI" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 		<Item Name="obsolete and hide" Type="Folder">
 			<Item Name="CSM - List All Status Registration.vi" Type="VI" URL="../AdvanceAPI/CSM - List All Status Registration.vi"/>
