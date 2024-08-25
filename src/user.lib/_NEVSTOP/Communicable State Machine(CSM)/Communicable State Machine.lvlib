@@ -124,6 +124,8 @@
 			<Item Name="_CSM Status Change Event Data.ctl" Type="VI" URL="../_Support/Typedef/_CSM Status Change Event Data.ctl"/>
 			<Item Name="_CSM_GlobalLog_MSG.ctl" Type="VI" URL="../_Support/Typedef/_CSM_GlobalLog_MSG.ctl"/>
 			<Item Name="_CSM_GlobalLog_MSG_TYPE.ctl" Type="VI" URL="../_Support/Typedef/_CSM_GlobalLog_MSG_TYPE.ctl"/>
+			<Item Name="_CSM_GlobalLog_STATE_TYPE.ctl" Type="VI" URL="../_Support/Typedef/_CSM_GlobalLog_STATE_TYPE.ctl"/>
+			<Item Name="_CSM_GlobalLog Filter Rules - v1.0.ctl" Type="VI" URL="../_Support/Typedef/_CSM_GlobalLog Filter Rules - v1.0.ctl"/>
 		</Item>
 		<Item Name="NamingConvention" Type="Folder">
 			<Item Name="Naming Check.vi" Type="VI" URL="../_Support/Naming Check.vi"/>
@@ -208,7 +210,6 @@
 			<Item Name="CSM - Destroy Global Log Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Destroy Global Log Event.vi"/>
 			<Item Name="CSM - Convert Filter Rules.vi" Type="VI" URL="../AdvanceAPI/CSM - Convert Filter Rules.vi"/>
 			<Item Name="CSM - Filter Global Log.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter Global Log.vi"/>
-			<Item Name="CSM - Global Log Filter Rules - v1.0.ctl" Type="VI" URL="../AdvanceAPI/CSM - Global Log Filter Rules - v1.0.ctl"/>
 		</Item>
 		<Item Name="Side-Loop Support" Type="Folder">
 			<Item Name="CSM - Request CSM to Post Message.vi" Type="VI" URL="../AdvanceAPI/CSM - Request CSM to Post Message.vi"/>
