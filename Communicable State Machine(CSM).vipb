@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-08-25 22:05:44" Creator="liyao" Comments="" ID="cfd9f192a62558c35132212a50c4a07c">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-08-26 23:24:21" Creator="liyao" Comments="" ID="32935aa43f237959f7ba7de2ba2ad96a">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2024.8.0.3</Library_Version>
@@ -80,6 +80,7 @@
 [important][add] Add CSM-Helper APIs for creating tools for CSM.
 
 #Template
+[important] #298 Add "VI Reference" case for template, to provide interface to get CSM VI Ref.
 [remove] Remove 'More template' mnu. Use  template VIs in ¡±File&gt;&gt;New..." instead.
 
 #addon
