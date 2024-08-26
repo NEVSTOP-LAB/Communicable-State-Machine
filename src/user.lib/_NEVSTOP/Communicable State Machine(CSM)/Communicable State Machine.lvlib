@@ -84,12 +84,12 @@
 				<Item Name="CSMP-PostPostMsg.vi" Type="VI" URL="../_Support/Process/CSMP-PostPostMsg.vi"/>
 			</Item>
 			<Item Name="FGV-StatusChangeEventRef.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-StatusChangeEventRef.vi"/>
-			<Item Name="global-CSMQ FGV Change Flag.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/global-CSMQ FGV Change Flag.vi"/>
 		</Item>
 		<Item Name="FGV-BroadcastRegistry" Type="Folder">
 			<Item Name="FGV-BroadcastRegistry.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/FGV-BroadcastRegistry.vi"/>
 			<Item Name="Operation-BroadcastRegistry.ctl" Type="VI" URL="../_Support/FGV-BroadcastRegistry/Operation-BroadcastRegistry.ctl"/>
 			<Item Name="global-Broadcast Cache Change Flag.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/global-Broadcast Cache Change Flag.vi"/>
+			<Item Name="global-CSMQ FGV Change Flag.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/global-CSMQ FGV Change Flag.vi"/>
 			<Item Name="Cache-Broadcast Registry Search Result.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/Cache-Broadcast Registry Search Result.vi"/>
 		</Item>
 		<Item Name="GlobalEvent" Type="Folder">
@@ -97,7 +97,10 @@
 				<Item Name="LogFilter.lvclass" Type="LVClass" URL="../_Support/GlobalEvent/LogFilter/LogFilter.lvclass"/>
 			</Item>
 			<Item Name="GEvt-RequestDef.ctl" Type="VI" URL="../_Support/GlobalEvent/GEvt-RequestDef.ctl"/>
+			<Item Name="global-GEvnt Filter Change Flag.vi" Type="VI" URL="../_Support/GlobalEvent/global-GEvnt Filter Change Flag.vi"/>
+			<Item Name="Cache-GEvt Filter Object.vi" Type="VI" URL="../_Support/GlobalEvent/Cache-GEvt Filter Object.vi"/>
 			<Item Name="FGV-GlobalEventRef.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GlobalEventRef.vi"/>
+			<Item Name="FGV-GEvt Filter Obj.vi" Type="VI" URL="../FGV-GEvt Filter Obj.vi"/>
 			<Item Name="Gevt-ThreadQueueName.vi" Type="VI" URL="../_Support/GlobalEvent/Gevt-ThreadQueueName.vi"/>
 			<Item Name="GEvt-BackgroundThread.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-BackgroundThread.vi"/>
 			<Item Name="GEvt-WatchdogThread.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-WatchdogThread.vi"/>
@@ -110,8 +113,10 @@
 			<Item Name="GEvt-Generate Unregister Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate Unregister Log.vi"/>
 			<Item Name="GEvt-Generate Module Created Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate Module Created Log.vi"/>
 			<Item Name="GEvt-Generate Module Destroyed Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate Module Destroyed Log.vi"/>
-			<Item Name="GEvnt-Filter Global Log - v1.0.vi" Type="VI" URL="../_Support/GlobalEvent/GEvnt-Filter Global Log - v1.0.vi"/>
+			<Item Name="GEvt-Generate with Rule Check.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate with Rule Check.vi"/>
+			<Item Name="GEvt-Filter Global Log - v1.0.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Filter Global Log - v1.0.vi"/>
 			<Item Name="GEvt-Convert Filter Rules - v1.0.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Convert Filter Rules - v1.0.vi"/>
+			<Item Name="GEvt-Set Source Filter Rules - v1.0.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Set Source Filter Rules - v1.0.vi"/>
 		</Item>
 		<Item Name="Typedef" Type="Folder">
 			<Item Name="_Cross CSM State Data.ctl" Type="VI" URL="../_Support/Typedef/_Cross CSM State Data.ctl"/>
@@ -207,6 +212,8 @@
 			<Item Name="CSM - Global Log Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Global Log Event.vi"/>
 			<Item Name="CSM - Generate User Global Log.vi" Type="VI" URL="../AdvanceAPI/CSM - Generate User Global Log.vi"/>
 			<Item Name="CSM - Global Log Error Handler.vi" Type="VI" URL="../AdvanceAPI/CSM - Global Log Error Handler.vi"/>
+			<Item Name="CSM - Set Log Filter Rules.vi" Type="VI" URL="../AdvanceAPI/CSM - Set Log Filter Rules.vi"/>
+			<Item Name="CSM - List Log Filter Rules As Strings.vi" Type="VI" URL="../AdvanceAPI/CSM - List Log Filter Rules As Strings.vi"/>
 			<Item Name="CSM - Destroy Global Log Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Destroy Global Log Event.vi"/>
 			<Item Name="CSM - Convert Filter Rules.vi" Type="VI" URL="../AdvanceAPI/CSM - Convert Filter Rules.vi"/>
 			<Item Name="CSM - Filter Global Log.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter Global Log.vi"/>
