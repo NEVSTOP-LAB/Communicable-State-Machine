@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-08-27 09:37:40" Creator="liyao" Comments="" ID="bed6118ea9e33b685bd43403c7dd06bf">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-08-27 10:11:24" Creator="liyao" Comments="" ID="36433a5b4acebc900e21c851977427f2">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2024.8.0.3</Library_Version>
@@ -75,6 +75,7 @@
 [add] add CSM - Run Script VI to execute multiple states once.
 [fix] #291 The Registry of status should not be removed after CSM exit. It should be unregistered explicitly.
 [fix] #295 Stand-Alone CSM module should be able to register other module's status change.
+[fix] #299 CSM Module name should be case insensitive.
 
 #CSMHelper
 [important][add] Add CSM-Helper APIs for creating tools for CSM.
