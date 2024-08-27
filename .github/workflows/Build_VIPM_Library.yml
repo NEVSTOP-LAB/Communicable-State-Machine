@@ -17,7 +17,7 @@ on:
       - '**.drawio'
       - '**.png'
       - '**.json'
-      - 'src/testcases/*'
+      - 'src/testcases/**'
       - '**.yml'
 
   # Allows you to run this workflow manually from the Actions tab
