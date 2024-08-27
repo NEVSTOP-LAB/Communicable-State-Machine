@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-08-26 23:24:21" Creator="liyao" Comments="" ID="32935aa43f237959f7ba7de2ba2ad96a">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-08-27 09:37:40" Creator="liyao" Comments="" ID="bed6118ea9e33b685bd43403c7dd06bf">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2024.8.0.3</Library_Version>
@@ -192,6 +192,9 @@
       <Exclusions>
         <Path>_vipm</Path>
       </Exclusions>
+      <Exclusions>
+        <Path>testcases</Path>
+      </Exclusions>
       <Place_Folder_Contents>
         <Path/>
       </Place_Folder_Contents>
@@ -263,6 +266,7 @@
       <close_labview_before_install>true</close_labview_before_install>
       <restart_labview_after_install>false</restart_labview_after_install>
       <skip_mass_compile_after_install>false</skip_mass_compile_after_install>
+      <install_into_global_environment>false</install_into_global_environment>
     </LabVIEW>
     <VI_Docs>
       <Edit_VI_Description>true</Edit_VI_Description>
