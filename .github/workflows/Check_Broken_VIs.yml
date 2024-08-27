@@ -11,6 +11,9 @@ on:
       - '**.txt'
       - '**.drawio'
       - '**.vipb'
+      - '**.png'
+      - '**.json'
+      - '**.yml'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
