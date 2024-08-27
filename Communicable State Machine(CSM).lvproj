@@ -58,9 +58,8 @@
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
 		<Item Name="testcases" Type="Folder">
-			<Item Name="testcase-Basic-Function" Type="Folder">
-				<Item Name="testcase-Basic-Function.lvclass" Type="LVClass" URL="../src/testcases/testcase-Basic-Function/testcase-Basic-Function.lvclass"/>
-			</Item>
+			<Item Name="testcase-Basic-Function.lvclass" Type="LVClass" URL="../src/testcases/testcase-Basic-Function/testcase-Basic-Function.lvclass"/>
+			<Item Name="testcase-Broadcast Registry.lvclass" Type="LVClass" URL="../src/testcases/testcase-Broadcast Registry/testcase-Broadcast Registry.lvclass"/>
 		</Item>
 		<Item Name="API Tree.vi" Type="VI" URL="../src/API Tree.vi"/>
 		<Item Name="Communicable State Machine(CSM).vipb" Type="Document" URL="../Communicable State Machine(CSM).vipb"/>
@@ -474,7 +473,8 @@
 			<Item Name="Relative Position.ctl" Type="VI" URL="/&lt;resource&gt;/plugins/PopupMenus/support/Relative Position.ctl"/>
 			<Item Name="Checkmark Status.ctl" Type="VI" URL="/&lt;resource&gt;/plugins/PopupMenus/support/Checkmark Status.ctl"/>
 			<Item Name="Enabled Menu Item Status.ctl" Type="VI" URL="/&lt;resource&gt;/plugins/PopupMenus/support/Enabled Menu Item Status.ctl"/>
-			<Item Name="test UUID.vi" Type="VI" URL="../src/_TEST/test UUID.vi"/>
+			<Item Name="test Registry FGV.vi" Type="VI" URL="../src/testcases/testcase-Broadcast Registry/_support/test Registry FGV.vi"/>
+			<Item Name="test Registry FGV2.vi" Type="VI" URL="../src/testcases/testcase-Broadcast Registry/_support/test Registry FGV2.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
