@@ -31,5 +31,6 @@ jobs:
         id: StartVITester
         uses: NEVSTOP-LAB/lvCICD@main
         with:
+          LabVIEW_Version: 2017
           Operation: StartVITester
           Parameter1: ${{ github.workspace }}\Communicable State Machine(CSM).lvproj
