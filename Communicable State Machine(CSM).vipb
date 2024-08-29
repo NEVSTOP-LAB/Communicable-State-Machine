@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-07-29 22:07:49" Creator="liyao" Comments="" ID="6acf9558124aa8368e5c0d69ae023142">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-08-27 19:13:55" Creator="liyao" Comments="" ID="cbfd07c8e2deaf6f3f5f22f09c56f105">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
-    <Library_Version>2024.7.0.3</Library_Version>
+    <Library_Version>2024.8.0.3</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>src</Library_Source_Folder>
     <Library_Output_Folder>vip</Library_Output_Folder>
@@ -68,20 +68,30 @@
       <Copyright/>
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
-      <Release_Notes>##Core
-[update] #282 Multiple Status Input is supported in CSM - Broadcast Status Change.vi
+      <Release_Notes>#Core
+[important] Reorganize all broadcast registry APIs to make them more user-friendly.
+[important] #234 Add Global Event Filter System
+[add] #289 Add two more api for Send/Post Message to CSM.
+[add] add CSM - Run Script VI to execute multiple states once.
+[fix] #291 The Registry of status should not be removed after CSM exit. It should be unregistered explicitly.
+[fix] #295 Stand-Alone CSM module should be able to register other module's status change.
+[fix] #299 CSM Module name should be case insensitive.
 
-##Addons
-[update] #286 Add timestamp format input for logging.
+#CSMHelper
+[important][add] Add CSM-Helper APIs for creating tools for CSM.
 
-##Template
-[update] #281 Connect last Response to Response in Error Handler Case.
-[update] Remove most error wires as it's not necessary for most cases.
-[update] #235 Reorg Error code.
+#Tool
+[add] #300 add tool to fix "VI Reference" case in every CSM module VIs.
+[add] Add Show FP/BD buttons in toolbars.
 
-##Utility
-[fix] Ignore case in Set Enum String Value Utility VI to improve user experience
-[update] #286 Add timestamp format input for String History Cacher.</Release_Notes>
+#Template
+[important] #298 Add "VI Reference" case for template, to provide interface to get CSM VI Ref.
+[remove] Remove 'More template' mnu. Use  template VIs in ¡±File&gt;&gt;New..." instead.
+
+#addon
+[add] add CSM Watchdog to ensure all CSM modules exit after application is exited.
+[update] #290 add appending or not optional input for "CSMLS - Append Continious State (CSM)"
+[fix] #293 corner case in csm logger thread.</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -187,6 +197,9 @@
       <Exclusions>
         <Path>_vipm</Path>
       </Exclusions>
+      <Exclusions>
+        <Path>testcases</Path>
+      </Exclusions>
       <Place_Folder_Contents>
         <Path/>
       </Place_Folder_Contents>
@@ -258,7 +271,6 @@
       <close_labview_before_install>true</close_labview_before_install>
       <restart_labview_after_install>false</restart_labview_after_install>
       <skip_mass_compile_after_install>false</skip_mass_compile_after_install>
-      <install_into_global_environment>false</install_into_global_environment>
     </LabVIEW>
     <VI_Docs>
       <Edit_VI_Description>true</Edit_VI_Description>
