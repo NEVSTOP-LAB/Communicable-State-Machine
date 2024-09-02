@@ -58,9 +58,15 @@
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
 		<Item Name="testcases" Type="Folder">
+			<Item Name="CSM" Type="Folder">
+				<Item Name="Source CSM.vi" Type="VI" URL="../testcases/testcase-csmhelper/CSM/Source CSM.vi"/>
+				<Item Name="Target CSM.vi" Type="VI" URL="../testcases/testcase-csmhelper/CSM/Target CSM.vi"/>
+				<Item Name="UI CSM.vi" Type="VI" URL="../testcases/testcase-csmhelper/CSM/UI CSM.vi"/>
+			</Item>
 			<Item Name="testcase-Basic-Function.lvclass" Type="LVClass" URL="../testcases/testcase-Basic-Function/testcase-Basic-Function.lvclass"/>
 			<Item Name="testcase-Broadcast Registry.lvclass" Type="LVClass" URL="../testcases/testcase-Broadcast Registry/testcase-Broadcast Registry.lvclass"/>
 			<Item Name="testcase-csm-file-logger.lvclass" Type="LVClass" URL="../testcases/testcase-csm-file-logger/testcase-csm-file-logger.lvclass"/>
+			<Item Name="testcase-csmhelper.lvclass" Type="LVClass" URL="../testcases/testcase-csmhelper/testcase-csmhelper.lvclass"/>
 		</Item>
 		<Item Name="API Tree.vi" Type="VI" URL="../src/API Tree.vi"/>
 		<Item Name="Communicable State Machine(CSM).vipb" Type="Document" URL="../Communicable State Machine(CSM).vipb"/>
