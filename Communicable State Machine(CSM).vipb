@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-09-03 09:40:59" Creator="liyao" Comments="" ID="623c01b1c185e4b0c83916ae2629e6c0">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-09-04 13:05:09" Creator="liyao" Comments="" ID="d45dbe729b6b73278010832a9605b2b2">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2024.9.0.3</Library_Version>
@@ -69,7 +69,10 @@
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
       <Release_Notes>#Core
-[fix] minor fix #302</Release_Notes>
+[fix] minor fix #302
+
+#Tool
+[important] #92 #287 Add Vi analyzer Support. </Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
