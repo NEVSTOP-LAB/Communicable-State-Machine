@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-09-04 16:00:31" Creator="liyao" Comments="" ID="f59b2c7ae41e082bc52577032815b4c9">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-09-05 23:10:23" Creator="liyao" Comments="" ID="7b4f9a04ebcb304d51253aa58b8339fb">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2024.9.0.3</Library_Version>
@@ -69,10 +69,12 @@
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
       <Release_Notes>#Core
+[update] Uncheck inline option in Parse State Queue++.vi. 
 [fix] minor fix #302 #304
 
 #Tool
-[important] #92 #287 Add Vi analyzer Support. </Release_Notes>
+[important] #92 #287 Add Vi analyzer Support. 
+[update] #305 include *.vit files in Add "VI Reference" Tool.</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
