@@ -336,6 +336,15 @@
 		</Item>
 	</Item>
 	<Item Name="Properties" Type="Folder">
+		<Item Name="Read Paired Tunnels of Case Structure.vi" Type="VI" URL="../Properties/Read Paired Tunnels of Case Structure.vi">
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;7!!!!$!!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!$!"Q!!A!!%!K!!!!#A"1!!)!"!!%!"R!1!!"`````Q!&amp;$F"B;8*F:#"5&gt;7ZO:7RT!!!%!!!!,E"Q!"Y!!"131V..,5BF&lt;("F=CZM&gt;G.M98.T!!!/1V..,5BF&lt;("F=C"P&gt;81!!#"!5!!$!!!!!1!#%W6S=G^S)'FO)#BO&lt;S"F=H*P=CE!,%"Q!"Y!!"131V..,5BF&lt;("F=CZM&gt;G.M98.T!!!.1V..,5BF&lt;("F=C"J&lt;A"B!0!!$!!$!!9!"Q!)!!=!"Q!(!!=!#1!(!!=!#A-!!(A!!!U)!!!*!!!!!!!!!!U,!!!!!!!!!!!!!!!!!!!!!!!!#A!!!!!!!!!!!!!!%!!!$1!!!!Q!!!!!!!!!!!!!!1!,!!!!!!</Property>
+			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
+			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
+			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1342710291</Property>
+		</Item>
 		<Item Name="Read States.vi" Type="VI" URL="../Properties/Read States.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%_!!!!#Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!!A!-0````]!%E"!!!(`````!!5&amp;6G&amp;M&gt;75!,E"Q!"Y!!"131V..,5BF&lt;("F=CZM&gt;G.M98.T!!!/1V..,5BF&lt;("F=C"P&gt;81!!#"!5!!$!!!!!1!#%W6S=G^S)'FO)#BO&lt;S"F=H*P=CE!,%"Q!"Y!!"131V..,5BF&lt;("F=CZM&gt;G.M98.T!!!.1V..,5BF&lt;("F=C"J&lt;A"B!0!!$!!$!!1!"A!(!!1!"!!%!!1!#!!%!!1!#1-!!(A!!!U)!!!!!!!!#1!!!!U,!!!!!!!!!!!!!!!!!!!!!!!!#!!!!!!!!!!!!!!!%!!!$1!!!!Q!!!!!!!!!!!!!!1!+!!!!!!</Property>
 			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
@@ -790,6 +799,17 @@
 			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">1082143234</Property>
+		</Item>
+	</Item>
+	<Item Name="Utility" Type="Folder">
+		<Item Name="PaiedTunnels - Connect Wire.vi" Type="VI" URL="../Utility/PaiedTunnels - Connect Wire.vi">
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%'!!!!#Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AF&amp;=H*P=C"P&gt;81!"!!!!"*!=!!)!!"!+A!!"%RF:H1!!"*!=!!)!!"!+A!!"6*J:WBU!"B!5!!#!!5!"AR197FF:&amp;2V&lt;GZF&lt;(-!!":!5!!$!!!!!1!##%6S=G^S)'FO!!!81!-!%7FO:'6Y+#UR)':P=C"B&lt;'QJ!&amp;1!]!!-!!-!"!!%!!=!"!!%!!1!"!!)!!1!#1!(!Q!!?!!!$1A!!!!!!!!!!!!!$1M!!!!!!!!!!!!!!!!!!!!!!!!+!!!!!!!!!!A!!!!1!!!!!!%!#A!!!!!</Property>
+			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
+			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
+			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1082143250</Property>
 		</Item>
 	</Item>
 	<Item Name="CSM-Helper API.vi" Type="VI" URL="../CSM-Helper API.vi">
