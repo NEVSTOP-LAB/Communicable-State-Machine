@@ -487,6 +487,8 @@
 			<Item Name="Relative Position.ctl" Type="VI" URL="/&lt;resource&gt;/plugins/PopupMenus/support/Relative Position.ctl"/>
 			<Item Name="Checkmark Status.ctl" Type="VI" URL="/&lt;resource&gt;/plugins/PopupMenus/support/Checkmark Status.ctl"/>
 			<Item Name="Enabled Menu Item Status.ctl" Type="VI" URL="/&lt;resource&gt;/plugins/PopupMenus/support/Enabled Menu Item Status.ctl"/>
+			<Item Name="Wrapper CSM.vi" Type="VI" URL="../testcases/testcase-csmhelper/CSM/Wrapper CSM.vi"/>
+			<Item Name="Wrapper-CSM Queue++.vi" Type="VI" URL="../testcases/testcase-csmhelper/_support/Wrapper-CSM Queue++.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
