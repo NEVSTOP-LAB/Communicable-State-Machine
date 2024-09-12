@@ -9,6 +9,7 @@
 	<Item Name="Dashboard Cell Resize.vi" Type="VI" URL="../Dashboard Cell Resize.vi"/>
 	<Item Name="Dashboard Cell2 Array Resize.vi" Type="VI" URL="../Dashboard Cell2 Array Resize.vi"/>
 	<Item Name="Select Greater_nevstop.vi" Type="VI" URL="../Select Greater_nevstop.vi"/>
+	<Item Name="Is CSM Module (Advanced).vi" Type="VI" URL="../Is CSM Module (Advanced).vi"/>
 	<Item Name="Open CSM BD.vi" Type="VI" URL="../Open CSM BD.vi"/>
 	<Item Name="Open CSM FP.vi" Type="VI" URL="../Open CSM FP.vi"/>
 </Library>
