@@ -78,6 +78,7 @@
 		<Item Name="LICENSE" Type="Document" URL="../LICENSE"/>
 		<Item Name="README(CN).md" Type="Document" URL="../README(CN).md"/>
 		<Item Name="README.md" Type="Document" URL="../README.md"/>
+		<Item Name="NOT a CSM.vi" Type="VI" URL="../testcases/_CSMs/NOT a CSM.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Add State(s) to Queue__JKI_lib_State_Machine.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/State Machine/_JKI_lib_State_Machine.llb/Add State(s) to Queue__JKI_lib_State_Machine.vi"/>
