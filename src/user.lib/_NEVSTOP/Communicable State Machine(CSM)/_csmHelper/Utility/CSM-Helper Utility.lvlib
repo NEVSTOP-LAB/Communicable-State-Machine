@@ -13,10 +13,10 @@
 	</Item>
 	<Item Name="Support" Type="Folder">
 		<Item Name="CSM Module Type.vi" Type="VI" URL="../CSM Module Type.vi"/>
-		<Item Name="Find Event Structure from Case Structure.vi" Type="VI" URL="../_Support/Find Event Structure from Case Structure.vi"/>
-		<Item Name="Find Parse State Queue from Case Structure.vi" Type="VI" URL="../_Support/Find Parse State Queue from Case Structure.vi"/>
-		<Item Name="Find Parse State Queue from Event Strcture.vi" Type="VI" URL="../_Support/Find Parse State Queue from Event Strcture.vi"/>
-		<Item Name="Find Parse State Queue from While Loop.vi" Type="VI" URL="../_Support/Find Parse State Queue from While Loop.vi"/>
+		<Item Name="Find Event Structure from Case Structure.vi" Type="VI" URL="../_Support/Initialize/Find Event Structure from Case Structure.vi"/>
+		<Item Name="Find Parse State Queue from Case Structure.vi" Type="VI" URL="../_Support/Initialize/Find Parse State Queue from Case Structure.vi"/>
+		<Item Name="Find Parse State Queue from Event Strcture.vi" Type="VI" URL="../_Support/Initialize/Find Parse State Queue from Event Strcture.vi"/>
+		<Item Name="Find Parse State Queue from While Loop.vi" Type="VI" URL="../_Support/Initialize/Find Parse State Queue from While Loop.vi"/>
 	</Item>
 	<Item Name="Typedef" Type="Folder">
 		<Item Name="CSM Basic Refs.ctl" Type="VI" URL="../CSM Basic Refs.ctl"/>
