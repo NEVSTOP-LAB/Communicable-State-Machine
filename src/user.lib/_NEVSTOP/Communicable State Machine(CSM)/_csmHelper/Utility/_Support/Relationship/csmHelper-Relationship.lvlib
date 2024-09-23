@@ -4,21 +4,8 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">385908736</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
-	<Property Name="NI.SortType" Type="Int">3</Property>
-	<Item Name="Instances" Type="Folder">
-		<Item Name="Is CSM Module - CaseStructure.vi" Type="VI" URL="../Is CSM Module - CaseStructure.vi"/>
-		<Item Name="Is CSM Module - EventStructure.vi" Type="VI" URL="../Is CSM Module - EventStructure.vi"/>
-		<Item Name="Is CSM Module - ParseStateVI.vi" Type="VI" URL="../Is CSM Module - ParseStateVI.vi"/>
-		<Item Name="Is CSM Module - VIRef.vi" Type="VI" URL="../Is CSM Module - VIRef.vi"/>
-		<Item Name="Is CSM Module - WhileLoop.vi" Type="VI" URL="../Is CSM Module - WhileLoop.vi"/>
-	</Item>
-	<Item Name="Typedef" Type="Folder">
-		<Item Name="CSM Basic Refs.ctl" Type="VI" URL="../CSM Basic Refs.ctl"/>
-		<Item Name="CSM Module Type.ctl" Type="VI" URL="../CSM Module Type.ctl"/>
-	</Item>
-	<Item Name="API" Type="Folder">
-		<Item Name="CSM Essential States.vi" Type="VI" URL="../CSM Essential States.vi"/>
-		<Item Name="CSM Module Type.vi" Type="VI" URL="../CSM Module Type.vi"/>
-		<Item Name="Is CSM Module.vi" Type="VI" URL="../Is CSM Module.vi"/>
-	</Item>
+	<Item Name="Find Event Structure from Case Structure.vi" Type="VI" URL="../Find Event Structure from Case Structure.vi"/>
+	<Item Name="Find Parse State Queue from Case Structure.vi" Type="VI" URL="../Find Parse State Queue from Case Structure.vi"/>
+	<Item Name="Find Parse State Queue from Event Strcture.vi" Type="VI" URL="../Find Parse State Queue from Event Strcture.vi"/>
+	<Item Name="Find Parse State Queue from While Loop.vi" Type="VI" URL="../Find Parse State Queue from While Loop.vi"/>
 </Library>
