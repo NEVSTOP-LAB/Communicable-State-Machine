@@ -6,6 +6,7 @@
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Property Name="NI.SortType" Type="Int">3</Property>
 	<Item Name="Instances" Type="Folder">
+		<Item Name="Is CSM Module - Structure.vi" Type="VI" URL="../Is CSM Module - Structure.vi"/>
 		<Item Name="Is CSM Module - CaseStructure.vi" Type="VI" URL="../Is CSM Module - CaseStructure.vi"/>
 		<Item Name="Is CSM Module - EventStructure.vi" Type="VI" URL="../Is CSM Module - EventStructure.vi"/>
 		<Item Name="Is CSM Module - ParseStateVI.vi" Type="VI" URL="../Is CSM Module - ParseStateVI.vi"/>
