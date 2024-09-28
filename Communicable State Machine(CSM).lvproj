@@ -58,9 +58,21 @@
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
 		<Item Name="testcases" Type="Folder">
-			<Item Name="testcase-Basic-Function.lvclass" Type="LVClass" URL="../src/testcases/testcase-Basic-Function/testcase-Basic-Function.lvclass"/>
-			<Item Name="testcase-Broadcast Registry.lvclass" Type="LVClass" URL="../src/testcases/testcase-Broadcast Registry/testcase-Broadcast Registry.lvclass"/>
-			<Item Name="testcase-csm-file-logger.lvclass" Type="LVClass" URL="../src/testcases/testcase-csm-file-logger/testcase-csm-file-logger.lvclass"/>
+			<Item Name="_CSMs" Type="Folder">
+				<Item Name="_support" Type="Folder">
+					<Item Name="Wrapper-CSM Queue++.vi" Type="VI" URL="../testcases/_CSMs/_support/Wrapper-CSM Queue++.vi"/>
+				</Item>
+				<Item Name="Source CSM.vi" Type="VI" URL="../testcases/_CSMs/Source CSM.vi"/>
+				<Item Name="Target CSM.vi" Type="VI" URL="../testcases/_CSMs/Target CSM.vi"/>
+				<Item Name="UI CSM.vi" Type="VI" URL="../testcases/_CSMs/UI CSM.vi"/>
+				<Item Name="Wrapper CSM.vi" Type="VI" URL="../testcases/_CSMs/Wrapper CSM.vi"/>
+				<Item Name="NOT a CSM.vi" Type="VI" URL="../testcases/_CSMs/NOT a CSM.vi"/>
+				<Item Name="JKISM.vi" Type="VI" URL="../testcases/_CSMs/JKISM.vi"/>
+			</Item>
+			<Item Name="testcase-csmhelper.lvclass" Type="LVClass" URL="../testcases/testcase-csmhelper/testcase-csmhelper.lvclass"/>
+			<Item Name="testcase-csm-file-logger.lvclass" Type="LVClass" URL="../testcases/testcase-csm-file-logger/testcase-csm-file-logger.lvclass"/>
+			<Item Name="testcase-Broadcast Registry.lvclass" Type="LVClass" URL="../testcases/testcase-Broadcast Registry/testcase-Broadcast Registry.lvclass"/>
+			<Item Name="testcase-Basic-Function.lvclass" Type="LVClass" URL="../testcases/testcase-Basic-Function/testcase-Basic-Function.lvclass"/>
 		</Item>
 		<Item Name="API Tree.vi" Type="VI" URL="../src/API Tree.vi"/>
 		<Item Name="Communicable State Machine(CSM).vipb" Type="Document" URL="../Communicable State Machine(CSM).vipb"/>
@@ -161,6 +173,12 @@
 				<Item Name="TRef Find Object By Label.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/traverseref.llb/TRef Find Object By Label.vi"/>
 				<Item Name="Get GObject Label.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/traverseref.llb/Get GObject Label.vi"/>
 				<Item Name="LVPointTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVPointTypeDef.ctl"/>
+				<Item Name="VIAnCtl TestRanking.ctl" Type="VI" URL="/&lt;vilib&gt;/addons/analyzer/_analyzerctrls.llb/VIAnCtl TestRanking.ctl"/>
+				<Item Name="VIAnCtl Reconstruct Data.ctl" Type="VI" URL="/&lt;vilib&gt;/addons/analyzer/_analyzerctrls.llb/VIAnCtl Reconstruct Data.ctl"/>
+				<Item Name="VIAnCtl ResultsData (index).ctl" Type="VI" URL="/&lt;vilib&gt;/addons/analyzer/_analyzerctrls.llb/VIAnCtl ResultsData (index).ctl"/>
+				<Item Name="VIAnUtil Has Diagram.vi" Type="VI" URL="/&lt;vilib&gt;/addons/analyzer/_analyzerutils.llb/VIAnUtil Has Diagram.vi"/>
+				<Item Name="VIAnUtil Clear Specific Error.vi" Type="VI" URL="/&lt;vilib&gt;/addons/analyzer/_analyzerutils.llb/VIAnUtil Clear Specific Error.vi"/>
+				<Item Name="VIAnUtil Has Panel.vi" Type="VI" URL="/&lt;vilib&gt;/addons/analyzer/_analyzerutils.llb/VIAnUtil Has Panel.vi"/>
 				<Item Name="TestCase.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/VI Tester/TestCase.llb/TestCase.lvclass"/>
 				<Item Name="VITesterUtilities.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/VI Tester/_support/VITesterUtilities.lvlib"/>
 				<Item Name="Filter Error Codes__jki_lib_error_handling -- VI Tester__jki_vi_tester.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/VI Tester/_support/Support.llb/Filter Error Codes__jki_lib_error_handling -- VI Tester__jki_vi_tester.vi"/>

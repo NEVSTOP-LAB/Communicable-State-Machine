@@ -100,7 +100,7 @@
 			<Item Name="global-GEvnt Filter Change Flag.vi" Type="VI" URL="../_Support/GlobalEvent/global-GEvnt Filter Change Flag.vi"/>
 			<Item Name="Cache-GEvt Filter Object.vi" Type="VI" URL="../_Support/GlobalEvent/Cache-GEvt Filter Object.vi"/>
 			<Item Name="FGV-GlobalEventRef.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GlobalEventRef.vi"/>
-			<Item Name="FGV-GEvt Filter Obj.vi" Type="VI" URL="../FGV-GEvt Filter Obj.vi"/>
+			<Item Name="FGV-GEvt Filter Obj.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GEvt Filter Obj.vi"/>
 			<Item Name="Gevt-ThreadQueueName.vi" Type="VI" URL="../_Support/GlobalEvent/Gevt-ThreadQueueName.vi"/>
 			<Item Name="GEvt-BackgroundThread.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-BackgroundThread.vi"/>
 			<Item Name="GEvt-WatchdogThread.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-WatchdogThread.vi"/>
