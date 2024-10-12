@@ -21,6 +21,7 @@
 - <b>Name("" to use uuid)</b>: CSM 模块名称
 - <b>Init State("Macro: Initialize")</b>: CSM 初始化状态, 默认为 "Macro: Initialize"
 
+
 ### CSM User Interface(UI) Module Template.vi
 
 用于创建具有用户界面的 CSM 模块的模板，模板中包含用户事件结构用于响应用户操作。
