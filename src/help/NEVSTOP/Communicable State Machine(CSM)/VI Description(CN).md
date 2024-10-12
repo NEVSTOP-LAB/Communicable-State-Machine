@@ -4,91 +4,91 @@
 
 ### CSM - No-Event Structure Template.vi
 
-ç”¨äºåˆ›å»ºå…·æœ‰æ— ç”¨æˆ·ç•Œé¢çš„ CSM æ¨¡å—çš„æ¨¡æ¿
+ÓÃÓÚ´´½¨¾ßÓĞÎŞÓÃ»§½çÃæµÄ CSM Ä£¿éµÄÄ£°å
 
 -- <b>Inputs:</b> --
-<b>Name("" to use uuid)</b>: CSM æ¨¡å—åç§°
-  - å¦‚æœè¾“å…¥ä¸º ""ï¼Œå°†ä½¿ç”¨ UUID ä½œä¸ºæ¨¡å—åç§°ã€‚è¯¥æ¨¡å—è¢«æ ‡è®°ä¸ºç‹¬ç«‹æ¨¡å¼ï¼Œä¸ä¼šåŒ…å«åœ¨æ¨¡å—åˆ—è¡¨ä¸­ã€‚
-  - å¦‚æœè¾“å…¥ä»¥ '#' ç»“å°¾ï¼Œåˆ™è¯¥æ¨¡å—å°†åœ¨å·¥ä½œæ¨¡å¼ä¸‹è¿è¡Œã€‚å…·æœ‰ç›¸åŒåç§°çš„æ¨¡å—å°†å…±äº«åŒä¸€æ¶ˆæ¯é˜Ÿåˆ—ã€‚ä»»ä½•å¤–éƒ¨æ¶ˆæ¯å°†ç”±å…¶ä¸­ä¸€ä¸ªæ¨¡å—å¤„ç†ï¼Œå–å†³äºå“ªä¸ªæ¨¡å—ç©ºé—²ã€‚
-  - å¦åˆ™ï¼Œè¾“å…¥å­—ç¬¦ä¸²å°†è¢«ç”¨ä½œæ¨¡å—åç§°ï¼Œè¯¥åç§°åº”åœ¨ç³»ç»Ÿä¸­ä¿æŒå”¯ä¸€ã€‚å¦‚æœåœ¨ç³»ç»Ÿä¸­ä½¿ç”¨é‡å¤çš„æ¨¡å—åç§°ï¼ŒCSM å°†è¿›å…¥ "Critical Error" çŠ¶æ€ã€‚
+<b>Name("" to use uuid)</b>: CSM Ä£¿éÃû³Æ
+  - Èç¹ûÊäÈëÎª ""£¬½«Ê¹ÓÃ UUID ×÷ÎªÄ£¿éÃû³Æ¡£¸ÃÄ£¿é±»±ê¼ÇÎª¶ÀÁ¢Ä£Ê½£¬²»»á°üº¬ÔÚÄ£¿éÁĞ±íÖĞ¡£
+  - Èç¹ûÊäÈëÒÔ '#' ½áÎ²£¬Ôò¸ÃÄ£¿é½«ÔÚ¹¤×÷Ä£Ê½ÏÂÔËĞĞ¡£¾ßÓĞÏàÍ¬Ãû³ÆµÄÄ£¿é½«¹²ÏíÍ¬Ò»ÏûÏ¢¶ÓÁĞ¡£ÈÎºÎÍâ²¿ÏûÏ¢½«ÓÉÆäÖĞÒ»¸öÄ£¿é´¦Àí£¬È¡¾öÓÚÄÄ¸öÄ£¿é¿ÕÏĞ¡£
+  - ·ñÔò£¬ÊäÈë×Ö·û´®½«±»ÓÃ×÷Ä£¿éÃû³Æ£¬¸ÃÃû³ÆÓ¦ÔÚÏµÍ³ÖĞ±£³ÖÎ¨Ò»¡£Èç¹ûÔÚÏµÍ³ÖĞÊ¹ÓÃÖØ¸´µÄÄ£¿éÃû³Æ£¬CSM ½«½øÈë "Critical Error" ×´Ì¬¡£
 
 
 ### CSM User Interface(UI) Module Template.vi
 
-ç”¨äºåˆ›å»ºå…·æœ‰ç”¨æˆ·ç•Œé¢çš„ CSM æ¨¡å—çš„æ¨¡æ¿ï¼Œæ¨¡æ¿ä¸­åŒ…å«ç”¨æˆ·äº‹ä»¶ç»“æ„ç”¨äºå“åº”ç”¨æˆ·æ“ä½œã€‚
+ÓÃÓÚ´´½¨¾ßÓĞÓÃ»§½çÃæµÄ CSM Ä£¿éµÄÄ£°å£¬Ä£°åÖĞ°üº¬ÓÃ»§ÊÂ¼ş½á¹¹ÓÃÓÚÏìÓ¦ÓÃ»§²Ù×÷¡£
 
 -- <b>Inputs:</b> --
-<b>Name("" to use uuid)</b>: CSM æ¨¡å—åç§°
-  - å¦‚æœè¾“å…¥ä¸º ""ï¼Œå°†ä½¿ç”¨ UUID ä½œä¸ºæ¨¡å—åç§°ã€‚è¯¥æ¨¡å—è¢«æ ‡è®°ä¸ºç‹¬ç«‹æ¨¡å¼ï¼Œä¸ä¼šåŒ…å«åœ¨æ¨¡å—åˆ—è¡¨ä¸­ã€‚
-  - å¦‚æœè¾“å…¥ä»¥ '#' ç»“å°¾ï¼Œåˆ™è¯¥æ¨¡å—å°†åœ¨å·¥ä½œæ¨¡å¼ä¸‹è¿è¡Œã€‚å…·æœ‰ç›¸åŒåç§°çš„æ¨¡å—å°†å…±äº«åŒä¸€æ¶ˆæ¯é˜Ÿåˆ—ã€‚ä»»ä½•å¤–éƒ¨æ¶ˆæ¯å°†ç”±å…¶ä¸­ä¸€ä¸ªæ¨¡å—å¤„ç†ï¼Œå–å†³äºå“ªä¸ªæ¨¡å—ç©ºé—²ã€‚
-  - å¦åˆ™ï¼Œè¾“å…¥å­—ç¬¦ä¸²å°†è¢«ç”¨ä½œæ¨¡å—åç§°ï¼Œè¯¥åç§°åº”åœ¨ç³»ç»Ÿä¸­ä¿æŒå”¯ä¸€ã€‚å¦‚æœåœ¨ç³»ç»Ÿä¸­ä½¿ç”¨é‡å¤çš„æ¨¡å—åç§°ï¼ŒCSM å°†è¿›å…¥ "Critical Error" çŠ¶æ€ã€‚
+<b>Name("" to use uuid)</b>: CSM Ä£¿éÃû³Æ
+  - Èç¹ûÊäÈëÎª ""£¬½«Ê¹ÓÃ UUID ×÷ÎªÄ£¿éÃû³Æ¡£¸ÃÄ£¿é±»±ê¼ÇÎª¶ÀÁ¢Ä£Ê½£¬²»»á°üº¬ÔÚÄ£¿éÁĞ±íÖĞ¡£
+  - Èç¹ûÊäÈëÒÔ '#' ½áÎ²£¬Ôò¸ÃÄ£¿é½«ÔÚ¹¤×÷Ä£Ê½ÏÂÔËĞĞ¡£¾ßÓĞÏàÍ¬Ãû³ÆµÄÄ£¿é½«¹²ÏíÍ¬Ò»ÏûÏ¢¶ÓÁĞ¡£ÈÎºÎÍâ²¿ÏûÏ¢½«ÓÉÆäÖĞÒ»¸öÄ£¿é´¦Àí£¬È¡¾öÓÚÄÄ¸öÄ£¿é¿ÕÏĞ¡£
+  - ·ñÔò£¬ÊäÈë×Ö·û´®½«±»ÓÃ×÷Ä£¿éÃû³Æ£¬¸ÃÃû³ÆÓ¦ÔÚÏµÍ³ÖĞ±£³ÖÎ¨Ò»¡£Èç¹ûÔÚÏµÍ³ÖĞÊ¹ÓÃÖØ¸´µÄÄ£¿éÃû³Æ£¬CSM ½«½øÈë "Critical Error" ×´Ì¬¡£
 
 
 ### CSM - With Event Structure Template - Tiny.vi
 
-ç”¨äºåˆ›å»ºå…·æœ‰ç”¨æˆ·ç•Œé¢çš„ CSM æ¨¡å—çš„æ¨¡æ¿ï¼Œæ¨¡æ¿ä¸­åŒ…å«ç”¨æˆ·äº‹ä»¶ç»“æ„ç”¨äºå“åº”ç”¨æˆ·æ“ä½œã€‚æ­¤æ¨¡æ¿çš„ä»£ç æ¯”è¾ƒç´§å‡‘ã€‚
+ÓÃÓÚ´´½¨¾ßÓĞÓÃ»§½çÃæµÄ CSM Ä£¿éµÄÄ£°å£¬Ä£°åÖĞ°üº¬ÓÃ»§ÊÂ¼ş½á¹¹ÓÃÓÚÏìÓ¦ÓÃ»§²Ù×÷¡£´ËÄ£°åµÄ´úÂë±È½Ï½ô´Õ¡£
 
 -- <b>Inputs:</b> --
-<b>Name("" to use uuid)</b>: CSM æ¨¡å—åç§°
-  - å¦‚æœè¾“å…¥ä¸º ""ï¼Œå°†ä½¿ç”¨ UUID ä½œä¸ºæ¨¡å—åç§°ã€‚è¯¥æ¨¡å—è¢«æ ‡è®°ä¸ºç‹¬ç«‹æ¨¡å¼ï¼Œä¸ä¼šåŒ…å«åœ¨æ¨¡å—åˆ—è¡¨ä¸­ã€‚
-  - å¦‚æœè¾“å…¥ä»¥ '#' ç»“å°¾ï¼Œåˆ™è¯¥æ¨¡å—å°†åœ¨å·¥ä½œæ¨¡å¼ä¸‹è¿è¡Œã€‚å…·æœ‰ç›¸åŒåç§°çš„æ¨¡å—å°†å…±äº«åŒä¸€æ¶ˆæ¯é˜Ÿåˆ—ã€‚ä»»ä½•å¤–éƒ¨æ¶ˆæ¯å°†ç”±å…¶ä¸­ä¸€ä¸ªæ¨¡å—å¤„ç†ï¼Œå–å†³äºå“ªä¸ªæ¨¡å—ç©ºé—²ã€‚
-  - å¦åˆ™ï¼Œè¾“å…¥å­—ç¬¦ä¸²å°†è¢«ç”¨ä½œæ¨¡å—åç§°ï¼Œè¯¥åç§°åº”åœ¨ç³»ç»Ÿä¸­ä¿æŒå”¯ä¸€ã€‚å¦‚æœåœ¨ç³»ç»Ÿä¸­ä½¿ç”¨é‡å¤çš„æ¨¡å—åç§°ï¼ŒCSM å°†è¿›å…¥ "Critical Error" çŠ¶æ€ã€‚
+<b>Name("" to use uuid)</b>: CSM Ä£¿éÃû³Æ
+  - Èç¹ûÊäÈëÎª ""£¬½«Ê¹ÓÃ UUID ×÷ÎªÄ£¿éÃû³Æ¡£¸ÃÄ£¿é±»±ê¼ÇÎª¶ÀÁ¢Ä£Ê½£¬²»»á°üº¬ÔÚÄ£¿éÁĞ±íÖĞ¡£
+  - Èç¹ûÊäÈëÒÔ '#' ½áÎ²£¬Ôò¸ÃÄ£¿é½«ÔÚ¹¤×÷Ä£Ê½ÏÂÔËĞĞ¡£¾ßÓĞÏàÍ¬Ãû³ÆµÄÄ£¿é½«¹²ÏíÍ¬Ò»ÏûÏ¢¶ÓÁĞ¡£ÈÎºÎÍâ²¿ÏûÏ¢½«ÓÉÆäÖĞÒ»¸öÄ£¿é´¦Àí£¬È¡¾öÓÚÄÄ¸öÄ£¿é¿ÕÏĞ¡£
+  - ·ñÔò£¬ÊäÈë×Ö·û´®½«±»ÓÃ×÷Ä£¿éÃû³Æ£¬¸ÃÃû³ÆÓ¦ÔÚÏµÍ³ÖĞ±£³ÖÎ¨Ò»¡£Èç¹ûÔÚÏµÍ³ÖĞÊ¹ÓÃÖØ¸´µÄÄ£¿éÃû³Æ£¬CSM ½«½øÈë "Critical Error" ×´Ì¬¡£
 
 
 ### Parse State Queue++.vi
 
-è§£æJKIçŠ¶æ€æœºçŠ¶æ€é˜Ÿåˆ—ï¼Œè¿”å›å°†æ‰§è¡Œçš„ä¸‹ä¸€ä¸ªå½“å‰çŠ¶æ€ã€å‚æ•°ç­‰ä¿¡æ¯ã€‚
+½âÎöJKI×´Ì¬»ú×´Ì¬¶ÓÁĞ£¬·µ»Ø½«Ö´ĞĞµÄÏÂÒ»¸öµ±Ç°×´Ì¬¡¢²ÎÊıµÈĞÅÏ¢¡£
 
 -- <b>Inputs:</b> --
-<b>State Queue</b>: æ•´ä¸ªçŠ¶æ€é˜Ÿåˆ—è¢«è¿æ¥åˆ°æ­¤è¾“å…¥ã€‚è¿™åº”è¯¥æ¥è‡ª CSM çš„ç§»ä½å¯„å­˜å™¨ã€‚
-<b>Error In (no error)</b>: æ¥è‡ªJKIçŠ¶æ€æœºçš„é”™è¯¯ç°‡è¢«è¿æ¥åˆ°æ­¤è¾“å…¥ã€‚å¦‚æœå‘ç”Ÿé”™è¯¯å¹¶å‡ºç°åœ¨æ­¤è¾“å…¥ä¸Šï¼Œåˆ™å½“å‰çŠ¶æ€è¾“å‡ºå°†è¿”å› "Error Handler" çŠ¶æ€ã€‚
-<b>Name("" to use uuid)</b>: CSM æ¨¡å—åç§°
-  - å¦‚æœè¾“å…¥ä¸º ""ï¼Œå°†ä½¿ç”¨ UUID ä½œä¸ºæ¨¡å—åç§°ã€‚è¯¥æ¨¡å—è¢«æ ‡è®°ä¸ºç‹¬ç«‹æ¨¡å¼ï¼Œä¸ä¼šåŒ…å«åœ¨æ¨¡å—åˆ—è¡¨ä¸­ã€‚
-  - å¦‚æœè¾“å…¥ä»¥ '#' ç»“å°¾ï¼Œåˆ™è¯¥æ¨¡å—å°†åœ¨å·¥ä½œæ¨¡å¼ä¸‹è¿è¡Œã€‚å…·æœ‰ç›¸åŒåç§°çš„æ¨¡å—å°†å…±äº«åŒä¸€æ¶ˆæ¯é˜Ÿåˆ—ã€‚ä»»ä½•å¤–éƒ¨æ¶ˆæ¯å°†ç”±å…¶ä¸­ä¸€ä¸ªæ¨¡å—å¤„ç†ï¼Œå–å†³äºå“ªä¸ªæ¨¡å—ç©ºé—²ã€‚
-  - å¦åˆ™ï¼Œè¾“å…¥å­—ç¬¦ä¸²å°†è¢«ç”¨ä½œæ¨¡å—åç§°ï¼Œè¯¥åç§°åº”åœ¨ç³»ç»Ÿä¸­ä¿æŒå”¯ä¸€ã€‚å¦‚æœåœ¨ç³»ç»Ÿä¸­ä½¿ç”¨é‡å¤çš„æ¨¡å—åç§°ï¼ŒCSM å°†è¿›å…¥ "Critical Error" çŠ¶æ€ã€‚
-<b>Response Timeout(5000ms)</b>:åŒæ­¥è°ƒç”¨æ—¶çš„å“åº”è¶…æ—¶è®¾ç½®ï¼Œé»˜è®¤ 5000 ms.
-<b>Dequeue Timeout(0ms)</b>: æ£€æŸ¥ CSM æ¶ˆæ¯é˜Ÿåˆ—çš„è¶…æ—¶è®¾ç½®ï¼Œé»˜è®¤ä¸º0ï¼Œä¸è¿›è¡Œç­‰å¾…ã€‚
-<b>Response Arguments</b>: æ¥è‡ªä¸Šä¸€ä¸ªçŠ¶æ€çš„å“åº”å‚æ•°ã€‚å®ƒåº”è¯¥æ¥è¿æ¥ CSM çš„ç§»ä½å¯„å­˜å™¨ï¼Œç”¨äºä¼ é€’å¤–éƒ¨è°ƒç”¨çš„è¿”å›å€¼ã€‚
+<b>State Queue</b>: Õû¸ö×´Ì¬¶ÓÁĞ±»Á¬½Óµ½´ËÊäÈë¡£ÕâÓ¦¸ÃÀ´×Ô CSM µÄÒÆÎ»¼Ä´æÆ÷¡£
+<b>Error In (no error)</b>: À´×ÔJKI×´Ì¬»úµÄ´íÎó´Ø±»Á¬½Óµ½´ËÊäÈë¡£Èç¹û·¢Éú´íÎó²¢³öÏÖÔÚ´ËÊäÈëÉÏ£¬Ôòµ±Ç°×´Ì¬Êä³ö½«·µ»Ø "Error Handler" ×´Ì¬¡£
+<b>Name("" to use uuid)</b>: CSM Ä£¿éÃû³Æ
+  - Èç¹ûÊäÈëÎª ""£¬½«Ê¹ÓÃ UUID ×÷ÎªÄ£¿éÃû³Æ¡£¸ÃÄ£¿é±»±ê¼ÇÎª¶ÀÁ¢Ä£Ê½£¬²»»á°üº¬ÔÚÄ£¿éÁĞ±íÖĞ¡£
+  - Èç¹ûÊäÈëÒÔ '#' ½áÎ²£¬Ôò¸ÃÄ£¿é½«ÔÚ¹¤×÷Ä£Ê½ÏÂÔËĞĞ¡£¾ßÓĞÏàÍ¬Ãû³ÆµÄÄ£¿é½«¹²ÏíÍ¬Ò»ÏûÏ¢¶ÓÁĞ¡£ÈÎºÎÍâ²¿ÏûÏ¢½«ÓÉÆäÖĞÒ»¸öÄ£¿é´¦Àí£¬È¡¾öÓÚÄÄ¸öÄ£¿é¿ÕÏĞ¡£
+  - ·ñÔò£¬ÊäÈë×Ö·û´®½«±»ÓÃ×÷Ä£¿éÃû³Æ£¬¸ÃÃû³ÆÓ¦ÔÚÏµÍ³ÖĞ±£³ÖÎ¨Ò»¡£Èç¹ûÔÚÏµÍ³ÖĞÊ¹ÓÃÖØ¸´µÄÄ£¿éÃû³Æ£¬CSM ½«½øÈë "Critical Error" ×´Ì¬¡£
+<b>Response Timeout(5000ms)</b>:Í¬²½µ÷ÓÃÊ±µÄÏìÓ¦³¬Ê±ÉèÖÃ£¬Ä¬ÈÏ 5000 ms.
+<b>Dequeue Timeout(0ms)</b>: ¼ì²é CSM ÏûÏ¢¶ÓÁĞµÄ³¬Ê±ÉèÖÃ£¬Ä¬ÈÏÎª0£¬²»½øĞĞµÈ´ı¡£
+<b>Response Arguments</b>: À´×ÔÉÏÒ»¸ö×´Ì¬µÄÏìÓ¦²ÎÊı¡£ËüÓ¦¸ÃÀ´Á¬½Ó CSM µÄÒÆÎ»¼Ä´æÆ÷£¬ÓÃÓÚ´«µİÍâ²¿µ÷ÓÃµÄ·µ»ØÖµ¡£
 
 -- <b>Outputs:</b> --
-<b>Remaining States</b>:  è¿”å›ç»§ç»­æ‰§è¡Œçš„æ‰€æœ‰çŠ¶æ€åŠå‚æ•°ã€‚ These should be passed through the current state in the state machine. These can also be modified or augmented within the current state if necessary.
-<b>Arguments</b>: è¿”å›å¯èƒ½åœ¨å½“å‰çŠ¶æ€å­—ç¬¦ä¸²ä¸­ä½¿ç”¨çš„ä»»ä½•å‚æ•°ã€‚è¿™äº›å‚æ•°ä½äºâ€œ>>â€å­—ç¬¦ä¹‹åã€‚<b>æ³¨æ„ï¼š</b>å‚æ•°å˜é‡ä¸å¾—åŒ…å«ä»»ä½•ä¸å¯æ‰“å°çš„å­—ç¬¦ï¼Œæ¯”å¦‚æ¢è¡Œç¬¦æˆ–å›è½¦ç¬¦ã€‚
-<b>Current State</b>: å°†æ‰§è¡Œçš„ä¸‹ä¸€ä¸ªå½“å‰çŠ¶æ€
-<b>Name Used</b>: åˆ†é…ç»™æ­¤CSMæ¨¡å—çš„å®é™…åç§°
-<b>Argument - State</b>: å¦‚æœæ˜¯ CSM å®šä¹‰çš„å†…ç½®çŠ¶æ€ï¼Œæ­¤å‚æ•°è¡¨ç¤ºæ­¤çŠ¶æ€çš„å‰çŠ¶æ€
-<b>From Who</b>: å¦‚æœ<b>Current State</b> æ˜¯ç”±å¤–éƒ¨å‘é€çš„ï¼Œåˆ™è¿™æ˜¯æºCSMæ¨¡å—åç§°ã€‚
+<b>Remaining States</b>:  ·µ»Ø¼ÌĞøÖ´ĞĞµÄËùÓĞ×´Ì¬¼°²ÎÊı¡£ These should be passed through the current state in the state machine. These can also be modified or augmented within the current state if necessary.
+<b>Arguments</b>: ·µ»Ø¿ÉÄÜÔÚµ±Ç°×´Ì¬×Ö·û´®ÖĞÊ¹ÓÃµÄÈÎºÎ²ÎÊı¡£ÕâĞ©²ÎÊıÎ»ÓÚ¡°>>¡±×Ö·ûÖ®ºó¡£<b>×¢Òâ£º</b>²ÎÊı±äÁ¿²»µÃ°üº¬ÈÎºÎ²»¿É´òÓ¡µÄ×Ö·û£¬±ÈÈç»»ĞĞ·û»ò»Ø³µ·û¡£
+<b>Current State</b>: ½«Ö´ĞĞµÄÏÂÒ»¸öµ±Ç°×´Ì¬
+<b>Name Used</b>: ·ÖÅä¸ø´ËCSMÄ£¿éµÄÊµ¼ÊÃû³Æ
+<b>Argument - State</b>: Èç¹ûÊÇ CSM ¶¨ÒåµÄÄÚÖÃ×´Ì¬£¬´Ë²ÎÊı±íÊ¾´Ë×´Ì¬µÄÇ°×´Ì¬
+<b>From Who</b>: Èç¹û<b>Current State</b> ÊÇÓÉÍâ²¿·¢ËÍµÄ£¬ÔòÕâÊÇÔ´CSMÄ£¿éÃû³Æ¡£
 
 ### Build State String with Arguments++.vi
 
-æ„å»ºä¸€ä¸ªåŒ…å«JKIçŠ¶æ€æœºå‚æ•°çš„çŠ¶æ€å­—ç¬¦ä¸²ã€‚
+¹¹½¨Ò»¸ö°üº¬JKI×´Ì¬»ú²ÎÊıµÄ×´Ì¬×Ö·û´®¡£
 
-<B>ä¾‹å¦‚:</B>
+<B>ÀıÈç:</B>
 
-å‘é€ç»™æœ¬åœ°çŠ¶æ€æœºæ—¶, <b>Target Module ("")</b> åº”è¯¥ä¸ºç©º.
+·¢ËÍ¸ø±¾µØ×´Ì¬»úÊ±, <b>Target Module ("")</b> Ó¦¸ÃÎª¿Õ.
 
-      If State = A å¹¶ä¸”æ²¡æœ‰å‚æ•°, é‚£ä¹ˆ <b>State with Arguments</b> = A
-      If State = A , Arguments = B é‚£ä¹ˆ <b>State with Arguments</b> = A >> B
+      If State = A ²¢ÇÒÃ»ÓĞ²ÎÊı, ÄÇÃ´ <b>State with Arguments</b> = A
+      If State = A , Arguments = B ÄÇÃ´ <b>State with Arguments</b> = A >> B
 
-åœ¨å‘é€ç»™å…¶ä»–CSMçš„æƒ…å†µä¸‹, å‡è®¾ <b>Target Module ("")</b> çš„åç§°æ˜¯ "Target"
+ÔÚ·¢ËÍ¸øÆäËûCSMµÄÇé¿öÏÂ, ¼ÙÉè <b>Target Module ("")</b> µÄÃû³ÆÊÇ "Target"
 
-- åŒæ­¥è°ƒç”¨ï¼Œå‘é€çš„æ¶ˆæ¯åç­‰å¾…è¿”å›:
+- Í¬²½µ÷ÓÃ£¬·¢ËÍµÄÏûÏ¢ºóµÈ´ı·µ»Ø:
 
-         If State = A å¹¶ä¸”æ²¡æœ‰å‚æ•°, é‚£ä¹ˆ <b>State with Arguments</b> = A -@target
-         If State = A , Arguments = B é‚£ä¹ˆ <b>State with Arguments</b> = A >> B -@target
+         If State = A ²¢ÇÒÃ»ÓĞ²ÎÊı, ÄÇÃ´ <b>State with Arguments</b> = A -@target
+         If State = A , Arguments = B ÄÇÃ´ <b>State with Arguments</b> = A >> B -@target
 
-- å¼‚æ­¥è°ƒç”¨ï¼Œå‘é€æ¶ˆæ¯åï¼Œå°†è¿›å…¥"Async Message Posted" çŠ¶æ€ï¼Œå½“å¤–éƒ¨æ¨¡å—å¤„ç†å®Œæ¯•åï¼Œæœ¬åœ°æ¨¡å—å°†æ”¶åˆ° "Async Response" æ¶ˆæ¯:
+- Òì²½µ÷ÓÃ£¬·¢ËÍÏûÏ¢ºó£¬½«½øÈë"Async Message Posted" ×´Ì¬£¬µ±Íâ²¿Ä£¿é´¦ÀíÍê±Ïºó£¬±¾µØÄ£¿é½«ÊÕµ½ "Async Response" ÏûÏ¢:
 
-         If State = A å¹¶ä¸”æ²¡æœ‰å‚æ•°, é‚£ä¹ˆ <b>State with Arguments</b> = A ->target
-         If State = A , Arguments = B é‚£ä¹ˆ <b>State with Arguments</b> = A >> B ->target
+         If State = A ²¢ÇÒÃ»ÓĞ²ÎÊı, ÄÇÃ´ <b>State with Arguments</b> = A ->target
+         If State = A , Arguments = B ÄÇÃ´ <b>State with Arguments</b> = A >> B ->target
 
 -- <b>Inputs:</b> --
-<b>State</b>: çŠ¶æ€æˆ–æ¶ˆæ¯åç§°å­—ç¬¦ä¸²
-<b>Arguments ("")</b>: <b>State</b> çš„å‚æ•°
-<b>Target Module ("")</b>: æ­¤æ¶ˆæ¯å‘é€çš„ç›®æ ‡ CSM æ¨¡å—åç§°
-<b>Sync-Call(-@) T By Default/Async-Call(->) F</b>: åŒæ­¥è°ƒç”¨è¾“å…¥"TRUE"; å¼‚æ­¥è°ƒç”¨è¾“å…¥"FALSE"
+<b>State</b>: ×´Ì¬»òÏûÏ¢Ãû³Æ×Ö·û´®
+<b>Arguments ("")</b>: <b>State</b> µÄ²ÎÊı
+<b>Target Module ("")</b>: ´ËÏûÏ¢·¢ËÍµÄÄ¿±ê CSM Ä£¿éÃû³Æ
+<b>Sync-Call(-@) T By Default/Async-Call(->) F</b>: Í¬²½µ÷ÓÃÊäÈë"TRUE"; Òì²½µ÷ÓÃÊäÈë"FALSE"
 
 -- <b>Outputs:</b> --
-<b>State with Arguments</b>: åŒ…å« JKI çŠ¶æ€æœºçŠ¶æ€ã€å‚æ•°ç­‰ä¿¡æ¯çš„å­—ç¬¦ä¸²
+<b>State with Arguments</b>: °üº¬ JKI ×´Ì¬»ú×´Ì¬¡¢²ÎÊıµÈĞÅÏ¢µÄ×Ö·û´®
 
 ### CSM Module Template.vi
 
@@ -367,282 +367,331 @@ DownloadFinished@Downloader  -><unregister>
 
 ### Add State(s) to Queue By BOOL++.vi
 
-æ ¹æ®é«˜ä¼˜å…ˆçº§å’ŒBoolè¾“å…¥ï¼Œæ­¤VIç”ŸæˆTRUE/Falseå’Œå‰©ä½™çŠ¶æ€çš„è¿æ¥çŠ¶æ€ã€‚High Priorityè¾“å…¥å†³å®šæ˜¯å¦åœ¨å‰©ä½™çŠ¶æ€ä¹‹å‰æˆ–ä¹‹åè¿æ¥TRUEæˆ–Falseå­—ç¬¦ä¸²ã€‚Boolè¾“å…¥å†³å®šè¦è¿æ¥çš„å­—ç¬¦ä¸²æ˜¯TRUEè¿˜æ˜¯Falseã€‚
+¸ù¾İ¸ßÓÅÏÈ¼¶ºÍBoolÊäÈë£¬´ËVIÉú³ÉTRUE/FalseºÍÊ£Óà×´Ì¬µÄÁ¬½Ó×´Ì¬¡£High PriorityÊäÈë¾ö¶¨ÊÇ·ñÔÚÊ£Óà×´Ì¬Ö®Ç°»òÖ®ºóÁ¬½ÓTRUE»òFalse×Ö·û´®¡£BoolÊäÈë¾ö¶¨ÒªÁ¬½ÓµÄ×Ö·û´®ÊÇTRUE»¹ÊÇFalse¡£
 
 -- <b>Inputs:</b> --
-<b>State Queue("")</b>: æ•´ä¸ªçŠ¶æ€é˜Ÿåˆ—è¢«è¿æ¥åˆ°æ­¤è¾“å…¥
-<b>TRUE("")</b>: <b>Bool</b> ä¸º True æ—¶æ’å…¥çš„çŠ¶æ€å­—ç¬¦ä¸²
-<b>False("")</b>: <b>Bool</b> ä¸º False æ—¶æ’å…¥çš„çŠ¶æ€å­—ç¬¦ä¸²
-<b>Bool</b>: é€‰æ‹©è¿æ¥åˆ°TRUEç»ˆç«¯æˆ–Falseç»ˆç«¯çš„çŠ¶æ€å­—ç¬¦ä¸²çš„æ ‡å¿—ã€‚
-<b>High Priority(FALSE)</b>: å¦‚æœä¸ºTrueï¼ŒçŠ¶æ€å°†è¢«æ’å…¥åˆ°<b>State Queue("")</b>çš„é¡¶éƒ¨ã€‚å¦‚æœä¸ºFalseï¼Œå®ƒè¢«é™„åŠ åˆ°å°¾éƒ¨ã€‚
+<b>State Queue("")</b>: Õû¸ö×´Ì¬¶ÓÁĞ±»Á¬½Óµ½´ËÊäÈë
+<b>TRUE("")</b>: <b>Bool</b> Îª True Ê±²åÈëµÄ×´Ì¬×Ö·û´®
+<b>False("")</b>: <b>Bool</b> Îª False Ê±²åÈëµÄ×´Ì¬×Ö·û´®
+<b>Bool</b>: Ñ¡ÔñÁ¬½Óµ½TRUEÖÕ¶Ë»òFalseÖÕ¶ËµÄ×´Ì¬×Ö·û´®µÄ±êÖ¾¡£
+<b>High Priority(FALSE)</b>: Èç¹ûÎªTrue£¬×´Ì¬½«±»²åÈëµ½<b>State Queue("")</b>µÄ¶¥²¿¡£Èç¹ûÎªFalse£¬Ëü±»¸½¼Óµ½Î²²¿¡£
 
 -- <b>Outputs:</b> --
-<b>State Queue Out</b>: è¿”å›ç»§ç»­æ‰§è¡Œçš„æ‰€æœ‰çŠ¶æ€åŠå‚æ•°ã€‚
+<b>State Queue Out</b>: ·µ»Ø¼ÌĞøÖ´ĞĞµÄËùÓĞ×´Ì¬¼°²ÎÊı¡£
 
 #### Add State(s) to Queue By BOOL(Element).vi
 
-æ ¹æ®é«˜ä¼˜å…ˆçº§å’ŒBoolè¾“å…¥ï¼Œæ­¤VIç”ŸæˆTRUE/Falseå’Œå‰©ä½™çŠ¶æ€çš„è¿æ¥çŠ¶æ€ã€‚High Priorityè¾“å…¥å†³å®šæ˜¯å¦åœ¨å‰©ä½™çŠ¶æ€ä¹‹å‰æˆ–ä¹‹åè¿æ¥TRUEæˆ–Falseå­—ç¬¦ä¸²ã€‚Boolè¾“å…¥å†³å®šè¦è¿æ¥çš„å­—ç¬¦ä¸²æ˜¯TRUEè¿˜æ˜¯Falseã€‚
+¸ù¾İ¸ßÓÅÏÈ¼¶ºÍBoolÊäÈë£¬´ËVIÉú³ÉTRUE/FalseºÍÊ£Óà×´Ì¬µÄÁ¬½Ó×´Ì¬¡£High PriorityÊäÈë¾ö¶¨ÊÇ·ñÔÚÊ£Óà×´Ì¬Ö®Ç°»òÖ®ºóÁ¬½ÓTRUE»òFalse×Ö·û´®¡£BoolÊäÈë¾ö¶¨ÒªÁ¬½ÓµÄ×Ö·û´®ÊÇTRUE»¹ÊÇFalse¡£
 
 -- <b>Inputs:</b> --
-<b>State Queue("")</b>: æ•´ä¸ªçŠ¶æ€é˜Ÿåˆ—è¢«è¿æ¥åˆ°æ­¤è¾“å…¥
-<b>TRUE("")</b>: <b>Bool</b> ä¸º True æ—¶æ’å…¥çš„çŠ¶æ€å­—ç¬¦ä¸²
-<b>False("")</b>: <b>Bool</b> ä¸º False æ—¶æ’å…¥çš„çŠ¶æ€å­—ç¬¦ä¸²
-<b>Bool</b>: é€‰æ‹©è¿æ¥åˆ°TRUEç»ˆç«¯æˆ–Falseç»ˆç«¯çš„çŠ¶æ€å­—ç¬¦ä¸²çš„æ ‡å¿—ã€‚
-<b>High Priority(FALSE)</b>: å¦‚æœä¸ºTrueï¼ŒçŠ¶æ€å°†è¢«æ’å…¥åˆ°<b>State Queue("")</b>çš„é¡¶éƒ¨ã€‚å¦‚æœä¸ºFalseï¼Œå®ƒè¢«é™„åŠ åˆ°å°¾éƒ¨ã€‚
+<b>State Queue("")</b>: Õû¸ö×´Ì¬¶ÓÁĞ±»Á¬½Óµ½´ËÊäÈë
+<b>TRUE("")</b>: <b>Bool</b> Îª True Ê±²åÈëµÄ×´Ì¬×Ö·û´®
+<b>False("")</b>: <b>Bool</b> Îª False Ê±²åÈëµÄ×´Ì¬×Ö·û´®
+<b>Bool</b>: Ñ¡ÔñÁ¬½Óµ½TRUEÖÕ¶Ë»òFalseÖÕ¶ËµÄ×´Ì¬×Ö·û´®µÄ±êÖ¾¡£
+<b>High Priority(FALSE)</b>: Èç¹ûÎªTrue£¬×´Ì¬½«±»²åÈëµ½<b>State Queue("")</b>µÄ¶¥²¿¡£Èç¹ûÎªFalse£¬Ëü±»¸½¼Óµ½Î²²¿¡£
 
 -- <b>Outputs:</b> --
-<b>State Queue Out</b>: è¿”å›ç»§ç»­æ‰§è¡Œçš„æ‰€æœ‰çŠ¶æ€åŠå‚æ•°ã€‚
+<b>State Queue Out</b>: ·µ»Ø¼ÌĞøÖ´ĞĞµÄËùÓĞ×´Ì¬¼°²ÎÊı¡£
 
 #### Add State(s) to Queue By BOOL(Array Left).vi
 
-æ ¹æ®é«˜ä¼˜å…ˆçº§å’ŒBoolè¾“å…¥ï¼Œæ­¤VIç”ŸæˆTRUE/Falseå’Œå‰©ä½™çŠ¶æ€çš„è¿æ¥çŠ¶æ€ã€‚High Priorityè¾“å…¥å†³å®šæ˜¯å¦åœ¨å‰©ä½™çŠ¶æ€ä¹‹å‰æˆ–ä¹‹åè¿æ¥TRUEæˆ–Falseå­—ç¬¦ä¸²ã€‚Boolè¾“å…¥å†³å®šè¦è¿æ¥çš„å­—ç¬¦ä¸²æ˜¯TRUEè¿˜æ˜¯Falseã€‚
+¸ù¾İ¸ßÓÅÏÈ¼¶ºÍBoolÊäÈë£¬´ËVIÉú³ÉTRUE/FalseºÍÊ£Óà×´Ì¬µÄÁ¬½Ó×´Ì¬¡£High PriorityÊäÈë¾ö¶¨ÊÇ·ñÔÚÊ£Óà×´Ì¬Ö®Ç°»òÖ®ºóÁ¬½ÓTRUE»òFalse×Ö·û´®¡£BoolÊäÈë¾ö¶¨ÒªÁ¬½ÓµÄ×Ö·û´®ÊÇTRUE»¹ÊÇFalse¡£
 
 -- <b>Inputs:</b> --
-<b>State Queue("")</b>: æ•´ä¸ªçŠ¶æ€é˜Ÿåˆ—è¢«è¿æ¥åˆ°æ­¤è¾“å…¥
-<b>TRUE("")</b>: <b>Bool</b> ä¸º True æ—¶æ’å…¥çš„çŠ¶æ€å­—ç¬¦ä¸²
-<b>False("")</b>: <b>Bool</b> ä¸º False æ—¶æ’å…¥çš„çŠ¶æ€å­—ç¬¦ä¸²
-<b>Bool</b>: é€‰æ‹©è¿æ¥åˆ°TRUEç»ˆç«¯æˆ–Falseç»ˆç«¯çš„çŠ¶æ€å­—ç¬¦ä¸²çš„æ ‡å¿—ã€‚
-<b>High Priority(FALSE)</b>: å¦‚æœä¸ºTrueï¼ŒçŠ¶æ€å°†è¢«æ’å…¥åˆ°<b>State Queue("")</b>çš„é¡¶éƒ¨ã€‚å¦‚æœä¸ºFalseï¼Œå®ƒè¢«é™„åŠ åˆ°å°¾éƒ¨ã€‚
+<b>State Queue("")</b>: Õû¸ö×´Ì¬¶ÓÁĞ±»Á¬½Óµ½´ËÊäÈë
+<b>TRUE("")</b>: <b>Bool</b> Îª True Ê±²åÈëµÄ×´Ì¬×Ö·û´®
+<b>False("")</b>: <b>Bool</b> Îª False Ê±²åÈëµÄ×´Ì¬×Ö·û´®
+<b>Bool</b>: Ñ¡ÔñÁ¬½Óµ½TRUEÖÕ¶Ë»òFalseÖÕ¶ËµÄ×´Ì¬×Ö·û´®µÄ±êÖ¾¡£
+<b>High Priority(FALSE)</b>: Èç¹ûÎªTrue£¬×´Ì¬½«±»²åÈëµ½<b>State Queue("")</b>µÄ¶¥²¿¡£Èç¹ûÎªFalse£¬Ëü±»¸½¼Óµ½Î²²¿¡£
 
 -- <b>Outputs:</b> --
-<b>State Queue Out</b>: è¿”å›ç»§ç»­æ‰§è¡Œçš„æ‰€æœ‰çŠ¶æ€åŠå‚æ•°ã€‚
+<b>State Queue Out</b>: ·µ»Ø¼ÌĞøÖ´ĞĞµÄËùÓĞ×´Ì¬¼°²ÎÊı¡£
 
 #### Add State(s) to Queue By BOOL(Array Right).vi
 
-æ ¹æ®é«˜ä¼˜å…ˆçº§å’ŒBoolè¾“å…¥ï¼Œæ­¤VIç”ŸæˆTRUE/Falseå’Œå‰©ä½™çŠ¶æ€çš„è¿æ¥çŠ¶æ€ã€‚High Priorityè¾“å…¥å†³å®šæ˜¯å¦åœ¨å‰©ä½™çŠ¶æ€ä¹‹å‰æˆ–ä¹‹åè¿æ¥TRUEæˆ–Falseå­—ç¬¦ä¸²ã€‚Boolè¾“å…¥å†³å®šè¦è¿æ¥çš„å­—ç¬¦ä¸²æ˜¯TRUEè¿˜æ˜¯Falseã€‚
+¸ù¾İ¸ßÓÅÏÈ¼¶ºÍBoolÊäÈë£¬´ËVIÉú³ÉTRUE/FalseºÍÊ£Óà×´Ì¬µÄÁ¬½Ó×´Ì¬¡£High PriorityÊäÈë¾ö¶¨ÊÇ·ñÔÚÊ£Óà×´Ì¬Ö®Ç°»òÖ®ºóÁ¬½ÓTRUE»òFalse×Ö·û´®¡£BoolÊäÈë¾ö¶¨ÒªÁ¬½ÓµÄ×Ö·û´®ÊÇTRUE»¹ÊÇFalse¡£
 
 -- <b>Inputs:</b> --
-<b>State Queue("")</b>: æ•´ä¸ªçŠ¶æ€é˜Ÿåˆ—è¢«è¿æ¥åˆ°æ­¤è¾“å…¥
-<b>TRUE("")</b>: <b>Bool</b> ä¸º True æ—¶æ’å…¥çš„çŠ¶æ€å­—ç¬¦ä¸²
-<b>False("")</b>: <b>Bool</b> ä¸º False æ—¶æ’å…¥çš„çŠ¶æ€å­—ç¬¦ä¸²
-<b>Bool</b>: é€‰æ‹©è¿æ¥åˆ°TRUEç»ˆç«¯æˆ–Falseç»ˆç«¯çš„çŠ¶æ€å­—ç¬¦ä¸²çš„æ ‡å¿—ã€‚
-<b>High Priority(FALSE)</b>: å¦‚æœä¸ºTrueï¼ŒçŠ¶æ€å°†è¢«æ’å…¥åˆ°<b>State Queue("")</b>çš„é¡¶éƒ¨ã€‚å¦‚æœä¸ºFalseï¼Œå®ƒè¢«é™„åŠ åˆ°å°¾éƒ¨ã€‚
+<b>State Queue("")</b>: Õû¸ö×´Ì¬¶ÓÁĞ±»Á¬½Óµ½´ËÊäÈë
+<b>TRUE("")</b>: <b>Bool</b> Îª True Ê±²åÈëµÄ×´Ì¬×Ö·û´®
+<b>False("")</b>: <b>Bool</b> Îª False Ê±²åÈëµÄ×´Ì¬×Ö·û´®
+<b>Bool</b>: Ñ¡ÔñÁ¬½Óµ½TRUEÖÕ¶Ë»òFalseÖÕ¶ËµÄ×´Ì¬×Ö·û´®µÄ±êÖ¾¡£
+<b>High Priority(FALSE)</b>: Èç¹ûÎªTrue£¬×´Ì¬½«±»²åÈëµ½<b>State Queue("")</b>µÄ¶¥²¿¡£Èç¹ûÎªFalse£¬Ëü±»¸½¼Óµ½Î²²¿¡£
 
 -- <b>Outputs:</b> --
-<b>State Queue Out</b>: è¿”å›ç»§ç»­æ‰§è¡Œçš„æ‰€æœ‰çŠ¶æ€åŠå‚æ•°ã€‚
+<b>State Queue Out</b>: ·µ»Ø¼ÌĞøÖ´ĞĞµÄËùÓĞ×´Ì¬¼°²ÎÊı¡£
 
 #### Add State(s) to Queue By BOOL(Array All).vi
 
-æ ¹æ®é«˜ä¼˜å…ˆçº§å’ŒBoolè¾“å…¥ï¼Œæ­¤VIç”ŸæˆTRUE/Falseå’Œå‰©ä½™çŠ¶æ€çš„è¿æ¥çŠ¶æ€ã€‚
-High Priorityè¾“å…¥å†³å®šæ˜¯å¦åœ¨å‰©ä½™çŠ¶æ€ä¹‹å‰æˆ–ä¹‹åè¿æ¥TRUEæˆ–Falseå­—ç¬¦ä¸²ã€‚
-Boolè¾“å…¥å†³å®šè¦è¿æ¥çš„å­—ç¬¦ä¸²æ˜¯TRUEè¿˜æ˜¯Falseã€‚
+¸ù¾İ¸ßÓÅÏÈ¼¶ºÍBoolÊäÈë£¬´ËVIÉú³ÉTRUE/FalseºÍÊ£Óà×´Ì¬µÄÁ¬½Ó×´Ì¬¡£
+High PriorityÊäÈë¾ö¶¨ÊÇ·ñÔÚÊ£Óà×´Ì¬Ö®Ç°»òÖ®ºóÁ¬½ÓTRUE»òFalse×Ö·û´®¡£
+BoolÊäÈë¾ö¶¨ÒªÁ¬½ÓµÄ×Ö·û´®ÊÇTRUE»¹ÊÇFalse¡£
 
 -- <b>Inputs:</b> --
-<b>State Queue("")</b>: æ•´ä¸ªçŠ¶æ€é˜Ÿåˆ—è¢«è¿æ¥åˆ°æ­¤è¾“å…¥
-<b>TRUE("")</b>: <b>Bool</b> ä¸º True æ—¶æ’å…¥çš„çŠ¶æ€å­—ç¬¦ä¸²
-<b>False("")</b>: <b>Bool</b> ä¸º False æ—¶æ’å…¥çš„çŠ¶æ€å­—ç¬¦ä¸²
-<b>Bool</b>: é€‰æ‹©è¿æ¥åˆ°TRUEç»ˆç«¯æˆ–Falseç»ˆç«¯çš„çŠ¶æ€å­—ç¬¦ä¸²çš„æ ‡å¿—ã€‚
-<b>High Priority(FALSE)</b>: å¦‚æœä¸ºTrueï¼ŒçŠ¶æ€å°†è¢«æ’å…¥åˆ°<b>State Queue("")</b>çš„é¡¶éƒ¨ã€‚å¦‚æœä¸ºFalseï¼Œå®ƒè¢«é™„åŠ åˆ°å°¾éƒ¨ã€‚
+<b>State Queue("")</b>: Õû¸ö×´Ì¬¶ÓÁĞ±»Á¬½Óµ½´ËÊäÈë
+<b>TRUE("")</b>: <b>Bool</b> Îª True Ê±²åÈëµÄ×´Ì¬×Ö·û´®
+<b>False("")</b>: <b>Bool</b> Îª False Ê±²åÈëµÄ×´Ì¬×Ö·û´®
+<b>Bool</b>: Ñ¡ÔñÁ¬½Óµ½TRUEÖÕ¶Ë»òFalseÖÕ¶ËµÄ×´Ì¬×Ö·û´®µÄ±êÖ¾¡£
+<b>High Priority(FALSE)</b>: Èç¹ûÎªTrue£¬×´Ì¬½«±»²åÈëµ½<b>State Queue("")</b>µÄ¶¥²¿¡£Èç¹ûÎªFalse£¬Ëü±»¸½¼Óµ½Î²²¿¡£
 
 -- <b>Outputs:</b> --
-<b>State Queue Out</b>: è¿”å›ç»§ç»­æ‰§è¡Œçš„æ‰€æœ‰çŠ¶æ€åŠå‚æ•°ã€‚
+<b>State Queue Out</b>: ·µ»Ø¼ÌĞøÖ´ĞĞµÄËùÓĞ×´Ì¬¼°²ÎÊı¡£
 
 ### CSM - Broadcast Status Change.vi
 
-å‘ç³»ç»Ÿå¹¿æ’­çŠ¶æ€æ›´æ”¹ã€‚å·²æ³¨å†ŒçŠ¶æ€çš„ CSM æ¨¡å—å°†æ¥æ”¶åˆ°çŠ¶æ€æ›´æ”¹ã€‚
+ÏòÏµÍ³¹ã²¥×´Ì¬¸ü¸Ä¡£ÒÑ×¢²á×´Ì¬µÄ CSM Ä£¿é½«½ÓÊÕµ½×´Ì¬¸ü¸Ä¡£
 
 -- <b>Inputs:</b> --
-<b>Status with Arguments</b>: å°†è¢«å¹¿æ’­çš„çŠ¶æ€åŠå‚æ•°
-<b>State Queue("")</b>: æ•´ä¸ªçŠ¶æ€é˜Ÿåˆ—è¢«è¿æ¥åˆ°æ­¤è¾“å…¥
-<b>Broadcast(T)</b>: æ§åˆ¶æ˜¯å¦å¹¿æ’­çš„å¼€å…³è¾“å…¥
+<b>Status with Arguments</b>: ½«±»¹ã²¥µÄ×´Ì¬¼°²ÎÊı
+<b>State Queue("")</b>: Õû¸ö×´Ì¬¶ÓÁĞ±»Á¬½Óµ½´ËÊäÈë
+<b>Broadcast(T)</b>: ¿ØÖÆÊÇ·ñ¹ã²¥µÄ¿ª¹ØÊäÈë
 
 -- <b>Outputs:</b> --
-<b>Remaining States</b>: è¿”å›ç»§ç»­æ‰§è¡Œçš„æ‰€æœ‰çŠ¶æ€åŠå‚æ•°ã€‚
+<b>Remaining States</b>: ·µ»Ø¼ÌĞøÖ´ĞĞµÄËùÓĞ×´Ì¬¼°²ÎÊı¡£
 
 ## Arguments
 
 ### CSM - Make String Arguments Safe.vi
 
-'->','->|','-@','-&','<-" æ˜¯å…³é”®å­—ï¼Œä¸èƒ½å‡ºç°åœ¨å‚æ•°ä¸­ã€‚ä½¿ç”¨æ­¤ VI ä¿è¯å‚æ•°å®‰å…¨ã€‚
+'->','->|','-@','-&','<-" ÊÇ¹Ø¼ü×Ö£¬²»ÄÜ³öÏÖÔÚ²ÎÊıÖĞ¡£Ê¹ÓÃ´Ë VI ±£Ö¤²ÎÊı°²È«¡£
 
 -- <b>Inputs:</b> --
-<b>Argument String</b>: å¯èƒ½åŒ…å«å…³é”®å­—çš„å‚æ•° '->','->|','-@','-&','<-".
+<b>Argument String</b>: ¿ÉÄÜ°üº¬¹Ø¼ü×ÖµÄ²ÎÊı '->','->|','-@','-&','<-".
 
 -- <b>Outputs:</b> --
-<b>Safe Argument String</b>: å®‰å…¨å‚æ•°
+<b>Safe Argument String</b>: °²È«²ÎÊı
 
 ### CSM - Revert Arguments-Safe String.vi
 
-'->','->|','-@','-&','<-" æ˜¯å…³é”®å­—ï¼Œä¸èƒ½å‡ºç°åœ¨å‚æ•°ä¸­ã€‚ä½¿ç”¨<b>CSM Make String Arguments Safe.vi</b>ä¿è¯å‚æ•°å®‰å…¨ã€‚æ­¤VIç”¨äºå°†å®‰å…¨å‚æ•°è½¬æ¢ä¸ºåŸå§‹å‚æ•°ã€‚
+'->','->|','-@','-&','<-" ÊÇ¹Ø¼ü×Ö£¬²»ÄÜ³öÏÖÔÚ²ÎÊıÖĞ¡£Ê¹ÓÃ<b>CSM Make String Arguments Safe.vi</b>±£Ö¤²ÎÊı°²È«¡£´ËVIÓÃÓÚ½«°²È«²ÎÊı×ª»»ÎªÔ­Ê¼²ÎÊı¡£
 
 -- <b>Inputs:</b> --
-<b>Safe Argument String</b>: å®‰å…¨å‚æ•°
+<b>Safe Argument String</b>: °²È«²ÎÊı
 
 -- <b>Outputs:</b> --
-<b>Origin Argument String</b>: å¯èƒ½åŒ…å«å…³é”®å­—çš„å‚æ•° '->','->|','-@','-&','<-".
+<b>Origin Argument String</b>: ¿ÉÄÜ°üº¬¹Ø¼ü×ÖµÄ²ÎÊı '->','->|','-@','-&','<-".
 
 ### CSM - Convert Data to HexStr.vi
 
-å°†å¤æ‚å‚æ•°ï¼ˆå˜ä½“ï¼‰è½¬æ¢ä¸ºåå…­è¿›åˆ¶å­—ç¬¦ä¸²ï¼Œè¯¥å­—ç¬¦ä¸²å¯ä»¥å®‰å…¨åœ°ç”¨ä½œçŠ¶æ€å‚æ•°ï¼Œè€Œä¸ä¼šç ´åå­—ç¬¦ä¸²é˜Ÿåˆ—é€»è¾‘ã€‚
+½«¸´ÔÓ²ÎÊı£¨±äÌå£©×ª»»ÎªÊ®Áù½øÖÆ×Ö·û´®£¬¸Ã×Ö·û´®¿ÉÒÔ°²È«µØÓÃ×÷×´Ì¬²ÎÊı£¬¶ø²»»áÆÆ»µ×Ö·û´®¶ÓÁĞÂß¼­¡£
 
 -- <b>Inputs:</b> --
-<b>Variant</b>: æ•°æ®ï¼Œä¿å­˜ä¸ºå˜ä½“(variant)æ ¼å¼
+<b>Variant</b>: Êı¾İ£¬±£´æÎª±äÌå(variant)¸ñÊ½
 
 -- <b>Outputs:</b> --
-<b>HEX String (0-9,A-F)</b>: Hexå­—ç¬¦ä¸²æ ¼å¼ï¼Œä¸åŒ…å«ä¸å¯è§å­—ç¬¦ï¼Œç¬¦åˆ CSM çš„å‚æ•°è¦æ±‚
+<b>HEX String (0-9,A-F)</b>: Hex×Ö·û´®¸ñÊ½£¬²»°üº¬²»¿É¼û×Ö·û£¬·ûºÏ CSM µÄ²ÎÊıÒªÇó
 
 ### CSM - Convert HexStr to Data.vi
 
-å°†åå…­è¿›åˆ¶å­—ç¬¦ä¸²å‚æ•°è½¬æ¢å›å˜ä½“æ•°æ®ã€‚
+½«Ê®Áù½øÖÆ×Ö·û´®²ÎÊı×ª»»»Ø±äÌåÊı¾İ¡£
 
 -- <b>Inputs:</b> --
-<b>HEX String</b>: Hexå­—ç¬¦ä¸²æ ¼å¼ï¼Œä¸åŒ…å«ä¸å¯è§å­—ç¬¦ï¼Œç¬¦åˆ CSM çš„å‚æ•°è¦æ±‚
+<b>HEX String</b>: Hex×Ö·û´®¸ñÊ½£¬²»°üº¬²»¿É¼û×Ö·û£¬·ûºÏ CSM µÄ²ÎÊıÒªÇó
 
 -- <b>Outputs:</b> --
-<b>Variant</b>: æ•°æ®ï¼Œä¿å­˜ä¸ºå˜ä½“(variant)æ ¼å¼
-<b>error out</b>: é”™è¯¯ç°‡
+<b>Variant</b>: Êı¾İ£¬±£´æÎª±äÌå(variant)¸ñÊ½
+<b>error out</b>: ´íÎó´Ø
 
 ## Advance APIs
 
 ### CSM - Start Async Call.vi
 
-å¼‚æ­¥è°ƒç”¨æ¨¡æ¿ä»£ç çš„VIç‰‡æ®µ
+Òì²½µ÷ÓÃÄ£°å´úÂëµÄVIÆ¬¶Î
 
 -- <b>Inputs:</b> --
-- æ— 
+- ÎŞ
 
 
 ### CSM - Synchronized Call.vi
 
-åŒæ­¥è°ƒç”¨æ¨¡æ¿ä»£ç çš„VIç‰‡æ®µ
+Í¬²½µ÷ÓÃÄ£°å´úÂëµÄVIÆ¬¶Î
 
 -- <b>Inputs:</b> --
-- æ— 
+- ÎŞ
  -
 -- <b>Outputs:</b> --
- - æ— 
+ - ÎŞ
 
 ### CSM - Mark As Worker Module.vi
 
-åœ¨CSMåç§°åæ·»åŠ â€œï¼ƒâ€ï¼Œä»¥æ ‡è®°æ­¤æ¨¡å—ä¸ºå·¥ä½œè€…ï¼Œå…¶ä¸å…·æœ‰ç›¸åŒåç§°çš„å…¶ä»–å·¥ä½œè€…å…±äº«ç›¸åŒçš„æ¶ˆæ¯é˜Ÿåˆ—ã€‚ä¸€ä¸ªå¸¦æœ‰ç”Ÿæˆçš„UUIDçš„å®é™…åç§°å°†è¢«åˆ†é…ç»™æ­¤CSMæ¨¡å—ã€‚
+ÔÚCSMÃû³ÆºóÌí¼Ó¡°££¡±£¬ÒÔ±ê¼Ç´ËÄ£¿éÎª¹¤×÷Õß£¬ÆäÓë¾ßÓĞÏàÍ¬Ãû³ÆµÄÆäËû¹¤×÷Õß¹²ÏíÏàÍ¬µÄÏûÏ¢¶ÓÁĞ¡£Ò»¸ö´øÓĞÉú³ÉµÄUUIDµÄÊµ¼ÊÃû³Æ½«±»·ÖÅä¸ø´ËCSMÄ£¿é¡£
 
 -- <b>Inputs:</b> --
-<b>CSM Name</b>: CSM æ¨¡å—åç§°
+<b>CSM Name</b>: CSM Ä£¿éÃû³Æ
 
 -- <b>Outputs:</b> --
-<b>CSM Name(marked as worker)</b>: æ·»åŠ â€œï¼ƒâ€æ ‡è®° çš„CSM æ¨¡å—åç§°
+<b>CSM Name(marked as worker)</b>: Ìí¼Ó¡°££¡±±ê¼Ç µÄCSM Ä£¿éÃû³Æ
 
 ### CSM - Compact Multiple States.vi
 
-å°†å¤šä¸ªçŠ¶æ€ç´§å‡‘æˆå•ä¸ªå­—ç¬¦ä¸²ä»¥ä¾›è¾“å…¥ä½¿ç”¨
+½«¶à¸ö×´Ì¬½ô´Õ³Éµ¥¸ö×Ö·û´®ÒÔ¹©ÊäÈëÊ¹ÓÃ
 
 -- <b>Inputs:</b> --
-<b>States in Lines</b>: å¤šä¸ªçŠ¶æ€çš„å­—ç¬¦ä¸²æ•°ç»„
+<b>States in Lines</b>: ¶à¸ö×´Ì¬µÄ×Ö·û´®Êı×é
 
 -- <b>Outputs:</b> --
-<b>States</b>: åŒ…å«æ‰€æœ‰è¾“å…¥çŠ¶æ€çš„å­—ç¬¦ä¸²
+<b>States</b>: °üº¬ËùÓĞÊäÈë×´Ì¬µÄ×Ö·û´®
 
 ### CSM - Check If Module Exists.vi
 
-æ£€æŸ¥ CSM æ¨¡å—æ˜¯å¦å­˜åœ¨
+¼ì²é CSM Ä£¿éÊÇ·ñ´æÔÚ
 
 -- <b>Inputs:</b> --
-<b>CSM Name</b>: CSM æ¨¡å—åç§°
-<b>Error in</b>: é”™è¯¯ç°‡
+<b>CSM Name</b>: CSM Ä£¿éÃû³Æ
+<b>Error in</b>: ´íÎó´Ø
 
 -- <b>Outputs:</b> --
-<b>Exist?</b>: è¿”å›æ¨¡å¼æ˜¯å¦å­˜åœ¨ï¼Œå­˜åœ¨è¿”å›Trueï¼Œä¸å­˜åœ¨è¿”å›False
-<b>CSM Name(dup)</b>: è¿”å› <b>CSM Name</b>
-<b>Error out</b>: é”™è¯¯ç°‡
+<b>Exist?</b>: ·µ»ØÄ£Ê½ÊÇ·ñ´æÔÚ£¬´æÔÚ·µ»ØTrue£¬²»´æÔÚ·µ»ØFalse
+<b>CSM Name(dup)</b>: ·µ»Ø <b>CSM Name</b>
+<b>Error out</b>: ´íÎó´Ø
 
 ### CSM - List Modules.vi
 
-åˆ—å‡ºç³»ç»Ÿä¸­æ‰€æœ‰æ´»åŠ¨çš„CSMæ¨¡å—ã€‚
+ÁĞ³öÏµÍ³ÖĞËùÓĞ»î¶¯µÄCSMÄ£¿é¡£
 
 -- <b>Inputs:</b> --
-<b>Exclude Standalone CSM(T)</b>: æ˜¯å¦åŒ…å«ç‹¬ç«‹å·¥ä½œæ¨¡å¼çš„æ¨¡å—
-<b>Error in</b>: é”™è¯¯ç°‡
+<b>Exclude Standalone CSM(T)</b>: ÊÇ·ñ°üº¬¶ÀÁ¢¹¤×÷Ä£Ê½µÄÄ£¿é
+<b>Error in</b>: ´íÎó´Ø
 
 -- <b>Outputs:</b> --
-<b>Module Names</b>: æ¨¡å—åç§°åˆ—è¡¨
-<b>Error out</b>: é”™è¯¯ç°‡
+<b>Module Names</b>: Ä£¿éÃû³ÆÁĞ±í
+<b>Error out</b>: ´íÎó´Ø
 
 ### CSM - Module Status.vi
 
-è·å–CSMæ¨¡å—çš„çŠ¶æ€
+»ñÈ¡CSMÄ£¿éµÄ×´Ì¬
 
 -- <b>Inputs:</b> --
-<b>CSM Name</b>: CSM æ¨¡å—åç§°.
-<b>Error in</b>: é”™è¯¯ç°‡
+<b>CSM Name</b>: CSM Ä£¿éÃû³Æ.
+<b>Error in</b>: ´íÎó´Ø
 
 -- <b>Outputs:</b> --
-<b>Mode</b>: è¿”å›æ¨¡å—çš„å·¥ä½œæ¨¡å¼ï¼š"Stand-alone", "CSM" æˆ– "Action Worker".
-<b>#As Worker</b>: å·¥ä½œè€…æ¨¡å¼ä¸‹ï¼Œæ­¤æ¨¡å—çš„å·¥ä½œè€…æ•°é‡
-<b>#msg to be processed</b>: CSMæ¶ˆæ¯é˜Ÿåˆ—ä¸­çš„å¾…å¤„ç†æ¶ˆæ¯ä¸ªæ•°
-<b>CSM Name(dup)</b>: è¿”å› <b>CSM Name</b>
-<b>Error out</b>: é”™è¯¯ç°‡
+<b>Mode</b>: ·µ»ØÄ£¿éµÄ¹¤×÷Ä£Ê½£º"Stand-alone", "CSM" »ò "Action Worker".
+<b>#As Worker</b>: ¹¤×÷ÕßÄ£Ê½ÏÂ£¬´ËÄ£¿éµÄ¹¤×÷ÕßÊıÁ¿
+<b>#msg to be processed</b>: CSMÏûÏ¢¶ÓÁĞÖĞµÄ´ı´¦ÀíÏûÏ¢¸öÊı
+<b>CSM Name(dup)</b>: ·µ»Ø <b>CSM Name</b>
+<b>Error out</b>: ´íÎó´Ø
 
 ### CSM - Register Status Change.vi
 
-æ³¨å†Œä»¥æ¥æ”¶å…¶ä»–CSMæ¨¡å—çŠ¶æ€æ›´æ”¹çš„é€šçŸ¥ã€‚å¦‚æœæœªè¿æ¥ â€œResponse Messageâ€ æˆ–è¾“å…¥ä¸ºç©ºï¼Œåˆ™å°†ä½¿ç”¨ç›¸åŒçš„<b>Status</b> åç§°ä½œä¸ºå“åº”æ¶ˆæ¯ã€‚
+×¢²áÒÔ½ÓÊÕÆäËûCSMÄ£¿é×´Ì¬¸ü¸ÄµÄÍ¨Öª¡£Èç¹ûÎ´Á¬½Ó ¡°Response Message¡± »òÊäÈëÎª¿Õ£¬Ôò½«Ê¹ÓÃÏàÍ¬µÄ<b>Status</b> Ãû³Æ×÷ÎªÏìÓ¦ÏûÏ¢¡£
 
 -- <b>Inputs:</b> --
-<b>CSM Name</b>: CSM æ¨¡å—åç§°.
-<b>Source CSM Name ('*' as Default)</b>: ç”ŸæˆçŠ¶æ€çš„CSMæ¨¡å—ã€‚æ‚¨å¯ä»¥ä½¿ç”¨â€œ*â€æ¥è¡¨ç¤ºæ‰€æœ‰ç”Ÿæˆç›¸åŒçŠ¶æ€çš„æ¨¡å—ã€‚
-<b>Status</b>: çŠ¶æ€å­—ç¬¦ä¸²
-<b>Response Message (if "", same as Source Message)</b>: æ³¨å†Œåï¼Œå¦‚æœçŠ¶æ€å‘ç”Ÿå˜åŒ–ï¼Œå°†æ¥æ”¶åˆ°æ­¤æ¶ˆæ¯ã€‚
-<b>Priority(T:As Status,F:As Interrupt)</b>: å¦‚æœå“åº”æ¶ˆæ¯ä¸ºFalseï¼Œåˆ™å°†å…¶æ’å…¥åˆ°çŠ¶æ€é˜Ÿåˆ—çš„å‰é¢ï¼›å¦åˆ™ï¼Œå°†å…¶é™„åŠ åˆ°é˜Ÿåˆ—çš„å°¾éƒ¨ã€‚
-<b>Error in</b>: é”™è¯¯ç°‡
+<b>CSM Name</b>: CSM Ä£¿éÃû³Æ.
+<b>Source CSM Name ('*' as Default)</b>: Éú³É×´Ì¬µÄCSMÄ£¿é¡£Äú¿ÉÒÔÊ¹ÓÃ¡°*¡±À´±íÊ¾ËùÓĞÉú³ÉÏàÍ¬×´Ì¬µÄÄ£¿é¡£
+<b>Status</b>: ×´Ì¬×Ö·û´®
+<b>Response Message (if "", same as Source Message)</b>: ×¢²áºó£¬Èç¹û×´Ì¬·¢Éú±ä»¯£¬½«½ÓÊÕµ½´ËÏûÏ¢¡£
+<b>Priority(T:As Status,F:As Interrupt)</b>: Èç¹ûÏìÓ¦ÏûÏ¢ÎªFalse£¬Ôò½«Æä²åÈëµ½×´Ì¬¶ÓÁĞµÄÇ°Ãæ£»·ñÔò£¬½«Æä¸½¼Óµ½¶ÓÁĞµÄÎ²²¿¡£
+<b>Error in</b>: ´íÎó´Ø
 
 -- <b>Outputs:</b> --
-<b>CSM Name(dup)</b>: è¿”å› <b>CSM Name</b>
-<b>Error out</b>: é”™è¯¯ç°‡
+<b>CSM Name(dup)</b>: ·µ»Ø <b>CSM Name</b>
+<b>Error out</b>: ´íÎó´Ø
 
 ### CSM - Unregister Status Change.vi
 
-å–æ¶ˆæ³¨å†Œå…¶ä»– CSM æ¨¡å—çŠ¶æ€æ›´æ”¹çš„é€šçŸ¥ã€‚
+È¡Ïû×¢²áÆäËû CSM Ä£¿é×´Ì¬¸ü¸ÄµÄÍ¨Öª¡£
 
 -- <b>Inputs:</b> --
-<b>CSM Name</b>: CSM æ¨¡å—åç§°.
-<b>Source CSM Name</b>: ç”ŸæˆçŠ¶æ€çš„CSMæ¨¡å—ã€‚æ‚¨å¯ä»¥ä½¿ç”¨â€œ*â€æ¥è¡¨ç¤ºæ‰€æœ‰ç”Ÿæˆç›¸åŒçŠ¶æ€çš„æ¨¡å—ã€‚
-<b>Status</b>: çŠ¶æ€å­—ç¬¦ä¸²
-<b>Error in</b>: é”™è¯¯ç°‡
+<b>CSM Name</b>: CSM Ä£¿éÃû³Æ.
+<b>Source CSM Name</b>: Éú³É×´Ì¬µÄCSMÄ£¿é¡£Äú¿ÉÒÔÊ¹ÓÃ¡°*¡±À´±íÊ¾ËùÓĞÉú³ÉÏàÍ¬×´Ì¬µÄÄ£¿é¡£
+<b>Status</b>: ×´Ì¬×Ö·û´®
+<b>Error in</b>: ´íÎó´Ø
 
 -- <b>Outputs:</b> --
-<b>CSM Name(dup)</b>: è¿”å› <b>CSM Name</b>
-<b>Error out</b>: é”™è¯¯ç°‡
+<b>CSM Name(dup)</b>: ·µ»Ø <b>CSM Name</b>
+<b>Error out</b>: ´íÎó´Ø
 
 ### CSM - Get New State Notifier Event.vi
 
 -- <b>Inputs:</b> --
-<b>Name("" to use uuid) in</b>: CSM æ¨¡å—åç§°
-<b>Error in</b>: é”™è¯¯ç°‡
+<b>Name("" to use uuid) in</b>: CSM Ä£¿éÃû³Æ
+<b>Error in</b>: ´íÎó´Ø
 
 -- <b>Outputs:</b> --
-<b>New State Notifier Event</b>: ç”¨æˆ·äº‹ä»¶å¥æŸ„ï¼Œç”¨æ¥å½“æ”¶åˆ°æ¶ˆæ¯æ—¶ï¼Œä½¿ç”¨CSMæ¨¡å—ä¸­æ–­åœ¨äº‹ä»¶ç»“æ„ä¸­çš„ç­‰å¾…
-<b>Error out</b>: é”™è¯¯ç°‡
+<b>New State Notifier Event</b>: ÓÃ»§ÊÂ¼ş¾ä±ú£¬ÓÃÀ´µ±ÊÕµ½ÏûÏ¢Ê±£¬Ê¹ÓÃCSMÄ£¿éÖĞ¶ÏÔÚÊÂ¼ş½á¹¹ÖĞµÄµÈ´ı
+<b>Error out</b>: ´íÎó´Ø
 
 ## Non-CSM Support
+----
 
 ### CSM - Post Message.vi
 
-å‘æŒ‡å®šçš„CSMå‘å¸ƒä¸€æ¡æ¶ˆæ¯ï¼Œç›¸å½“äºå¼‚æ­¥è°ƒç”¨ï¼Œä½†ä¸ç­‰å¾…è¿”å›å‚æ•°ã€‚
+ÏòÖ¸¶¨µÄCSM·¢²¼Ò»ÌõÏûÏ¢£¬Ïàµ±ÓÚÒì²½µ÷ÓÃ£¬µ«²»µÈ´ı·µ»Ø²ÎÊı¡£
 
 -- <b>Inputs:</b> --
-<b>Target Module</b>:ç›®æ ‡ CSM æ¨¡å—åç§°
-<b>State</b>: æ¶ˆæ¯å­—ç¬¦ä¸²
-<b>Arguments ("")</b>: æ¶ˆæ¯å‚æ•°
-<b>Error In (no error)</b>: é”™è¯¯ç°‡
+<b>Target Module</b>:Ä¿±ê CSM Ä£¿éÃû³Æ
+<b>State</b>: ÏûÏ¢×Ö·û´®
+<b>Arguments ("")</b>: ÏûÏ¢²ÎÊı
+<b>Error In (no error)</b>: ´íÎó´Ø
 
 -- <b>Outputs:</b> --
-<b>error out</b>: é”™è¯¯ç°‡
+<b>error out</b>: ´íÎó´Ø
 
 ### CSM - Send Message and Wait for Reply.vi
 
-å‘æŒ‡å®šçš„CSMå‘å¸ƒä¸€æ¡æ¶ˆæ¯å¹¶ç­‰å¾…å›å¤ï¼Œç›¸å½“äºåŒæ­¥è°ƒç”¨ï¼Œåœ¨æŒ‡å®šè¶…æ—¶å†…æ²¡æœ‰æ”¶åˆ°è¿”å›ï¼Œå°†è¿”å›è¶…æ—¶é”™è¯¯ã€‚
+ÏòÖ¸¶¨µÄCSM·¢²¼Ò»ÌõÏûÏ¢²¢µÈ´ı»Ø¸´£¬Ïàµ±ÓÚÍ¬²½µ÷ÓÃ£¬ÔÚÖ¸¶¨³¬Ê±ÄÚÃ»ÓĞÊÕµ½·µ»Ø£¬½«·µ»Ø³¬Ê±´íÎó¡£
 
 -- <b>Inputs:</b> --
-<b>Target Module</b>: ç›®æ ‡ CSM æ¨¡å—åç§°
-<b>State</b>: æ¶ˆæ¯å­—ç¬¦ä¸²
-<b>Arguments ("")</b>: æ¶ˆæ¯å‚æ•°
-<b>Response Timeout(5000ms)</b>: ç­‰å¾…è¿”å›çš„è¶…æ—¶è®¾ç½®ï¼Œé»˜è®¤ 5000ms.
-<b>Error In (no error)</b>: é”™è¯¯ç°‡
+<b>Target Module</b>: Ä¿±ê CSM Ä£¿éÃû³Æ
+<b>State</b>: ÏûÏ¢×Ö·û´®
+<b>Arguments ("")</b>: ÏûÏ¢²ÎÊı
+<b>Response Timeout(5000ms)</b>: µÈ´ı·µ»ØµÄ³¬Ê±ÉèÖÃ£¬Ä¬ÈÏ 5000ms.
+<b>Error In (no error)</b>: ´íÎó´Ø
 
 -- <b>Outputs:</b> --
 <b>Arguments</b>: Response returned.
-<b>error out</b>: é”™è¯¯ç°‡
+<b>error out</b>: ´íÎó´Ø
 
-### CSM - Status Change Event.vi
+### CSM - Wait and Post Message.vi
+-- <b>Inputs:</b> --
+<b>State</b>:
+
+<b>Current Module("" to generate a ID)</b>:
+The Argument string to add to the state. The default is an empty string. If Argument is an empty string then State will be returned to the output.
+<b>Arguments ("")</b>:
+The Argument string to add to the state. The default is an empty string. If Argument is an empty string then State will be returned to the output.
+<b>Target Module</b>:
+The Argument string to add to the state. The default is an empty string. If Argument is an empty string then State will be returned to the output.
+<b>Wait(5000ms)</b>:
+
+<b>Error In (no error)</b>:
+The error cluster from the JKI State Machine is wired to this input. If an error occures and appears on this input, the current state output returns the "Error Handler" state.
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+
+### CSM - Wait and Send Message for Reply.vi
+-- <b>Inputs:</b> --
+<b>State</b>:
+
+<b>Current Module("" to generate a ID)</b>:
+The Argument string to add to the state. The default is an empty string. If Argument is an empty string then State will be returned to the output.
+<b>Arguments ("")</b>:
+The Argument string to add to the state. The default is an empty string. If Argument is an empty string then State will be returned to the output.
+<b>Target Module</b>:
+The Argument string to add to the state. The default is an empty string. If Argument is an empty string then State will be returned to the output.
+<b>Wait(5000ms)</b>:
+
+<b>Error In (no error)</b>:
+The error cluster from the JKI State Machine is wired to this input. If an error occures and appears on this input, the current state output returns the "Error Handler" state.
+<b>Response Timeout(5000ms)</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Response</b>:
+Returns any argument(s) that may be used in the current state string. These arguments come after the ">>" characters
+<b>>> Source CSM >></b>:
+The Argument string to add to the state. The default is an empty string. If Argument is an empty string then State will be returned to the output.
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+
+### CSM - Status Change Event
 
 Obtain CSM Global Log Event Reference.
 <b>Error in</b>: Error cluster
@@ -675,65 +724,65 @@ Release CSM Global Log Event Reference.
 
 ### CSM - Request CSM to Post Message.vi
 
-ç”³è¯· CSM å‘é€æ¶ˆæ¯ã€‚é€šå¸¸ç”¨äºå’ŒCSMå¹¶è¡Œçš„åŠŸèƒ½å¾ªç¯ï¼Œè¿™äº›åŠŸèƒ½å¾ªç¯å’Œ CSM ä¸€èµ·å®Œæˆå®Œæ•´æ¨¡å—åŠŸèƒ½ã€‚
+ÉêÇë CSM ·¢ËÍÏûÏ¢¡£Í¨³£ÓÃÓÚºÍCSM²¢ĞĞµÄ¹¦ÄÜÑ­»·£¬ÕâĞ©¹¦ÄÜÑ­»·ºÍ CSM Ò»ÆğÍê³ÉÍêÕûÄ£¿é¹¦ÄÜ¡£
 
 -- <b>Inputs:</b> --
-<b>Module Name</b>:å‘é€çŠ¶æ€çš„CSM
-<b>Status</b>: å°†è¢«å¹¿æ’­çš„çŠ¶æ€
-<b>Arguments ("")</b>: å°†è¢«å¹¿æ’­çš„çŠ¶æ€å‚æ•°
-<b>Target Module</b>:ç›®æ ‡æ¨¡å—
-<b>Error In (no error)</b>: é”™è¯¯ç°‡
+<b>Module Name</b>:·¢ËÍ×´Ì¬µÄCSM
+<b>Status</b>: ½«±»¹ã²¥µÄ×´Ì¬
+<b>Arguments ("")</b>: ½«±»¹ã²¥µÄ×´Ì¬²ÎÊı
+<b>Target Module</b>:Ä¿±êÄ£¿é
+<b>Error In (no error)</b>: ´íÎó´Ø
  -
 -- <b>Outputs:</b> --
-<b>error out</b>: é”™è¯¯ç°‡
+<b>error out</b>: ´íÎó´Ø
 
 ### CSM - Request CSM to Broadcast Status Change.vi
 
-ç”³è¯· CSM å‘å¸ƒçŠ¶æ€ã€‚é€šå¸¸ç”¨äºå’ŒCSMå¹¶è¡Œçš„åŠŸèƒ½å¾ªç¯ï¼Œè¿™äº›åŠŸèƒ½å¾ªç¯å’Œ CSM ä¸€èµ·å®Œæˆå®Œæ•´æ¨¡å—åŠŸèƒ½ã€‚
+ÉêÇë CSM ·¢²¼×´Ì¬¡£Í¨³£ÓÃÓÚºÍCSM²¢ĞĞµÄ¹¦ÄÜÑ­»·£¬ÕâĞ©¹¦ÄÜÑ­»·ºÍ CSM Ò»ÆğÍê³ÉÍêÕûÄ£¿é¹¦ÄÜ¡£
 
 -- <b>Inputs:</b> --
-<b>Module Name</b>:å‘é€çŠ¶æ€çš„CSM
-<b>Status</b>: å°†è¢«å¹¿æ’­çš„çŠ¶æ€
-<b>Arguments ("")</b>: å°†è¢«å¹¿æ’­çš„çŠ¶æ€å‚æ•°
-<b>Broadcast(T)</b>: æ§åˆ¶æ˜¯å¦å¹¿æ’­çš„å¼€å…³è¾“å…¥
-<b>Error In (no error)</b>: é”™è¯¯ç°‡
+<b>Module Name</b>:·¢ËÍ×´Ì¬µÄCSM
+<b>Status</b>: ½«±»¹ã²¥µÄ×´Ì¬
+<b>Arguments ("")</b>: ½«±»¹ã²¥µÄ×´Ì¬²ÎÊı
+<b>Broadcast(T)</b>: ¿ØÖÆÊÇ·ñ¹ã²¥µÄ¿ª¹ØÊäÈë
+<b>Error In (no error)</b>: ´íÎó´Ø
 
 -- <b>Outputs:</b> --
-<b>error out</b>: é”™è¯¯ç°‡
+<b>error out</b>: ´íÎó´Ø
 
 ### CSM - Module Turns Invalid.vi
 
-æ£€æŸ¥CSMæ˜¯å¦å·²ç»é€€å‡ºã€‚é€šå¸¸ç”¨äºå’ŒCSMå¹¶è¡Œçš„åŠŸèƒ½å¾ªç¯ï¼Œè¿™äº›åŠŸèƒ½å¾ªç¯å’Œ CSM ä¸€èµ·å®Œæˆå®Œæ•´æ¨¡å—åŠŸèƒ½ã€‚ æœ¬VIç”¨äºå¹¶è¡Œå¾ªç¯çš„é€€å‡ºæ¡ä»¶ã€‚
+¼ì²éCSMÊÇ·ñÒÑ¾­ÍË³ö¡£Í¨³£ÓÃÓÚºÍCSM²¢ĞĞµÄ¹¦ÄÜÑ­»·£¬ÕâĞ©¹¦ÄÜÑ­»·ºÍ CSM Ò»ÆğÍê³ÉÍêÕûÄ£¿é¹¦ÄÜ¡£ ±¾VIÓÃÓÚ²¢ĞĞÑ­»·µÄÍË³öÌõ¼ş¡£
 
 -- <b>Inputs:</b> --
-<b>CSM Name</b>: æ¨¡å—åç§°
+<b>CSM Name</b>: Ä£¿éÃû³Æ
 
 -- <b>Outputs:</b> --
-<b>Turn Invalid(Exit)?</b>: æ˜¯å¦å·²ç»é€€å‡º
+<b>Turn Invalid(Exit)?</b>: ÊÇ·ñÒÑ¾­ÍË³ö
 
 ## Global Log Event
 
 ### CSM - Global Log Event.vi
 
-è·å– CSM å…¨å±€çŠ¶æ€ç”¨æˆ·äº‹ä»¶å¥æŸ„
+»ñÈ¡ CSM È«¾Ö×´Ì¬ÓÃ»§ÊÂ¼ş¾ä±ú
 
 -- <b>Inputs:</b> --
-<b>Error in</b>: é”™è¯¯ç°‡
+<b>Error in</b>: ´íÎó´Ø
 
 -- <b>Outputs:</b> --
-<b>CSM Global Log Event</b>: CSM å…¨å±€çŠ¶æ€ç”¨æˆ·äº‹ä»¶å¥æŸ„
-<b>Error out</b>: é”™è¯¯ç°‡
+<b>CSM Global Log Event</b>: CSM È«¾Ö×´Ì¬ÓÃ»§ÊÂ¼ş¾ä±ú
+<b>Error out</b>: ´íÎó´Ø
 
 ### CSM - Destroy Global Log Event.vi
 
-é‡Šæ”¾ CSM å…¨å±€çŠ¶æ€ç”¨æˆ·äº‹ä»¶å¥æŸ„
+ÊÍ·Å CSM È«¾Ö×´Ì¬ÓÃ»§ÊÂ¼ş¾ä±ú
 
 -- <b>Inputs:</b> --
-<b>CSM Global Log Event</b>: CSM å…¨å±€çŠ¶æ€ç”¨æˆ·äº‹ä»¶å¥æŸ„
-<b>Error in</b>: é”™è¯¯ç°‡
+<b>CSM Global Log Event</b>: CSM È«¾Ö×´Ì¬ÓÃ»§ÊÂ¼ş¾ä±ú
+<b>Error in</b>: ´íÎó´Ø
 
 -- <b>Outputs:</b> --
-<b>Error out</b>: é”™è¯¯ç°‡
+<b>Error out</b>: ´íÎó´Ø
 
 ### CSM - Generate User Global Log.vi
 
@@ -751,90 +800,90 @@ Release CSM Global Log Event Reference.
 
 ### Build Error Cluster.vi
 
-åˆ›å»ºä¸€ä¸ªé”™è¯¯ç°‡ï¼ˆerror clusterï¼‰ï¼Œä»¥æ ‡å‡† LabVIEW çš„æ–¹å¼ä»è°ƒç”¨ VI çš„è°ƒç”¨é“¾ä¸­æ„å»ºæºå­—ç¬¦ä¸²ã€‚æ„å»ºçš„æºå­—ç¬¦ä¸²å½¢å¼ä¸ºï¼š
-"<B>è°ƒç”¨çš„ VI</B> åœ¨ <B>è°ƒç”¨ VI çš„è°ƒç”¨è€…</B>-><B>è°ƒç”¨ VI çš„è°ƒç”¨è€…çš„è°ƒç”¨è€…</B>->ç­‰ç­‰...->ç­‰ç­‰..."
-å¯é€‰çš„ 'String to Prepend to source ("")' å­—ç¬¦ä¸²è¾“å…¥å¯ç”¨äºåœ¨æºå­—ç¬¦ä¸²ä¸­æ·»åŠ é¢å¤–çš„æè¿°ä¿¡æ¯ã€‚å¦‚æœå­˜åœ¨è¿™ä¸ªå­—ç¬¦ä¸²ï¼Œå®ƒå°†ç”¨æ‹¬å·æ‹¬èµ·æ¥ï¼Œå¹¶æ·»åŠ åˆ°æºå­—ç¬¦ä¸²ä¹‹å‰ã€‚
+´´½¨Ò»¸ö´íÎó´Ø£¨error cluster£©£¬ÒÔ±ê×¼ LabVIEW µÄ·½Ê½´Óµ÷ÓÃ VI µÄµ÷ÓÃÁ´ÖĞ¹¹½¨Ô´×Ö·û´®¡£¹¹½¨µÄÔ´×Ö·û´®ĞÎÊ½Îª£º
+"<B>µ÷ÓÃµÄ VI</B> ÔÚ <B>µ÷ÓÃ VI µÄµ÷ÓÃÕß</B>-><B>µ÷ÓÃ VI µÄµ÷ÓÃÕßµÄµ÷ÓÃÕß</B>->µÈµÈ...->µÈµÈ..."
+¿ÉÑ¡µÄ 'String to Prepend to source ("")' ×Ö·û´®ÊäÈë¿ÉÓÃÓÚÔÚÔ´×Ö·û´®ÖĞÌí¼Ó¶îÍâµÄÃèÊöĞÅÏ¢¡£Èç¹û´æÔÚÕâ¸ö×Ö·û´®£¬Ëü½«ÓÃÀ¨ºÅÀ¨ÆğÀ´£¬²¢Ìí¼Óµ½Ô´×Ö·û´®Ö®Ç°¡£
 
 -- <b>Inputs:</b> --
-<b>code</b>: é”™è¯¯ç 
-<b>String to Prepend to source ("")</b>: é”™è¯¯ä¿¡æ¯å­—ç¬¦ä¸²
+<b>code</b>: ´íÎóÂë
+<b>String to Prepend to source ("")</b>: ´íÎóĞÅÏ¢×Ö·û´®
 
 -- <b>Outputs:</b> --
-<b>error out</b>: é”™è¯¯ç°‡
+<b>error out</b>: ´íÎó´Ø
 
 ### Build Internal State String.vi
 
-æ„å»ºåŒ…å« JKI çŠ¶æ€æœºçŠ¶æ€ã€å‚æ•°ç­‰ä¿¡æ¯çš„å­—ç¬¦ä¸²ã€‚
+¹¹½¨°üº¬ JKI ×´Ì¬»ú×´Ì¬¡¢²ÎÊıµÈĞÅÏ¢µÄ×Ö·û´®¡£
 
 -- <b>Inputs:</b> --s
-<b>State</b>: çŠ¶æ€å­—ç¬¦ä¸²
-<b>Arguments ("")</b>: <b>State</b>çš„å‚æ•°
-<b>Arg-State ("")</b>: å‘é€æ­¤æ¶ˆæ¯çš„æ¨¡å—åœ¨å‘é€æ­¤æ¶ˆæ¯æ—¶å¤„äºçš„çŠ¶æ€
-<b>Source ("")</b>: å‘é€æ­¤æ¶ˆæ¯çš„æ¨¡å—åç§°
+<b>State</b>: ×´Ì¬×Ö·û´®
+<b>Arguments ("")</b>: <b>State</b>µÄ²ÎÊı
+<b>Arg-State ("")</b>: ·¢ËÍ´ËÏûÏ¢µÄÄ£¿éÔÚ·¢ËÍ´ËÏûÏ¢Ê±´¦ÓÚµÄ×´Ì¬
+<b>Source ("")</b>: ·¢ËÍ´ËÏûÏ¢µÄÄ£¿éÃû³Æ
 
 -- <b>Outputs:</b> --
-<b>State with Arguments</b>: åŒ…å« JKI çŠ¶æ€æœºçŠ¶æ€ã€å‚æ•°ç­‰ä¿¡æ¯çš„å­—ç¬¦ä¸²
+<b>State with Arguments</b>: °üº¬ JKI ×´Ì¬»ú×´Ì¬¡¢²ÎÊıµÈĞÅÏ¢µÄ×Ö·û´®
 
 ### String History Cacher.vi
 
-ä¿å­˜å½“å‰è¾“å…¥çš„å­—ç¬¦ä¸²åˆ°ç¼“å­˜ï¼Œç¼“å­˜çš„å†å²å­—ç¬¦ä¸²ï¼Œå½“è¶…å‡ºæœ€å¤§é•¿åº¦é™åˆ¶æ—¶ï¼Œæœ€å…ˆè¿›å…¥çš„ç¼“å­˜å­—ç¬¦ä¸²å°†è¢«è¦†ç›–ã€‚ç”¨äºè°ƒè¯•CSMçš„å†å²çŠ¶æ€ã€‚
+±£´æµ±Ç°ÊäÈëµÄ×Ö·û´®µ½»º´æ£¬»º´æµÄÀúÊ·×Ö·û´®£¬µ±³¬³ö×î´ó³¤¶ÈÏŞÖÆÊ±£¬×îÏÈ½øÈëµÄ»º´æ×Ö·û´®½«±»¸²¸Ç¡£ÓÃÓÚµ÷ÊÔCSMµÄÀúÊ·×´Ì¬¡£
 
 -- <b>Inputs:</b> --
-<b>String</b>: å¾…ç¼“å­˜å­—ç¬¦ä¸²
-<b>length</b>: ç¼“å­˜çš„å†å²å­—ç¬¦ä¸²æœ€å¤§å­—ç¬¦ä¸²é•¿åº¦
-<b>Include Timestamp(F)</b>: æ˜¯å¦åœ¨æ¯è¡Œå¼€å¤´åŒ…å«æ—¶é—´æˆ³ã€‚
+<b>String</b>: ´ı»º´æ×Ö·û´®
+<b>length</b>: »º´æµÄÀúÊ·×Ö·û´®×î´ó×Ö·û´®³¤¶È
+<b>Include Timestamp(F)</b>: ÊÇ·ñÔÚÃ¿ĞĞ¿ªÍ·°üº¬Ê±¼ä´Á¡£
 
 -- <b>Outputs:</b> --
-<b>String Cache</b>: ç¼“å­˜çš„å†å²å­—ç¬¦ä¸²
+<b>String Cache</b>: »º´æµÄÀúÊ·×Ö·û´®
 
 ### Timeout Selector.vi
 
-ç”¨äºåŒ…å«ç”¨æˆ·äº‹ä»¶ç»“æ„çš„æ¨¡æ¿ä¸­
+ÓÃÓÚ°üº¬ÓÃ»§ÊÂ¼ş½á¹¹µÄÄ£°åÖĞ
 
 -- <b>Inputs:</b> --
-<b>Timeout Expected</b>: é¢„æœŸçš„è¶…æ—¶è®¾ç½®
-<b>Remaining States</b>: å¦‚æœè¿˜æœ‰å‰©ä½™çš„çŠ¶æ€ï¼Œè¾“å‡ºå°†ä¸º 0ï¼Œå¦åˆ™è¾“å‡ºä¸ºé¢„æœŸå€¼
+<b>Timeout Expected</b>: Ô¤ÆÚµÄ³¬Ê±ÉèÖÃ
+<b>Remaining States</b>: Èç¹û»¹ÓĞÊ£ÓàµÄ×´Ì¬£¬Êä³ö½«Îª 0£¬·ñÔòÊä³öÎªÔ¤ÆÚÖµ
 
 -- <b>Outputs:</b> --
-<b>Timeout</b>: ä»²è£åä½¿ç”¨çš„è¶…æ—¶è®¾ç½®
+<b>Timeout</b>: ÖÙ²ÃºóÊ¹ÓÃµÄ³¬Ê±ÉèÖÃ
 
 ### Trim Both Whitespace.vi
 
-å¼€å¤´ã€ç»“å°¾æˆ–ä¸¤è€…åŒæ—¶ç§»é™¤æ‰€æœ‰ ASCII ç©ºç™½å­—ç¬¦ï¼ˆç©ºæ ¼ã€åˆ¶è¡¨ç¬¦ã€å›è½¦å’Œæ¢è¡Œï¼‰ã€‚
+¿ªÍ·¡¢½áÎ²»òÁ½ÕßÍ¬Ê±ÒÆ³ıËùÓĞ ASCII ¿Õ°××Ö·û£¨¿Õ¸ñ¡¢ÖÆ±í·û¡¢»Ø³µºÍ»»ĞĞ£©¡£
 
 -- <b>Inputs:</b> --
-<b>string</b>: å¾…å¤„ç†å­—ç¬¦ä¸²
+<b>string</b>: ´ı´¦Àí×Ö·û´®
 
 -- <b>Outputs:</b> --
-<b>trimmed string</b>: å¤„ç†åçš„å­—ç¬¦ä¸²
+<b>trimmed string</b>: ´¦ÀíºóµÄ×Ö·û´®
 
 ### uuid.vi
 
-æ ¹æ®æ ‡å‡†æ–¹æ³•ç”Ÿæˆ <b>Universally Unique Identifier(UUID)</b>ã€‚ ä¾‹å¦‚:
+¸ù¾İ±ê×¼·½·¨Éú³É <b>Universally Unique Identifier(UUID)</b>¡£ ÀıÈç:
 
      - 59703F3AD837
      - 106A470BA5EC
      - 9B781DB313AF
 
 -- <b>Outputs:</b> --
-<b>UUID</b>: ç”Ÿæˆçš„ UUID
+<b>UUID</b>: Éú³ÉµÄ UUID
 
 ### Random Change Flag.vi
 
-ç”Ÿæˆä¸€ä¸ªéšæœºçš„æ•°å€¼ï¼Œç”¨äºæ ‡è®°çŠ¶æ€çš„å˜åŒ–ï¼ŒCSMä¸­ä¸ºäº†æé«˜æ•ˆç‡ï¼Œæœ‰äº›åœ°æ–¹çš„ç¼“å­˜(cache)åˆ©ç”¨è¿™ä¸ªæ ‡è®°æ¥åˆ¤æ–­æ˜¯å¦éœ€è¦æ›´æ–°ã€‚
+Éú³ÉÒ»¸öËæ»úµÄÊıÖµ£¬ÓÃÓÚ±ê¼Ç×´Ì¬µÄ±ä»¯£¬CSMÖĞÎªÁËÌá¸ßĞ§ÂÊ£¬ÓĞĞ©µØ·½µÄ»º´æ(cache)ÀûÓÃÕâ¸ö±ê¼ÇÀ´ÅĞ¶ÏÊÇ·ñĞèÒª¸üĞÂ¡£
 
 -- <b>Outputs:</b> --
-<b>Random Change Flag</b>: ç”Ÿæˆçš„éšæœºæ•°å€¼
+<b>Random Change Flag</b>: Éú³ÉµÄËæ»úÊıÖµ
 
 ### Global Log To String.vi
 
-å…¨å±€æ—¥å¿—(Global Log)æ•°æ®ç°‡è½¬æ¢ä¸ºå­—ç¬¦ä¸²ã€‚
+È«¾ÖÈÕÖ¾(Global Log)Êı¾İ´Ø×ª»»Îª×Ö·û´®¡£
 
 -- <b>Inputs:</b> --
-<b>Log</b>: å…¨å±€æ—¥å¿—æ•°æ®ç°‡
+<b>Log</b>: È«¾ÖÈÕÖ¾Êı¾İ´Ø
 
 -- <b>Outputs:</b> --
-<b>Log String</b>: å…¨å±€æ—¥å¿—å­—ç¬¦ä¸²
+<b>Log String</b>: È«¾ÖÈÕÖ¾×Ö·û´®
 
 ## CSM-Helper API
 
@@ -845,3 +894,3830 @@ Release CSM Global Log Event Reference.
 
 -- <b>Outputs:</b> --
 
+
+### _Add VI Reference Case.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>element</b>:
+
+<b>Add Frame</b>:
+
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM-Helper out</b>:
+
+### Connect Information.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Case</b>:
+
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Backend Connected Info</b>:
+
+<b>FrontEnd Connected Info</b>:
+
+<b>CSM-Helper out</b>:
+
+### Diagram Node Information.vi
+-- <b>Inputs:</b> --
+<b>InnerTerminal in</b>:
+
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Array in</b>:
+
+<b>Front Tunnels</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Array</b>:
+
+<b>Array out</b>:
+
+### Get Argument Info From back Term.vi
+-- <b>Inputs:</b> --
+<b>Terminal in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Array</b>:
+
+### Get Argument Info From Front Term.vi
+-- <b>Inputs:</b> --
+<b>Terminal in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Array</b>:
+
+### GObject Terminals.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>GObject in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error in (no error) (dup)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Class Name</b>:
+
+<b>Terms[]</b>:
+
+<b>Node Object</b>:
+
+<b>tunnel Relative Pos</b>:
+
+### Relative Pos to InterData Tunnel of CaseContent.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>element</b>:
+
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Position</b>:
+
+<b>CSM-Helper out</b>:
+
+### Resize CaseStructure By Making Space.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Bounds</b>:
+
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>DiffBound</b>:
+
+<b>MakeSpace.Rect</b>:
+
+<b>CSM-Helper out</b>:
+
+### Search With Pattern.vi
+-- <b>Inputs:</b> --
+<b>regular expression</b>:
+
+<b>Array</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Numeric</b>:
+
+### sub1.vi
+-- <b>Inputs:</b> --
+<b>Part References.Parse State Queue</b>:
+
+<b>regular expression</b>:
+
+<b>Array</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Tunnel out</b>:
+
+### sub2.vi
+-- <b>Inputs:</b> --
+<b>Part References.Parse State Queue</b>:
+
+<b>regular expression</b>:
+
+<b>Array</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Tunnel out</b>:
+
+### Refresh References.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+The <B>error in</B> cluster can accept error information wired from VIs previously called.  Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+The <B>error out</B> cluster passes error or warning information out of a VI to be used by other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>CSM-Helper out</b>:
+
+### Get ParentRef Until Type Matched.vi
+-- <b>Inputs:</b> --
+<b>Class Name</b>:
+
+<b>Error in</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>reference in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Error out</b>:
+<B>error out</B> passes error or warning information out of a VI to be used by other VIs.
+
+Right-click the <B>error out</B> indicator on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Target Ref</b>:
+
+### Is in JKISM or CSM.vi
+-- <b>Inputs:</b> --
+<b>Error in</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>reference in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>is in JKISM or CSM?</b>:
+
+### Relationship Check.vi
+-- <b>Inputs:</b> --
+<b>TestRef</b>:
+
+<b>reference in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Is TestRef</b>:
+
+<b>Is Child of TestRef</b>:
+
+### Add State Frame.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>index(-1, use same group)</b>:
+
+<b>element</b>:
+
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Add Frame</b>:
+
+<b>CSM-Helper out</b>:
+
+### Check NewStateNotify is Registered.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+The <B>error in</B> cluster can accept error information wired from VIs previously called.  Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+The <B>error out</B> cluster passes error or warning information out of a VI to be used by other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>NewStateNotify Registed</b>:
+
+<b>CSM-Helper out</b>:
+
+### Connect Error Wire If not Connected.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>case</b>:
+
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM-Helper out</b>:
+
+### Connect EventReg Wire If not Connected.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>case</b>:
+
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM-Helper out</b>:
+
+### Connect Internal Data Wire If not Connected.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>case</b>:
+
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM-Helper out</b>:
+
+### Connect LastResp to Response in Error Case.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM-Helper out</b>:
+
+### Connect Paired Tunnels.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM-Helper out</b>:
+
+### Connect StateQ Wire If not Connected.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>case</b>:
+
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM-Helper out</b>:
+
+### Copy State.vi
+-- <b>Inputs:</b> --
+<b>Already Exist Action:
+Replace(T) / Skip(F)</b>:
+
+<b>SourceCSM</b>:
+
+<b>error in (no error)</b>:
+The <B>error in</B> cluster can accept error information wired from VIs previously called.  Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>New(Empty to Use same Name)</b>:
+
+<b>Case</b>:
+
+<b>CSM-Helper.lvclass</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM-Helper out 2</b>:
+
+### Create From Basic Refs.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+The <B>error in</B> cluster can accept error information wired from VIs previously called.  Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>CSM Basic Refs</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+The <B>error out</B> cluster passes error or warning information out of a VI to be used by other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>CSM-Helper.lvclass</b>:
+
+### Create From CaseStructure Reference.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+The <B>error in</B> cluster can accept error information wired from VIs previously called.  Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>CaseStructure</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+The <B>error out</B> cluster passes error or warning information out of a VI to be used by other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>CSM-Helper.lvclass</b>:
+
+### Create From EventStructure Reference.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+The <B>error in</B> cluster can accept error information wired from VIs previously called.  Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>CaseStructure</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+The <B>error out</B> cluster passes error or warning information out of a VI to be used by other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>CSM-Helper.lvclass</b>:
+
+### Create From VI Reference.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+The <B>error in</B> cluster can accept error information wired from VIs previously called.  Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>VI</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+The <B>error out</B> cluster passes error or warning information out of a VI to be used by other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>CSM-Helper.lvclass</b>:
+
+### Create From WhileLoop Reference.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+The <B>error in</B> cluster can accept error information wired from VIs previously called.  Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>Structure</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+The <B>error out</B> cluster passes error or warning information out of a VI to be used by other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>CSM-Helper.lvclass</b>:
+
+### Destroy.vi
+-- <b>Inputs:</b> --
+<b>Save Instruments?(F)</b>:
+
+<b>error in (no error)</b>:
+The <B>error in</B> cluster can accept error information wired from VIs previously called.  Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+The <B>error out</B> cluster passes error or warning information out of a VI to be used by other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>CSM-Helper out</b>:
+
+### Doc.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+The <B>error in</B> cluster can accept error information wired from VIs previously called.  Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>String 2</b>:
+
+<b>String</b>:
+
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+The <B>error out</B> cluster passes error or warning information out of a VI to be used by other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>String 4</b>:
+
+<b>String 3</b>:
+
+<b>CSM-Helper out</b>:
+
+### Get All API Interface Info.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Array</b>:
+
+<b>CSM-Helper out</b>:
+
+### Get All Status Interface Info.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+The <B>error in</B> cluster can accept error information wired from VIs previously called.  Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+The <B>error out</B> cluster passes error or warning information out of a VI to be used by other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>Array 3</b>:
+
+<b>CSM-Helper out</b>:
+
+### Get CaseFrame Index By CaseName.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+The <B>error in</B> cluster can accept error information wired from VIs previously called.  Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>CASE</b>:
+
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+The <B>error out</B> cluster passes error or warning information out of a VI to be used by other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>index</b>:
+
+<b>CSM-Helper out</b>:
+
+### Get CaseFrame Reference By CaseName.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+The <B>error in</B> cluster can accept error information wired from VIs previously called.  Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>CASE</b>:
+
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+The <B>error out</B> cluster passes error or warning information out of a VI to be used by other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>Frame Refs</b>:
+
+<b>CSM-Helper out</b>:
+
+### Get Event Structure Num.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+The <B>error in</B> cluster can accept error information wired from VIs previously called.  Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+The <B>error out</B> cluster passes error or warning information out of a VI to be used by other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>EvtStruNum</b>:
+
+<b>CSM-Helper out</b>:
+
+### Get Interface Info.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+The <B>error in</B> cluster can accept error information wired from VIs previously called.  Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>CASE</b>:
+
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+The <B>error out</B> cluster passes error or warning information out of a VI to be used by other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>Response</b>:
+
+<b>Array</b>:
+
+<b>CSM-Helper out</b>:
+
+### Get Internal Data Info.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+The <B>error in</B> cluster can accept error information wired from VIs previously called.  Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+The <B>error out</B> cluster passes error or warning information out of a VI to be used by other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>Array</b>:
+
+<b>CSM-Helper out</b>:
+
+### Open Block Diagram.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM-Helper out</b>:
+
+### Open Front Panel.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM-Helper out</b>:
+
+### Remove State Frame.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>element</b>:
+
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM-Helper out</b>:
+
+### Save Instrument.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM-Helper out</b>:
+
+### Set Error Tunnel Use Default If not Connected.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Use Default if Unwired</b>:
+
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM-Helper out</b>:
+
+### Set Visible Case Frame.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>element</b>:
+
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM-Helper out</b>:
+
+### Set Wire Label Visible.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+The <B>error in</B> cluster can accept error information wired from VIs previously called.  Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>Connected Wire.Label.Visible</b>:
+
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+The <B>error out</B> cluster passes error or warning information out of a VI to be used by other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>CSM-Helper out</b>:
+
+### Start Undo.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Name</b>:
+
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM-Helper out</b>:
+
+### Stop Undo.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM-Helper out</b>:
+
+### Undo.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM-Helper out</b>:
+
+### Read APIs.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+The <B>error in</B> cluster can accept error information wired from VIs previously called.  Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+The <B>error out</B> cluster passes error or warning information out of a VI to be used by other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>Value</b>:
+
+<b>CSM-Helper out</b>:
+
+### Read Back Tunnel Internal TermRefs.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>element</b>:
+
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Back Tunnels</b>:
+
+<b>CSM-Helper out</b>:
+
+### Read Back Tunnels Refs.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+The <B>error in</B> cluster can accept error information wired from VIs previously called.  Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+The <B>error out</B> cluster passes error or warning information out of a VI to be used by other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>Back Tunnels</b>:
+
+<b>CSM-Helper out</b>:
+
+### Read Block Diagram Ref.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Diagram</b>:
+
+<b>CSM-Helper out</b>:
+
+### Read Case Structure Ref.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+The <B>error in</B> cluster can accept error information wired from VIs previously called.  Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+The <B>error out</B> cluster passes error or warning information out of a VI to be used by other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>Case Structure</b>:
+
+<b>CSM-Helper out</b>:
+
+### Read Event Structure Ref.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+The <B>error in</B> cluster can accept error information wired from VIs previously called.  Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+The <B>error out</B> cluster passes error or warning information out of a VI to be used by other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>Event Structure</b>:
+
+<b>CSM-Helper out</b>:
+
+### Read Front Tunnel Internal TermRefs.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>case</b>:
+
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Front Tunnels</b>:
+
+<b>CSM-Helper out</b>:
+
+### Read Front Tunnels Refs.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+The <B>error in</B> cluster can accept error information wired from VIs previously called.  Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+The <B>error out</B> cluster passes error or warning information out of a VI to be used by other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>Front Tunnels</b>:
+
+<b>CSM-Helper out</b>:
+
+### Read New State Notifier Event State Ref.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+The <B>error in</B> cluster can accept error information wired from VIs previously called.  Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+The <B>error out</B> cluster passes error or warning information out of a VI to be used by other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>New State Notifier Event State Ref</b>:
+
+<b>CSM-Helper out</b>:
+
+### Read Paired Tunnels of Case Structure.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+The <B>error in</B> cluster can accept error information wired from VIs previously called.  Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+The <B>error out</B> cluster passes error or warning information out of a VI to be used by other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>Paired Tunnels</b>:
+
+<b>CSM-Helper out</b>:
+
+### Read Parse State Queue Ref.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+The <B>error in</B> cluster can accept error information wired from VIs previously called.  Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+The <B>error out</B> cluster passes error or warning information out of a VI to be used by other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>Parse State Queue</b>:
+
+<b>CSM-Helper out</b>:
+
+### Read States.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+The <B>error in</B> cluster can accept error information wired from VIs previously called.  Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+The <B>error out</B> cluster passes error or warning information out of a VI to be used by other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>Value</b>:
+
+<b>CSM-Helper out</b>:
+
+### Read Timeout Event State Ref.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+The <B>error in</B> cluster can accept error information wired from VIs previously called.  Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+The <B>error out</B> cluster passes error or warning information out of a VI to be used by other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>New State Notifier Event State Ref</b>:
+
+<b>CSM-Helper out</b>:
+
+### Read Type.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+The <B>error in</B> cluster can accept error information wired from VIs previously called.  Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+The <B>error out</B> cluster passes error or warning information out of a VI to be used by other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>Part References.Type</b>:
+
+<b>CSM-Helper out</b>:
+
+### Read User-Defined States.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+The <B>error in</B> cluster can accept error information wired from VIs previously called.  Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+The <B>error out</B> cluster passes error or warning information out of a VI to be used by other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>Array</b>:
+
+<b>CSM-Helper out</b>:
+
+### Read VI Ref.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+The <B>error in</B> cluster can accept error information wired from VIs previously called.  Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+The <B>error out</B> cluster passes error or warning information out of a VI to be used by other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>VI</b>:
+
+<b>CSM-Helper out</b>:
+
+### Read While Loop Ref.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+The <B>error in</B> cluster can accept error information wired from VIs previously called.  Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+The <B>error out</B> cluster passes error or warning information out of a VI to be used by other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>While Loop</b>:
+
+<b>CSM-Helper out</b>:
+
+### Add VI Reference Case.vi
+-- <b>Inputs:</b> --
+<b>error in</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM-Helper out</b>:
+
+### Remove All CSM Bookmarks.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM-Helper out</b>:
+
+### standardize CSM Module.vi
+-- <b>Inputs:</b> --
+<b>error in</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM-Helper out</b>:
+
+### CSM Essential States.vi
+-- <b>Inputs:</b> --
+
+
+-- <b>Outputs:</b> --
+<b>CSM Essential States</b>:
+
+### CSM Module Type.vi
+-- <b>Inputs:</b> --
+<b>Error in</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM Basic Refs</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Error out</b>:
+<B>error out</B> passes error or warning information out of a VI to be used by other VIs.
+
+Right-click the <B>error out</B> indicator on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM Basic Refs (dup)</b>:
+
+### Is CSM Module - CaseStructure.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CaseStructure</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Is CSM Module?</b>:
+
+<b>CSM Basic Refs</b>:
+
+### Is CSM Module - EventStructure.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>EventStructure</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Is CSM Module?</b>:
+
+<b>CSM Basic Refs</b>:
+
+### Is CSM Module - ParseStateVI.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Parse State VI Ref</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Is CSM Module?</b>:
+
+<b>CSM Basic Refs</b>:
+
+### Is CSM Module - Structure.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Structure</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Is CSM Module?</b>:
+
+<b>CSM Basic Refs</b>:
+
+### Is CSM Module - VIRef.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+The <B>error in</B> cluster can accept error information wired from VIs previously called.  Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>VIRef</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+The <B>error out</B> cluster passes error or warning information out of a VI to be used by other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>Is CSM Module?</b>:
+
+<b>CSM Basic Refs</b>:
+
+### Is CSM Module - WhileLoop.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>WhileLoop in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Is CSM Module?</b>:
+
+<b>CSM Basic Refs</b>:
+
+### Is CSM Module.vi
+-- <b>Inputs:</b> --
+
+
+-- <b>Outputs:</b> --
+
+### CaseStructure - Add Frame.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Case Name</b>:
+
+<b>Reference Frame Index</b>:
+
+<b>CaseStructure in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Add Frame</b>:
+
+<b>CaseStructure out</b>:
+
+### CaseStructure - Case Name to Group Name.vi
+-- <b>Inputs:</b> --
+<b>element</b>:
+
+
+-- <b>Outputs:</b> --
+<b>String</b>:
+
+### CaseStructure - Check If State Exist.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Group Name</b>:
+
+<b>CaseStructure in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Numeric</b>:
+
+<b>CaseStructure out</b>:
+
+### CaseStructure - Get Group Seperator Case Index.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Group Name</b>:
+
+<b>CaseStructure in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Numeric</b>:
+
+<b>CaseStructure out</b>:
+
+### Diagram - Connect Tunnel with Wire 2.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Wire Indexs</b>:
+
+<b>Front Tunnels</b>:
+
+<b>Diagram in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Array out</b>:
+
+<b>Diagram out</b>:
+
+### Diagram - Connect Tunnel with Wire.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>FrontEnd Connected Info</b>:
+
+<b>Front Tunnels</b>:
+
+<b>Diagram in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Array out</b>:
+
+<b>Diagram out</b>:
+
+### Diagram - Get All Decoration Refs.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>TopLevelDiagram in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>TextRefs</b>:
+
+<b>TopLevelDiagram out</b>:
+
+### Diagram - Get All Text Refs.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>TopLevelDiagram in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>TextRefs</b>:
+
+<b>TopLevelDiagram out</b>:
+
+### PairedTunnels - Connect Wire.vi
+-- <b>Inputs:</b> --
+<b>Error in</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>index(-1 for all)</b>:
+
+<b>PairedTunnels</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Error out</b>:
+<B>error out</B> passes error or warning information out of a VI to be used by other VIs.
+
+Right-click the <B>error out</B> indicator on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>PairedTunnels</b>:
+
+### Find Event Structure from Case Structure.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CaseStructure</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>EvntStruct Refnum</b>:
+
+### Find Parse State Queue from Case Structure.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CaseStructure</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CaseStructure</b>:
+
+<b>Parse State Queue</b>:
+
+### Find Parse State Queue from Event Strcture.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>EvntStruct Refnum</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CaseStructure</b>:
+
+<b>Parse State Queue</b>:
+
+### Find Parse State Queue from While Loop.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>WhileLoop in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CaseStructure</b>:
+
+<b>Parse State Queue</b>:
+
+<b>WhileLoop out</b>:
+
+### Terminals - Filter Control Terms.vi
+-- <b>Inputs:</b> --
+<b>Terms[]</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Terms[] out</b>:
+
+### Terminals - Filter Error Terms.vi
+-- <b>Inputs:</b> --
+<b>Terms[]</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Terms[] out</b>:
+
+### Terminals - Filter Indicator Terms.vi
+-- <b>Inputs:</b> --
+<b>Terms[]</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Terms[] out</b>:
+
+### Terminals - Filter Input Term.vi
+-- <b>Inputs:</b> --
+<b>InnerTerminal in</b>:
+
+<b>Wire.Terms[] in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Wire.Terms[] out</b>:
+
+### Terminals - Filter invalid Terms.vi
+-- <b>Inputs:</b> --
+<b>Terms[]</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Terms[] out</b>:
+
+### Terminals - Filter Left-Top Term.vi
+-- <b>Inputs:</b> --
+<b>Terms[]</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Terms[] out</b>:
+
+### Terminals - Left-Top Term.vi
+-- <b>Inputs:</b> --
+<b>Terms[]</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Terms[] out</b>:
+
+### Terminals - Lower Term.vi
+-- <b>Inputs:</b> --
+<b>Terms[]</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Terms[] out</b>:
+
+### Terminals - Upper Term.vi
+-- <b>Inputs:</b> --
+<b>Terms[]</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Terms[] out</b>:
+
+## Documentation
+
+### CSM - Copyright QuickDrop.vi
+-- <b>Inputs:</b> --
+
+
+-- <b>Outputs:</b> --
+
+### CSM - Documentation QuickDrop.vi
+-- <b>Inputs:</b> --
+
+
+-- <b>Outputs:</b> --
+
+### CSM - Keywords QuickDrop.vi
+-- <b>Inputs:</b> --
+
+
+-- <b>Outputs:</b> --
+
+### CSM Dummy Module.vi
+-- <b>Inputs:</b> --
+<b>Init State("Macro: Initialize")</b>:
+
+<b>Name("" to use uuid)</b>:
+
+
+-- <b>Outputs:</b> --
+
+## CSM Internal
+
+### Naming Check.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Name("" to use uuid)</b>:
+Returns any argument(s) that may be used in the current state string. These arguments come after the ">>" characters
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error out</B> passes error or warning information out of a VI to be used by other VIs.
+
+Right-click the <B>error out</B> indicator on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Name(dup)</b>:
+Returns any argument(s) that may be used in the current state string. These arguments come after the ">>" characters
+
+### Check.vi
+-- <b>Inputs:</b> --
+<b>BroadcastRegistry in</b>:
+
+<b>Status</b>:
+
+<b>Source</b>:
+
+<b>Target</b>:
+
+
+-- <b>Outputs:</b> --
+<b>BroadcastRegistry out</b>:
+
+<b>Response Message Info</b>:
+
+### Delete Source Module.vi
+-- <b>Inputs:</b> --
+<b>BroadcastRegistry in</b>:
+
+<b>Source</b>:
+
+
+-- <b>Outputs:</b> --
+<b>BroadcastRegistry out</b>:
+
+### Delete Target Module.vi
+-- <b>Inputs:</b> --
+<b>BroadcastRegistry in</b>:
+
+<b>Source</b>:
+
+
+-- <b>Outputs:</b> --
+<b>BroadcastRegistry out</b>:
+
+### Initialize.vi
+-- <b>Inputs:</b> --
+<b>BroadcastRegistry in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>BroadcastRegistry out</b>:
+
+### List Entries.vi
+-- <b>Inputs:</b> --
+<b>BroadcastRegistry in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>BroadcastRegistry out</b>:
+
+<b>Array</b>:
+
+### List Status in Registry.vi
+-- <b>Inputs:</b> --
+<b>BroadcastRegistry in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>BroadcastRegistry out</b>:
+
+<b>Status</b>:
+
+### Register.vi
+-- <b>Inputs:</b> --
+<b>BroadcastRegistry in</b>:
+
+<b>status</b>:
+
+<b>source</b>:
+
+<b>api</b>:
+
+<b>target</b>:
+
+
+-- <b>Outputs:</b> --
+<b>BroadcastRegistry out</b>:
+
+### Remove Module.vi
+-- <b>Inputs:</b> --
+<b>BroadcastRegistry in</b>:
+
+<b>Source</b>:
+
+
+-- <b>Outputs:</b> --
+<b>BroadcastRegistry out</b>:
+
+### Unregister.vi
+-- <b>Inputs:</b> --
+<b>BroadcastRegistry in</b>:
+
+<b>Status</b>:
+
+<b>Source</b>:
+
+<b>api</b>:
+
+<b>Target</b>:
+
+
+-- <b>Outputs:</b> --
+<b>BroadcastRegistry out</b>:
+
+### Broadcast Item Key.vi
+-- <b>Inputs:</b> --
+<b>status</b>:
+
+<b>target</b>:
+
+<b>source</b>:
+
+
+-- <b>Outputs:</b> --
+<b>key</b>:
+
+### Preview.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+The <B>error in</B> cluster can accept error information wired from VIs previously called.  Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>BroadcastRegistry in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+The <B>error out</B> cluster passes error or warning information out of a VI to be used by other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>Registry</b>:
+
+<b>BroadcastRegistry out</b>:
+
+### Remove response API from List.vi
+-- <b>Inputs:</b> --
+<b>API</b>:
+
+<b>output cluster in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>output cluster out</b>:
+
+### Concatenate State with Arguments.vi
+-- <b>Inputs:</b> --
+<b>Arguments</b>:
+
+<b>State</b>:
+
+
+-- <b>Outputs:</b> --
+<b>State with Arguements</b>:
+
+### CSM-Name to CSM-Mode.vi
+-- <b>Inputs:</b> --
+<b>String</b>:
+
+
+-- <b>Outputs:</b> --
+<b>ParentCSM Name</b>:
+
+<b>CSM Mode</b>:
+
+<b>Requested Name</b>:
+
+### Format Timestamp.vi
+-- <b>Inputs:</b> --
+<b>timestamp</b>:
+
+<b>format string</b>:
+
+
+-- <b>Outputs:</b> --
+<b>String</b>:
+
+### Hex Str to U8 Data.vi
+-- <b>Inputs:</b> --
+<b>HEX String (0-9,A-F)</b>:
+
+
+-- <b>Outputs:</b> --
+<b>u8 Data[]</b>:
+
+### Parse Next Single-line State.vi
+-- <b>Inputs:</b> --
+<b>States Queue</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Next Single-line State</b>:
+
+<b>Remaining States Queue</b>:
+
+### Remove Comments from Line.vi
+-- <b>Inputs:</b> --
+<b>single-line text</b>:
+
+
+-- <b>Outputs:</b> --
+<b>single-line text without comments</b>:
+
+### Splite Reason String Part.vi
+-- <b>Inputs:</b> --
+<b>Single-line -& Reason</b>:
+
+
+-- <b>Outputs:</b> --
+<b>CSM Name</b>:
+
+<b>`State</b>:
+
+<b>`Arguments</b>:
+
+### Splite Single-line Message.vi
+-- <b>Inputs:</b> --
+<b>single-line text</b>:
+
+
+-- <b>Outputs:</b> --
+<b>operator</b>:
+
+<b>state</b>:
+
+<b>args</b>:
+
+<b>source/target</b>:
+
+### Trim Single line Text.vi
+-- <b>Inputs:</b> --
+<b>single-line text</b>:
+
+
+-- <b>Outputs:</b> --
+<b>trimed text</b>:
+
+### U8 Data to Hex Str.vi
+-- <b>Inputs:</b> --
+<b>u8 Data[]</b>:
+
+
+-- <b>Outputs:</b> --
+<b>HEX String (0-9,A-F)</b>:
+
+### CSM Critical Error.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Arugments(as Reason)</b>:
+
+<b>CSM Name</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+
+### CSM No Target Error.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+
+### CSM Not Allowed Message.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>State</b>:
+
+<b>CSM</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+
+### CSM Target Error.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Arguments(as CSM Name)</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+
+### CSM Target Timeout Error.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Arguments(as CSM Name)</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+
+### CSM Unhandled State Error.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Current State</b>:
+
+<b>CSM Name</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+
+### Cache-Broadcast Registry Search Result.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM Name</b>:
+
+<b>Broadcast state</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Array</b>:
+
+### FGV-BroadcastRegistry.vi
+-- <b>Inputs:</b> --
+<b>Source</b>:
+
+<b>Target</b>:
+
+<b>Status</b>:
+
+<b>API</b>:
+
+<b>Error in</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Operation</b>:
+
+
+-- <b>Outputs:</b> --
+<b>response message</b>:
+
+<b>Error out</b>:
+<B>error out</B> passes error or warning information out of a VI to be used by other VIs.
+
+Right-click the <B>error out</B> indicator on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+
+### global-Broadcast Cache Change Flag.vi
+-- <b>Inputs:</b> --
+
+
+-- <b>Outputs:</b> --
+
+### global-CSMQ FGV Change Flag.vi
+-- <b>Inputs:</b> --
+
+
+-- <b>Outputs:</b> --
+
+### Cache-GEvt Filter Object.vi
+-- <b>Inputs:</b> --
+
+
+-- <b>Outputs:</b> --
+<b>CSM:LogFilter.lvclass</b>:
+
+### FGV-GEvt Filter Obj.vi
+-- <b>Inputs:</b> --
+<b>Set(T)/Get(F)</b>:
+
+<b>Error in</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Rules-v1</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Error out</b>:
+<B>error out</B> passes error or warning information out of a VI to be used by other VIs.
+
+Right-click the <B>error out</B> indicator on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM:LogFilter.lvclass</b>:
+
+### FGV-GlobalEventRef.vi
+-- <b>Inputs:</b> --
+<b>Create(F)</b>:
+
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM Global Log Event</b>:
+
+### FGV-StatusChangeEventRef.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Name("" to use uuid) in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Status Change Event</b>:
+
+### GEvt-BackgroundThread.vi
+-- <b>Inputs:</b> --
+
+
+-- <b>Outputs:</b> --
+
+### GEvt-Convert Filter Rules - v1.0.vi
+-- <b>Inputs:</b> --
+<b>Rules-v1</b>:
+
+
+-- <b>Outputs:</b> --
+<b>GlobalLogFilter</b>:
+
+### GEvt-Filter Global Log - v1.0.vi
+-- <b>Inputs:</b> --
+<b>Rules-v1</b>:
+
+<b>Cross CSM Data (in)</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Matched? (dup)</b>:
+
+<b>Cross CSM Data</b>:
+
+### GEvt-Generate Complete Log.vi
+-- <b>Inputs:</b> --
+<b>CSM Global Log Event</b>:
+
+<b>event data</b>:
+
+<b>Enable?</b>:
+
+<b>CSM:LogFilter.lvclass</b>:
+
+
+-- <b>Outputs:</b> --
+<b>CSM Global Log Event out</b>:
+
+### GEvt-Generate Interrupt Log.vi
+-- <b>Inputs:</b> --
+<b>CSM Global Log Event</b>:
+
+<b>Current State</b>:
+
+<b>Arguments</b>:
+
+<b>Name("" to use uuid)</b>:
+
+<b>CSM:LogFilter.lvclass</b>:
+
+
+-- <b>Outputs:</b> --
+<b>CSM Global Log Event out</b>:
+
+<b>event data</b>:
+
+### GEvt-Generate Module Created Log.vi
+-- <b>Inputs:</b> --
+<b>CSM Global Log Event</b>:
+
+<b>Name("" to use uuid)</b>:
+
+<b>Created?</b>:
+
+<b>CSM:LogFilter.lvclass</b>:
+
+
+-- <b>Outputs:</b> --
+<b>CSM Global Log Event out</b>:
+
+<b>event data</b>:
+
+### GEvt-Generate Module Destroyed Log.vi
+-- <b>Inputs:</b> --
+<b>CSM Global Log Event</b>:
+
+<b>Name("" to use uuid)</b>:
+
+<b>Enable?</b>:
+
+<b>CSM:LogFilter.lvclass</b>:
+
+
+-- <b>Outputs:</b> --
+<b>CSM Global Log Event out</b>:
+
+<b>event data</b>:
+
+### GEvt-Generate Register Log.vi
+-- <b>Inputs:</b> --
+<b>CSM Global Log Event</b>:
+
+<b>Current State</b>:
+
+<b>Arguments</b>:
+
+<b>Name("" to use uuid)</b>:
+
+<b>CSM:LogFilter.lvclass</b>:
+
+
+-- <b>Outputs:</b> --
+<b>CSM Global Log Event out</b>:
+
+<b>event data</b>:
+
+### GEvt-Generate Remaining States Log.vi
+-- <b>Inputs:</b> --
+<b>CSM Global Log Event</b>:
+
+<b>Remaining States</b>:
+
+<b>Name("" to use uuid)</b>:
+
+<b>Enable?</b>:
+
+<b>CSM:LogFilter.lvclass</b>:
+
+
+-- <b>Outputs:</b> --
+<b>CSM Global Log Event out</b>:
+
+<b>event data</b>:
+
+### GEvt-Generate State Change Log.vi
+-- <b>Inputs:</b> --
+<b>CSM Global Log Event</b>:
+
+<b>Current State</b>:
+
+<b>Arguments</b>:
+
+<b>Source Message.*State</b>:
+
+<b>Source Message.*Arguments</b>:
+
+<b>Source Module</b>:
+
+<b>Name("" to use uuid)</b>:
+
+<b>CSM:LogFilter.lvclass</b>:
+
+
+-- <b>Outputs:</b> --
+<b>CSM Global Log Event out</b>:
+
+<b>event data</b>:
+
+### GEvt-Generate Status Log.vi
+-- <b>Inputs:</b> --
+<b>CSM Global Log Event</b>:
+
+<b>Current State</b>:
+
+<b>Arguments</b>:
+
+<b>Name("" to use uuid)</b>:
+
+<b>CSM:LogFilter.lvclass</b>:
+
+
+-- <b>Outputs:</b> --
+<b>CSM Global Log Event out</b>:
+
+<b>event data</b>:
+
+### GEvt-Generate Unregister Log.vi
+-- <b>Inputs:</b> --
+<b>CSM Global Log Event</b>:
+
+<b>Current State</b>:
+
+<b>Arguments</b>:
+
+<b>Name("" to use uuid)</b>:
+
+<b>CSM:LogFilter.lvclass</b>:
+
+
+-- <b>Outputs:</b> --
+<b>CSM Global Log Event out</b>:
+
+<b>event data</b>:
+
+### GEvt-Generate with Rule Check.vi
+-- <b>Inputs:</b> --
+<b>LogFilter in</b>:
+
+<b>event data</b>:
+
+<b>CSM Global Log Event in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>CSM Global Log Event out</b>:
+
+### GEvt-Set Source Filter Rules - v1.0.vi
+-- <b>Inputs:</b> --
+<b>Error in</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Rules-v1</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Error out</b>:
+<B>error out</B> passes error or warning information out of a VI to be used by other VIs.
+
+Right-click the <B>error out</B> indicator on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+
+### Gevt-ThreadQueueName.vi
+-- <b>Inputs:</b> --
+
+
+-- <b>Outputs:</b> --
+<b>ThreadQueueName</b>:
+
+### GEvt-WatchdogThread.vi
+-- <b>Inputs:</b> --
+<b>WatchDogQ</b>:
+
+
+-- <b>Outputs:</b> --
+
+### global-GEvnt Filter Change Flag.vi
+-- <b>Inputs:</b> --
+
+
+-- <b>Outputs:</b> --
+
+### Filter Check.vi
+-- <b>Inputs:</b> --
+<b>Cross CSM Data in</b>:
+
+<b>GlobalLogFilter in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Matched? (dup)</b>:
+
+<b>Cross CSM Data out</b>:
+
+<b>GlobalLogFilter.lvclass (dup)</b>:
+
+### List Rules as Strings.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+The <B>error in</B> cluster can accept error information wired from VIs previously called.  Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>GlobalLogFilter in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+The <B>error out</B> cluster passes error or warning information out of a VI to be used by other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>Rule Strings</b>:
+
+<b>GlobalLogFilter out</b>:
+
+### CSM Check - LogType.vi
+-- <b>Inputs:</b> --
+<b>Matched Previous?</b>:
+
+<b>Cross CSM Data (in)</b>:
+
+<b>GlobalLogFilter.lvclass</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Matched? (dup)</b>:
+
+<b>Cross CSM Data</b>:
+
+<b>GlobalLogFilter.lvclass (dup)</b>:
+
+### CSM Check - State.vi
+-- <b>Inputs:</b> --
+<b>Matched Previous?</b>:
+
+<b>Cross CSM Data (in)</b>:
+
+<b>GlobalLogFilter.lvclass</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Matched? (dup)</b>:
+
+<b>Cross CSM Data</b>:
+
+<b>GlobalLogFilter.lvclass (dup)</b>:
+
+### CSM Check - StateType.vi
+-- <b>Inputs:</b> --
+<b>Matched Previous?</b>:
+
+<b>Cross CSM Data (in)</b>:
+
+<b>GlobalLogFilter.lvclass</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Matched? (dup)</b>:
+
+<b>Cross CSM Data</b>:
+
+<b>GlobalLogFilter.lvclass (dup)</b>:
+
+### Group Check - CSM.vi
+-- <b>Inputs:</b> --
+<b>Matched Previous?</b>:
+
+<b>Cross CSM Data (in)</b>:
+
+<b>GlobalLogFilter.lvclass</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Matched? (dup)</b>:
+
+<b>Cross CSM Data</b>:
+
+<b>GlobalLogFilter.lvclass (dup)</b>:
+
+### Group Check - LogType.vi
+-- <b>Inputs:</b> --
+<b>Matched Previous?</b>:
+
+<b>Cross CSM Data (in)</b>:
+
+<b>GlobalLogFilter.lvclass</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Matched? (dup)</b>:
+
+<b>Cross CSM Data</b>:
+
+<b>GlobalLogFilter.lvclass (dup)</b>:
+
+### Group Check - State.vi
+-- <b>Inputs:</b> --
+<b>Matched Previous?</b>:
+
+<b>Cross CSM Data (in)</b>:
+
+<b>GlobalLogFilter.lvclass</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Matched? (dup)</b>:
+
+<b>Cross CSM Data</b>:
+
+<b>GlobalLogFilter.lvclass (dup)</b>:
+
+### Group Check - StateType.vi
+-- <b>Inputs:</b> --
+<b>Matched Previous?</b>:
+
+<b>Cross CSM Data (in)</b>:
+
+<b>GlobalLogFilter.lvclass</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Matched? (dup)</b>:
+
+<b>Cross CSM Data</b>:
+
+<b>GlobalLogFilter.lvclass (dup)</b>:
+
+### Set CSM LogType Filter.vi
+-- <b>Inputs:</b> --
+<b>LogType</b>:
+
+<b>GlobalLogFilter in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>GlobalLogFilter out</b>:
+
+### Set CSM State Filter.vi
+-- <b>Inputs:</b> --
+<b>CSM:State</b>:
+
+<b>GlobalLogFilter in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>GlobalLogFilter out</b>:
+
+### Set CSM StateType Filter.vi
+-- <b>Inputs:</b> --
+<b>LogType</b>:
+
+<b>GlobalLogFilter in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>GlobalLogFilter out</b>:
+
+### Set Global CSM Filter.vi
+-- <b>Inputs:</b> --
+<b>Group:CSM</b>:
+
+<b>GlobalLogFilter in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>GlobalLogFilter out</b>:
+
+### Set Global LogType Filter.vi
+-- <b>Inputs:</b> --
+<b>Group:LogType</b>:
+
+<b>GlobalLogFilter in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>GlobalLogFilter out</b>:
+
+### Set Global State Filter.vi
+-- <b>Inputs:</b> --
+<b>Group:State</b>:
+
+<b>GlobalLogFilter in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>GlobalLogFilter out</b>:
+
+### Set Global StateType Filter.vi
+-- <b>Inputs:</b> --
+<b>Group:LogType</b>:
+
+<b>GlobalLogFilter in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>GlobalLogFilter out</b>:
+
+### Log State Type.vi
+-- <b>Inputs:</b> --
+<b>Complete(T)/Start(F)</b>:
+
+<b>Source Module</b>:
+
+<b>¡®State</b>:
+
+
+-- <b>Outputs:</b> --
+<b>CSM_GlobalLog_STATE_TYPE</b>:
+
+### Parse Register Message.vi
+-- <b>Inputs:</b> --
+<b>state</b>:
+
+<b>Module Name </b>:
+
+<b>args</b>:
+
+
+-- <b>Outputs:</b> --
+<b>target</b>:
+
+<b>source</b>:
+
+<b>status</b>:
+
+<b>api</b>:
+
+### Parse State with Arguments String.vi
+-- <b>Inputs:</b> --
+<b>State with Arguments</b>:
+The State string that requires the argument.
+
+-- <b>Outputs:</b> --
+<b>State</b>:
+
+<b>Arguments</b>:
+
+<b>Target Module</b>:
+
+<b>Message Symbol</b>:
+
+### Parse Unregister Message.vi
+-- <b>Inputs:</b> --
+<b>state</b>:
+
+<b>Module Name </b>:
+
+<b>args</b>:
+
+
+-- <b>Outputs:</b> --
+<b>target</b>:
+
+<b>source</b>:
+
+<b>status</b>:
+
+<b>api</b>:
+
+### Dequeue Element.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>timeout in ms (-1)</b>:
+
+<b>Priority Queue</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>timed out?</b>:
+
+<b>Cross JKI State Machine State</b>:
+
+<b>Priority Queue(dup)</b>:
+
+<b>High Priority?</b>:
+
+### Enqueue Element.vi
+-- <b>Inputs:</b> --
+<b>High Priority?(F)</b>:
+
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>timeout in ms (-1)</b>:
+
+<b>Cross JKI State Machine State</b>:
+
+<b>Priority Queue</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Priority Queue(dup)</b>:
+
+### Get Queue Status.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+The <B>error in</B> cluster can accept error information wired from VIs previously called.  Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>Priority Queue in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+The <B>error out</B> cluster passes error or warning information out of a VI to be used by other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b># pending insert</b>:
+
+<b># pending remove</b>:
+
+<b>Priority Queue out</b>:
+
+<b># elements in queue</b>:
+
+### Not a Refnum.vi
+-- <b>Inputs:</b> --
+<b>Priority Queue.lvclass</b>:
+
+
+-- <b>Outputs:</b> --
+<b>NaN/Path/Refnum?</b>:
+
+### Obtain Priority Queue.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>create if not found? (T)</b>:
+
+<b>name</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>created new?</b>:
+
+<b>Priority Queue</b>:
+
+### Release Priority Queue.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>force destroy? (F)</b>:
+
+<b>Priority Queue</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+
+### CSMP-Async Call.vi
+-- <b>Inputs:</b> --
+<b>state</b>:
+
+<b>args</b>:
+
+<b>source/target</b>:
+
+<b>Error in</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Module Name</b>:
+
+<b>Msg Type</b>:
+
+
+-- <b>Outputs:</b> --
+<b>state out</b>:
+
+<b>args out</b>:
+
+<b>source/target out</b>:
+
+<b>Pre-State out</b>:
+
+<b>Pre-Args out</b>:
+
+<b>error</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+
+### CSMP-Broadcast.vi
+-- <b>Inputs:</b> --
+<b>state</b>:
+
+<b>args</b>:
+
+<b>source/target</b>:
+
+<b>Error in</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Module Name</b>:
+
+<b>Msg Type</b>:
+
+
+-- <b>Outputs:</b> --
+<b>state out</b>:
+
+<b>args out</b>:
+
+<b>source/target out</b>:
+
+<b>Pre-State out</b>:
+
+<b>Pre-Args out</b>:
+
+<b>error</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+
+### CSMP-PostPostMsg.vi
+-- <b>Inputs:</b> --
+<b>state</b>:
+
+<b>args</b>:
+
+<b>source/target</b>:
+
+<b>Pre-State in</b>:
+
+<b>Pre-Args in</b>:
+
+<b>Error in</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>session error</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Module Name</b>:
+
+<b>Response Arguments</b>:
+
+
+-- <b>Outputs:</b> --
+<b>state out</b>:
+
+<b>args out</b>:
+
+<b>source/target out</b>:
+
+<b>Pre-State out</b>:
+
+<b>Pre-Args out</b>:
+
+<b>error</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+
+### CSMP-PostSendMsg.vi
+-- <b>Inputs:</b> --
+<b>state</b>:
+
+<b>args</b>:
+
+<b>source/target</b>:
+
+<b>Error in</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>session error</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Module Name</b>:
+
+<b>Response Arguments</b>:
+
+
+-- <b>Outputs:</b> --
+<b>state out</b>:
+
+<b>args out</b>:
+
+<b>source/target out</b>:
+
+<b>error</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+
+### CSMP-Register Status.vi
+-- <b>Inputs:</b> --
+<b>state</b>:
+
+<b>args</b>:
+
+<b>source/target</b>:
+
+<b>Error in</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Module Name</b>:
+
+
+-- <b>Outputs:</b> --
+<b>state out</b>:
+
+<b>args out</b>:
+
+<b>source/target out</b>:
+
+<b>Pre-State out</b>:
+
+<b>Pre-Args out</b>:
+
+<b>error</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+
+### CSMP-Sync Call.vi
+-- <b>Inputs:</b> --
+<b>state</b>:
+
+<b>args</b>:
+
+<b>source/target</b>:
+
+<b>Error in</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Response Timeout(5000ms)</b>:
+
+<b>Module Name</b>:
+
+
+-- <b>Outputs:</b> --
+<b>state out</b>:
+
+<b>args out</b>:
+
+<b>source/target out</b>:
+
+<b>Pre-State out</b>:
+
+<b>Pre-Args out</b>:
+
+<b>error</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+
+### CSMP-Unregister Status.vi
+-- <b>Inputs:</b> --
+<b>state</b>:
+
+<b>args</b>:
+
+<b>source/target</b>:
+
+<b>Error in</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Module Name</b>:
+
+
+-- <b>Outputs:</b> --
+<b>state out</b>:
+
+<b>args out</b>:
+
+<b>source/target out</b>:
+
+<b>Pre-State out</b>:
+
+<b>Pre-Args out</b>:
+
+<b>error</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+
+### CSM - Add VI Reference Case to CSMs.vi
+-- <b>Inputs:</b> --
+
+
+-- <b>Outputs:</b> --
+
+### CSM - Debug Console - DebugTool.vi
+-- <b>Inputs:</b> --
+
+
+-- <b>Outputs:</b> --
+
+### CSM - Remove all CSM Bookmarks.vi
+-- <b>Inputs:</b> --
+
+
+-- <b>Outputs:</b> --
+
+### CSM - Running Log - DebugTool.vi
+-- <b>Inputs:</b> --
+
+
+-- <b>Outputs:</b> --
+
+### CSM - State Dashboard - DebugTool.vi
+-- <b>Inputs:</b> --
+
+
+-- <b>Outputs:</b> --
+
+### CSM - State Table - DebugTool.vi
+-- <b>Inputs:</b> --
+
+
+-- <b>Outputs:</b> --
+
+### CSM - Switch Language Tool.vi
+-- <b>Inputs:</b> --
+
+
+-- <b>Outputs:</b> --
+
+### Script - JKISM to CSM.vi
+-- <b>Inputs:</b> --
+
+
+-- <b>Outputs:</b> --
+
+### Autosize All MultiListbox Columns (Uniform Text).vi
+-- <b>Inputs:</b> --
+<b>IngoreCols(Empty as default)</b>:
+
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Array</b>:
+
+<b>Control in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+
+### Dashboard Cell Resize.vi
+-- <b>Inputs:</b> --
+<b>Cluster</b>:
+
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Cluster Size:Height</b>:
+
+<b>Cluster Size:Width</b>:
+
+<b>ÒıÆøÑ¹Á¦P4 4</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Bounds:Area Height</b>:
+
+<b>Bounds:Area Width</b>:
+
+### Dashboard Cell2 Array Resize.vi
+-- <b>Inputs:</b> --
+<b>Num Columns</b>:
+
+<b>Cluster</b>:
+
+<b>Num Rows</b>:
+
+<b>error in</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>area height</b>:
+
+<b>area width</b>:
+
+<b>Array 2</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+
+### Open CSM BD.vi
+-- <b>Inputs:</b> --
+<b>Current Module("" to generate a ID)</b>:
+The Argument string to add to the state. The default is an empty string. If Argument is an empty string then State will be returned to the output.
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+
+### Open CSM FP.vi
+-- <b>Inputs:</b> --
+<b>Current Module("" to generate a ID)</b>:
+The Argument string to add to the state. The default is an empty string. If Argument is an empty string then State will be returned to the output.
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+
+### Select Greater_nevstop.vi
+-- <b>Inputs:</b> --
+<b>A</b>:
+
+<b>B</b>:
+
+
+-- <b>Outputs:</b> --
+<b>lesser</b>:
+
+### CSM - Start File Logger.vi
+-- <b>Inputs:</b> --
+<b>Filter Rules</b>:
+
+<b>Timestamp format</b>:
+
+<b>Enable? (T)</b>:
+
+<b>log limit</b>:
+
+<b>Error in</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>WatchDog? (T)</b>:
+
+<b>Exit When All Module Exist?(F)</b>:
+
+<b>Log File Path</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Error out</b>:
+<B>error out</B> passes error or warning information out of a VI to be used by other VIs.
+
+Right-click the <B>error out</B> indicator on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>LogFile</b>:
+
+<b>WatchDogQueue</b>:
+
+### CSM-Logger-Thread.vi
+-- <b>Inputs:</b> --
+<b>log limit</b>:
+
+<b>Exit When All Module Exist?(F)</b>:
+
+<b>format string</b>:
+
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>WatchDogQ</b>:
+
+<b>GlobalLogFilter.lvclass</b>:
+
+<b>file path (use dialog)</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+
+### Append Application Directory If Relative.vi
+-- <b>Inputs:</b> --
+<b>Relative path (.)</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Application Directory (+ Relative)</b>:
+
+### Convert File Extension (Path)__ogtk.vi
+-- <b>Inputs:</b> --
+<b>new ending (none)</b>:
+
+<b>file name</b>:
+
+
+-- <b>Outputs:</b> --
+<b>prev ending</b>:
+
+<b>new filename</b>:
+
+### Convert File Extension (String)__ogtk.vi
+-- <b>Inputs:</b> --
+<b>new ending (none)</b>:
+
+<b>file name</b>:
+
+
+-- <b>Outputs:</b> --
+<b>prev ending</b>:
+
+<b>new filename</b>:
+
+### CSMLS - Add Exit State(s) with Loop Check.vi
+-- <b>Inputs:</b> --
+<b>States Out in</b>:
+
+<b>Remaining States</b>:
+
+
+-- <b>Outputs:</b> --
+<b>States Out out</b>:
+
+### CSMLS - Append Continuous State.vi
+-- <b>Inputs:</b> --
+<b>Loop State(s) and Arguments</b>:
+ This allows you to place new states in the front of the state machine queue. The default is an empty string.
+<b>Append(T)</b>:
+
+<b>Continous Arguments ("")</b>:
+The Argument string to add to the state. The default is an empty string. If Argument is an empty string then State will be returned to the output.
+<b>Continous State</b>:
+The State string that requires the argument.
+<b>Remaining States</b>:
+
+
+-- <b>Outputs:</b> --
+<b>States Out</b>:
+
+### CSMLS - Define Loop State(s).vi
+-- <b>Inputs:</b> --
+<b>States Out in</b>:
+
+<b>Remaining States</b>:
+
+
+-- <b>Outputs:</b> --
+<b>States Out out</b>:
+
+### CSMLS - Remove Loop Tag and previous State(s) to Break.vi
+-- <b>Inputs:</b> --
+<b>Remaining States</b>:
+
+
+-- <b>Outputs:</b> --
+<b>States</b>:
+
+### CSMLS - Remove Loop Tag to Break.vi
+-- <b>Inputs:</b> --
+<b>Remaining States</b>:
+
+
+-- <b>Outputs:</b> --
+<b>States</b>:
+
+### CSM - Start Watchdog to Ensure All Modules Exit.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+The <B>error in</B> cluster can accept error information wired from VIs previously called.  Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+The <B>error out</B> cluster passes error or warning information out of a VI to be used by other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+
+
+## Unsorted
+
+### CSM Watchdog Thread.vi
+-- <b>Inputs:</b> --
+<b>WatchdogQ</b>:
+
+
+-- <b>Outputs:</b> --
+
+### CSM - Break Down Multiple States String.vi
+-- <b>Inputs:</b> --
+<b>States</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Multiple States</b>:
+
+### CSM - Build Exit Messages of CSMs.vi
+-- <b>Inputs:</b> --
+<b>State with Arguments("Macro: Exit¡°)</b>:
+
+<b>CSMs</b>:
+
+
+-- <b>Outputs:</b> --
+<b>States</b>:
+
+### CSM - Check Mapping Relastionship in Broadcast Registry.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM Name</b>:
+
+<b>Broadcast state</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Array</b>:
+
+### CSM - Check Status Registration.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM Name</b>:
+
+<b>Broadcast state</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Array</b>:
+
+### CSM - Convert Argument to Error.vi
+-- <b>Inputs:</b> --
+<b>Argument</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+
+### CSM - Convert Error to Argument.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+
+-- <b>Outputs:</b> --
+<b>Arguments</b>:
+
+### CSM - Convert Filter Rules.vi
+-- <b>Inputs:</b> --
+
+
+-- <b>Outputs:</b> --
+
+### CSM - Filter Duplicate Messages By Name.vi
+-- <b>Inputs:</b> --
+<b>Whole Messages in Check?(T)</b>:
+
+<b>States</b>:
+
+
+-- <b>Outputs:</b> --
+<b>States out</b>:
+
+### CSM - Filter Global Log.vi
+-- <b>Inputs:</b> --
+
+
+-- <b>Outputs:</b> --
+
+### CSM - Filter Messages to Non-Existing Modules.vi
+-- <b>Inputs:</b> --
+<b>State(s) in ("")</b>:
+Wire the existing states to this input. The default is an empty string.
+
+-- <b>Outputs:</b> --
+<b>States Out</b>:
+This output returns a concatenation of all the inputs seperated by a line feed character. The line feed character is required by the JKI State Machine.
+
+### CSM - Flood of Events Handler Side Loop.vi
+-- <b>Inputs:</b> --
+
+
+-- <b>Outputs:</b> --
+
+### CSM - Forward States to CSM.vi
+-- <b>Inputs:</b> --
+<b>High Priority(T)</b>:
+
+<b>Module Name</b>:
+Returns any argument(s) that may be used in the current state string. These arguments come after the ">>" characters
+<b>Error In (no error)</b>:
+The error cluster from the JKI State Machine is wired to this input. If an error occures and appears on this input, the current state output returns the "Error Handler" state.
+<b>State(s) in ("")</b>:
+Wire the existing states to this input. The default is an empty string.
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+
+### CSM - Forward UI Operations to CSM.vi
+-- <b>Inputs:</b> --
+<b>Name("" to use uuid)</b>:
+
+<b>State(s) in ("")</b>:
+
+
+-- <b>Outputs:</b> --
+<b>States Out</b>:
+
+### CSM - Global Log Error Handler.vi
+-- <b>Inputs:</b> --
+<b>Clear Error(T)</b>:
+
+<b>Place("" to use VI's Name)</b>:
+
+<b>Error in</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+
+### CSM - Keywords.vi
+-- <b>Inputs:</b> --
+
+
+-- <b>Outputs:</b> --
+<b>%[hex] Code</b>:
+
+<b>Source</b>:
+
+### CSM - List All Status Registration.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Array</b>:
+
+### CSM - List Log Filter Rules As Strings.vi
+-- <b>Inputs:</b> --
+<b>Error in</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+The <B>error out</B> cluster passes error or warning information out of a VI to be used by other VIs.
+
+The pop-up option <B>Explain Error</B> (or Explain Warning) gives more information about the error displayed.
+<b>Rule Strings</b>:
+
+### CSM - List Mapping Relationships in Broadcast Registry.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Array</b>:
+
+### CSM - List Rules in Broadcast Registry.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Entries</b>:
+
+### CSM - List Status in Broadcast Registry.vi
+-- <b>Inputs:</b> --
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Status in Registry</b>:
+
+### CSM - Mark As Chain Module.vi
+-- <b>Inputs:</b> --
+<b>Order</b>:
+
+<b>CSM Name</b>:
+
+
+-- <b>Outputs:</b> --
+<b>CSM Name(marked as Chain)</b>:
+
+### CSM - Module Exit Event.vi
+-- <b>Inputs:</b> --
+<b>Error in</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Name("" to use uuid) in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Error out</b>:
+<B>error out</B> passes error or warning information out of a VI to be used by other VIs.
+
+Right-click the <B>error out</B> indicator on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM Exit Event</b>:
+
+### CSM - Module VI Reference.vi
+-- <b>Inputs:</b> --
+<b>Response Timeout(5000ms)</b>:
+
+<b>Current Module("" to generate a ID)</b>:
+The Argument string to add to the state. The default is an empty string. If Argument is an empty string then State will be returned to the output.
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM Module VIRef</b>:
+
+### CSM - Remove Duplicated Following Messages.vi
+-- <b>Inputs:</b> --
+<b>Current State</b>:
+
+<b>Remaining States</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Remaining States Left</b>:
+
+### CSM - Remove Module in Boradcast Registry.vi
+-- <b>Inputs:</b> --
+<b>CSM Name</b>:
+
+<b>Error in</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+
+-- <b>Outputs:</b> --
+<b>CSM Name(dup)</b>:
+
+<b>Error out</b>:
+<B>error out</B> passes error or warning information out of a VI to be used by other VIs.
+
+Right-click the <B>error out</B> indicator on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+
+### CSM - Replace Substitution Marks in Messages.vi
+-- <b>Inputs:</b> --
+<b>States with Replace Token</b>:
+
+<b><param></b>:
+
+<b><target></b>:
+
+<b><1></b>:
+
+<b><2></b>:
+
+
+-- <b>Outputs:</b> --
+<b>States</b>:
+
+### CSM - Run Script.vi
+-- <b>Inputs:</b> --
+<b>single-line text</b>:
+
+<b>Current Module("" to generate a ID)</b>:
+The Argument string to add to the state. The default is an empty string. If Argument is an empty string then State will be returned to the output.
+<b>Continue If Error?(F)</b>:
+
+<b>Wait(5000ms)</b>:
+
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Response Timeout(5000ms)</b>:
+
+
+-- <b>Outputs:</b> --
+<b>States Left</b>:
+
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+
+### CSM - Set Log Filter Rules.vi
+-- <b>Inputs:</b> --
+
+
+-- <b>Outputs:</b> --
+
+
+
+### CSM - Wait for All Modules to be Alive.vi
+-- <b>Inputs:</b> --
+<b>Timeout(5000ms)</b>:
+
+<b>Error in</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Module Names (in)</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Error out</b>:
+<B>error out</B> passes error or warning information out of a VI to be used by other VIs.
+
+Right-click the <B>error out</B> indicator on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>waited(ms)</b>:
+
+<b>Left Modules</b>:
+
+### CSM - Wait for All Modules to Exit.vi
+-- <b>Inputs:</b> --
+<b>Timeout(5000ms)</b>:
+
+<b>Error in</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Module Names (in)</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Error out</b>:
+<B>error out</B> passes error or warning information out of a VI to be used by other VIs.
+
+Right-click the <B>error out</B> indicator on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>waited(ms)</b>:
+
+<b>Left Modules</b>:
+
+### CSM - Wait for Module to Be Alive.vi
+-- <b>Inputs:</b> --
+<b>Target Module</b>:
+
+<b>Wait(5000ms)</b>:
+
+<b>error in (no error)</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+
+-- <b>Outputs:</b> --
+<b>Target Module (dup)</b>:
+
+<b>Waited(ms)</b>:
+
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+
+### CSM Data Type String to Enum.vi
+-- <b>Inputs:</b> --
+
+
+-- <b>Outputs:</b> --
+
+### CSM Data Type String.vi
+-- <b>Inputs:</b> --
+<b>Data</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Data Type String</b>:
+
+### Replace Tag with Array.vi
+-- <b>Inputs:</b> --
+<b>Error in</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>Enum</b>:
+
+<b>replace string</b>:
+
+<b>single-line text</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Error out</b>:
+<B>error out</B> passes error or warning information out of a VI to be used by other VIs.
+
+Right-click the <B>error out</B> indicator on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>States</b>:
+
+### CSM Data Type String to Enum(RefnumEnum).vi
+-- <b>Inputs:</b> --
+<b>Data Type String</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Array Dim</b>:
+
+<b>Secondary Type</b>:
+
+<b>Primary Type</b>:
+
+### CSM Data Type String to Enum(String).vi
+-- <b>Inputs:</b> --
+<b>Data Type String</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Array Dim</b>:
+
+<b>Secondary Type String</b>:
+
+<b>Primary Type</b>:
+
+### CSM Data Type String to Enum(TypeEnum).vi
+-- <b>Inputs:</b> --
+<b>Data Type String</b>:
+
+
+-- <b>Outputs:</b> --
+<b>Array Dim</b>:
+
+<b>Secondary Type</b>:
+
+<b>Primary Type</b>:
+
+### CSM-Helper usecase Template.vit
+-- <b>Inputs:</b> --
+<b>error in</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM-Helper in</b>:
+
+
+-- <b>Outputs:</b> --
+<b>error out</b>:
+<B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+<b>CSM-Helper out</b>:
