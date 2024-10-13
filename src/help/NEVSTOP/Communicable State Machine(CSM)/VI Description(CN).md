@@ -2,13 +2,13 @@
 
 ## 模板(Templates)
 
-> [!NOTE]CSM Name 规则
+> [!NOTE] CSM Name 规则
 > - CSM 模块名称应该是唯一的，否则会导致 CSM 进入 "Critical Error" 状态。
 > - 如果输入为 ""，将使用 UUID 作为模块名称。该模块被标记为独立模式，不会包含在模块列表中。
 > - 如果输入以 '#' 结尾，则该模块将在工作模式下运行。具有相同名称的模块将共享同一消息队列。任何外部消息将由其中一个模块处理，取决于哪个模块空闲。
 >
 
-> [!NOTE]CSM 初始化状态
+> [!NOTE] CSM 初始化状态
 > - 默认值和 JKISM 状态机保持一致, 是 "Macro: Initialize"。
 > - 通常不会修改此状态，作为输入的目的是为了方便外部程序化修改初始化状态。
 >
@@ -17,14 +17,19 @@
 
 用于创建具有无用户界面的 CSM 模块的模板
 
+> Ref: CSM Name 规则
+> Ref: CSM 初始化状态
+
 -- <b>输入控件</b> --
 - <b>Name("" to use uuid)</b>: CSM 模块名称
 - <b>Init State("Macro: Initialize")</b>: CSM 初始化状态, 默认为 "Macro: Initialize"
 
-
 ### CSM User Interface(UI) Module Template.vi
 
 用于创建具有用户界面的 CSM 模块的模板，模板中包含用户事件结构用于响应用户操作。
+
+> Ref: CSM Name 规则
+> Ref: CSM 初始化状态
 
 -- <b>输入控件</b> --
 - <b>Name("" to use uuid)</b>: CSM 模块名称
@@ -34,6 +39,9 @@
 
 用于创建具有无用户界面的 CSM 模块的模板。此模板的代码比较紧凑。
 
+> Ref: CSM Name 规则
+> Ref: CSM 初始化状态
+
 -- <b>输入控件</b> --
 - <b>Name("" to use uuid)</b>: CSM 模块名称
 - <b>Init State("Macro: Initialize")</b>: CSM 初始化状态, 默认为 "Macro: Initialize"
@@ -42,19 +50,37 @@
 
 用于创建具有用户界面的 CSM 模块的模板，模板中包含用户事件结构用于响应用户操作。此模板的代码比较紧凑。
 
+> Ref: CSM Name 规则
+> Ref: CSM 初始化状态
+
 -- <b>输入控件</b> --
 - <b>Name("" to use uuid)</b>: CSM 模块名称
 - <b>Init State("Macro: Initialize")</b>: CSM 初始化状态, 默认为 "Macro: Initialize"
 
 ## 核心功能(Core Functions)
 
+> [!NOTE] CSM 消息格式解析
+> [CSM 消息字符串(CSM Message)] >> [参数(Arguments)] [消息类型符号(Message Symbol) ->|,->,-@] [目标模块(Target Module)] // [注释(Comments)]
+> - CSM 消息字符串(CSM Message): CSM的消息，不可以包含CSM关键字和换行符
+> - ">>": CSM 消息字符串(CSM Message) 和 参数(Arguments) 的分隔符
+> - 参数(Arguments): CSM 消息的参数，不可以包含CSM关键字和换行符
+> - 消息类型符号(Message Symbol): 消息类型符号，用于标识消息类型，包括同步调用(-@)、异步调用(->)、异步不等待返回(->|)等
+> - 目标模块(Target Module): 消息发送的目标模块，如果为空，则表示消息会被本模块处理。为空时，消息类型符号也不能存在
+> - 注释(Comments): 注释信息，不会被解析
+>
+
+> [!NOTE] CSM 操作消息格式解析
+> [CSM 操作字符串(CSM Operation)] >> [参数(Arguments)] -> <[操作类型(operation)]> // [注释(Comments)]
+> TODO
+>
+
 ### Parse State Queue++.vi
 
-解析JKI状态机状态队列，返回将执行的下一个当前状态、参数等信息。
+解析 CSM 状态队列，返回将执行的下一个当前状态、参数等信息。
 
 -- <b>输入控件</b> --
 - <b>State Queue</b>: 整个状态队列被连接到此输入。这应该来自 CSM 的移位寄存器。
-- <b>Previous Error</b>: 来自JKI状态机的错误簇被连接到此输入。如果发生错误并出现在此输入上，则当前状态输出将返回 "Error Handler" 状态。
+- <b>Previous Error</b>: 来自 CSM 的错误簇被连接到此输入。如果发生错误并出现在此输入上，则当前状态输出将返回 "Error Handler" 状态。
 - <b>Name("" to use uuid)</b>: CSM 模块名称
 - <b>Response Timeout(5000ms)</b>:同步调用时的响应超时设置，默认 5000 ms.
 - <b>Dequeue Timeout(0ms)</b>: 检查 CSM 消息队列的超时设置，默认为0，不进行等待。
@@ -70,7 +96,11 @@
 
 ### Build State String with Arguments++.vi
 
-构建一个包含JKI状态机参数的状态字符串。
+此 VI 用于构建 CSM 消息字符串(包含状态、参数、目标模块、消息类型等信息)，以便发送到其他 CSM 模块。
+
+> [!NOTE]
+> 此 VI 只能不能拼接"异步不等待返回"的异步消息，已在函数面板隐藏，建议使用 Build Message with Arguments++.vi 代替此 VI。
+>
 
 - <B>例如:</B>
 
@@ -98,17 +128,26 @@
 - <b>Sync-Call(-@) T By Default/Async-Call(->) F</b>: 同步调用输入"TRUE"; 异步调用输入"FALSE"
 
 -- <b>输出控件</b> --
-- <b>State with Arguments</b>: 包含 JKI 状态机状态、参数等信息的字符串
+- <b>CSM Message String</b>: 拼接生成的 CSM 消息字符串
 
 ### Build Message with Arguments++.vi
 
-Builds a message that contains arguments for CSM. This VI will parse "State with Arguments" for message type, message string, arguments and target module from input <b>State with Arguments</b> and replace corresponding parts in the message with input values. Different message type symbol(->|,->,-@) will be used in different Polymorphic Vi instance.
+此 VI 用于构建 CSM 消息字符串、操作字符串。
+
+> [!NOTE] 消息拼接API
+> 此类型API不会直接发送消息，只是拼接消息字符串。需要将字符串并入 CSM 的状态队列后，在 Parse State Queue++.vi 中发送消息、执行操作。
+> 在熟悉 CSM 规则的情况下，可以不使用此类API, 直接在字符串中键入对应的消息字符串、操作字符串。
+>
 
 Polymorphic Option:
 - Build Message with Arguments(Auto Check).vi
 - Build Asynchronous Message with Arguments.vi
 - Build No-Reply Asynchronous Message with Arguments.vi
 - Build Synchronous Message with Arguments.vi
+- Build Interrupt Status Message.vi
+- Build Normal Status Message.vi
+- Build Register Status Message.vi
+- Build Unregister Status Message.vi
 
 #### Build Message with Arguments(Auto Check).vi
 
@@ -147,46 +186,40 @@ Then result string is "API: DoSth >> NewArguments -@ Callee"
 - <b>Target Module ("")</b>: The target which will be used to replace target in <b>State with Arguments</b>. if empty, target in <b>State with Arguments</b> will be used.
 
 -- <b>输出控件</b> --
-- <b>State with Arguments</b>: String stands for state with arguments
+- <b>CSM Message String</b>: 拼接生成的 CSM 消息字符串
+
+#### Build Synchronous Message with Arguments.vi
+
+拼接生成 CSM 同步消息字符串，消息类型符号为 "-@", 例如:
+
+      Message >> Arguments -@ Target
+
+> Ref: 消息拼接API
+
+-- <b>输入控件</b> --
+- <b>State with Arguments</b>: CSM 状态字符串，如果字符串中包含参数，会被<b>Arguments ("")</b>的信息替换。
+- <b>Arguments ("")</b>: 参数信息。
+- <b>Target Module ("")</b>: 目标模块。为空时, 将使用 <b>State with Arguments</b> 中的默认模块。
+
+-- <b>输出控件</b> --
+- <b>CSM Message String</b>: 拼接生成的 CSM 消息字符串
 
 #### Build Asynchronous Message with Arguments.vi
 
-Builds a message that contains arguments for CSM. This VI will parse "State with Arguments" for message string, arguments and target module from input <b>State with Arguments</b> and replace corresponding parts in the message with input values with async-message symbol "->" if <b>Target Module ("")</b> is specified.
+拼接生成的 CSM 异步消息字符串，消息类型符号为 "->", 例如:
 
-- <B>For Example:</B>
+      Message >> Arguments -> Target
 
-If <b>State with Arguments</b> input is "API: DoSth"
-- <b>Arguments ("")</b> input is "Arguments"
-- <b>Target Module ("")</b> input is "Callee"
-Then result string is "API: DoSth >> Arguments -> Callee". It's different with Build Message with Arguments(Auto Check).vi. . Message Type Symbol is replaced with "->".
-
-If <b>State with Arguments</b> input is "API: DoSth >> Arguments -> Callee"
-- <b>Arguments ("")</b> input is "NewArguments"
-- <b>Target Module ("")</b> input is ""
-Then result string is "API: DoSth >> NewArguments -> Callee"
-
-If <b>State with Arguments</b> input is "API: DoSth >> Arguments -> Callee"
-- <b>Arguments ("")</b> input is "NewArguments"
-- <b>Target Module ("")</b> input is "NewCallee"
-Then result string is "API: DoSth >> NewArguments -> NewCallee"
-
-If <b>State with Arguments</b> input is "API: DoSth >> Arguments -> Callee"
-- <b>Arguments ("")</b> input is ""
-- <b>Target Module ("")</b> input is "NewCallee"
-Then result string is "API: DoSth -> NewCallee"
-
-If <b>State with Arguments</b> input is "API: DoSth >> Arguments -@ Callee"
-- <b>Arguments ("")</b> input is "NewArguments"
-- <b>Target Module ("")</b> input is ""
-Then result string is "API: DoSth >> NewArguments -> Callee". Message Type Symbol is replaced with "->".
+> Ref: 消息拼接API
+>
 
 -- <b>输入控件</b> --
-- <b>State with Arguments</b>: Input Message which might contain Arguments or target Module
-- <b>Arguments ("")</b>: The arguments which will be used to replace arguments in <b>State with Arguments</b>. if empty, no arguments will be included in output strings.
-- <b>Target Module ("")</b>: The target which will be used to replace target in <b>State with Arguments</b>. if empty, target in <b>State with Arguments</b> will be used.
+- <b>State with Arguments</b>: CSM 状态字符串，如果字符串中包含参数，会被<b>Arguments ("")</b>的信息替换。
+- <b>Arguments ("")</b>: 参数信息。
+- <b>Target Module ("")</b>: 目标模块。为空时, 将使用 <b>State with Arguments</b> 中的默认模块。
 
 -- <b>输出控件</b> --
-- <b>State with Arguments</b>: String stands for state with arguments
+- <b>CSM Message String</b>: 拼接生成的 CSM 消息字符串
 
 #### Build No-Reply Asynchronous Message with Arguments.vi
 
@@ -225,46 +258,7 @@ Then result string is "API: DoSth >> NewArguments ->| Callee". Message Type Symb
 - <b>Target Module ("")</b>: The target which will be used to replace target in <b>State with Arguments</b>. if empty, target in <b>State with Arguments</b> will be used.
 
 -- <b>输出控件</b> --
-- <b>State with Arguments</b>: String stands for state with arguments
-
-#### Build Synchronous Message with Arguments.vi
-
-Builds a message that contains arguments for CSM. This VI will parse "State with Arguments" for message string, arguments and target module from input <b>State with Arguments</b> and replace corresponding parts in the message with input values with sync-message symbol "-@" if <b>Target Module ("")</b> is specified.
-
-- <B>For Example:</B>
-
-If <b>State with Arguments</b> input is "API: DoSth"
-- <b>Arguments ("")</b> input is "Arguments"
-- <b>Target Module ("")</b> input is "Callee"
-Then result string is "API: DoSth >> Arguments ->| Callee". It's different with Build Message with Arguments(Auto Check).vi. Message Type Symbol is replaced with "-@".
-
-If <b>State with Arguments</b> input is "API: DoSth >> Arguments -> Callee"
-- <b>Arguments ("")</b> input is "NewArguments"
-- <b>Target Module ("")</b> input is ""
-Then result string is "API: DoSth >> NewArguments ->| Callee". Message Type Symbol is replaced with "-@".
-
-If <b>State with Arguments</b> input is "API: DoSth >> Arguments -> Callee"
-- <b>Arguments ("")</b> input is "NewArguments"
-- <b>Target Module ("")</b> input is "NewCallee"
-Then result string is "API: DoSth >> NewArguments -@ NewCallee". Message Type Symbol is replaced with "-@".
-
-If <b>State with Arguments</b> input is "API: DoSth >> Arguments -> Callee"
-- <b>Arguments ("")</b> input is ""
-- <b>Target Module ("")</b> input is "NewCallee"
-Then result string is "API: DoSth -@ NewCallee". Message Type Symbol is replaced with "-@".
-
-If <b>State with Arguments</b> input is "API: DoSth >> Arguments -@ Callee"
-- <b>Arguments ("")</b> input is "NewArguments"
-- <b>Target Module ("")</b> input is ""
-Then result string is "API: DoSth >> NewArguments -@ Callee".
-
--- <b>输入控件</b> --
-- <b>State with Arguments</b>: Input Message which might contain Arguments or target Module
-- <b>Arguments ("")</b>: The arguments which will be used to replace arguments in <b>State with Arguments</b>. if empty, no arguments will be included in output strings.
-- <b>Target Module ("")</b>: The target which will be used to replace target in <b>State with Arguments</b>. if empty, target in <b>State with Arguments</b> will be used.
-
--- <b>输出控件</b> --
-- <b>State with Arguments</b>: String stands for state with arguments
+- <b>CSM Message String</b>: 拼接生成的 CSM 消息字符串
 
 #### Build Interrupt Status Message.vi
 
@@ -290,8 +284,8 @@ Then result string is "API: DoSth >> NewArguments -@ Callee"
 - <b>Arguments ("")</b>:
 
 -- <b>输出控件</b> --
-- <b>State with Arguments</b>:
-
+- <b>CSM Message String</b>:
+拼接生成的 CSM 消息字符串
 #### Build Normal Status Message.vi
 
 Builds a message that contains arguments for CSM. This VI will parse "State with Arguments" for message type, message string, arguments and target module from input <b>State with Arguments</b> and replace corresponding parts in the message with input values. The message type from input <b>State with Arguments</b> will be used.
@@ -316,8 +310,8 @@ Then result string is "API: DoSth >> NewArguments -@ Callee"
 - <b>Arguments ("")</b>:
 
 -- <b>输出控件</b> --
-- <b>State with Arguments</b>:
-
+- <b>CSM Message String</b>:
+拼接生成的 CSM 消息字符串
 #### Build Register Status Message.vi
 
 Builds register status message. The message looks like:
@@ -335,8 +329,8 @@ DownloadFinished@* >> StartPlay@Player -><register> // Any Module's DownloadFini
 - <b>Response Message (if "", same as Source Message)</b>:
 
 -- <b>输出控件</b> --
-- <b>State with Arguments</b>:
-
+- <b>CSM Message String</b>:
+拼接生成的 CSM 消息字符串
 #### Build Unregister Status Message.vi
 
 Builds unregister status message. The message looks like:
@@ -351,8 +345,8 @@ DownloadFinished@Downloader  -><unregister>
 - <b>Status</b>:
 
 -- <b>输出控件</b> --
-- <b>State with Arguments</b>:
-
+- <b>CSM Message String</b>:
+拼接生成的 CSM 消息字符串
 ### Add State(s) to Queue By BOOL++.vi
 
 根据高优先级和Bool输入，此VI生成TRUE/False和剩余状态的连接状态。High Priority输入决定是否在剩余状态之前或之后连接TRUE或False字符串。Bool输入决定要连接的字符串是TRUE还是False。
@@ -790,7 +784,7 @@ Release CSM Global Log Event Reference.
 - <b>Source ("")</b>: 发送此消息的模块名称
 
 -- <b>输出控件</b> --
-- <b>State with Arguments</b>: 包含 JKI 状态机状态、参数等信息的字符串
+- <b>CSM Message String</b>: 拼接生成的 CSM 消息字符串
 
 ### String History Cacher.vi
 

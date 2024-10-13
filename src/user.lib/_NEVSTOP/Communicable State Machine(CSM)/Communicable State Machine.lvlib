@@ -151,18 +151,22 @@
 		<Item Name="CSM Dummy Module.vi" Type="VI" URL="../_Support/CSM Dummy Module.vi"/>
 	</Item>
 	<Item Name="Polymophic" Type="Folder">
-		<Item Name="Add State(s) to Queue By BOOL(Element).vi" Type="VI" URL="../_Polymophic/Add State(s) to Queue By BOOL(Element).vi"/>
-		<Item Name="Add State(s) to Queue By BOOL(Array Left).vi" Type="VI" URL="../_Polymophic/Add State(s) to Queue By BOOL(Array Left).vi"/>
-		<Item Name="Add State(s) to Queue By BOOL(Array Right).vi" Type="VI" URL="../_Polymophic/Add State(s) to Queue By BOOL(Array Right).vi"/>
-		<Item Name="Add State(s) to Queue By BOOL(Array All).vi" Type="VI" URL="../_Polymophic/Add State(s) to Queue By BOOL(Array All).vi"/>
-		<Item Name="Build Synchronous Message with Arguments.vi" Type="VI" URL="../_Polymophic/Build Synchronous Message with Arguments.vi"/>
-		<Item Name="Build Asynchronous Message with Arguments.vi" Type="VI" URL="../_Polymophic/Build Asynchronous Message with Arguments.vi"/>
-		<Item Name="Build No-Reply Asynchronous Message with Arguments.vi" Type="VI" URL="../_Polymophic/Build No-Reply Asynchronous Message with Arguments.vi"/>
-		<Item Name="Build Message with Arguments(Auto Check).vi" Type="VI" URL="../_Polymophic/Build Message with Arguments(Auto Check).vi"/>
-		<Item Name="Build Register Status Message.vi" Type="VI" URL="../_Polymophic/Build Register Status Message.vi"/>
-		<Item Name="Build Unregister Status Message.vi" Type="VI" URL="../_Polymophic/Build Unregister Status Message.vi"/>
-		<Item Name="Build Normal Status Message.vi" Type="VI" URL="../_Polymophic/Build Normal Status Message.vi"/>
-		<Item Name="Build Interrupt Status Message.vi" Type="VI" URL="../_Polymophic/Build Interrupt Status Message.vi"/>
+		<Item Name="Build Message with Arguments" Type="Folder">
+			<Item Name="Build Synchronous Message with Arguments.vi" Type="VI" URL="../_Polymophic/Build Synchronous Message with Arguments.vi"/>
+			<Item Name="Build Asynchronous Message with Arguments.vi" Type="VI" URL="../_Polymophic/Build Asynchronous Message with Arguments.vi"/>
+			<Item Name="Build No-Reply Asynchronous Message with Arguments.vi" Type="VI" URL="../_Polymophic/Build No-Reply Asynchronous Message with Arguments.vi"/>
+			<Item Name="Build Message with Arguments(Auto Check).vi" Type="VI" URL="../_Polymophic/Build Message with Arguments(Auto Check).vi"/>
+			<Item Name="Build Register Status Message.vi" Type="VI" URL="../_Polymophic/Build Register Status Message.vi"/>
+			<Item Name="Build Unregister Status Message.vi" Type="VI" URL="../_Polymophic/Build Unregister Status Message.vi"/>
+			<Item Name="Build Normal Status Message.vi" Type="VI" URL="../_Polymophic/Build Normal Status Message.vi"/>
+			<Item Name="Build Interrupt Status Message.vi" Type="VI" URL="../_Polymophic/Build Interrupt Status Message.vi"/>
+		</Item>
+		<Item Name="Add State(s) to Queue By BOOL" Type="Folder">
+			<Item Name="Add State(s) to Queue By BOOL(Element).vi" Type="VI" URL="../_Polymophic/Add State(s) to Queue By BOOL(Element).vi"/>
+			<Item Name="Add State(s) to Queue By BOOL(Array Left).vi" Type="VI" URL="../_Polymophic/Add State(s) to Queue By BOOL(Array Left).vi"/>
+			<Item Name="Add State(s) to Queue By BOOL(Array Right).vi" Type="VI" URL="../_Polymophic/Add State(s) to Queue By BOOL(Array Right).vi"/>
+			<Item Name="Add State(s) to Queue By BOOL(Array All).vi" Type="VI" URL="../_Polymophic/Add State(s) to Queue By BOOL(Array All).vi"/>
+		</Item>
 	</Item>
 	<Item Name="AdvanceAPI" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
