@@ -4,13 +4,17 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">385908736</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
+	<Property Name="NI.SortType" Type="Int">3</Property>
 	<Item Name="Support" Type="Folder">
 		<Item Name="Parse VI Documentation String.vi" Type="VI" URL="../Support/Parse VI Documentation String.vi"/>
 	</Item>
-	<Item Name="csmdoc_export_all_csm_VI_description_doc.vi" Type="VI" URL="../csmdoc_export_all_csm_VI_description_doc.vi"/>
-	<Item Name="csmdoc_export_VI_description.vi" Type="VI" URL="../csmdoc_export_VI_description.vi"/>
-	<Item Name="csmdoc_import_all_csm_VI_description_doc.vi" Type="VI" URL="../csmdoc_import_all_csm_VI_description_doc.vi"/>
-	<Item Name="csmdoc_import_VI_description.vi" Type="VI" URL="../csmdoc_import_VI_description.vi"/>
-	<Item Name="csmdoc_list_all_csm_documented_VIs.vi" Type="VI" URL="../csmdoc_list_all_csm_documented_VIs.vi"/>
-	<Item Name="csmdoc_load vi description map.vi" Type="VI" URL="../csmdoc_load vi description map.vi"/>
+	<Item Name="api" Type="Folder">
+		<Item Name="csmdoc_export_all_csm_VI_description_doc.vi" Type="VI" URL="../csmdoc_export_all_csm_VI_description_doc.vi"/>
+		<Item Name="csmdoc_export_VI_description.vi" Type="VI" URL="../csmdoc_export_VI_description.vi"/>
+		<Item Name="csmdoc_import_all_csm_VI_description_doc.vi" Type="VI" URL="../csmdoc_import_all_csm_VI_description_doc.vi"/>
+		<Item Name="csmdoc_import_VI_description.vi" Type="VI" URL="../csmdoc_import_VI_description.vi"/>
+		<Item Name="csmdoc_list_all_csm_documented_VIs.vi" Type="VI" URL="../csmdoc_list_all_csm_documented_VIs.vi"/>
+		<Item Name="csmdoc_load vi description map.vi" Type="VI" URL="../csmdoc_load vi description map.vi"/>
+	</Item>
+	<Item Name="csmdoc_import_doc_to_singleVI.vi" Type="VI" URL="../csmdoc_import_doc_to_singleVI.vi"/>
 </Library>
