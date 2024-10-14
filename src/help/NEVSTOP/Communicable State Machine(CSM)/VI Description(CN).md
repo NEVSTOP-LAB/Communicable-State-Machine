@@ -875,21 +875,9 @@ CSM 消息中的关键字列表。
 
 ### CSM - Set Log Filter Rules.vi
 
--- <b>输入控件</b> --
-
--- <b>输出控件</b> --
-
 ### CSM - Convert Filter Rules.vi
 
--- <b>输入控件</b> --
-
--- <b>输出控件</b> --
-
 ### CSM - Filter Global Log.vi
-
--- <b>输入控件</b> --
-
--- <b>输出控件</b> --
 
 ## Utility VIs
 
@@ -961,10 +949,6 @@ CSM 消息中的关键字列表。
 
 ### CSM Data Type String to Enum.vi
 
--- <b>输入控件</b> --
-
--- <b>输出控件</b> --
-
 ### CSM Data Type String.vi
 
 -- <b>输入控件</b> --
@@ -976,7 +960,6 @@ CSM 消息中的关键字列表。
 ### Replace Tag with Array.vi
 
 -- <b>输入控件</b> --
-
 - <b>Enum</b>:
 
 - <b>replace string</b>:
@@ -1112,22 +1095,16 @@ CSM 消息中的关键字列表。
 
 ### CSM-Helper API.vi
 
--- <b>输入控件</b> --
-
--- <b>输出控件</b> --
-
 ### CSM-Helper usecase Template.vit
 -- <b>输入控件</b> --
 - <b>CSM-Helper in</b>:
 
 -- <b>输出控件</b> --
-
 - <b>CSM-Helper out</b>:
 
 ### _Add VI Reference Case.vi
 
 -- <b>输入控件</b> --
-
 - <b>element</b>:
 
 - <b>Add Frame</b>:
@@ -1135,19 +1112,16 @@ CSM 消息中的关键字列表。
 - <b>CSM-Helper in</b>:
 
 -- <b>输出控件</b> --
-
 - <b>CSM-Helper out</b>:
 
 ### Connect Information.vi
 
 -- <b>输入控件</b> --
-
 - <b>Case</b>:
 
 - <b>CSM-Helper in</b>:
 
 -- <b>输出控件</b> --
-
 - <b>Backend Connected Info</b>:
 
 - <b>FrontEnd Connected Info</b>:
@@ -1164,7 +1138,6 @@ CSM 消息中的关键字列表。
 - <b>Front Tunnels</b>:
 
 -- <b>输出控件</b> --
-
 - <b>Array</b>:
 
 - <b>Array out</b>:
@@ -1188,7 +1161,6 @@ CSM 消息中的关键字列表。
 ### GObject Terminals.vi
 
 -- <b>输入控件</b> --
-
 - <b>GObject in</b>:
 
 -- <b>输出控件</b> --
@@ -1205,13 +1177,11 @@ CSM 消息中的关键字列表。
 ### Relative Pos to InterData Tunnel of CaseContent.vi
 
 -- <b>输入控件</b> --
-
 - <b>element</b>:
 
 - <b>CSM-Helper in</b>:
 
 -- <b>输出控件</b> --
-
 - <b>Position</b>:
 
 - <b>CSM-Helper out</b>:
@@ -1219,13 +1189,11 @@ CSM 消息中的关键字列表。
 ### Resize CaseStructure By Making Space.vi
 
 -- <b>输入控件</b> --
-
 - <b>Bounds</b>:
 
 - <b>CSM-Helper in</b>:
 
 -- <b>输出控件</b> --
-
 - <b>DiffBound</b>:
 
 - <b>MakeSpace.Rect</b>:
@@ -1287,11 +1255,9 @@ CSM 消息中的关键字列表。
 ### Is in JKISM or CSM.vi
 
 -- <b>输入控件</b> --
-
 - <b>reference in</b>:
 
 -- <b>输出控件</b> --
-
 - <b>is in JKISM or CSM?</b>:
 
 ### Relationship Check.vi
@@ -1309,7 +1275,6 @@ CSM 消息中的关键字列表。
 ### Add State Frame.vi
 
 -- <b>输入控件</b> --
-
 - <b>index(-1, use same group)</b>:
 
 - <b>element</b>:
@@ -1317,7 +1282,6 @@ CSM 消息中的关键字列表。
 - <b>CSM-Helper in</b>:
 
 -- <b>输出控件</b> --
-
 - <b>Add Frame</b>:
 
 - <b>CSM-Helper out</b>:
@@ -1328,44 +1292,38 @@ CSM 消息中的关键字列表。
 - <b>CSM-Helper in</b>:
 
 -- <b>输出控件</b> --
-- <b>NewStateNotify Registed</b>:
+- <b>NewStateNotify Registered</b>:
 
 - <b>CSM-Helper out</b>:
 
 ### Connect Error Wire If not Connected.vi
 
 -- <b>输入控件</b> --
-
 - <b>case</b>:
 
 - <b>CSM-Helper in</b>:
 
 -- <b>输出控件</b> --
-
 - <b>CSM-Helper out</b>:
 
 ### Connect EventReg Wire If not Connected.vi
 
 -- <b>输入控件</b> --
-
 - <b>case</b>:
 
 - <b>CSM-Helper in</b>:
 
 -- <b>输出控件</b> --
-
 - <b>CSM-Helper out</b>:
 
 ### Connect Internal Data Wire If not Connected.vi
 
 -- <b>输入控件</b> --
-
 - <b>case</b>:
 
 - <b>CSM-Helper in</b>:
 
 -- <b>输出控件</b> --
-
 - <b>CSM-Helper out</b>:
 
 ### Connect LastResp to Response in Error Case.vi
@@ -1374,7 +1332,6 @@ CSM 消息中的关键字列表。
 - <b>CSM-Helper in</b>:
 
 -- <b>输出控件</b> --
-
 - <b>CSM-Helper out</b>:
 
 ### Connect Paired Tunnels.vi
@@ -1383,19 +1340,16 @@ CSM 消息中的关键字列表。
 - <b>CSM-Helper in</b>:
 
 -- <b>输出控件</b> --
-
 - <b>CSM-Helper out</b>:
 
 ### Connect StateQ Wire If not Connected.vi
 
 -- <b>输入控件</b> --
-
 - <b>case</b>:
 
 - <b>CSM-Helper in</b>:
 
 -- <b>输出控件</b> --
-
 - <b>CSM-Helper out</b>:
 
 ### Copy State.vi
@@ -1413,13 +1367,11 @@ Replace(T) / Skip(F)</b>:
 - <b>CSM-Helper.lvclass</b>:
 
 -- <b>输出控件</b> --
-
 - <b>CSM-Helper out 2</b>:
 
 ### Create From Basic Refs.vi
 
 -- <b>输入控件</b> --
-
 - <b>CSM Basic Refs</b>:
 
 -- <b>输出控件</b> --
@@ -1428,7 +1380,6 @@ Replace(T) / Skip(F)</b>:
 ### Create From CaseStructure Reference.vi
 
 -- <b>输入控件</b> --
-
 - <b>CaseStructure</b>:
 
 -- <b>输出控件</b> --
@@ -1437,7 +1388,6 @@ Replace(T) / Skip(F)</b>:
 ### Create From EventStructure Reference.vi
 
 -- <b>输入控件</b> --
-
 - <b>CaseStructure</b>:
 
 -- <b>输出控件</b> --
@@ -1446,7 +1396,6 @@ Replace(T) / Skip(F)</b>:
 ### Create From VI Reference.vi
 
 -- <b>输入控件</b> --
-
 - <b>VI</b>:
 
 -- <b>输出控件</b> --
@@ -1455,7 +1404,6 @@ Replace(T) / Skip(F)</b>:
 ### Create From WhileLoop Reference.vi
 
 -- <b>输入控件</b> --
-
 - <b>Structure</b>:
 
 -- <b>输出控件</b> --
@@ -1474,7 +1422,6 @@ Replace(T) / Skip(F)</b>:
 ### Doc.vi
 
 -- <b>输入控件</b> --
-
 - <b>String 2</b>:
 
 - <b>String</b>:
@@ -1494,7 +1441,6 @@ Replace(T) / Skip(F)</b>:
 - <b>CSM-Helper in</b>:
 
 -- <b>输出控件</b> --
-
 - <b>Array</b>:
 
 - <b>CSM-Helper out</b>:
@@ -1512,7 +1458,6 @@ Replace(T) / Skip(F)</b>:
 ### Get CaseFrame Index By CaseName.vi
 
 -- <b>输入控件</b> --
-
 - <b>CASE</b>:
 
 - <b>CSM-Helper in</b>:
@@ -1525,7 +1470,6 @@ Replace(T) / Skip(F)</b>:
 ### Get CaseFrame Reference By CaseName.vi
 
 -- <b>输入控件</b> --
-
 - <b>CASE</b>:
 
 - <b>CSM-Helper in</b>:
@@ -1541,14 +1485,13 @@ Replace(T) / Skip(F)</b>:
 - <b>CSM-Helper in</b>:
 
 -- <b>输出控件</b> --
-- <b>EvtStruNum</b>:
+- <b>EvtStrutNum</b>:
 
 - <b>CSM-Helper out</b>:
 
 ### Get Interface Info.vi
 
 -- <b>输入控件</b> --
-
 - <b>CASE</b>:
 
 - <b>CSM-Helper in</b>:
@@ -1576,7 +1519,6 @@ Replace(T) / Skip(F)</b>:
 - <b>CSM-Helper in</b>:
 
 -- <b>输出控件</b> --
-
 - <b>CSM-Helper out</b>:
 
 ### Open Front Panel.vi
@@ -1585,19 +1527,16 @@ Replace(T) / Skip(F)</b>:
 - <b>CSM-Helper in</b>:
 
 -- <b>输出控件</b> --
-
 - <b>CSM-Helper out</b>:
 
 ### Remove State Frame.vi
 
 -- <b>输入控件</b> --
-
 - <b>element</b>:
 
 - <b>CSM-Helper in</b>:
 
 -- <b>输出控件</b> --
-
 - <b>CSM-Helper out</b>:
 
 ### Save Instrument.vi
@@ -1606,37 +1545,31 @@ Replace(T) / Skip(F)</b>:
 - <b>CSM-Helper in</b>:
 
 -- <b>输出控件</b> --
-
 - <b>CSM-Helper out</b>:
 
 ### Set Error Tunnel Use Default If not Connected.vi
 
 -- <b>输入控件</b> --
-
 - <b>Use Default if Unwired</b>:
 
 - <b>CSM-Helper in</b>:
 
 -- <b>输出控件</b> --
-
 - <b>CSM-Helper out</b>:
 
 ### Set Visible Case Frame.vi
 
 -- <b>输入控件</b> --
-
 - <b>element</b>:
 
 - <b>CSM-Helper in</b>:
 
 -- <b>输出控件</b> --
-
 - <b>CSM-Helper out</b>:
 
 ### Set Wire Label Visible.vi
 
 -- <b>输入控件</b> --
-
 - <b>Connected Wire.Label.Visible</b>:
 
 - <b>CSM-Helper in</b>:
@@ -1647,13 +1580,11 @@ Replace(T) / Skip(F)</b>:
 ### Start Undo.vi
 
 -- <b>输入控件</b> --
-
 - <b>Name</b>:
 
 - <b>CSM-Helper in</b>:
 
 -- <b>输出控件</b> --
-
 - <b>CSM-Helper out</b>:
 
 ### Stop Undo.vi
@@ -1662,7 +1593,6 @@ Replace(T) / Skip(F)</b>:
 - <b>CSM-Helper in</b>:
 
 -- <b>输出控件</b> --
-
 - <b>CSM-Helper out</b>:
 
 ### Undo.vi
@@ -1671,7 +1601,6 @@ Replace(T) / Skip(F)</b>:
 - <b>CSM-Helper in</b>:
 
 -- <b>输出控件</b> --
-
 - <b>CSM-Helper out</b>:
 
 ### Read APIs.vi
@@ -1687,13 +1616,11 @@ Replace(T) / Skip(F)</b>:
 ### Read Back Tunnel Internal TermRefs.vi
 
 -- <b>输入控件</b> --
-
 - <b>element</b>:
 
 - <b>CSM-Helper in</b>:
 
 -- <b>输出控件</b> --
-
 - <b>Back Tunnels</b>:
 
 - <b>CSM-Helper out</b>:
@@ -1714,7 +1641,6 @@ Replace(T) / Skip(F)</b>:
 - <b>CSM-Helper in</b>:
 
 -- <b>输出控件</b> --
-
 - <b>Diagram</b>:
 
 - <b>CSM-Helper out</b>:
@@ -1742,13 +1668,11 @@ Replace(T) / Skip(F)</b>:
 ### Read Front Tunnel Internal TermRefs.vi
 
 -- <b>输入控件</b> --
-
 - <b>case</b>:
 
 - <b>CSM-Helper in</b>:
 
 -- <b>输出控件</b> --
-
 - <b>Front Tunnels</b>:
 
 - <b>CSM-Helper out</b>:
@@ -1859,7 +1783,6 @@ Replace(T) / Skip(F)</b>:
 - <b>CSM-Helper in</b>:
 
 -- <b>输出控件</b> --
-
 - <b>CSM-Helper out</b>:
 
 ### Remove All CSM Bookmarks.vi
@@ -1868,7 +1791,6 @@ Replace(T) / Skip(F)</b>:
 - <b>CSM-Helper in</b>:
 
 -- <b>输出控件</b> --
-
 - <b>CSM-Helper out</b>:
 
 ### standardize CSM Module.vi
@@ -1877,20 +1799,17 @@ Replace(T) / Skip(F)</b>:
 - <b>CSM-Helper in</b>:
 
 -- <b>输出控件</b> --
-
 - <b>CSM-Helper out</b>:
 
 ### CSM Essential States.vi
 
 -- <b>输入控件</b> --
-
 -- <b>输出控件</b> --
 - <b>CSM Essential States</b>:
 
 ### CSM Module Type.vi
 
 -- <b>输入控件</b> --
-
 - <b>CSM Basic Refs</b>:
 
 -- <b>输出控件</b> --
@@ -1899,11 +1818,9 @@ Replace(T) / Skip(F)</b>:
 ### Is CSM Module - CaseStructure.vi
 
 -- <b>输入控件</b> --
-
 - <b>CaseStructure</b>:
 
 -- <b>输出控件</b> --
-
 - <b>Is CSM Module?</b>:
 
 - <b>CSM Basic Refs</b>:
@@ -1911,11 +1828,9 @@ Replace(T) / Skip(F)</b>:
 ### Is CSM Module - EventStructure.vi
 
 -- <b>输入控件</b> --
-
 - <b>EventStructure</b>:
 
 -- <b>输出控件</b> --
-
 - <b>Is CSM Module?</b>:
 
 - <b>CSM Basic Refs</b>:
@@ -1923,11 +1838,9 @@ Replace(T) / Skip(F)</b>:
 ### Is CSM Module - ParseStateVI.vi
 
 -- <b>输入控件</b> --
-
 - <b>Parse State VI Ref</b>:
 
 -- <b>输出控件</b> --
-
 - <b>Is CSM Module?</b>:
 
 - <b>CSM Basic Refs</b>:
@@ -1935,11 +1848,9 @@ Replace(T) / Skip(F)</b>:
 ### Is CSM Module - Structure.vi
 
 -- <b>输入控件</b> --
-
 - <b>Structure</b>:
 
 -- <b>输出控件</b> --
-
 - <b>Is CSM Module?</b>:
 
 - <b>CSM Basic Refs</b>:
@@ -1947,7 +1858,6 @@ Replace(T) / Skip(F)</b>:
 ### Is CSM Module - VIRef.vi
 
 -- <b>输入控件</b> --
-
 - <b>VIRef</b>:
 
 -- <b>输出控件</b> --
@@ -1958,25 +1868,18 @@ Replace(T) / Skip(F)</b>:
 ### Is CSM Module - WhileLoop.vi
 
 -- <b>输入控件</b> --
-
 - <b>WhileLoop in</b>:
 
 -- <b>输出控件</b> --
-
 - <b>Is CSM Module?</b>:
 
 - <b>CSM Basic Refs</b>:
 
 ### Is CSM Module.vi
 
--- <b>输入控件</b> --
-
--- <b>输出控件</b> --
-
 ### CaseStructure - Add Frame.vi
 
 -- <b>输入控件</b> --
-
 - <b>Case Name</b>:
 
 - <b>Reference Frame Index</b>:
@@ -1984,7 +1887,6 @@ Replace(T) / Skip(F)</b>:
 - <b>CaseStructure in</b>:
 
 -- <b>输出控件</b> --
-
 - <b>Add Frame</b>:
 
 - <b>CaseStructure out</b>:
@@ -2000,27 +1902,23 @@ Replace(T) / Skip(F)</b>:
 ### CaseStructure - Check If State Exist.vi
 
 -- <b>输入控件</b> --
-
 - <b>Group Name</b>:
 
 - <b>CaseStructure in</b>:
 
 -- <b>输出控件</b> --
-
 - <b>Numeric</b>:
 
 - <b>CaseStructure out</b>:
 
-### CaseStructure - Get Group Seperator Case Index.vi
+### CaseStructure - Get Group Separator Case Index.vi
 
 -- <b>输入控件</b> --
-
 - <b>Group Name</b>:
 
 - <b>CaseStructure in</b>:
 
 -- <b>输出控件</b> --
-
 - <b>Numeric</b>:
 
 - <b>CaseStructure out</b>:
@@ -2028,15 +1926,13 @@ Replace(T) / Skip(F)</b>:
 ### Diagram - Connect Tunnel with Wire 2.vi
 
 -- <b>输入控件</b> --
-
-- <b>Wire Indexs</b>:
+- <b>Wire Index</b>:
 
 - <b>Front Tunnels</b>:
 
 - <b>Diagram in</b>:
 
 -- <b>输出控件</b> --
-
 - <b>Array out</b>:
 
 - <b>Diagram out</b>:
@@ -2044,7 +1940,6 @@ Replace(T) / Skip(F)</b>:
 ### Diagram - Connect Tunnel with Wire.vi
 
 -- <b>输入控件</b> --
-
 - <b>FrontEnd Connected Info</b>:
 
 - <b>Front Tunnels</b>:
@@ -2052,7 +1947,6 @@ Replace(T) / Skip(F)</b>:
 - <b>Diagram in</b>:
 
 -- <b>输出控件</b> --
-
 - <b>Array out</b>:
 
 - <b>Diagram out</b>:
@@ -2060,11 +1954,9 @@ Replace(T) / Skip(F)</b>:
 ### Diagram - Get All Decoration Refs.vi
 
 -- <b>输入控件</b> --
-
 - <b>TopLevelDiagram in</b>:
 
 -- <b>输出控件</b> --
-
 - <b>TextRefs</b>:
 
 - <b>TopLevelDiagram out</b>:
@@ -2072,11 +1964,9 @@ Replace(T) / Skip(F)</b>:
 ### Diagram - Get All Text Refs.vi
 
 -- <b>输入控件</b> --
-
 - <b>TopLevelDiagram in</b>:
 
 -- <b>输出控件</b> --
-
 - <b>TextRefs</b>:
 
 - <b>TopLevelDiagram out</b>:
@@ -2084,7 +1974,6 @@ Replace(T) / Skip(F)</b>:
 ### PairedTunnels - Connect Wire.vi
 
 -- <b>输入控件</b> --
-
 - <b>index(-1 for all)</b>:
 
 - <b>PairedTunnels</b>:
@@ -2095,33 +1984,27 @@ Replace(T) / Skip(F)</b>:
 ### Find Event Structure from Case Structure.vi
 
 -- <b>输入控件</b> --
-
 - <b>CaseStructure</b>:
 
 -- <b>输出控件</b> --
-
 - <b>EvntStruct Refnum</b>:
 
 ### Find Parse State Queue from Case Structure.vi
 
 -- <b>输入控件</b> --
-
 - <b>CaseStructure</b>:
 
 -- <b>输出控件</b> --
-
 - <b>CaseStructure</b>:
 
 - <b>Parse State Queue</b>:
 
-### Find Parse State Queue from Event Strcture.vi
+### Find Parse State Queue from Event Structure.vi
 
 -- <b>输入控件</b> --
-
 - <b>EvntStruct Refnum</b>:
 
 -- <b>输出控件</b> --
-
 - <b>CaseStructure</b>:
 
 - <b>Parse State Queue</b>:
@@ -2129,11 +2012,9 @@ Replace(T) / Skip(F)</b>:
 ### Find Parse State Queue from While Loop.vi
 
 -- <b>输入控件</b> --
-
 - <b>WhileLoop in</b>:
 
 -- <b>输出控件</b> --
-
 - <b>CaseStructure</b>:
 
 - <b>Parse State Queue</b>:
@@ -2218,21 +2099,9 @@ Replace(T) / Skip(F)</b>:
 
 ### CSM - Copyright QuickDrop.vi
 
--- <b>输入控件</b> --
-
--- <b>输出控件</b> --
-
 ### CSM - Documentation QuickDrop.vi
 
--- <b>输入控件</b> --
-
--- <b>输出控件</b> --
-
 ### CSM - Keywords QuickDrop.vi
-
--- <b>输入控件</b> --
-
--- <b>输出控件</b> --
 
 ### CSM Dummy Module.vi
 
@@ -2248,7 +2117,6 @@ Replace(T) / Skip(F)</b>:
 ### Naming Check.vi
 
 -- <b>输入控件</b> --
-
 - <b>Name("" to use uuid)</b>:
 Returns any argument(s) that may be used in the current state string. These arguments come after the ">>" characters
 
@@ -2360,7 +2228,6 @@ Returns any argument(s) that may be used in the current state string. These argu
 ### Preview.vi
 
 -- <b>输入控件</b> --
-
 - <b>BroadcastRegistry in</b>:
 
 -- <b>输出控件</b> --
@@ -2383,7 +2250,7 @@ Returns any argument(s) that may be used in the current state string. These argu
 - <b>State</b>:
 
 -- <b>输出控件</b> --
-- <b>State with Arguements</b>:
+- <b>State with Arguments</b>:
 
 ### CSM-Name to CSM-Mode.vi
 
@@ -2456,7 +2323,7 @@ Returns any argument(s) that may be used in the current state string. These argu
 - <b>single-line text</b>:
 
 -- <b>输出控件</b> --
-- <b>trimed text</b>:
+- <b>trimmed text</b>:
 
 ### U8 Data to Hex Str.vi
 
@@ -2469,7 +2336,6 @@ Returns any argument(s) that may be used in the current state string. These argu
 ### CSM Critical Error.vi
 
 -- <b>输入控件</b> --
-
 - <b>Arguments(as Reason)</b>:
 - <b>CSM Name</b>:
 
@@ -2477,14 +2343,9 @@ Returns any argument(s) that may be used in the current state string. These argu
 
 ### CSM No Target Error.vi
 
--- <b>输入控件</b> --
-
--- <b>输出控件</b> --
-
 ### CSM Not Allowed Message.vi
 
 -- <b>输入控件</b> --
-
 - <b>State</b>:
 - <b>CSM</b>:
 
@@ -2493,7 +2354,6 @@ Returns any argument(s) that may be used in the current state string. These argu
 ### CSM Target Error.vi
 
 -- <b>输入控件</b> --
-
 - <b>Arguments(as CSM Name)</b>:
 
 -- <b>输出控件</b> --
@@ -2501,7 +2361,6 @@ Returns any argument(s) that may be used in the current state string. These argu
 ### CSM Target Timeout Error.vi
 
 -- <b>输入控件</b> --
-
 - <b>Arguments(as CSM Name)</b>:
 
 -- <b>输出控件</b> --
@@ -2509,7 +2368,6 @@ Returns any argument(s) that may be used in the current state string. These argu
 ### CSM Unhandled State Error.vi
 
 -- <b>输入控件</b> --
-
 - <b>Current State</b>:
 - <b>CSM Name</b>:
 
@@ -2518,12 +2376,10 @@ Returns any argument(s) that may be used in the current state string. These argu
 ### Cache-Broadcast Registry Search Result.vi
 
 -- <b>输入控件</b> --
-
 - <b>CSM Name</b>:
 - <b>Broadcast state</b>:
 
 -- <b>输出控件</b> --
-
 - <b>Array</b>:
 
 ### FGV-BroadcastRegistry.vi
@@ -2554,7 +2410,6 @@ Returns any argument(s) that may be used in the current state string. These argu
 ### Cache-GEvt Filter Object.vi
 
 -- <b>输入控件</b> --
-
 -- <b>输出控件</b> --
 - <b>CSM:LogFilter.lvclass</b>:
 
@@ -2574,24 +2429,17 @@ Returns any argument(s) that may be used in the current state string. These argu
 - <b>Create(F)</b>:
 
 -- <b>输出控件</b> --
-
 - <b>CSM Global Log Event</b>:
 
 ### FGV-StatusChangeEventRef.vi
 
 -- <b>输入控件</b> --
-
 - <b>Name("" to use uuid) in</b>:
 
 -- <b>输出控件</b> --
-
 - <b>Status Change Event</b>:
 
 ### GEvt-BackgroundThread.vi
-
--- <b>输入控件</b> --
-
--- <b>输出控件</b> --
 
 ### GEvt-Convert Filter Rules - v1.0.vi
 
@@ -2740,15 +2588,13 @@ Returns any argument(s) that may be used in the current state string. These argu
 ### GEvt-Set Source Filter Rules - v1.0.vi
 
 -- <b>输入控件</b> --
-
 - <b>Rules-v1</b>:
 
 -- <b>输出控件</b> --
 
-### Gevt-ThreadQueueName.vi
+### GEvt-ThreadQueueName.vi
 
 -- <b>输入控件</b> --
-
 -- <b>输出控件</b> --
 - <b>ThreadQueueName</b>:
 
@@ -2773,7 +2619,6 @@ Returns any argument(s) that may be used in the current state string. These argu
 ### List Rules as Strings.vi
 
 -- <b>输入控件</b> --
-
 - <b>GlobalLogFilter in</b>:
 
 -- <b>输出控件</b> --
@@ -2978,12 +2823,10 @@ The State string that requires the argument.
 ### Dequeue Element.vi
 
 -- <b>输入控件</b> --
-
 - <b>timeout in ms (-1)</b>:
 - <b>Priority Queue</b>:
 
 -- <b>输出控件</b> --
-
 - <b>timed out?</b>:
 - <b>Cross JKI State Machine State</b>:
 - <b>Priority Queue(dup)</b>:
@@ -2999,13 +2842,11 @@ The State string that requires the argument.
 - <b>Priority Queue</b>:
 
 -- <b>输出控件</b> --
-
 - <b>Priority Queue(dup)</b>:
 
 ### Get Queue Status.vi
 
 -- <b>输入控件</b> --
-
 - <b>Priority Queue in</b>:
 
 -- <b>输出控件</b> --
@@ -3025,19 +2866,16 @@ The State string that requires the argument.
 ### Obtain Priority Queue.vi
 
 -- <b>输入控件</b> --
-
 - <b>create if not found? (T)</b>:
 - <b>name</b>:
 
 -- <b>输出控件</b> --
-
 - <b>created new?</b>:
 - <b>Priority Queue</b>:
 
 ### Release Priority Queue.vi
 
 -- <b>输入控件</b> --
-
 - <b>force destroy? (F)</b>:
 - <b>Priority Queue</b>:
 
@@ -3176,51 +3014,23 @@ The State string that requires the argument.
 
 ### CSM - Add VI Reference Case to CSMs.vi
 
--- <b>输入控件</b> --
-
--- <b>输出控件</b> --
-
 ### CSM - Debug Console - DebugTool.vi
-
--- <b>输入控件</b> --
-
--- <b>输出控件</b> --
 
 ### CSM - Remove all CSM Bookmarks.vi
 
--- <b>输入控件</b> --
-
--- <b>输出控件</b> --
-
 ### CSM - Running Log - DebugTool.vi
-
--- <b>输入控件</b> --
-
--- <b>输出控件</b> --
 
 ### CSM - State Dashboard - DebugTool.vi
 
--- <b>输入控件</b> --
-
--- <b>输出控件</b> --
-
 ### CSM - State Table - DebugTool.vi
 
--- <b>输入控件</b> --
-
--- <b>输出控件</b> --
-
 ### CSM - Switch Language Tool.vi
-
--- <b>输入控件</b> --
-
--- <b>输出控件</b> --
 
 
 ### Autosize All MultiListbox Columns (Uniform Text).vi
 
 -- <b>输入控件</b> --
-- <b>IngoreCols(Empty as default)</b>:
+- <b>IgnoreCols(Empty as default)</b>:
 
 - <b>Array</b>:
 
@@ -3240,7 +3050,6 @@ The State string that requires the argument.
 - <b>引气压力P4 4</b>:
 
 -- <b>输出控件</b> --
-
 - <b>Bounds:Area Height</b>:
 
 - <b>Bounds:Area Width</b>:
@@ -3249,15 +3058,10 @@ The State string that requires the argument.
 
 -- <b>输入控件</b> --
 - <b>Num Columns</b>:
-
 - <b>Cluster</b>:
-
 - <b>Num Rows</b>:
-
 - <b>area height</b>:
-
 - <b>area width</b>:
-
 - <b>Array 2</b>:
 
 -- <b>输出控件</b> --
@@ -3266,7 +3070,6 @@ The State string that requires the argument.
 
 -- <b>输入控件</b> --
 - <b>Current Module("" to generate a ID)</b>:
-
 - <b>CSM</b>:
 
 -- <b>输出控件</b> --
@@ -3284,7 +3087,6 @@ The State string that requires the argument.
 
 -- <b>输入控件</b> --
 - <b>A</b>:
-
 - <b>B</b>:
 
 -- <b>输出控件</b> --
@@ -3302,24 +3104,20 @@ The State string that requires the argument.
 
 -- <b>输入控件</b> --
 - <b>new ending (none)</b>:
-
 - <b>file name</b>:
 
 -- <b>输出控件</b> --
 - <b>prev ending</b>:
-
 - <b>new filename</b>:
 
 ### Convert File Extension (String)__ogtk.vi
 
 -- <b>输入控件</b> --
 - <b>new ending (none)</b>:
-
 - <b>file name</b>:
 
 -- <b>输出控件</b> --
 - <b>prev ending</b>:
-
 - <b>new filename</b>:
 
 ## Build-in Addons
@@ -3330,37 +3128,25 @@ The State string that requires the argument.
 
 -- <b>输入控件</b> --
 - <b>Filter Rules</b>:
-
 - <b>Timestamp format</b>:
-
 - <b>Enable? (T)</b>:
-
 - <b>log limit</b>:
-
 - <b>WatchDog? (T)</b>:
-
 - <b>Exit When All Module Exist?(F)</b>:
-
 - <b>Log File Path</b>:
 
 -- <b>输出控件</b> --
 - <b>LogFile</b>:
-
 - <b>WatchDogQueue</b>:
 
 #### CSM-Logger-Thread.vi
 
 -- <b>输入控件</b> --
 - <b>log limit</b>:
-
 - <b>Exit When All Module Exist?(F)</b>:
-
 - <b>format string</b>:
-
 - <b>WatchDogQ</b>:
-
 - <b>GlobalLogFilter.lvclass</b>:
-
 - <b>file path (use dialog)</b>:
 
 -- <b>输出控件</b> --
@@ -3380,13 +3166,11 @@ The State string that requires the argument.
 #### CSMLS - Append Continuous State.vi
 
 -- <b>输入控件</b> --
-- <b>Loop State(s) and Arguments</b>:
- This allows you to place new states in the front of the state machine queue. The default is an empty string.
+- <b>Loop State(s) and Arguments</b>: This allows you to place new states in the front of the state machine queue. The default is an empty string.
 - <b>Append(T)</b>:
 
 - <b>Continuous Arguments ("")</b>:
-- <b>Continuous State</b>:
-The State string that requires the argument.
+- <b>Continuous State</b>:The State string that requires the argument.
 - <b>Remaining States</b>:
 
 -- <b>输出控件</b> --
@@ -3396,7 +3180,6 @@ The State string that requires the argument.
 
 -- <b>输入控件</b> --
 - <b>States Out in</b>:
-
 - <b>Remaining States</b>:
 
 -- <b>输出控件</b> --
@@ -3429,51 +3212,35 @@ The State string that requires the argument.
 
 #### CSM - Start Watchdog to Ensure All Modules Exit.vi
 
--- <b>输入控件</b> --
-
--- <b>输出控件</b> --
-
 ## Unsorted
 
-### CSM - Check Mapping Relastionship in Broadcast Registry.vi
+### CSM - Check Mapping Relationship in Broadcast Registry.vi
 
 -- <b>输入控件</b> --
-
 - <b>CSM Name</b>:
-
 - <b>Broadcast state</b>:
 
 -- <b>输出控件</b> --
-
 - <b>Array</b>:
 
 ### CSM - Check Status Registration.vi
 
 -- <b>输入控件</b> --
-
 - <b>CSM Name</b>:
 
 - <b>Broadcast state</b>:
 
 -- <b>输出控件</b> --
-
 - <b>Array</b>:
 
 ### CSM - Flood of Events Handler Side Loop.vi
-
--- <b>输入控件</b> --
-
--- <b>输出控件</b> --
 
 ### CSM - Forward States to CSM.vi
 
 -- <b>输入控件</b> --
 - <b>High Priority(T)</b>:
-
-- <b>Module Name</b>:
-Returns any argument(s) that may be used in the current state string. These arguments come after the ">>" characters
-- <b>State(s) in ("")</b>:
-Wire the existing states to this input. The default is an empty string.
+- <b>Module Name</b>:Returns any argument(s) that may be used in the current state string. These arguments come after the ">>" characters
+- <b>State(s) in ("")</b>:Wire the existing states to this input. The default is an empty string.
 
 -- <b>输出控件</b> --
 
@@ -3487,7 +3254,6 @@ Wire the existing states to this input. The default is an empty string.
 -- <b>输出控件</b> --
 - <b>States Out</b>:
 
-
 ### CSM - Remove Module in Boradcast Registry.vi
 
 -- <b>输入控件</b> --
@@ -3500,13 +3266,9 @@ Wire the existing states to this input. The default is an empty string.
 
 -- <b>输入控件</b> --
 - <b>States with Replace Token</b>:
-
 - <b><param></b>:
-
 - <b><target></b>:
-
 - <b><1></b>:
-
 - <b><2></b>:
 
 -- <b>输出控件</b> --

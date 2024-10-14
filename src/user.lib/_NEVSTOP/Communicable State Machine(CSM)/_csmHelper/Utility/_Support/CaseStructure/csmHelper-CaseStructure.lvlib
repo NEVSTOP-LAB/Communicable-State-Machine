@@ -7,5 +7,5 @@
 	<Item Name="CaseStructure - Add Frame.vi" Type="VI" URL="../CaseStructure - Add Frame.vi"/>
 	<Item Name="CaseStructure - Case Name to Group Name.vi" Type="VI" URL="../CaseStructure - Case Name to Group Name.vi"/>
 	<Item Name="CaseStructure - Check If State Exist.vi" Type="VI" URL="../CaseStructure - Check If State Exist.vi"/>
-	<Item Name="CaseStructure - Get Group Seperator Case Index.vi" Type="VI" URL="../CaseStructure - Get Group Seperator Case Index.vi"/>
+	<Item Name="CaseStructure - Get Group Separator Case Index.vi" Type="VI" URL="../CaseStructure - Get Group Separator Case Index.vi"/>
 </Library>

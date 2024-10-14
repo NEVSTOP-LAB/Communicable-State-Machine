@@ -173,6 +173,8 @@
 		<Item Name="obsolete and hide" Type="Folder">
 			<Item Name="CSM - List All Status Registration.vi" Type="VI" URL="../AdvanceAPI/CSM - List All Status Registration.vi"/>
 			<Item Name="CSM - Check Status Registration.vi" Type="VI" URL="../AdvanceAPI/CSM - Check Status Registration.vi"/>
+			<Item Name="CSM - Check Mapping Relastionship in Broadcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - Check Mapping Relastionship in Broadcast Registry.vi"/>
+			<Item Name="CSM - Remove Module in Boradcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - Remove Module in Boradcast Registry.vi"/>
 		</Item>
 		<Item Name="Management API" Type="Folder">
 			<Item Name="CSM - Module VI Reference.vi" Type="VI" URL="../AdvanceAPI/CSM - Module VI Reference.vi"/>
@@ -187,11 +189,11 @@
 		<Item Name="Broadcast Registry" Type="Folder">
 			<Item Name="CSM - Register Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Register Status Change.vi"/>
 			<Item Name="CSM - Unregister Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Unregister Status Change.vi"/>
-			<Item Name="CSM - Remove Module in Boradcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - Remove Module in Boradcast Registry.vi"/>
+			<Item Name="CSM - Remove Module in Broadcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - Remove Module in Broadcast Registry.vi"/>
 			<Item Name="CSM - List Rules in Broadcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - List Rules in Broadcast Registry.vi"/>
 			<Item Name="CSM - List Status in Broadcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - List Status in Broadcast Registry.vi"/>
 			<Item Name="CSM - List Mapping Relationships in Broadcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - List Mapping Relationships in Broadcast Registry.vi"/>
-			<Item Name="CSM - Check Mapping Relastionship in Broadcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - Check Mapping Relastionship in Broadcast Registry.vi"/>
+			<Item Name="CSM - Check Mapping Relationship in Broadcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - Check Mapping Relationship in Broadcast Registry.vi"/>
 		</Item>
 		<Item Name="Non-Message Mode API" Type="Folder">
 			<Item Name="CSM - Broadcast Message Type.ctl" Type="VI" URL="../AdvanceAPI/CSM - Broadcast Message Type.ctl"/>
