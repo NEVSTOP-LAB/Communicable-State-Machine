@@ -494,7 +494,7 @@ CSM 消息中的关键字列表。
 -- <b>输出控件</b> --
 - <b>error</b>: LabVIEW 错误簇
 
-## Advance APIs
+## 管理接口(Management API)
 
 > [!NOTE] CSM 工作模式
 > 1. Stand-alone: 独立工作模式。不输入模块名称，将自动生成一个随机ID, 用于标识模块。
@@ -597,65 +597,7 @@ CSM 消息中的关键字列表。
 -- <b>输出控件</b> --
 - <b>New State Notifier Event</b>: 用户事件句柄，用来当收到消息时，使用CSM模块中断在事件结构中的等待
 
-## 工作者模式 (Work Mode API)
-
-> [!NOTE] CSM 工作者模式(worker mode)
->
-> 一个 CSM 模块，通过实例化多个实例，申请的名称后添加“#”,并共享相同的消息队列，实现工作者模式。
-> - 从外部调用上看，这些实例一起组成了一个复合的模块，命名为 Worker Agent。
-> - 每一个实例，命名为 Worker。
->
-> 行为：
-> 外部调用者可以认为 Worker Agent 就是一个CSM模块，可以进行消息通讯、状态注册等操作。
-> 从内部看，空闲的 Worker 会从 Worker Agent 消息队列中取出消息，处理消息。因此，Worker 模式能够实现一个 CSM 模块的并发消息处理。
->
-> 举例：
-> //申请模块名称为 module#, module 是 Worker Agent名称，实例化 4 个实例，这四个实例的名字可能为：
-> // - module#59703F3AD837
-> // - module#106A470BA5EC
-> // 不能直接和 worker 进行通讯，需要和 Worker Agent 通讯，例如
-> csm message >> arguments -@ module //同步消息，空闲的 worker 将处理此消息
-> csm message >> arguments -> module //同步消息，空闲的 worker 将处理此消息
->
-> 应用场景：
-> 1. 10086 接线员的场景
-> 2. 下载器并发下载的场景
-> 3. 编译器并发编译的场景
-> 4. TCP Server 处理多个Client连接
-
-> [!NOTE] 名称拼接API
-> 这个 VI 只操作了模块名称字符串，并没有实际功能，因此当熟悉 CSM 规则后，可以直接输入对应的名称字符串和规则符号，不是必须调用此API.
->
-
-### CSM - Mark As Worker Module.vi
-
-在CSM名称后添加“#”，以标记此模块工作在工作者模式下。
-
-> Ref: 名称拼接API
-> Ref: CSM 工作者模式(worker mode)
-
--- <b>输入控件</b> --
-- <b>CSM Name</b>: CSM 模块名称
-
--- <b>输出控件</b> --
-- <b>CSM Name(marked as worker)</b>: 添加“#”标记的CSM模块名称
-
-## 责任链模式 (Chain of Responsibility API)
-
-### CSM - Mark As Chain Module.vi
-
-[!WARNING] 此组功能还未完全验证过，请谨慎使用。
-
-> Ref: 名称拼接API
-
--- <b>输入控件</b> --
-- <b>CSM Name</b>:  CSM 模块名称
-- <b>Order</b>:  责任链模式下的顺序
-
--- <b>输出控件</b> --
-- <b>CSM Name(marked as Chain)</b>:添加“$”标记的CSM模块名称
-
-## Non-CSM Support
+## 外部操作接口(External API)
 
 ### CSM - Wait for Module to Be Alive.vi
 
@@ -791,11 +733,6 @@ CSM 消息中的关键字列表。
 -- <b>输出控件</b> --
 - <b>Array</b>:
 
-### CSM - List Log Filter Rules As Strings.vi
-
--- <b>输出控件</b> --
-- <b>Rule Strings</b>:
-
 ### CSM - List Mapping Relationships in Broadcast Registry.vi
 
 -- <b>输出控件</b> --
@@ -811,7 +748,106 @@ CSM 消息中的关键字列表。
 -- <b>输出控件</b> --
 - <b>Status in Registry</b>:
 
-## Side-Loop Support
+## 全局日志功能(Global Log)
+
+### CSM - Global Log Event.vi
+
+获取 CSM 全局状态用户事件句柄
+
+-- <b>输出控件</b> --
+- <b>CSM Global Log Event</b>: CSM 全局状态用户事件句柄
+
+### CSM - Destroy Global Log Event.vi
+
+释放 CSM 全局状态用户事件句柄
+
+-- <b>输入控件</b> --
+- <b>CSM Global Log Event</b>: CSM 全局状态用户事件句柄
+
+### CSM - Generate User Global Log.vi
+
+-- <b>输入控件</b> --
+- <b>From Who</b>:
+- <b>ModuleName</b>:
+- <b>Log</b>:
+- <b>Arguments</b>:
+
+### CSM - Global Log Error Handler.vi
+
+-- <b>输入控件</b> --
+- <b>Place("" to use VI's Name)</b>:
+- <b>Clear Error(T)</b>:
+
+### CSM - Set Log Filter Rules.vi
+
+### CSM - List Log Filter Rules As Strings.vi
+
+-- <b>输出控件</b> --
+- <b>Rule Strings</b>:
+
+### CSM - Convert Filter Rules.vi
+
+### CSM - Filter Global Log.vi
+
+## 工作者模式 (Work Mode API)
+
+> [!NOTE] CSM 工作者模式(worker mode)
+>
+> 一个 CSM 模块，通过实例化多个实例，申请的名称后添加“#”,并共享相同的消息队列，实现工作者模式。
+> - 从外部调用上看，这些实例一起组成了一个复合的模块，命名为 Worker Agent。
+> - 每一个实例，命名为 Worker。
+>
+> 行为：
+> 外部调用者可以认为 Worker Agent 就是一个CSM模块，可以进行消息通讯、状态注册等操作。
+> 从内部看，空闲的 Worker 会从 Worker Agent 消息队列中取出消息，处理消息。因此，Worker 模式能够实现一个 CSM 模块的并发消息处理。
+>
+> 举例：
+> //申请模块名称为 module#, module 是 Worker Agent名称，实例化 4 个实例，这四个实例的名字可能为：
+> // - module#59703F3AD837
+> // - module#106A470BA5EC
+> // 不能直接和 worker 进行通讯，需要和 Worker Agent 通讯，例如
+> csm message >> arguments -@ module //同步消息，空闲的 worker 将处理此消息
+> csm message >> arguments -> module //同步消息，空闲的 worker 将处理此消息
+>
+> 应用场景：
+> 1. 10086 接线员的场景
+> 2. 下载器并发下载的场景
+> 3. 编译器并发编译的场景
+> 4. TCP Server 处理多个Client连接
+
+> [!NOTE] 名称拼接API
+> 这个 VI 只操作了模块名称字符串，并没有实际功能，因此当熟悉 CSM 规则后，可以直接输入对应的名称字符串和规则符号，不是必须调用此API.
+>
+
+### CSM - Mark As Worker Module.vi
+
+在CSM名称后添加“#”，以标记此模块工作在工作者模式下。
+
+> Ref: 名称拼接API
+> Ref: CSM 工作者模式(worker mode)
+
+-- <b>输入控件</b> --
+- <b>CSM Name</b>: CSM 模块名称
+
+-- <b>输出控件</b> --
+- <b>CSM Name(marked as worker)</b>: 添加“#”标记的CSM模块名称
+
+## 责任链模式 (Chain of Responsibility API)
+
+### CSM - Mark As Chain Module.vi
+
+[!WARNING] 此组功能还未完全验证过，请谨慎使用。
+
+> Ref: 名称拼接API
+
+-- <b>输入控件</b> --
+- <b>CSM Name</b>:  CSM 模块名称
+- <b>Order</b>:  责任链模式下的顺序
+
+-- <b>输出控件</b> --
+- <b>CSM Name(marked as Chain)</b>:添加“$”标记的CSM模块名称
+
+## 旁路循环支持(Side-Loop Support)
 
 ### CSM - Request CSM to Post Message.vi
 
@@ -843,43 +879,7 @@ CSM 消息中的关键字列表。
 -- <b>输出控件</b> --
 - <b>Turn Invalid(Exit)?</b>: 是否已经退出
 
-## Global Log Event
-
-### CSM - Global Log Event.vi
-
-获取 CSM 全局状态用户事件句柄
-
--- <b>输出控件</b> --
-- <b>CSM Global Log Event</b>: CSM 全局状态用户事件句柄
-
-### CSM - Destroy Global Log Event.vi
-
-释放 CSM 全局状态用户事件句柄
-
--- <b>输入控件</b> --
-- <b>CSM Global Log Event</b>: CSM 全局状态用户事件句柄
-
-### CSM - Generate User Global Log.vi
-
--- <b>输入控件</b> --
-- <b>From Who</b>:
-- <b>ModuleName</b>:
-- <b>Log</b>:
-- <b>Arguments</b>:
-
-### CSM - Global Log Error Handler.vi
-
--- <b>输入控件</b> --
-- <b>Clear Error(T)</b>:
-- <b>Place("" to use VI's Name)</b>:
-
-### CSM - Set Log Filter Rules.vi
-
-### CSM - Convert Filter Rules.vi
-
-### CSM - Filter Global Log.vi
-
-## Utility VIs
+## 工具VI(Utility VIs)
 
 ### CSM - Compact Multiple States.vi
 
@@ -997,7 +997,6 @@ CSM 消息中的关键字列表。
 - <b>Secondary Type</b>:
 - <b>Primary Type</b>:
 
-
 ### Build Error Cluster.vi
 
 创建一个错误簇(error cluster)，以标准 LabVIEW 的方式从调用 VI 的调用链中构建源字符串。构建的源字符串形式为：
@@ -1081,6 +1080,104 @@ CSM 消息中的关键字列表。
 -- <b>输出控件</b> --
 - <b>Log String</b>: 全局日志字符串
 
+## Build-in Addons
+
+### CSM WatchDog
+
+> [!NOTE] CSM WatchDog 实现的原理
+> LabVIEW VI 退出时，会自动释放所有队列、事件等句柄资源。因此，我们可以通过创建一个 WatchDog 线程，监控一个由主程序VI申请创建的队列资源，当这个队列资源在主VI退出后被释放时，触发 WatchDog 线程给还未退出的 CSM 模块发送 "Macro: Exit"，保证他们正常的退出。
+>
+
+#### CSM - Start Watchdog to Ensure All Modules Exit.vi
+
+启动CSM Watchdog 线程，用于保证在主程序退出后，所有的异步启动的 CSM 模块都能正常退出。
+
+> Ref: CSM WatchDog 实现的原理
+
+#### CSM Watchdog Thread.vi
+
+CSM Watchdog 线程，用于保证在主程序退出后，所有的异步启动的 CSM 模块都能正常退出。
+
+> Ref: CSM WatchDog 实现的原理
+
+-- <b>输入控件</b> --
+- <b>WatchdogQ</b>: Watchdog 队列资源，
+
+### CSM File Logger
+
+#### CSM - Start File Logger.vi
+
+-- <b>输入控件</b> --
+- <b>Filter Rules</b>:
+- <b>Timestamp format</b>:
+- <b>Enable? (T)</b>:
+- <b>log limit</b>:
+- <b>WatchDog? (T)</b>:
+- <b>Exit When All Module Exist?(F)</b>:
+- <b>Log File Path</b>:
+
+-- <b>输出控件</b> --
+- <b>LogFile</b>:
+- <b>WatchDogQueue</b>:
+
+#### CSM-Logger-Thread.vi
+
+-- <b>输入控件</b> --
+- <b>log limit</b>:
+- <b>Exit When All Module Exist?(F)</b>:
+- <b>format string</b>:
+- <b>WatchDogQ</b>:
+- <b>GlobalLogFilter.lvclass</b>:
+- <b>file path (use dialog)</b>:
+
+### CSM Loop Support
+
+#### CSMLS - Add Exit State(s) with Loop Check.vi
+
+-- <b>输入控件</b> --
+- <b>States Out in</b>:
+- <b>Remaining States</b>:
+
+-- <b>输出控件</b> --
+- <b>States Out out</b>:
+
+#### CSMLS - Append Continuous State.vi
+
+-- <b>输入控件</b> --
+- <b>Loop State(s) and Arguments</b>: This allows you to place new states in the front of the state machine queue. The default is an empty string.
+- <b>Append(T)</b>:
+- <b>Continuous Arguments ("")</b>:
+- <b>Continuous State</b>:The State string that requires the argument.
+- <b>Remaining States</b>:
+
+-- <b>输出控件</b> --
+- <b>States Out</b>:
+
+#### CSMLS - Define Loop State(s).vi
+
+-- <b>输入控件</b> --
+- <b>States Out in</b>:
+- <b>Remaining States</b>:
+
+-- <b>输出控件</b> --
+- <b>States Out out</b>:
+
+#### CSMLS - Remove Loop Tag and previous State(s) to Break.vi
+
+-- <b>输入控件</b> --
+- <b>Remaining States</b>:
+
+-- <b>输出控件</b> --
+- <b>States</b>:
+
+#### CSMLS - Remove Loop Tag to Break.vi
+
+-- <b>输入控件</b> --
+- <b>Remaining States</b>:
+
+-- <b>输出控件</b> --
+- <b>States</b>:
+
 ## CSM-Helper API
 
 ### CSM-Helper API.vi
@@ -1095,9 +1192,9 @@ CSM 消息中的关键字列表。
 ### _Add VI Reference Case.vi
 
 -- <b>输入控件</b> --
+- <b>CSM-Helper in</b>: CSMHelper 输入
 - <b>element</b>:
 - <b>Add Frame</b>:
-- <b>CSM-Helper in</b>: CSMHelper 输入
 
 -- <b>输出控件</b> --
 - <b>CSM-Helper out</b>: CSMHelper 输出
@@ -1109,9 +1206,9 @@ CSM 消息中的关键字列表。
 - <b>CSM-Helper in</b>: CSMHelper 输入
 
 -- <b>输出控件</b> --
+- <b>CSM-Helper out</b>: CSMHelper 输出
 - <b>Backend Connected Info</b>:
 - <b>FrontEnd Connected Info</b>:
-- <b>CSM-Helper out</b>: CSMHelper 输出
 
 ### Diagram Node Information.vi
 
@@ -2873,7 +2970,6 @@ The State string that requires the argument.
 
 ### CSM - Switch Language Tool.vi
 
-
 ### Autosize All MultiListbox Columns (Uniform Text).vi
 
 -- <b>输入控件</b> --
@@ -2952,92 +3048,6 @@ The State string that requires the argument.
 - <b>prev ending</b>:
 - <b>new filename</b>:
 
-## Build-in Addons
-
-### CSM File Logger
-
-#### CSM - Start File Logger.vi
-
--- <b>输入控件</b> --
-- <b>Filter Rules</b>:
-- <b>Timestamp format</b>:
-- <b>Enable? (T)</b>:
-- <b>log limit</b>:
-- <b>WatchDog? (T)</b>:
-- <b>Exit When All Module Exist?(F)</b>:
-- <b>Log File Path</b>:
-
--- <b>输出控件</b> --
-- <b>LogFile</b>:
-- <b>WatchDogQueue</b>:
-
-#### CSM-Logger-Thread.vi
-
--- <b>输入控件</b> --
-- <b>log limit</b>:
-- <b>Exit When All Module Exist?(F)</b>:
-- <b>format string</b>:
-- <b>WatchDogQ</b>:
-- <b>GlobalLogFilter.lvclass</b>:
-- <b>file path (use dialog)</b>:
-
-### CSM Loop Support
-
-#### CSMLS - Add Exit State(s) with Loop Check.vi
-
--- <b>输入控件</b> --
-- <b>States Out in</b>:
-- <b>Remaining States</b>:
-
--- <b>输出控件</b> --
-- <b>States Out out</b>:
-
-#### CSMLS - Append Continuous State.vi
-
--- <b>输入控件</b> --
-- <b>Loop State(s) and Arguments</b>: This allows you to place new states in the front of the state machine queue. The default is an empty string.
-- <b>Append(T)</b>:
-- <b>Continuous Arguments ("")</b>:
-- <b>Continuous State</b>:The State string that requires the argument.
-- <b>Remaining States</b>:
-
--- <b>输出控件</b> --
-- <b>States Out</b>:
-
-#### CSMLS - Define Loop State(s).vi
-
--- <b>输入控件</b> --
-- <b>States Out in</b>:
-- <b>Remaining States</b>:
-
--- <b>输出控件</b> --
-- <b>States Out out</b>:
-
-#### CSMLS - Remove Loop Tag and previous State(s) to Break.vi
-
--- <b>输入控件</b> --
-- <b>Remaining States</b>:
-
--- <b>输出控件</b> --
-- <b>States</b>:
-
-#### CSMLS - Remove Loop Tag to Break.vi
-
--- <b>输入控件</b> --
-- <b>Remaining States</b>:
-
--- <b>输出控件</b> --
-- <b>States</b>:
-
-### CSM WatchDog
-
-#### CSM Watchdog Thread.vi
-
--- <b>输入控件</b> --
-- <b>WatchdogQ</b>:
-
-#### CSM - Start Watchdog to Ensure All Modules Exit.vi
-
 ## Unsorted
 
 ### CSM - Check Mapping Relationship in Broadcast Registry.vi
@@ -3095,7 +3105,7 @@ The State string that requires the argument.
 
 -- <b>输出控件</b> --
 - <b>States</b>:
-## Unsorted 
+
 ### csmdoc_export_all_csm_VI_description_doc.vi
 -- <b>Inputs</b> --
 - <b>Path</b>:
@@ -3113,7 +3123,6 @@ The State string that requires the argument.
 - <b>Path</b>:
 
 ### csmdoc_import_doc_to_singleVI.vi
-
 
 ### csmdoc_import_VI_description.vi
 -- <b>Inputs</b> --
@@ -3150,7 +3159,6 @@ The State string that requires the argument.
 - <b>ThreadQueueName</b>:
 
 ### Script - JKISM to CSM.vi
-
 
 ### CSM - Status Change Event.vi
 -- <b>Inputs</b> --
