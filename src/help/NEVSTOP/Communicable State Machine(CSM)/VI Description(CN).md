@@ -361,7 +361,7 @@
 
 #### Add State(s) to Queue By BOOL(Array Right).vi
 
-将 CSM 消息字符串并入 CSM 消息队列中。提供了 TURE/FALSE 两种状态的字符串选项，能够避免使用条件结构，提高代码可读性，提高编程效率。
+将 CSM 消息字符串并入 CSM 消息队列中。提供了 TRUE/FALSE 两种状态的字符串选项，能够避免使用条件结构，提高代码可读性，提高编程效率。
 
 > Ref: CSM 的状态队列操作API
 
@@ -496,6 +496,13 @@ CSM 消息中的关键字列表。
 
 ## Advance APIs
 
+> [!NOTE] CSM 工作模式
+> 1. Stand-alone: 独立工作模式。不输入模块名称，将自动生成一个随机ID, 用于标识模块。
+> 2. CSM: 普通 CSM 模块。
+> 3. Action Worker: 工作者模式。在模块名称后添加“#”，以标记此模块为工作者，其与具有相同名称的其他工作者共享相同的消息队列。
+> 4. Chain Node: 链式节点。在模块名称后添加“$”，以标记此模块为链式节点，同一个链上的消息，将依次传递，直到某个节点处理消息。
+>
+
 ### CSM - Start Async Call.vi
 
 异步调用模板代码的VI片段
@@ -531,6 +538,8 @@ CSM 消息中的关键字列表。
 
 列出所有活动的CSM模块。
 
+> Ref: CSM 工作模式
+
 -- <b>输入控件</b> --
 - <b>Exclude Standalone CSM(T)</b>: 是否包含独立工作模式的模块
 
@@ -539,13 +548,15 @@ CSM 消息中的关键字列表。
 
 ### CSM - Module Status.vi
 
-获取CSM模块的状态
+获取CSM模块的状态，包括：工作模式、工作者数量、消息队列中的待处理消息个数。
+
+> Ref: CSM 工作模式
 
 -- <b>输入控件</b> --
 - <b>CSM Name</b>: CSM 模块名称.
 
 -- <b>输出控件</b> --
-- <b>Mode</b>: 返回模块的工作模式："Stand-alone", "CSM" 或 "Action Worker".
+- <b>Mode</b>: 返回模块的工作模式
 - <b>#As Worker</b>: 工作者模式下，此模块的工作者数量
 - <b>#msg to be processed</b>: CSM消息队列中的待处理消息个数
 - <b>CSM Name(dup)</b>: 返回 <b>CSM Name</b>
@@ -578,6 +589,8 @@ CSM 消息中的关键字列表。
 
 ### CSM - Get New State Notifier Event.vi
 
+获取用户事件句柄。用在包含事件结构的 CSM 模块中。包含事件结构的 CSM 模块，通常都在事件结构处等待，这个事件用于收到新的消息时中断在事件结构中的等待，继续执行。
+
 -- <b>输入控件</b> --
 - <b>Name("" to use uuid) in</b>: CSM 模块名称
 
@@ -586,229 +599,206 @@ CSM 消息中的关键字列表。
 
 ## 工作者模式 (Work Mode API)
 
+> [!NOTE] CSM 工作者模式(worker mode)
+>
+> 一个 CSM 模块，通过实例化多个实例，申请的名称后添加“#”,并共享相同的消息队列，实现工作者模式。
+> - 从外部调用上看，这些实例一起组成了一个复合的模块，命名为 Worker Agent。
+> - 每一个实例，命名为 Worker。
+>
+> 行为：
+> 外部调用者可以认为 Worker Agent 就是一个CSM模块，可以进行消息通讯、状态注册等操作。
+> 从内部看，空闲的 Worker 会从 Worker Agent 消息队列中取出消息，处理消息。因此，Worker 模式能够实现一个 CSM 模块的并发消息处理。
+>
+> 举例：
+> //申请模块名称为 module#, module 是 Worker Agent名称，实例化 4 个实例，这四个实例的名字可能为：
+> // - module#59703F3AD837
+> // - module#106A470BA5EC
+> // 不能直接和 worker 进行通讯，需要和 Worker Agent 通讯，例如
+> csm message >> arguments -@ module //同步消息，空闲的 worker 将处理此消息
+> csm message >> arguments -> module //同步消息，空闲的 worker 将处理此消息
+>
+> 应用场景：
+> 1. 10086 接线员的场景
+> 2. 下载器并发下载的场景
+> 3. 编译器并发编译的场景
+> 4. TCP Server 处理多个Client连接
+
+> [!NOTE] 名称拼接API
+> 这个 VI 只操作了模块名称字符串，并没有实际功能，因此当熟悉 CSM 规则后，可以直接输入对应的名称字符串和规则符号，不是必须调用此API.
+>
+
 ### CSM - Mark As Worker Module.vi
 
-在CSM名称后添加“#”，以标记此模块为工作者，其与具有相同名称的其他工作者共享相同的消息队列。一个带有生成的UUID的实际名称将被分配给此CSM模块。
+在CSM名称后添加“#”，以标记此模块工作在工作者模式下。
+
+> Ref: 名称拼接API
+> Ref: CSM 工作者模式(worker mode)
 
 -- <b>输入控件</b> --
 - <b>CSM Name</b>: CSM 模块名称
 
 -- <b>输出控件</b> --
-- <b>CSM Name(marked as worker)</b>: 添加“#”标记 的CSM 模块名称
+- <b>CSM Name(marked as worker)</b>: 添加“#”标记的CSM模块名称
 
 ## 责任链模式 (Chain of Responsibility API)
 
 ### CSM - Mark As Chain Module.vi
 
+[!WARNING] 此组功能还未完全验证过，请谨慎使用。
+
+> Ref: 名称拼接API
+
 -- <b>输入控件</b> --
-- <b>Order</b>:
-
-- <b>CSM Name</b>:
-
+- <b>CSM Name</b>:  CSM 模块名称
+- <b>Order</b>:  责任链模式下的顺序
 
 -- <b>输出控件</b> --
-- <b>CSM Name(marked as Chain)</b>:
+- <b>CSM Name(marked as Chain)</b>:添加“$”标记的CSM模块名称
 
 ## Non-CSM Support
 
-### CSM - Wait for All Modules to be Alive.vi
+### CSM - Wait for Module to Be Alive.vi
+
+在指定的超时时间内等待 CSM 模块上线。
 
 -- <b>输入控件</b> --
-- <b>Timeout(5000ms)</b>:
-
-
-- <b>Module Names (in)</b>:
-
+- <b>CSM Name</b>: CSM 模块名称
+- <b>Wait(5000ms)</b>: 等待超时时间，默认为5s
 
 -- <b>输出控件</b> --
-- <b>waited(ms)</b>:
+- <b>CSM Name(dup)</b>: CSM 模块名称
+- <b>Waited(ms)</b>: 已等待的时间
 
-- <b>Left Modules</b>:
+### CSM - Wait for All Modules to be Alive.vi
+
+在指定的超时时间内等待一组 CSM 模块全部上线。
+
+-- <b>输入控件</b> --
+- <b>CSM Names</b>: CSM 模块名称
+- <b>Timeout(5000ms)</b>: 等待超时时间，默认为5s
+
+-- <b>输出控件</b> --
+- <b>CSMs Left</b>: 超时后还未上线的 CSM 模块
+- <b>waited(ms)</b>: 已等待的时间
 
 ### CSM - Wait for All Modules to Exit.vi
 
--- <b>输入控件</b> --
-- <b>Timeout(5000ms)</b>:
-
-
-- <b>Module Names (in)</b>:
-
-
--- <b>输出控件</b> --
-- <b>waited(ms)</b>:
-
-- <b>Left Modules</b>:
-
-### CSM - Wait for Module to Be Alive.vi
+在指定的超时时间内等待一组 CSM 模块全部下线，通常用于程序退出。
 
 -- <b>输入控件</b> --
-- <b>Target Module</b>:
-
-- <b>Wait(5000ms)</b>:
-
-
+- <b>CSM Names</b>: CSM 模块名称
+- <b>Timeout(5000ms)</b>: 等待超时时间，默认为5s
 
 -- <b>输出控件</b> --
-- <b>Target Module (dup)</b>:
-
-- <b>Waited(ms)</b>:
-
-
+- <b>CSMs Left</b>: 超时后还未下线的 CSM 模块
+- <b>waited(ms)</b>: 已等待的时间
 
 ### CSM - Post Message.vi
 
-向指定的CSM发布一条消息，相当于异步调用，但不等待返回参数。
+发送不带返回的异步消息到CSM，消息发送后继续执行之后的代码。
 
 -- <b>输入控件</b> --
-- <b>Target Module</b>:目标 CSM 模块名称
+- <b>CSM Name</b>: CSM 模块名称
 - <b>State</b>: 消息字符串
-- <b>Arguments ("")</b>: 消息参数
-错误簇
+- <b>Arguments("")</b>: 消息参数
+- <b>Current Module("" to generate a ID)</b>:当前模块名称，当没有输入时，生成一个临时ID，便于调试判断位置。
 
--- <b>输出控件</b> --
+### CSM - Wait and Post Message.vi
+
+发送不带返回的异步消息到CSM，消息发送后继续执行之后的代码。CSM模块未上线时，会等待指定的时间。
+
+-- <b>输入控件</b> --
+- <b>CSM Name</b>: CSM 模块名称
+- <b>State</b>: 消息字符串
+- <b>Arguments("")</b>: 消息参数
+- <b>Current Module("" to generate a ID)</b>: 当前模块名称，当没有输入时，生成一个临时ID，便于调试判断位置。
+- <b>Wait(5000ms)</b>: 等待超时时间，默认为5s
 
 ### CSM - Send Message and Wait for Reply.vi
 
-向指定的CSM发布一条消息并等待回复，相当于同步调用，在指定超时内没有收到返回，将返回超时错误。
+发送同步消息到CSM，等待返回消息。超时未获取到返回消息，将返回超时错误。
 
 -- <b>输入控件</b> --
 - <b>Target Module</b>: 目标 CSM 模块名称
 - <b>State</b>: 消息字符串
-- <b>Arguments ("")</b>: 消息参数
+- <b>Arguments("")</b>: 消息参数
 - <b>Response Timeout(5000ms)</b>: 等待返回的超时设置，默认 5000ms.
-错误簇
 
 -- <b>输出控件</b> --
-- <b>Arguments</b>: Response returned.
-
-### CSM - Wait and Post Message.vi
-
--- <b>输入控件</b> --
-- <b>State</b>:
-
-- <b>Current Module("" to generate a ID)</b>:
-The Argument string to add to the state. The default is an empty string. If Argument is an empty string then State will be returned to the output.
-- <b>Arguments ("")</b>:
-The Argument string to add to the state. The default is an empty string. If Argument is an empty string then State will be returned to the output.
-- <b>Target Module</b>:
-The Argument string to add to the state. The default is an empty string. If Argument is an empty string then State will be returned to the output.
-- <b>Wait(5000ms)</b>:
-
-The error cluster from the JKI State Machine is wired to this input. If an error occurs and appears on this input, the current state output returns the "Error Handler" state.
-
--- <b>输出控件</b> --
-
+- <b>Response</b>: 返回的响应
 
 ### CSM - Wait and Send Message for Reply.vi
 
+发送同步消息到CSM，等待返回消息。超时未获取到返回消息，将返回超时错误。CSM模块未上线时，会等待指定的时间。
+
 -- <b>输入控件</b> --
-- <b>State</b>:
-
-- <b>Current Module("" to generate a ID)</b>:
-The Argument string to add to the state. The default is an empty string. If Argument is an empty string then State will be returned to the output.
-- <b>Arguments ("")</b>:
-The Argument string to add to the state. The default is an empty string. If Argument is an empty string then State will be returned to the output.
-- <b>Target Module</b>:
-The Argument string to add to the state. The default is an empty string. If Argument is an empty string then State will be returned to the output.
-- <b>Wait(5000ms)</b>:
-
-The error cluster from the JKI State Machine is wired to this input. If an error occurs and appears on this input, the current state output returns the "Error Handler" state.
-- <b>Response Timeout(5000ms)</b>:
+- <b>CSM Name</b>: CSM 模块名称
+- <b>State</b>: 消息字符串
+- <b>Arguments("")</b>: 消息参数
+- <b>Response Timeout(5000ms)</b>: 等待返回的超时设置，默认 5000ms.
+- <b>Current Module("" to generate a ID)</b>: 当前模块名称，当没有输入时，生成一个临时ID，便于调试判断位置。
+- <b>Wait(5000ms)</b>: 等待超时时间，默认为5s
 
 -- <b>输出控件</b> --
-- <b>Response</b>:
-Returns any argument(s) that may be used in the current state string. These arguments come after the ">>" characters
-- <b>>> Source CSM >></b>:
-The Argument string to add to the state. The default is an empty string. If Argument is an empty string then State will be returned to the output.
-
+- <b>Response</b>: 返回的响应
+- <b>Source CSM</b>: 返回的响应的来源 CSM 模块名称
 
 ### CSM - Run Script.vi
 
+运行 CSM 脚本。可以一次性的执行多条消息指令。
+
 -- <b>输入控件</b> --
-- <b>single-line text</b>:
-
-- <b>Current Module("" to generate a ID)</b>:
-The Argument string to add to the state. The default is an empty string. If Argument is an empty string then State will be returned to the output.
-- <b>Continue If Error?(F)</b>:
-
-- <b>Wait(5000ms)</b>:
-
-
-- <b>Response Timeout(5000ms)</b>:
-
+- <b>CSM Scripts</b>: 待运行的脚本
+- <b>Response Timeout(5000ms)</b>: 等待返回的超时设置，默认 5000ms.
+- <b>Continue If Error?(F)</b>: 发生错误是是否继续执行
+- <b>Current Module("" to generate a ID)</b>: 当前模块名称，当没有输入时，生成一个临时ID，便于调试判断位置。
+- <b>Wait(5000ms)</b>: 等待超时时间，默认为5s
 
 -- <b>输出控件</b> --
-- <b>States Left</b>:
-
-
+- <b>Scripts Left</b>: 剩余未执行的脚本
 
 ### CSM - Status Change Event
 
-Obtain CSM Global Log Event Reference.
-- <b>CSM Global Log Event</b>: User event reference for CSM global log.
-Error cluster
+获取 CSM 状态更改事件句柄。
 
 -- <b>输入控件</b> --
-- <b>Name("" to use uuid) in</b>:
+- <b>CSM Module</b>: CSM 模块名称
 
 -- <b>输出控件</b> --
-- <b>Status Change Event</b>:
+- <b>Status Change Event</b>: CSM 状态更改事件句柄
 
 ### CSM - Destroy Status Change Event.vi
 
-Release CSM Global Log Event Reference.
-- <b>CSM Global Log Event</b>:
-Error cluster
+释放 CSM 状态更改事件句柄。
 
 -- <b>输入控件</b> --
-- <b>Status Change Event</b>:
-
--- <b>输出控件</b> --
+- <b>Status Change Event</b>: CSM 状态更改事件句柄
 
 ## 状态订阅管理(Status Registration)
 
 ### CSM - List All Status Registration.vi
 
--- <b>输入控件</b> --
-
-
 -- <b>输出控件</b> --
-
 - <b>Array</b>:
 
 ### CSM - List Log Filter Rules As Strings.vi
-
--- <b>输入控件</b> --
-
 
 -- <b>输出控件</b> --
 - <b>Rule Strings</b>:
 
 ### CSM - List Mapping Relationships in Broadcast Registry.vi
 
--- <b>输入控件</b> --
-
-
 -- <b>输出控件</b> --
-
 - <b>Array</b>:
 
 ### CSM - List Rules in Broadcast Registry.vi
 
--- <b>输入控件</b> --
-
-
 -- <b>输出控件</b> --
-
 - <b>Entries</b>:
 
 ### CSM - List Status in Broadcast Registry.vi
 
--- <b>输入控件</b> --
-
-
 -- <b>输出控件</b> --
-
 - <b>Status in Registry</b>:
 
 ## Side-Loop Support
@@ -822,9 +812,6 @@ Error cluster
 - <b>Status</b>: 将被广播的状态
 - <b>Arguments ("")</b>: 将被广播的状态参数
 - <b>Target Module</b>:目标模块
-错误簇
-
--- <b>输出控件</b> --
 
 ### CSM - Request CSM to Broadcast Status Change.vi
 
@@ -835,9 +822,6 @@ Error cluster
 - <b>Status</b>: 将被广播的状态
 - <b>Arguments ("")</b>: 将被广播的状态参数
 - <b>Broadcast(T)</b>: 控制是否广播的开关输入
-错误簇
-
--- <b>输出控件</b> --
 
 ### CSM - Module Turns Invalid.vi
 
@@ -855,8 +839,6 @@ Error cluster
 
 获取 CSM 全局状态用户事件句柄
 
--- <b>输入控件</b> --
-
 -- <b>输出控件</b> --
 - <b>CSM Global Log Event</b>: CSM 全局状态用户事件句柄
 
@@ -867,8 +849,6 @@ Error cluster
 -- <b>输入控件</b> --
 - <b>CSM Global Log Event</b>: CSM 全局状态用户事件句柄
 
--- <b>输出控件</b> --
-
 ### CSM - Generate User Global Log.vi
 
 -- <b>输入控件</b> --
@@ -876,8 +856,6 @@ Error cluster
 - <b>ModuleName</b>:
 - <b>Log</b>:
 - <b>Arguments</b>:
-
--- <b>输出控件</b> --
 
 ## Utility VIs
 
@@ -895,7 +873,6 @@ Error cluster
 
 -- <b>输入控件</b> --
 - <b>States</b>:
-
 
 -- <b>输出控件</b> --
 - <b>Multiple States</b>:
@@ -3357,7 +3334,6 @@ The State string that requires the argument.
 
 -- <b>输入控件</b> --
 - <b>Current Module("" to generate a ID)</b>:
-The Argument string to add to the state. The default is an empty string. If Argument is an empty string then State will be returned to the output.
 
 - <b>CSM</b>:
 
@@ -3369,7 +3345,6 @@ The Argument string to add to the state. The default is an empty string. If Argu
 
 -- <b>输入控件</b> --
 - <b>Current Module("" to generate a ID)</b>:
-The Argument string to add to the state. The default is an empty string. If Argument is an empty string then State will be returned to the output.
 
 - <b>CSM</b>:
 
@@ -3492,7 +3467,6 @@ The Argument string to add to the state. The default is an empty string. If Argu
 - <b>Append(T)</b>:
 
 - <b>Continous Arguments ("")</b>:
-The Argument string to add to the state. The default is an empty string. If Argument is an empty string then State will be returned to the output.
 - <b>Continous State</b>:
 The State string that requires the argument.
 - <b>Remaining States</b>:
@@ -3635,7 +3609,6 @@ This output returns a concatenation of all the inputs seperated by a line feed c
 
 - <b>Module Name</b>:
 Returns any argument(s) that may be used in the current state string. These arguments come after the ">>" characters
-The error cluster from the JKI State Machine is wired to this input. If an error occurs and appears on this input, the current state output returns the "Error Handler" state.
 - <b>State(s) in ("")</b>:
 Wire the existing states to this input. The default is an empty string.
 
