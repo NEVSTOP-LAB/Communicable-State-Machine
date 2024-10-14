@@ -87,7 +87,7 @@
 - <b>Response Arguments</b>: 来自上一个状态的响应参数。它应该来连接 CSM 的移位寄存器，用于传递外部调用的返回值。
 
 -- <b>输出控件</b> --
-- <b>Remaining States</b>:  返回继续执行的所有状态及参数
+- <b>Remaining States</b>:  拼接后的所有状态及参数
 - <b>Arguments</b>: 返回可能在当前状态字符串中使用的任何参数。这些参数位于“>>”字符之后。<b>注意：</b>参数变量不得包含任何不可打印的字符，比如换行符或回车符。
 - <b>Current State</b>: 将执行的下一个当前状态
 - <b>Name Used</b>: 分配给此CSM模块的实际名称
@@ -220,6 +220,8 @@
       Status >> Arguments -><broadcast>
       Status >> Arguments -><all>
 
+> Ref: 消息拼接API
+
 -- <b>输入控件</b> --
 - <b>State with Arguments</b>: CSM 普通状态消息字符串。
 - <b>Arguments ("")</b>: 参数信息。<b>State with Arguments</b>中包含的参数，会被替换。
@@ -232,6 +234,8 @@
 拼接中断状态消息。消息格式如下:
 
       Status >> Arguments -><interrupt>
+
+> Ref: 消息拼接API
 
 -- <b>输入控件</b> --
 - <b>State with Arguments</b>: CSM 中断状态消息字符串。
@@ -256,6 +260,8 @@
       //当有多个模块都有下载完毕消息，可以使用 * 表示所有模块的消息都绑定到播放器模块的开始播放API
       DownloadFinished@* >> StartPlay@Player -><register>
 
+> Ref: 消息拼接API
+
 -- <b>输入控件</b> --
 - <b>Target CSM</b>: 订阅状态的 CSM 模块名称
 - <b>Source CSM(* as Default)</b>: 发出状态的 CSM 模块名称
@@ -279,6 +285,8 @@
       //当播放器模块中执行消息时，Player 可缺省
       DownloadFinished@Downloader >> StartPlay -><unregister>
 
+> Ref: 消息拼接API
+
 -- <b>输入控件</b> --
 - <b>Target CSM</b>: 订阅状态的 CSM 模块名称
 - <b>Source CSM(* as Default)</b>: 发出状态的 CSM 模块名称
@@ -287,12 +295,31 @@
 -- <b>输出控件</b> --
 - <b>CSM Message String</b>:拼接生成的 CSM 消息字符串
 
+### CSM - Broadcast Status Change.vi
+
+向系统广播状态更改。已注册状态的 CSM 模块将接收到状态更改。例如：
+
+      //广播状态更改
+      Status >> Arguments -><broadcast>
+
+> [!NOTE] CSM 的状态队列操作API
+> 此类型 API 不会直接发送消息，只是拼接消息字符串。在 Parse State Queue++.vi 中发送消息、执行操作。
+> 和 消息拼接API 不同的是，此类 API 会包含 CSM 的状态队列字符串输入输入，相当于在状态队列中插入消息。
+>
+
+-- <b>输入控件</b> --
+- <b>Status with Arguments</b>: 将被广播的状态及参数，支持多行, 每行状态都将被添加 "-><broadcast>"
+- <b>State Queue("")</b>: 整个状态队列被连接到此输入
+- <b>Broadcast(T)</b>: 控制是否广播的开关输入
+
+-- <b>输出控件</b> --
+- <b>Remaining States</b>: 拼接后的所有状态及参数。
+
 ### Add State(s) to Queue By BOOL++.vi
 
-将 CSM 消息字符串并入 CSM 消息队列中提供
+将 CSM 消息字符串并入 CSM 消息队列中。提供了 TURE/FALSE 两种状态的字符串选项，能够避免使用条件结构，提高代码可读性，提高编程效率。
 
-
-根据高优先级和Bool输入，此VI生成TRUE/False和剩余状态的连接状态。High Priority输入决定是否在剩余状态之前或之后连接TRUE或False字符串。Bool输入决定要连接的字符串是TRUE还是False。
+> Ref: CSM 的状态队列操作API
 
 多态VI(Polymorphic VI)选项:
 - add State(s) to Queue By BOOL(Element).vi
@@ -302,45 +329,51 @@
 
 #### Add State(s) to Queue By BOOL(Element).vi
 
-根据高优先级和Bool输入，此VI生成TRUE/False和剩余状态的连接状态。High Priority输入决定是否在剩余状态之前或之后连接TRUE或False字符串。Bool输入决定要连接的字符串是TRUE还是False。
+将 CSM 消息字符串并入 CSM 消息队列中。提供了 TURE/FALSE 两种状态的字符串选项，能够避免使用条件结构，提高代码可读性，提高编程效率。
+
+> Ref: CSM 的状态队列操作API
 
 -- <b>输入控件</b> --
 - <b>State Queue("")</b>: 整个状态队列被连接到此输入
-- <b>TRUE("")</b>: <b>Bool</b> 为 True 时插入的状态字符串
-- <b>False("")</b>: <b>Bool</b> 为 False 时插入的状态字符串
-- <b>Bool</b>: 选择连接到TRUE终端或False终端的状态字符串的标志。
-- <b>High Priority(FALSE)</b>: 如果为True，状态将被插入到<b>State Queue("")</b>的顶部。如果为False，它被附加到尾部。
+- <b>TRUE("")</b>: <b>Condition</b> 为 True 时插入的状态字符串
+- <b>FALSE("")</b>: <b>Condition</b> 为 False 时插入的状态字符串
+- <b>Condition</b>: 选择连接到TRUE终端或False终端的状态字符串的标志。
+- <b>High Priority(FALSE)</b>: 如果为True，状态将被插入到<b>State Queue("")</b>的前端。如果为False，它被附加到尾部。
 
 -- <b>输出控件</b> --
-- <b>State Queue Out</b>: 返回继续执行的所有状态及参数。
+- <b>Remaining States</b>: 拼接后的所有状态及参数。
 
 #### Add State(s) to Queue By BOOL(Array Left).vi
 
-根据高优先级和Bool输入，此VI生成TRUE/False和剩余状态的连接状态。High Priority输入决定是否在剩余状态之前或之后连接TRUE或False字符串。Bool输入决定要连接的字符串是TRUE还是False。
+将 CSM 消息字符串并入 CSM 消息队列中。提供了 TURE/FALSE 两种状态的字符串选项，能够避免使用条件结构，提高代码可读性，提高编程效率。
+
+> Ref: CSM 的状态队列操作API
 
 -- <b>输入控件</b> --
 - <b>State Queue("")</b>: 整个状态队列被连接到此输入
-- <b>TRUE("")</b>: <b>Bool</b> 为 True 时插入的状态字符串
-- <b>False("")</b>: <b>Bool</b> 为 False 时插入的状态字符串
-- <b>Bool</b>: 选择连接到TRUE终端或False终端的状态字符串的标志。
-- <b>High Priority(FALSE)</b>: 如果为True，状态将被插入到<b>State Queue("")</b>的顶部。如果为False，它被附加到尾部。
+- <b>TRUE("")</b>: <b>Condition</b> 为 True 时插入的状态字符串
+- <b>FALSE("")</b>: <b>Condition</b> 为 False 时插入的状态字符串
+- <b>Condition</b>: 选择连接到TRUE终端或False终端的状态字符串的标志。
+- <b>High Priority(FALSE)</b>: 如果为True，状态将被插入到<b>State Queue("")</b>的前端。如果为False，它被附加到尾部。
 
 -- <b>输出控件</b> --
-- <b>State Queue Out</b>: 返回继续执行的所有状态及参数。
+- <b>Remaining States</b>: 拼接后的所有状态及参数。
 
 #### Add State(s) to Queue By BOOL(Array Right).vi
 
-根据高优先级和Bool输入，此VI生成TRUE/False和剩余状态的连接状态。High Priority输入决定是否在剩余状态之前或之后连接TRUE或False字符串。Bool输入决定要连接的字符串是TRUE还是False。
+将 CSM 消息字符串并入 CSM 消息队列中。提供了 TURE/FALSE 两种状态的字符串选项，能够避免使用条件结构，提高代码可读性，提高编程效率。
+
+> Ref: CSM 的状态队列操作API
 
 -- <b>输入控件</b> --
 - <b>State Queue("")</b>: 整个状态队列被连接到此输入
-- <b>TRUE("")</b>: <b>Bool</b> 为 True 时插入的状态字符串
-- <b>False("")</b>: <b>Bool</b> 为 False 时插入的状态字符串
-- <b>Bool</b>: 选择连接到TRUE终端或False终端的状态字符串的标志。
-- <b>High Priority(FALSE)</b>: 如果为True，状态将被插入到<b>State Queue("")</b>的顶部。如果为False，它被附加到尾部。
+- <b>TRUE("")</b>: <b>Condition</b> 为 True 时插入的状态字符串
+- <b>FALSE("")</b>: <b>Condition</b> 为 False 时插入的状态字符串
+- <b>Condition</b>: 选择连接到TRUE终端或False终端的状态字符串的标志。
+- <b>High Priority(FALSE)</b>: 如果为True，状态将被插入到<b>State Queue("")</b>的前端。如果为False，它被附加到尾部。
 
 -- <b>输出控件</b> --
-- <b>State Queue Out</b>: 返回继续执行的所有状态及参数。
+- <b>Remaining States</b>: 拼接后的所有状态及参数。
 
 #### Add State(s) to Queue By BOOL(Array All).vi
 
@@ -348,27 +381,17 @@
 High Priority输入决定是否在剩余状态之前或之后连接TRUE或False字符串。
 Bool输入决定要连接的字符串是TRUE还是False。
 
--- <b>输入控件</b> --
-- <b>State Queue("")</b>: 整个状态队列被连接到此输入
-- <b>TRUE("")</b>: <b>Bool</b> 为 True 时插入的状态字符串
-- <b>False("")</b>: <b>Bool</b> 为 False 时插入的状态字符串
-- <b>Bool</b>: 选择连接到TRUE终端或False终端的状态字符串的标志。
-- <b>High Priority(FALSE)</b>: 如果为True，状态将被插入到<b>State Queue("")</b>的顶部。如果为False，它被附加到尾部。
-
--- <b>输出控件</b> --
-- <b>State Queue Out</b>: 返回继续执行的所有状态及参数。
-
-### CSM - Broadcast Status Change.vi
-
-向系统广播状态更改。已注册状态的 CSM 模块将接收到状态更改。
+> Ref: CSM 的状态队列操作API
 
 -- <b>输入控件</b> --
-- <b>Status with Arguments</b>: 将被广播的状态及参数
 - <b>State Queue("")</b>: 整个状态队列被连接到此输入
-- <b>Broadcast(T)</b>: 控制是否广播的开关输入
+- <b>TRUE("")</b>: <b>Condition</b> 为 True 时插入的状态字符串
+- <b>FALSE("")</b>: <b>Condition</b> 为 False 时插入的状态字符串
+- <b>Condition</b>: 选择连接到TRUE终端或False终端的状态字符串的标志。
+- <b>High Priority(FALSE)</b>: 如果为True，状态将被插入到<b>State Queue("")</b>的前端。如果为False，它被附加到尾部。
 
 -- <b>输出控件</b> --
-- <b>Remaining States</b>: 返回继续执行的所有状态及参数。
+- <b>Remaining States</b>: 拼接后的所有状态及参数。
 
 ## 参数(Arguments)
 
