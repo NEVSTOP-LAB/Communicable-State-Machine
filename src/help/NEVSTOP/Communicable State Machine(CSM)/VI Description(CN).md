@@ -405,6 +405,13 @@ Bool输入决定要连接的字符串是TRUE还是False。
 > HEXSTR可以安全地用作状态参数，而不会破坏 CSM 消息字符串的解析。
 >
 
+> [!NOTE] CSM ERROR 参数
+> LabVIEW 错误簇信息通常包含回车，并且可能包含 CSM 的消息关键字，因此它通常不能直接作为 CSM 参数传递。
+> 虽然可以将错误簇信息转换为 HEXSTR 格式，但是它并不具备可读性，在 log 中不能直观的读取信息。
+> 因此为了在 CSM 参数中传递 LabVIEW 错误信息, 提供了一个标准的 CSM 错误参数格式。可以安全地用作状态参数，而不会破坏 CSM 消息字符串的解析。
+> 它的格式为: "[Error: error-code] error-description-As-safe-argument-string"
+>
+
 ### CSM - Keywords.vi
 
 CSM 消息中的关键字列表。
@@ -446,7 +453,7 @@ CSM 消息中的关键字列表。
 > Ref: CSM HEXSTR 格式参数
 
 -- <b>输入控件</b> --
-- <b>Variant</b>: LabVIEW数据，通过变体支持任意数据类型
+- <b>Variant</b>: LabVIEW 数据，通过变体支持任意数据类型
 
 -- <b>输出控件</b> --
 - <b>HEXSTR</b>: CSM HEXSTR 格式参数
@@ -461,30 +468,31 @@ CSM 消息中的关键字列表。
 - <b>HEXSTR</b>: CSM HEXSTR 格式参数
 
 -- <b>输出控件</b> --
-- <b>Variant</b>: LabVIEW数据，通过变体支持任意数据类型
-
-### CSM - Convert Argument to Error.vi
-
--- <b>输入控件</b> --
-- <b>Argument</b>:
-
-
--- <b>输出控件</b> --
-- <b>error</b>:
-- <B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
-
-Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+- <b>Variant</b>: LabVIEW 数据，通过变体支持任意数据类型
 
 ### CSM - Convert Error to Argument.vi
 
--- <b>输入控件</b> --
-- <b>error in (no error)</b>:
-- <B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+将 LabVIEW 错误簇转换为 CSM 错误参数格式。
 
-Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+> Ref: CSM ERROR 参数
+
+-- <b>输入控件</b> --
+- <b>error</b>: LabVIEW 错误簇
 
 -- <b>输出控件</b> --
-- <b>Arguments</b>:
+- <b>Arguments</b>: CSM 错误参数格式
+
+### CSM - Convert Argument to Error.vi
+
+将 CSM 错误参数格式转换为 LabVIEW 错误簇。
+
+> Ref: CSM ERROR 参数
+
+-- <b>输入控件</b> --
+- <b>Argument</b>: CSM 错误参数格式
+
+-- <b>输出控件</b> --
+- <b>error</b>: LabVIEW 错误簇
 
 ## Advance APIs
 

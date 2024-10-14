@@ -193,15 +193,6 @@
 			<Item Name="CSM - List Mapping Relationships in Broadcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - List Mapping Relationships in Broadcast Registry.vi"/>
 			<Item Name="CSM - Check Mapping Relastionship in Broadcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - Check Mapping Relastionship in Broadcast Registry.vi"/>
 		</Item>
-		<Item Name="Args" Type="Folder">
-			<Item Name="CSM - Keywords.vi" Type="VI" URL="../AdvanceAPI/CSM - Keywords.vi"/>
-			<Item Name="CSM - Convert Data to HexStr.vi" Type="VI" URL="../AdvanceAPI/CSM - Convert Data to HexStr.vi"/>
-			<Item Name="CSM - Convert HexStr to Data.vi" Type="VI" URL="../AdvanceAPI/CSM - Convert HexStr to Data.vi"/>
-			<Item Name="CSM - Make String Arguments Safe.vi" Type="VI" URL="../AdvanceAPI/CSM - Make String Arguments Safe.vi"/>
-			<Item Name="CSM - Revert Arguments-Safe String.vi" Type="VI" URL="../AdvanceAPI/CSM - Revert Arguments-Safe String.vi"/>
-			<Item Name="CSM - Convert Error to Argument.vi" Type="VI" URL="../AdvanceAPI/CSM - Convert Error to Argument.vi"/>
-			<Item Name="CSM - Convert Argument to Error.vi" Type="VI" URL="../AdvanceAPI/CSM - Convert Argument to Error.vi"/>
-		</Item>
 		<Item Name="Non-Message Mode API" Type="Folder">
 			<Item Name="CSM - Broadcast Message Type.ctl" Type="VI" URL="../AdvanceAPI/CSM - Broadcast Message Type.ctl"/>
 			<Item Name="CSM - Message Type.ctl" Type="VI" URL="../AdvanceAPI/CSM - Message Type.ctl"/>
@@ -252,6 +243,16 @@
 			<Item Name="CSM - Filter Duplicate Messages By Name.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter Duplicate Messages By Name.vi"/>
 			<Item Name="CSM - Remove Duplicated Following Messages.vi" Type="VI" URL="../AdvanceAPI/CSM - Remove Duplicated Following Messages.vi"/>
 		</Item>
+	</Item>
+	<Item Name="Argument" Type="Folder">
+		<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
+		<Item Name="CSM - Keywords.vi" Type="VI" URL="../AdvanceAPI/CSM - Keywords.vi"/>
+		<Item Name="CSM - Convert Data to HexStr.vi" Type="VI" URL="../AdvanceAPI/CSM - Convert Data to HexStr.vi"/>
+		<Item Name="CSM - Convert HexStr to Data.vi" Type="VI" URL="../AdvanceAPI/CSM - Convert HexStr to Data.vi"/>
+		<Item Name="CSM - Make String Arguments Safe.vi" Type="VI" URL="../AdvanceAPI/CSM - Make String Arguments Safe.vi"/>
+		<Item Name="CSM - Revert Arguments-Safe String.vi" Type="VI" URL="../AdvanceAPI/CSM - Revert Arguments-Safe String.vi"/>
+		<Item Name="CSM - Convert Error to Argument.vi" Type="VI" URL="../AdvanceAPI/CSM - Convert Error to Argument.vi"/>
+		<Item Name="CSM - Convert Argument to Error.vi" Type="VI" URL="../AdvanceAPI/CSM - Convert Argument to Error.vi"/>
 	</Item>
 	<Item Name="Utility" Type="Folder">
 		<Item Name="_Support" Type="Folder">
