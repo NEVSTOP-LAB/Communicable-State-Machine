@@ -57,7 +57,7 @@
 - <b>Name("" to use uuid)</b>: CSM 模块名称
 - <b>Init State("Macro: Initialize")</b>: CSM 初始化状态, 默认为 "Macro: Initialize"
 
-## 核心功能(Core Functions)
+## 核心功能 (Core Functions)
 
 > [!NOTE] CSM 消息格式解析
 > [CSM 消息字符串(CSM Message)] >> [参数(Arguments)] [消息类型符号(Message Symbol) ->|,->,-@] [目标模块(Target Module)] // [注释(Comments)]
@@ -393,7 +393,7 @@ Bool输入决定要连接的字符串是TRUE还是False。
 -- <b>输出控件</b> --
 - <b>Remaining States</b>: 拼接后的所有状态及参数。
 
-## 参数(Arguments)
+## 参数 (Arguments)
 
 > [!NOTE] CSM 消息关键字
 > 包括: '->','->|','-@','-&','<-", "\r", "\n", "//", ">>", ">>>", ">>>>", ";", ","
@@ -496,20 +496,6 @@ CSM 消息中的关键字列表。
 
 ## Advance APIs
 
-### CSM - Module VI Reference.vi
-
--- <b>输入控件</b> --
-- <b>Response Timeout(5000ms)</b>:
-
-- <b>Current Module("" to generate a ID)</b>:
-The Argument string to add to the state. The default is an empty string. If Argument is an empty string then State will be returned to the output.
-
-- <b>CSM</b>:
-
--- <b>输出控件</b> --
-
-- <b>CSM Module VIRef</b>:
-
 ### CSM - Start Async Call.vi
 
 异步调用模板代码的VI片段
@@ -518,25 +504,17 @@ The Argument string to add to the state. The default is an empty string. If Argu
 
 同步调用模板代码的VI片段
 
-### CSM - Mark As Worker Module.vi
+### CSM - Module VI Reference.vi
 
-在CSM名称后添加“＃”，以标记此模块为工作者，其与具有相同名称的其他工作者共享相同的消息队列。一个带有生成的UUID的实际名称将被分配给此CSM模块。
+通过 发送 "VI Reference" 同步消息，查询获取 CSM 模块的 VI 引用。
 
 -- <b>输入控件</b> --
 - <b>CSM Name</b>: CSM 模块名称
+- <b>Current Module("" to generate a ID)</b>: 查询CSM模块的标记, 为空时，将生成一个唯一的ID
+- <b>Response Timeout(5000ms)</b>: 同步消息超时时间，默认 5000 ms
 
 -- <b>输出控件</b> --
-- <b>CSM Name(marked as worker)</b>: 添加“＃”标记 的CSM 模块名称
-
-### CSM - Compact Multiple States.vi
-
-将多个状态紧凑成单个字符串以供输入使用
-
--- <b>输入控件</b> --
-- <b>States in Lines</b>: 多个状态的字符串数组
-
--- <b>输出控件</b> --
-- <b>States</b>: 包含所有输入状态的字符串
+- <b>CSM Module VIRef</b>: CSM 模块的 VI 引用
 
 ### CSM - Check If Module Exists.vi
 
@@ -546,18 +524,18 @@ The Argument string to add to the state. The default is an empty string. If Argu
 - <b>CSM Name</b>: CSM 模块名称
 
 -- <b>输出控件</b> --
-- <b>Exist?</b>: 返回模式是否存在，存在返回True，不存在返回False
+- <b>Exist?</b>: 返回模式是否存在
 - <b>CSM Name(dup)</b>: 返回 <b>CSM Name</b>
 
 ### CSM - List Modules.vi
 
-列出系统中所有活动的CSM模块。
+列出所有活动的CSM模块。
 
 -- <b>输入控件</b> --
 - <b>Exclude Standalone CSM(T)</b>: 是否包含独立工作模式的模块
 
 -- <b>输出控件</b> --
-- <b>Module Names</b>: 模块名称列表
+- <b>Module Names</b>: CSM 模块名称列表
 
 ### CSM - Module Status.vi
 
@@ -605,6 +583,31 @@ The Argument string to add to the state. The default is an empty string. If Argu
 
 -- <b>输出控件</b> --
 - <b>New State Notifier Event</b>: 用户事件句柄，用来当收到消息时，使用CSM模块中断在事件结构中的等待
+
+## 工作者模式 (Work Mode API)
+
+### CSM - Mark As Worker Module.vi
+
+在CSM名称后添加“#”，以标记此模块为工作者，其与具有相同名称的其他工作者共享相同的消息队列。一个带有生成的UUID的实际名称将被分配给此CSM模块。
+
+-- <b>输入控件</b> --
+- <b>CSM Name</b>: CSM 模块名称
+
+-- <b>输出控件</b> --
+- <b>CSM Name(marked as worker)</b>: 添加“#”标记 的CSM 模块名称
+
+## 责任链模式 (Chain of Responsibility API)
+
+### CSM - Mark As Chain Module.vi
+
+-- <b>输入控件</b> --
+- <b>Order</b>:
+
+- <b>CSM Name</b>:
+
+
+-- <b>输出控件</b> --
+- <b>CSM Name(marked as Chain)</b>:
 
 ## Non-CSM Support
 
@@ -877,6 +880,25 @@ Error cluster
 -- <b>输出控件</b> --
 
 ## Utility VIs
+
+### CSM - Compact Multiple States.vi
+
+将多个状态紧凑成单个字符串以供输入使用
+
+-- <b>输入控件</b> --
+- <b>States in Lines</b>: 多个状态的字符串数组
+
+-- <b>输出控件</b> --
+- <b>States</b>: 包含所有输入状态的字符串
+
+### CSM - Break Down Multiple States String.vi
+
+-- <b>输入控件</b> --
+- <b>States</b>:
+
+
+-- <b>输出控件</b> --
+- <b>Multiple States</b>:
 
 ### Build Error Cluster.vi
 
@@ -3527,16 +3549,6 @@ The State string that requires the argument.
 ## Unsorted
 
 
-
-### CSM - Break Down Multiple States String.vi
-
--- <b>输入控件</b> --
-- <b>States</b>:
-
-
--- <b>输出控件</b> --
-- <b>Multiple States</b>:
-
 ### CSM - Build Exit Messages of CSMs.vi
 
 -- <b>输入控件</b> --
@@ -3652,17 +3664,6 @@ Wire the existing states to this input. The default is an empty string.
 
 -- <b>输出控件</b> --
 
-
-### CSM - Mark As Chain Module.vi
-
--- <b>输入控件</b> --
-- <b>Order</b>:
-
-- <b>CSM Name</b>:
-
-
--- <b>输出控件</b> --
-- <b>CSM Name(marked as Chain)</b>:
 
 ### CSM - Module Exit Event.vi
 

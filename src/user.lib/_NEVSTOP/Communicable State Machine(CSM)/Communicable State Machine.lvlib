@@ -174,9 +174,9 @@
 			<Item Name="CSM - List All Status Registration.vi" Type="VI" URL="../AdvanceAPI/CSM - List All Status Registration.vi"/>
 			<Item Name="CSM - Check Status Registration.vi" Type="VI" URL="../AdvanceAPI/CSM - Check Status Registration.vi"/>
 		</Item>
-		<Item Name="Framework API" Type="Folder">
-			<Item Name="CSM - List Modules.vi" Type="VI" URL="../AdvanceAPI/CSM - List Modules.vi"/>
+		<Item Name="Management API" Type="Folder">
 			<Item Name="CSM - Module VI Reference.vi" Type="VI" URL="../AdvanceAPI/CSM - Module VI Reference.vi"/>
+			<Item Name="CSM - List Modules.vi" Type="VI" URL="../AdvanceAPI/CSM - List Modules.vi"/>
 			<Item Name="CSM - Module Status.vi" Type="VI" URL="../AdvanceAPI/CSM - Module Status.vi"/>
 			<Item Name="CSM - Check If Module Exists.vi" Type="VI" URL="../AdvanceAPI/CSM - Check If Module Exists.vi"/>
 			<Item Name="CSM - Broadcast Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Broadcast Status Change.vi"/>
