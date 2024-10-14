@@ -915,31 +915,113 @@ CSM 消息中的关键字列表。
 
 ### CSM - Build Exit Messages of CSMs.vi
 
+输入CSM模块名称，拼接生成退出消息("Macro: Exit")。
+
+> Ref: 消息拼接API
+
 -- <b>输入控件</b> --
-- <b>CSMs</b>:
-- <b>State with Arguments("Macro: Exit“)</b>:
+- <b>CSMs</b>: CSM模块名称数组
+- <b>State with Arguments("Macro: Exit“)</b>: 退出消息
 
 -- <b>输出控件</b> --
-- <b>States</b>:
+- <b>States</b>: 拼接生成的CSM消息字符串
 
 ### CSM - Filter Duplicate Messages By Name.vi
 
+过滤重复的消息，只保留最新的消息。
+
+> Ref: 消息拼接API
+
 -- <b>输入控件</b> --
-- <b>States</b>:
-- <b>Whole Messages in Check?(T)</b>:
+- <b>States</b>: 输入的消息字符串
+- <b>Whole Messages in Check?(T)</b>: 是否检查整个消息字符串。如果是 FALSE，则只检查消息名称。
 
 -- <b>输出控件</b> --
-- <b>States out</b>:
+- <b>Filtered States</b>: 过滤后的消息字符串
 
 ### CSM - Filter Messages to Non-Existing Modules.vi
 
+过滤发送给不存在的模块的消息。
+这个VI中会使用 CSM - List Modules.vi 获取所有活动的CSM模块，然后过滤掉发送给不存在模块的消息。
+
 -- <b>输入控件</b> --
-- <b>State(s) in ("")</b>:
-Wire the existing states to this input. The default is an empty string.
+- <b>States</b>: 输入的消息字符串
 
 -- <b>输出控件</b> --
-- <b>States Out</b>:
-This output returns a concatenation of all the inputs seperated by a line feed character. The line feed character is required by the JKI State Machine.
+- <b>Filtered States</b>: 过滤后的消息字符串
+
+### CSM - Remove Duplicated Following Messages.vi
+
+-- <b>输入控件</b> --
+- <b>Current State</b>:
+- <b>Remaining States</b>:
+
+-- <b>输出控件</b> --
+- <b>Remaining States Left</b>:
+
+### CSM Data Type String to Enum.vi
+
+-- <b>输入控件</b> --
+
+-- <b>输出控件</b> --
+
+### CSM Data Type String.vi
+
+-- <b>输入控件</b> --
+- <b>Data</b>:
+
+-- <b>输出控件</b> --
+- <b>Data Type String</b>:
+
+### Replace Tag with Array.vi
+
+-- <b>输入控件</b> --
+
+- <b>Enum</b>:
+
+- <b>replace string</b>:
+
+- <b>single-line text</b>:
+
+-- <b>输出控件</b> --
+- <b>States</b>:
+
+### CSM Data Type String to Enum(RefnumEnum).vi
+
+-- <b>输入控件</b> --
+- <b>Data Type String</b>:
+
+-- <b>输出控件</b> --
+- <b>Array Dim</b>:
+
+- <b>Secondary Type</b>:
+
+- <b>Primary Type</b>:
+
+### CSM Data Type String to Enum(String).vi
+
+-- <b>输入控件</b> --
+- <b>Data Type String</b>:
+
+-- <b>输出控件</b> --
+- <b>Array Dim</b>:
+
+- <b>Secondary Type String</b>:
+
+- <b>Primary Type</b>:
+
+### CSM Data Type String to Enum(TypeEnum).vi
+
+-- <b>输入控件</b> --
+- <b>Data Type String</b>:
+
+-- <b>输出控件</b> --
+- <b>Array Dim</b>:
+
+- <b>Secondary Type</b>:
+
+- <b>Primary Type</b>:
+
 
 ### Build Error Cluster.vi
 
@@ -2388,7 +2470,7 @@ Returns any argument(s) that may be used in the current state string. These argu
 
 -- <b>输入控件</b> --
 
-- <b>Arugments(as Reason)</b>:
+- <b>Arguments(as Reason)</b>:
 - <b>CSM Name</b>:
 
 -- <b>输出控件</b> --
@@ -2459,15 +2541,15 @@ Returns any argument(s) that may be used in the current state string. These argu
 
 ### global-Broadcast Cache Change Flag.vi
 
--- <b>输入控件</b> --
-
--- <b>输出控件</b> --
+全局变量，用于标记广播缓存是否发生变化
 
 ### global-CSMQ FGV Change Flag.vi
 
--- <b>输入控件</b> --
+全局变量，用于标记 CSM 模块管理信息是否发生变化
 
--- <b>输出控件</b> --
+### global-GEvnt Filter Change Flag.vi
+
+全局变量，用于标记 Global Event 的过滤条件是否发生变化
 
 ### Cache-GEvt Filter Object.vi
 
@@ -2674,12 +2756,6 @@ Returns any argument(s) that may be used in the current state string. These argu
 
 -- <b>输入控件</b> --
 - <b>WatchDogQ</b>:
-
--- <b>输出控件</b> --
-
-### global-GEvnt Filter Change Flag.vi
-
--- <b>输入控件</b> --
 
 -- <b>输出控件</b> --
 
@@ -3140,11 +3216,6 @@ The State string that requires the argument.
 
 -- <b>输出控件</b> --
 
-### Script - JKISM to CSM.vi
-
--- <b>输入控件</b> --
-
--- <b>输出控件</b> --
 
 ### Autosize All MultiListbox Columns (Uniform Text).vi
 
@@ -3313,8 +3384,8 @@ The State string that requires the argument.
  This allows you to place new states in the front of the state machine queue. The default is an empty string.
 - <b>Append(T)</b>:
 
-- <b>Continous Arguments ("")</b>:
-- <b>Continous State</b>:
+- <b>Continuous Arguments ("")</b>:
+- <b>Continuous State</b>:
 The State string that requires the argument.
 - <b>Remaining States</b>:
 
@@ -3416,15 +3487,6 @@ Wire the existing states to this input. The default is an empty string.
 -- <b>输出控件</b> --
 - <b>States Out</b>:
 
-### CSM - Remove Duplicated Following Messages.vi
-
--- <b>输入控件</b> --
-- <b>Current State</b>:
-
-- <b>Remaining States</b>:
-
--- <b>输出控件</b> --
-- <b>Remaining States Left</b>:
 
 ### CSM - Remove Module in Boradcast Registry.vi
 
@@ -3449,66 +3511,3 @@ Wire the existing states to this input. The default is an empty string.
 
 -- <b>输出控件</b> --
 - <b>States</b>:
-
-### CSM Data Type String to Enum.vi
-
--- <b>输入控件</b> --
-
--- <b>输出控件</b> --
-
-### CSM Data Type String.vi
-
--- <b>输入控件</b> --
-- <b>Data</b>:
-
--- <b>输出控件</b> --
-- <b>Data Type String</b>:
-
-### Replace Tag with Array.vi
-
--- <b>输入控件</b> --
-
-- <b>Enum</b>:
-
-- <b>replace string</b>:
-
-- <b>single-line text</b>:
-
--- <b>输出控件</b> --
-- <b>States</b>:
-
-### CSM Data Type String to Enum(RefnumEnum).vi
-
--- <b>输入控件</b> --
-- <b>Data Type String</b>:
-
--- <b>输出控件</b> --
-- <b>Array Dim</b>:
-
-- <b>Secondary Type</b>:
-
-- <b>Primary Type</b>:
-
-### CSM Data Type String to Enum(String).vi
-
--- <b>输入控件</b> --
-- <b>Data Type String</b>:
-
--- <b>输出控件</b> --
-- <b>Array Dim</b>:
-
-- <b>Secondary Type String</b>:
-
-- <b>Primary Type</b>:
-
-### CSM Data Type String to Enum(TypeEnum).vi
-
--- <b>输入控件</b> --
-- <b>Data Type String</b>:
-
--- <b>输出控件</b> --
-- <b>Array Dim</b>:
-
-- <b>Secondary Type</b>:
-
-- <b>Primary Type</b>:
