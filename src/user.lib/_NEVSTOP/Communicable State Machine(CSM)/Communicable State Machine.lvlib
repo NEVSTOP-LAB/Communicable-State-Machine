@@ -194,6 +194,7 @@
 			<Item Name="CSM - Check Mapping Relastionship in Broadcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - Check Mapping Relastionship in Broadcast Registry.vi"/>
 		</Item>
 		<Item Name="Args" Type="Folder">
+			<Item Name="CSM - Keywords.vi" Type="VI" URL="../AdvanceAPI/CSM - Keywords.vi"/>
 			<Item Name="CSM - Convert Data to HexStr.vi" Type="VI" URL="../AdvanceAPI/CSM - Convert Data to HexStr.vi"/>
 			<Item Name="CSM - Convert HexStr to Data.vi" Type="VI" URL="../AdvanceAPI/CSM - Convert HexStr to Data.vi"/>
 			<Item Name="CSM - Make String Arguments Safe.vi" Type="VI" URL="../AdvanceAPI/CSM - Make String Arguments Safe.vi"/>
@@ -243,7 +244,6 @@
 				<Item Name="CSM - Synchronized Call.vi" Type="VI" URL="../AdvanceAPI/CSM - Synchronized Call.vi"/>
 				<Item Name="CSM - Flood of Events Handler Side Loop.vi" Type="VI" URL="../AdvanceAPI/CSM - Flood of Events Handler Side Loop.vi"/>
 			</Item>
-			<Item Name="CSM - Keywords.vi" Type="VI" URL="../AdvanceAPI/CSM - Keywords.vi"/>
 			<Item Name="CSM - Build Exit Messages of CSMs.vi" Type="VI" URL="../AdvanceAPI/CSM - Build Exit Messages of CSMs.vi"/>
 			<Item Name="CSM - Compact Multiple States.vi" Type="VI" URL="../AdvanceAPI/CSM - Compact Multiple States.vi"/>
 			<Item Name="CSM - Break Down Multiple States String.vi" Type="VI" URL="../AdvanceAPI/CSM - Break Down Multiple States String.vi"/>

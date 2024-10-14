@@ -395,56 +395,96 @@ Bool输入决定要连接的字符串是TRUE还是False。
 
 ## 参数(Arguments)
 
+> [!NOTE] CSM 消息关键字
+> 包括: '->','->|','-@','-&','<-", "\r", "\n", "//", ">>", ">>>", ">>>>", ";", ","
+>
+
+> [!NOTE] CSM HEXSTR 格式参数
+> 为了在 CSM 参数中传递任何数据类型，CSM 默认提供了一种 名为 HEXSTR 的参数格式，用于传递任何数据类型。
+> HEXSTR：将 LabVIEW 任意数据类型转换为变体，然后将此变体的内存格式表示为十六进制字符串，以便在 CSM 参数中传递。
+> HEXSTR可以安全地用作状态参数，而不会破坏 CSM 消息字符串的解析。
+>
+
 ### CSM - Keywords.vi
 
--- <b>输入控件</b> --
+CSM 消息中的关键字列表。
 
+> Ref: CSM 消息关键字
 
 -- <b>输出控件</b> --
-- <b>%[hex] Code</b>:
-
-- <b>Source</b>:
+- <b>keywords</b>: CSM 关键字列表
+- <b>keywords(%Hex format)</b>: CSM 关键字列表的%Hex格式
 
 ### CSM - Make String Arguments Safe.vi
 
-'->','->|','-@','-&','<-" 是关键字，不能出现在参数中。使用此 VI 保证参数安全。
+将参数字符串中的 CSM 关键字转换为%Hex格式, 保证不影响 CSM 消息字符串解析。
+
+> Ref: CSM 消息关键字
 
 -- <b>输入控件</b> --
-- <b>Argument String</b>: 可能包含关键字的参数 '->','->|','-@','-&','<-".
+- <b>Argument String</b>: 字符串参数
 
 -- <b>输出控件</b> --
-- <b>Safe Argument String</b>: 安全参数
+- <b>Safe Argument String</b>: 安全的字符串参数
 
 ### CSM - Revert Arguments-Safe String.vi
 
-'->','->|','-@','-&','<-" 是关键字，不能出现在参数中。使用<b>CSM Make String Arguments Safe.vi</b>保证参数安全。此VI用于将安全参数转换为原始参数。
+将安全的字符串参数中的 %Hex格式的 CSM 关键字转换回普通格式。
+
+> Ref: CSM 消息关键字
 
 -- <b>输入控件</b> --
-- <b>Safe Argument String</b>: 安全参数
+- <b>Safe Argument String</b>:  安全的字符串参数
 
 -- <b>输出控件</b> --
-- <b>Origin Argument String</b>: 可能包含关键字的参数 '->','->|','-@','-&','<-".
+- <b>Origin Argument String</b>: 字符串参数
 
 ### CSM - Convert Data to HexStr.vi
 
-将复杂参数（变体）转换为十六进制字符串，该字符串可以安全地用作状态参数，而不会破坏字符串队列逻辑。
+将 LabVIEW 任意数据类型转换为为 HEXSTR 格式参数字符串。
+
+> Ref: CSM HEXSTR 格式参数
 
 -- <b>输入控件</b> --
-- <b>Variant</b>: 数据，保存为变体(variant)格式
+- <b>Variant</b>: LabVIEW数据，通过变体支持任意数据类型
 
 -- <b>输出控件</b> --
-- <b>HEX String (0-9,A-F)</b>: Hex字符串格式，不包含不可见字符，符合 CSM 的参数要求
+- <b>HEXSTR</b>: CSM HEXSTR 格式参数
 
 ### CSM - Convert HexStr to Data.vi
 
 将十六进制字符串参数转换回变体数据。
 
+> Ref: CSM HEXSTR 格式参数
+
 -- <b>输入控件</b> --
-- <b>HEX String</b>: Hex字符串格式，不包含不可见字符，符合 CSM 的参数要求
+- <b>HEXSTR</b>: CSM HEXSTR 格式参数
 
 -- <b>输出控件</b> --
-- <b>Variant</b>: 数据，保存为变体(variant)格式
-- <b>error out</b>: 错误簇
+- <b>Variant</b>: LabVIEW数据，通过变体支持任意数据类型
+
+### CSM - Convert Argument to Error.vi
+
+-- <b>输入控件</b> --
+- <b>Argument</b>:
+
+
+-- <b>输出控件</b> --
+- <b>error</b>:
+- <B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+
+### CSM - Convert Error to Argument.vi
+
+-- <b>输入控件</b> --
+- <b>error in (no error)</b>:
+- <B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
+
+Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
+
+-- <b>输出控件</b> --
+- <b>Arguments</b>:
 
 ## Advance APIs
 
@@ -482,12 +522,10 @@ Bool输入决定要连接的字符串是TRUE还是False。
 
 -- <b>输入控件</b> --
 - <b>CSM Name</b>: CSM 模块名称
-- <b>Error in</b>: 错误簇
 
 -- <b>输出控件</b> --
 - <b>Exist?</b>: 返回模式是否存在，存在返回True，不存在返回False
 - <b>CSM Name(dup)</b>: 返回 <b>CSM Name</b>
-- <b>Error out</b>: 错误簇
 
 ### CSM - List Modules.vi
 
@@ -495,11 +533,9 @@ Bool输入决定要连接的字符串是TRUE还是False。
 
 -- <b>输入控件</b> --
 - <b>Exclude Standalone CSM(T)</b>: 是否包含独立工作模式的模块
-- <b>Error in</b>: 错误簇
 
 -- <b>输出控件</b> --
 - <b>Module Names</b>: 模块名称列表
-- <b>Error out</b>: 错误簇
 
 ### CSM - Module Status.vi
 
@@ -507,14 +543,12 @@ Bool输入决定要连接的字符串是TRUE还是False。
 
 -- <b>输入控件</b> --
 - <b>CSM Name</b>: CSM 模块名称.
-- <b>Error in</b>: 错误簇
 
 -- <b>输出控件</b> --
 - <b>Mode</b>: 返回模块的工作模式："Stand-alone", "CSM" 或 "Action Worker".
 - <b>#As Worker</b>: 工作者模式下，此模块的工作者数量
 - <b>#msg to be processed</b>: CSM消息队列中的待处理消息个数
 - <b>CSM Name(dup)</b>: 返回 <b>CSM Name</b>
-- <b>Error out</b>: 错误簇
 
 ### CSM - Register Status Change.vi
 
@@ -526,11 +560,9 @@ Bool输入决定要连接的字符串是TRUE还是False。
 - <b>Status</b>: 状态字符串
 - <b>API (if "", same as Status)</b>: 注册后，如果状态发生变化，将接收到此消息。
 - <b>Priority(T:As Status,F:As Interrupt)</b>: 如果响应消息为False，则将其插入到状态队列的前面；否则，将其附加到队列的尾部。
-- <b>Error in</b>: 错误簇
 
 -- <b>输出控件</b> --
 - <b>CSM Name(dup)</b>: 返回 <b>CSM Name</b>
-- <b>Error out</b>: 错误簇
 
 ### CSM - Unregister Status Change.vi
 
@@ -540,21 +572,17 @@ Bool输入决定要连接的字符串是TRUE还是False。
 - <b>CSM Name</b>: CSM 模块名称.
 - <b>Source CSM Name</b>: 生成状态的CSM模块。您可以使用“*”来表示所有生成相同状态的模块。
 - <b>Status</b>: 状态字符串
-- <b>Error in</b>: 错误簇
 
 -- <b>输出控件</b> --
 - <b>CSM Name(dup)</b>: 返回 <b>CSM Name</b>
-- <b>Error out</b>: 错误簇
 
 ### CSM - Get New State Notifier Event.vi
 
 -- <b>输入控件</b> --
 - <b>Name("" to use uuid) in</b>: CSM 模块名称
-- <b>Error in</b>: 错误簇
 
 -- <b>输出控件</b> --
 - <b>New State Notifier Event</b>: 用户事件句柄，用来当收到消息时，使用CSM模块中断在事件结构中的等待
-- <b>Error out</b>: 错误簇
 
 ## Non-CSM Support
 
@@ -563,7 +591,6 @@ Bool输入决定要连接的字符串是TRUE还是False。
 -- <b>输入控件</b> --
 - <b>Timeout(5000ms)</b>:
 
-- <b>Error in</b>:
 - <B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
 
 Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
@@ -584,7 +611,6 @@ Right-click the <B>error out</B> indicator on the front panel and select <B>Expl
 -- <b>输入控件</b> --
 - <b>Timeout(5000ms)</b>:
 
-- <b>Error in</b>:
 - <B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
 
 Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
@@ -633,7 +659,6 @@ Right-click the <B>error in</B> control on the front panel and select <B>Explain
 - <b>Error In (no error)</b>: 错误簇
 
 -- <b>输出控件</b> --
-- <b>error out</b>: 错误簇
 
 ### CSM - Send Message and Wait for Reply.vi
 
@@ -648,7 +673,6 @@ Right-click the <B>error in</B> control on the front panel and select <B>Explain
 
 -- <b>输出控件</b> --
 - <b>Arguments</b>: Response returned.
-- <b>error out</b>: 错误簇
 
 ### CSM - Wait and Post Message.vi
 
@@ -728,12 +752,10 @@ Right-click the <B>error in</B> control on the front panel and select <B>Explain
 ### CSM - Status Change Event
 
 Obtain CSM Global Log Event Reference.
-- <b>Error in</b>: Error cluster
 - <b>CSM Global Log Event</b>: User event reference for CSM global log.
 - <b>Error out</b>: Error cluster
 
 -- <b>输入控件</b> --
-- <b>Error in</b>:
 - <b>Name("" to use uuid) in</b>:
 
 -- <b>输出控件</b> --
@@ -744,11 +766,9 @@ Obtain CSM Global Log Event Reference.
 
 Release CSM Global Log Event Reference.
 - <b>CSM Global Log Event</b>:
-- <b>Error in</b>: Error cluster
 - <b>Error out</b>: Error cluster
 
 -- <b>输入控件</b> --
-- <b>Error in</b>:
 - <b>Status Change Event</b>:
 
 -- <b>输出控件</b> --
@@ -768,7 +788,6 @@ Release CSM Global Log Event Reference.
 - <b>Error In (no error)</b>: 错误簇
 
 -- <b>输出控件</b> --
-- <b>error out</b>: 错误簇
 
 ### CSM - Request CSM to Broadcast Status Change.vi
 
@@ -782,7 +801,6 @@ Release CSM Global Log Event Reference.
 - <b>Error In (no error)</b>: 错误簇
 
 -- <b>输出控件</b> --
-- <b>error out</b>: 错误簇
 
 ### CSM - Module Turns Invalid.vi
 
@@ -801,11 +819,9 @@ Release CSM Global Log Event Reference.
 获取 CSM 全局状态用户事件句柄
 
 -- <b>输入控件</b> --
-- <b>Error in</b>: 错误簇
 
 -- <b>输出控件</b> --
 - <b>CSM Global Log Event</b>: CSM 全局状态用户事件句柄
-- <b>Error out</b>: 错误簇
 
 ### CSM - Destroy Global Log Event.vi
 
@@ -813,15 +829,12 @@ Release CSM Global Log Event Reference.
 
 -- <b>输入控件</b> --
 - <b>CSM Global Log Event</b>: CSM 全局状态用户事件句柄
-- <b>Error in</b>: 错误簇
 
 -- <b>输出控件</b> --
-- <b>Error out</b>: 错误簇
 
 ### CSM - Generate User Global Log.vi
 
 -- <b>输入控件</b> --
-- <b>Error in</b>:
 - <b>From Who</b>:
 - <b>ModuleName</b>:
 - <b>Log</b>:
@@ -843,7 +856,6 @@ Release CSM Global Log Event Reference.
 - <b>String to Prepend to source ("")</b>: 错误信息字符串
 
 -- <b>输出控件</b> --
-- <b>error out</b>: 错误簇
 
 ### Build Internal State String.vi
 
@@ -929,7 +941,6 @@ Release CSM Global Log Event Reference.
 
 ### CSM-Helper usecase Template.vit
 -- <b>输入控件</b> --
-- <b>error in</b>:
 - <B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
 
 Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
@@ -1154,7 +1165,6 @@ The pop-up option <B>Explain Error</B> (or Explain Warning) gives more informati
 -- <b>输入控件</b> --
 - <b>Class Name</b>:
 
-- <b>Error in</b>:
 - <B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
 
 Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
@@ -1171,7 +1181,6 @@ Right-click the <B>error out</B> indicator on the front panel and select <B>Expl
 ### Is in JKISM or CSM.vi
 
 -- <b>输入控件</b> --
-- <b>Error in</b>:
 - <B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
 
 Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
@@ -2156,7 +2165,6 @@ The pop-up option <B>Explain Error</B> (or Explain Warning) gives more informati
 ### Add VI Reference Case.vi
 
 -- <b>输入控件</b> --
-- <b>error in</b>:
 - <B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
 
 Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
@@ -2190,7 +2198,6 @@ Right-click the <B>error in</B> control on the front panel and select <B>Explain
 ### standardize CSM Module.vi
 
 -- <b>输入控件</b> --
-- <b>error in</b>:
 - <B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
 
 Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
@@ -2215,7 +2222,6 @@ Right-click the <B>error in</B> control on the front panel and select <B>Explain
 ### CSM Module Type.vi
 
 -- <b>输入控件</b> --
-- <b>Error in</b>:
 - <B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
 
 Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
@@ -2511,7 +2517,6 @@ Right-click the <B>error in</B> control on the front panel and select <B>Explain
 ### PairedTunnels - Connect Wire.vi
 
 -- <b>输入控件</b> --
-- <b>Error in</b>:
 - <B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
 
 Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
@@ -3137,7 +3142,6 @@ Right-click the <B>error in</B> control on the front panel and select <B>Explain
 
 - <b>API</b>:
 
-- <b>Error in</b>:
 - <B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
 
 Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
@@ -3179,7 +3183,6 @@ Right-click the <B>error out</B> indicator on the front panel and select <B>Expl
 -- <b>输入控件</b> --
 - <b>Set(T)/Get(F)</b>:
 
-- <b>Error in</b>:
 - <B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
 
 Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
@@ -3441,7 +3444,6 @@ Right-click the <B>error in</B> control on the front panel and select <B>Explain
 ### GEvt-Set Source Filter Rules - v1.0.vi
 
 -- <b>输入控件</b> --
-- <b>Error in</b>:
 - <B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
 
 Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
@@ -3901,7 +3903,6 @@ Right-click the <B>error in</B> control on the front panel and select <B>Explain
 
 - <b>source/target</b>:
 
-- <b>Error in</b>:
 - <B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
 
 Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
@@ -3935,7 +3936,6 @@ Right-click the <B>error in</B> control on the front panel and select <B>Explain
 
 - <b>source/target</b>:
 
-- <b>Error in</b>:
 - <B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
 
 Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
@@ -3973,7 +3973,6 @@ Right-click the <B>error in</B> control on the front panel and select <B>Explain
 
 - <b>Pre-Args in</b>:
 
-- <b>Error in</b>:
 - <B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
 
 Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
@@ -4011,7 +4010,6 @@ Right-click the <B>error in</B> control on the front panel and select <B>Explain
 
 - <b>source/target</b>:
 
-- <b>Error in</b>:
 - <B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
 
 Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
@@ -4045,7 +4043,6 @@ Right-click the <B>error in</B> control on the front panel and select <B>Explain
 
 - <b>source/target</b>:
 
-- <b>Error in</b>:
 - <B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
 
 Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
@@ -4077,7 +4074,6 @@ Right-click the <B>error in</B> control on the front panel and select <B>Explain
 
 - <b>source/target</b>:
 
-- <b>Error in</b>:
 - <B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
 
 Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
@@ -4111,7 +4107,6 @@ Right-click the <B>error in</B> control on the front panel and select <B>Explain
 
 - <b>source/target</b>:
 
-- <b>Error in</b>:
 - <B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
 
 Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
@@ -4244,7 +4239,6 @@ Right-click the <B>error in</B> control on the front panel and select <B>Explain
 
 - <b>Num Rows</b>:
 
-- <b>error in</b>:
 - <B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
 
 Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
@@ -4358,7 +4352,6 @@ Right-click the <B>error in</B> control on the front panel and select <B>Explain
 
 - <b>log limit</b>:
 
-- <b>Error in</b>:
 - <B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
 
 Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
@@ -4548,29 +4541,6 @@ Right-click the <B>error in</B> control on the front panel and select <B>Explain
 Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
 - <b>Array</b>:
 
-### CSM - Convert Argument to Error.vi
-
--- <b>输入控件</b> --
-- <b>Argument</b>:
-
-
--- <b>输出控件</b> --
-- <b>error</b>:
-- <B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
-
-Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
-
-### CSM - Convert Error to Argument.vi
-
--- <b>输入控件</b> --
-- <b>error in (no error)</b>:
-- <B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
-
-Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
-
--- <b>输出控件</b> --
-- <b>Arguments</b>:
-
 ### CSM - Convert Filter Rules.vi
 
 -- <b>输入控件</b> --
@@ -4649,7 +4619,6 @@ Right-click the <B>error in</B> control on the front panel and select <B>Explain
 
 - <b>Place("" to use VI's Name)</b>:
 
-- <b>Error in</b>:
 - <B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
 
 Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
@@ -4678,7 +4647,6 @@ Right-click the <B>error in</B> control on the front panel and select <B>Explain
 ### CSM - List Log Filter Rules As Strings.vi
 
 -- <b>输入控件</b> --
-- <b>Error in</b>:
 - <B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
 
 Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
@@ -4749,7 +4717,6 @@ Right-click the <B>error in</B> control on the front panel and select <B>Explain
 ### CSM - Module Exit Event.vi
 
 -- <b>输入控件</b> --
-- <b>Error in</b>:
 - <B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
 
 Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
@@ -4800,7 +4767,6 @@ Right-click the <B>error in</B> control on the front panel and select <B>Explain
 -- <b>输入控件</b> --
 - <b>CSM Name</b>:
 
-- <b>Error in</b>:
 - <B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
 
 Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
@@ -4856,7 +4822,6 @@ Right-click the <B>error out</B> indicator on the front panel and select <B>Expl
 ### Replace Tag with Array.vi
 
 -- <b>输入控件</b> --
-- <b>Error in</b>:
 - <B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.
 
 Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.
