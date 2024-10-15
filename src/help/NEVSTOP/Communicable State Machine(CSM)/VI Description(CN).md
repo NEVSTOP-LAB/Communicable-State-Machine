@@ -561,32 +561,6 @@ CSM 消息中的关键字列表。
 - <b>#msg to be processed</b>: CSM消息队列中的待处理消息个数
 - <b>CSM Name(dup)</b>: 返回 <b>CSM Name</b>
 
-### CSM - Register Status Change.vi
-
-注册以接收其他CSM模块状态更改的通知。如果未连接 “Response Message” 或输入为空，则将使用相同的<b>Status</b> 名称作为响应消息。
-
--- <b>输入控件</b> --
-- <b>CSM Name</b>: CSM 模块名称.
-- <b>Source CSM Name ('*' as Default)</b>: 生成状态的CSM模块。您可以使用“*”来表示所有生成相同状态的模块。
-- <b>Status</b>: 状态字符串
-- <b>API (if "", same as Status)</b>: 注册后，如果状态发生变化，将接收到此消息。
-- <b>Priority(T:As Status,F:As Interrupt)</b>: 如果响应消息为False，则将其插入到状态队列的前面；否则，将其附加到队列的尾部。
-
--- <b>输出控件</b> --
-- <b>CSM Name(dup)</b>: 返回 <b>CSM Name</b>
-
-### CSM - Unregister Status Change.vi
-
-取消注册其他 CSM 模块状态更改的通知。
-
--- <b>输入控件</b> --
-- <b>CSM Name</b>: CSM 模块名称.
-- <b>Source CSM Name</b>: 生成状态的CSM模块。您可以使用“*”来表示所有生成相同状态的模块。
-- <b>Status</b>: 状态字符串
-
--- <b>输出控件</b> --
-- <b>CSM Name(dup)</b>: 返回 <b>CSM Name</b>
-
 ### CSM - Get New State Notifier Event.vi
 
 获取用户事件句柄。用在包含事件结构的 CSM 模块中。包含事件结构的 CSM 模块，通常都在事件结构处等待，这个事件用于收到新的消息时中断在事件结构中的等待，继续执行。
@@ -728,6 +702,32 @@ CSM 消息中的关键字列表。
 
 ## 状态订阅管理(Status Registration)
 
+### CSM - Register Status Change.vi
+
+注册以接收其他CSM模块状态更改的通知。如果未连接 “Response Message” 或输入为空，则将使用相同的<b>Status</b> 名称作为响应消息。
+
+-- <b>输入控件</b> --
+- <b>CSM Name</b>: CSM 模块名称.
+- <b>Source CSM Name ('*' as Default)</b>: 生成状态的CSM模块。您可以使用“*”来表示所有生成相同状态的模块。
+- <b>Status</b>: 状态字符串
+- <b>API (if "", same as Status)</b>: 注册后，如果状态发生变化，将接收到此消息。
+- <b>Priority(T:As Status,F:As Interrupt)</b>: 如果响应消息为False，则将其插入到状态队列的前面；否则，将其附加到队列的尾部。
+
+-- <b>输出控件</b> --
+- <b>CSM Name(dup)</b>: 返回 <b>CSM Name</b>
+
+### CSM - Unregister Status Change.vi
+
+取消注册其他 CSM 模块状态更改的通知。
+
+-- <b>输入控件</b> --
+- <b>CSM Name</b>: CSM 模块名称.
+- <b>Source CSM Name</b>: 生成状态的CSM模块。您可以使用“*”来表示所有生成相同状态的模块。
+- <b>Status</b>: 状态字符串
+
+-- <b>输出控件</b> --
+- <b>CSM Name(dup)</b>: 返回 <b>CSM Name</b>
+
 ### CSM - List All Status Registration.vi
 
 -- <b>输出控件</b> --
@@ -748,6 +748,24 @@ CSM 消息中的关键字列表。
 -- <b>输出控件</b> --
 - <b>Status in Registry</b>:
 
+### CSM - Check Mapping Relationship in Broadcast Registry.vi
+
+-- <b>输入控件</b> --
+- <b>CSM Name</b>:
+- <b>Broadcast state</b>:
+
+-- <b>输出控件</b> --
+- <b>Array</b>:
+
+### CSM - Check Status Registration.vi
+
+-- <b>输入控件</b> --
+- <b>CSM Name</b>:
+- <b>Broadcast state</b>:
+
+-- <b>输出控件</b> --
+- <b>Array</b>:
+
 ## 全局日志功能(Global Log)
 
 ### CSM - Global Log Event.vi
@@ -766,11 +784,13 @@ CSM 消息中的关键字列表。
 
 ### CSM - Generate User Global Log.vi
 
+生成用户全局事件，用途调试等场景。
+
 -- <b>输入控件</b> --
-- <b>From Who</b>:
-- <b>ModuleName</b>:
-- <b>Log</b>:
-- <b>Arguments</b>:
+- <b>Log</b>: 事件名称
+- <b>Arguments</b>: 事件参数
+- <b>From Who</b>: 来源
+- <b>ModuleName</b>: 模块名称
 
 ### CSM - Global Log Error Handler.vi
 
@@ -1183,6 +1203,7 @@ CSM Watchdog 线程，用于保证在主程序退出后，所有的异步启动的 CSM 模块都能正常退出
 ### CSM-Helper API.vi
 
 ### CSM-Helper usecase Template.vit
+
 -- <b>输入控件</b> --
 - <b>CSM-Helper in</b>: CSMHelper 输入
 
@@ -1824,61 +1845,83 @@ Replace(T) / Skip(F)</b>:
 -- <b>输出控件</b> --
 - <b>CSM Basic Refs (dup)</b>:
 
-### Is CSM Module - CaseStructure.vi
-
--- <b>输入控件</b> --
-- <b>CaseStructure</b>:
-
--- <b>输出控件</b> --
-- <b>Is CSM Module?</b>:
-- <b>CSM Basic Refs</b>:
-
-### Is CSM Module - EventStructure.vi
-
--- <b>输入控件</b> --
-- <b>EventStructure</b>:
-
--- <b>输出控件</b> --
-- <b>Is CSM Module?</b>:
-- <b>CSM Basic Refs</b>:
-
-### Is CSM Module - ParseStateVI.vi
-
--- <b>输入控件</b> --
-- <b>Parse State VI Ref</b>:
-
--- <b>输出控件</b> --
-- <b>Is CSM Module?</b>:
-- <b>CSM Basic Refs</b>:
-
-### Is CSM Module - Structure.vi
-
--- <b>输入控件</b> --
-- <b>Structure</b>:
-
--- <b>输出控件</b> --
-- <b>Is CSM Module?</b>:
-- <b>CSM Basic Refs</b>:
-
-### Is CSM Module - VIRef.vi
-
--- <b>输入控件</b> --
-- <b>VIRef</b>:
-
--- <b>输出控件</b> --
-- <b>Is CSM Module?</b>:
-- <b>CSM Basic Refs</b>:
-
-### Is CSM Module - WhileLoop.vi
-
--- <b>输入控件</b> --
-- <b>WhileLoop in</b>:
-
--- <b>输出控件</b> --
-- <b>Is CSM Module?</b>:
-- <b>CSM Basic Refs</b>:
-
 ### Is CSM Module.vi
+
+使用最少的VI调用，判断是否是 CSM 模块，用于 LabVIEW 插件预先判断。
+
+多态VI(Polymorphic VI)选项:
+- Is CSM Module - VIRef.vi
+- Is CSM Module - WhileLoop.vi
+- Is CSM Module - Structure.vi
+- Is CSM Module - CaseStructure.vi
+- Is CSM Module - EventStructure.vi
+- Is CSM Module - ParseStateVI.vi
+
+#### Is CSM Module - VIRef.vi
+
+通过 VIRef 判断是否是是 CSM 模块
+
+-- <b>输入控件</b> --
+- <b>VIRef</b>: VI引用
+
+-- <b>输出控件</b> --
+- <b>Is CSM Module?</b>: 否是是 CSM 模块
+- <b>CSM Basic Refs</b>: 如果是 CSM模块，这个簇包含了　CSM　模块的基本元素的引用
+
+#### Is CSM Module - WhileLoop.vi
+
+通过 While Loop 引用判断是否是 CSM 模块
+
+-- <b>输入控件</b> --
+- <b>WhileLoop</b>: While Loop 引用
+
+-- <b>输出控件</b> --
+- <b>Is CSM Module?</b>: 否是是 CSM 模块
+- <b>CSM Basic Refs</b>: 如果是 CSM模块，这个簇包含了　CSM　模块的基本元素的引用
+
+#### Is CSM Module - Structure.vi
+
+通过 Structure 引用判断是否是 CSM 模块
+
+-- <b>输入控件</b> --
+- <b>Structure</b>: Structure 引用
+
+-- <b>输出控件</b> --
+- <b>Is CSM Module?</b>: 否是是 CSM 模块
+- <b>CSM Basic Refs</b>: 如果是 CSM模块，这个簇包含了　CSM　模块的基本元素的引用
+
+#### Is CSM Module - CaseStructure.vi
+
+通过 CaseStructure 引用判断是否是 CSM 模块
+
+-- <b>输入控件</b> --
+- <b>CaseStructure</b>: CaseStructure 引用
+
+-- <b>输出控件</b> --
+- <b>Is CSM Module?</b>: 否是是 CSM 模块
+- <b>CSM Basic Refs</b>: 如果是 CSM模块，这个簇包含了　CSM　模块的基本元素的引用
+
+#### Is CSM Module - EventStructure.vi
+
+通过 EventStructure 引用判断是否是 CSM 模块
+
+-- <b>输入控件</b> --
+- <b>EventStructure</b>: EventStructure 引用
+
+-- <b>输出控件</b> --
+- <b>Is CSM Module?</b>: 否是是 CSM 模块
+- <b>CSM Basic Refs</b>: 如果是 CSM模块，这个簇包含了　CSM　模块的基本元素的引用
+
+#### Is CSM Module - ParseStateVI.vi
+
+通过 Parse State VI 引用判断是否是 CSM 模块
+
+-- <b>输入控件</b> --
+- <b>Parse State VI Ref</b>: Parse State VI 引用
+
+-- <b>输出控件</b> --
+- <b>Is CSM Module?</b>: 否是是 CSM 模块
+- <b>CSM Basic Refs</b>: 如果是 CSM模块，这个簇包含了　CSM　模块的基本元素的引用
 
 ### CaseStructure - Add Frame.vi
 
@@ -3048,25 +3091,56 @@ The State string that requires the argument.
 - <b>prev ending</b>:
 - <b>new filename</b>:
 
+## CSM-DOC
+
+### csmdoc_import_all_csm_VI_description_doc.vi
+
+选择 CSM VI 功能描述的 markdown 文件，导入到所有的VI。
+
+-- <b>Inputs</b> --
+- <b>Path</b>: CSM VI 功能描述的 markdown 文件路径
+
+### csmdoc_export_all_csm_VI_description_doc.vi
+
+分析所有CSM VI, 将 VI 功能描述导出到 markdown 文件中。
+
+-- <b>Inputs</b> --
+- <b>Path</b>: CSM VI 功能描述的 markdown 文件路径
+
+### csmdoc_export_VI_description.vi
+
+-- <b>Inputs</b> --
+- <b>NOTE-Map</b>:
+- <b>Path</b>:
+
+-- <b>Outputs</b> --
+- <b>concatenated string</b>:
+
+### csmdoc_import_doc_to_singleVI.vi
+
+### csmdoc_import_VI_description.vi
+
+-- <b>Inputs</b> --
+- <b>NOTE-Map</b>:
+- <b>string</b>:
+- <b>Path</b>:
+
+### csmdoc_list_all_csm_documented_VIs.vi
+
+-- <b>Outputs</b> --
+- <b>Array</b>:
+
+### csmdoc_load vi description map.vi
+
+-- <b>Inputs</b> --
+- <b>Path</b>:
+
+-- <b>Outputs</b> --
+- <b>text</b>:
+- <b>variant 2</b>:
+- <b>variant</b>:
+
 ## Unsorted
-
-### CSM - Check Mapping Relationship in Broadcast Registry.vi
-
--- <b>输入控件</b> --
-- <b>CSM Name</b>:
-- <b>Broadcast state</b>:
-
--- <b>输出控件</b> --
-- <b>Array</b>:
-
-### CSM - Check Status Registration.vi
-
--- <b>输入控件</b> --
-- <b>CSM Name</b>:
-- <b>Broadcast state</b>:
-
--- <b>输出控件</b> --
-- <b>Array</b>:
 
 ### CSM - Flood of Events Handler Side Loop.vi
 
@@ -3106,44 +3180,8 @@ The State string that requires the argument.
 -- <b>输出控件</b> --
 - <b>States</b>:
 
-### csmdoc_export_all_csm_VI_description_doc.vi
--- <b>Inputs</b> --
-- <b>Path</b>:
-
-### csmdoc_export_VI_description.vi
--- <b>Inputs</b> --
-- <b>NOTE-Map</b>:
-- <b>Path</b>:
-
--- <b>Outputs</b> --
-- <b>concatenated string</b>:
-
-### csmdoc_import_all_csm_VI_description_doc.vi
--- <b>Inputs</b> --
-- <b>Path</b>:
-
-### csmdoc_import_doc_to_singleVI.vi
-
-### csmdoc_import_VI_description.vi
--- <b>Inputs</b> --
-- <b>NOTE-Map</b>:
-- <b>string</b>:
-- <b>Path</b>:
-
-### csmdoc_list_all_csm_documented_VIs.vi
--- <b>Outputs</b> --
-- <b>Array</b>:
-
-### csmdoc_load vi description map.vi
--- <b>Inputs</b> --
-- <b>Path</b>:
-
--- <b>Outputs</b> --
-- <b>text</b>:
-- <b>variant 2</b>:
-- <b>variant</b>:
-
 ### Parse VI Documentation String.vi
+
 -- <b>Inputs</b> --
 - <b>NOTE-Map</b>:
 - <b>Documentation</b>:
@@ -3155,12 +3193,14 @@ The State string that requires the argument.
 - <b>Documentation (dup)</b>:
 
 ### Gevt-ThreadQueueName.vi
+
 -- <b>Outputs</b> --
 - <b>ThreadQueueName</b>:
 
 ### Script - JKISM to CSM.vi
 
 ### CSM - Status Change Event.vi
+
 -- <b>Inputs</b> --
 - <b>CSM Module</b>:
 
