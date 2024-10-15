@@ -3052,20 +3052,6 @@ The State string that requires the argument.
 - <b>Pre-Args out</b>:
 - <b>error</b>:
 
-### CSM - Add VI Reference Case to CSMs.vi
-
-### CSM - Debug Console - DebugTool.vi
-
-### CSM - Remove all CSM Bookmarks.vi
-
-### CSM - Running Log - DebugTool.vi
-
-### CSM - State Dashboard - DebugTool.vi
-
-### CSM - State Table - DebugTool.vi
-
-### CSM - Switch Language Tool.vi
-
 ### Auto Resize All MultiListbox Columns (Uniform Text).vi
 
 -- <b>ÊäÈë¿Ø¼þ</b> --
@@ -3144,6 +3130,22 @@ The State string that requires the argument.
 - <b>prev ending</b>:
 - <b>new filename</b>:
 
+## CSM Debug Tools
+
+### CSM - Add VI Reference Case to CSMs.vi
+
+### CSM - Debug Console - DebugTool.vi
+
+### CSM - Remove all CSM Bookmarks.vi
+
+### CSM - Running Log - DebugTool.vi
+
+### CSM - State Dashboard - DebugTool.vi
+
+### CSM - State Table - DebugTool.vi
+
+### CSM - Switch Language Tool.vi
+
 ## CSM-DOC
 
 ### csmdoc_import_all_csm_VI_description_doc.vi
@@ -3193,6 +3195,10 @@ The State string that requires the argument.
 - <b>variant 2</b>:
 - <b>variant</b>:
 
+## Scripts
+
+### Script - JKISM to CSM.vi
+
 ## Unsorted
 
 ### CSM - Flood of Events Handler Side Loop.vi
@@ -3237,8 +3243,6 @@ The State string that requires the argument.
 
 -- <b>Outputs</b> --
 - <b>ThreadQueueName</b>:
-
-### Script - JKISM to CSM.vi
 
 ### CSM - Status Change Event.vi
 
