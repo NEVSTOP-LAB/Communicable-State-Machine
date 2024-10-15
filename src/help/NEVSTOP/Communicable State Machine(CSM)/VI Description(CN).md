@@ -433,6 +433,34 @@ Bool输入决定要连接的字符串是TRUE还是False。
 -- <b>输出控件</b> --
 - <b>Remaining States</b>: 拼接后的所有状态及参数。
 
+### 模板支持
+
+#### 错误处理
+
+##### CSM Critical Error.vi
+
+-- <b>输入控件</b> --
+- <b>Arguments(as Reason)</b>:
+- <b>CSM Name</b>:
+
+##### CSM No Target Error.vi
+
+##### CSM Target Error.vi
+
+-- <b>输入控件</b> --
+- <b>Arguments(as CSM Name)</b>:
+
+##### CSM Target Timeout Error.vi
+
+-- <b>输入控件</b> --
+- <b>Arguments(as CSM Name)</b>:
+
+##### CSM Unhandled State Error.vi
+
+-- <b>输入控件</b> --
+- <b>Current State</b>:
+- <b>CSM Name</b>:
+
 ## 参数 (Arguments)
 
 > [!NOTE] CSM 消息关键字
@@ -1140,6 +1168,15 @@ CSM 消息中的关键字列表。
 -- <b>输出控件</b> --
 - <b>Log String</b>: 全局日志字符串
 
+### U8 Data to Hex Str.vi
+
+-- <b>输入控件</b> --
+- <b>u8 Data[]</b>:
+
+-- <b>输出控件</b> --
+- <b>HEX String (0-9,A-F)</b>:
+
+
 ## Build-in Addons
 
 ### CSM WatchDog
@@ -1252,6 +1289,84 @@ CSM Watchdog 线程，用于保证在主程序退出后，所有的异步启动的 CSM 模块都能正常退出
 - <b>States</b>:
 
 ## CSM-Helper API
+
+### Is CSM Module.vi
+
+使用最少的VI调用，判断是否是 CSM 模块，用于 LabVIEW 插件预先判断。
+
+> [!NOTE] 多态VI(Polymorphic VI)选项:
+> - Is CSM Module - VIRef.vi
+> - Is CSM Module - WhileLoop.vi
+> - Is CSM Module - Structure.vi
+> - Is CSM Module - CaseStructure.vi
+> - Is CSM Module - EventStructure.vi
+> - Is CSM Module - ParseStateVI.vi
+
+#### Is CSM Module - VIRef.vi
+
+通过 VIRef 判断是否是是 CSM 模块
+
+-- <b>输入控件</b> --
+- <b>VIRef</b>: VI引用
+
+-- <b>输出控件</b> --
+- <b>Is CSM Module?</b>: 否是是 CSM 模块
+- <b>CSM Basic Refs</b>: 如果是 CSM模块，这个簇包含了　CSM　模块的基本元素的引用
+
+#### Is CSM Module - WhileLoop.vi
+
+通过 While Loop 引用判断是否是 CSM 模块
+
+-- <b>输入控件</b> --
+- <b>WhileLoop</b>: While Loop 引用
+
+-- <b>输出控件</b> --
+- <b>Is CSM Module?</b>: 否是是 CSM 模块
+- <b>CSM Basic Refs</b>: 如果是 CSM模块，这个簇包含了　CSM　模块的基本元素的引用
+
+#### Is CSM Module - Structure.vi
+
+通过 Structure 引用判断是否是 CSM 模块
+
+-- <b>输入控件</b> --
+- <b>Structure</b>: Structure 引用
+
+-- <b>输出控件</b> --
+- <b>Is CSM Module?</b>: 否是是 CSM 模块
+- <b>CSM Basic Refs</b>: 如果是 CSM模块，这个簇包含了　CSM　模块的基本元素的引用
+
+#### Is CSM Module - CaseStructure.vi
+
+通过 CaseStructure 引用判断是否是 CSM 模块
+
+-- <b>输入控件</b> --
+- <b>CaseStructure</b>: CaseStructure 引用
+
+-- <b>输出控件</b> --
+- <b>Is CSM Module?</b>: 否是是 CSM 模块
+- <b>CSM Basic Refs</b>: 如果是 CSM模块，这个簇包含了　CSM　模块的基本元素的引用
+
+#### Is CSM Module - EventStructure.vi
+
+通过 EventStructure 引用判断是否是 CSM 模块
+
+-- <b>输入控件</b> --
+- <b>EventStructure</b>: EventStructure 引用
+
+-- <b>输出控件</b> --
+- <b>Is CSM Module?</b>: 否是是 CSM 模块
+- <b>CSM Basic Refs</b>: 如果是 CSM模块，这个簇包含了　CSM　模块的基本元素的引用
+
+#### Is CSM Module - ParseStateVI.vi
+
+通过 Parse State VI 引用判断是否是 CSM 模块
+
+-- <b>输入控件</b> --
+- <b>Parse State VI Ref</b>: Parse State VI 引用
+
+-- <b>输出控件</b> --
+- <b>Is CSM Module?</b>: 否是是 CSM 模块
+- <b>CSM Basic Refs</b>: 如果是 CSM模块，这个簇包含了　CSM　模块的基本元素的引用
 
 ### CSM-Helper API.vi
 
@@ -1898,84 +2013,6 @@ Replace(T) / Skip(F)</b>:
 -- <b>输出控件</b> --
 - <b>CSM Basic Refs (dup)</b>:
 
-### Is CSM Module.vi
-
-使用最少的VI调用，判断是否是 CSM 模块，用于 LabVIEW 插件预先判断。
-
-> [!NOTE] 多态VI(Polymorphic VI)选项:
-> - Is CSM Module - VIRef.vi
-> - Is CSM Module - WhileLoop.vi
-> - Is CSM Module - Structure.vi
-> - Is CSM Module - CaseStructure.vi
-> - Is CSM Module - EventStructure.vi
-> - Is CSM Module - ParseStateVI.vi
-
-#### Is CSM Module - VIRef.vi
-
-通过 VIRef 判断是否是是 CSM 模块
-
--- <b>输入控件</b> --
-- <b>VIRef</b>: VI引用
-
--- <b>输出控件</b> --
-- <b>Is CSM Module?</b>: 否是是 CSM 模块
-- <b>CSM Basic Refs</b>: 如果是 CSM模块，这个簇包含了　CSM　模块的基本元素的引用
-
-#### Is CSM Module - WhileLoop.vi
-
-通过 While Loop 引用判断是否是 CSM 模块
-
--- <b>输入控件</b> --
-- <b>WhileLoop</b>: While Loop 引用
-
--- <b>输出控件</b> --
-- <b>Is CSM Module?</b>: 否是是 CSM 模块
-- <b>CSM Basic Refs</b>: 如果是 CSM模块，这个簇包含了　CSM　模块的基本元素的引用
-
-#### Is CSM Module - Structure.vi
-
-通过 Structure 引用判断是否是 CSM 模块
-
--- <b>输入控件</b> --
-- <b>Structure</b>: Structure 引用
-
--- <b>输出控件</b> --
-- <b>Is CSM Module?</b>: 否是是 CSM 模块
-- <b>CSM Basic Refs</b>: 如果是 CSM模块，这个簇包含了　CSM　模块的基本元素的引用
-
-#### Is CSM Module - CaseStructure.vi
-
-通过 CaseStructure 引用判断是否是 CSM 模块
-
--- <b>输入控件</b> --
-- <b>CaseStructure</b>: CaseStructure 引用
-
--- <b>输出控件</b> --
-- <b>Is CSM Module?</b>: 否是是 CSM 模块
-- <b>CSM Basic Refs</b>: 如果是 CSM模块，这个簇包含了　CSM　模块的基本元素的引用
-
-#### Is CSM Module - EventStructure.vi
-
-通过 EventStructure 引用判断是否是 CSM 模块
-
--- <b>输入控件</b> --
-- <b>EventStructure</b>: EventStructure 引用
-
--- <b>输出控件</b> --
-- <b>Is CSM Module?</b>: 否是是 CSM 模块
-- <b>CSM Basic Refs</b>: 如果是 CSM模块，这个簇包含了　CSM　模块的基本元素的引用
-
-#### Is CSM Module - ParseStateVI.vi
-
-通过 Parse State VI 引用判断是否是 CSM 模块
-
--- <b>输入控件</b> --
-- <b>Parse State VI Ref</b>: Parse State VI 引用
-
--- <b>输出控件</b> --
-- <b>Is CSM Module?</b>: 否是是 CSM 模块
-- <b>CSM Basic Refs</b>: 如果是 CSM模块，这个簇包含了　CSM　模块的基本元素的引用
-
 ### CaseStructure - Add Frame.vi
 
 -- <b>输入控件</b> --
@@ -2186,6 +2223,76 @@ Replace(T) / Skip(F)</b>:
 -- <b>输入控件</b> --
 - <b>Init State("Macro: Initialize")</b>:
 - <b>Name("" to use uuid)</b>:
+
+
+## CSM Debug Tools
+
+### CSM - Add VI Reference Case to CSMs.vi
+
+### CSM - Debug Console - DebugTool.vi
+
+### CSM - Remove all CSM Bookmarks.vi
+
+### CSM - Running Log - DebugTool.vi
+
+### CSM - State Dashboard - DebugTool.vi
+
+### CSM - State Table - DebugTool.vi
+
+### CSM - Switch Language Tool.vi
+
+## CSM-DOC
+
+### csmdoc_import_all_csm_VI_description_doc.vi
+
+选择 CSM VI 功能描述的 markdown 文件，导入到所有的VI。
+
+-- <b>Inputs</b> --
+- <b>Path</b>: CSM VI 功能描述的 markdown 文件路径
+
+### csmdoc_export_all_csm_VI_description_doc.vi
+
+分析所有CSM VI, 将 VI 功能描述导出到 markdown 文件中。
+
+-- <b>Inputs</b> --
+- <b>Path</b>: CSM VI 功能描述的 markdown 文件路径
+
+### csmdoc_export_VI_description.vi
+
+-- <b>Inputs</b> --
+- <b>NOTE-Map</b>:
+- <b>Path</b>:
+
+-- <b>Outputs</b> --
+- <b>concatenated string</b>:
+
+### csmdoc_import_doc_to_singleVI.vi
+
+### csmdoc_import_VI_description.vi
+
+-- <b>Inputs</b> --
+- <b>NOTE-Map</b>:
+- <b>string</b>:
+- <b>Path</b>:
+
+### csmdoc_list_all_csm_documented_VIs.vi
+
+-- <b>Outputs</b> --
+- <b>Array</b>:
+
+### csmdoc_load vi description map.vi
+
+-- <b>Inputs</b> --
+- <b>Path</b>:
+
+-- <b>Outputs</b> --
+- <b>text</b>:
+- <b>variant 2</b>:
+- <b>variant</b>:
+
+## Scripts
+
+### Script - JKISM to CSM.vi
 
 ## CSM Internal
 
@@ -2398,43 +2505,12 @@ Returns any argument(s) that may be used in the current state string. These argu
 -- <b>输出控件</b> --
 - <b>trimmed text</b>:
 
-### U8 Data to Hex Str.vi
-
--- <b>输入控件</b> --
-- <b>u8 Data[]</b>:
-
--- <b>输出控件</b> --
-- <b>HEX String (0-9,A-F)</b>:
-
-### CSM Critical Error.vi
-
--- <b>输入控件</b> --
-- <b>Arguments(as Reason)</b>:
-- <b>CSM Name</b>:
-
-### CSM No Target Error.vi
 
 ### CSM Not Allowed Message.vi
 
 -- <b>输入控件</b> --
 - <b>State</b>:
 - <b>CSM</b>:
-
-### CSM Target Error.vi
-
--- <b>输入控件</b> --
-- <b>Arguments(as CSM Name)</b>:
-
-### CSM Target Timeout Error.vi
-
--- <b>输入控件</b> --
-- <b>Arguments(as CSM Name)</b>:
-
-### CSM Unhandled State Error.vi
-
--- <b>输入控件</b> --
-- <b>Current State</b>:
-- <b>CSM Name</b>:
 
 ### Cache-Broadcast Registry Search Result.vi
 
@@ -3130,74 +3206,6 @@ The State string that requires the argument.
 - <b>prev ending</b>:
 - <b>new filename</b>:
 
-## CSM Debug Tools
-
-### CSM - Add VI Reference Case to CSMs.vi
-
-### CSM - Debug Console - DebugTool.vi
-
-### CSM - Remove all CSM Bookmarks.vi
-
-### CSM - Running Log - DebugTool.vi
-
-### CSM - State Dashboard - DebugTool.vi
-
-### CSM - State Table - DebugTool.vi
-
-### CSM - Switch Language Tool.vi
-
-## CSM-DOC
-
-### csmdoc_import_all_csm_VI_description_doc.vi
-
-选择 CSM VI 功能描述的 markdown 文件，导入到所有的VI。
-
--- <b>Inputs</b> --
-- <b>Path</b>: CSM VI 功能描述的 markdown 文件路径
-
-### csmdoc_export_all_csm_VI_description_doc.vi
-
-分析所有CSM VI, 将 VI 功能描述导出到 markdown 文件中。
-
--- <b>Inputs</b> --
-- <b>Path</b>: CSM VI 功能描述的 markdown 文件路径
-
-### csmdoc_export_VI_description.vi
-
--- <b>Inputs</b> --
-- <b>NOTE-Map</b>:
-- <b>Path</b>:
-
--- <b>Outputs</b> --
-- <b>concatenated string</b>:
-
-### csmdoc_import_doc_to_singleVI.vi
-
-### csmdoc_import_VI_description.vi
-
--- <b>Inputs</b> --
-- <b>NOTE-Map</b>:
-- <b>string</b>:
-- <b>Path</b>:
-
-### csmdoc_list_all_csm_documented_VIs.vi
-
--- <b>Outputs</b> --
-- <b>Array</b>:
-
-### csmdoc_load vi description map.vi
-
--- <b>Inputs</b> --
-- <b>Path</b>:
-
--- <b>Outputs</b> --
-- <b>text</b>:
-- <b>variant 2</b>:
-- <b>variant</b>:
-
-## Scripts
-
-### Script - JKISM to CSM.vi
 
 ## Unsorted
 
