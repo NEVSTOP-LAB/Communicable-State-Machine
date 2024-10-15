@@ -1,15 +1,16 @@
 {
     "cSpell.words": [
         "csmdoc",
+        "csmlog",
         "CSMLS",
         "CSMP",
         "CSMQ",
+        "Evnt",
+        "Gevt",
         "HEXSTR",
         "lvclass",
         "ogtk",
         "Refnum",
-        "Evnt",
-        "Struct",
-        "Gevt"
+        "Struct"
     ]
 }

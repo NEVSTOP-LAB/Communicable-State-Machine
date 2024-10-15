@@ -148,6 +148,7 @@
 - Build Normal Status Message.vi
 - Build Register Status Message.vi
 - Build Unregister Status Message.vi
+- CSM - Replace Substitution Marks in Messages.vi
 
 #### Build Message with Arguments(Auto Check).vi
 
@@ -294,6 +295,44 @@
 
 -- <b>输出控件</b> --
 - <b>CSM Message String</b>:拼接生成的 CSM 消息字符串
+
+#### CSM - Replace Substitution Marks in Messages.vi
+
+为了能够便利的编辑多条 CSM 消息字符串，提供批量替换标记的功能。有4个标记可以替换：
+- <param> 标记： 通常表示相同的参数
+- <target> 标记： 通常表示相同的目标
+- <1> 标记：表示自定义标记1
+- <2> 标记：表示自定义标记2
+
+例如：接线端 <target> 连接了字符串为 "DAQDevice"，<b>States with Replace Token</b> 字符串为：
+
+```
+Initialize -@ <target>
+Configure -@ <target>
+Read -@ <target>
+Close -@ <target>
+```
+
+<b>States</b>输出为：
+
+```
+Initialize -@ DAQDevice
+Configure -@ DAQDevice
+Read -@ DAQDevice
+Close -@ DAQDevice
+```
+
+> Ref: 消息拼接API
+
+-- <b>输入控件</b> --
+- <b>States with Replace Token</b>: 带有替换标记的 CSM 状态字符串
+- <b><param></b>: <param> 标记： 通常表示相同的参数
+- <b><target></b>: <target> 标记： 通常表示相同的目标
+- <b><1></b>: 自定义标记1
+- <b><2></b>: 自定义标记2
+
+-- <b>输出控件</b> --
+- <b>States</b>: 替换后
 
 ### CSM - Broadcast Status Change.vi
 
@@ -731,17 +770,17 @@ CSM 消息中的关键字列表。
 ### CSM - List All Status Registration.vi
 
 -- <b>输出控件</b> --
-- <b>Array</b>:
+- <b>Status Array</b>:
 
 ### CSM - List Mapping Relationships in Broadcast Registry.vi
 
 -- <b>输出控件</b> --
-- <b>Array</b>:
+- <b>Mapping Relationships</b>:
 
 ### CSM - List Rules in Broadcast Registry.vi
 
 -- <b>输出控件</b> --
-- <b>Entries</b>:
+- <b>Rules</b>:
 
 ### CSM - List Status in Broadcast Registry.vi
 
@@ -1076,9 +1115,9 @@ CSM 消息中的关键字列表。
 ### uuid.vi
 
 根据标准方法生成 <b>Universally Unique Identifier(UUID)</b>。 例如:
-  - 59703F3AD837
-  - 106A470BA5EC
-  - 9B781DB313AF
+- 59703F3AD837
+- 106A470BA5EC
+- 9B781DB313AF
 
 -- <b>输出控件</b> --
 - <b>UUID</b>: 生成的 UUID
@@ -1125,16 +1164,25 @@ CSM Watchdog 线程，用于保证在主程序退出后，所有的异步启动的 CSM 模块都能正常退出
 
 ### CSM File Logger
 
+> CSM File Logger 实现的原理
+> 通过订阅 CSM 的 Global Log Event 事件，可以将应用中的全部 CSM 活动信息记录下来，用于后期分析和错误定位。
+> 文件为文本文件，后缀名为 .csmlog，可以通过记事本等文本编辑查询工具打开。
+>
+
 #### CSM - Start File Logger.vi
 
+启动 CSM 事件文件记录功能。
+
+> Ref: CSM File Logger 实现的原理
+
 -- <b>输入控件</b> --
-- <b>Filter Rules</b>:
-- <b>Timestamp format</b>:
-- <b>Enable? (T)</b>:
-- <b>log limit</b>:
-- <b>WatchDog? (T)</b>:
-- <b>Exit When All Module Exist?(F)</b>:
-- <b>Log File Path</b>:
+- <b>Log File Path</b>: 记录文件路径
+- <b>Enable? (T)</b>: 是否启用
+- <b>log limit</b>: 记录文件限制
+- <b>Timestamp format</b>: 时间格式
+- <b>WatchDog? (T)</b>: 是否启用 WatchDog
+- <b>Filter Rules</b>: 时间过滤规则
+- <b>Exit When All Module Exist?(F)</b>: CSM 全部模块退出后是否退出
 
 -- <b>输出控件</b> --
 - <b>LogFile</b>:
@@ -1142,13 +1190,17 @@ CSM Watchdog 线程，用于保证在主程序退出后，所有的异步启动的 CSM 模块都能正常退出
 
 #### CSM-Logger-Thread.vi
 
+启动 CSM Global Log 文件记录线程VI。
+
+> Ref: CSM File Logger 实现的原理
+
 -- <b>输入控件</b> --
-- <b>log limit</b>:
-- <b>Exit When All Module Exist?(F)</b>:
-- <b>format string</b>:
-- <b>WatchDogQ</b>:
-- <b>GlobalLogFilter.lvclass</b>:
-- <b>file path (use dialog)</b>:
+- <b>Log File Path</b>: 记录文件路径
+- <b>log limit</b>: 记录文件限制
+- <b>Timestamp format</b>: 时间格式
+- <b>WatchDogQ</b>: WatchDog资源，用于检测主程序是否退出
+- <b>GlobalLogFilter.lvclass</b>: 事件过滤器对象
+- <b>Exit When All Module Exist?(F)</b>: CSM 全部模块退出后是否退出
 
 ### CSM Loop Support
 
@@ -3167,18 +3219,6 @@ The State string that requires the argument.
 
 -- <b>输出控件</b> --
 - <b>CSM Name(dup)</b>:
-
-### CSM - Replace Substitution Marks in Messages.vi
-
--- <b>输入控件</b> --
-- <b>States with Replace Token</b>:
-- <b><param></b>:
-- <b><target></b>:
-- <b><1></b>:
-- <b><2></b>:
-
--- <b>输出控件</b> --
-- <b>States</b>:
 
 ### Parse VI Documentation String.vi
 
