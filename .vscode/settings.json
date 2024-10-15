@@ -11,6 +11,8 @@
         "lvclass",
         "ogtk",
         "Refnum",
-        "Struct"
+        "Splite",
+        "Struct",
+        "usecase"
     ]
 }

@@ -139,16 +139,17 @@
 > 在熟悉 CSM 规则的情况下，可以不使用此类API, 直接在字符串中键入对应的消息字符串、操作字符串。
 >
 
-多态VI(Polymorphic VI)选项:
-- Build Message with Arguments(Auto Check).vi
-- Build Asynchronous Message with Arguments.vi
-- Build No-Reply Asynchronous Message with Arguments.vi
-- Build Synchronous Message with Arguments.vi
-- Build Interrupt Status Message.vi
-- Build Normal Status Message.vi
-- Build Register Status Message.vi
-- Build Unregister Status Message.vi
-- CSM - Replace Substitution Marks in Messages.vi
+> [!NOTE] 多态VI(Polymorphic VI)选项:
+> - Build Message with Arguments(Auto Check).vi
+> - Build Asynchronous Message with Arguments.vi
+> - Build No-Reply Asynchronous Message with Arguments.vi
+> - Build Synchronous Message with Arguments.vi
+> - Build Interrupt Status Message.vi
+> - Build Normal Status Message.vi
+> - Build Register Status Message.vi
+> - Build Unregister Status Message.vi
+> - CSM - Replace Substitution Marks in Messages.vi
+>
 
 #### Build Message with Arguments(Auto Check).vi
 
@@ -306,21 +307,21 @@
 
 例如：接线端 <target> 连接了字符串为 "DAQDevice"，<b>States with Replace Token</b> 字符串为：
 
-```
-Initialize -@ <target>
-Configure -@ <target>
-Read -@ <target>
-Close -@ <target>
-```
+      ``` text
+      Initialize -@ <target>
+      Configure -@ <target>
+      Read -@ <target>
+      Close -@ <target>
+      ```
 
 <b>States</b>输出为：
 
-```
-Initialize -@ DAQDevice
-Configure -@ DAQDevice
-Read -@ DAQDevice
-Close -@ DAQDevice
-```
+      ``` text
+      Initialize -@ DAQDevice
+      Configure -@ DAQDevice
+      Read -@ DAQDevice
+      Close -@ DAQDevice
+      ```
 
 > Ref: 消息拼接API
 
@@ -360,11 +361,11 @@ Close -@ DAQDevice
 
 > Ref: CSM 的状态队列操作API
 
-多态VI(Polymorphic VI)选项:
-- add State(s) to Queue By BOOL(Element).vi
-- add State(s) to Queue By BOOL(Array Left).vi
-- add State(s) to Queue By BOOL(Array Right).vi
-- add State(s) to Queue By BOOL(Array All).vi
+> [!NOTE] 多态VI(Polymorphic VI)选项:
+> - add State(s) to Queue By BOOL(Element).vi
+> - add State(s) to Queue By BOOL(Array Left).vi
+> - add State(s) to Queue By BOOL(Array Right).vi
+> - add State(s) to Queue By BOOL(Array All).vi
 
 #### Add State(s) to Queue By BOOL(Element).vi
 
@@ -1656,7 +1657,7 @@ Replace(T) / Skip(F)</b>:
 ### Set Error Tunnel Use Default If not Connected.vi
 
 -- <b>输入控件</b> --
-- <b>Use Default if Unwired</b>:
+- <b>Use Default if not wired</b>:
 - <b>CSM-Helper in</b>: CSMHelper 输入
 
 -- <b>输出控件</b> --
@@ -1901,13 +1902,13 @@ Replace(T) / Skip(F)</b>:
 
 使用最少的VI调用，判断是否是 CSM 模块，用于 LabVIEW 插件预先判断。
 
-多态VI(Polymorphic VI)选项:
-- Is CSM Module - VIRef.vi
-- Is CSM Module - WhileLoop.vi
-- Is CSM Module - Structure.vi
-- Is CSM Module - CaseStructure.vi
-- Is CSM Module - EventStructure.vi
-- Is CSM Module - ParseStateVI.vi
+> [!NOTE] 多态VI(Polymorphic VI)选项:
+> - Is CSM Module - VIRef.vi
+> - Is CSM Module - WhileLoop.vi
+> - Is CSM Module - Structure.vi
+> - Is CSM Module - CaseStructure.vi
+> - Is CSM Module - EventStructure.vi
+> - Is CSM Module - ParseStateVI.vi
 
 #### Is CSM Module - VIRef.vi
 
@@ -3065,7 +3066,7 @@ The State string that requires the argument.
 
 ### CSM - Switch Language Tool.vi
 
-### Autosize All MultiListbox Columns (Uniform Text).vi
+### Auto Resize All MultiListbox Columns (Uniform Text).vi
 
 -- <b>输入控件</b> --
 - <b>IgnoreCols(Empty as default)</b>:
