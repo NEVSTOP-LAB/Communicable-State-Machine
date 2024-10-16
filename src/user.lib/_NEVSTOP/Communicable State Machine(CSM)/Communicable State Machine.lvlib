@@ -147,14 +147,6 @@
 			<Item Name="Parse Unregister Message.vi" Type="VI" URL="../_Support/Message/Parse Unregister Message.vi"/>
 			<Item Name="Parse Register Message.vi" Type="VI" URL="../_Support/Message/Parse Register Message.vi"/>
 		</Item>
-		<Item Name="Error" Type="Folder">
-			<Item Name="CSM Unhandled State Error.vi" Type="VI" URL="../_Support/Error/CSM Unhandled State Error.vi"/>
-			<Item Name="CSM Critical Error.vi" Type="VI" URL="../_Support/Error/CSM Critical Error.vi"/>
-			<Item Name="CSM Target Error.vi" Type="VI" URL="../_Support/Error/CSM Target Error.vi"/>
-			<Item Name="CSM Target Timeout Error.vi" Type="VI" URL="../_Support/Error/CSM Target Timeout Error.vi"/>
-			<Item Name="CSM No Target Error.vi" Type="VI" URL="../_Support/Error/CSM No Target Error.vi"/>
-			<Item Name="CSM Not Allowed Message.vi" Type="VI" URL="../_Support/Error/CSM Not Allowed Message.vi"/>
-		</Item>
 		<Item Name="CSM Dummy Module.vi" Type="VI" URL="../_Support/CSM Dummy Module.vi"/>
 	</Item>
 	<Item Name="Polymophic" Type="Folder">
@@ -184,7 +176,6 @@
 			<Item Name="CSM - Module Status.vi" Type="VI" URL="../AdvanceAPI/CSM - Module Status.vi"/>
 			<Item Name="CSM - Check If Module Exists.vi" Type="VI" URL="../AdvanceAPI/CSM - Check If Module Exists.vi"/>
 			<Item Name="CSM - Broadcast Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Broadcast Status Change.vi"/>
-			<Item Name="CSM - Get New State Notifier Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Get New State Notifier Event.vi"/>
 			<Item Name="CSM - Wait for All Modules to be Alive.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait for All Modules to be Alive.vi"/>
 			<Item Name="CSM - Wait for All Modules to Exit.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait for All Modules to Exit.vi"/>
 		</Item>
@@ -245,6 +236,17 @@
 			<Item Name="CSM - Filter Messages to Non-Existing Modules.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter Messages to Non-Existing Modules.vi"/>
 			<Item Name="CSM - Filter Duplicate Messages By Name.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter Duplicate Messages By Name.vi"/>
 			<Item Name="CSM - Remove Duplicated Following Messages.vi" Type="VI" URL="../AdvanceAPI/CSM - Remove Duplicated Following Messages.vi"/>
+		</Item>
+		<Item Name="TemplateSubVIs" Type="Folder">
+			<Item Name="Error" Type="Folder">
+				<Item Name="CSM Unhandled State Error.vi" Type="VI" URL="../_Support/Error/CSM Unhandled State Error.vi"/>
+				<Item Name="CSM Critical Error.vi" Type="VI" URL="../_Support/Error/CSM Critical Error.vi"/>
+				<Item Name="CSM Target Error.vi" Type="VI" URL="../_Support/Error/CSM Target Error.vi"/>
+				<Item Name="CSM Target Timeout Error.vi" Type="VI" URL="../_Support/Error/CSM Target Timeout Error.vi"/>
+				<Item Name="CSM No Target Error.vi" Type="VI" URL="../_Support/Error/CSM No Target Error.vi"/>
+				<Item Name="CSM Not Allowed Message.vi" Type="VI" URL="../_Support/Error/CSM Not Allowed Message.vi"/>
+			</Item>
+			<Item Name="CSM - Get New State Notifier Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Get New State Notifier Event.vi"/>
 		</Item>
 	</Item>
 	<Item Name="Argument" Type="Folder">

@@ -6,12 +6,10 @@
 > - CSM 模块名称应该是唯一的，否则会导致 CSM 进入 "Critical Error" 状态。
 > - 如果输入为 ""，将使用 UUID 作为模块名称。该模块被标记为独立模式，不会包含在模块列表中。
 > - 如果输入以 '#' 结尾，则该模块将在工作模式下运行。具有相同名称的模块将共享同一消息队列。任何外部消息将由其中一个模块处理，取决于哪个模块空闲。
->
 
 > [!NOTE] CSM 初始化状态
 > - 默认值和 JKISM 状态机保持一致, 是 "Macro: Initialize"。
 > - 通常不会修改此状态，作为输入的目的是为了方便外部程序化修改初始化状态。
->
 
 ### CSM Module Template.vi
 
@@ -67,12 +65,10 @@
 > - 消息类型符号(Message Symbol): 消息类型符号，用于标识消息类型，包括同步调用(-@)、异步调用(->)、异步不等待返回(->|)等
 > - 目标模块(Target Module): 消息发送的目标模块，如果为空，则表示消息会被本模块处理。为空时，消息类型符号也不能存在
 > - 注释(Comments): 注释信息，不会被解析
->
 
 > [!NOTE] CSM 操作消息格式解析
 > [CSM 操作字符串(CSM Operation)] >> [参数(Arguments)] -> <[操作类型(operation)]> // [注释(Comments)]
 > TODO
->
 
 ### Parse State Queue++.vi
 
@@ -100,7 +96,6 @@
 
 > [!NOTE]
 > 此 VI 只能不能拼接"异步不等待返回"的异步消息，已在函数面板隐藏，建议使用 Build Message with Arguments++.vi 代替此 VI。
->
 
 - <B>例如:</B>
 
@@ -137,7 +132,6 @@
 > [!NOTE] 消息拼接API
 > 此类型API不会直接发送消息，只是拼接消息字符串。需要将字符串并入 CSM 的状态队列后，在 Parse State Queue++.vi 中发送消息、执行操作。
 > 在熟悉 CSM 规则的情况下，可以不使用此类API, 直接在字符串中键入对应的消息字符串、操作字符串。
->
 
 > [!NOTE] 多态VI(Polymorphic VI)选项:
 > - Build Message with Arguments(Auto Check).vi
@@ -149,7 +143,6 @@
 > - Build Register Status Message.vi
 > - Build Unregister Status Message.vi
 > - CSM - Replace Substitution Marks in Messages.vi
->
 
 #### Build Message with Arguments(Auto Check).vi
 
@@ -345,7 +338,6 @@
 > [!NOTE] CSM 的状态队列操作API
 > 此类型 API 不会直接发送消息，只是拼接消息字符串。在 Parse State Queue++.vi 中发送消息、执行操作。
 > 和 消息拼接API 不同的是，此类 API 会包含 CSM 的状态队列字符串输入输入，相当于在状态队列中插入消息。
->
 
 -- <b>输入控件</b> --
 - <b>Status with Arguments</b>: 将被广播的状态及参数，支持多行, 每行状态都将被添加 "-><broadcast>"
@@ -435,50 +427,80 @@ Bool输入决定要连接的字符串是TRUE还是False。
 
 ### 模板支持
 
-#### 错误处理
+#### CSM - Get New State Notifier Event.vi
+
+获取用户事件句柄。用在包含事件结构的 CSM 模块中。包含事件结构的 CSM 模块，通常都在事件结构处等待，这个事件用于收到新的消息时中断在事件结构中的等待，继续执行。
+
+-- <b>输入控件</b> --
+- <b>Name("" to use uuid) in</b>: CSM 模块名称
+
+-- <b>输出控件</b> --
+- <b>New State Notifier Event</b>: 用户事件句柄，用来当收到消息时，使用CSM模块中断在事件结构中的等待
+
+#### Timeout Selector.vi
+
+用于包含用户事件结构的模板中
+
+-- <b>输入控件</b> --
+- <b>Timeout Expected</b>: 预期的超时设置
+- <b>Remaining States</b>: 如果还有剩余的状态，输出将为 0，否则输出为预期值
+
+-- <b>输出控件</b> --
+- <b>Timeout</b>: 仲裁后使用的超时设置
+
+#### 模板错误处理
 
 ##### CSM Critical Error.vi
 
+生成 CSM 模块的严重错误消息，通常是由于模块名称重复导致的。
+
 -- <b>输入控件</b> --
-- <b>Arguments(as Reason)</b>:
-- <b>CSM Name</b>:
+- <b>Arguments(as Reason)</b>: 错误原因
+- <b>CSM Name</b>: CSM 模块名称
 
 ##### CSM No Target Error.vi
 
+当必须要输入 CSM 模块名称但输入了空字符串时，生成 CSM 模块的目标模块不存在错误消息。
+
 ##### CSM Target Error.vi
 
+生成 CSM 模块的消息目标模块不存在错误消息。
+
 -- <b>输入控件</b> --
-- <b>Arguments(as CSM Name)</b>:
+- <b>Arguments(as CSM Name)</b>: 连接参数，传递的内容是目标模块名称
 
 ##### CSM Target Timeout Error.vi
 
+生成 CSM 模块的消息目标模块超时错误消息。
+
 -- <b>输入控件</b> --
-- <b>Arguments(as CSM Name)</b>:
+- <b>Arguments(as CSM Name)</b>: 连接参数，传递的内容是目标模块名称
 
 ##### CSM Unhandled State Error.vi
 
+生成 CSM 模块的未处理状态错误消息。可能的情况：
+- 内部消息轮转中使用了本模块未定义的状态时报错(和 JKISM 行为一致)
+- 收到外部发送本模块未定义的状态时报错
+
 -- <b>输入控件</b> --
-- <b>Current State</b>:
-- <b>CSM Name</b>:
+- <b>Undefined State</b>: 未定义的状态
+- <b>CSM Name</b>: CSM 模块名称
 
 ## 参数 (Arguments)
 
 > [!NOTE] CSM 消息关键字
 > 包括: '->','->|','-@','-&','<-", "\r", "\n", "//", ">>", ">>>", ">>>>", ";", ","
->
 
 > [!NOTE] CSM HEXSTR 格式参数
 > 为了在 CSM 参数中传递任何数据类型，CSM 默认提供了一种 名为 HEXSTR 的参数格式，用于传递任何数据类型。
 > HEXSTR：将 LabVIEW 任意数据类型转换为变体，然后将此变体的内存格式表示为十六进制字符串，以便在 CSM 参数中传递。
 > HEXSTR可以安全地用作状态参数，而不会破坏 CSM 消息字符串的解析。
->
 
 > [!NOTE] CSM ERROR 参数
 > LabVIEW 错误簇信息通常包含回车，并且可能包含 CSM 的消息关键字，因此它通常不能直接作为 CSM 参数传递。
 > 虽然可以将错误簇信息转换为 HEXSTR 格式，但是它并不具备可读性，在 log 中不能直观的读取信息。
 > 因此为了在 CSM 参数中传递 LabVIEW 错误信息, 提供了一个标准的 CSM 错误参数格式。可以安全地用作状态参数，而不会破坏 CSM 消息字符串的解析。
 > 它的格式为: "[Error: error-code] error-description-As-safe-argument-string"
->
 
 ### CSM - Keywords.vi
 
@@ -569,7 +591,6 @@ CSM 消息中的关键字列表。
 > 2. CSM: 普通 CSM 模块。
 > 3. Action Worker: 工作者模式。在模块名称后添加“#”，以标记此模块为工作者，其与具有相同名称的其他工作者共享相同的消息队列。
 > 4. Chain Node: 链式节点。在模块名称后添加“$”，以标记此模块为链式节点，同一个链上的消息，将依次传递，直到某个节点处理消息。
->
 
 ### CSM - Start Async Call.vi
 
@@ -629,15 +650,6 @@ CSM 消息中的关键字列表。
 - <b>#msg to be processed</b>: CSM消息队列中的待处理消息个数
 - <b>CSM Name(dup)</b>: 返回 <b>CSM Name</b>
 
-### CSM - Get New State Notifier Event.vi
-
-获取用户事件句柄。用在包含事件结构的 CSM 模块中。包含事件结构的 CSM 模块，通常都在事件结构处等待，这个事件用于收到新的消息时中断在事件结构中的等待，继续执行。
-
--- <b>输入控件</b> --
-- <b>Name("" to use uuid) in</b>: CSM 模块名称
-
--- <b>输出控件</b> --
-- <b>New State Notifier Event</b>: 用户事件句柄，用来当收到消息时，使用CSM模块中断在事件结构中的等待
 
 ## 外部操作接口(External API)
 
@@ -836,9 +848,25 @@ CSM 消息中的关键字列表。
 
 ## 全局日志功能(Global Log)
 
+> [!NOTE] CSM 全局日志功能
+> CSM 全局日志功能，用于记录全局状态更改事件，用于调试、监控等场景。
+>
+> 可以记录的信息包括：
+> 1. CSM 状态机的状态修改
+> 2. CSM 模块间的消息通讯，包括数据返回
+> 3. CSM 模块的状态发布
+> 4. CSM 模块的创建和销毁
+> 5. CSM 模块的状态订阅和取消订阅
+> 6. CSM 模块处理的错误信息
+> 7. 用户自定义事件
+>
+> 调试工具主要基于全局日志功能API进行开发，用户可以根据自己的需要，开发调试工具。
+
 ### CSM - Global Log Event.vi
 
 获取 CSM 全局状态用户事件句柄
+
+> Ref: CSM 全局日志功能
 
 -- <b>输出控件</b> --
 - <b>CSM Global Log Event</b>: CSM 全局状态用户事件句柄
@@ -846,6 +874,8 @@ CSM 消息中的关键字列表。
 ### CSM - Destroy Global Log Event.vi
 
 释放 CSM 全局状态用户事件句柄
+
+> Ref: CSM 全局日志功能
 
 -- <b>输入控件</b> --
 - <b>CSM Global Log Event</b>: CSM 全局状态用户事件句柄
@@ -861,6 +891,8 @@ CSM 消息中的关键字列表。
 - <b>ModuleName</b>: 模块名称
 
 ### CSM - Global Log Error Handler.vi
+
+CSM 错误处理函数。如果发生错误，错误信息将通过 CSM Global log 发布，在调试工具、后台log记录中都能记录。
 
 -- <b>输入控件</b> --
 - <b>Place("" to use VI's Name)</b>:
@@ -905,7 +937,6 @@ CSM 消息中的关键字列表。
 
 > [!NOTE] 名称拼接API
 > 这个 VI 只操作了模块名称字符串，并没有实际功能，因此当熟悉 CSM 规则后，可以直接输入对应的名称字符串和规则符号，不是必须调用此API.
->
 
 ### CSM - Mark As Worker Module.vi
 
@@ -1120,17 +1151,6 @@ CSM 消息中的关键字列表。
 -- <b>输出控件</b> --
 - <b>String Cache</b>: 缓存的历史字符串
 
-### Timeout Selector.vi
-
-用于包含用户事件结构的模板中
-
--- <b>输入控件</b> --
-- <b>Timeout Expected</b>: 预期的超时设置
-- <b>Remaining States</b>: 如果还有剩余的状态，输出将为 0，否则输出为预期值
-
--- <b>输出控件</b> --
-- <b>Timeout</b>: 仲裁后使用的超时设置
-
 ### Trim Both Whitespace.vi
 
 开头、结尾或两者同时移除所有 ASCII 空白字符(空格、制表符、回车和换行)。
@@ -1176,14 +1196,12 @@ CSM 消息中的关键字列表。
 -- <b>输出控件</b> --
 - <b>HEX String (0-9,A-F)</b>:
 
-
 ## Build-in Addons
 
 ### CSM WatchDog
 
 > [!NOTE] CSM WatchDog 实现的原理
 > LabVIEW VI 退出时，会自动释放所有队列、事件等句柄资源。因此，我们可以通过创建一个 WatchDog 线程，监控一个由主程序VI申请创建的队列资源，当这个队列资源在主VI退出后被释放时，触发 WatchDog 线程给还未退出的 CSM 模块发送 "Macro: Exit"，保证他们正常的退出。
->
 
 #### CSM - Start Watchdog to Ensure All Modules Exit.vi
 
@@ -1205,7 +1223,6 @@ CSM Watchdog 线程，用于保证在主程序退出后，所有的异步启动的 CSM 模块都能正常退出
 > CSM File Logger 实现的原理
 > 通过订阅 CSM 的 Global Log Event 事件，可以将应用中的全部 CSM 活动信息记录下来，用于后期分析和错误定位。
 > 文件为文本文件，后缀名为 .csmlog，可以通过记事本等文本编辑查询工具打开。
->
 
 #### CSM - Start File Logger.vi
 
@@ -2224,7 +2241,6 @@ Replace(T) / Skip(F)</b>:
 - <b>Init State("Macro: Initialize")</b>:
 - <b>Name("" to use uuid)</b>:
 
-
 ## CSM Debug Tools
 
 ### CSM - Add VI Reference Case to CSMs.vi
@@ -2504,7 +2520,6 @@ Returns any argument(s) that may be used in the current state string. These argu
 
 -- <b>输出控件</b> --
 - <b>trimmed text</b>:
-
 
 ### CSM Not Allowed Message.vi
 
@@ -3205,7 +3220,6 @@ The State string that requires the argument.
 -- <b>输出控件</b> --
 - <b>prev ending</b>:
 - <b>new filename</b>:
-
 
 ## Unsorted
 
