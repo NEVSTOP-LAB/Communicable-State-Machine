@@ -6,6 +6,6 @@
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="Find Event Structure from Case Structure.vi" Type="VI" URL="../Find Event Structure from Case Structure.vi"/>
 	<Item Name="Find Parse State Queue from Case Structure.vi" Type="VI" URL="../Find Parse State Queue from Case Structure.vi"/>
-	<Item Name="Find Parse State Queue from Event Strcture.vi" Type="VI" URL="../Find Parse State Queue from Event Strcture.vi"/>
+	<Item Name="Find Parse State Queue from Event Structure.vi" Type="VI" URL="../Find Parse State Queue from Event Structure.vi"/>
 	<Item Name="Find Parse State Queue from While Loop.vi" Type="VI" URL="../Find Parse State Queue from While Loop.vi"/>
 </Library>
