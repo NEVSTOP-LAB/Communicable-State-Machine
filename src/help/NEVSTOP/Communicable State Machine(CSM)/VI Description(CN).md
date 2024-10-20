@@ -650,7 +650,6 @@ CSM 消息中的关键字列表。
 - <b>#msg to be processed</b>: CSM消息队列中的待处理消息个数
 - <b>CSM Name(dup)</b>: 返回 <b>CSM Name</b>
 
-
 ## 外部操作接口(External API)
 
 ### CSM - Wait for Module to Be Alive.vi
@@ -892,22 +891,30 @@ CSM 消息中的关键字列表。
 
 ### CSM - Global Log Error Handler.vi
 
-CSM 错误处理函数。如果发生错误，错误信息将通过 CSM Global log 发布，在调试工具、后台log记录中都能记录。
+CSM 错误处理函数。如果发生错误，错误信息将通过 CSM Global log 发布，在调试工具、后台 log 记录中都能记录。
 
 -- <b>输入控件</b> --
-- <b>Place("" to use VI's Name)</b>:
-- <b>Clear Error(T)</b>:
+- <b>Place("" to use VI's Name)</b>: 标记发生错误的地点
+- <b>Clear Error(T)</b>: 是否清除错误，默认清除
 
 ### CSM - Set Log Filter Rules.vi
 
+设置全局的过滤规则。这个规则应用在发送源头，当 log 满足过滤规则时，将不会在源头被发送，因此任何工具也将不能再检测到这个 log 记录。
+
 ### CSM - List Log Filter Rules As Strings.vi
 
+列出全局的过滤规则。
+
 -- <b>输出控件</b> --
-- <b>Rule Strings</b>:
+- <b>Rule Strings</b>: 过滤规则字符串
 
 ### CSM - Convert Filter Rules.vi
 
+将过滤规则簇列表转换为过滤规则类实例。
+
 ### CSM - Filter Global Log.vi
+
+根据规则判断是否log被过滤。这个VI 的过滤判断发生在订阅端，因此不会影响其他工具的订阅。
 
 ## 工作者模式 (Work Mode API)
 
@@ -1240,8 +1247,8 @@ CSM Watchdog 线程，用于保证在主程序退出后，所有的异步启动的 CSM 模块都能正常退出
 - <b>Exit When All Module Exist?(F)</b>: CSM 全部模块退出后是否退出
 
 -- <b>输出控件</b> --
-- <b>LogFile</b>:
-- <b>WatchDogQueue</b>:
+- <b>LogFile</b>: CSM lOG 文件路径
+- <b>WatchDogQueue</b>: WatchDog 资源句柄
 
 #### CSM-Logger-Thread.vi
 
@@ -1258,6 +1265,13 @@ CSM Watchdog 线程，用于保证在主程序退出后，所有的异步启动的 CSM 模块都能正常退出
 - <b>Exit When All Module Exist?(F)</b>: CSM 全部模块退出后是否退出
 
 ### CSM Loop Support
+
+> [!NOTE] CSM LOOP 设计的原因
+> JKISM/CSM 是一个状态机框架，完成循环工作是一种常见的场景。实现循环没有一个较好的方案。
+> - 如果在一个Case分支中使用循环实现，会导致状态机的卡死在此状态中，无法正常切换，也不能响应外部的消息；
+> - 如果通过在状态循环的最后一个状态中，继续插入下一个循环的状态，也会导致不能很好的响应外部的消息，且很不直观。
+> 因此，这个插件主要是为了提供一个标准的循环实现方式，解决以上的问题。
+>
 
 #### CSMLS - Add Exit State(s) with Loop Check.vi
 
