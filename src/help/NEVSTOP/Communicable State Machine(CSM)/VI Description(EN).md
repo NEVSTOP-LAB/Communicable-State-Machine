@@ -506,109 +506,109 @@ VI snippet for dropping sync call template code from LabVIEW Quick Drop.
 
 <b>Inputs:</b>
 - N/A
- -
+-
 <b>Outputs:</b>
- - N/A
+- N/A
 
 ### CSM - Mark As Worker Module.vi
 
 Append '#' to CSM Name, to mark this module is a worker, who shares the same message queue with workers with the same name. A real name with uuid generated will be assigned to this CSM module.
 
 <b>Inputs:</b>
- - <b>CSM Name</b>: CSM module name.
+- <b>CSM Name</b>: CSM module name.
 
 <b>Outputs:</b>
- - <b>CSM Name(marked as worker)</b>: CSM module name with '#' appended.
+- <b>CSM Name(marked as worker)</b>: CSM module name with '#' appended.
 
 ### CSM - Compact Multiple States.vi
 
 Compact multiple states to a single string for input.
 
 <b>Inputs:</b>
- - <b>States in Lines</b>: Multiple states as string array.
+- <b>States in Lines</b>: Multiple states as string array.
 
 <b>Outputs:</b>
- - <b>States</b>: State String contains all the input state(s)
+- <b>States</b>: State String contains all the input state(s)
 
 ### CSM - Check If Module Exists.vi
 
 Check if module with specified name exists.
 
 <b>Inputs:</b>
- - <b>CSM Name</b>: CSM Module Name
- - <b>Error in</b>: Error cluster
+- <b>CSM Name</b>: CSM Module Name
+- <b>Error in</b>: Error cluster
 
 <b>Outputs:</b>
- - <b>Exist?</b>: Return True if specified module exists.
- - <b>CSM Name(dup)</b>: Return <b>CSM Name</b>
- - <b>Error out</b>: Error cluster
+- <b>Exist?</b>: Return True if specified module exists.
+- <b>CSM Name(dup)</b>: Return <b>CSM Name</b>
+- <b>Error out</b>: Error cluster
 
 ### CSM - List Modules.vi
 
 List all CSM Modules alive in system.
 
 <b>Inputs:</b>
- - <b>Exclude Standalone CSM(T)</b>: 'TRUE' to exclude standalone CSM module, and 'FALSE' to include them.
- - <b>Error in</b>: Error cluster
+- <b>Exclude Standalone CSM(T)</b>: 'TRUE' to exclude standalone CSM module, and 'FALSE' to include them.
+- <b>Error in</b>: Error cluster
 
 <b>Outputs:</b>
- - <b>Module Names</b>: Module Names
- - <b>Error out</b>: Error cluster
+- <b>Module Names</b>: Module Names
+- <b>Error out</b>: Error cluster
 
 ### CSM - Module Status.vi
 
 Get the CSM+ Module Status
 
 <b>Inputs:</b>
- - <b>CSM Name</b>: CSM module name.
- - <b>Error in</b>: Error cluster
+- <b>CSM Name</b>: CSM module name.
+- <b>Error in</b>: Error cluster
 
 <b>Outputs:</b>
- - <b>Mode</b>: Return the mode of CSM Module. It might be "Stand-alone", "CSM" or "Action Worker".
- - <b>#As Worker</b>: Number of the workers if module in "Action Worker" mode.
- - <b>#msg to be processed</b>: The number of message in CSM Message Queue.
- - <b>CSM Name(dup)</b>: Return <b>CSM Name</b>
- - <b>Error out</b>: Error cluster
+- <b>Mode</b>: Return the mode of CSM Module. It might be "Stand-alone", "CSM" or "Action Worker".
+- <b>#As Worker</b>: Number of the workers if module in "Action Worker" mode.
+- <b>#msg to be processed</b>: The number of message in CSM Message Queue.
+- <b>CSM Name(dup)</b>: Return <b>CSM Name</b>
+- <b>Error out</b>: Error cluster
 
 ### CSM - Register Status Change.vi
 
 Register for notification of other CSM Module's status change. If "Response Message" is not connected or "" is the input, the same state name will be used for acting message.
 
 <b>Inputs:</b>
- - <b>CSM Name</b>: CSM Module name.
- - <b>Source CSM Name ('*' as Default)</b>: CSM who generates the status. You can use '*' for all modules generated the same <b>Status</b>
- - <b>Status</b>: The status string
- - <b>Response Message (if "", same as Source Message)</b>: After registered, If status change, this message will be received.
- - <b>Priority(T:As Status,F:As Interrupt)</b>: The Response Message will be inserted to the front of state queue if it's False, otherwise it wil be append to the tail.
- - <b>Error in</b>: Error cluster
+- <b>CSM Name</b>: CSM Module name.
+- <b>Source CSM Name ('*' as Default)</b>: CSM who generates the status. You can use '*' for all modules generated the same <b>Status</b>
+- <b>Status</b>: The status string
+- <b>Response Message (if "", same as Source Message)</b>: After registered, If status change, this message will be received.
+- <b>Priority(T:As Status,F:As Interrupt)</b>: The Response Message will be inserted to the front of state queue if it's False, otherwise it wil be append to the tail.
+- <b>Error in</b>: Error cluster
 
 <b>Outputs:</b>
- - <b>CSM Name(dup)</b>: Return <b>CSM Name</b>
- - <b>Error out</b>: Error cluster
+- <b>CSM Name(dup)</b>: Return <b>CSM Name</b>
+- <b>Error out</b>: Error cluster
 
 ### CSM - Unregister Status Change.vi
 
 Unregister the notification of other CSM Module's status change.
 
 <b>Inputs:</b>
- - <b>CSM Name</b>: CSM Module name.
- - <b>Source CSM Name</b>: CSM who generates the status. You can use '*' for all modules generated the same <b>Status</b>
- - <b>Status</b>: The status string
- - <b>Error in</b>: Error cluster
+- <b>CSM Name</b>: CSM Module name.
+- <b>Source CSM Name</b>: CSM who generates the status. You can use '*' for all modules generated the same <b>Status</b>
+- <b>Status</b>: The status string
+- <b>Error in</b>: Error cluster
 
 <b>Outputs:</b>
- - <b>CSM Name(dup)</b>: return <b>CSM Name</b>
- - <b>Error out</b>: Error cluster
+- <b>CSM Name(dup)</b>: return <b>CSM Name</b>
+- <b>Error out</b>: Error cluster
 
 ### CSM - Get New State Notifier Event.vi
 
 <b>Inputs:</b>
- - <b>Name("" to use uuid) in</b>: CSM module name
- - <b>Error in</b>: Error cluster
+- <b>Name("" to use uuid) in</b>: CSM module name
+- <b>Error in</b>: Error cluster
 
 <b>Outputs:</b>
- - <b>New State Notifier Event</b>: User event to break CSM module from waiting in event structure when message is received.
- - <b>Error out</b>: Error cluster
+- <b>New State Notifier Event</b>: User event to break CSM module from waiting in event structure when message is received.
+- <b>Error out</b>: Error cluster
 
 ## Non-CSM Support
 
@@ -617,28 +617,28 @@ Unregister the notification of other CSM Module's status change.
 Post a message to CSM specified.
 
 <b>Inputs:</b>
- - <b>Target Module</b>:Target CSM Module name.
- - <b>State</b>: Message to post.
- - <b>Arguments ("")</b>: Argument of the message.
- - <b>Error In (no error)</b>: Error cluster
+- <b>Target Module</b>:Target CSM Module name.
+- <b>State</b>: Message to post.
+- <b>Arguments ("")</b>: Argument of the message.
+- <b>Error In (no error)</b>: Error cluster
 
 <b>Outputs:</b>
- - <b>error out</b>: Error cluster
+- <b>error out</b>: Error cluster
 
 ### CSM - Send Message and Wait for Reply.vi
 
 Send a message to CSM specified and wait for the reply with timeout.
 
 <b>Inputs:</b>
- - <b>Target Module</b>: Target CSM Module name.
- - <b>State</b>: Message to send
- - <b>Arguments ("")</b>: Argument of the message.
- - <b>Response Timeout(5000ms)</b>: Timeout for waiting the response.
- - <b>Error In (no error)</b>: Error cluster
+- <b>Target Module</b>: Target CSM Module name.
+- <b>State</b>: Message to send
+- <b>Arguments ("")</b>: Argument of the message.
+- <b>Response Timeout(5000ms)</b>: Timeout for waiting the response.
+- <b>Error In (no error)</b>: Error cluster
 
 <b>Outputs:</b>
- - <b>Arguments</b>: Response returned.
- - <b>error out</b>: Error cluster
+- <b>Arguments</b>: Response returned.
+- <b>error out</b>: Error cluster
 
 ### CSM - Status Change Event.vi
 
@@ -648,12 +648,12 @@ Obtain CSM Global Log Event Reference.
 - <b>Error out</b>: Error cluster
 
 <b>Inputs:</b>
- - <b>Error in</b>:
- - <b>Name("" to use uuid) in</b>:
+- <b>Error in</b>:
+- <b>Name("" to use uuid) in</b>:
 
 <b>Outputs:</b>
- - <b>Error out</b>:
- - <b>Status Change Event</b>:
+- <b>Error out</b>:
+- <b>Status Change Event</b>:
 
 ### CSM - Destroy Status Change Event.vi
 
@@ -663,11 +663,11 @@ Release CSM Global Log Event Reference.
 - <b>Error out</b>: Error cluster
 
 <b>Inputs:</b>
- - <b>Error in</b>:
- - <b>Status Change Event</b>:
+- <b>Error in</b>:
+- <b>Status Change Event</b>:
 
 <b>Outputs:</b>
- - <b>Error out</b>:
+- <b>Error out</b>:
 
 ## Side-Loop Support
 
@@ -676,38 +676,38 @@ Release CSM Global Log Event Reference.
 Request CSM to Post a message to CSM specified. This is usually used in sub-loops with a CSM for acting as a holistic module.
 
 <b>Inputs:</b>
- - <b>Status</b>: Message to post.
- - <b>Arguments ("")</b>: Argument of the message.
- - <b>Target Module</b>:Target CSM Module name.
- - <b>Module Name</b>:Host Module Name
- - <b>Error In (no error)</b>: Error cluster
+- <b>Status</b>: Message to post.
+- <b>Arguments ("")</b>: Argument of the message.
+- <b>Target Module</b>:Target CSM Module name.
+- <b>Module Name</b>:Host Module Name
+- <b>Error In (no error)</b>: Error cluster
 
 <b>Outputs:</b>
- - <b>error out</b>: Error cluster
+- <b>error out</b>: Error cluster
 
 ### CSM - Request CSM to Broadcast Status Change.vi
 
 Request CSM to publish status change to CSM specified. This is usually used in sub-loops with a CSM for acting as a holistic module.
 
 <b>Inputs:</b>
- - <b>Status</b>: status to broadcast.
- - <b>Arguments ("")</b>: Argument of the status.
- - <b>Module Name</b>:Host Module Name
- - <b>Broadcast(T)</b>: Trigger for broadcast or not.
- - <b>Error In (no error)</b>: Error cluster
+- <b>Status</b>: status to broadcast.
+- <b>Arguments ("")</b>: Argument of the status.
+- <b>Module Name</b>:Host Module Name
+- <b>Broadcast(T)</b>: Trigger for broadcast or not.
+- <b>Error In (no error)</b>: Error cluster
 
 <b>Outputs:</b>
- - <b>error out</b>: Error cluster
+- <b>error out</b>: Error cluster
 
 ### CSM - Module Turns Invalid.vi
 
 Check if CSM module is not valid any more. This is usually used in sub-loops with a CSM for acting as a holistic module. It's used for exit condition of the sub-loops.
 
 <b>Inputs:</b>
- - <b>CSM Name</b>: Host Module Name
+- <b>CSM Name</b>: Host Module Name
 
 <b>Outputs:</b>
- - <b>Turn Invalid(Exit)?</b>: CSM Module turns invalid
+- <b>Turn Invalid(Exit)?</b>: CSM Module turns invalid
 
 ## Global Log Event
 
@@ -716,34 +716,34 @@ Check if CSM module is not valid any more. This is usually used in sub-loops wit
 Obtain CSM Global Log Event Reference.
 
 <b>Inputs:</b>
- - <b>Error in</b>: Error cluster
+- <b>Error in</b>: Error cluster
 
 <b>Outputs:</b>
- - <b>CSM Global Log Event</b>: User event reference for CSM global log.
- - <b>Error out</b>: Error cluster
+- <b>CSM Global Log Event</b>: User event reference for CSM global log.
+- <b>Error out</b>: Error cluster
 
 ### CSM - Destroy Global Log Event.vi
 
 Release CSM Global Log Event Reference.
 
 <b>Inputs:</b>
- - <b>CSM Global Log Event</b>:
- - <b>Error in</b>: Error cluster
+- <b>CSM Global Log Event</b>:
+- <b>Error in</b>: Error cluster
 
 <b>Outputs:</b>
- - <b>Error out</b>: Error cluster
+- <b>Error out</b>: Error cluster
 
 ### CSM - Generate User Global Log.vi
 
 <b>Inputs:</b>
- - <b>Error in</b>:
- - <b>From Who</b>:
- - <b>ModuleName</b>:
- - <b>Log</b>:
- - <b>Arguments</b>:
+- <b>Error in</b>:
+- <b>From Who</b>:
+- <b>ModuleName</b>:
+- <b>Log</b>:
+- <b>Arguments</b>:
 
 <b>Outputs:</b>
- - <b>error out</b>:
+- <b>error out</b>:
 
 ## Utility VIs
 
@@ -754,57 +754,57 @@ Creates an error cluster, building the source string from the calling VIs call c
 Optional 'String to Prepend to source ("")' string input is used to add extra descriptive info to the source string.  This string, if present, will be enclosed in parenthesis and prepended to the source string.
 
 <b>Inputs:</b>
- - <b>code</b>: error code
- - <b>String to Prepend to source ("")</b>: error string
+- <b>code</b>: error code
+- <b>String to Prepend to source ("")</b>: error string
 
 <b>Outputs:</b>
- - <b>error out</b>: Error cluster
+- <b>error out</b>: Error cluster
 
 ### Build Internal State String.vi
 
 Build a state string that contains arguments for the CSM.
 
 <b>Inputs:</b>s
- - <b>State</b>: The State or message string
- - <b>Arguments ("")</b>: The argument for <b>State</b>
- - <b>Arg-State ("")</b>: Why this message is sent here
- - <b>Source ("")</b>: Who sent this message here
+- <b>State</b>: The State or message string
+- <b>Arguments ("")</b>: The argument for <b>State</b>
+- <b>Arg-State ("")</b>: Why this message is sent here
+- <b>Source ("")</b>: Who sent this message here
 
 <b>Outputs:</b>
- - <b>State with Arguments</b>: String stands for state with arguments
+- <b>State with Arguments</b>: String stands for state with arguments
 
 ### String History Cacher.vi
 
 Return the <b>String Cache</b> containing <b>length</b> number of characters, including the new input <b>String</b>.
 
 <b>Inputs:</b>
- - <b>String</b>: History item string
- - <b>length</b>: max history length of cache.
- - <b>Include Timestamp(F)</b>: Include timestamp in the from of every line or not
+- <b>String</b>: History item string
+- <b>length</b>: max history length of cache.
+- <b>Include Timestamp(F)</b>: Include timestamp in the from of every line or not
 
 <b>Outputs:</b>
- - <b>String Cache</b>: The history string
+- <b>String Cache</b>: The history string
 
 ### Timeout Selector.vi
 
 Used in User Event Template VI.
 
 <b>Inputs:</b>
- - <b>Timeout Expected</b>: Expected timeout
- - <b>Remaining States</b>: If any remaining states left, output will be 0, otherwise, output is the expected value.
+- <b>Timeout Expected</b>: Expected timeout
+- <b>Remaining States</b>: If any remaining states left, output will be 0, otherwise, output is the expected value.
 
 <b>Outputs:</b>
- - <b>Timeout</b>: timeout will be used.
+- <b>Timeout</b>: timeout will be used.
 
 ### Trim Both Whitespace.vi
 
 Removes all ASCII white space (spaces, tabs, carriage returns, and linefeed) from the beginning, end, or both ends of <B>string</B>. The Trim Whitespace VI does not remove double byte characters.
 
 <b>Inputs:</b>
- - <b>string</b>
+- <b>string</b>
 
 <b>Outputs:</b>
- - <b>trimmed string</b>
+- <b>trimmed string</b>
 
 ### uuid.vi
 
@@ -815,10 +815,10 @@ Generate <b>Universally Unique Identifier(UUID)</b> according to the standard me
      - 9B781DB313AF
 
 <b>Inputs:</b>
- - N/A
+- N/A
 
 <b>Outputs:</b>
- - <b>UUID</b>: Generated UUID
+- <b>UUID</b>: Generated UUID
 
 ### CSM - Broadcast Message Type.ctl
 
@@ -836,7 +836,7 @@ Message Type definition.
 ### Global Log To String.vi
 
 <b>Inputs:</b>
- - <b>Log</b>:
+- <b>Log</b>:
 
 <b>Outputs:</b>
- - <b>String</b>:
+- <b>String</b>:
