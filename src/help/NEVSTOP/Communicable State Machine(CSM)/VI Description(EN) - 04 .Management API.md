@@ -1,67 +1,67 @@
 # CSM API
 
-## 管理接口(Management API)
+## Management API
 
-> [!NOTE] CSM 工作模式
-> 1. Stand-alone: 独立工作模式。不输入模块名称，将自动生成一个随机ID, 用于标识模块。
-> 2. CSM: 普通 CSM 模块。
-> 3. Action Worker: 工作者模式。在模块名称后添加“#”，以标记此模块为工作者，其与具有相同名称的其他工作者共享相同的消息队列。
-> 4. Chain Node: 链式节点。在模块名称后添加“$”，以标记此模块为链式节点，同一个链上的消息，将依次传递，直到某个节点处理消息。
+> [!NOTE] CSM Working Modes
+> 1. Stand-alone: Independent working mode. If no module name is provided, a random ID will be generated to identify the module.
+> 2. CSM: Regular CSM module.
+> 3. Action Worker: Worker mode. Add "#" after the module name to mark this module as a worker, sharing the same message queue with other workers of the same name.
+> 4. Chain Node: Chain node. Add "$" after the module name to mark this module as a chain node. Messages on the same chain will be passed sequentially until a node processes the message.
 
 ### CSM - Start Async Call.vi
 
-异步调用模板代码的VI片段
+VI snippet for asynchronous call template code
 
 ### CSM - Synchronized Call.vi
 
-同步调用模板代码的VI片段
+VI snippet for synchronous call template code
 
 ### CSM - Module VI Reference.vi
 
-通过 发送 "VI Reference" 同步消息，查询获取 CSM 模块的 VI 引用。
+Query and obtain the VI reference of the CSM module by sending a "VI Reference" synchronous message.
 
--- <b>输入控件</b> --
-- <b>CSM Name</b>: CSM 模块名称
-- <b>Current Module("" to generate a ID)</b>: 查询CSM模块的标记, 为空时，将生成一个唯一的ID
-- <b>Response Timeout(5000ms)</b>: 同步消息超时时间，默认 5000 ms
+-- <b>Input Controls</b> --
+- <b>CSM Name</b>: CSM module name
+- <b>Current Module("" to generate an ID)</b>: Identifier of the CSM module to query. If empty, a unique ID will be generated.
+- <b>Response Timeout(5000ms)</b>: Timeout for synchronous messages, default is 5000 ms
 
--- <b>输出控件</b> --
-- <b>CSM Module VIRef</b>: CSM 模块的 VI 引用
+-- <b>Output Controls</b> --
+- <b>CSM Module VIRef</b>: VI reference of the CSM module
 
 ### CSM - Check If Module Exists.vi
 
-检查 CSM 模块是否存在
+Check if the CSM module exists
 
--- <b>输入控件</b> --
-- <b>CSM Name</b>: CSM 模块名称
+-- <b>Input Controls</b> --
+- <b>CSM Name</b>: CSM module name
 
--- <b>输出控件</b> --
-- <b>Exist?</b>: 返回模式是否存在
-- <b>CSM Name(dup)</b>: 返回 <b>CSM Name</b>
+-- <b>Output Controls</b> --
+- <b>Exist?</b>: Returns whether the module exists
+- <b>CSM Name(dup)</b>: Returns <b>CSM Name</b>
 
 ### CSM - List Modules.vi
 
-列出所有活动的CSM模块。
+List all active CSM modules.
 
-> Ref: CSM 工作模式
+> Ref: CSM Working Modes
 
--- <b>输入控件</b> --
-- <b>Exclude Standalone CSM(T)</b>: 是否包含独立工作模式的模块
+-- <b>Input Controls</b> --
+- <b>Exclude Standalone CSM(T)</b>: Whether to include modules in standalone working mode
 
--- <b>输出控件</b> --
-- <b>Module Names</b>: CSM 模块名称列表
+-- <b>Output Controls</b> --
+- <b>Module Names</b>: List of CSM module names
 
 ### CSM - Module Status.vi
 
-获取CSM模块的状态，包括：工作模式、工作者数量、消息队列中的待处理消息个数。
+Get the status of the CSM module, including: working mode, number of workers, and the number of pending messages in the message queue.
 
-> Ref: CSM 工作模式
+> Ref: CSM Working Modes
 
--- <b>输入控件</b> --
-- <b>CSM Name</b>: CSM 模块名称.
+-- <b>Input Controls</b> --
+- <b>CSM Name</b>: CSM module name
 
--- <b>输出控件</b> --
-- <b>Mode</b>: 返回模块的工作模式
-- <b>#As Worker</b>: 工作者模式下，此模块的工作者数量
-- <b>#msg to be processed</b>: CSM消息队列中的待处理消息个数
-- <b>CSM Name(dup)</b>: 返回 <b>CSM Name</b>
+-- <b>Output Controls</b> --
+- <b>Mode</b>: Returns the working mode of the module
+- <b>#As Worker</b>: Number of workers in worker mode for this module
+- <b>#msg to be processed</b>: Number of pending messages in the CSM message queue
+- <b>CSM Name(dup)</b>: Returns <b>CSM Name</b>

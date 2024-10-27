@@ -116,4 +116,3 @@ Check if CSM has exited. Typically used for functional loops running in parallel
 
 -- <b>Output Controls</b> --
 - <b>Turn Invalid (Exit)?</b>: Whether it has exited
-
