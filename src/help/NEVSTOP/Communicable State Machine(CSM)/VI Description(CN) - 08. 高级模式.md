@@ -1,5 +1,8 @@
 # CSM API
 
+> [!NOTE] 名称拼接API
+> 这个 VI 只操作了模块名称字符串，并没有实际功能，因此当熟悉 CSM 规则后，可以直接输入对应的名称字符串和规则符号，不是必须调用此API.
+
 ## 工作者模式 (Work Mode API)
 
 > [!NOTE] CSM 工作者模式(worker mode)
@@ -25,9 +28,6 @@
 > 2. 下载器并发下载的场景
 > 3. 编译器并发编译的场景
 > 4. TCP Server 处理多个Client连接
-
-> [!NOTE] 名称拼接API
-> 这个 VI 只操作了模块名称字符串，并没有实际功能，因此当熟悉 CSM 规则后，可以直接输入对应的名称字符串和规则符号，不是必须调用此API.
 
 ### CSM - Mark As Worker Module.vi
 

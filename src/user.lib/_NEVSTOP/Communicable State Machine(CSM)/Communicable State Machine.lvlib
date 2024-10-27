@@ -188,7 +188,7 @@
 			<Item Name="CSM - List Mapping Relationships in Broadcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - List Mapping Relationships in Broadcast Registry.vi"/>
 			<Item Name="CSM - Check Mapping Relationship in Broadcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - Check Mapping Relationship in Broadcast Registry.vi"/>
 		</Item>
-		<Item Name="Non-Message Mode API" Type="Folder">
+		<Item Name="Module API" Type="Folder">
 			<Item Name="CSM - Broadcast Message Type.ctl" Type="VI" URL="../AdvanceAPI/CSM - Broadcast Message Type.ctl"/>
 			<Item Name="CSM - Message Type.ctl" Type="VI" URL="../AdvanceAPI/CSM - Message Type.ctl"/>
 			<Item Name="CSM - Send Message and Wait for Reply.vi" Type="VI" URL="../AdvanceAPI/CSM - Send Message and Wait for Reply.vi"/>

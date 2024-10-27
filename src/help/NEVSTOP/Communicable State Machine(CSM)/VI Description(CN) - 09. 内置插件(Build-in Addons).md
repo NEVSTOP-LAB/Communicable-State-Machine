@@ -75,36 +75,36 @@ CSM Watchdog 线程，用于保证在主程序退出后，所有的异步启动的 CSM 模块都能正常退出
 退出时检查循环。
 
 -- <b>输入控件</b> --
-- <b>States Out in</b>:
-- <b>Remaining States</b>:
+- <b>States Queue</b>: 整个状态队列被连接到此输入
+- <b>Exiting States</b>: 退出所需的状态
 
 -- <b>输出控件</b> --
-- <b>States Out out</b>:
+- <b>Remaining States</b>: 剩余的消息队列
 
 #### CSMLS - Append Continuous State.vi
 
 添加循环状态。
 
 -- <b>输入控件</b> --
-- <b>Loop State(s) and Arguments</b>: This allows you to place new states in the front of the state machine queue. The default is an empty string.
-- <b>Append(T)</b>:
-- <b>Continuous Arguments ("")</b>:
-- <b>Continuous State</b>:The State string that requires the argument.
-- <b>Remaining States</b>:
+- <b>States Queue</b>: 整个状态队列被连接到此输入
+- <b>Loop State(s) and Arguments</b>: 循环状态
+- <b>Continuous State</b>:循环状态名称
+- <b>Continuous Arguments ("")</b>: 循环状态参数
+- <b>Append(T)</b>: 是否添加
 
 -- <b>输出控件</b> --
-- <b>States Out</b>:
+- <b>Remaining States</b>: 剩余的消息队列
 
 #### CSMLS - Define Loop State(s).vi
 
 定义循环操作。
 
 -- <b>输入控件</b> --
-- <b>States Out in</b>:
-- <b>Remaining States</b>:
+- <b>States Queue</b>: 整个状态队列被连接到此输入
+- <b>Loop State(s) and Arguments</b>: 循环状态
 
 -- <b>输出控件</b> --
-- <b>States Out out</b>:
+- <b>Remaining States</b>: 剩余的消息队列
 
 #### CSMLS - Remove Loop Tag and previous State(s) to Break.vi
 
@@ -122,7 +122,7 @@ CSM Watchdog 线程，用于保证在主程序退出后，所有的异步启动的 CSM 模块都能正常退出
 相当于不会执行任何DAQ操作，立即直接进入停止和释放。
 
 -- <b>输入控件</b> --
-- <b>States</b>: 处理前的消息队列
+- <b>States Queue</b>: 整个状态队列被连接到此输入
 
 -- <b>输出控件</b> --
 - <b>Remaining States</b>: 剩余的消息队列
@@ -143,7 +143,7 @@ CSM Watchdog 线程，用于保证在主程序退出后，所有的异步启动的 CSM 模块都能正常退出
 相当于依然会执行当前的DAQ操作，然后进入停止和释放。
 
 -- <b>输入控件</b> --
-- <b>States</b>: 处理前的消息队列
+- <b>States Queue</b>: 整个状态队列被连接到此输入
 
 -- <b>输出控件</b> --
 - <b>Remaining States</b>: 剩余的消息队列
