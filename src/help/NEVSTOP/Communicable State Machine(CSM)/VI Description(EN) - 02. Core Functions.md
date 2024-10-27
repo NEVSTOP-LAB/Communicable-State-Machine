@@ -4,12 +4,12 @@
 
 > [!NOTE] CSM Message Format Parsing
 > [CSM Message String] >> [Arguments] [Message Symbol ->|,->,-@] [Target Module] // [Comments]
-> - CSM Message String: CSM messages must not contain CSM keywords or newline characters.
-> - ">>": Separator between CSM Message String and Arguments.
-> - Arguments: Parameters of the CSM message, must not contain CSM keywords or newline characters.
-> - Message Symbol: Symbols to identify message types, including synchronous call (-@), asynchronous call (->), and asynchronous no-wait call (->|).
-> - Target Module: The target module to which the message is sent. If empty, the message will be processed by the current module. The message symbol must not exist if the target module is empty.
-> - Comments: Information that will not be parsed.
+> - <b>CSM Message String</b>: CSM messages must not contain CSM keywords or newline characters.
+> - <b>" >> "</b>: Separator between CSM Message String and Arguments.
+> - <b>Arguments</b>: Parameters of the CSM message, must not contain CSM keywords or newline characters.
+> - <b>Message Symbol</b>: Symbols to identify message types, including synchronous call (-@), asynchronous call (->), and asynchronous no-wait call (->|).
+> - <b>Target Module</b>: The target module to which the message is sent. If empty, the message will be processed by the current module. The message symbol must not exist if the target module is empty.
+> - <b>Comments</b>: Information that will not be parsed.
 
 > [!NOTE] CSM Operation Message Format Parsing
 > [CSM Operation String] >> [Arguments] -> <[Operation Type]> // [Comments]
@@ -369,4 +369,3 @@ The Bool input determines whether the TRUE or FALSE string is concatenated.
 
 <b>Output Controls</b>
 - <b>Remaining States</b>: All concatenated states and parameters.
-
