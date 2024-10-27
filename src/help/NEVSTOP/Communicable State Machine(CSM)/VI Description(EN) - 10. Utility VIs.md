@@ -1,199 +1,200 @@
 # CSM API
 
-## 工具VI(Utility VIs)
+## Utility VIs
 
 ### CSM - Compact Multiple States.vi
 
-将多个状态紧凑成单个字符串以供输入使用
+Compact multiple states into a single string for input use.
 
--- <b>输入控件</b> --
-- <b>Multiple States</b>: CSM状态字符串数组
+-- <b>Input Controls</b> --
+- <b>Multiple States</b>: Array of CSM state strings
 
--- <b>输出控件</b> --
-- <b>States</b>: 包含多行CSM状态字符串的字符串
+-- <b>Output Controls</b> --
+- <b>States</b>: String containing multiple lines of CSM state strings
 
 ### CSM - Break Down Multiple States String.vi
 
-将包含多行CSM状态字符串的字符串切割成CSM状态字符串数组
+Break down a string containing multiple lines of CSM state strings into an array of CSM state strings.
 
--- <b>输入控件</b> --
-- <b>States</b>: 包含多行CSM状态字符串的字符串
+-- <b>Input Controls</b> --
+- <b>States</b>: String containing multiple lines of CSM state strings
 
--- <b>输出控件</b> --
-- <b>Multiple States</b>: CSM状态字符串数组
+-- <b>Output Controls</b> --
+- <b>Multiple States</b>: Array of CSM state strings
 
 ### CSM - Build Exit Messages of CSMs.vi
 
-输入CSM模块名称，拼接生成退出消息("Macro: Exit")。
+Input CSM module names to concatenate and generate exit messages ("Macro: Exit").
 
-> Ref: 消息拼接API
+> Ref: Message Concatenation API
 
--- <b>输入控件</b> --
-- <b>CSMs</b>: CSM模块名称数组
-- <b>State with Arguments("Macro: Exit“)</b>: 退出消息
+-- <b>Input Controls</b> --
+- <b>CSMs</b>: Array of CSM module names
+- <b>State with Arguments("Macro: Exit")</b>: Exit message
 
--- <b>输出控件</b> --
-- <b>States</b>: 拼接生成的CSM消息字符串
+-- <b>Output Controls</b> --
+- <b>States</b>: Concatenated CSM message string
 
 ### CSM - Filter Duplicate Messages By Name.vi
 
-过滤重复的消息，只保留最新的消息。
+Filter duplicate messages, keeping only the latest messages.
 
-> Ref: 消息拼接API
+> Ref: Message Concatenation API
 
--- <b>输入控件</b> --
-- <b>States</b>: 输入的消息字符串
-- <b>Whole Messages in Check?(T)</b>: 是否检查整个消息字符串。如果是 FALSE，则只检查消息名称。
+-- <b>Input Controls</b> --
+- <b>States</b>: Input message string
+- <b>Whole Messages in Check?(T)</b>: Whether to check the entire message string. If FALSE, only the message name is checked.
 
--- <b>输出控件</b> --
-- <b>Filtered States</b>: 过滤后的消息字符串
+-- <b>Output Controls</b> --
+- <b>Filtered States</b>: Filtered message string
 
 ### CSM - Filter Messages to Non-Existing Modules.vi
 
-过滤发送给不存在的模块的消息。
-这个VI中会使用 CSM - List Modules.vi 获取所有活动的CSM模块，然后过滤掉发送给不存在模块的消息。
+Filter messages sent to non-existing modules.
+This VI uses CSM - List Modules.vi to get all active CSM modules and then filters out messages sent to non-existing modules.
 
--- <b>输入控件</b> --
-- <b>States</b>: 输入的消息字符串
+-- <b>Input Controls</b> --
+- <b>States</b>: Input message string
 
--- <b>输出控件</b> --
-- <b>Filtered States</b>: 过滤后的消息字符串
+-- <b>Output Controls</b> --
+- <b>Filtered States</b>: Filtered message string
 
 ### CSM - Remove Duplicated Following Messages.vi
 
--- <b>输入控件</b> --
+-- <b>Input Controls</b> --
 - <b>Current State</b>:
 - <b>Remaining States</b>:
 
--- <b>输出控件</b> --
+-- <b>Output Controls</b> --
 - <b>Remaining States Left</b>:
 
 ### CSM Data Type String to Enum.vi
 
 ### CSM Data Type String.vi
 
--- <b>输入控件</b> --
+-- <b>Input Controls</b> --
 - <b>Data</b>:
 
--- <b>输出控件</b> --
+-- <b>Output Controls</b> --
 - <b>Data Type String</b>:
 
 ### Replace Tag with Array.vi
 
--- <b>输入控件</b> --
+-- <b>Input Controls</b> --
 - <b>Enum</b>:
 - <b>replace string</b>:
 - <b>single-line text</b>:
 
--- <b>输出控件</b> --
+-- <b>Output Controls</b> --
 - <b>States</b>:
 
 ### CSM Data Type String to Enum(RefnumEnum).vi
 
--- <b>输入控件</b> --
+-- <b>Input Controls</b> --
 - <b>Data Type String</b>:
 
--- <b>输出控件</b> --
+-- <b>Output Controls</b> --
 - <b>Array Dim</b>:
 - <b>Secondary Type</b>:
 - <b>Primary Type</b>:
 
 ### CSM Data Type String to Enum(String).vi
 
--- <b>输入控件</b> --
+-- <b>Input Controls</b> --
 - <b>Data Type String</b>:
 
--- <b>输出控件</b> --
+-- <b>Output Controls</b> --
 - <b>Array Dim</b>:
 - <b>Secondary Type String</b>:
 - <b>Primary Type</b>:
 
 ### CSM Data Type String to Enum(TypeEnum).vi
 
--- <b>输入控件</b> --
+-- <b>Input Controls</b> --
 - <b>Data Type String</b>:
 
--- <b>输出控件</b> --
+-- <b>Output Controls</b> --
 - <b>Array Dim</b>:
 - <b>Secondary Type</b>:
 - <b>Primary Type</b>:
 
 ### Build Error Cluster.vi
 
-创建一个错误簇(error cluster)，以标准 LabVIEW 的方式从调用 VI 的调用链中构建源字符串。构建的源字符串形式为：
-"<B>调用的 VI</B> 在 <B>调用 VI 的调用者</B>-><B>调用 VI 的调用者的调用者</B>->等等...->等等..."
-可选的 'String to Prepend to source ("")' 字符串输入可用于在源字符串中添加额外的描述信息。如果存在这个字符串，它将用括号括起来，并添加到源字符串之前。
+Create an error cluster in the standard LabVIEW way by constructing the source string from the call chain of the calling VI. The constructed source string is in the form:
+"<b>Called VI</b> in <b>Caller of the calling VI</b>-><b>Caller of the caller of the calling VI</b>->and so on...->and so on..."
+An optional 'String to Prepend to source ("")' string input can be used to add additional descriptive information to the source string. If this string exists, it will be enclosed in parentheses and added before the source string.
 
--- <b>输入控件</b> --
-- <b>code</b>: 错误码
-- <b>String to Prepend to source ("")</b>: 错误信息字符串
+-- <b>Input Controls</b> --
+- <b>code</b>: Error code
+- <b>String to Prepend to source ("")</b>: Error message string
 
 ### Build Internal State String.vi
 
-构建包含 JKI 状态机状态、参数等信息的字符串。
+Construct a string containing JKI state machine states, arguments, and other information.
 
--- <b>输入控件</b> --s
-- <b>State</b>: 状态字符串
-- <b>Arguments ("")</b>: <b>State</b>的参数
-- <b>Arg-State ("")</b>: 发送此消息的模块在发送此消息时处于的状态
-- <b>Source ("")</b>: 发送此消息的模块名称
+-- <b>Input Controls</b> --
+- <b>State</b>: State string
+- <b>Arguments ("")</b>: Arguments for <b>State</b>
+- <b>Arg-State ("")</b>: State of the module sending this message at the time of sending
+- <b>Source ("")</b>: Name of the module sending this message
 
--- <b>输出控件</b> --
-- <b>CSM Message String</b>: 拼接生成的 CSM 消息字符串
+-- <b>Output Controls</b> --
+- <b>CSM Message String</b>: Concatenated CSM message string
 
 ### String History Cacher.vi
 
-保存当前输入的字符串到缓存，缓存的历史字符串，当超出最大长度限制时，最先进入的缓存字符串将被覆盖。用于调试CSM的历史状态。
+Save the current input string to the cache, caching the historical strings. When the maximum length limit is exceeded, the earliest cached string will be overwritten. Used for debugging the historical state of CSM.
 
--- <b>输入控件</b> --
-- <b>String</b>: 待缓存字符串
-- <b>length</b>: 缓存的历史字符串最大字符串长度
-- <b>Include Timestamp(F)</b>: 是否在每行开头包含时间戳。
+-- <b>Input Controls</b> --
+- <b>String</b>: String to be cached
+- <b>length</b>: Maximum length of the cached historical strings
+- <b>Include Timestamp(F)</b>: Whether to include a timestamp at the beginning of each line.
 
--- <b>输出控件</b> --
-- <b>String Cache</b>: 缓存的历史字符串
+-- <b>Output Controls</b> --
+- <b>String Cache</b>: Cached historical strings
 
 ### Trim Both Whitespace.vi
 
-开头、结尾或两者同时移除所有 ASCII 空白字符(空格、制表符、回车和换行)。
+Remove all ASCII whitespace characters (spaces, tabs, carriage returns, and line feeds) from the beginning, end, or both.
 
--- <b>输入控件</b> --
-- <b>string</b>: 待处理字符串
+-- <b>Input Controls</b> --
+- <b>string</b>: String to be processed
 
--- <b>输出控件</b> --
-- <b>trimmed string</b>: 处理后的字符串
+-- <b>Output Controls</b> --
+- <b>trimmed string</b>: Processed string
 
 ### uuid.vi
 
-根据标准方法生成 <b>Universally Unique Identifier(UUID)</b>。 例如:
+Generate a <b>Universally Unique Identifier (UUID)</b> according to standard methods. For example:
 - 59703F3AD837
 - 106A470BA5EC
 - 9B781DB313AF
 
--- <b>输出控件</b> --
-- <b>UUID</b>: 生成的 UUID
+-- <b>Output Controls</b> --
+- <b>UUID</b>: Generated UUID
 
 ### Random Change Flag.vi
 
-生成一个随机的数值，用于标记状态的变化，CSM中为了提高效率，有些地方的缓存(cache)利用这个标记来判断是否需要更新。
+Generate a random value to mark state changes. In CSM, this flag is used in some places to determine whether the cache needs to be updated for efficiency.
 
--- <b>输出控件</b> --
-- <b>Random Change Flag</b>: 生成的随机数值
+-- <b>Output Controls</b> --
+- <b>Random Change Flag</b>: Generated random value
 
 ### Global Log To String.vi
 
-全局日志(Global Log)数据簇转换为字符串。
+Convert the global log data cluster to a string.
 
--- <b>输入控件</b> --
-- <b>Log</b>: 全局日志数据簇
+-- <b>Input Controls</b> --
+- <b>Log</b>: Global log data cluster
 
--- <b>输出控件</b> --
-- <b>Log String</b>: 全局日志字符串
+-- <b>Output Controls</b> --
+- <b>Log String</b>: Global log string
 
 ### U8 Data to Hex Str.vi
 
--- <b>输入控件</b> --
+-- <b>Input Controls</b> --
 - <b>u8 Data[]</b>:
 
--- <b>输出控件</b> --
+-- <b>Output Controls</b> --
 - <b>HEX String (0-9,A-F)</b>:
+

@@ -1,72 +1,72 @@
 # CSM API
 
-## 全局日志(Global Log)
+## Global Log
 
-> [!NOTE] CSM 全局日志功能
-> CSM 全局日志功能，用于记录全局状态更改事件，用于调试、监控等场景。
+> [!NOTE] CSM Global Log Function
+> The CSM Global Log function is used to record global state change events for debugging, monitoring, and other scenarios.
 >
-> 可以记录的信息包括：
-> 1. CSM 状态机的状态修改
-> 2. CSM 模块间的消息通讯，包括数据返回
-> 3. CSM 模块的状态发布
-> 4. CSM 模块的创建和销毁
-> 5. CSM 模块的状态订阅和取消订阅
-> 6. CSM 模块处理的错误信息
-> 7. 用户自定义事件
+> The information that can be recorded includes:
+> 1. State changes of the CSM state machine
+> 2. Message communication between CSM modules, including data returns
+> 3. State publishing of CSM modules
+> 4. Creation and destruction of CSM modules
+> 5. Subscription and unsubscription of CSM module states
+> 6. Error information handled by CSM modules
+> 7. User-defined events
 >
-> 调试工具主要基于全局日志功能API进行开发，用户可以根据自己的需要，开发调试工具。
+> The debugging tools are mainly developed based on the Global Log function API. Users can develop debugging tools according to their needs.
 
 ### CSM - Global Log Event.vi
 
-获取 CSM 全局状态用户事件句柄
+Get the CSM global state user event handle
 
-> Ref: CSM 全局日志功能
+> Ref: CSM Global Log Function
 
--- <b>输出控件</b> --
-- <b>CSM Global Log Event</b>: CSM 全局状态用户事件句柄
+-- <b>Output Control</b> --
+- <b>CSM Global Log Event</b>: CSM global state user event handle
 
 ### CSM - Destroy Global Log Event.vi
 
-释放 CSM 全局状态用户事件句柄
+Release the CSM global state user event handle
 
-> Ref: CSM 全局日志功能
+> Ref: CSM Global Log Function
 
--- <b>输入控件</b> --
-- <b>CSM Global Log Event</b>: CSM 全局状态用户事件句柄
+-- <b>Input Control</b> --
+- <b>CSM Global Log Event</b>: CSM global state user event handle
 
 ### CSM - Generate User Global Log.vi
 
-生成用户全局事件，用途调试等场景。
+Generate user global events for debugging and other scenarios.
 
--- <b>输入控件</b> --
-- <b>Log</b>: 事件名称
-- <b>Arguments</b>: 事件参数
-- <b>From Who</b>: 来源
-- <b>ModuleName</b>: 模块名称
+-- <b>Input Control</b> --
+- <b>Log</b>: Event name
+- <b>Arguments</b>: Event parameters
+- <b>From Who</b>: Source
+- <b>ModuleName</b>: Module name
 
 ### CSM - Global Log Error Handler.vi
 
-CSM 错误处理函数。如果发生错误，错误信息将通过 CSM Global log 发布，在调试工具、后台 log 记录中都能记录。
+CSM error handling function. If an error occurs, the error information will be published through the CSM Global Log and can be recorded in debugging tools and background logs.
 
--- <b>输入控件</b> --
-- <b>Place("" to use VI's Name)</b>: 标记发生错误的地点
-- <b>Clear Error(T)</b>: 是否清除错误，默认清除
+-- <b>Input Control</b> --
+- <b>Place("" to use VI's Name)</b>: Mark the location where the error occurred
+- <b>Clear Error(T)</b>: Whether to clear the error, default is to clear
 
 ### CSM - Set Log Filter Rules.vi
 
-设置全局的过滤规则。这个规则应用在发送源头，当 log 满足过滤规则时，将不会在源头被发送，因此任何工具也将不能再检测到这个 log 记录。
+Set global filter rules. This rule is applied at the sending source. When the log meets the filter rules, it will not be sent from the source, so no tool will be able to detect this log record.
 
 ### CSM - List Log Filter Rules As Strings.vi
 
-列出全局的过滤规则。
+List global filter rules.
 
--- <b>输出控件</b> --
-- <b>Rule Strings</b>: 过滤规则字符串
+-- <b>Output Control</b> --
+- <b>Rule Strings</b>: Filter rule strings
 
 ### CSM - Convert Filter Rules.vi
 
-将过滤规则簇列表转换为过滤规则类实例。
+Convert the filter rule cluster list to filter rule class instances.
 
 ### CSM - Filter Global Log.vi
 
-根据规则判断是否log被过滤。这个VI 的过滤判断发生在订阅端，因此不会影响其他工具的订阅。
+Determine whether the log is filtered according to the rules. The filtering judgment of this VI occurs at the subscription end, so it does not affect the subscription of other tools.

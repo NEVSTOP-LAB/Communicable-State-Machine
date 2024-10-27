@@ -1,99 +1,99 @@
 # CSM API
 
-## 参数(Arguments)
+## Arguments
 
-> [!NOTE] CSM 消息关键字
-> 包括: '->','->|','-@','-&','<-", "\r", "\n", "//", ">>", ">>>", ">>>>", ";", ","
+> [!NOTE] CSM Message Keywords
+> Includes: '->','->|','-@','-&','<-", "\r", "\n", "//", ">>", ">>>", ">>>>", ";", ","
 
-> [!NOTE] CSM HEXSTR 格式参数
-> 为了在 CSM 参数中传递任何数据类型，CSM 默认提供了一种 名为 HEXSTR 的参数格式，用于传递任何数据类型。
-> HEXSTR：将 LabVIEW 任意数据类型转换为变体，然后将此变体的内存格式表示为十六进制字符串，以便在 CSM 参数中传递。
-> HEXSTR可以安全地用作状态参数，而不会破坏 CSM 消息字符串的解析。
+> [!NOTE] CSM HEXSTR Format Parameters
+> To pass any data type in CSM parameters, CSM provides a default parameter format called HEXSTR for passing any data type.
+> HEXSTR: Converts any LabVIEW data type to a variant, then represents this variant's memory format as a hexadecimal string for passing in CSM parameters.
+> HEXSTR can be safely used as a state parameter without disrupting the parsing of CSM message strings.
 
-> [!NOTE] CSM ERROR 参数
-> LabVIEW 错误簇信息通常包含回车，并且可能包含 CSM 的消息关键字，因此它通常不能直接作为 CSM 参数传递。
-> 虽然可以将错误簇信息转换为 HEXSTR 格式，但是它并不具备可读性，在 log 中不能直观的读取信息。
-> 因此为了在 CSM 参数中传递 LabVIEW 错误信息, 提供了一个标准的 CSM 错误参数格式。可以安全地用作状态参数，而不会破坏 CSM 消息字符串的解析。
-> 它的格式为: "[Error: error-code] error-description-As-safe-argument-string"
+> [!NOTE] CSM ERROR Parameters
+> LabVIEW error cluster information typically contains carriage returns and may include CSM message keywords, so it usually cannot be directly passed as a CSM parameter.
+> Although the error cluster information can be converted to HEXSTR format, it is not readable and cannot be intuitively read in logs.
+> Therefore, to pass LabVIEW error information in CSM parameters, a standard CSM error parameter format is provided. It can be safely used as a state parameter without disrupting the parsing of CSM message strings.
+> Its format is: "[Error: error-code] error-description-As-safe-argument-string"
 
 ### CSM - Keywords.vi
 
-CSM 消息中的关键字列表。
+List of keywords in CSM messages.
 
-> Ref: CSM 消息关键字
+> Ref: CSM Message Keywords
 
--- <b>输出控件</b> --
-- <b>keywords</b>: CSM 关键字列表
-- <b>keywords(%Hex format)</b>: CSM 关键字列表的%Hex格式
+-- <b>Output Controls</b> --
+- <b>keywords</b>: List of CSM keywords
+- <b>keywords(%Hex format)</b>: List of CSM keywords in %Hex format
 
 ### CSM - Make String Arguments Safe.vi
 
-将参数字符串中的 CSM 关键字转换为%Hex格式, 保证不影响 CSM 消息字符串解析。
+Converts CSM keywords in the argument string to %Hex format to ensure they do not affect the parsing of CSM message strings.
 
-> Ref: CSM 消息关键字
+> Ref: CSM Message Keywords
 
--- <b>输入控件</b> --
-- <b>Argument String</b>: 字符串参数
+-- <b>Input Controls</b> --
+- <b>Argument String</b>: String argument
 
--- <b>输出控件</b> --
-- <b>Safe Argument String</b>: 安全的字符串参数
+-- <b>Output Controls</b> --
+- <b>Safe Argument String</b>: Safe string argument
 
 ### CSM - Revert Arguments-Safe String.vi
 
-将安全的字符串参数中的 %Hex格式的 CSM 关键字转换回普通格式。
+Converts CSM keywords in %Hex format back to their normal format in the safe string argument.
 
-> Ref: CSM 消息关键字
+> Ref: CSM Message Keywords
 
--- <b>输入控件</b> --
-- <b>Safe Argument String</b>:  安全的字符串参数
+-- <b>Input Controls</b> --
+- <b>Safe Argument String</b>: Safe string argument
 
--- <b>输出控件</b> --
-- <b>Origin Argument String</b>: 字符串参数
+-- <b>Output Controls</b> --
+- <b>Origin Argument String</b>: Original string argument
 
 ### CSM - Convert Data to HexStr.vi
 
-将 LabVIEW 任意数据类型转换为为 HEXSTR 格式参数字符串。
+Converts any LabVIEW data type to a HEXSTR format parameter string.
 
-> Ref: CSM HEXSTR 格式参数
+> Ref: CSM HEXSTR Format Parameters
 
--- <b>输入控件</b> --
-- <b>Variant</b>: LabVIEW 数据，通过变体支持任意数据类型
+-- <b>Input Controls</b> --
+- <b>Variant</b>: LabVIEW data, supports any data type through variants
 
--- <b>输出控件</b> --
-- <b>HEXSTR</b>: CSM HEXSTR 格式参数
+-- <b>Output Controls</b> --
+- <b>HEXSTR</b>: CSM HEXSTR format parameter
 
 ### CSM - Convert HexStr to Data.vi
 
-将十六进制字符串参数转换回变体数据。
+Converts a hexadecimal string parameter back to variant data.
 
-> Ref: CSM HEXSTR 格式参数
+> Ref: CSM HEXSTR Format Parameters
 
--- <b>输入控件</b> --
-- <b>HEXSTR</b>: CSM HEXSTR 格式参数
+-- <b>Input Controls</b> --
+- <b>HEXSTR</b>: CSM HEXSTR format parameter
 
--- <b>输出控件</b> --
-- <b>Variant</b>: LabVIEW 数据，通过变体支持任意数据类型
+-- <b>Output Controls</b> --
+- <b>Variant</b>: LabVIEW data, supports any data type through variants
 
 ### CSM - Convert Error to Argument.vi
 
-将 LabVIEW 错误簇转换为 CSM 错误参数格式。
+Converts a LabVIEW error cluster to a CSM error parameter format.
 
-> Ref: CSM ERROR 参数
+> Ref: CSM ERROR Parameters
 
--- <b>输入控件</b> --
-- <b>error</b>: LabVIEW 错误簇
+-- <b>Input Controls</b> --
+- <b>error</b>: LabVIEW error cluster
 
--- <b>输出控件</b> --
-- <b>Argument</b>: CSM 错误参数格式
+-- <b>Output Controls</b> --
+- <b>Argument</b>: CSM error parameter format
 
 ### CSM - Convert Argument to Error.vi
 
-将 CSM 错误参数格式转换为 LabVIEW 错误簇。
+Converts a CSM error parameter format back to a LabVIEW error cluster.
 
-> Ref: CSM ERROR 参数
+> Ref: CSM ERROR Parameters
 
--- <b>输入控件</b> --
-- <b>Argument</b>: CSM 错误参数格式
+-- <b>Input Controls</b> --
+- <b>Argument</b>: CSM error parameter format
 
--- <b>输出控件</b> --
-- <b>error</b>: LabVIEW 错误簇
+-- <b>Output Controls</b> --
+- <b>error</b>: LabVIEW error cluster

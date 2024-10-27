@@ -10,7 +10,7 @@
 
 ### CSM Dummy Module.vi
 
--- <b>输入控件</b> --
+-- <b>Input Controls</b> --
 - <b>Init State("Macro: Initialize")</b>:
 - <b>Name("" to use uuid)</b>:
 
@@ -34,17 +34,17 @@
 
 ### csmdoc_import_all_csm_VI_description_doc.vi
 
-选择 CSM VI 功能描述的 markdown 文件，导入到所有的VI。
+Select the markdown file describing the functionality of CSM VIs and import it into all VIs.
 
 -- <b>Inputs</b> --
-- <b>Path</b>: CSM VI 功能描述的 markdown 文件路径
+- <b>Path</b>: Path to the markdown file describing the functionality of CSM VIs
 
 ### csmdoc_export_all_csm_VI_description_doc.vi
 
-分析所有CSM VI, 将 VI 功能描述导出到 markdown 文件中。
+Analyze all CSM VIs and export the VI functionality descriptions to a markdown file.
 
 -- <b>Inputs</b> --
-- <b>Path</b>: CSM VI 功能描述的 markdown 文件路径
+- <b>Path</b>: Path to the markdown file describing the functionality of CSM VIs
 
 ### csmdoc_export_VI_description.vi
 

@@ -1,118 +1,119 @@
 # CSM API
 
-> [!NOTE] 名称拼接API
-> 这个 VI 只操作了模块名称字符串，并没有实际功能，因此当熟悉 CSM 规则后，可以直接输入对应的名称字符串和规则符号，不是必须调用此API.
+> [!NOTE] Name Concatenation API
+> This VI only operates on the module name string and has no actual functionality. Therefore, once familiar with CSM rules, you can directly input the corresponding name string and rule symbols without necessarily calling this API.
 
-## 工作者模式 (Work Mode API)
+## Worker Mode API
 
-> [!NOTE] CSM 工作者模式(worker mode)
+> [!NOTE] CSM Worker Mode
 >
-> 一个 CSM 模块，通过实例化多个实例，申请的名称后添加“#”,并共享相同的消息队列，实现工作者模式。
-> - 从外部调用上看，这些实例一起组成了一个复合的模块，命名为 Worker Agent。
-> - 每一个实例，命名为 Worker。
+> A CSM module, by instantiating multiple instances, appends "#" to the requested name and shares the same message queue to achieve worker mode.
+> - From an external call perspective, these instances together form a composite module named Worker Agent.
+> - Each instance is named Worker.
 >
-> 行为：
-> 外部调用者可以认为 Worker Agent 就是一个CSM模块，可以进行消息通讯、状态注册等操作。
-> 从内部看，空闲的 Worker 会从 Worker Agent 消息队列中取出消息，处理消息。因此，Worker 模式能够实现一个 CSM 模块的并发消息处理。
+> Behavior:
+> External callers can consider Worker Agent as a CSM module that can perform message communication, state registration, and other operations.
+> Internally, idle Workers will fetch messages from the Worker Agent message queue and process them. Therefore, the Worker mode can achieve concurrent message processing for a CSM module.
 >
-> 举例：
-> //申请模块名称为 module#, module 是 Worker Agent名称，实例化 4 个实例，这四个实例的名字可能为：
+> Example:
+> // Request module name as module#, module is the Worker Agent name, instantiate 4 instances, the names of these four instances might be:
 > // - module#59703F3AD837
 > // - module#106A470BA5EC
-> // 不能直接和 worker 进行通讯，需要和 Worker Agent 通讯，例如
-> csm message >> arguments -@ module //同步消息，空闲的 worker 将处理此消息
-> csm message >> arguments -> module //同步消息，空闲的 worker 将处理此消息
+> // Cannot communicate directly with workers, need to communicate with Worker Agent, for example:
+> csm message >> arguments -@ module // synchronous message, idle worker will process this message
+> csm message >> arguments -> module // synchronous message, idle worker will process this message
 >
-> 应用场景：
-> 1. 10086 接线员的场景
-> 2. 下载器并发下载的场景
-> 3. 编译器并发编译的场景
-> 4. TCP Server 处理多个Client连接
+> Application Scenarios:
+> 1. Customer service representative scenario
+> 2. Concurrent downloader scenario
+> 3. Concurrent compiler scenario
+> 4. TCP Server handling multiple client connections
 
 ### CSM - Mark As Worker Module.vi
 
-在CSM名称后添加“#”，以标记此模块工作在工作者模式下。
+Add "#" to the CSM name to mark this module as operating in worker mode.
 
-> Ref: 名称拼接API
-> Ref: CSM 工作者模式(worker mode)
+> Ref: Name Concatenation API
+> Ref: CSM Worker Mode
 
--- <b>输入控件</b> --
-- <b>CSM Name</b>: CSM 模块名称
+-- <b>Input Controls</b> --
+- <b>CSM Name</b>: CSM module name
 
--- <b>输出控件</b> --
-- <b>CSM Name(marked as worker)</b>: 添加“#”标记的CSM模块名称
+-- <b>Output Controls</b> --
+- <b>CSM Name (marked as worker)</b>: CSM module name with "#" mark
 
-## 责任链模式 (Chain of Responsibility API) - 待完善
+## Chain of Responsibility Mode API - To Be Completed
 
-> [!NOTE] CSM 责任链模式(Chain of Responsibility mode)
+> [!NOTE] CSM Chain of Responsibility Mode
 >
-> 多个 CSM 模块，申请的名称后添加“$”,组成处理事务的一个链条，通过责任链模式形成一个完整的模块。
+> Multiple CSM modules, with names appended with "$", form a chain to handle transactions, creating a complete module through the chain of responsibility mode.
 
-> - 从外部调用上看，这些实例一起组成了一个复合的模块，命名为 Chain。
-> - 每一个实例，命名为 chain node。
+> - From an external call perspective, these instances together form a composite module named Chain.
+> - Each instance is named chain node.
 >
-> 行为：
-> 外部调用者可以认为 Chain 就是一个 CSM 模块，可以进行消息通讯、状态注册等操作。
-> 从内部看，Nodes 会根据排列顺序依次尝试处理消息，当 node 具有当前消息处理的能力时，消息被处理，不再向后传递。
+> Behavior:
+> External callers can consider Chain as a CSM module that can perform message communication, state registration, and other operations.
+> Internally, nodes will attempt to process messages in sequence. When a node has the capability to handle the current message, the message is processed and not passed further.
 >
-> 举例：
-> //申请模块名称为 module$, module 是 chain 名称，实例化 4 个实例，这四个实例的名字可能为：
+> Example:
+> // Request module name as module$, module is the chain name, instantiate 4 instances, the names of these four instances might be:
 > // - module$1
 > // - module$2
 > // - module$3
 > // - module$4
-> // 组成的 Chain 顺序为 module$1 >> module$2 >> module$3 >> module$4
-> // 假设 module$3 module$4 能够处理 "csm message"
+> // The Chain sequence is module$1 >> module$2 >> module$3 >> module$4
+> // Suppose module$3 and module$4 can handle "csm message"
 > csm message >> arguments -@ module
-> // 这个消息将被 module$3 处理, module$4 不会响应
+> // This message will be handled by module$3, module$4 will not respond
 >
-> 应用场景：
-> 1. 权限审批过程，按照职位层级，更高级别的经理能够审批更多的事件
-> 2. 功能拼接，不同模块实现不同的任务，通过拼接可以完成不同功能合集的组合
-> 3. 功能覆盖，通过覆盖实现OOP中的重载
+> Application Scenarios:
+> 1. Approval process, where higher-level managers can approve more events according to their position level
+> 2. Function concatenation, where different modules perform different tasks, and concatenation can complete combinations of different functional sets
+> 3. Function override, achieving OOP overloading through override
 
 ### CSM - Mark As Chain Module.vi
 
-[!WARNING] 此组功能还未完全验证过，请谨慎使用。
+[!WARNING] This set of functions has not been fully verified, please use with caution.
 
-> Ref: CSM 责任链模式(Chain of Responsibility mode)
-> Ref: 名称拼接API
+> Ref: CSM Chain of Responsibility Mode
+> Ref: Name Concatenation API
 
--- <b>输入控件</b> --
-- <b>CSM Name</b>:  CSM 模块名称
-- <b>Order</b>:  责任链模式下的顺序
+-- <b>Input Controls</b> --
+- <b>CSM Name</b>: CSM module name
+- <b>Order</b>: Order in the chain of responsibility mode
 
--- <b>输出控件</b> --
-- <b>CSM Name(marked as Chain)</b>:添加“$”标记的CSM模块名称
+-- <b>Output Controls</b> --
+- <b>CSM Name (marked as Chain)</b>: CSM module name with "$" mark
 
-## 旁路循环支持(Side-Loop Support)
+## Side-Loop Support
 
 ### CSM - Request CSM to Post Message.vi
 
-申请 CSM 发送消息。通常用于和CSM并行的功能循环，这些功能循环和 CSM 一起完成完整模块功能。
+Request CSM to send a message. Typically used for functional loops running in parallel with CSM, these loops complete the full module functionality together with CSM.
 
--- <b>输入控件</b> --
-- <b>Module Name</b>:发送状态的CSM
-- <b>Status</b>: 将被广播的状态
-- <b>Arguments ("")</b>: 将被广播的状态参数
-- <b>Target Module</b>:目标模块
+-- <b>Input Controls</b> --
+- <b>Module Name</b>: CSM sending the status
+- <b>Status</b>: Status to be broadcasted
+- <b>Arguments ("")</b>: Parameters of the status to be broadcasted
+- <b>Target Module</b>: Target module
 
 ### CSM - Request CSM to Broadcast Status Change.vi
 
-申请 CSM 发布状态。通常用于和CSM并行的功能循环，这些功能循环和 CSM 一起完成完整模块功能。
+Request CSM to publish status. Typically used for functional loops running in parallel with CSM, these loops complete the full module functionality together with CSM.
 
--- <b>输入控件</b> --
-- <b>Module Name</b>:发送状态的CSM
-- <b>Status</b>: 将被广播的状态
-- <b>Arguments ("")</b>: 将被广播的状态参数
-- <b>Broadcast(T)</b>: 控制是否广播的开关输入
+-- <b>Input Controls</b> --
+- <b>Module Name</b>: CSM sending the status
+- <b>Status</b>: Status to be broadcasted
+- <b>Arguments ("")</b>: Parameters of the status to be broadcasted
+- <b>Broadcast (T)</b>: Control switch input for broadcasting
 
 ### CSM - Module Turns Invalid.vi
 
-检查CSM是否已经退出。通常用于和CSM并行的功能循环，这些功能循环和 CSM 一起完成完整模块功能。 本VI用于并行循环的退出条件。
+Check if CSM has exited. Typically used for functional loops running in parallel with CSM, these loops complete the full module functionality together with CSM. This VI is used as the exit condition for parallel loops.
 
--- <b>输入控件</b> --
-- <b>CSM Name</b>: 模块名称
+-- <b>Input Controls</b> --
+- <b>CSM Name</b>: Module name
 
--- <b>输出控件</b> --
-- <b>Turn Invalid(Exit)?</b>: 是否已经退出
+-- <b>Output Controls</b> --
+- <b>Turn Invalid (Exit)?</b>: Whether it has exited
+
