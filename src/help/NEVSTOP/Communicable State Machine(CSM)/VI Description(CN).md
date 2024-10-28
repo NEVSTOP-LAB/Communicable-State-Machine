@@ -9,7 +9,7 @@
 - [07. 全局日志(Global Log)](./VI%20Description(CN)%20-%2007.%20全局日志(Global%20Log).md)
 - [08. 高级模式](./VI%20Description(CN)%20-%2008.%20高级模式.md)
 - [09. 内置插件(Built-in Addons)](./VI%20Description(CN)%20-%2009.%20内置插件(Build-in%20Addons).md)
-- [10. 工具VI(Utiliy VIs)](./VI%20Description(CN)%20-%2010.%20工具VI(Utility%20VIs).md)
+- [10. 工具VI(Utility VIs)](./VI%20Description(CN)%20-%2010.%20工具VI(Utility%20VIs).md)
 - [11. CSM-Helper API](./VI%20Description(CN)%20-%2011.%20CSM-Helper%20API.md)
 - [12. Debug,Doc,Tools](./VI%20Description(CN)%20-%2012.%20Debug,Doc,Tools.md)
 - [13. Internal](./VI%20Description(CN)%20-%2013.%20Internal.md)
@@ -44,11 +44,11 @@
 
 ### Parse VI Documentation String.vi
 
--- <b>Inputs</b> --
+-- <b>Controls</b> --
 - <b>NOTE-Map</b>:
 - <b>Documentation</b>:
 
--- <b>Outputs</b> --
+-- <b>Indicators</b> --
 - <b>Ctrl-Doc Map</b>:
 - <b>Control Docs</b>:
 - <b>Core Doc</b>:
@@ -56,13 +56,13 @@
 
 ### Gevt-ThreadQueueName.vi
 
--- <b>Outputs</b> --
+-- <b>Indicators</b> --
 - <b>ThreadQueueName</b>:
 
 ### CSM - Status Change Event.vi
 
--- <b>Inputs</b> --
+-- <b>Controls</b> --
 - <b>CSM Module</b>:
 
--- <b>Outputs</b> --
+-- <b>Indicators</b> --
 - <b>Status Change Event</b>:

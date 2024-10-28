@@ -19,7 +19,7 @@ The CSM Watchdog thread ensures that all asynchronously started CSM modules exit
 
 > Ref: Principle of CSM WatchDog
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>WatchdogQ</b>: Watchdog queue resource
 
 ### CSM File Logger
@@ -34,7 +34,7 @@ Starts the CSM event file logging function.
 
 > Ref: Principle of CSM File Logger
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>Log File Path</b>: Path to the log file
 - <b>Enable? (T)</b>: Enable or not
 - <b>log limit</b>: Log file limit
@@ -43,7 +43,7 @@ Starts the CSM event file logging function.
 - <b>Filter Rules</b>: Time filter rules
 - <b>Exit When All Module Exist?(F)</b>: Exit after all CSM modules exit or not
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>LogFile</b>: CSM log file path
 - <b>WatchDogQueue</b>: WatchDog resource handle
 
@@ -53,7 +53,7 @@ Starts the CSM Global Log file logging thread VI.
 
 > Ref: Principle of CSM File Logger
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>Log File Path</b>: Path to the log file
 - <b>log limit</b>: Log file limit
 - <b>Timestamp format</b>: Timestamp format
@@ -73,36 +73,36 @@ Starts the CSM Global Log file logging thread VI.
 
 Checks the loop when exiting.
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>States Queue</b>: The entire state queue is connected to this input
 - <b>Exiting States</b>: States required for exit
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>Remaining States</b>: Remaining message queue
 
 #### CSMLS - Append Continuous State.vi
 
 Adds a loop state.
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>States Queue</b>: The entire state queue is connected to this input
 - <b>Loop State(s) and Arguments</b>: Loop states
 - <b>Continuous State</b>: Loop state name
 - <b>Continuous Arguments ("")</b>: Loop state arguments
 - <b>Append(T)</b>: Append or not
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>Remaining States</b>: Remaining message queue
 
 #### CSMLS - Define Loop State(s).vi
 
 Defines loop operations.
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>States Queue</b>: The entire state queue is connected to this input
 - <b>Loop State(s) and Arguments</b>: Loop states
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>Remaining States</b>: Remaining message queue
 
 #### CSMLS - Remove Loop Tag and previous State(s) to Break.vi
@@ -120,10 +120,10 @@ If the CSM message queue contains the following messages, executing this API wil
 
 This means no DAQ operations will be performed, and it will immediately proceed to stop and release.
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>States Queue</b>: The entire state queue is connected to this input
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>Remaining States</b>: Remaining message queue
 
 #### CSMLS - Remove Loop Tag to Break.vi
@@ -141,9 +141,8 @@ If the CSM message queue contains the following messages, executing this API wil
 
 This means the current DAQ operation will still be performed, then it will proceed to stop and release.
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>States Queue</b>: The entire state queue is connected to this input
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>Remaining States</b>: Remaining message queue
-

@@ -22,7 +22,7 @@ List of keywords in CSM messages.
 
 > Ref: CSM Message Keywords
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>keywords</b>: List of CSM keywords
 - <b>keywords(%Hex format)</b>: List of CSM keywords in %Hex format
 
@@ -32,10 +32,10 @@ Converts CSM keywords in the argument string to %Hex format to ensure they do no
 
 > Ref: CSM Message Keywords
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>Argument String</b>: String argument
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>Safe Argument String</b>: Safe string argument
 
 ### CSM - Revert Arguments-Safe String.vi
@@ -44,10 +44,10 @@ Converts CSM keywords in %Hex format back to their normal format in the safe str
 
 > Ref: CSM Message Keywords
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>Safe Argument String</b>: Safe string argument
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>Origin Argument String</b>: Original string argument
 
 ### CSM - Convert Data to HexStr.vi
@@ -56,10 +56,10 @@ Converts any LabVIEW data type to a HEXSTR format parameter string.
 
 > Ref: CSM HEXSTR Format Parameters
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>Variant</b>: LabVIEW data, supports any data type through variants
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>HEXSTR</b>: CSM HEXSTR format parameter
 
 ### CSM - Convert HexStr to Data.vi
@@ -68,10 +68,10 @@ Converts a hexadecimal string parameter back to variant data.
 
 > Ref: CSM HEXSTR Format Parameters
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>HEXSTR</b>: CSM HEXSTR format parameter
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>Variant</b>: LabVIEW data, supports any data type through variants
 
 ### CSM - Convert Error to Argument.vi
@@ -80,10 +80,10 @@ Converts a LabVIEW error cluster to a CSM error parameter format.
 
 > Ref: CSM ERROR Parameters
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>error</b>: LabVIEW error cluster
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>Argument</b>: CSM error parameter format
 
 ### CSM - Convert Argument to Error.vi
@@ -92,8 +92,8 @@ Converts a CSM error parameter format back to a LabVIEW error cluster.
 
 > Ref: CSM ERROR Parameters
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>Argument</b>: CSM error parameter format
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>error</b>: LabVIEW error cluster

@@ -18,7 +18,7 @@ Creates a template for a CSM module without a user interface.
 > Ref: CSM Name Rules
 > Ref: CSM Initialization State
 
--- <b>Inputs</b> --
+-- <b>Controls</b> --
 - <b>Name("" to use uuid)</b>: CSM Module Name
 - <b>Init State("Macro: Initialize")</b>: Initialization State, default is "Macro: Initialize"
 
@@ -29,7 +29,7 @@ Creates a template for a CSM module with a user interface, including a user even
 > Ref: CSM Name Rules
 > Ref: CSM Initialization State
 
--- <b>Inputs</b> --
+-- <b>Controls</b> --
 - <b>Name("" to use uuid)</b>: CSM Module Name
 - <b>Init State("Macro: Initialize")</b>: Initialization State, default is "Macro: Initialize"
 
@@ -40,7 +40,7 @@ Creates a compact template for a CSM module without a user interface.
 > Ref: CSM Name Rules
 > Ref: CSM Initialization State
 
--- <b>Inputs</b> --
+-- <b>Controls</b> --
 - <b>Name("" to use uuid)</b>: CSM Module Name
 - <b>Init State("Macro: Initialize")</b>: Initialization State, default is "Macro: Initialize"
 
@@ -51,7 +51,7 @@ Creates a compact template for a CSM module with a user interface, including a u
 > Ref: CSM Name Rules
 > Ref: CSM Initialization State
 
--- <b>Inputs</b> --
+-- <b>Controls</b> --
 - <b>Name("" to use uuid)</b>: CSM Module Name
 - <b>Init State("Macro: Initialize")</b>: Initialization State, default is "Macro: Initialize"
 
@@ -61,21 +61,21 @@ Creates a compact template for a CSM module with a user interface, including a u
 
 Obtains the user event handle for CSM modules with an event structure. This event interrupts the wait in the event structure when a new message is received, allowing execution to continue.
 
--- <b>Inputs</b> --
+-- <b>Controls</b> --
 - <b>Name("" to use uuid) in</b>: CSM Module Name
 
--- <b>Outputs</b> --
+-- <b>Indicators</b> --
 - <b>New State Notifier Event</b>: User event handle to interrupt the wait in the event structure when a message is received
 
 #### Timeout Selector.vi
 
 Used in templates with a user event structure.
 
--- <b>Inputs</b> --
+-- <b>Controls</b> --
 - <b>Timeout Expected</b>: Expected timeout setting
 - <b>Remaining States</b>: Outputs 0 if there are remaining states; otherwise, outputs the expected value
 
--- <b>Outputs</b> --
+-- <b>Indicators</b> --
 - <b>Timeout</b>: Timeout setting after arbitration
 
 #### Error Handler for Templates
@@ -84,7 +84,7 @@ Used in templates with a user event structure.
 
 Generates a critical error message for the CSM module, usually due to a duplicate module name.
 
--- <b>Inputs</b> --
+-- <b>Controls</b> --
 - <b>Arguments(as Reason)</b>: Reason for the error
 - <b>CSM Name</b>: CSM Module Name
 
@@ -96,14 +96,14 @@ Generates a target module not found error message for the CSM module when a CSM 
 
 Generates a target module not found error message for the CSM module.
 
--- <b>Inputs</b> --
+-- <b>Controls</b> --
 - <b>Arguments(as CSM Name)</b>: Connection parameters, passing the target module name
 
 ##### CSM Target Timeout Error.vi
 
 Generates a timeout error message for the target module of the CSM.
 
--- <b>Inputs</b> --
+-- <b>Controls</b> --
 - <b>Arguments(as CSM Name)</b>: Connection parameters, passing the target module name
 
 ##### CSM Unhandled State Error.vi
@@ -112,6 +112,6 @@ Generates an unhandled state error message for the CSM module. Possible scenario
 - An error occurs when an undefined state is used in the internal message rotation (consistent with JKISM behavior).
 - An error occurs when an undefined state is received from an external source.
 
--- <b>Inputs</b> --
+-- <b>Controls</b> --
 - <b>Undefined State</b>: Undefined State
 - <b>CSM Name</b>: CSM Module Name

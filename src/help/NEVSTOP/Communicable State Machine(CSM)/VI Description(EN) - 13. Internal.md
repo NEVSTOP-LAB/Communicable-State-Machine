@@ -4,200 +4,200 @@
 
 ### Naming Check.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>Name("" to use uuid)</b>:
 Returns any argument(s) that may be used in the current state string. These arguments come after the ">>" characters
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>Name(dup)</b>:
 Returns any argument(s) that may be used in the current state string. These arguments come after the ">>" characters
 
 ### Check.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>BroadcastRegistry in</b>:
 - <b>Status</b>:
 - <b>Source</b>:
 - <b>Target</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>BroadcastRegistry out</b>:
 - <b>Response Message Info</b>:
 
 ### Delete Source Module.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>BroadcastRegistry in</b>:
 - <b>Source</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>BroadcastRegistry out</b>:
 
 ### Delete Target Module.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>BroadcastRegistry in</b>:
 - <b>Source</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>BroadcastRegistry out</b>:
 
 ### Initialize.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>BroadcastRegistry in</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>BroadcastRegistry out</b>:
 
 ### List Entries.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>BroadcastRegistry in</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>BroadcastRegistry out</b>:
 - <b>Array</b>:
 
 ### List Status in Registry.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>BroadcastRegistry in</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>BroadcastRegistry out</b>:
 - <b>Status</b>:
 
 ### Register.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>BroadcastRegistry in</b>:
 - <b>status</b>:
 - <b>source</b>:
 - <b>api</b>:
 - <b>target</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>BroadcastRegistry out</b>:
 
 ### Remove Module.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>BroadcastRegistry in</b>:
 - <b>Source</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>BroadcastRegistry out</b>:
 
 ### Unregister.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>BroadcastRegistry in</b>:
 - <b>Status</b>:
 - <b>Source</b>:
 - <b>api</b>:
 - <b>Target</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>BroadcastRegistry out</b>:
 
 ### Broadcast Item Key.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>status</b>:
 - <b>target</b>:
 - <b>source</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>key</b>:
 
 ### Preview.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>BroadcastRegistry in</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>Registry</b>:
 - <b>BroadcastRegistry out</b>:
 
 ### Remove response API from List.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>API</b>:
 - <b>output cluster in</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>output cluster out</b>:
 
 ### Concatenate State with Arguments.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>Arguments</b>:
 - <b>State</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>State with Arguments</b>:
 
 ### CSM-Name to CSM-Mode.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>String</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>ParentCSM Name</b>:
 - <b>CSM Mode</b>:
 - <b>Requested Name</b>:
 
 ### Format Timestamp.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>timestamp</b>:
 - <b>format string</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>String</b>:
 
 ### Hex Str to U8 Data.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>HEX String (0-9,A-F)</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>u8 Data[]</b>:
 
 ### Parse Next Single-line State.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>States Queue</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>Next Single-line State</b>:
 - <b>Remaining States Queue</b>:
 
 ### Remove Comments from Line.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>single-line text</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>single-line text without comments</b>:
 
 ### Splite Reason String Part.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>Single-line -& Reason</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>CSM Name</b>:
 - <b>`State</b>:
 - <b>`Arguments</b>:
 
 ### Splite Single-line Message.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>single-line text</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>operator</b>:
 - <b>state</b>:
 - <b>args</b>:
@@ -205,37 +205,37 @@ Returns any argument(s) that may be used in the current state string. These argu
 
 ### Trim Single line Text.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>single-line text</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>trimmed text</b>:
 
 ### CSM Not Allowed Message.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>State</b>:
 - <b>CSM</b>:
 
 ### Cache-Broadcast Registry Search Result.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>CSM Name</b>:
 - <b>Broadcast state</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>Array</b>:
 
 ### FGV-BroadcastRegistry.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>Source</b>:
 - <b>Target</b>:
 - <b>Status</b>:
 - <b>API</b>:
 - <b>Operation</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>response message</b>:
 
 ### global-Broadcast Cache Change Flag.vi
@@ -252,131 +252,131 @@ Returns any argument(s) that may be used in the current state string. These argu
 
 ### Cache-GEvt Filter Object.vi
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>CSM:LogFilter.lvclass</b>:
 
 ### FGV-GEvt Filter Obj.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>Set(T)/Get(F)</b>:
 - <b>Rules-v1</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>CSM:LogFilter.lvclass</b>:
 
 ### FGV-GlobalEventRef.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>Create(F)</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>CSM Global Log Event</b>:
 
 ### FGV-StatusChangeEventRef.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>Name("" to use uuid) in</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>Status Change Event</b>:
 
 ### GEvt-BackgroundThread.vi
 
 ### GEvt-Convert Filter Rules - v1.0.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>Rules-v1</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>GlobalLogFilter</b>:
 
 ### GEvt-Filter Global Log - v1.0.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>Rules-v1</b>:
 - <b>Cross CSM Data (in)</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>Matched? (dup)</b>:
 - <b>Cross CSM Data</b>:
 
 ### GEvt-Generate Complete Log.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>CSM Global Log Event</b>:
 - <b>event data</b>:
 - <b>Enable?</b>:
 - <b>CSM:LogFilter.lvclass</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>CSM Global Log Event out</b>:
 
 ### GEvt-Generate Interrupt Log.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>CSM Global Log Event</b>:
 - <b>Current State</b>:
 - <b>Arguments</b>:
 - <b>Name("" to use uuid)</b>:
 - <b>CSM:LogFilter.lvclass</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>CSM Global Log Event out</b>:
 - <b>event data</b>:
 
 ### GEvt-Generate Module Created Log.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>CSM Global Log Event</b>:
 - <b>Name("" to use uuid)</b>:
 - <b>Created?</b>:
 - <b>CSM:LogFilter.lvclass</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>CSM Global Log Event out</b>:
 - <b>event data</b>:
 
 ### GEvt-Generate Module Destroyed Log.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>CSM Global Log Event</b>:
 - <b>Name("" to use uuid)</b>:
 - <b>Enable?</b>:
 - <b>CSM:LogFilter.lvclass</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>CSM Global Log Event out</b>:
 - <b>event data</b>:
 
 ### GEvt-Generate Register Log.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>CSM Global Log Event</b>:
 - <b>Current State</b>:
 - <b>Arguments</b>:
 - <b>Name("" to use uuid)</b>:
 - <b>CSM:LogFilter.lvclass</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>CSM Global Log Event out</b>:
 - <b>event data</b>:
 
 ### GEvt-Generate Remaining States Log.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>CSM Global Log Event</b>:
 - <b>Remaining States</b>:
 - <b>Name("" to use uuid)</b>:
 - <b>Enable?</b>:
 - <b>CSM:LogFilter.lvclass</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>CSM Global Log Event out</b>:
 - <b>event data</b>:
 
 ### GEvt-Generate State Change Log.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>CSM Global Log Event</b>:
 - <b>Current State</b>:
 - <b>Arguments</b>:
@@ -386,246 +386,246 @@ Returns any argument(s) that may be used in the current state string. These argu
 - <b>Name("" to use uuid)</b>:
 - <b>CSM:LogFilter.lvclass</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>CSM Global Log Event out</b>:
 - <b>event data</b>:
 
 ### GEvt-Generate Status Log.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>CSM Global Log Event</b>:
 - <b>Current State</b>:
 - <b>Arguments</b>:
 - <b>Name("" to use uuid)</b>:
 - <b>CSM:LogFilter.lvclass</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>CSM Global Log Event out</b>:
 - <b>event data</b>:
 
 ### GEvt-Generate Unregister Log.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>CSM Global Log Event</b>:
 - <b>Current State</b>:
 - <b>Arguments</b>:
 - <b>Name("" to use uuid)</b>:
 - <b>CSM:LogFilter.lvclass</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>CSM Global Log Event out</b>:
 - <b>event data</b>:
 
 ### GEvt-Generate with Rule Check.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>LogFilter in</b>:
 - <b>event data</b>:
 - <b>CSM Global Log Event in</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>CSM Global Log Event out</b>:
 
 ### GEvt-Set Source Filter Rules - v1.0.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>Rules-v1</b>:
 
 ### GEvt-ThreadQueueName.vi
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>ThreadQueueName</b>:
 
 ### GEvt-WatchdogThread.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>WatchDogQ</b>:
 
 ### Filter Check.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>Cross CSM Data in</b>:
 - <b>GlobalLogFilter in</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>Matched? (dup)</b>:
 - <b>Cross CSM Data out</b>:
 - <b>GlobalLogFilter.lvclass (dup)</b>:
 
 ### List Rules as Strings.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>GlobalLogFilter in</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>Rule Strings</b>:
 - <b>GlobalLogFilter out</b>:
 
 ### CSM Check - LogType.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>Matched Previous?</b>:
 - <b>Cross CSM Data (in)</b>:
 - <b>GlobalLogFilter.lvclass</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>Matched? (dup)</b>:
 - <b>Cross CSM Data</b>:
 - <b>GlobalLogFilter.lvclass (dup)</b>:
 
 ### CSM Check - State.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>Matched Previous?</b>:
 - <b>Cross CSM Data (in)</b>:
 - <b>GlobalLogFilter.lvclass</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>Matched? (dup)</b>:
 - <b>Cross CSM Data</b>:
 - <b>GlobalLogFilter.lvclass (dup)</b>:
 
 ### CSM Check - StateType.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>Matched Previous?</b>:
 - <b>Cross CSM Data (in)</b>:
 - <b>GlobalLogFilter.lvclass</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>Matched? (dup)</b>:
 - <b>Cross CSM Data</b>:
 - <b>GlobalLogFilter.lvclass (dup)</b>:
 
 ### Group Check - CSM.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>Matched Previous?</b>:
 - <b>Cross CSM Data (in)</b>:
 - <b>GlobalLogFilter.lvclass</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>Matched? (dup)</b>:
 - <b>Cross CSM Data</b>:
 - <b>GlobalLogFilter.lvclass (dup)</b>:
 
 ### Group Check - LogType.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>Matched Previous?</b>:
 - <b>Cross CSM Data (in)</b>:
 - <b>GlobalLogFilter.lvclass</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>Matched? (dup)</b>:
 - <b>Cross CSM Data</b>:
 - <b>GlobalLogFilter.lvclass (dup)</b>:
 
 ### Group Check - State.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>Matched Previous?</b>:
 - <b>Cross CSM Data (in)</b>:
 - <b>GlobalLogFilter.lvclass</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>Matched? (dup)</b>:
 - <b>Cross CSM Data</b>:
 - <b>GlobalLogFilter.lvclass (dup)</b>:
 
 ### Group Check - StateType.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>Matched Previous?</b>:
 - <b>Cross CSM Data (in)</b>:
 - <b>GlobalLogFilter.lvclass</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>Matched? (dup)</b>:
 - <b>Cross CSM Data</b>:
 - <b>GlobalLogFilter.lvclass (dup)</b>:
 
 ### Set CSM LogType Filter.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>LogType</b>:
 - <b>GlobalLogFilter in</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>GlobalLogFilter out</b>:
 
 ### Set CSM State Filter.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>CSM:State</b>:
 - <b>GlobalLogFilter in</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>GlobalLogFilter out</b>:
 
 ### Set CSM StateType Filter.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>LogType</b>:
 - <b>GlobalLogFilter in</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>GlobalLogFilter out</b>:
 
 ### Set Global CSM Filter.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>Group:CSM</b>:
 - <b>GlobalLogFilter in</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>GlobalLogFilter out</b>:
 
 ### Set Global LogType Filter.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>Group:LogType</b>:
 - <b>GlobalLogFilter in</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>GlobalLogFilter out</b>:
 
 ### Set Global State Filter.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>Group:State</b>:
 - <b>GlobalLogFilter in</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>GlobalLogFilter out</b>:
 
 ### Set Global StateType Filter.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>Group:LogType</b>:
 - <b>GlobalLogFilter in</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>GlobalLogFilter out</b>:
 
 ### Log State Type.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>Complete(T)/Start(F)</b>:
 - <b>Source Module</b>:
 - <b>¡®State</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>CSM_GlobalLog_STATE_TYPE</b>:
 
 ### Parse Register Message.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>state</b>:
 - <b>Module Name </b>:
 - <b>args</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>target</b>:
 - <b>source</b>:
 - <b>status</b>:
@@ -633,11 +633,11 @@ Returns any argument(s) that may be used in the current state string. These argu
 
 ### Parse State with Arguments String.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>State with Arguments</b>:
 The State string that requires the argument.
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>State</b>:
 - <b>Arguments</b>:
 - <b>Target Module</b>:
@@ -645,12 +645,12 @@ The State string that requires the argument.
 
 ### Parse Unregister Message.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>state</b>:
 - <b>Module Name </b>:
 - <b>args</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>target</b>:
 - <b>source</b>:
 - <b>status</b>:
@@ -658,11 +658,11 @@ The State string that requires the argument.
 
 ### Dequeue Element.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>timeout in ms (-1)</b>:
 - <b>Priority Queue</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>timed out?</b>:
 - <b>Cross JKI State Machine State</b>:
 - <b>Priority Queue(dup)</b>:
@@ -670,21 +670,21 @@ The State string that requires the argument.
 
 ### Enqueue Element.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>High Priority?(F)</b>:
 - <b>timeout in ms (-1)</b>:
 - <b>Cross JKI State Machine State</b>:
 - <b>Priority Queue</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>Priority Queue(dup)</b>:
 
 ### Get Queue Status.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>Priority Queue in</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b># pending insert</b>:
 - <b># pending remove</b>:
 - <b>Priority Queue out</b>:
@@ -692,38 +692,38 @@ The State string that requires the argument.
 
 ### Not a Refnum.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>Priority Queue.lvclass</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>NaN/Path/Refnum?</b>:
 
 ### Obtain Priority Queue.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>create if not found? (T)</b>:
 - <b>name</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>created new?</b>:
 - <b>Priority Queue</b>:
 
 ### Release Priority Queue.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>force destroy? (F)</b>:
 - <b>Priority Queue</b>:
 
 ### CSMP-Async Call.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>state</b>:
 - <b>args</b>:
 - <b>source/target</b>:
 - <b>Module Name</b>:
 - <b>Msg Type</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>state out</b>:
 - <b>args out</b>:
 - <b>source/target out</b>:
@@ -733,14 +733,14 @@ The State string that requires the argument.
 
 ### CSMP-Broadcast.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>state</b>:
 - <b>args</b>:
 - <b>source/target</b>:
 - <b>Module Name</b>:
 - <b>Msg Type</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>state out</b>:
 - <b>args out</b>:
 - <b>source/target out</b>:
@@ -750,7 +750,7 @@ The State string that requires the argument.
 
 ### CSMP-PostPostMsg.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>state</b>:
 - <b>args</b>:
 - <b>source/target</b>:
@@ -760,7 +760,7 @@ The State string that requires the argument.
 - <b>Module Name</b>:
 - <b>Response Arguments</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>state out</b>:
 - <b>args out</b>:
 - <b>source/target out</b>:
@@ -770,7 +770,7 @@ The State string that requires the argument.
 
 ### CSMP-PostSendMsg.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>state</b>:
 - <b>args</b>:
 - <b>source/target</b>:
@@ -778,7 +778,7 @@ The State string that requires the argument.
 - <b>Module Name</b>:
 - <b>Response Arguments</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>state out</b>:
 - <b>args out</b>:
 - <b>source/target out</b>:
@@ -786,13 +786,13 @@ The State string that requires the argument.
 
 ### CSMP-Register Status.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>state</b>:
 - <b>args</b>:
 - <b>source/target</b>:
 - <b>Module Name</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>state out</b>:
 - <b>args out</b>:
 - <b>source/target out</b>:
@@ -802,14 +802,14 @@ The State string that requires the argument.
 
 ### CSMP-Sync Call.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>state</b>:
 - <b>args</b>:
 - <b>source/target</b>:
 - <b>Response Timeout(5000ms)</b>:
 - <b>Module Name</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>state out</b>:
 - <b>args out</b>:
 - <b>source/target out</b>:
@@ -819,13 +819,13 @@ The State string that requires the argument.
 
 ### CSMP-Unregister Status.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>state</b>:
 - <b>args</b>:
 - <b>source/target</b>:
 - <b>Module Name</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>state out</b>:
 - <b>args out</b>:
 - <b>source/target out</b>:
@@ -835,26 +835,26 @@ The State string that requires the argument.
 
 ### Auto Resize All MultiListbox Columns (Uniform Text).vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>IgnoreCols(Empty as default)</b>:
 - <b>Array</b>:
 - <b>Control in</b>:
 
 ### Dashboard Cell Resize.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>Cluster</b>:
 - <b>Cluster Size:Height</b>:
 - <b>Cluster Size:Width</b>:
 - <b>ÒýÆøÑ¹Á¦P4 4</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>Bounds:Area Height</b>:
 - <b>Bounds:Area Width</b>:
 
 ### Dashboard Cell2 Array Resize.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>Num Columns</b>:
 - <b>Cluster</b>:
 - <b>Num Rows</b>:
@@ -864,49 +864,49 @@ The State string that requires the argument.
 
 ### Open CSM BD.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>Current Module("" to generate a ID)</b>:
 - <b>CSM</b>:
 
 ### Open CSM FP.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>Current Module("" to generate a ID)</b>:
 - <b>CSM</b>:
 
 ### Select Greater_nevstop.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>A</b>:
 - <b>B</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>lesser</b>:
 
 ### Append Application Directory If Relative.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>Relative path (.)</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>Application Directory (+ Relative)</b>:
 
 ### Convert File Extension (Path)__ogtk.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>new ending (none)</b>:
 - <b>file name</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>prev ending</b>:
 - <b>new filename</b>:
 
 ### Convert File Extension (String)__ogtk.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>new ending (none)</b>:
 - <b>file name</b>:
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>prev ending</b>:
 - <b>new filename</b>:

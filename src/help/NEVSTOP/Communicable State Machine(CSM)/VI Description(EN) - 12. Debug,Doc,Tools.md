@@ -10,7 +10,7 @@
 
 ### CSM Dummy Module.vi
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>Init State("Macro: Initialize")</b>:
 - <b>Name("" to use uuid)</b>:
 
@@ -36,45 +36,45 @@
 
 Select the markdown file describing the functionality of CSM VIs and import it into all VIs.
 
--- <b>Inputs</b> --
+-- <b>Controls</b> --
 - <b>Path</b>: Path to the markdown file describing the functionality of CSM VIs
 
 ### csmdoc_export_all_csm_VI_description_doc.vi
 
 Analyze all CSM VIs and export the VI functionality descriptions to a markdown file.
 
--- <b>Inputs</b> --
+-- <b>Controls</b> --
 - <b>Path</b>: Path to the markdown file describing the functionality of CSM VIs
 
 ### csmdoc_export_VI_description.vi
 
--- <b>Inputs</b> --
+-- <b>Controls</b> --
 - <b>NOTE-Map</b>:
 - <b>Path</b>:
 
--- <b>Outputs</b> --
+-- <b>Indicators</b> --
 - <b>concatenated string</b>:
 
 ### csmdoc_import_doc_to_singleVI.vi
 
 ### csmdoc_import_VI_description.vi
 
--- <b>Inputs</b> --
+-- <b>Controls</b> --
 - <b>NOTE-Map</b>:
 - <b>string</b>:
 - <b>Path</b>:
 
 ### csmdoc_list_all_csm_documented_VIs.vi
 
--- <b>Outputs</b> --
+-- <b>Indicators</b> --
 - <b>Array</b>:
 
 ### csmdoc_load vi description map.vi
 
--- <b>Inputs</b> --
+-- <b>Controls</b> --
 - <b>Path</b>:
 
--- <b>Outputs</b> --
+-- <b>Indicators</b> --
 - <b>text</b>:
 - <b>variant 2</b>:
 - <b>variant</b>:

@@ -19,7 +19,7 @@
 
 Parses the CSM state queue and returns the next current state to be executed, along with parameters and other information.
 
-<b>Input Controls</b>
+<b>Controls</b>
 - <b>State Queue</b>: The entire state queue is connected to this input. This should come from the CSM's shift register.
 - <b>Previous Error</b>: The error cluster from the CSM is connected to this input. If an error occurs and appears at this input, the current state output will return the "Error Handler" state.
 - <b>Name ("" to use uuid)</b>: CSM module name.
@@ -27,7 +27,7 @@ Parses the CSM state queue and returns the next current state to be executed, al
 - <b>Dequeue Timeout (0ms)</b>: Timeout setting for checking the CSM message queue, default is 0, meaning no wait.
 - <b>Response Arguments</b>: Response parameters from the previous state. It should be connected to the CSM's shift register to pass return values from external calls.
 
-<b>Output Controls</b>
+<b>Indicators</b>
 - <b>Remaining States</b>: All concatenated states and parameters.
 - <b>Arguments</b>: Returns any parameters that may be used in the current state string. These parameters are located after the ">>" character. <b>Note:</b> Argument variables must not contain any non-printable characters, such as newline or carriage return.
 - <b>Current State</b>: The next current state to be executed.
@@ -61,13 +61,13 @@ When sending to other CSMs, assuming the name of <b>Target Module ("")</b> is "T
       If State = A and there are no arguments, then <b>State with Arguments</b> = A ->target
       If State = A, Arguments = B then <b>State with Arguments</b> = A >> B ->target
 
-<b>Input Controls</b>
+<b>Controls</b>
 - <b>State</b>: State or message name string.
 - <b>Arguments ("")</b>: Arguments for <b>State</b>.
 - <b>Target Module ("")</b>: The name of the target CSM module to which this message is sent.
 - <b>Sync-Call(-@) T By Default/Async-Call(->) F</b>: Synchronous call input "TRUE"; Asynchronous call input "FALSE".
 
-<b>Output Controls</b>
+<b>Indicators</b>
 - <b>CSM Message String</b>: The concatenated CSM message string.
 
 ### Build Message with Arguments++.vi
@@ -95,12 +95,12 @@ Concatenates a CSM message string, and the message type symbol will be automatic
 
 > Ref: Message Concatenation API
 
-<b>Input Controls</b>
+<b>Controls</b>
 - <b>State with Arguments</b>: CSM state string, which can include arguments and target module information.
 - <b>Arguments ("")</b>: Argument information. Arguments included in <b>State with Arguments</b> will be replaced.
 - <b>Target Module ("")</b>: Target module. If empty, the default module in <b>State with Arguments</b> will be used.
 
-<b>Output Controls</b>
+<b>Indicators</b>
 - <b>CSM Message String</b>: The concatenated CSM message string.
 
 #### Build Synchronous Message with Arguments.vi
@@ -111,12 +111,12 @@ Concatenates a CSM synchronous message string, with the message type symbol "-@"
 
 > Ref: Message Concatenation API
 
-<b>Input Controls</b>
+<b>Controls</b>
 - <b>State with Arguments</b>: CSM state string.
 - <b>Arguments ("")</b>: Argument information. Arguments included in <b>State with Arguments</b> will be replaced.
 - <b>Target Module ("")</b>: Target module. If empty, the default module in <b>State with Arguments</b> will be used.
 
-<b>Output Controls</b>
+<b>Indicators</b>
 - <b>CSM Message String</b>: The concatenated CSM message string.
 
 #### Build Asynchronous Message with Arguments.vi
@@ -127,12 +127,12 @@ Concatenates a CSM asynchronous message string, with the message type symbol "->
 
 > Ref: Message Concatenation API
 
-<b>Input Controls</b>
+<b>Controls</b>
 - <b>State with Arguments</b>: CSM state string.
 - <b>Arguments ("")</b>: Argument information. Arguments included in <b>State with Arguments</b> will be replaced.
 - <b>Target Module ("")</b>: Target module. If empty, the default module in <b>State with Arguments</b> will be used.
 
-<b>Output Controls</b>
+<b>Indicators</b>
 - <b>CSM Message String</b>: The concatenated CSM message string.
 
 #### Build No-Reply Asynchronous Message with Arguments.vi
@@ -143,12 +143,12 @@ Concatenates a CSM asynchronous message string, with the message type symbol "->
 
 > Ref: Message Concatenation API
 
-<b>Input Controls</b>
+<b>Controls</b>
 - <b>State with Arguments</b>: CSM state string.
 - <b>Arguments ("")</b>: Argument information. Arguments included in <b>State with Arguments</b> will be replaced.
 - <b>Target Module ("")</b>: Target module. If empty, the default module in <b>State with Arguments</b> will be used.
 
-<b>Output Controls</b>
+<b>Indicators</b>
 - <b>CSM Message String</b>: The concatenated CSM message string.
 
 #### Build Normal Status Message.vi
@@ -162,11 +162,11 @@ Concatenates a normal status message string, with the following format:
 
 > Ref: Message Concatenation API
 
-<b>Input Controls</b>
+<b>Controls</b>
 - <b>State with Arguments</b>: CSM normal status message string.
 - <b>Arguments ("")</b>: Argument information. Arguments included in <b>State with Arguments</b> will be replaced.
 
-<b>Output Controls</b>
+<b>Indicators</b>
 - <b>CSM Message String</b>: The concatenated CSM message string.
 
 #### Build Interrupt Status Message.vi
@@ -177,11 +177,11 @@ Concatenates an interrupt status message. The format is as follows:
 
 > Ref: Message Concatenation API
 
-<b>Input Controls</b>
+<b>Controls</b>
 - <b>State with Arguments</b>: CSM interrupt status message string.
 - <b>Arguments ("")</b>: Argument information. Arguments included in <b>State with Arguments</b> will be replaced.
 
-<b>Output Controls</b>
+<b>Indicators</b>
 - <b>CSM Message String</b>: The concatenated CSM message string.
 
 #### Build Register Status Message.vi
@@ -202,13 +202,13 @@ Example: Add the download completion message of the downloader module, binding i
 
 > Ref: Message Concatenation API
 
-<b>Input Controls</b>
+<b>Controls</b>
 - <b>Target CSM</b>: The name of the CSM module subscribing to the status.
 - <b>Source CSM (* as Default)</b>: The name of the CSM module issuing the status.
 - <b>Status</b>: The registered status.
 - <b>API (if "", same as Status)</b>: The API name that the subscribing status module responds to.
 
-<b>Output Controls</b>
+<b>Indicators</b>
 - <b>CSM Message String</b>: The concatenated CSM message string.
 
 #### Build Unregister Status Message.vi
@@ -227,12 +227,12 @@ Example: Unbind the download completion message of the downloader module from th
 
 > Ref: Message Concatenation API
 
-<b>Input Controls</b>
+<b>Controls</b>
 - <b>Target CSM</b>: The name of the CSM module subscribing to the status.
 - <b>Source CSM (* as Default)</b>: The name of the CSM module issuing the status.
 - <b>Status</b>: The registered status.
 
-<b>Output Controls</b>
+<b>Indicators</b>
 - <b>CSM Message String</b>: The concatenated CSM message string.
 
 #### CSM - Replace Substitution Marks in Messages.vi
@@ -263,14 +263,14 @@ Example: The terminal <target> is connected to the string "DAQDevice", and the <
 
 > Ref: Message Concatenation API
 
-<b>Input Controls</b>
+<b>Controls</b>
 - <b>States with Replace Token</b>: CSM state string with replacement markers.
 - <b><param></b>: <param> Marker: Usually represents the same parameter.
 - <b><target></b>: <target> Marker: Usually represents the same target.
 - <b><1></b>: Custom marker 1.
 - <b><2></b>: Custom marker 2.
 
-<b>Output Controls</b>
+<b>Indicators</b>
 - <b>States</b>: The replaced states.
 
 ### CSM - Broadcast Status Change.vi
@@ -284,12 +284,12 @@ Broadcasts a status change to the system. CSM modules with registered statuses w
 > This type of API does not directly send messages, it only concatenates message strings. Messages are sent and executed in Parse State Queue++.vi.
 > Unlike the Message Concatenation API, this type of API includes the CSM state queue string input, equivalent to inserting messages into the state queue.
 
-<b>Input Controls</b>
+<b>Controls</b>
 - <b>Status with Arguments</b>: The status and arguments to be broadcasted, supports multiple lines, each line status will be added with "-><broadcast>".
 - <b>State Queue ("")</b>: The entire state queue is connected to this input.
 - <b>Broadcast (T)</b>: Control switch input for broadcasting.
 
-<b>Output Controls</b>
+<b>Indicators</b>
 - <b>Remaining States</b>: All concatenated states and parameters.
 
 ### Add State(s) to Queue By BOOL++.vi
@@ -310,14 +310,14 @@ Incorporates CSM message strings into the CSM message queue. Provides TRUE/FALSE
 
 > Ref: CSM State Queue Operation API
 
-<b>Input Controls</b>
+<b>Controls</b>
 - <b>State Queue ("")</b>: The entire state queue is connected to this input.
 - <b>TRUE ("")</b>: State string inserted when <b>Condition</b> is True.
 - <b>FALSE ("")</b>: State string inserted when <b>Condition</b> is False.
 - <b>Condition</b>: Flag to select the state string connected to the TRUE terminal or the FALSE terminal.
 - <b>High Priority (FALSE)</b>: If True, the state will be inserted at the front of <b>State Queue ("")</b>. If False, it is appended to the end.
 
-<b>Output Controls</b>
+<b>Indicators</b>
 - <b>Remaining States</b>: All concatenated states and parameters.
 
 #### Add State(s) to Queue By BOOL (Array Left).vi
@@ -326,14 +326,14 @@ Incorporates CSM message strings into the CSM message queue. Provides TRUE/FALSE
 
 > Ref: CSM State Queue Operation API
 
-<b>Input Controls</b>
+<b>Controls</b>
 - <b>State Queue ("")</b>: The entire state queue is connected to this input.
 - <b>TRUE ("")</b>: State string inserted when <b>Condition</b> is True.
 - <b>FALSE ("")</b>: State string inserted when <b>Condition</b> is False.
 - <b>Condition</b>: Flag to select the state string connected to the TRUE terminal or the FALSE terminal.
 - <b>High Priority (FALSE)</b>: If True, the state will be inserted at the front of <b>State Queue ("")</b>. If False, it is appended to the end.
 
-<b>Output Controls</b>
+<b>Indicators</b>
 - <b>Remaining States</b>: All concatenated states and parameters.
 
 #### Add State(s) to Queue By BOOL (Array Right).vi
@@ -342,14 +342,14 @@ Incorporates CSM message strings into the CSM message queue. Provides TRUE/FALSE
 
 > Ref: CSM State Queue Operation API
 
-<b>Input Controls</b>
+<b>Controls</b>
 - <b>State Queue ("")</b>: The entire state queue is connected to this input.
 - <b>TRUE ("")</b>: State string inserted when <b>Condition</b> is True.
 - <b>FALSE ("")</b>: State string inserted when <b>Condition</b> is False.
 - <b>Condition</b>: Flag to select the state string connected to the TRUE terminal or the FALSE terminal.
 - <b>High Priority (FALSE)</b>: If True, the state will be inserted at the front of <b>State Queue ("")</b>. If False, it is appended to the end.
 
-<b>Output Controls</b>
+<b>Indicators</b>
 - <b>Remaining States</b>: All concatenated states and parameters.
 
 #### Add State(s) to Queue By BOOL (Array All).vi
@@ -360,12 +360,12 @@ The Bool input determines whether the TRUE or FALSE string is concatenated.
 
 > Ref: CSM State Queue Operation API
 
-<b>Input Controls</b>
+<b>Controls</b>
 - <b>State Queue ("")</b>: The entire state queue is connected to this input.
 - <b>TRUE ("")</b>: State string inserted when <b>Condition</b> is True.
 - <b>FALSE ("")</b>: State string inserted when <b>Condition</b> is False.
 - <b>Condition</b>: Flag to select the state string connected to the TRUE terminal or the FALSE terminal.
 - <b>High Priority (FALSE)</b>: If True, the state will be inserted at the front of <b>State Queue ("")</b>. If False, it is appended to the end.
 
-<b>Output Controls</b>
+<b>Indicators</b>
 - <b>Remaining States</b>: All concatenated states and parameters.

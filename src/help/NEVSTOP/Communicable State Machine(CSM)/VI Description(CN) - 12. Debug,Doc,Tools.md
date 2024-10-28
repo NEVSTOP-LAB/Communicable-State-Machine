@@ -36,45 +36,45 @@
 
 选择 CSM VI 功能描述的 markdown 文件，导入到所有的VI。
 
--- <b>Inputs</b> --
+-- <b>Controls</b> --
 - <b>Path</b>: CSM VI 功能描述的 markdown 文件路径
 
 ### csmdoc_export_all_csm_VI_description_doc.vi
 
 分析所有CSM VI, 将 VI 功能描述导出到 markdown 文件中。
 
--- <b>Inputs</b> --
+-- <b>Controls</b> --
 - <b>Path</b>: CSM VI 功能描述的 markdown 文件路径
 
 ### csmdoc_export_VI_description.vi
 
--- <b>Inputs</b> --
+-- <b>Controls</b> --
 - <b>NOTE-Map</b>:
 - <b>Path</b>:
 
--- <b>Outputs</b> --
+-- <b>Indicators</b> --
 - <b>concatenated string</b>:
 
 ### csmdoc_import_doc_to_singleVI.vi
 
 ### csmdoc_import_VI_description.vi
 
--- <b>Inputs</b> --
+-- <b>Controls</b> --
 - <b>NOTE-Map</b>:
 - <b>string</b>:
 - <b>Path</b>:
 
 ### csmdoc_list_all_csm_documented_VIs.vi
 
--- <b>Outputs</b> --
+-- <b>Indicators</b> --
 - <b>Array</b>:
 
 ### csmdoc_load vi description map.vi
 
--- <b>Inputs</b> --
+-- <b>Controls</b> --
 - <b>Path</b>:
 
--- <b>Outputs</b> --
+-- <b>Indicators</b> --
 - <b>text</b>:
 - <b>variant 2</b>:
 - <b>variant</b>:

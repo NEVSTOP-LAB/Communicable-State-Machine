@@ -20,35 +20,35 @@
 
 ### CSM - Forward States to CSM.vi
 
--- <b>Inputs</b> --
+-- <b>Controls</b> --
 - <b>High Priority(T)</b>:
 - <b>Module Name</b>: Returns any argument(s) that may be used in the current state string. These arguments come after the ">>" characters
 - <b>State(s) in ("")</b>: Wire the existing states to this input. The default is an empty string.
 
 ### CSM - Forward UI Operations to CSM.vi
 
--- <b>Inputs</b> --
+-- <b>Controls</b> --
 - <b>Name("" to use uuid)</b>:
 - <b>State(s) in ("")</b>:
 
--- <b>Outputs</b> --
+-- <b>Indicators</b> --
 - <b>States Out</b>:
 
 ### CSM - Remove Module in Broadcast Registry.vi
 
--- <b>Inputs</b> --
+-- <b>Controls</b> --
 - <b>CSM Name</b>:
 
--- <b>Outputs</b> --
+-- <b>Indicators</b> --
 - <b>CSM Name(dup)</b>:
 
 ### Parse VI Documentation String.vi
 
--- <b>Inputs</b> --
+-- <b>Controls</b> --
 - <b>NOTE-Map</b>:
 - <b>Documentation</b>:
 
--- <b>Outputs</b> --
+-- <b>Indicators</b> --
 - <b>Ctrl-Doc Map</b>:
 - <b>Control Docs</b>:
 - <b>Core Doc</b>:
@@ -56,13 +56,13 @@
 
 ### Gevt-ThreadQueueName.vi
 
--- <b>Outputs</b> --
+-- <b>Indicators</b> --
 - <b>ThreadQueueName</b>:
 
 ### CSM - Status Change Event.vi
 
--- <b>Inputs</b> --
+-- <b>Controls</b> --
 - <b>CSM Module</b>:
 
--- <b>Outputs</b> --
+-- <b>Indicators</b> --
 - <b>Status Change Event</b>:

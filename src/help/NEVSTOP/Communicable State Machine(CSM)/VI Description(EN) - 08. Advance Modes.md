@@ -36,10 +36,10 @@ Add "#" to the CSM name to mark this module as operating in worker mode.
 > Ref: Name Concatenation API
 > Ref: CSM Worker Mode
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>CSM Name</b>: CSM module name
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>CSM Name (marked as worker)</b>: CSM module name with "#" mark
 
 ## Chain of Responsibility Mode API - To Be Completed
@@ -78,11 +78,11 @@ Add "#" to the CSM name to mark this module as operating in worker mode.
 > Ref: CSM Chain of Responsibility Mode
 > Ref: Name Concatenation API
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>CSM Name</b>: CSM module name
 - <b>Order</b>: Order in the chain of responsibility mode
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>CSM Name (marked as Chain)</b>: CSM module name with "$" mark
 
 ## Side-Loop Support
@@ -91,7 +91,7 @@ Add "#" to the CSM name to mark this module as operating in worker mode.
 
 Request CSM to send a message. Typically used for functional loops running in parallel with CSM, these loops complete the full module functionality together with CSM.
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>Module Name</b>: CSM sending the status
 - <b>Status</b>: Status to be broadcasted
 - <b>Arguments ("")</b>: Parameters of the status to be broadcasted
@@ -101,7 +101,7 @@ Request CSM to send a message. Typically used for functional loops running in pa
 
 Request CSM to publish status. Typically used for functional loops running in parallel with CSM, these loops complete the full module functionality together with CSM.
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>Module Name</b>: CSM sending the status
 - <b>Status</b>: Status to be broadcasted
 - <b>Arguments ("")</b>: Parameters of the status to be broadcasted
@@ -111,8 +111,8 @@ Request CSM to publish status. Typically used for functional loops running in pa
 
 Check if CSM has exited. Typically used for functional loops running in parallel with CSM, these loops complete the full module functionality together with CSM. This VI is used as the exit condition for parallel loops.
 
--- <b>Input Controls</b> --
+-- <b>Controls</b> --
 - <b>CSM Name</b>: Module name
 
--- <b>Output Controls</b> --
+-- <b>Indicators</b> --
 - <b>Turn Invalid (Exit)?</b>: Whether it has exited
