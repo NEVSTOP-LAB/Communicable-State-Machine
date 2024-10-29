@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-10-29 14:28:45" Creator="liyao" Comments="" ID="a0f883fdc63e3a14b51a734ce7fed47a">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-10-29 14:35:24" Creator="liyao" Comments="" ID="03973e8e5e8514f12b196fd048f89f80">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2024.10.0.3</Library_Version>
@@ -72,7 +72,7 @@
 [fix] #328 fix bug that CSM Status Change Event is not working.
 
 #VI Analyzer
-[fix] minor fix. #325
+[fix] minor fix &amp; update #325 #326
 
 #installer
 [add] #330 Automatically localize VI description after installation.
