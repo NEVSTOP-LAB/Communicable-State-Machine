@@ -68,6 +68,7 @@
 				<Item Name="Wrapper CSM.vi" Type="VI" URL="../testcases/_CSMs/Wrapper CSM.vi"/>
 				<Item Name="NOT a CSM.vi" Type="VI" URL="../testcases/_CSMs/NOT a CSM.vi"/>
 				<Item Name="JKISM.vi" Type="VI" URL="../testcases/_CSMs/JKISM.vi"/>
+				<Item Name="TestCSM.vi" Type="VI" URL="../testcases/_CSMs/TestCSM.vi"/>
 			</Item>
 			<Item Name="testcase-csmhelper.lvclass" Type="LVClass" URL="../testcases/testcase-csmhelper/testcase-csmhelper.lvclass"/>
 			<Item Name="testcase-csm-file-logger.lvclass" Type="LVClass" URL="../testcases/testcase-csm-file-logger/testcase-csm-file-logger.lvclass"/>

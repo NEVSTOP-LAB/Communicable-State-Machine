@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-10-28 21:45:33" Creator="liyao" Comments="" ID="9746461e07ac065ea0c36a545465b403">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-10-29 14:28:45" Creator="liyao" Comments="" ID="a0f883fdc63e3a14b51a734ce7fed47a">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2024.10.0.3</Library_Version>
@@ -68,7 +68,10 @@
       <Copyright/>
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
-      <Release_Notes>#VI Analyzer
+      <Release_Notes>#Core
+[fix] #328 fix bug that CSM Status Change Event is not working.
+
+#VI Analyzer
 [fix] minor fix. #325
 
 #installer
