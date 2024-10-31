@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-10-29 14:35:24" Creator="liyao" Comments="" ID="03973e8e5e8514f12b196fd048f89f80">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-10-31 16:15:17" Creator="liyao" Comments="" ID="dabd1deffb2311673e3422c594bf39f0">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2024.10.0.3</Library_Version>
@@ -69,19 +69,20 @@
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
       <Release_Notes>#Core
-[fix] #328 fix bug that CSM Status Change Event is not working.
+[fix] #328 Fixed CSM Status Change Event not working bug.
 
 #VI Analyzer
-[fix] minor fix &amp; update #325 #326
+[fix] Minor fixes &amp; updates for #325, #326.
 
 #installer
 [add] #330 Automatically localize VI description after installation.
 
 #Documenation
-[update] update zh-cn VI Description markdown help Files
+[update] Updated VI Description markdown help files in zh-cn.
 
 #tools
-[upate] update Switch Language Tool</Release_Notes>
+[update] Updated Switch Language Tool.
+[update] Updated Command Debug Tool, commands listed automatically when switching CSM module. </Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
