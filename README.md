@@ -19,10 +19,10 @@ _**CSM API**_
 ![image](.doc/_img/CSM%20Palette.png)
 
 Template Description:
-[English](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/Template%20Description(en).md) | [中文](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/Template%20Description(zh-cn).md)
+[English](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/Template%20Description(EN).md) | [中文](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/Template%20Description(zh-cn).md)
 
 API Description:
-[English](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/VI%20Description(en).md) | [中文](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/VI%20Description(zh-cn).md)
+[English](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/VI%20Description(EN).md) | [中文](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/VI%20Description(zh-cn).md)
 
 ## Create Reuseable Modules
 
