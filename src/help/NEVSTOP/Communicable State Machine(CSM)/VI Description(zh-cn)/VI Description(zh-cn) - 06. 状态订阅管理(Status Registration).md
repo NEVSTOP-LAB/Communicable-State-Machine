@@ -65,3 +65,11 @@
 
 -- <b>输出控件</b> --
 - <b>Array</b>:
+
+### CSM - Remove Module in Broadcast Registry.vi
+
+-- <b>输入控件</b> --
+- <b>CSM Name</b>:
+
+-- <b>输出控件</b> --
+- <b>CSM Name(dup)</b>:
