@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-11-09 21:16:55" Creator="liyao" Comments="" ID="ac592cff1f166c8c265f537706c025bf">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-11-09 22:00:56" Creator="liyao" Comments="" ID="7872e04ce9ab4fa28390e6340a355d91">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2024.11.0.3</Library_Version>
@@ -68,7 +68,8 @@
       <Copyright/>
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
-      <Release_Notes/>
+      <Release_Notes>#Tool
+[fix] minor fix #327</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
