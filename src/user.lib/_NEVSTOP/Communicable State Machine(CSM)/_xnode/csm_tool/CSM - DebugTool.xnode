@@ -20,7 +20,7 @@
 	<Item Name="_GetHelp 1.vi" Type="Ability VI" URL="../_xnode_csm_tool_support/_GetHelp 1.vi">
 		<Property Name="NI.XItem.Name" Type="Str">Help</Property>
 	</Item>
-	<Item Name="_reorder tool entries.vi" Type="VI" URL="/&lt;userlib&gt;/_NEVSTOP/Communicable State Machine(CSM)/_xnode/csm_tool/_xnode_csm_tool_support/_reorder tool entries.vi"/>
+	<Item Name="_reorder tool entries.vi" Type="VI" URL="../_xnode_csm_tool_support/_reorder tool entries.vi"/>
 	<Item Name="_State 1.ctl" Type="Ability VI" URL="../_xnode_csm_tool_support/_State 1.ctl">
 		<Property Name="NI.XItem.Name" Type="Str">State</Property>
 	</Item>

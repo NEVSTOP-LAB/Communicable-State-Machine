@@ -79,7 +79,7 @@
 		<Item Name="Communicable State Machine(CSM).vipb" Type="Document" URL="../Communicable State Machine(CSM).vipb"/>
 		<Item Name="CONTRIBUTING.md" Type="Document" URL="../CONTRIBUTING.md"/>
 		<Item Name="LICENSE" Type="Document" URL="../LICENSE"/>
-		<Item Name="README(CN).md" Type="Document" URL="../README(CN).md"/>
+		<Item Name="README(zh-cn).md" Type="Document" URL="../README(zh-cn).md"/>
 		<Item Name="README.md" Type="Document" URL="../README.md"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">

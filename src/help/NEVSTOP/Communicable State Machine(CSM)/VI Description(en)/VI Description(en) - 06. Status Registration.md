@@ -65,3 +65,11 @@ Unregister notifications of status changes from other CSM modules.
 
 -- <b>Indicators</b> --
 - <b>Array</b>:
+
+### CSM - Remove Module in Broadcast Registry.vi
+
+-- <b>Controls</b> --
+- <b>CSM Name</b>:
+
+-- <b>Indicators</b> --
+- <b>CSM Name(dup)</b>:

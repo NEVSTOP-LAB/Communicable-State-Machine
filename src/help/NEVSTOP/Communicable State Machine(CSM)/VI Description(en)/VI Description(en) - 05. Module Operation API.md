@@ -102,7 +102,7 @@ Run a CSM script. Multiple message instructions can be executed at once.
 -- <b>Indicators</b> --
 - <b>Scripts Left</b>: Remaining scripts that were not executed
 
-### CSM - Status Change Event
+### CSM - Status Change Event.vi
 
 Get the CSM status change event handle.
 

@@ -116,3 +116,21 @@
 
 -- <b>输出控件</b> --
 - <b>Turn Invalid(Exit)?</b>: 是否已经退出
+
+### CSM - Flood of Events Handler Side Loop.vi
+
+### CSM - Forward States to CSM.vi
+
+-- <b>输入控件</b> --
+- <b>High Priority(T)</b>:
+- <b>Module Name</b>:Returns any argument(s) that may be used in the current state string. These arguments come after the ">>" characters
+- <b>State(s) in ("")</b>:Wire the existing states to this input. The default is an empty string.
+
+### CSM - Forward UI Operations to CSM.vi
+
+-- <b>输入控件</b> --
+- <b>Name("" to use uuid)</b>:
+- <b>State(s) in ("")</b>:
+
+-- <b>输出控件</b> --
+- <b>States Out</b>:

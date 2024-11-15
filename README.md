@@ -1,6 +1,6 @@
 # Communicable State Machine(CSM)
 
-[English](./README.md) | [中文](./README(CN).md)
+[English](./README.md) | [中文](./README(zh-cn).md)
 
 [![Image](https://www.vipm.io/package/nevstop_lib_communicable_state_machine/badge.svg?metric=installs)](https://www.vipm.io/package/nevstop_lib_communicable_state_machine/)
 [![Image](https://www.vipm.io/package/nevstop_lib_communicable_state_machine/badge.svg?metric=stars)](https://www.vipm.io/package/nevstop_lib_communicable_state_machine/)
@@ -12,7 +12,7 @@ Communicable State Machine(CSM) is a LabVIEW application framework that builds u
 - For instructions on JKI State Machine(JKISM), visit: <http://jki.net/state-machine/>
 - For information on NEVSTOP-LAB, visit: <https://github.com/NEVSTOP-LAB>
 
-![image](https://github.com/NEVSTOP-LAB/Communicable-State-Machine/assets/8196752/318b9363-083c-40e2-86ef-0106e567b2b3)
+![image](.doc/_img/csm-intro.png)
 
 _**CSM API**_
 

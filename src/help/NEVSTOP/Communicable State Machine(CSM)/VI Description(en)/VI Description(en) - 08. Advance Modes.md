@@ -116,3 +116,21 @@ Check if CSM has exited. Typically used for functional loops running in parallel
 
 -- <b>Indicators</b> --
 - <b>Turn Invalid (Exit)?</b>: Whether it has exited
+
+### CSM - Flood of Events Handler Side Loop.vi
+
+### CSM - Forward States to CSM.vi
+
+-- <b>Controls</b> --
+- <b>High Priority(T)</b>:
+- <b>Module Name</b>: Returns any argument(s) that may be used in the current state string. These arguments come after the ">>" characters
+- <b>State(s) in ("")</b>: Wire the existing states to this input. The default is an empty string.
+
+### CSM - Forward UI Operations to CSM.vi
+
+-- <b>Controls</b> --
+- <b>Name("" to use uuid)</b>:
+- <b>State(s) in ("")</b>:
+
+-- <b>Indicators</b> --
+- <b>States Out</b>:
