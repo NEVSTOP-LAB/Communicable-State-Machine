@@ -247,6 +247,7 @@
 				<Item Name="CSM Not Allowed Message.vi" Type="VI" URL="../_Support/Error/CSM Not Allowed Message.vi"/>
 			</Item>
 			<Item Name="CSM - Get New State Notifier Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Get New State Notifier Event.vi"/>
+			<Item Name="CSM - Internal State Debug Log History.vi" Type="VI" URL="../AdvanceAPI/CSM - Internal State Debug Log History.vi"/>
 		</Item>
 	</Item>
 	<Item Name="Argument" Type="Folder">
@@ -289,6 +290,7 @@
 		<Item Name="CSM Data Type String.vi" Type="VI" URL="../Utility/CSM Data Type String.vi"/>
 		<Item Name="CSM Data Type String to Enum.vi" Type="VI" URL="../Utility/CSM Data Type String to Enum.vi"/>
 		<Item Name="Replace Tag with Array.vi" Type="VI" URL="../Utility/Replace Tag with Array.vi"/>
+		<Item Name="Periodic String Filter.vi" Type="VI" URL="../Utility/Periodic String Filter.vi"/>
 	</Item>
 	<Item Name="Parse State Queue++.vi" Type="VI" URL="../Parse State Queue++.vi"/>
 	<Item Name="Add State(s) to Queue By BOOL++.vi" Type="VI" URL="../Add State(s) to Queue By BOOL++.vi"/>
