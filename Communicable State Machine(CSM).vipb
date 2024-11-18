@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-11-18 19:38:44" Creator="liyao" Comments="" ID="60eb95f9f47001a911a91b6f84f0370a">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-11-18 19:48:33" Creator="liyao" Comments="" ID="7e44627b92ae2321d8bf020a9d9a525b">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2024.11.0.3</Library_Version>
@@ -33,7 +33,7 @@
       <One_Line_Description_Summary>LabVIEW Application Framework extended from JKI State Machine(JKISM)</One_Line_Description_Summary>
       <Description>Communicable State Machine(CSM) is a LabVIEW application framework that builds upon JKI State Machine(JKISM). It follows the pattern of JKISM and extends the keywords to describe message communication between modules, including concepts such as Sync-Message, Async-Message, Subscription/Unsubscription of status - essential elements for creating reusable code modules. 
 
-&lt;color=green&gt;grammar&lt;/color&gt;
+&lt;b&gt;grammar:&lt;/b&gt;
 
     &lt;color=gray&gt;// Local Message Example&lt;/color&gt;
     DoSth: DoA &gt;&gt; Arguments
@@ -52,24 +52,24 @@
     &lt;color=gray&gt;// Unregister Source Module's status&lt;/color&gt;
     Status@Source Module &gt;&gt; API@Handler Module -&gt;&lt;unregister&gt;
 
-&lt;color=green&gt;hightlights&lt;/color&gt;
+&lt;b&gt;hightlights:&lt;/b&gt;
 
-&lt;b&gt;Pure Text Process Control&lt;/b&gt;
+&lt;u&gt;Pure Text Process Control&lt;/u&gt;
 - Allows architects to design without coding.
 - Easy for scripting.
 - Easy to modify program behavior post-compilation.
    
-&lt;b&gt;Invisible Communication Bus&lt;/b&gt;
+&lt;u&gt;Invisible Communication Bus&lt;/u&gt;
 - Modules are loosely coupled and integrated via "mounting."
 - Facilitates 1:1, 1:N, and M:N communication.
 - The framework does not directly invoke LabVIEW queues or user events.
 - Data is passed through "encoding," "transmission," and "decoding."
 
-&lt;b&gt;Simple&lt;/b&gt;
+&lt;u&gt;Simple&lt;/u&gt;
 - High code concentration; most visible code is user-generated.
 - VIs serve as modules, with Singleton/Cloneable behavior defined by VI attributes.
 
-&lt;b&gt;Built-in Debugging Interface&lt;/b&gt;
+&lt;u&gt;Built-in Debugging Interface&lt;/u&gt;
 - Records detailed process information including:
      - Module creation/destruction
      - State machine transitions with parameters
@@ -80,7 +80,7 @@
      - User-defined debugging info     
 - Built-in tools leverage this interface, requiring no extra code for debugging.
 
-&lt;b&gt;Extensible Design&lt;/b&gt;
+&lt;u&gt;Extensible Design&lt;/u&gt;
 - Developers can add plugins/tools to enhance functionality:
      - Extend debugging tools using CSM Global Log API 
      - Enhance VI Analyzer/right-click menu via CSM-Helper API 
