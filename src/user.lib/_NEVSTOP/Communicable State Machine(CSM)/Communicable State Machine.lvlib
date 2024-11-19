@@ -22,15 +22,17 @@
 		<Item Name="CSM - Remove Module in Boradcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - Remove Module in Boradcast Registry.vi"/>
 	</Item>
 	<Item Name="Support" Type="Folder">
-		<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 		<Property Name="NI.SortType" Type="Int">3</Property>
 		<Item Name="Priority Queue" Type="Folder">
+			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 			<Item Name="Priority Queue.lvclass" Type="LVClass" URL="../_Support/Priority Queue/Priority Queue.lvclass"/>
 		</Item>
 		<Item Name="BroadcastRegistry" Type="Folder">
+			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 			<Item Name="BroadcastRegistry.lvclass" Type="LVClass" URL="../_Support/BroadcastRegistry/BroadcastRegistry.lvclass"/>
 		</Item>
 		<Item Name="Common" Type="Folder">
+			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 			<Item Name="Trim Single line Text.vi" Type="VI" URL="../_Support/Common/Trim Single line Text.vi"/>
 			<Item Name="Remove Comments from Line.vi" Type="VI" URL="../_Support/Common/Remove Comments from Line.vi"/>
 			<Item Name="Splite Single-line Message.vi" Type="VI" URL="../_Support/Common/Splite Single-line Message.vi"/>
@@ -43,6 +45,7 @@
 			<Item Name="Format Timestamp.vi" Type="VI" URL="../_Support/Common/Format Timestamp.vi"/>
 		</Item>
 		<Item Name="CSM-Core" Type="Folder">
+			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 			<Item Name="Support" Type="Folder">
 				<Item Name="_Obtain CSM Data Queue.vi" Type="VI" URL="../_Support/CSMQ/_Obtain CSM Data Queue.vi"/>
 			</Item>
@@ -93,6 +96,7 @@
 			<Item Name="FGV-StatusChangeEventRef.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-StatusChangeEventRef.vi"/>
 		</Item>
 		<Item Name="FGV-BroadcastRegistry" Type="Folder">
+			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 			<Item Name="FGV-BroadcastRegistry.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/FGV-BroadcastRegistry.vi"/>
 			<Item Name="Operation-BroadcastRegistry.ctl" Type="VI" URL="../_Support/FGV-BroadcastRegistry/Operation-BroadcastRegistry.ctl"/>
 			<Item Name="global-Broadcast Cache Change Flag.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/global-Broadcast Cache Change Flag.vi"/>
@@ -101,7 +105,16 @@
 		</Item>
 		<Item Name="GlobalEvent" Type="Folder">
 			<Item Name="LogFilter" Type="Folder">
+				<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 				<Item Name="LogFilter.lvclass" Type="LVClass" URL="../_Support/GlobalEvent/LogFilter/LogFilter.lvclass"/>
+			</Item>
+			<Item Name="instanceVIs" Type="Folder">
+				<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+				<Item Name="GEvt-Filter Global Log - v1.0.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Filter Global Log - v1.0.vi"/>
+				<Item Name="GEvt-Filter Global Log - v1.1.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Filter Global Log - v1.1.vi"/>
+				<Item Name="GEvt-Convert Filter Rules - v1.0.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Convert Filter Rules - v1.0.vi"/>
+				<Item Name="GEvt-Convert Filter Rules - v1.1.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Convert Filter Rules - v1.1.vi"/>
+				<Item Name="GEvt-Set Source Filter Rules - v1.0.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Set Source Filter Rules - v1.0.vi"/>
 			</Item>
 			<Item Name="GEvt-RequestDef.ctl" Type="VI" URL="../_Support/GlobalEvent/GEvt-RequestDef.ctl"/>
 			<Item Name="global-GEvnt Filter Change Flag.vi" Type="VI" URL="../_Support/GlobalEvent/global-GEvnt Filter Change Flag.vi"/>
@@ -121,11 +134,9 @@
 			<Item Name="GEvt-Generate Module Created Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate Module Created Log.vi"/>
 			<Item Name="GEvt-Generate Module Destroyed Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate Module Destroyed Log.vi"/>
 			<Item Name="GEvt-Generate with Rule Check.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate with Rule Check.vi"/>
-			<Item Name="GEvt-Filter Global Log - v1.0.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Filter Global Log - v1.0.vi"/>
-			<Item Name="GEvt-Convert Filter Rules - v1.0.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Convert Filter Rules - v1.0.vi"/>
-			<Item Name="GEvt-Set Source Filter Rules - v1.0.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Set Source Filter Rules - v1.0.vi"/>
 		</Item>
 		<Item Name="Typedef" Type="Folder">
+			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 			<Item Name="_Cross CSM State Data.ctl" Type="VI" URL="../_Support/Typedef/_Cross CSM State Data.ctl"/>
 			<Item Name="_Cross CSM State Response.ctl" Type="VI" URL="../_Support/Typedef/_Cross CSM State Response.ctl"/>
 			<Item Name="_CSM_MSG_TYPE.ctl" Type="VI" URL="../_Support/Typedef/_CSM_MSG_TYPE.ctl"/>
@@ -141,9 +152,11 @@
 			<Item Name="_CSM_GlobalLog Filter Rules - v1.1.ctl" Type="VI" URL="../_Support/Typedef/_CSM_GlobalLog Filter Rules - v1.1.ctl"/>
 		</Item>
 		<Item Name="NamingConvention" Type="Folder">
+			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 			<Item Name="Naming Check.vi" Type="VI" URL="../_Support/Naming Check.vi"/>
 		</Item>
 		<Item Name="Message" Type="Folder">
+			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 			<Item Name="Parse State with Arguments String.vi" Type="VI" URL="../_Support/Message/Parse State with Arguments String.vi"/>
 			<Item Name="Parse Unregister Message.vi" Type="VI" URL="../_Support/Message/Parse Unregister Message.vi"/>
 			<Item Name="Parse Register Message.vi" Type="VI" URL="../_Support/Message/Parse Register Message.vi"/>
