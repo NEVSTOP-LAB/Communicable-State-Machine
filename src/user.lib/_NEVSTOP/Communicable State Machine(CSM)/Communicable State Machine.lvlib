@@ -114,6 +114,7 @@
 				<Item Name="GEvt-Filter Global Log - v1.1.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Filter Global Log - v1.1.vi"/>
 				<Item Name="GEvt-Convert Filter Rules - v1.0.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Convert Filter Rules - v1.0.vi"/>
 				<Item Name="GEvt-Convert Filter Rules - v1.1.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Convert Filter Rules - v1.1.vi"/>
+				<Item Name="GEvt-Convert Filter Rules - Periodic Setting Only.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Convert Filter Rules - Periodic Setting Only.vi"/>
 				<Item Name="GEvt-Set Source Filter Rules - v1.0.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Set Source Filter Rules - v1.0.vi"/>
 			</Item>
 			<Item Name="GEvt-RequestDef.ctl" Type="VI" URL="../_Support/GlobalEvent/GEvt-RequestDef.ctl"/>
