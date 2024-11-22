@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-11-21 22:35:52" Creator="liyao" Comments="" ID="aa37f238ec90cf25ec2895d213be848b">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-11-22 12:12:36" Creator="liyao" Comments="" ID="451f8b83965af1658daa2fd73d2a6df2">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2024.11.0.3</Library_Version>
@@ -54,15 +54,15 @@
 
 &lt;b&gt;Hightlights:&lt;/b&gt;
 
-    - Pure text process control, which means it's easy for documenation, scripting and testing.
+    - Pure text process control makes documentation, scripting and testing easy.
     - Easy to change program behavior even after application is built.
-    - Easy to build 1:1, 1:N, and M:N communication
+    - Easy to build 1:1, 1:N and M:N communication.
     - No need to directly invoke LabVIEW queues or user events.
-    - Both of parameters and data are passed with argument by "encoding" "transmission" and "decoding".
-    - High code concentration; most visible code is user-generated.
-    - VIs serve as modules, with Singleton/Cloneable behavior defined by VI attributes.
+    - Parameters and data are passed through "encoding", "transmission" and "decoding" with arguments.
+    - User's code is highly concentrated; most visible code is user-generated.
+    - VIs serve as modules, and their Singleton/Cloneable behavior is defined by VI attributes.
     - Detailed global log interface with multiple debugging tools built on it.
-    - Compatible with JKISM Editor 
+    - Compatible with JKISM Editor.
 
 For more information, please visit the CSM wiki: https://nevstop-lab.github.io/CSM-Wiki/
 For instructions on JKI State Machine(JKISM), visit: http://jki.net/state-machine
