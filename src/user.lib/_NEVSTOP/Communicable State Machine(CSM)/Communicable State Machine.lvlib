@@ -1,10 +1,42 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
 <Library LVVersion="17008000">
-	<Property Name="NI.Lib.Description" Type="Str">Communicable State Machine(CSM) is a LabVIEW Application Framework extended from JKI State Machine(JKISM). It follows the JKISM's pattern and extends the Key words to describe message communication between modules including the concepts of Sync-Message, Async-Message, Subscription/Unsubscription of status, which is essential elements for creating re-use code modules. More information, please visit wiki of CSM: &lt;https://nevstop-lab.github.io/CSM-Wiki/&gt;
+	<Property Name="NI.Lib.Description" Type="Str">Communicable State Machine(CSM) is a LabVIEW application framework that builds upon JKI State Machine(JKISM). It follows the pattern of JKISM and extends the keywords to describe message communication between modules, including concepts such as Sync-Message, Async-Message, Subscription/Unsubscription of status - essential elements for creating reusable code modules. 
 
-- For instructions on JKI State Machine, visit: &lt;http://jki.net/state-machine/&gt;
-- For information about NEVSTOP-LAB, visit: &lt;https://github.com/NEVSTOP-LAB&gt;</Property>
-	<Property Name="NI.Lib.HelpPath" Type="Str"></Property>
+&lt;b&gt;Grammar:&lt;/b&gt;
+
+    &lt;color=gray&gt;// Local Message Example&lt;/color&gt;
+    DoSth: DoA &gt;&gt; Arguments
+    &lt;color=gray&gt;// Sync Call Example&lt;/color&gt;
+    API: xxxx &gt;&gt; &lt;i&gt;Arguments&lt;/i&gt; &lt;color=red&gt;-@&lt;/color&gt; TargetModule
+    &lt;color=gray&gt;// Async Call Example&lt;/color&gt;
+    API: xxxx &gt;&gt; &lt;i&gt;Arguments&lt;/i&gt; &lt;color=red&gt;-&gt;&lt;/color&gt; TargetModule
+    &lt;color=gray&gt;// Async Call without Reply Example&lt;/color&gt;
+    API: xxxx &gt;&gt; &lt;i&gt;Arguments&lt;/i&gt; &lt;color=red&gt;-&gt;|&lt;/color&gt; TargetModule
+    &lt;color=gray&gt;// Broadcast normal status:&lt;/color&gt;
+    Status &gt;&gt; &lt;i&gt;StatusArguments&lt;/i&gt;  &lt;color=red&gt;-&gt;&lt;status&gt;&lt;/color&gt;
+    &lt;color=gray&gt;// Broadcast Interrupt status:&lt;/color&gt;
+    Interrupt &gt;&gt; &lt;i&gt;StatusArguments&lt;/i&gt; &lt;color=red&gt;-&gt;&lt;interrupt&gt;&lt;/color&gt;
+    &lt;color=gray&gt;// Register Source Module's status to Handler Module&lt;/color&gt;
+    Status@Source Module &gt;&gt; API@Handler Module &lt;color=red&gt;-&gt;&lt;register&gt;&lt;/color&gt;
+    &lt;color=gray&gt;// Unregister Source Module's status&lt;/color&gt;
+    Status@Source Module &gt;&gt; API@Handler Module &lt;color=red&gt;-&gt;&lt;unregister&gt;&lt;/color&gt;
+
+&lt;b&gt;Hightlights:&lt;/b&gt;
+
+    - Pure text process control makes documentation, scripting and testing easy.
+    - Easy to change program behavior even after application is built.
+    - Easy to build 1:1, 1:N and M:N communication.
+    - No need to directly invoke LabVIEW queues or user events.
+    - Parameters and data are passed through "encoding", "transmission" and "decoding" with arguments.
+    - User's code is highly concentrated; most visible code is user-generated.
+    - VIs serve as modules, and their Singleton/Cloneable behavior is defined by VI attributes.
+    - Detailed global log interface with multiple debugging tools built on it.
+    - Compatible with JKISM Editor.
+
+For more information, please visit the CSM wiki: https://nevstop-lab.github.io/CSM-Wiki/
+For instructions on JKI State Machine(JKISM), visit: http://jki.net/state-machine
+For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
+	<Property Name="NI.Lib.HelpPath" Type="Str">/https/github.com/NEVSTOP-LAB</Property>
 	<Property Name="NI.Lib.Icon" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!)(!!!*Q(C=\&gt;4.&lt;2MR&amp;-4RS==B6X51K)88AFJ1#[_$1&amp;@\JB;G"&lt;7A3QK9&amp;N3#7F$_:!D$*_]F$A,%J#FL:\F]0X%8+]XW4@KKZ]XWYYWW=8J-?/`T7\[.JI`WU@\P^P49;/^0_#3./I^(''9UIT2+0U)?]J#(0/1B.\H*47ZSEZO]S:O]S:O]S:O]S)O]S)O]S)N]&gt;H+2CVTEE%,R5#AM'B9)E[%I@!20]!20](#IY!G?Y!G?Y''+AC&gt;YAC&gt;YAI@,&amp;$T"%TT"%TQM.37:H2R0],#]D-&gt;YD-&gt;YD)?3-BY$--8-QG92'$)HT2@D-2\DY;O-RXC-RXC-B^-S(O-R(O-R(C[:O_+J':U=$]OI]43?RN.Y'A^,K`%UHM&lt;4?"I0Z&gt;2Y'E_$;!IWCU.1=V%TI4FI0)W(@WI]D;@R.*\'Q[FZBXLOT.#-4I[H]"3?QF.Y#A^,K0!5HM*4?!I0S[LQ&amp;*\#5XA+$[65?!J0Y3EA26(+KVCMO,#96!3&amp;B\`ZN.3]3Z[3GFV;$[`71[HVM'E^2&amp;I0B^:.V\K:7D&gt;*;`/V.F6LM\1W1?P(;;'V-&amp;J&amp;N#Y?%X8H]];Y-C[--_0%/$)/D$VD.S\^QR0P^\NONZOOV[MOFYP/Z\./JZ//R[-/BY0W_\VWO^X,;_!\`?7&amp;]0O^^&amp;0[]M4R[T'SP`.?_B@?D@KMVX89IV_BU3H-!!!!!!</Property>
 	<Property Name="NI.Lib.LocalName" Type="Str">CSM</Property>
 	<Property Name="NI.Lib.SourceVersion" Type="Int">385908736</Property>
@@ -294,6 +326,11 @@
 			<Item Name="Get Strings from Enum_csm.vi" Type="VI" URL="../Utility/_openG/Get Strings from Enum_csm.vi"/>
 			<Item Name="Set Enum String Value_csm.vi" Type="VI" URL="../Utility/_openG/Set Enum String Value_csm.vi"/>
 		</Item>
+		<Item Name="_Periodic String Filter" Type="Folder">
+			<Item Name="Periodic String Filter.vi" Type="VI" URL="../Utility/Periodic String Filter.vi"/>
+			<Item Name="Periodic String Filter Info.ctl" Type="VI" URL="../Utility/Periodic String Filter Info.ctl"/>
+			<Item Name="Periodic String Filter State.ctl" Type="VI" URL="../Utility/Periodic String Filter State.ctl"/>
+		</Item>
 		<Item Name="Timeout Selector.vi" Type="VI" URL="../Utility/Timeout Selector.vi"/>
 		<Item Name="Build Internal State String.vi" Type="VI" URL="../Utility/Build Internal State String.vi"/>
 		<Item Name="Build Error Cluster.vi" Type="VI" URL="../Utility/Build Error Cluster.vi"/>
@@ -305,7 +342,6 @@
 		<Item Name="CSM Data Type String to Enum.vi" Type="VI" URL="../Utility/CSM Data Type String to Enum.vi"/>
 		<Item Name="Replace Tag with Array.vi" Type="VI" URL="../Utility/Replace Tag with Array.vi"/>
 		<Item Name="String History Cacher.vi" Type="VI" URL="../Utility/String History Cacher.vi"/>
-		<Item Name="Periodic String Filter.vi" Type="VI" URL="../Utility/Periodic String Filter.vi"/>
 	</Item>
 	<Item Name="Parse State Queue++.vi" Type="VI" URL="../Parse State Queue++.vi"/>
 	<Item Name="Add State(s) to Queue By BOOL++.vi" Type="VI" URL="../Add State(s) to Queue By BOOL++.vi"/>
