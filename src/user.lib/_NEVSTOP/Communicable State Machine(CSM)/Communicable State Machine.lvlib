@@ -1,10 +1,42 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
 <Library LVVersion="17008000">
-	<Property Name="NI.Lib.Description" Type="Str">Communicable State Machine(CSM) is a LabVIEW Application Framework extended from JKI State Machine(JKISM). It follows the JKISM's pattern and extends the Key words to describe message communication between modules including the concepts of Sync-Message, Async-Message, Subscription/Unsubscription of status, which is essential elements for creating re-use code modules. More information, please visit wiki of CSM: &lt;https://nevstop-lab.github.io/CSM-Wiki/&gt;
+	<Property Name="NI.Lib.Description" Type="Str">Communicable State Machine(CSM) is a LabVIEW application framework that builds upon JKI State Machine(JKISM). It follows the pattern of JKISM and extends the keywords to describe message communication between modules, including concepts such as Sync-Message, Async-Message, Subscription/Unsubscription of status - essential elements for creating reusable code modules. 
 
-- For instructions on JKI State Machine, visit: &lt;http://jki.net/state-machine/&gt;
-- For information about NEVSTOP-LAB, visit: &lt;https://github.com/NEVSTOP-LAB&gt;</Property>
-	<Property Name="NI.Lib.HelpPath" Type="Str"></Property>
+&lt;b&gt;Grammar:&lt;/b&gt;
+
+    &lt;color=gray&gt;// Local Message Example&lt;/color&gt;
+    DoSth: DoA &gt;&gt; Arguments
+    &lt;color=gray&gt;// Sync Call Example&lt;/color&gt;
+    API: xxxx &gt;&gt; &lt;i&gt;Arguments&lt;/i&gt; &lt;color=red&gt;-@&lt;/color&gt; TargetModule
+    &lt;color=gray&gt;// Async Call Example&lt;/color&gt;
+    API: xxxx &gt;&gt; &lt;i&gt;Arguments&lt;/i&gt; &lt;color=red&gt;-&gt;&lt;/color&gt; TargetModule
+    &lt;color=gray&gt;// Async Call without Reply Example&lt;/color&gt;
+    API: xxxx &gt;&gt; &lt;i&gt;Arguments&lt;/i&gt; &lt;color=red&gt;-&gt;|&lt;/color&gt; TargetModule
+    &lt;color=gray&gt;// Broadcast normal status:&lt;/color&gt;
+    Status &gt;&gt; &lt;i&gt;StatusArguments&lt;/i&gt;  &lt;color=red&gt;-&gt;&lt;status&gt;&lt;/color&gt;
+    &lt;color=gray&gt;// Broadcast Interrupt status:&lt;/color&gt;
+    Interrupt &gt;&gt; &lt;i&gt;StatusArguments&lt;/i&gt; &lt;color=red&gt;-&gt;&lt;interrupt&gt;&lt;/color&gt;
+    &lt;color=gray&gt;// Register Source Module's status to Handler Module&lt;/color&gt;
+    Status@Source Module &gt;&gt; API@Handler Module &lt;color=red&gt;-&gt;&lt;register&gt;&lt;/color&gt;
+    &lt;color=gray&gt;// Unregister Source Module's status&lt;/color&gt;
+    Status@Source Module &gt;&gt; API@Handler Module &lt;color=red&gt;-&gt;&lt;unregister&gt;&lt;/color&gt;
+
+&lt;b&gt;Hightlights:&lt;/b&gt;
+
+    - Pure text process control makes documentation, scripting and testing easy.
+    - Easy to change program behavior even after application is built.
+    - Easy to build 1:1, 1:N and M:N communication.
+    - No need to directly invoke LabVIEW queues or user events.
+    - Parameters and data are passed through "encoding", "transmission" and "decoding" with arguments.
+    - User's code is highly concentrated; most visible code is user-generated.
+    - VIs serve as modules, and their Singleton/Cloneable behavior is defined by VI attributes.
+    - Detailed global log interface with multiple debugging tools built on it.
+    - Compatible with JKISM Editor.
+
+For more information, please visit the CSM wiki: https://nevstop-lab.github.io/CSM-Wiki/
+For instructions on JKI State Machine(JKISM), visit: http://jki.net/state-machine
+For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
+	<Property Name="NI.Lib.HelpPath" Type="Str">/https/github.com/NEVSTOP-LAB</Property>
 	<Property Name="NI.Lib.Icon" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!)(!!!*Q(C=\&gt;4.&lt;2MR&amp;-4RS==B6X51K)88AFJ1#[_$1&amp;@\JB;G"&lt;7A3QK9&amp;N3#7F$_:!D$*_]F$A,%J#FL:\F]0X%8+]XW4@KKZ]XWYYWW=8J-?/`T7\[.JI`WU@\P^P49;/^0_#3./I^(''9UIT2+0U)?]J#(0/1B.\H*47ZSEZO]S:O]S:O]S:O]S)O]S)O]S)N]&gt;H+2CVTEE%,R5#AM'B9)E[%I@!20]!20](#IY!G?Y!G?Y''+AC&gt;YAC&gt;YAI@,&amp;$T"%TT"%TQM.37:H2R0],#]D-&gt;YD-&gt;YD)?3-BY$--8-QG92'$)HT2@D-2\DY;O-RXC-RXC-B^-S(O-R(O-R(C[:O_+J':U=$]OI]43?RN.Y'A^,K`%UHM&lt;4?"I0Z&gt;2Y'E_$;!IWCU.1=V%TI4FI0)W(@WI]D;@R.*\'Q[FZBXLOT.#-4I[H]"3?QF.Y#A^,K0!5HM*4?!I0S[LQ&amp;*\#5XA+$[65?!J0Y3EA26(+KVCMO,#96!3&amp;B\`ZN.3]3Z[3GFV;$[`71[HVM'E^2&amp;I0B^:.V\K:7D&gt;*;`/V.F6LM\1W1?P(;;'V-&amp;J&amp;N#Y?%X8H]];Y-C[--_0%/$)/D$VD.S\^QR0P^\NONZOOV[MOFYP/Z\./JZ//R[-/BY0W_\VWO^X,;_!\`?7&amp;]0O^^&amp;0[]M4R[T'SP`.?_B@?D@KMVX89IV_BU3H-!!!!!!</Property>
 	<Property Name="NI.Lib.LocalName" Type="Str">CSM</Property>
 	<Property Name="NI.Lib.SourceVersion" Type="Int">385908736</Property>
@@ -22,15 +54,17 @@
 		<Item Name="CSM - Remove Module in Boradcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - Remove Module in Boradcast Registry.vi"/>
 	</Item>
 	<Item Name="Support" Type="Folder">
-		<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 		<Property Name="NI.SortType" Type="Int">3</Property>
 		<Item Name="Priority Queue" Type="Folder">
+			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 			<Item Name="Priority Queue.lvclass" Type="LVClass" URL="../_Support/Priority Queue/Priority Queue.lvclass"/>
 		</Item>
 		<Item Name="BroadcastRegistry" Type="Folder">
+			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 			<Item Name="BroadcastRegistry.lvclass" Type="LVClass" URL="../_Support/BroadcastRegistry/BroadcastRegistry.lvclass"/>
 		</Item>
 		<Item Name="Common" Type="Folder">
+			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 			<Item Name="Trim Single line Text.vi" Type="VI" URL="../_Support/Common/Trim Single line Text.vi"/>
 			<Item Name="Remove Comments from Line.vi" Type="VI" URL="../_Support/Common/Remove Comments from Line.vi"/>
 			<Item Name="Splite Single-line Message.vi" Type="VI" URL="../_Support/Common/Splite Single-line Message.vi"/>
@@ -43,6 +77,7 @@
 			<Item Name="Format Timestamp.vi" Type="VI" URL="../_Support/Common/Format Timestamp.vi"/>
 		</Item>
 		<Item Name="CSM-Core" Type="Folder">
+			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 			<Item Name="Support" Type="Folder">
 				<Item Name="_Obtain CSM Data Queue.vi" Type="VI" URL="../_Support/CSMQ/_Obtain CSM Data Queue.vi"/>
 			</Item>
@@ -93,6 +128,7 @@
 			<Item Name="FGV-StatusChangeEventRef.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-StatusChangeEventRef.vi"/>
 		</Item>
 		<Item Name="FGV-BroadcastRegistry" Type="Folder">
+			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 			<Item Name="FGV-BroadcastRegistry.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/FGV-BroadcastRegistry.vi"/>
 			<Item Name="Operation-BroadcastRegistry.ctl" Type="VI" URL="../_Support/FGV-BroadcastRegistry/Operation-BroadcastRegistry.ctl"/>
 			<Item Name="global-Broadcast Cache Change Flag.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/global-Broadcast Cache Change Flag.vi"/>
@@ -101,7 +137,17 @@
 		</Item>
 		<Item Name="GlobalEvent" Type="Folder">
 			<Item Name="LogFilter" Type="Folder">
+				<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 				<Item Name="LogFilter.lvclass" Type="LVClass" URL="../_Support/GlobalEvent/LogFilter/LogFilter.lvclass"/>
+			</Item>
+			<Item Name="instanceVIs" Type="Folder">
+				<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+				<Item Name="GEvt-Filter Global Log - v1.0.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Filter Global Log - v1.0.vi"/>
+				<Item Name="GEvt-Filter Global Log - v1.1.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Filter Global Log - v1.1.vi"/>
+				<Item Name="GEvt-Convert Filter Rules - v1.0.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Convert Filter Rules - v1.0.vi"/>
+				<Item Name="GEvt-Convert Filter Rules - v1.1.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Convert Filter Rules - v1.1.vi"/>
+				<Item Name="GEvt-Convert Filter Rules - Periodic Setting Only.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Convert Filter Rules - Periodic Setting Only.vi"/>
+				<Item Name="GEvt-Set Source Filter Rules - v1.0.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Set Source Filter Rules - v1.0.vi"/>
 			</Item>
 			<Item Name="GEvt-RequestDef.ctl" Type="VI" URL="../_Support/GlobalEvent/GEvt-RequestDef.ctl"/>
 			<Item Name="global-GEvnt Filter Change Flag.vi" Type="VI" URL="../_Support/GlobalEvent/global-GEvnt Filter Change Flag.vi"/>
@@ -121,11 +167,9 @@
 			<Item Name="GEvt-Generate Module Created Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate Module Created Log.vi"/>
 			<Item Name="GEvt-Generate Module Destroyed Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate Module Destroyed Log.vi"/>
 			<Item Name="GEvt-Generate with Rule Check.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate with Rule Check.vi"/>
-			<Item Name="GEvt-Filter Global Log - v1.0.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Filter Global Log - v1.0.vi"/>
-			<Item Name="GEvt-Convert Filter Rules - v1.0.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Convert Filter Rules - v1.0.vi"/>
-			<Item Name="GEvt-Set Source Filter Rules - v1.0.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Set Source Filter Rules - v1.0.vi"/>
 		</Item>
 		<Item Name="Typedef" Type="Folder">
+			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 			<Item Name="_Cross CSM State Data.ctl" Type="VI" URL="../_Support/Typedef/_Cross CSM State Data.ctl"/>
 			<Item Name="_Cross CSM State Response.ctl" Type="VI" URL="../_Support/Typedef/_Cross CSM State Response.ctl"/>
 			<Item Name="_CSM_MSG_TYPE.ctl" Type="VI" URL="../_Support/Typedef/_CSM_MSG_TYPE.ctl"/>
@@ -138,11 +182,14 @@
 			<Item Name="_CSM_GlobalLog_MSG_TYPE.ctl" Type="VI" URL="../_Support/Typedef/_CSM_GlobalLog_MSG_TYPE.ctl"/>
 			<Item Name="_CSM_GlobalLog_STATE_TYPE.ctl" Type="VI" URL="../_Support/Typedef/_CSM_GlobalLog_STATE_TYPE.ctl"/>
 			<Item Name="_CSM_GlobalLog Filter Rules - v1.0.ctl" Type="VI" URL="../_Support/Typedef/_CSM_GlobalLog Filter Rules - v1.0.ctl"/>
+			<Item Name="_CSM_GlobalLog Filter Rules - v1.1.ctl" Type="VI" URL="../_Support/Typedef/_CSM_GlobalLog Filter Rules - v1.1.ctl"/>
 		</Item>
 		<Item Name="NamingConvention" Type="Folder">
+			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 			<Item Name="Naming Check.vi" Type="VI" URL="../_Support/Naming Check.vi"/>
 		</Item>
 		<Item Name="Message" Type="Folder">
+			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 			<Item Name="Parse State with Arguments String.vi" Type="VI" URL="../_Support/Message/Parse State with Arguments String.vi"/>
 			<Item Name="Parse Unregister Message.vi" Type="VI" URL="../_Support/Message/Parse Unregister Message.vi"/>
 			<Item Name="Parse Register Message.vi" Type="VI" URL="../_Support/Message/Parse Register Message.vi"/>
@@ -247,6 +294,7 @@
 				<Item Name="CSM Not Allowed Message.vi" Type="VI" URL="../_Support/Error/CSM Not Allowed Message.vi"/>
 			</Item>
 			<Item Name="CSM - Get New State Notifier Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Get New State Notifier Event.vi"/>
+			<Item Name="CSM - Internal State Debug Log History.vi" Type="VI" URL="../AdvanceAPI/CSM - Internal State Debug Log History.vi"/>
 		</Item>
 	</Item>
 	<Item Name="Argument" Type="Folder">
@@ -278,9 +326,13 @@
 			<Item Name="Get Strings from Enum_csm.vi" Type="VI" URL="../Utility/_openG/Get Strings from Enum_csm.vi"/>
 			<Item Name="Set Enum String Value_csm.vi" Type="VI" URL="../Utility/_openG/Set Enum String Value_csm.vi"/>
 		</Item>
+		<Item Name="_Periodic String Filter" Type="Folder">
+			<Item Name="Periodic String Filter.vi" Type="VI" URL="../Utility/Periodic String Filter.vi"/>
+			<Item Name="Periodic String Filter Info.ctl" Type="VI" URL="../Utility/Periodic String Filter Info.ctl"/>
+			<Item Name="Periodic String Filter State.ctl" Type="VI" URL="../Utility/Periodic String Filter State.ctl"/>
+		</Item>
 		<Item Name="Timeout Selector.vi" Type="VI" URL="../Utility/Timeout Selector.vi"/>
 		<Item Name="Build Internal State String.vi" Type="VI" URL="../Utility/Build Internal State String.vi"/>
-		<Item Name="String History Cacher.vi" Type="VI" URL="../Utility/String History Cacher.vi"/>
 		<Item Name="Build Error Cluster.vi" Type="VI" URL="../Utility/Build Error Cluster.vi"/>
 		<Item Name="Trim Both Whitespace.vi" Type="VI" URL="../Utility/Trim Both Whitespace.vi"/>
 		<Item Name="uuid.vi" Type="VI" URL="../Utility/uuid.vi"/>
@@ -289,6 +341,7 @@
 		<Item Name="CSM Data Type String.vi" Type="VI" URL="../Utility/CSM Data Type String.vi"/>
 		<Item Name="CSM Data Type String to Enum.vi" Type="VI" URL="../Utility/CSM Data Type String to Enum.vi"/>
 		<Item Name="Replace Tag with Array.vi" Type="VI" URL="../Utility/Replace Tag with Array.vi"/>
+		<Item Name="String History Cacher.vi" Type="VI" URL="../Utility/String History Cacher.vi"/>
 	</Item>
 	<Item Name="Parse State Queue++.vi" Type="VI" URL="../Parse State Queue++.vi"/>
 	<Item Name="Add State(s) to Queue By BOOL++.vi" Type="VI" URL="../Add State(s) to Queue By BOOL++.vi"/>

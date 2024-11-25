@@ -6,6 +6,7 @@
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Property Name="NI.SortType" Type="Int">3</Property>
 	<Item Name="Support" Type="Folder">
+		<Item Name="List Rules as Strings.vi" Type="VI" URL="../_Support/List Rules as Strings.vi"/>
 		<Item Name="Append Application Directory If Relative.vi" Type="VI" URL="../_Support/Append Application Directory If Relative.vi"/>
 		<Item Name="Convert File Extension (Path)__ogtk.vi" Type="VI" URL="../_Support/Convert File Extension (Path)__ogtk.vi"/>
 		<Item Name="Convert File Extension (String)__ogtk.vi" Type="VI" URL="../_Support/Convert File Extension (String)__ogtk.vi"/>
