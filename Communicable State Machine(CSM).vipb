@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-11-25 18:34:43" Creator="liyao" Comments="" ID="56662b33a87bbad7dae5bc80b1f65906">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-11-29 17:39:54" Creator="liyao" Comments="" ID="c081927d6389cc01358fda157a01a87d">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
-    <Library_Version>2024.11.0.3</Library_Version>
+    <Library_Version>2024.12.0.3</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>src</Library_Source_Folder>
     <Library_Output_Folder>vip</Library_Output_Folder>
@@ -70,21 +70,7 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
       <Copyright/>
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
-      <Release_Notes>[important] Peroidic States/Log will automatically be filtered in Template/DebugTools/Examples
-[important] Change License to MIT, to enable more csm users
-
-#Core
-[update] #337 Show Responses in "CSM - Run Script.vi"
-
-#Template
-[update] Update template to use new State Debug Log VI, which will automatically filter period States in log
-
-#Installer
-[update] Remove the localization process to speed up the installation. You can use the CSM Tool to change the description language.
-
-#Tool
-[update] #285 Peroidic States/Log will automatically be filtered in DebugTools
-[fix] minor fix #327</Release_Notes>
+      <Release_Notes/>
     </Description>
     <Destinations>
       <Toolkit_VIs>
