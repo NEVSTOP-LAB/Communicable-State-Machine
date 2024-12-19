@@ -89,7 +89,7 @@ This VI is used to build CSM message strings and operation strings.
 > - Build Unregister Status Message.vi
 > - CSM - Replace Substitution Marks in Messages.vi
 
-#### Build Message with Arguments (Auto Check).vi
+#### Build Message with Arguments(Auto Check).vi
 
 Concatenates a CSM message string, and the message type symbol will be automatically detected based on the input <b>State with Arguments</b>.
 
