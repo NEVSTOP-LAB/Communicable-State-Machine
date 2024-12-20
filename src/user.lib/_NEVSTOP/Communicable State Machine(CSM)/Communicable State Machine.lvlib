@@ -272,11 +272,6 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="CSM - Mark As Chain Module.vi" Type="VI" URL="../AdvanceAPI/CSM - Mark As Chain Module.vi"/>
 		</Item>
 		<Item Name="HelperVIs" Type="Folder">
-			<Item Name="QuickDrop" Type="Folder">
-				<Item Name="CSM - Start Async Call.vi" Type="VI" URL="../AdvanceAPI/CSM - Start Async Call.vi"/>
-				<Item Name="CSM - Synchronized Call.vi" Type="VI" URL="../AdvanceAPI/CSM - Synchronized Call.vi"/>
-				<Item Name="CSM - Flood of Events Handler Side Loop.vi" Type="VI" URL="../AdvanceAPI/CSM - Flood of Events Handler Side Loop.vi"/>
-			</Item>
 			<Item Name="CSM - Build Exit Messages of CSMs.vi" Type="VI" URL="../AdvanceAPI/CSM - Build Exit Messages of CSMs.vi"/>
 			<Item Name="CSM - Compact Multiple States.vi" Type="VI" URL="../AdvanceAPI/CSM - Compact Multiple States.vi"/>
 			<Item Name="CSM - Break Down Multiple States String.vi" Type="VI" URL="../AdvanceAPI/CSM - Break Down Multiple States String.vi"/>
