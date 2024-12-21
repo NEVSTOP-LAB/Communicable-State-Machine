@@ -60,7 +60,6 @@ In this scenario, inter-module communication solely relies on message string que
 
     // Unregister Source Module's status
     Status@Source Module >> API@Handler Module -><unregister>
-    Status@Source Module >> Handler Module -><unregister> // API Name could not be specified.
 
 #CSM Commenting
     To add a comment use "//" and all text to the right will be ignored
