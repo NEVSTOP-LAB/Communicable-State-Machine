@@ -240,15 +240,15 @@ Returns any argument(s) that may be used in the current state string. These argu
 
 ### global-Broadcast Cache Change Flag.vi
 
-全局变量，用于标记广播缓存是否发生变化
+Global variable used to indicate whether the broadcast cache has changed
 
 ### global-CSMQ FGV Change Flag.vi
 
-全局变量，用于标记 CSM 模块管理信息是否发生变化
+Global variable used to indicate whether the CSM module management information has changed
 
 ### global-GEvnt Filter Change Flag.vi
 
-全局变量，用于标记 Global Event 的过滤条件是否发生变化
+Global variable used to indicate whether the Global Event filter conditions have changed
 
 ### Cache-GEvt Filter Object.vi
 
@@ -618,7 +618,7 @@ Returns any argument(s) that may be used in the current state string. These argu
 -- <b>Controls</b> --
 - <b>Complete(T)/Start(F)</b>:
 - <b>Source Module</b>:
-- <b>‘State</b>:
+- <b>State</b>:
 
 -- <b>Indicators</b> --
 - <b>CSM_GlobalLog_STATE_TYPE</b>:
@@ -851,7 +851,7 @@ The State string that requires the argument.
 - <b>Cluster</b>:
 - <b>Cluster Size:Height</b>:
 - <b>Cluster Size:Width</b>:
-- <b>引气压力P4 4</b>:
+- <b>ClusterRef</b>:
 
 -- <b>Indicators</b> --
 - <b>Bounds:Area Height</b>:

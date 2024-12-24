@@ -6,7 +6,7 @@
 
 Use the minimum number of VI calls to determine if it is a CSM module, for pre-checking in LabVIEW plugins.
 
-> [!NOTE] ¶àÌ¬VI(Polymorphic VI)Ñ¡Ïî:
+> [!NOTE] Polymorphic VI Options:
 > - Is CSM Module - VIRef.vi
 > - Is CSM Module - WhileLoop.vi
 > - Is CSM Module - Structure.vi

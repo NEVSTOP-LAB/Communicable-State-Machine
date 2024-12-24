@@ -613,7 +613,7 @@ Returns any argument(s) that may be used in the current state string. These argu
 -- <b>输入控件</b> --
 - <b>Complete(T)/Start(F)</b>:
 - <b>Source Module</b>:
-- <b>‘State</b>:
+- <b>State</b>:
 
 -- <b>输出控件</b> --
 - <b>CSM_GlobalLog_STATE_TYPE</b>:
@@ -846,7 +846,7 @@ The State string that requires the argument.
 - <b>Cluster</b>:
 - <b>Cluster Size:Height</b>:
 - <b>Cluster Size:Width</b>:
-- <b>引气压力P4 4</b>:
+- <b>ClusterRef</b>:
 
 -- <b>输出控件</b> --
 - <b>Bounds:Area Height</b>:

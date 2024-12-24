@@ -304,7 +304,7 @@ Incorporates CSM message strings into the CSM message queue. Provides TRUE/FALSE
 > - add State(s) to Queue By BOOL (Array Right).vi
 > - add State(s) to Queue By BOOL (Array All).vi
 
-#### Add State(s) to Queue By BOOL (Element).vi
+#### Add State(s) to Queue By BOOL(Element).vi
 
 Incorporates CSM message strings into the CSM message queue. Provides TRUE/FALSE state string options to avoid using conditional structures, improving code readability and programming efficiency.
 
@@ -320,7 +320,7 @@ Incorporates CSM message strings into the CSM message queue. Provides TRUE/FALSE
 <b>Indicators</b>
 - <b>Remaining States</b>: All concatenated states and parameters.
 
-#### Add State(s) to Queue By BOOL (Array Left).vi
+#### Add State(s) to Queue By BOOL(Array Left).vi
 
 Incorporates CSM message strings into the CSM message queue. Provides TRUE/FALSE state string options to avoid using conditional structures, improving code readability and programming efficiency.
 
@@ -336,7 +336,7 @@ Incorporates CSM message strings into the CSM message queue. Provides TRUE/FALSE
 <b>Indicators</b>
 - <b>Remaining States</b>: All concatenated states and parameters.
 
-#### Add State(s) to Queue By BOOL (Array Right).vi
+#### Add State(s) to Queue By BOOL(Array Right).vi
 
 Incorporates CSM message strings into the CSM message queue. Provides TRUE/FALSE state string options to avoid using conditional structures, improving code readability and programming efficiency.
 
@@ -352,7 +352,7 @@ Incorporates CSM message strings into the CSM message queue. Provides TRUE/FALSE
 <b>Indicators</b>
 - <b>Remaining States</b>: All concatenated states and parameters.
 
-#### Add State(s) to Queue By BOOL (Array All).vi
+#### Add State(s) to Queue By BOOL(Array All).vi
 
 Based on high priority and Bool input, this VI generates TRUE/False and remaining states concatenated states.
 The High Priority input determines whether to concatenate the TRUE or FALSE string before or after the remaining states.
