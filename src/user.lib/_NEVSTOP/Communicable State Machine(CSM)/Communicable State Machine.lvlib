@@ -91,6 +91,9 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 				<Item Name="_CSMObj-Lock State.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Lock State.vi"/>
 				<Item Name="_CSMObj-Message Check.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Message Check.vi"/>
 				<Item Name="_CSMObj-Clone Worker.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Clone Worker.vi"/>
+				<Item Name="_CSMObj-Add Internal Registry Rule.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Add Internal Registry Rule.vi"/>
+				<Item Name="_CSMObj-Remove Internal Registry Rule.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Remove Internal Registry Rule.vi"/>
+				<Item Name="_CSMObj-Unregister Internal Registry Rules.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Unregister Internal Registry Rules.vi"/>
 				<Item Name="_CSMObj-Append Chain Node.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Append Chain Node.vi"/>
 				<Item Name="_CSMObj-Remove Chain Node.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Remove Chain Node.vi"/>
 				<Item Name="_CSMObj-Create Status Event.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Create Status Event.vi"/>
