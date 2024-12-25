@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-12-24 21:24:43" Creator="liyao" Comments="" ID="15187784d7c2118df1b6cb77cc76baa4">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-12-25 10:49:23" Creator="liyao" Comments="" ID="7cab978b05c643daec2df0009aa126e7">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2024.12.0.3</Library_Version>
@@ -82,6 +82,7 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
 [update] #349 make template looks simple. Thanks @drjdpowell
 
 #Documentation
+[add] add a new example VI to compare the teamplates of JKISM and CSM
 [fix] #348 fix unreadable description issue. Thanks @drjdpowell
 [update] Update utility VI icons
 
