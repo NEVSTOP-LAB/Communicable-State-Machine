@@ -497,7 +497,6 @@
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Communicable State Machine.lvlibp" Type="Packed Library">
-				<Property Name="Bld_autoIncrement" Type="Bool">true</Property>
 				<Property Name="Bld_buildCacheID" Type="Str">{E6766B2B-D468-4793-BDC2-B658A6B7F582}</Property>
 				<Property Name="Bld_buildSpecName" Type="Str">Communicable State Machine.lvlibp</Property>
 				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
@@ -506,8 +505,9 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{10AFC524-DE75-48D3-9EA6-4A2C13DE721C}</Property>
-				<Property Name="Bld_version.build" Type="Int">1</Property>
-				<Property Name="Bld_version.major" Type="Int">1</Property>
+				<Property Name="Bld_version.build" Type="Int">2</Property>
+				<Property Name="Bld_version.major" Type="Int">2024</Property>
+				<Property Name="Bld_version.minor" Type="Int">12</Property>
 				<Property Name="Destination[0].destName" Type="Str">Communicable State Machine.lvlibp</Property>
 				<Property Name="Destination[0].path" Type="Path">../builds/NI_AB_PROJECTNAME/Communicable State Machine.lvlibp/Communicable State Machine.lvlibp</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
@@ -516,7 +516,7 @@
 				<Property Name="Destination[1].path" Type="Path">../builds/NI_AB_PROJECTNAME/Communicable State Machine.lvlibp</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="PackedLib_callersAdapt" Type="Bool">true</Property>
-				<Property Name="Source[0].itemID" Type="Str">{78434886-6844-4D9D-BA69-2408D2DE6143}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{39CD7CBB-08C4-4F97-AECB-862BA054B79A}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/user.lib/_NEVSTOP/Communicable State Machine(CSM)/Communicable State Machine.lvlib</Property>
