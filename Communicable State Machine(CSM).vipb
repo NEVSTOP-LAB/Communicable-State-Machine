@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-12-25 23:08:15" Creator="liyao" Comments="" ID="7e3b7273ab1a48fa355912f8de8801c6">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-12-27 13:26:09" Creator="liyao" Comments="" ID="832334f74d2d4d0c4017781317c4551f">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2024.12.0.3</Library_Version>
@@ -88,7 +88,8 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
 
 #utility
 [add] add Global Log History Cacher.vi and quick drop snippet of Global Log monitoring loop
-[update] #344 show parameter in filted periodic log in debug tools
+[add] add "Enum to String_csm.vim" utility 
+[update] #344 show argument in filted periodic log in debug tools
 [update] Add "Skip in Runtime(T)" option for CSM - Internal State Debug Log History.vi
 [update] Add "Periodic Log Info" terminal for CSM - Internal State Debug Log History.vi</Release_Notes>
     </Description>
