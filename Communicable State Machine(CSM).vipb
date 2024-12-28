@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-12-27 13:41:06" Creator="liyao" Comments="" ID="f8c90ac189615594d8674eaf6626a82f">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-12-28 20:44:28" Creator="liyao" Comments="" ID="e796fd95bba5bceb4fe882896544e264">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2024.12.0.3</Library_Version>
@@ -81,6 +81,9 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
 #Template
 [update] #349 make template looks simple. Thanks @drjdpowell
 
+#Tool
+[update] improve csm tools performance
+
 #Documentation
 [add] add a new example VI to compare the teamplates of JKISM and CSM
 [fix] #348 fix unreadable description issue. Thanks @drjdpowell
@@ -89,8 +92,7 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
 #utility
 [add] add Global Log History Cacher.vi and quick drop snippet of Global Log monitoring loop
 [update] #344 show argument in filted periodic log in debug tools
-[update] Add "Skip in Runtime(T)" option for CSM - Internal State Debug Log History.vi
-[update] Add "Periodic Log Info" terminal for CSM - Internal State Debug Log History.vi</Release_Notes>
+[update] Add "Skip in Runtime(T)" option for CSM - Internal State Debug Log History.vi</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -264,7 +266,6 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
       <close_labview_before_install>true</close_labview_before_install>
       <restart_labview_after_install>false</restart_labview_after_install>
       <skip_mass_compile_after_install>false</skip_mass_compile_after_install>
-      <install_into_global_environment>false</install_into_global_environment>
     </LabVIEW>
     <VI_Docs>
       <Edit_VI_Description>true</Edit_VI_Description>
