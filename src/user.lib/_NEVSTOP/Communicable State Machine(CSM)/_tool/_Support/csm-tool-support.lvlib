@@ -11,5 +11,4 @@
 	<Item Name="Select Greater_nevstop.vi" Type="VI" URL="../Select Greater_nevstop.vi"/>
 	<Item Name="Open CSM BD.vi" Type="VI" URL="../Open CSM BD.vi"/>
 	<Item Name="Open CSM FP.vi" Type="VI" URL="../Open CSM FP.vi"/>
-	<Item Name="Check Timeout.vi" Type="VI" URL="../Check Timeout.vi"/>
 </Library>
