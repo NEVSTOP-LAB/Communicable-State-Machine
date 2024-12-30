@@ -60,7 +60,6 @@ CSM API 介绍:
 
     // 取消注册源模块的状态
     Status@Source Module >> API@Handler Module -><unregister>
-    Status@Source Module >> Handler Module -><unregister> // API Name可以缺省
 
 #CSM 注释
     // 要添加注释，请使用 "//"，右边的所有文本将被忽略。
