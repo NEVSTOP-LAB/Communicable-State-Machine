@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-01-04 22:06:51" Creator="liyao" Comments="" ID="6a7325bc47b3bdf0a25abf6ffd35948c">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-01-04 22:19:52" Creator="liyao" Comments="" ID="cbbdf98cb28b10af71227b1805ba2061">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2025.1.0.3</Library_Version>
@@ -70,7 +70,10 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
       <Copyright/>
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
-      <Release_Notes>#Example
+      <Release_Notes>#Template
+[update] optimize template while loop size. thanks @casey
+
+#Example
 [update] minor fix/update #355 #357</Release_Notes>
     </Description>
     <Destinations>
