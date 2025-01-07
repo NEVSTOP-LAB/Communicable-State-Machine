@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-01-06 11:43:20" Creator="liyao" Comments="" ID="3660e612eaa052d2a8991268e08eb4f5">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-01-07 13:55:59" Creator="liyao" Comments="" ID="4c6c05560ee18118183e56738266505f">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2025.1.0.3</Library_Version>
@@ -74,7 +74,9 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
 [update] #359 optimize template while loop size. thanks @casey502
 
 #Example
-[update] minor fix/update #355 #357</Release_Notes>
+[update] minor fix/update #355 #357 
+[Fix] fix data name error in "0. Base Concepts/CSM Data Type.vi". thanks @MapleBay
+</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
