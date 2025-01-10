@@ -18,17 +18,38 @@
 
 ### CSM - Add VI Reference Case to CSMs.vi
 
+The CSM template must include the "VI Reference" case, which is used to obtain references to VIs externally. In earlier templates, this case was not included. This tool is used to add it.
+
+The tool scans all VIs in the lvproj directory. If a VI contains a CSM module, it will be listed, and you can choose to add the "VI Reference" case in bulk.
+
 ### CSM - Debug Console - DebugTool.vi
 
-### CSM - Remove all CSM Bookmarks.vi
+CSM Debug Console, you can use this tool to:
+
+1. Select an existing CSM instance and open the front panel and back panel.
+2. Scan the API interfaces of the existing CSM instance.
+3. Select an API interface, call it synchronously or asynchronously, and view the return values.
+4. View the running log of the entire program.
+
+### CSM - Remove All CSM Bookmarks.vi
+
+Remove all bookmarks in the CSM module.
 
 ### CSM - Running Log - DebugTool.vi
 
+Real-time tool for viewing the running log of the entire CSM program.
+
 ### CSM - State Dashboard - DebugTool.vi
+
+Real-time status dashboard for the entire CSM program module.
 
 ### CSM - State Table - DebugTool.vi
 
+<In Development> Real-time status table for the entire CSM program module.
+
 ### CSM - Switch Language Tool.vi
+
+Switch the language of CSM module VI descriptions and comments. Currently supports Chinese and English.
 
 ## CSM-DOC
 
