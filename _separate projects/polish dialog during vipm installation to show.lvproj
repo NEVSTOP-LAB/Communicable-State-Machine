@@ -15,6 +15,9 @@
 		</Item>
 		<Item Name="test-FIX Helper Dialog.vi" Type="VI" URL="../../src/_TEST/test-FIX Helper Dialog.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
+			<Item Name="user.lib" Type="Folder">
+				<Item Name="Periodic Trigger__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/time/time.llb/Periodic Trigger__ogtk.vi"/>
+			</Item>
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Add State(s) to Queue__JKI_lib_State_Machine.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/State Machine/_JKI_lib_State_Machine.llb/Add State(s) to Queue__JKI_lib_State_Machine.vi"/>
 				<Item Name="Bit-array To Byte-array.vi" Type="VI" URL="/&lt;vilib&gt;/picture/pictutil.llb/Bit-array To Byte-array.vi"/>
@@ -95,7 +98,6 @@
 			<Item Name="Communicable State Machine.lvlib" Type="Library" URL="../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/Communicable State Machine.lvlib"/>
 			<Item Name="CSM-Helper Utility.lvlib" Type="Library" URL="../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_csmHelper/Utility/CSM-Helper Utility.lvlib"/>
 			<Item Name="CSM-Helper.lvclass" Type="LVClass" URL="../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_csmHelper/CSM-Helper.lvclass"/>
-			<Item Name="csm-tool-support.lvlib" Type="Library" URL="../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_tool/_Support/csm-tool-support.lvlib"/>
 			<Item Name="csmdoc.lvlib" Type="Library" URL="../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_csmDoc/csmdoc.lvlib"/>
 			<Item Name="csmHelper-CaseStructure.lvlib" Type="Library" URL="../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_csmHelper/Utility/_Support/CaseStructure/csmHelper-CaseStructure.lvlib"/>
 			<Item Name="csmHelper-Diagram.lvlib" Type="Library" URL="../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_csmHelper/Utility/_Support/Diagram/csmHelper-Diagram.lvlib"/>
@@ -103,6 +105,7 @@
 			<Item Name="csmHelper-Relationship.lvlib" Type="Library" URL="../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_csmHelper/Utility/_Support/Relationship/csmHelper-Relationship.lvlib"/>
 			<Item Name="csmHelper-SubVI.lvlib" Type="Library" URL="../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_csmHelper/Utility/_Support/SubVI/csmHelper-SubVI.lvlib"/>
 			<Item Name="csmHelper-Terminals.lvlib" Type="Library" URL="../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_csmHelper/Utility/_Support/Terminals/csmHelper-Terminals.lvlib"/>
+			<Item Name="Periodic Message Filter in CSM Tool.vi" Type="VI" URL="../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_tool/_Support/Periodic Message Filter in CSM Tool.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
