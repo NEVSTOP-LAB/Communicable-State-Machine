@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-01-17 14:09:37" Creator="liyao" Comments="" ID="be84c74cbe14f3d07c4d35d9cf53926e">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-01-17 19:14:34" Creator="liyao" Comments="" ID="d57bdb1bb4ade6460ef6560d46cade78">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2025.1.0.3</Library_Version>
@@ -78,6 +78,7 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
 [update] The highlight tool will no longer use underlines in arguments, making it easier to distinguish the "_" symbol within them.
 [update] #353 Improve CSM tool Launcher loading speed.
 [update] Show help content of CSM debug tools in CSM tool Launcher
+[update] add "API Only" option for listing CSM states in CSM debug console
 [fix] #327 CSM tool launcher should function as a singleton.which should not be triggered repeatedly.
 
 #Example
