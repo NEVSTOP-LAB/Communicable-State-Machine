@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2024-12-28 20:44:28" Creator="liyao" Comments="" ID="e796fd95bba5bceb4fe882896544e264">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-01-26 10:48:49" Creator="liyao" Comments="" ID="099048adb70f9f81aabaf8ff9eaca846">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
-    <Library_Version>2024.12.0.3</Library_Version>
+    <Library_Version>2025.1.0.3</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>src</Library_Source_Folder>
     <Library_Output_Folder>vip</Library_Output_Folder>
@@ -70,29 +70,27 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
       <Copyright/>
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
-      <Release_Notes>#Core
-[fix] #323 fix grammar of unregister, to make it more friendly for new CSM user
-[update] #297 Internal Status registration will be automatically removed after csm exits.
+      <Release_Notes>#Template
+[update] #359 optimize template while loop size. thanks @casey502
 
-#API
-[update] update ctrl palette for CSM
-[fix] minor fix #347
-
-#Template
-[update] #349 make template looks simple. Thanks @drjdpowell
+#GlobalLog
+[fix] #372 #371 Display precise logs for registration and unregistration actions.
 
 #Tool
-[update] improve csm tools performance
+[add] #368 add .lvcsm file to store all configuration for csm tools
+[update] The highlight tool will no longer use underlines in arguments, making it easier to distinguish the "_" symbol within them.
+[update] #353 Improve CSM tool Launcher loading speed.
+[update] Show help content of CSM debug tools in CSM tool Launcher
+[update] add "API Only" option for listing CSM states in CSM debug console
+[fix] #327 CSM tool launcher should function as a singleton.which should not be triggered repeatedly.
 
-#Documentation
-[add] add a new example VI to compare the teamplates of JKISM and CSM
-[fix] #348 fix unreadable description issue. Thanks @drjdpowell
-[update] Update utility VI icons
+#CSMHelper
+[add] #370 add "Jump to CSM State.vi", which will be used in CSM Tools and Plugins.
 
-#utility
-[add] add Global Log History Cacher.vi and quick drop snippet of Global Log monitoring loop
-[update] #344 show argument in filted periodic log in debug tools
-[update] Add "Skip in Runtime(T)" option for CSM - Internal State Debug Log History.vi</Release_Notes>
+#Example
+[update] minor fix/update #355 #357 
+[Fix] #365 fix data name error in "0. Base Concepts/CSM Data Type.vi". thanks @MapleBay
+</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>

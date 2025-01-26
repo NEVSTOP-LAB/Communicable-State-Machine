@@ -5,3 +5,5 @@
 /*.bak
 *.csm.log
 *.csmlog
+/*.lvcsm
+/.ignore
