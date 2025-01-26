@@ -348,5 +348,4 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 	<Item Name="Add State(s) to Queue By BOOL++.vi" Type="VI" URL="../Add State(s) to Queue By BOOL++.vi"/>
 	<Item Name="Build State String with Arguments++.vi" Type="VI" URL="../Build State String with Arguments++.vi"/>
 	<Item Name="Build Message with Arguments++.vi" Type="VI" URL="../Build Message with Arguments++.vi"/>
-	<Item Name="CSM Module Template.vi" Type="VI" URL="../CSM Module Template.vi"/>
 </Library>
