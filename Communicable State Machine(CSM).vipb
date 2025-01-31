@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-01-26 10:48:49" Creator="liyao" Comments="" ID="099048adb70f9f81aabaf8ff9eaca846">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-01-31 21:23:23" Creator="liyao" Comments="" ID="56fc7ffb6167939281ecb6144d308f3b">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
-    <Library_Version>2025.1.0.3</Library_Version>
+    <Library_Version>2025.2.0.1</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>src</Library_Source_Folder>
     <Library_Output_Folder>vip</Library_Output_Folder>
@@ -70,27 +70,7 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
       <Copyright/>
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
-      <Release_Notes>#Template
-[update] #359 optimize template while loop size. thanks @casey502
-
-#GlobalLog
-[fix] #372 #371 Display precise logs for registration and unregistration actions.
-
-#Tool
-[add] #368 add .lvcsm file to store all configuration for csm tools
-[update] The highlight tool will no longer use underlines in arguments, making it easier to distinguish the "_" symbol within them.
-[update] #353 Improve CSM tool Launcher loading speed.
-[update] Show help content of CSM debug tools in CSM tool Launcher
-[update] add "API Only" option for listing CSM states in CSM debug console
-[fix] #327 CSM tool launcher should function as a singleton.which should not be triggered repeatedly.
-
-#CSMHelper
-[add] #370 add "Jump to CSM State.vi", which will be used in CSM Tools and Plugins.
-
-#Example
-[update] minor fix/update #355 #357 
-[Fix] #365 fix data name error in "0. Base Concepts/CSM Data Type.vi". thanks @MapleBay
-</Release_Notes>
+      <Release_Notes/>
     </Description>
     <Destinations>
       <Toolkit_VIs>
