@@ -48,10 +48,6 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 </Property>
 	<Item Name="obsolete and hide" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
-		<Item Name="CSM - List All Status Registration.vi" Type="VI" URL="../AdvanceAPI/CSM - List All Status Registration.vi"/>
-		<Item Name="CSM - Check Status Registration.vi" Type="VI" URL="../AdvanceAPI/CSM - Check Status Registration.vi"/>
-		<Item Name="CSM - Check Mapping Relastionship in Broadcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - Check Mapping Relastionship in Broadcast Registry.vi"/>
-		<Item Name="CSM - Remove Module in Boradcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - Remove Module in Boradcast Registry.vi"/>
 	</Item>
 	<Item Name="Support" Type="Folder">
 		<Property Name="NI.SortType" Type="Int">3</Property>
