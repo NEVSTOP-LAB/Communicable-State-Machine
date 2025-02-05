@@ -1,6 +1,7 @@
-# 参与&鸣谢
+# Contributing & Acknowledgement
 
 [English](./CONTRIBUTING.md) | [中文](./CONTRIBUTING(zh-cn).md)
+
 Welcome to contributing to the development of CSM! Effective contributors will be listed in the CSM contributors list. We look forward to your participation! :heart:
 
 ## Contributing
