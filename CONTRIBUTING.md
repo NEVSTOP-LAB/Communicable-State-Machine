@@ -1,39 +1,33 @@
-welcome to participate in the development of CSM! Effective contributors will be included in the list of CSM developers. Anticipate your valuable participation! :heart:
+# 参与&鸣谢
+
+[English](./CONTRIBUTING.md) | [中文](./CONTRIBUTING(zh-cn).md)
+Welcome to contributing to the development of CSM! Effective contributors will be listed in the CSM contributors list. We look forward to your participation! :heart:
 
 ## Contributing
 
-### :one: Provide Feedback
+### :one: Provide feedback and join CSM discussions
 
-- Start Issue to address your problem, suggestion and feature requirement. [CSM Issue List](https://github.com/NEVSTOP-LAB/Communicable-State-Machine/issues)
-- Join Discussion. [CSM Forum](https://github.com/NEVSTOP-LAB/Communicable-State-Machine/discussions)
+Feel free to submit issues, suggestions, and requirements through ISSUE or DISCUSSION. Participate in discussions and share your views.
 
-### :two: Contribute to CSM Code
+### :two: Code development
 
-#### Develop CSM Framework
+Submit code changes to the CSM framework via PR. Please note the following:
 
-- Issues with tag `help wanted` are waiting for your help. [Issue With 'Help Wanted' Tag](https://github.com/NEVSTOP-LAB/Communicable-State-Machine/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
-- Fork this repo
-- Fix the issue，Start a PR.
-- Your PR will be merged after code review
-
-#### Share your Add-on, Template, Tool, Example, and Reuse Module
-
-CSM provides interface of Add-on, Template, Tool, Example. Welcome to share your code of CSM.
-
-> 🔗:
-> For interface of Add-on, Template, Tool, Example，Ref to [Wiki:CSM Plugins](https://nevstop-lab.github.io/CSM-Wiki/en/2024-01-01-csm-plugin-system.html)
->
+1. PRs should be associated with an ISSUE or clearly describe the purpose and content of the PR.
+2. If the change is not related to an ISSUE, create an ISSUE first, then submit the PR.
+3. Issues marked with [`help wanted`](https://github.com/NEVSTOP-LAB/Communicable-State-Machine/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) are a good starting point.
+4. Besides the current REPO, you can also contribute to CSM plugins and examples. View all CSM-related issues through the [CSM development panel](https://github.com/orgs/NEVSTOP-LAB/projects/8).
 
 ### :three: Wiki maintenance
 
-- Fork CSM Wiki Repo [NEVSTOP-LAB/CSM-Wiki](https://github.com/NEVSTOP-LAB/CSM-Wiki)
-- Fix issue locally, then start a PR.
-- The wiki will be automatically updated after PR is merged.
+CSM's Wiki is an open knowledge base, and everyone is welcome to help maintain it. Submit changes to the Wiki via PR.
 
->
-> :heart: Greatly appreciate your assistance on：
->
-> - Content completion
-> - Grammar correction
-> - Multilingual translation
->
+### :four: Contribute open-source modules, examples, or high-completion projects of CSM
+
+Add the topic [`LabVIEW-CSM`](https://github.com/topics/labview-csm) so other CSM users can easily find your project.
+
+## Acknowledgement
+
+Thanks to the following contributors for their contributions to CSM, in no particular order:
+
+@KivenJia @Leo452379 @SallyTYT @drjdpowell @casey502 @MapleBay
