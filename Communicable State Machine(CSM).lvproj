@@ -79,6 +79,7 @@
 		</Item>
 		<Item Name="API Tree.vi" Type="VI" URL="../src/API Tree.vi"/>
 		<Item Name="Communicable State Machine(CSM).vipb" Type="Document" URL="../Communicable State Machine(CSM).vipb"/>
+		<Item Name="CONTRIBUTING(zh-cn).md" Type="Document" URL="../CONTRIBUTING(zh-cn).md"/>
 		<Item Name="CONTRIBUTING.md" Type="Document" URL="../CONTRIBUTING.md"/>
 		<Item Name="LICENSE" Type="Document" URL="../LICENSE"/>
 		<Item Name="README(zh-cn).md" Type="Document" URL="../README(zh-cn).md"/>
