@@ -79,6 +79,7 @@
 		</Item>
 		<Item Name="API Tree.vi" Type="VI" URL="../src/API Tree.vi"/>
 		<Item Name="Communicable State Machine(CSM).vipb" Type="Document" URL="../Communicable State Machine(CSM).vipb"/>
+		<Item Name="CONTRIBUTING(zh-cn).md" Type="Document" URL="../CONTRIBUTING(zh-cn).md"/>
 		<Item Name="CONTRIBUTING.md" Type="Document" URL="../CONTRIBUTING.md"/>
 		<Item Name="LICENSE" Type="Document" URL="../LICENSE"/>
 		<Item Name="README(zh-cn).md" Type="Document" URL="../README(zh-cn).md"/>
@@ -483,6 +484,9 @@
 			<Item Name="Relative Position.ctl" Type="VI" URL="/&lt;resource&gt;/plugins/PopupMenus/support/Relative Position.ctl"/>
 			<Item Name="Checkmark Status.ctl" Type="VI" URL="/&lt;resource&gt;/plugins/PopupMenus/support/Checkmark Status.ctl"/>
 			<Item Name="Enabled Menu Item Status.ctl" Type="VI" URL="/&lt;resource&gt;/plugins/PopupMenus/support/Enabled Menu Item Status.ctl"/>
+			<Item Name="user32.dll" Type="Document" URL="user32.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Communicable State Machine.lvlibp" Type="Packed Library">
