@@ -77,6 +77,7 @@
 			<Item Name="testcase-documentation.lvclass" Type="LVClass" URL="../testcases/testcase-documentation/testcase-documentation.lvclass"/>
 			<Item Name="testcase-globalLog.lvclass" Type="LVClass" URL="../testcases/testcase-globalLog/testcase-globalLog.lvclass"/>
 		</Item>
+		<Item Name="prototype" Type="Folder"/>
 		<Item Name="API Tree.vi" Type="VI" URL="../src/API Tree.vi"/>
 		<Item Name="Communicable State Machine(CSM).vipb" Type="Document" URL="../Communicable State Machine(CSM).vipb"/>
 		<Item Name="CONTRIBUTING(zh-cn).md" Type="Document" URL="../CONTRIBUTING(zh-cn).md"/>
