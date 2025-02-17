@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-02-14 17:14:23" Creator="liyao" Comments="" ID="d3b624d15e57f34d2c381158f99a84ec">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-02-17 14:06:43" Creator="liyao" Comments="" ID="14ab26271690d4e2f342eb46f492139e">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2025.2.0.2</Library_Version>
@@ -78,7 +78,7 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
 [update] add Exit toolbar button to post "Macro: Exit" to current selected csm module.
 
 #Example
-[fix] minor fix on documentation #380
+[fix] minor fix on documentation #380 #383
 
 #installer
 [update] bring installing window to topmost following https://knowledge.ni.com/KnowledgeArticleDetails?id=kA03q000000YOu6CAG&amp;l=en-US
