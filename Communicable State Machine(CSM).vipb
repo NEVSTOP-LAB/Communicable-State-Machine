@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-02-17 14:06:43" Creator="liyao" Comments="" ID="14ab26271690d4e2f342eb46f492139e">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-02-17 22:53:37" Creator="liyao" Comments="" ID="3b5ee45a5e37db9479200df2f15ad866">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2025.2.0.2</Library_Version>
@@ -75,6 +75,7 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
 
 #Tool
 [add]#322 add Make Bent Wire Straight.vi to CSMHelper
+[add]#381 Add a tool to fix JKISM state Editor RCM entry for CSM.
 [update] add Exit toolbar button to post "Macro: Exit" to current selected csm module.
 
 #Example
