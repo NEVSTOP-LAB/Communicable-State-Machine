@@ -55,6 +55,10 @@ Switch the language of CSM module VI descriptions and comments. Currently suppor
 
 Fix JKISM State Editor of Right Click Menu Entry for CSM.
 
+### CSM - Create CSM Palette at Root.vi
+
+Create a function palette for the CSM module at the project root directory.
+
 ## CSM-DOC
 
 ### csmdoc_import_all_csm_VI_description_doc.vi
