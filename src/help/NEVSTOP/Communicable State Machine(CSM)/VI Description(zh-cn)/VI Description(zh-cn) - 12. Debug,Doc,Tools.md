@@ -55,7 +55,7 @@ CSM整体程序模块的实时状态面板。
 
 修复 JKISM State Editor 右键弹出菜单在 CSM中不能弹出的问题。
 
-### CSM - Create CSM Palette at Root
+### CSM - Create CSM Palette at Root.vi
 
 在项目根目录创建 CSM 模块的函数选板。
 
