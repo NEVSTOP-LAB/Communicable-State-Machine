@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-02-20 18:12:09" Creator="liyao" Comments="" ID="72cfd000e6d0f95f66798bddf5475a41">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-02-20 21:51:21" Creator="liyao" Comments="" ID="42c6b7a0258611f39f02c6f85ac9326e">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2025.2.0.2</Library_Version>
@@ -89,6 +89,7 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
 #installer
 [update] bring installing window to topmost following https://knowledge.ni.com/KnowledgeArticleDetails?id=kA03q000000YOu6CAG&amp;l=en-US
 [update] improve installing window
+[update] #382 Update copyright year
 
 #testcase
 [add] #373 Add a testcase to check the dependency, which fails if un-expected deps are included.
