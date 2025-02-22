@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-02-22 22:54:31" Creator="liyao" Comments="" ID="ba620dd1cb1105d9513f9daee66c6ae0">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-02-22 23:59:15" Creator="liyao" Comments="" ID="4a9eff15b12cd5502f3f9f259067d5b8">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2025.2.0.2</Library_Version>
@@ -72,6 +72,8 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
       <URL>https://github.com/NEVSTOP-LAB</URL>
       <Release_Notes>#Core
 [add] #379 Module Name starting with '.' will be recognized as system-level module, which will not be included in result of "CSM - List Module.vi". 
+[update] Remove inline option for "Parse State Queue++.vi", to reduce loading time of CSM module.
+[update] #288 CSM will stop &lt;loop&gt; firstly, then process "Macro: Exit". 
 
 #Template
 [add] #386 Add a new DQMH-Style Template, which move UI handler out of csm-message loop.
@@ -93,6 +95,7 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
 
 #csm loop support
 [update] change all APIs to subroutine
+[obsolete] #288 CSMLS - Add Exit State(s) with Loop Check.vi: You DO NOT need to call this API. Parse State Queue++.vi will do the something, in case you forget to call this action.
 
 #testcase
 [add] #373 Add a testcase to check the dependency, which fails if un-expected deps are included.
