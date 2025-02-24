@@ -20,4 +20,5 @@
 	<Item Name="lvcsm File Path.vi" Type="VI" URL="../lvcsm File Path.vi"/>
 	<Item Name="lvcsm Read Cluster.vim" Type="VI" URL="../lvcsm Read Cluster.vim"/>
 	<Item Name="lvcsm Write Cluster.vim" Type="VI" URL="../lvcsm Write Cluster.vim"/>
+	<Item Name="lvcsm List Sesctions.vi" Type="VI" URL="../lvcsm List Sesctions.vi"/>
 </Library>

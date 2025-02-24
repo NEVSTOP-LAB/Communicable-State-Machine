@@ -8,7 +8,9 @@
 
 </Property>
 	<Item Name="_Read StringList with lvcsm Support.vi" Type="VI" URL="../_Read StringList with lvcsm Support.vi"/>
+	<Item Name="_Request StringList with lvcsm Support.vi" Type="VI" URL="../_Request StringList with lvcsm Support.vi"/>
 	<Item Name="Jump to CSM State.vi" Type="VI" URL="../Jump to CSM State.vi"/>
+	<Item Name="List State Possible Owners.vi" Type="VI" URL="../List State Possible Owners.vi"/>
 	<Item Name="Read CSM API with lvcsm Support.vi" Type="VI" URL="../Read CSM API with lvcsm Support.vi"/>
 	<Item Name="Read CSM States with lvcsm Support.vi" Type="VI" URL="../Read CSM States with lvcsm Support.vi"/>
 	<Item Name="Read CSM User-States with lvcsm Support.vi" Type="VI" URL="../Read CSM User-States with lvcsm Support.vi"/>
