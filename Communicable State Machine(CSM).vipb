@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-02-22 23:59:15" Creator="liyao" Comments="" ID="4a9eff15b12cd5502f3f9f259067d5b8">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-02-25 13:29:51" Creator="liyao" Comments="" ID="5832786fe9f527b9e55fba9fac63d029">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2025.2.0.2</Library_Version>
@@ -82,8 +82,10 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
 [add] #322 add Make Bent Wire Straight.vi to CSMHelper
 [add] #381 Add a tool to fix JKISM state Editor RCM entry for CSM.
 [add] Add a tool to create CSM palette in functions root  palette.
+[add] #374 Add "Go to State" RCM for String Constant
 [update] add Exit toolbar button to post "Macro: Exit" to current selected csm module.
 [update] #384 adopt to changes of jkism 2024, which broken the RCM of State Editor
+
 
 #Example
 [fix] minor fix on documentation #380 #383
@@ -99,7 +101,8 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
 
 #testcase
 [add] #373 Add a testcase to check the dependency, which fails if un-expected deps are included.
-[add] add a testcase to check VI path too long.</Release_Notes>
+[add] add a testcase to check VI path too long.
+[add] add a testcase to validate CSM RCM dependencies.</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
