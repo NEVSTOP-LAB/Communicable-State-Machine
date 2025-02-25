@@ -13,6 +13,7 @@
 		<Item Name="_Common Path to Specific Path.vi" Type="VI" URL="../_Common Path to Specific Path.vi"/>
 		<Item Name="_Specific Path to Common Path.vi" Type="VI" URL="../_Specific Path to Common Path.vi"/>
 		<Item Name="_System Locations.vi" Type="VI" URL="../_System Locations.vi"/>
+		<Item Name="_Array of VData to VCluster.vi" Type="VI" URL="../_Array of VData to VCluster.vi"/>
 	</Item>
 	<Item Name="Change File Extension.vi" Type="VI" URL="../Change File Extension.vi"/>
 	<Item Name="Path to lvcsm String.vi" Type="VI" URL="../Path to lvcsm String.vi"/>
