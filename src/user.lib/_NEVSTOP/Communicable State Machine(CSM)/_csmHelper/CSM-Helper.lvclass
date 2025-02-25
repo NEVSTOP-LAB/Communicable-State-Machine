@@ -117,6 +117,15 @@
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">1082143248</Property>
 		</Item>
+		<Item Name="FrameNames to StateNames.vi" Type="VI" URL="../_support/FrameNames to StateNames.vi">
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!#?!!!!"1!%!!!!#!!Q`````Q!?1%!!!@````]!!2""=H*B?3"P:C"4&gt;(*J&lt;G&gt;T!!!91%!!!@````]!!1J'=G&amp;N:5ZB&lt;76T!!"5!0!!$!!!!!!!!!!#!!!!!!!!!!!!!!!!!!!!!Q-!!(A!!!!!!!!!!!!!!!!!!!E!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#%!!!!!!"!!1!!!!!</Property>
+			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+			<Property Name="NI.ClassItem.Flags" Type="Int">1073741824</Property>
+			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
+			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">8400912</Property>
+		</Item>
 		<Item Name="Connect Information.vi" Type="VI" URL="../_support/Connect Information.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!*X!!!!&amp;!!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!%5!$!!J/&lt;W2F)%FO:'6Y!!!,1!-!"%RF:H1!!!F!!Q!$6'^Q!%!!]1!!!!!!!!!"&amp;5R75'^T;82J&lt;WZ5?8"F2'6G,G.U&lt;!!C1&amp;!!!A!&amp;!!946(6O&lt;G6M)&amp;*F&lt;'&amp;U;8:F)&amp;"P=Q!21!-!#F2F=GUA37ZE:8A!!":!-0````]-4W*K1WRB=X./97VF!!!91$$`````$E^X&lt;G6S1WRB=X./97VF!!":!0(C_C&gt;7!!!!!B&gt;D=WV):7RQ:8)N2'FB:X*B&lt;3ZM&gt;GRJ9BR%:79N1W^O&lt;G.U:71A37ZG&lt;X*N982J&lt;WYO9X2M!"R!5!!&amp;!!1!"Q!)!!E!#A&gt;D&lt;(6T&gt;'6S!#2!1!!"`````Q!,&amp;E*B9WNF&lt;G1A1W^O&lt;G6D&gt;'6E)%FO:G]!!#2!1!!"`````Q!,&amp;U:S&lt;WZU27ZE)%.P&lt;GZF9X2F:#"*&lt;G:P!#Z!=!!?!!!5%E.443V):7RQ:8)O&lt;(:D&lt;'&amp;T=Q!!$E.443V):7RQ:8)A&lt;X6U!!!%!!!!)%"1!!-!!!!"!!)4:8*S&lt;X)A;7YA+'ZP)'6S=G^S+1!/1$$`````"%.B=W5!!#R!=!!?!!!5%E.443V):7RQ:8)O&lt;(:D&lt;'&amp;T=Q!!$5.443V):7RQ:8)A;7Y!91$Q!!Q!!Q!-!!U!$A!0!!]!$Q!0!"!!$Q!2!")$!!"Y!!!*!!!!#1!!!!E!!!!.#Q!!!!!!!!!!!!!!!!!!!!!!!!I!!!!!!!!"%A!!!"!!!!U!!!!-!!!!!!!!!!!!!!%!%Q!!!!!</Property>
 			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
