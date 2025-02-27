@@ -13,6 +13,7 @@
 		<Item Name="_Common Path to Specific Path.vi" Type="VI" URL="../_Common Path to Specific Path.vi"/>
 		<Item Name="_Specific Path to Common Path.vi" Type="VI" URL="../_Specific Path to Common Path.vi"/>
 		<Item Name="_System Locations.vi" Type="VI" URL="../_System Locations.vi"/>
+		<Item Name="_Array of VData to VCluster.vi" Type="VI" URL="../_Array of VData to VCluster.vi"/>
 	</Item>
 	<Item Name="Change File Extension.vi" Type="VI" URL="../Change File Extension.vi"/>
 	<Item Name="Path to lvcsm String.vi" Type="VI" URL="../Path to lvcsm String.vi"/>
@@ -20,4 +21,6 @@
 	<Item Name="lvcsm File Path.vi" Type="VI" URL="../lvcsm File Path.vi"/>
 	<Item Name="lvcsm Read Cluster.vim" Type="VI" URL="../lvcsm Read Cluster.vim"/>
 	<Item Name="lvcsm Write Cluster.vim" Type="VI" URL="../lvcsm Write Cluster.vim"/>
+	<Item Name="lvcsm List Sesctions.vi" Type="VI" URL="../lvcsm List Sesctions.vi"/>
+	<Item Name="lvcsm Read section As StringList.vi" Type="VI" URL="../lvcsm Read section As StringList.vi"/>
 </Library>
