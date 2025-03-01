@@ -214,16 +214,26 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="Add State(s) to Queue By BOOL(Array All).vi" Type="VI" URL="../_Polymophic/Add State(s) to Queue By BOOL(Array All).vi"/>
 		</Item>
 	</Item>
-	<Item Name="AdvanceAPI" Type="Folder">
+	<Item Name="API" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
+		<Item Name="TemplateSubVIs" Type="Folder">
+			<Item Name="Error" Type="Folder">
+				<Item Name="CSM Unhandled State Error.vi" Type="VI" URL="../_Support/Error/CSM Unhandled State Error.vi"/>
+				<Item Name="CSM Critical Error.vi" Type="VI" URL="../_Support/Error/CSM Critical Error.vi"/>
+				<Item Name="CSM Target Error.vi" Type="VI" URL="../_Support/Error/CSM Target Error.vi"/>
+				<Item Name="CSM Target Timeout Error.vi" Type="VI" URL="../_Support/Error/CSM Target Timeout Error.vi"/>
+				<Item Name="CSM No Target Error.vi" Type="VI" URL="../_Support/Error/CSM No Target Error.vi"/>
+				<Item Name="CSM Not Allowed Message.vi" Type="VI" URL="../_Support/Error/CSM Not Allowed Message.vi"/>
+			</Item>
+			<Item Name="CSM - Get New State Notifier Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Get New State Notifier Event.vi"/>
+			<Item Name="CSM - Internal State Debug Log History.vi" Type="VI" URL="../AdvanceAPI/CSM - Internal State Debug Log History.vi"/>
+		</Item>
 		<Item Name="Management API" Type="Folder">
 			<Item Name="CSM - Module VI Reference.vi" Type="VI" URL="../AdvanceAPI/CSM - Module VI Reference.vi"/>
 			<Item Name="CSM - List Modules.vi" Type="VI" URL="../AdvanceAPI/CSM - List Modules.vi"/>
 			<Item Name="CSM - Module Status.vi" Type="VI" URL="../AdvanceAPI/CSM - Module Status.vi"/>
 			<Item Name="CSM - Check If Module Exists.vi" Type="VI" URL="../AdvanceAPI/CSM - Check If Module Exists.vi"/>
 			<Item Name="CSM - Broadcast Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Broadcast Status Change.vi"/>
-			<Item Name="CSM - Wait for All Modules to be Alive.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait for All Modules to be Alive.vi"/>
-			<Item Name="CSM - Wait for All Modules to Exit.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait for All Modules to Exit.vi"/>
 			<Item Name="CSM - Mark As System-Level Module.vi" Type="VI" URL="../AdvanceAPI/CSM - Mark As System-Level Module.vi"/>
 		</Item>
 		<Item Name="Broadcast Registry" Type="Folder">
@@ -238,6 +248,8 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 		<Item Name="Module API" Type="Folder">
 			<Item Name="CSM - Broadcast Message Type.ctl" Type="VI" URL="../AdvanceAPI/CSM - Broadcast Message Type.ctl"/>
 			<Item Name="CSM - Message Type.ctl" Type="VI" URL="../AdvanceAPI/CSM - Message Type.ctl"/>
+			<Item Name="CSM - Wait for All Modules to be Alive.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait for All Modules to be Alive.vi"/>
+			<Item Name="CSM - Wait for All Modules to Exit.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait for All Modules to Exit.vi"/>
 			<Item Name="CSM - Send Message and Wait for Reply.vi" Type="VI" URL="../AdvanceAPI/CSM - Send Message and Wait for Reply.vi"/>
 			<Item Name="CSM - Post Message.vi" Type="VI" URL="../AdvanceAPI/CSM - Post Message.vi"/>
 			<Item Name="CSM - Wait for Module to Be Alive.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait for Module to Be Alive.vi"/>
@@ -257,20 +269,6 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="CSM - Convert Filter Rules.vi" Type="VI" URL="../AdvanceAPI/CSM - Convert Filter Rules.vi"/>
 			<Item Name="CSM - Filter Global Log.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter Global Log.vi"/>
 		</Item>
-		<Item Name="Side-Loop Support" Type="Folder">
-			<Item Name="CSM - Request CSM to Post Message.vi" Type="VI" URL="../AdvanceAPI/CSM - Request CSM to Post Message.vi"/>
-			<Item Name="CSM - Request CSM to Broadcast Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Request CSM to Broadcast Status Change.vi"/>
-			<Item Name="CSM - Module Turns Invalid.vi" Type="VI" URL="../AdvanceAPI/CSM - Module Turns Invalid.vi"/>
-			<Item Name="CSM - Module Exit Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Module Exit Event.vi"/>
-			<Item Name="CSM - Forward States to CSM.vi" Type="VI" URL="../AdvanceAPI/CSM - Forward States to CSM.vi"/>
-			<Item Name="CSM - Forward UI Operations to CSM.vi" Type="VI" URL="../AdvanceAPI/CSM - Forward UI Operations to CSM.vi"/>
-		</Item>
-		<Item Name="Worker Mode" Type="Folder">
-			<Item Name="CSM - Mark As Worker Module.vi" Type="VI" URL="../AdvanceAPI/CSM - Mark As Worker Module.vi"/>
-		</Item>
-		<Item Name="Chain Mode" Type="Folder">
-			<Item Name="CSM - Mark As Chain Module.vi" Type="VI" URL="../AdvanceAPI/CSM - Mark As Chain Module.vi"/>
-		</Item>
 		<Item Name="HelperVIs" Type="Folder">
 			<Item Name="CSM - Build Exit Messages of CSMs.vi" Type="VI" URL="../AdvanceAPI/CSM - Build Exit Messages of CSMs.vi"/>
 			<Item Name="CSM - Compact Multiple States.vi" Type="VI" URL="../AdvanceAPI/CSM - Compact Multiple States.vi"/>
@@ -279,17 +277,21 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="CSM - Filter Duplicate Messages By Name.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter Duplicate Messages By Name.vi"/>
 			<Item Name="CSM - Remove Duplicated Following Messages.vi" Type="VI" URL="../AdvanceAPI/CSM - Remove Duplicated Following Messages.vi"/>
 		</Item>
-		<Item Name="TemplateSubVIs" Type="Folder">
-			<Item Name="Error" Type="Folder">
-				<Item Name="CSM Unhandled State Error.vi" Type="VI" URL="../_Support/Error/CSM Unhandled State Error.vi"/>
-				<Item Name="CSM Critical Error.vi" Type="VI" URL="../_Support/Error/CSM Critical Error.vi"/>
-				<Item Name="CSM Target Error.vi" Type="VI" URL="../_Support/Error/CSM Target Error.vi"/>
-				<Item Name="CSM Target Timeout Error.vi" Type="VI" URL="../_Support/Error/CSM Target Timeout Error.vi"/>
-				<Item Name="CSM No Target Error.vi" Type="VI" URL="../_Support/Error/CSM No Target Error.vi"/>
-				<Item Name="CSM Not Allowed Message.vi" Type="VI" URL="../_Support/Error/CSM Not Allowed Message.vi"/>
+		<Item Name="Advance" Type="Folder">
+			<Item Name="Chain Mode" Type="Folder">
+				<Item Name="CSM - Mark As Chain Module.vi" Type="VI" URL="../AdvanceAPI/CSM - Mark As Chain Module.vi"/>
 			</Item>
-			<Item Name="CSM - Get New State Notifier Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Get New State Notifier Event.vi"/>
-			<Item Name="CSM - Internal State Debug Log History.vi" Type="VI" URL="../AdvanceAPI/CSM - Internal State Debug Log History.vi"/>
+			<Item Name="Worker Mode" Type="Folder">
+				<Item Name="CSM - Mark As Worker Module.vi" Type="VI" URL="../AdvanceAPI/CSM - Mark As Worker Module.vi"/>
+			</Item>
+			<Item Name="Side-Loop Support" Type="Folder">
+				<Item Name="CSM - Request CSM to Post Message.vi" Type="VI" URL="../AdvanceAPI/CSM - Request CSM to Post Message.vi"/>
+				<Item Name="CSM - Request CSM to Broadcast Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Request CSM to Broadcast Status Change.vi"/>
+				<Item Name="CSM - Module Turns Invalid.vi" Type="VI" URL="../AdvanceAPI/CSM - Module Turns Invalid.vi"/>
+				<Item Name="CSM - Module Exit Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Module Exit Event.vi"/>
+				<Item Name="CSM - Forward States to CSM.vi" Type="VI" URL="../AdvanceAPI/CSM - Forward States to CSM.vi"/>
+				<Item Name="CSM - Forward UI Operations to CSM.vi" Type="VI" URL="../AdvanceAPI/CSM - Forward UI Operations to CSM.vi"/>
+			</Item>
 		</Item>
 	</Item>
 	<Item Name="Argument" Type="Folder">
