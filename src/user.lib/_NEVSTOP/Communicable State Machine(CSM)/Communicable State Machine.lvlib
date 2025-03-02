@@ -235,6 +235,9 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="CSM - Check If Module Exists.vi" Type="VI" URL="../AdvanceAPI/CSM - Check If Module Exists.vi"/>
 			<Item Name="CSM - Broadcast Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Broadcast Status Change.vi"/>
 			<Item Name="CSM - Mark As System-Level Module.vi" Type="VI" URL="../AdvanceAPI/CSM - Mark As System-Level Module.vi"/>
+			<Item Name="CSM - Wait for All Modules to be Alive.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait for All Modules to be Alive.vi"/>
+			<Item Name="CSM - Wait for All Modules to Exit.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait for All Modules to Exit.vi"/>
+			<Item Name="CSM - Wait for Module to Be Alive.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait for Module to Be Alive.vi"/>
 		</Item>
 		<Item Name="Broadcast Registry" Type="Folder">
 			<Item Name="CSM - Register Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Register Status Change.vi"/>
@@ -248,11 +251,8 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 		<Item Name="Module API" Type="Folder">
 			<Item Name="CSM - Broadcast Message Type.ctl" Type="VI" URL="../AdvanceAPI/CSM - Broadcast Message Type.ctl"/>
 			<Item Name="CSM - Message Type.ctl" Type="VI" URL="../AdvanceAPI/CSM - Message Type.ctl"/>
-			<Item Name="CSM - Wait for All Modules to be Alive.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait for All Modules to be Alive.vi"/>
-			<Item Name="CSM - Wait for All Modules to Exit.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait for All Modules to Exit.vi"/>
 			<Item Name="CSM - Send Message and Wait for Reply.vi" Type="VI" URL="../AdvanceAPI/CSM - Send Message and Wait for Reply.vi"/>
 			<Item Name="CSM - Post Message.vi" Type="VI" URL="../AdvanceAPI/CSM - Post Message.vi"/>
-			<Item Name="CSM - Wait for Module to Be Alive.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait for Module to Be Alive.vi"/>
 			<Item Name="CSM - Wait and Send Message for Reply.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait and Send Message for Reply.vi"/>
 			<Item Name="CSM - Wait and Post Message.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait and Post Message.vi"/>
 			<Item Name="CSM - Status Change Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Status Change Event.vi"/>

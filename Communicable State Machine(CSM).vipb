@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-03-01 23:34:32" Creator="liyao" Comments="" ID="c781548420675e6fbfe8cd90f57bdcae">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-03-02 12:54:53" Creator="liyao" Comments="" ID="a9f993191b86cbeca3af44f935d13534">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2025.3.0.2</Library_Version>
@@ -70,7 +70,10 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
       <Copyright/>
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
-      <Release_Notes>#Template
+      <Release_Notes>#API
+[update] #390 Refactor palette and icon to make it more friendly to use.
+
+#Template
 [update] #389 select Case Insensitive Match in "UI: Front Panel State" case</Release_Notes>
     </Description>
     <Destinations>
