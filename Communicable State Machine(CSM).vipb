@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-03-03 08:42:08" Creator="liyao" Comments="" ID="382e207b723b9f54976f73010d5687f9">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-03-03 12:17:29" Creator="liyao" Comments="" ID="1ed4599912dcb02383248fdd134e4826">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2025.3.0.2</Library_Version>
@@ -71,6 +71,7 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
       <Release_Notes>#API
+[add] #394 add a corner case API which could flush the CSM message queue
 [update] #390 #391 Refactor palette and icon to make it more friendly to use.
 
 #Template
