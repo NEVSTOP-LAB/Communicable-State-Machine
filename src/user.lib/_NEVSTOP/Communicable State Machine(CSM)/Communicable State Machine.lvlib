@@ -48,6 +48,8 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 </Property>
 	<Item Name="obsolete and hide" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
+		<Item Name="CSM - Filter Duplicate Messages By Name.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter Duplicate Messages By Name.vi"/>
+		<Item Name="CSM - Remove Duplicated Following Messages.vi" Type="VI" URL="../AdvanceAPI/CSM - Remove Duplicated Following Messages.vi"/>
 	</Item>
 	<Item Name="Support" Type="Folder">
 		<Property Name="NI.SortType" Type="Int">3</Property>
@@ -216,11 +218,10 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 		<Item Name="Filter JKISM String Queue" Type="Folder">
 			<Item Name="CSM - Filter Messages to Non-Existing Modules.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter Messages to Non-Existing Modules.vi"/>
 			<Item Name="CSM - Filter Local States.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter Local States.vi"/>
+			<Item Name="CSM - Filter Messges.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter Messges.vi"/>
 			<Item Name="CSM - Filter Sync Messages.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter Sync Messages.vi"/>
 			<Item Name="CSM - Filter Async Messages.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter Async Messages.vi"/>
 			<Item Name="CSM - Filter Async without Reply Messages.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter Async without Reply Messages.vi"/>
-			<Item Name="CSM - Filter Duplicate Messages By Name.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter Duplicate Messages By Name.vi"/>
-			<Item Name="CSM - Remove Duplicated Following Messages.vi" Type="VI" URL="../AdvanceAPI/CSM - Remove Duplicated Following Messages.vi"/>
 		</Item>
 	</Item>
 	<Item Name="API" Type="Folder">
@@ -282,6 +283,7 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="CSM - Build Exit Messages of CSMs.vi" Type="VI" URL="../AdvanceAPI/CSM - Build Exit Messages of CSMs.vi"/>
 			<Item Name="CSM - Compact Multiple States.vi" Type="VI" URL="../AdvanceAPI/CSM - Compact Multiple States.vi"/>
 			<Item Name="CSM - Break Down Multiple States String.vi" Type="VI" URL="../AdvanceAPI/CSM - Break Down Multiple States String.vi"/>
+			<Item Name="CSM - Filter JKISM String Queue.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter JKISM String Queue.vi"/>
 		</Item>
 		<Item Name="Advance" Type="Folder">
 			<Item Name="Sys-Level Mode" Type="Folder">
