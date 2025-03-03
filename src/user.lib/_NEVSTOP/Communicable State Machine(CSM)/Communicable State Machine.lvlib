@@ -194,6 +194,7 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="Parse State with Arguments String.vi" Type="VI" URL="../_Support/Message/Parse State with Arguments String.vi"/>
 			<Item Name="Parse Unregister Message.vi" Type="VI" URL="../_Support/Message/Parse Unregister Message.vi"/>
 			<Item Name="Parse Register Message.vi" Type="VI" URL="../_Support/Message/Parse Register Message.vi"/>
+			<Item Name="global-TMO for Sync-Rep.vi" Type="VI" URL="../_Support/Message/global-TMO for Sync-Rep.vi"/>
 		</Item>
 		<Item Name="CSM Dummy Module.vi" Type="VI" URL="../_Support/CSM Dummy Module.vi"/>
 	</Item>
@@ -245,6 +246,7 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="CSM - Flush Queue.vi" Type="VI" URL="../AdvanceAPI/CSM - Flush Queue.vi"/>
 			<Item Name="CSM - Check If Module Exists.vi" Type="VI" URL="../AdvanceAPI/CSM - Check If Module Exists.vi"/>
 			<Item Name="CSM - Broadcast Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Broadcast Status Change.vi"/>
+			<Item Name="CSM - Set TMO of Sync-Reply.vi" Type="VI" URL="../AdvanceAPI/CSM - Set TMO of Sync-Reply.vi"/>
 		</Item>
 		<Item Name="Broadcast Registry" Type="Folder">
 			<Item Name="CSM - Register Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Register Status Change.vi"/>
