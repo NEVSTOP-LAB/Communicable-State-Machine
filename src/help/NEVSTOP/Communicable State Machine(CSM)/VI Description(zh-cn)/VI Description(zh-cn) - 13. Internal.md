@@ -806,7 +806,7 @@ The State string that requires the argument.
 - <b>state</b>:
 - <b>args</b>:
 - <b>source/target</b>:
-- <b>Response Timeout(5000ms)</b>:
+- <b>Response Timeout(-2 using Global Settings)</b>: 同步调用的超时时间，默认为-2，使用全局设置。你可以通过"CSM - Set TMO of Sync-Reply.vi" 设置全局超时时间。
 - <b>Module Name</b>:
 
 -- <b>输出控件</b> --

@@ -67,7 +67,7 @@ Send a synchronous message to the CSM and wait for a return message. If the retu
 - <b>Target Module</b>: Target CSM module name
 - <b>State</b>: Message string
 - <b>Arguments("")</b>: Message parameters
-- <b>Response Timeout(5000ms)</b>: Timeout setting for waiting for the return message, default is 5000ms.
+- <b>Response Timeout(-2 using Global Settings)</b>: Response timeout setting for synchronous calls, If -2 is specified, the global setting will be used. You can use "CSM - Set TMO of Sync-Reply.vi" to change the global setting.
 
 -- <b>Indicators</b> --
 - <b>Response</b>: Returned response
@@ -80,7 +80,7 @@ Send a synchronous message to the CSM and wait for a return message. If the retu
 - <b>CSM Name</b>: CSM module name
 - <b>State</b>: Message string
 - <b>Arguments("")</b>: Message parameters
-- <b>Response Timeout(5000ms)</b>: Timeout setting for waiting for the return message, default is 5000ms.
+- <b>Response Timeout(-2 using Global Settings)</b>: Response timeout setting for synchronous calls, If -2 is specified, the global setting will be used. You can use "CSM - Set TMO of Sync-Reply.vi" to change the global setting.
 - <b>Current Module("" to generate an ID)</b>: Current module name. If not provided, a temporary ID is generated for debugging purposes.
 - <b>Wait(5000ms)</b>: Wait timeout, default is 5s
 
@@ -94,7 +94,7 @@ Run a CSM script. Multiple message instructions can be executed at once.
 
 -- <b>Controls</b> --
 - <b>CSM Scripts</b>: Scripts to be run
-- <b>Response Timeout(5000ms)</b>: Timeout setting for waiting for the return message, default is 5000ms.
+- <b>Response Timeout(-2 using Global Settings)</b>: Response timeout setting for synchronous calls, If -2 is specified, the global setting will be used. You can use "CSM - Set TMO of Sync-Reply.vi" to change the global setting.
 - <b>Continue If Error?(F)</b>: Whether to continue execution if an error occurs
 - <b>Current Module("" to generate an ID)</b>: Current module name. If not provided, a temporary ID is generated for debugging purposes.
 - <b>Wait(5000ms)</b>: Wait timeout, default is 5s
