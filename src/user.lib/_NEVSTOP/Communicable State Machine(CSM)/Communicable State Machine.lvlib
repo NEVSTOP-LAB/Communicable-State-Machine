@@ -217,12 +217,16 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="Add State(s) to Queue By BOOL(Array All).vi" Type="VI" URL="../_Polymophic/Add State(s) to Queue By BOOL(Array All).vi"/>
 		</Item>
 		<Item Name="Filter JKISM String Queue" Type="Folder">
+			<Item Name="CSM - Filter Local States.vi" Type="VI" URL="../_Polymophic/CSM - Filter Local States.vi"/>
+			<Item Name="CSM - Filter Messges.vi" Type="VI" URL="../_Polymophic/CSM - Filter Messges.vi"/>
+			<Item Name="CSM - Filter Sync Messages.vi" Type="VI" URL="../_Polymophic/CSM - Filter Sync Messages.vi"/>
+			<Item Name="CSM - Filter Async Messages.vi" Type="VI" URL="../_Polymophic/CSM - Filter Async Messages.vi"/>
+			<Item Name="CSM - Filter Async without Reply Messages.vi" Type="VI" URL="../_Polymophic/CSM - Filter Async without Reply Messages.vi"/>
+			<Item Name="CSM - Filter Broadcasts.vi" Type="VI" URL="../_Polymophic/CSM - Filter Broadcasts.vi"/>
+			<Item Name="CSM - Filter Status Broadcasts.vi" Type="VI" URL="../_Polymophic/CSM - Filter Status Broadcasts.vi"/>
+			<Item Name="CSM - Filter Interrupt Broadcasts.vi" Type="VI" URL="../_Polymophic/CSM - Filter Interrupt Broadcasts.vi"/>
 			<Item Name="CSM - Filter Messages to Non-Existing Modules.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter Messages to Non-Existing Modules.vi"/>
-			<Item Name="CSM - Filter Local States.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter Local States.vi"/>
-			<Item Name="CSM - Filter Messges.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter Messges.vi"/>
-			<Item Name="CSM - Filter Sync Messages.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter Sync Messages.vi"/>
-			<Item Name="CSM - Filter Async Messages.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter Async Messages.vi"/>
-			<Item Name="CSM - Filter Async without Reply Messages.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter Async without Reply Messages.vi"/>
+			<Item Name="CSM - Filter Duplicated Lines.vi" Type="VI" URL="../_Polymophic/CSM - Filter Duplicated Lines.vi"/>
 		</Item>
 	</Item>
 	<Item Name="API" Type="Folder">
@@ -245,7 +249,6 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="CSM - Module Status.vi" Type="VI" URL="../AdvanceAPI/CSM - Module Status.vi"/>
 			<Item Name="CSM - Flush Queue.vi" Type="VI" URL="../AdvanceAPI/CSM - Flush Queue.vi"/>
 			<Item Name="CSM - Check If Module Exists.vi" Type="VI" URL="../AdvanceAPI/CSM - Check If Module Exists.vi"/>
-			<Item Name="CSM - Broadcast Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Broadcast Status Change.vi"/>
 			<Item Name="CSM - Set TMO of Sync-Reply.vi" Type="VI" URL="../AdvanceAPI/CSM - Set TMO of Sync-Reply.vi"/>
 		</Item>
 		<Item Name="Broadcast Registry" Type="Folder">
@@ -360,4 +363,5 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 	<Item Name="Add State(s) to Queue By BOOL++.vi" Type="VI" URL="../Add State(s) to Queue By BOOL++.vi"/>
 	<Item Name="Build State String with Arguments++.vi" Type="VI" URL="../Build State String with Arguments++.vi"/>
 	<Item Name="Build Message with Arguments++.vi" Type="VI" URL="../Build Message with Arguments++.vi"/>
+	<Item Name="CSM - Broadcast Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Broadcast Status Change.vi"/>
 </Library>
