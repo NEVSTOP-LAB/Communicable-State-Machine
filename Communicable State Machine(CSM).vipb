@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-03-03 18:48:23" Creator="liyao" Comments="" ID="db185d418d92a27eea48b0084447e09a">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-03-04 23:13:51" Creator="liyao" Comments="" ID="d644b22a700bff924502dad3d57d563b">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2025.3.0.2</Library_Version>
@@ -74,6 +74,7 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
 [add] #392 add API to set timeout of waiting reply for sync-message.
 [add] #394 add a corner case API which could flush the CSM message queue
 [update] #390 #391 Refactor palette and icon to make it more friendly to use.
+[fix] fix message in queue number  error of CSM - Module Status.vi when multiple Sync-Messages are in Queue.
 
 #Template
 [update] #389 select Case Insensitive Match in "UI: Front Panel State" case</Release_Notes>
@@ -250,6 +251,7 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
       <close_labview_before_install>true</close_labview_before_install>
       <restart_labview_after_install>false</restart_labview_after_install>
       <skip_mass_compile_after_install>false</skip_mass_compile_after_install>
+      <install_into_global_environment>false</install_into_global_environment>
     </LabVIEW>
     <VI_Docs>
       <Edit_VI_Description>true</Edit_VI_Description>
