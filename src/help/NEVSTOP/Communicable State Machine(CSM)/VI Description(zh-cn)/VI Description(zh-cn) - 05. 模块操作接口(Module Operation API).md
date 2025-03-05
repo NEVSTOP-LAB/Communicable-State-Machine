@@ -80,7 +80,7 @@
 - <b>CSM Name</b>: CSM 模块名称
 - <b>State</b>: 消息字符串
 - <b>Arguments("")</b>: 消息参数
-- <b>Response Timeout(5000ms)</b>: 等待返回的超时设置，默认 5000ms.
+- <b>Response Timeout(-2 using Global Settings)</b>: 同步调用的超时时间，默认为-2，使用全局设置。你可以通过"CSM - Set TMO of Sync-Reply.vi" 设置全局超时时间。
 - <b>Current Module("" to generate a ID)</b>: 当前模块名称，当没有输入时，生成一个临时ID，便于调试判断位置。
 - <b>Wait(5000ms)</b>: 等待超时时间，默认为5s
 
@@ -94,7 +94,7 @@
 
 -- <b>输入控件</b> --
 - <b>CSM Scripts</b>: 待运行的脚本
-- <b>Response Timeout(5000ms)</b>: 等待返回的超时设置，默认 5000ms.
+- <b>Response Timeout(-2 using Global Settings)</b>: 同步调用的超时时间，默认为-2，使用全局设置。你可以通过"CSM - Set TMO of Sync-Reply.vi" 设置全局超时时间。
 - <b>Continue If Error?(F)</b>: 发生错误是是否继续执行
 - <b>Current Module("" to generate a ID)</b>: 当前模块名称，当没有输入时，生成一个临时ID，便于调试判断位置。
 - <b>Wait(5000ms)</b>: 等待超时时间，默认为5s

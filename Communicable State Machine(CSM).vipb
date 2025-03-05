@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-02-27 16:54:40" Creator="liyao" Comments="" ID="bb193a54a843af5f9b541b0d0d9cec04">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-03-04 23:13:51" Creator="liyao" Comments="" ID="d644b22a700bff924502dad3d57d563b">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
-    <Library_Version>2025.2.0.2</Library_Version>
+    <Library_Version>2025.3.0.2</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>src</Library_Source_Folder>
     <Library_Output_Folder>vip</Library_Output_Folder>
@@ -70,39 +70,14 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
       <Copyright/>
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
-      <Release_Notes># Core
-[add] #379 Modules starting with '.' are recognized as system-level and excluded from "CSM - List Module.vi".
-[update] Removed inline option for "Parse State Queue++.vi" to reduce CSM module loading time.
-[update] #288 CSM now stops the loop before processing "Macro: Exit".
-[fix] #387 "CSM - Forward States to CSM.vi" now generates a notify user-event to break event structure waiting.
+      <Release_Notes>#API
+[add] #392 add API to set timeout of waiting reply for sync-message.
+[add] #394 add a corner case API which could flush the CSM message queue
+[update] #390 #391 Refactor palette and icon to make it more friendly to use.
+[fix] fix message in queue number  error of CSM - Module Status.vi when multiple Sync-Messages are in Queue.
 
-# Template
-[add] #386 Added a new DQMH-Style Template, moving UI handler out of the CSM-message loop.
-
-# Tool
-[add] #322 Added "Make Bent Wire Straight.vi" to CSMHelper.
-[add] #381 Added tool to fix JKISM State Editor RCM entry for CSM.
-[add] Added tool to create CSM palette in functions root palette.
-[add] #374 Added "Go to State" RCM for String Constant.
-[update] Added Exit toolbar button to post "Macro: Exit" to the selected CSM module.
-[update] #384 Adapted to changes in jkism 2024, fixing State Editor RCM issues.
-
-# Example
-[fix] Minor documentation fixes (#380, #383).
-
-# Installer
-[update] Brought installing window to topmost (NI Knowledge Base: https://knowledge.ni.com/KnowledgeArticleDetails?id=kA03q000000YOu6CAG&amp;l=en-US).
-[update] Improved installing window.
-[update] #382 Updated copyright year.
-
-# CSM Loop Support
-[update] Changed all APIs to subroutines.
-[obsolete] #288 CSMLS - Add Exit State(s) with Loop Check.vi is no longer needed. "Parse State Queue++.vi" handles this automatically.
-
-# Testcase
-[add] #373 Added testcase to check dependencies; fails if unexpected dependencies are included.
-[add] Added testcase to check for VI path length.
-[add] Added testcase to validate CSM RCM dependencies.</Release_Notes>
+#Template
+[update] #389 select Case Insensitive Match in "UI: Front Panel State" case</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>

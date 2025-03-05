@@ -23,7 +23,7 @@
 -- <b>输入控件</b> --
 - <b>CSM Name</b>: CSM 模块名称
 - <b>Current Module("" to generate a ID)</b>: 查询CSM模块的标记, 为空时，将生成一个唯一的ID
-- <b>Response Timeout(5000ms)</b>: 同步消息超时时间，默认 5000 ms
+- <b>Response Timeout(-2 using Global Settings)</b>: 同步调用的超时时间，默认为-2，使用全局设置。你可以通过"CSM - Set TMO of Sync-Reply.vi" 设置全局超时时间。
 
 -- <b>输出控件</b> --
 - <b>CSM Module VIRef</b>: CSM 模块的 VI 引用

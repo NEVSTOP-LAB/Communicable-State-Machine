@@ -23,7 +23,7 @@ Query and obtain the VI reference of the CSM module by sending a "VI Reference" 
 -- <b>Controls</b> --
 - <b>CSM Name</b>: CSM module name
 - <b>Current Module("" to generate an ID)</b>: Identifier of the CSM module to query. If empty, a unique ID will be generated.
-- <b>Response Timeout(5000ms)</b>: Timeout for synchronous messages, default is 5000 ms
+- <b>Response Timeout(-2 using Global Settings)</b>: Response timeout setting for synchronous calls, If -2 is specified, the global setting will be used. You can use "CSM - Set TMO of Sync-Reply.vi" to change the global setting.
 
 -- <b>Indicators</b> --
 - <b>CSM Module VIRef</b>: VI reference of the CSM module
