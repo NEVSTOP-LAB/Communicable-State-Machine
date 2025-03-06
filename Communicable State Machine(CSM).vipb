@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-03-04 23:13:51" Creator="liyao" Comments="" ID="d644b22a700bff924502dad3d57d563b">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-03-06 16:49:48" Creator="liyao" Comments="" ID="d7d1f12a4068e28b7e8e880d5e11cd12">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2025.3.0.2</Library_Version>
@@ -77,7 +77,10 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
 [fix] fix message in queue number  error of CSM - Module Status.vi when multiple Sync-Messages are in Queue.
 
 #Template
-[update] #389 select Case Insensitive Match in "UI: Front Panel State" case</Release_Notes>
+[update] #389 select Case Insensitive Match in "UI: Front Panel State" case
+
+#Tool
+[update] debug-console provide option to convert safe string automatically</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
