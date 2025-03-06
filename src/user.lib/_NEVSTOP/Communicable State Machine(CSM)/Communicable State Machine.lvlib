@@ -246,6 +246,7 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 		<Item Name="Management API" Type="Folder">
 			<Item Name="CSM - Module VI Reference.vi" Type="VI" URL="../AdvanceAPI/CSM - Module VI Reference.vi"/>
 			<Item Name="CSM - List Modules.vi" Type="VI" URL="../AdvanceAPI/CSM - List Modules.vi"/>
+			<Item Name="CSM - List Submodules.vi" Type="VI" URL="../AdvanceAPI/CSM - List Submodules.vi"/>
 			<Item Name="CSM - Module Status.vi" Type="VI" URL="../AdvanceAPI/CSM - Module Status.vi"/>
 			<Item Name="CSM - Flush Queue.vi" Type="VI" URL="../AdvanceAPI/CSM - Flush Queue.vi"/>
 			<Item Name="CSM - Check If Module Exists.vi" Type="VI" URL="../AdvanceAPI/CSM - Check If Module Exists.vi"/>
@@ -358,6 +359,7 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 		<Item Name="CSM Data Type String to Enum.vi" Type="VI" URL="../Utility/CSM Data Type String to Enum.vi"/>
 		<Item Name="Replace Tag with Array.vi" Type="VI" URL="../Utility/Replace Tag with Array.vi"/>
 		<Item Name="Match Asterisk Pattern.vi" Type="VI" URL="../Utility/Match Asterisk Pattern.vi"/>
+		<Item Name="Concatenate Submodule Name.vi" Type="VI" URL="../Utility/Concatenate Submodule Name.vi"/>
 	</Item>
 	<Item Name="Parse State Queue++.vi" Type="VI" URL="../Parse State Queue++.vi"/>
 	<Item Name="Add State(s) to Queue By BOOL++.vi" Type="VI" URL="../Add State(s) to Queue By BOOL++.vi"/>
