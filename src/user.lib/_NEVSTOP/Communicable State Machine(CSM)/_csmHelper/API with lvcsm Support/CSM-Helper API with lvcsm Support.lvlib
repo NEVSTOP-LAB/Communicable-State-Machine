@@ -12,6 +12,7 @@
 		<Item Name="Read CSM States By CSM-VI.vi" Type="VI" URL="../Read CSM States By CSM-VI.vi"/>
 		<Item Name="Read CSM States By CSM.vi" Type="VI" URL="../Read CSM States By CSM.vi"/>
 		<Item Name="Read CSM API By CSM-VI.vi" Type="VI" URL="../Read CSM API By CSM-VI.vi"/>
+		<Item Name="Read CSM API By CSM.vi" Type="VI" URL="../Read CSM API By CSM.vi"/>
 		<Item Name="Read CSM-VIs.vi" Type="VI" URL="../Read CSM-VIs.vi"/>
 		<Item Name="Read CSMs.vi" Type="VI" URL="../Read CSMs.vi"/>
 	</Item>
