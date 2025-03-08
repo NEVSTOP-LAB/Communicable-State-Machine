@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-03-07 16:18:44" Creator="liyao" Comments="" ID="701cf44dfaf5c3b6744ad4a0064d05ee">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-03-08 12:30:21" Creator="liyao" Comments="" ID="fba6e2f00d80dbd43b627381f60e9790">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2025.3.0.2</Library_Version>
@@ -82,6 +82,7 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
 
 #Template
 [update] #389 select Case Insensitive Match in "UI: Front Panel State" case
+[update] tiny update to csm template(size...)
 
 #Tool
 [update] debug-console provide option to convert safe string automatically</Release_Notes>
@@ -258,7 +259,6 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
       <close_labview_before_install>true</close_labview_before_install>
       <restart_labview_after_install>false</restart_labview_after_install>
       <skip_mass_compile_after_install>false</skip_mass_compile_after_install>
-      <install_into_global_environment>false</install_into_global_environment>
     </LabVIEW>
     <VI_Docs>
       <Edit_VI_Description>true</Edit_VI_Description>
