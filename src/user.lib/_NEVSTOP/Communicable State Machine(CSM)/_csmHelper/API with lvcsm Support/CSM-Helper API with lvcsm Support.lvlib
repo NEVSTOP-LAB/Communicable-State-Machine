@@ -17,6 +17,8 @@
 		<Item Name="Read CSM Module Info.vi" Type="VI" URL="../Read CSM Module Info.vi"/>
 		<Item Name="Read CSM-VI Info.vi" Type="VI" URL="../Read CSM-VI Info.vi"/>
 		<Item Name="Read CSMs.vi" Type="VI" URL="../Read CSMs.vi"/>
+		<Item Name="Add CSM Module.vi" Type="VI" URL="../Add CSM Module.vi"/>
+		<Item Name="Delete CSM Module.vi" Type="VI" URL="../Delete CSM Module.vi"/>
 	</Item>
 	<Item Name="_Request StringList with lvcsm Support.vi" Type="VI" URL="../_Request StringList with lvcsm Support.vi"/>
 	<Item Name="_Read ItemArray.vi" Type="VI" URL="../_Read ItemArray.vi"/>
