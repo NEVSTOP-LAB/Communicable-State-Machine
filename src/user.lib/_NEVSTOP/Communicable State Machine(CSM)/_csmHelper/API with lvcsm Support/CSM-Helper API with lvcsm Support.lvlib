@@ -14,6 +14,8 @@
 		<Item Name="Read CSM API By CSM-VI.vi" Type="VI" URL="../Read CSM API By CSM-VI.vi"/>
 		<Item Name="Read CSM API By CSM.vi" Type="VI" URL="../Read CSM API By CSM.vi"/>
 		<Item Name="Read CSM-VIs.vi" Type="VI" URL="../Read CSM-VIs.vi"/>
+		<Item Name="Read CSM Module Info.vi" Type="VI" URL="../Read CSM Module Info.vi"/>
+		<Item Name="Read CSM-VI Info.vi" Type="VI" URL="../Read CSM-VI Info.vi"/>
 		<Item Name="Read CSMs.vi" Type="VI" URL="../Read CSMs.vi"/>
 	</Item>
 	<Item Name="_Request StringList with lvcsm Support.vi" Type="VI" URL="../_Request StringList with lvcsm Support.vi"/>
@@ -22,5 +24,4 @@
 	<Item Name="Read CSM API with lvcsm Support.vi" Type="VI" URL="../Read CSM API with lvcsm Support.vi"/>
 	<Item Name="Read CSM States with lvcsm Support.vi" Type="VI" URL="../Read CSM States with lvcsm Support.vi"/>
 	<Item Name="Read CSM User-States with lvcsm Support.vi" Type="VI" URL="../Read CSM User-States with lvcsm Support.vi"/>
-	<Item Name="Read CSM Module Info.vi" Type="VI" URL="../Read CSM Module Info.vi"/>
 </Library>
