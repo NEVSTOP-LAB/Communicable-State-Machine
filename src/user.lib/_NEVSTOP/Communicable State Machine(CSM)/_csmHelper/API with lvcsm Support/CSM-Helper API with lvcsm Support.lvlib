@@ -29,4 +29,5 @@
 	<Item Name="Read CSM User-States with lvcsm Support.vi" Type="VI" URL="../Read CSM User-States with lvcsm Support.vi"/>
 	<Item Name="Scan CSM-VI.vi" Type="VI" URL="../Scan CSM-VI.vi"/>
 	<Item Name="Update Case Frame to Image.vi" Type="VI" URL="../Update Case Frame to Image.vi"/>
+	<Item Name="Delete CSM-VI.vi" Type="VI" URL="../Delete CSM-VI.vi"/>
 </Library>
