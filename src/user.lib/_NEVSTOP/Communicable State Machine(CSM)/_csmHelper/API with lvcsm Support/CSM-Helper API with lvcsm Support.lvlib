@@ -27,4 +27,5 @@
 	<Item Name="Read CSM API with lvcsm Support.vi" Type="VI" URL="../Read CSM API with lvcsm Support.vi"/>
 	<Item Name="Read CSM States with lvcsm Support.vi" Type="VI" URL="../Read CSM States with lvcsm Support.vi"/>
 	<Item Name="Read CSM User-States with lvcsm Support.vi" Type="VI" URL="../Read CSM User-States with lvcsm Support.vi"/>
+	<Item Name="Scan CSM-VI.vi" Type="VI" URL="../Scan CSM-VI.vi"/>
 </Library>
