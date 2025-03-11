@@ -21,6 +21,8 @@
 		<Item Name="Delete CSM Module.vi" Type="VI" URL="../Delete CSM Module.vi"/>
 		<Item Name="Add CSM-VI.vi" Type="VI" URL="../Add CSM-VI.vi"/>
 	</Item>
+	<Item Name="_UpdatePictureControl.vi" Type="VI" URL="../../../_popupMenuPlugin/_support/_UpdatePictureControl.vi"/>
+	<Item Name="_interfacebrowser filter CSM States.vi" Type="VI" URL="../../../_popupMenuPlugin/_support/_interfacebrowser filter CSM States.vi"/>
 	<Item Name="_Request StringList with lvcsm Support.vi" Type="VI" URL="../_Request StringList with lvcsm Support.vi"/>
 	<Item Name="_Read ItemArray.vi" Type="VI" URL="../_Read ItemArray.vi"/>
 	<Item Name="Jump to CSM State.vi" Type="VI" URL="../Jump to CSM State.vi"/>
