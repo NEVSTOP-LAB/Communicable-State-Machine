@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-03-11 13:26:55" Creator="liyao" Comments="" ID="c2ea474be14b5ec7404cb0fc26d3293b">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-03-11 15:53:42" Creator="liyao" Comments="" ID="94a8103a7b41409782ad97e2d87da318">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2025.3.0.2</Library_Version>
@@ -71,6 +71,7 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
       <Release_Notes>#Core
+[update] #413 If an error occurs during a message call, previously the response would be overwritten by the "Error Handler" response. Now, if you haven't specified any response in the "Error Handler", the caller will still receive the original message response.
 [fix] #411 Fix sys-level module status-register issue
 
 #API
