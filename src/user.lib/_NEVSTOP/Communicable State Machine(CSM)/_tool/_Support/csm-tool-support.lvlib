@@ -11,4 +11,7 @@
 	<Item Name="Select Greater_nevstop.vi" Type="VI" URL="../Select Greater_nevstop.vi"/>
 	<Item Name="Open CSM BD.vi" Type="VI" URL="../Open CSM BD.vi"/>
 	<Item Name="Open CSM FP.vi" Type="VI" URL="../Open CSM FP.vi"/>
+	<Item Name="Center Callee in Caller&apos;s BD.vi" Type="VI" URL="../Center Callee in Caller&apos;s BD.vi"/>
+	<Item Name="Populate Tree with Delimited Strings_csm.vi" Type="VI" URL="../Populate Tree with Delimited Strings_csm.vi"/>
+	<Item Name="Tree Rows from Delimited String Array_csm.vi" Type="VI" URL="../Tree Rows from Delimited String Array_csm.vi"/>
 </Library>
