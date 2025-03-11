@@ -146,13 +146,13 @@
 			<Property Name="NI.ClassItem.State" Type="Int">1082143248</Property>
 		</Item>
 		<Item Name="test - filter JKISM String Queue.vi" Type="VI" URL="../testcases/test - filter JKISM String Queue.vi">
-			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%C!!!!#!!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!!1!!!!Y1(!!(A!!)2^U:8.U9W&amp;T:3V#98.J9SV'&gt;7ZD&gt;'FP&lt;CZM&gt;G.M98.T!!R5:8.U1W&amp;T:3"P&gt;81!!$:!=!!?!!!B(X2F=X2D98.F,5*B=WFD,5:V&lt;G.U;7^O,GRW9WRB=X-!#V2F=X2$98.F)'FO!'%!]!!-!!-!"!!%!!5!"!!%!!1!"!!$!!1!"!!'!Q!!?!!!#1!!!!!!!!!!!!!!$1M!!!!!!!!!!!!!!!!!!!!!!!!)!!!!!!!!!!!!!!!3!!!.!!!!$!!!!!!!!!!!!!!"!!=!!!!!</Property>
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%Y!!!!#1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!$B!=!!?!!!B(X2F=X2D98.F,5*B=WFD,5:V&lt;G.U;7^O,GRW9WRB=X-!$&amp;2F=X2$98.F)'^V&gt;!!!)%"1!!-!!!!"!!)4:8*S&lt;X)A;7YA+'ZP)'6S=G^S+1!W1(!!(A!!)2^U:8.U9W&amp;T:3V#98.J9SV'&gt;7ZD&gt;'FP&lt;CZM&gt;G.M98.T!!N5:8.U1W&amp;T:3"J&lt;A"B!0!!$!!$!!1!"!!&amp;!!1!"!!%!!1!"A!%!!1!"Q-!!(A!!!E!!!!!!!!!!!!!!!U,!!!!!!!!!!!!!!!!!!!!!!!!#!!!!!!!!!!!!!!!%A!!$1!!!!Q!!!!!!!!!!!!!!1!)!!!!!!</Property>
 			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 			<Property Name="NI.ClassItem.Flags" Type="Int">16777216</Property>
 			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
 			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-			<Property Name="NI.ClassItem.State" Type="Int">1342710291</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1342710289</Property>
 		</Item>
 		<Item Name="test - Clear CSM Queue.vi" Type="VI" URL="../testcases/test - Clear CSM Queue.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%Y!!!!#1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!$B!=!!?!!!B(X2F=X2D98.F,5*B=WFD,5:V&lt;G.U;7^O,GRW9WRB=X-!$&amp;2F=X2$98.F)'^V&gt;!!!)%"1!!-!!!!"!!)4:8*S&lt;X)A;7YA+'ZP)'6S=G^S+1!W1(!!(A!!)2^U:8.U9W&amp;T:3V#98.J9SV'&gt;7ZD&gt;'FP&lt;CZM&gt;G.M98.T!!N5:8.U1W&amp;T:3"J&lt;A"B!0!!$!!$!!1!"!!&amp;!!1!"!!%!!1!"A!%!!1!"Q-!!(A!!!E!!!!!!!!!!!!!!!U,!!!!!!!!!!!!!!!!!!!!!!!!#A!!!!!!!!!!!!!!%A!!$1!!!!Q!!!!!!!!!!!!!!1!)!!!!!!</Property>
@@ -162,6 +162,15 @@
 			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">1074536979</Property>
+		</Item>
+		<Item Name="test - Response of CSM Send Message.vi" Type="VI" URL="../testcases/test - Response of CSM Send Message.vi">
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%Y!!!!#1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!$B!=!!?!!!B(X2F=X2D98.F,5*B=WFD,5:V&lt;G.U;7^O,GRW9WRB=X-!$&amp;2F=X2$98.F)'^V&gt;!!!)%"1!!-!!!!"!!)4:8*S&lt;X)A;7YA+'ZP)'6S=G^S+1!W1(!!(A!!)2^U:8.U9W&amp;T:3V#98.J9SV'&gt;7ZD&gt;'FP&lt;CZM&gt;G.M98.T!!N5:8.U1W&amp;T:3"J&lt;A"B!0!!$!!$!!1!"!!&amp;!!1!"!!%!!1!"A!%!!1!"Q-!!(A!!!U)!!!!!!!!!!!!!!U,!!!!!!!!!!!!!!!!!!!!!!!!#A!!!!!!!!!!!!!!%A!!$1!!!!Q!!!!!!!!!!!!!!1!)!!!!!!</Property>
+			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+			<Property Name="NI.ClassItem.Flags" Type="Int">16777216</Property>
+			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
+			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1342972435</Property>
 		</Item>
 	</Item>
 	<Item Name="setUp.vi" Type="VI" URL="../setUp.vi">
