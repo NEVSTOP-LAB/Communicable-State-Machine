@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-03-15 12:29:13" Creator="liyao" Comments="" ID="f76bfa3b07022eb9d251504c4377ea3b">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-03-15 19:29:35" Creator="liyao" Comments="" ID="19a8d380d6b077acaa2fa16eb478adfe">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2025.3.0.2</Library_Version>
@@ -78,6 +78,7 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
 [add] #406 add API to list submodule names
 [add] #392 add API to set timeout of waiting reply for sync-message.
 [add] #394 add a corner case API which could flush the CSM message queue
+[update] VI Ref will be cached in "CSM - Module VI Reference.vi"
 [update] #390 #391 Refactor palette and icon to make it more friendly to use.
 [update] remove inline for non-CSM Support API to reduce loading time
 [fix] fix message in queue number  error of CSM - Module Status.vi when multiple Sync-Messages are in Queue.
