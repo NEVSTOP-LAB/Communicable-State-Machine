@@ -32,4 +32,5 @@
 	<Item Name="Scan CSM-VI.vi" Type="VI" URL="../Scan CSM-VI.vi"/>
 	<Item Name="Update Case Frame to Image.vi" Type="VI" URL="../Update Case Frame to Image.vi"/>
 	<Item Name="Delete CSM-VI.vi" Type="VI" URL="../Delete CSM-VI.vi"/>
+	<Item Name="CSM - Module VI Reference(with Cache).vi" Type="VI" URL="../CSM - Module VI Reference(with Cache).vi"/>
 </Library>
