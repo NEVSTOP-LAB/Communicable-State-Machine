@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-03-15 19:29:35" Creator="liyao" Comments="" ID="19a8d380d6b077acaa2fa16eb478adfe">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-03-15 19:35:07" Creator="liyao" Comments="" ID="a5bb166707a2bdaf63023a40cf88c57d">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2025.3.0.2</Library_Version>
@@ -70,7 +70,10 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
       <Copyright/>
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
-      <Release_Notes>#Core
+      <Release_Notes>#important
+[add] #399 add "Interface Browser Dialog", which is used for manage all your CSMs in project. 
+
+#Core
 [update] #413 If an error occurs during a message call, previously the response would be overwritten by the "Error Handler" response. Now, if you haven't specified any response in the "Error Handler", the caller will still receive the original message response.
 [fix] #411 Fix sys-level module status-register issue
 
