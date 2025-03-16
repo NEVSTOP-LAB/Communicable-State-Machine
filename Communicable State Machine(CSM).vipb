@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-03-15 19:35:07" Creator="liyao" Comments="" ID="a5bb166707a2bdaf63023a40cf88c57d">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-03-16 18:59:51" Creator="liyao" Comments="" ID="6b8610c688307deb0859b64a6ba6a2a2">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2025.3.0.2</Library_Version>
@@ -92,7 +92,8 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
 
 #Tool
 [add] #417 add an option to enable "retain wire value" option, which will help debugging a lot.
-[update] debug-console provide option to convert safe string automatically</Release_Notes>
+[update] debug-console provide option to convert safe string automatically
+[update] #404 #403 #402 RCM entry update</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
