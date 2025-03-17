@@ -361,6 +361,7 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 		<Item Name="Replace Tag with Array.vi" Type="VI" URL="../Utility/Replace Tag with Array.vi"/>
 		<Item Name="Match Asterisk Pattern.vi" Type="VI" URL="../Utility/Match Asterisk Pattern.vi"/>
 		<Item Name="Concatenate Submodule Name.vi" Type="VI" URL="../Utility/Concatenate Submodule Name.vi"/>
+		<Item Name="Build State String with Comments.vi" Type="VI" URL="../Utility/Build State String with Comments.vi"/>
 	</Item>
 	<Item Name="Parse State Queue++.vi" Type="VI" URL="../Parse State Queue++.vi"/>
 	<Item Name="Add State(s) to Queue By BOOL++.vi" Type="VI" URL="../Add State(s) to Queue By BOOL++.vi"/>
