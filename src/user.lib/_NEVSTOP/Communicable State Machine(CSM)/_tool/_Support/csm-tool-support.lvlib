@@ -15,4 +15,5 @@
 	<Item Name="Defer Panel Updates_csm.vi" Type="VI" URL="../Defer Panel Updates_csm.vi"/>
 	<Item Name="Populate Tree with Delimited Strings_csm.vi" Type="VI" URL="../Populate Tree with Delimited Strings_csm.vi"/>
 	<Item Name="Tree Rows from Delimited String Array_csm.vi" Type="VI" URL="../Tree Rows from Delimited String Array_csm.vi"/>
+	<Item Name="_parse Log Line.vi" Type="VI" URL="../_parse Log Line.vi"/>
 </Library>
