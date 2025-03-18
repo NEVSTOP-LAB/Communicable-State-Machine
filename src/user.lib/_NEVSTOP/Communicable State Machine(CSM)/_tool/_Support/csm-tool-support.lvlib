@@ -9,8 +9,6 @@
 	<Item Name="Dashboard Cell Resize.vi" Type="VI" URL="../Dashboard Cell Resize.vi"/>
 	<Item Name="Dashboard Cell2 Array Resize.vi" Type="VI" URL="../Dashboard Cell2 Array Resize.vi"/>
 	<Item Name="Select Greater_nevstop.vi" Type="VI" URL="../Select Greater_nevstop.vi"/>
-	<Item Name="Open CSM BD.vi" Type="VI" URL="../Open CSM BD.vi"/>
-	<Item Name="Open CSM FP.vi" Type="VI" URL="../Open CSM FP.vi"/>
 	<Item Name="Center Callee in Window Bounds.vi" Type="VI" URL="../Center Callee in Window Bounds.vi"/>
 	<Item Name="Defer Panel Updates_csm.vi" Type="VI" URL="../Defer Panel Updates_csm.vi"/>
 	<Item Name="Populate Tree with Delimited Strings_csm.vi" Type="VI" URL="../Populate Tree with Delimited Strings_csm.vi"/>
