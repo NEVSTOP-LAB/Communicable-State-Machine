@@ -35,7 +35,7 @@ CSM API 介绍:
 
 在这种情况下，模块之间的通信完全依赖于消息字符串队列操作，你可以使用 **Build Message with Arguments++.vi** 函数生成一个 Message 字符串，或者，如果你熟悉规则，你可以直接使用编写用于描述通讯的字符串。
 
-``` c
+``` c++
 #CSM 状态语法
     // 本地消息示例
     DoSth: DoA >> 参数
@@ -65,8 +65,9 @@ CSM API 介绍:
     // 要添加注释，请使用 "//"，右边的所有文本将被忽略。
     UI: Initialize // 初始化 UI
     // Another comment line
-
 ```
+
+请访问此链接以获取更多语法信息：[Syntax.md](https://github.com/NEVSTOP-LAB/Communicable-State-Machine/tree/main/.doc/Syntax.md)
 
 可参考范例 _**/Example/2. Caller is CSM Scenario**_.
 

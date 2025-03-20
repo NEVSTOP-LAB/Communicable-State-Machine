@@ -35,7 +35,7 @@ Go to _**/Example/1. Create a reusable module**_ to learn how to create a CSM mo
 
 In this scenario, inter-module communication solely relies on message string queue operations. You can generate a Message string using the "**Build Message with Arguments++.vi**" function. Alternatively, if you are familiar with the rules, you can directly utilize message description strings.
 
-``` c
+``` c++
 #CSM State Syntax
     // Local Message Example
     DoSth: DoA >> Arguments
@@ -67,6 +67,8 @@ In this scenario, inter-module communication solely relies on message string que
     UI: Initialize // This initializes the UI
     // Another comment line
 ```
+
+Please visit this link for more syntax information: [Syntax.md](https://github.com/NEVSTOP-LAB/Communicable-State-Machine/tree/main/.doc/Syntax.md)
 
 Go to _**/Example/2. Caller is CSM Scenario**_ to find an example for this scenario.
 

@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-03-19 14:32:06" Creator="liyao" Comments="" ID="e2d41b1eaff45668464bb3b12a22871a">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-03-20 11:32:08" Creator="liyao" Comments="" ID="b7c02fcc587b0b89a79acfbd778bfc31">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2025.3.0.2</Library_Version>
@@ -33,7 +33,7 @@
       <One_Line_Description_Summary>LabVIEW Application Framework extended from JKI State Machine(JKISM)</One_Line_Description_Summary>
       <Description>Communicable State Machine(CSM) is a LabVIEW application framework that builds upon JKI State Machine(JKISM). It follows the pattern of JKISM and extends the keywords to describe message communication between modules, including concepts such as Sync-Message, Async-Message, Subscription/Unsubscription of status - essential elements for creating reusable code modules. 
 
-&lt;b&gt;Grammar:&lt;/b&gt;
+&lt;b&gt;CSM Syntax&lt;/b&gt;
 
     &lt;color=gray&gt;// Local Message Example&lt;/color&gt;
     DoSth: DoA &gt;&gt; Arguments
@@ -43,16 +43,11 @@
     API: xxxx &gt;&gt; &lt;i&gt;Arguments&lt;/i&gt; &lt;color=red&gt;-&gt;&lt;/color&gt; TargetModule
     &lt;color=gray&gt;// Async Call without Reply Example&lt;/color&gt;
     API: xxxx &gt;&gt; &lt;i&gt;Arguments&lt;/i&gt; &lt;color=red&gt;-&gt;|&lt;/color&gt; TargetModule
-    &lt;color=gray&gt;// Broadcast normal status:&lt;/color&gt;
-    Status &gt;&gt; &lt;i&gt;StatusArguments&lt;/i&gt;  &lt;color=red&gt;-&gt;&lt;status&gt;&lt;/color&gt;
-    &lt;color=gray&gt;// Broadcast Interrupt status:&lt;/color&gt;
-    Interrupt &gt;&gt; &lt;i&gt;StatusArguments&lt;/i&gt; &lt;color=red&gt;-&gt;&lt;interrupt&gt;&lt;/color&gt;
-    &lt;color=gray&gt;// Register Source Module's status to Handler Module&lt;/color&gt;
-    Status@Source Module &gt;&gt; API@Handler Module &lt;color=red&gt;-&gt;&lt;register&gt;&lt;/color&gt;
-    &lt;color=gray&gt;// Unregister Source Module's status&lt;/color&gt;
-    Status@Source Module &gt;&gt; API@Handler Module &lt;color=red&gt;-&gt;&lt;unregister&gt;&lt;/color&gt;
 
-&lt;b&gt;Hightlights:&lt;/b&gt;
+Please visit this link for more syntax information: 
+&lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https://github.com/NEVSTOP-LAB/Communicable-State-Machine/tree/main/.doc/Syntax.md&lt;/i&gt;&lt;/u&gt;&lt;/color&gt;
+
+&lt;b&gt;CSM Hightlights&lt;/b&gt;
 
     - Pure text process control makes documentation, scripting and testing easy.
     - Easy to change program behavior even after application is built.
