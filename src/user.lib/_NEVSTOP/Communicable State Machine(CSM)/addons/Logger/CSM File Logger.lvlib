@@ -7,15 +7,19 @@
 	<Property Name="NI.SortType" Type="Int">3</Property>
 	<Item Name="Support" Type="Folder">
 		<Item Name="List Rules as Strings.vi" Type="VI" URL="../_Support/List Rules as Strings.vi"/>
-		<Item Name="Append Application Directory If Relative.vi" Type="VI" URL="../_Support/Append Application Directory If Relative.vi"/>
-		<Item Name="Convert File Extension (Path)__ogtk.vi" Type="VI" URL="../_Support/Convert File Extension (Path)__ogtk.vi"/>
-		<Item Name="Convert File Extension (String)__ogtk.vi" Type="VI" URL="../_Support/Convert File Extension (String)__ogtk.vi"/>
 	</Item>
 	<Item Name="Background Thread" Type="Folder">
 		<Item Name="CSM-Logger-Thread.vi" Type="VI" URL="../CSM-Logger-Thread.vi"/>
 	</Item>
 	<Item Name="Typedef" Type="Folder">
 		<Item Name="CSM File Logger Limit.ctl" Type="VI" URL="../CSM File Logger Limit.ctl"/>
+	</Item>
+	<Item Name="Utility" Type="Folder">
+		<Item Name="Append CSM AppDir If Relative.vi" Type="VI" URL="../_Support/Append CSM AppDir If Relative.vi"/>
+		<Item Name="Convert File Extension (Path)__ogtk.vi" Type="VI" URL="../_Support/Convert File Extension (Path)__ogtk.vi"/>
+		<Item Name="Convert File Extension (String)__ogtk.vi" Type="VI" URL="../_Support/Convert File Extension (String)__ogtk.vi"/>
+		<Item Name="CSM Application Directory.vi" Type="VI" URL="../_Support/CSM Application Directory.vi"/>
+		<Item Name="First Existing Folder in Path.vi" Type="VI" URL="../_Support/First Existing Folder in Path.vi"/>
 	</Item>
 	<Item Name="CSM - Start File Logger.vi" Type="VI" URL="../CSM - Start File Logger.vi"/>
 </Library>
