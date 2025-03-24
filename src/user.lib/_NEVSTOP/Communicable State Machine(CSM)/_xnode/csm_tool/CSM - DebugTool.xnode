@@ -20,7 +20,6 @@
 	<Item Name="_GetHelp.vi" Type="Ability VI" URL="../_xnode_csm_tool_support/_GetHelp.vi">
 		<Property Name="NI.XItem.Name" Type="Str">Help</Property>
 	</Item>
-	<Item Name="_reorder tool entries.vi" Type="VI" URL="../_xnode_csm_tool_support/_reorder tool entries.vi"/>
 	<Item Name="_State.ctl" Type="Ability VI" URL="../_xnode_csm_tool_support/_State.ctl">
 		<Property Name="NI.XItem.Name" Type="Str">State</Property>
 	</Item>
