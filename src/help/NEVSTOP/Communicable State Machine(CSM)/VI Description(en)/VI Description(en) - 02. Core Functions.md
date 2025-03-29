@@ -23,7 +23,7 @@ Parses the CSM state queue and returns the next current state to be executed, al
 - <b>State Queue</b>: The entire state queue is connected to this input. This should come from the CSM's shift register.
 - <b>Previous Error</b>: The error cluster from the CSM is connected to this input. If an error occurs and appears at this input, the current state output will return the "Error Handler" state.
 - <b>Name ("" to use uuid)</b>: CSM module name.
-- <b>Response Timeout (5000ms)</b>: Response timeout setting for synchronous calls, default is 5000 ms.
+- <b>Response Timeout(-2 using Global Settings)</b>: Response timeout setting for synchronous calls, If -2 is specified, the global setting will be used. You can use "CSM - Set TMO of Sync-Reply.vi" to change the global setting.
 - <b>Dequeue Timeout (0ms)</b>: Timeout setting for checking the CSM message queue, default is 0, meaning no wait.
 - <b>Response Arguments</b>: Response parameters from the previous state. It should be connected to the CSM's shift register to pass return values from external calls.
 

@@ -811,7 +811,7 @@ The State string that requires the argument.
 - <b>state</b>:
 - <b>args</b>:
 - <b>source/target</b>:
-- <b>Response Timeout(5000ms)</b>:
+- <b>Response Timeout(-2 to use global setting)</b>:
 - <b>Module Name</b>:
 
 -- <b>Indicators</b> --
