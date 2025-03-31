@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-03-26 21:27:26" Creator="liyao" Comments="" ID="f92282c89595076d442204eb35d35049">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-03-31 13:03:13" Creator="liyao" Comments="" ID="427cb47f763a3d2862b653fabbf0fef0">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
-    <Library_Version>2025.3.0.2</Library_Version>
+    <Library_Version>2025.4.0.2</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>src</Library_Source_Folder>
     <Library_Output_Folder>vip</Library_Output_Folder>
@@ -65,37 +65,7 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
       <Copyright/>
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
-      <Release_Notes>#important
-[add] #399 add "Interface Browser Dialog", which is used for manage all your CSMs in project. 
-[add] #396 add "Script Editor" in RCM of string constant, it's useful and please try it.
-
-#Core
-[update] #413 If an error occurs during a message call, previously the response would be overwritten by the "Error Handler" response. Now, if you haven't specified any response in the "Error Handler", the caller will still receive the original message response.
-[fix] #411 Fix sys-level module status-register issue
-
-#API
-[add] #406 add API to list submodule names
-[add] #392 add API to set timeout of waiting reply for sync-message.
-[add] #394 add a corner case API which could flush the CSM message queue
-[update] VI Ref will be cached in "CSM - Module VI Reference.vi"
-[update] #390 #391 Refactor palette and icon to make it more friendly to use. Thanks @ZhaoLi-an
-[update] remove inline for non-CSM Support API to reduce loading time
-[fix] fix message in queue number  error of CSM - Module Status.vi when multiple Sync-Messages are in Queue.
-
-#Template
-[update] #389 select Case Insensitive Match in "UI: Front Panel State" case. Thanks @ZhaoLi-an
-[update] tiny update to csm template(size...)
-
-#Addon
-[fix][CSMLS] #419 fix issue that macro message with loop support could not get resp/asyn-resp. Thanks @wulei2LabVIEW
-[fix][CSM File Logger] Create every folders in log file path if needed.
-
-#Tool
-[add] #417 add an option to enable "retain wire value" option, which will help debugging a lot.
-[add] #408 add RCM for jumping to CSM State of the log in Debug Consol and log viewer.
-[update] debug-console provide option to convert safe string automatically
-[update] #404 #403 #402 RCM entry update
-[fix] #420 #421 minor bug fix. Thanks @wulei2LabVIEW</Release_Notes>
+      <Release_Notes/>
     </Description>
     <Destinations>
       <Toolkit_VIs>
