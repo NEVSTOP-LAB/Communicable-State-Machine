@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-03-31 13:39:59" Creator="liyao" Comments="" ID="30c8ccb7883224e507d3bb41dcdf6c90">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-04-02 14:13:16" Creator="liyao" Comments="" ID="86be913d5cc856814daf1f04c9276c43">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2025.4.0.2</Library_Version>
@@ -66,7 +66,10 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
       <Release_Notes>#IDE
-[update] Interface browser Update #430 #424</Release_Notes>
+[update] Interface browser Update #430 #424
+
+#Addon
+[update]&lt;loop support&gt;#435 Add option for front insert in CSMLS - Define Loop State(s).vi</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
