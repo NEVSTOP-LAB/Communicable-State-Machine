@@ -4,9 +4,9 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">385908736</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Item Name="Support" Type="Folder">
-		<Item Name="_reorder tool entries.vi" Type="VI" URL="/&lt;userlib&gt;/_NEVSTOP/Communicable State Machine(CSM)/_xnode/csm_tool/_xnode_csm_tool_support/_reorder tool entries.vi"/>
-		<Item Name="CSM DebugTool Dialog Ref(FGV).vi" Type="VI" URL="/&lt;userlib&gt;/_NEVSTOP/Communicable State Machine(CSM)/_xnode/csm_tool/_xnode_csm_tool_support/CSM DebugTool Dialog Ref(FGV).vi"/>
+		<Item Name="_reorder tool entries.vi" Type="VI" URL="../_reorder tool entries.vi"/>
+		<Item Name="CSM DebugTool Dialog Ref(FGV).vi" Type="VI" URL="../CSM DebugTool Dialog Ref(FGV).vi"/>
 	</Item>
-	<Item Name="CSM DebugTool Dialog.vi" Type="VI" URL="/&lt;userlib&gt;/_NEVSTOP/Communicable State Machine(CSM)/_xnode/csm_tool/_xnode_csm_tool_support/CSM DebugTool Dialog.vi"/>
+	<Item Name="CSM DebugTool Dialog.vi" Type="VI" URL="../CSM DebugTool Dialog.vi"/>
 	<Item Name="Start CSM DebugTool Dialog.vi" Type="VI" URL="../Start CSM DebugTool Dialog.vi"/>
 </Library>
