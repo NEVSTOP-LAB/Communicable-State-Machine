@@ -8,5 +8,6 @@
 	<Item Name="_interfacebrowser Build MainTree Menu.vi" Type="VI" URL="../_interfacebrowser Build MainTree Menu.vi"/>
 	<Item Name="_interfacebrowser build tree table in CSM mode.vi" Type="VI" URL="../_interfacebrowser build tree table in CSM mode.vi"/>
 	<Item Name="_interfacebrowser build tree table in CSM-VI mode.vi" Type="VI" URL="../_interfacebrowser build tree table in CSM-VI mode.vi"/>
+	<Item Name="_interfacebrowser Filter Tree Data.vi" Type="VI" URL="../_interfacebrowser Filter Tree Data.vi"/>
 	<Item Name="_VI Missing or Broken.vi" Type="VI" URL="../_VI Missing or Broken.vi"/>
 </Library>

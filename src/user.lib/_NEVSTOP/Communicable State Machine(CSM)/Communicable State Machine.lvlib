@@ -240,6 +240,7 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 				<Item Name="CSM Target Timeout Error.vi" Type="VI" URL="../_Support/Error/CSM Target Timeout Error.vi"/>
 				<Item Name="CSM No Target Error.vi" Type="VI" URL="../_Support/Error/CSM No Target Error.vi"/>
 				<Item Name="CSM Not Allowed Message.vi" Type="VI" URL="../_Support/Error/CSM Not Allowed Message.vi"/>
+				<Item Name="CSM Missing Return State Error.vi" Type="VI" URL="../_Support/Error/CSM Missing Return State Error.vi"/>
 			</Item>
 			<Item Name="CSM - Get New State Notifier Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Get New State Notifier Event.vi"/>
 			<Item Name="CSM - Internal State Debug Log History.vi" Type="VI" URL="../AdvanceAPI/CSM - Internal State Debug Log History.vi"/>
