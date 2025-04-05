@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-04-05 21:01:09" Creator="liyao" Comments="" ID="697f7574492630f80cd466fc9565c334">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-04-05 21:16:34" Creator="liyao" Comments="" ID="55274b50099378efc9b23da9ae0d81bf">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2025.4.0.2</Library_Version>
@@ -69,7 +69,7 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
 [fix] #436 fix that for or Worker mode, when logviewer is open ,terminate workers' caller VI, flood of CSM module will be generated.
 
 #IDE
-[update] Interface browser Update #430 #424 #428
+[update] Interface browser Update #430 #424 #425 #428
 
 #Addon
 [update]&lt;loop support&gt;#435 Add option for front insert in CSMLS - Define Loop State(s).vi
