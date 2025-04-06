@@ -253,6 +253,9 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="CSM - Flush Queue.vi" Type="VI" URL="../AdvanceAPI/CSM - Flush Queue.vi"/>
 			<Item Name="CSM - Check If Module Exists.vi" Type="VI" URL="../AdvanceAPI/CSM - Check If Module Exists.vi"/>
 			<Item Name="CSM - Set TMO of Sync-Reply.vi" Type="VI" URL="../AdvanceAPI/CSM - Set TMO of Sync-Reply.vi"/>
+			<Item Name="CSM - Set Module Attribute.vi" Type="VI" URL="../AdvanceAPI/CSM - Set Module Attribute.vi"/>
+			<Item Name="CSM - Get Module Attribute.vi" Type="VI" URL="../AdvanceAPI/CSM - Get Module Attribute.vi"/>
+			<Item Name="CSM - Delete Module Attribute.vi" Type="VI" URL="../AdvanceAPI/CSM - Delete Module Attribute.vi"/>
 		</Item>
 		<Item Name="Broadcast Registry" Type="Folder">
 			<Item Name="CSM - Register Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Register Status Change.vi"/>
