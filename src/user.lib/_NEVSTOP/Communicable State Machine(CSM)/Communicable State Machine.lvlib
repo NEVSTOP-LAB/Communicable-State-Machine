@@ -114,6 +114,7 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 				<Item Name="_CSMOFGVOPER.ctl" Type="VI" URL="../_Support/CSMQ/_CSMOFGVOPER.ctl"/>
 				<Item Name="_CSMOFGV Obtain.vi" Type="VI" URL="../_Support/CSMQ/_CSMOFGV Obtain.vi"/>
 				<Item Name="_CSMOFGV Get.vi" Type="VI" URL="../_Support/CSMQ/_CSMOFGV Get.vi"/>
+				<Item Name="_CSMOFGV TagMap.vi" Type="VI" URL="../_Support/CSMQ/_CSMOFGV TagMap.vi"/>
 				<Item Name="_CSMOFGV Dequeue.vi" Type="VI" URL="../_Support/CSMQ/_CSMOFGV Dequeue.vi"/>
 				<Item Name="_CSMOFGV Release.vi" Type="VI" URL="../_Support/CSMQ/_CSMOFGV Release.vi"/>
 			</Item>
@@ -253,6 +254,8 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="CSM - Flush Queue.vi" Type="VI" URL="../AdvanceAPI/CSM - Flush Queue.vi"/>
 			<Item Name="CSM - Check If Module Exists.vi" Type="VI" URL="../AdvanceAPI/CSM - Check If Module Exists.vi"/>
 			<Item Name="CSM - Set TMO of Sync-Reply.vi" Type="VI" URL="../AdvanceAPI/CSM - Set TMO of Sync-Reply.vi"/>
+		</Item>
+		<Item Name="AttributeAPI" Type="Folder">
 			<Item Name="CSM - List Module Attributes.vi" Type="VI" URL="../AdvanceAPI/CSM - List Module Attributes.vi"/>
 			<Item Name="CSM - Set Module Attribute.vi" Type="VI" URL="../AdvanceAPI/CSM - Set Module Attribute.vi"/>
 			<Item Name="CSM - Get Module Attribute.vi" Type="VI" URL="../AdvanceAPI/CSM - Get Module Attribute.vi"/>
