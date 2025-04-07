@@ -77,6 +77,7 @@
 			<Item Name="testcase-documentation.lvclass" Type="LVClass" URL="../testcases/testcase-documentation/testcase-documentation.lvclass"/>
 			<Item Name="testcase-globalLog.lvclass" Type="LVClass" URL="../testcases/testcase-globalLog/testcase-globalLog.lvclass"/>
 			<Item Name="testcase-csm loop support.lvclass" Type="LVClass" URL="../testcases/testcase-csm loop support/testcase-csm loop support.lvclass"/>
+			<Item Name="testcase-CSMAttributes.lvclass" Type="LVClass" URL="../testcases/testcase-CSMAttributes/testcase-CSMAttributes.lvclass"/>
 		</Item>
 		<Item Name="API Tree.vi" Type="VI" URL="../src/API Tree.vi"/>
 		<Item Name="Communicable State Machine(CSM).vipb" Type="Document" URL="../Communicable State Machine(CSM).vipb"/>
