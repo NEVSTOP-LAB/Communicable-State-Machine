@@ -15,12 +15,15 @@
 		<Item Name="_Read ItemArray.vi" Type="VI" URL="../_Read ItemArray.vi"/>
 		<Item Name="_Remove Duplicates Strings.vi" Type="VI" URL="../_Remove Duplicates Strings.vi"/>
 		<Item Name="_UpdatePictureControl.vi" Type="VI" URL="../../../_popupMenuPlugin/_support/_UpdatePictureControl.vi"/>
+		<Item Name="_Read CSM Status Content.vi" Type="VI" URL="../_Read CSM Status Content.vi"/>
 	</Item>
 	<Item Name="API" Type="Folder">
 		<Item Name="Read CSM States By CSM-VI.vi" Type="VI" URL="../Read CSM States By CSM-VI.vi"/>
 		<Item Name="Read CSM States By CSM.vi" Type="VI" URL="../Read CSM States By CSM.vi"/>
 		<Item Name="Read CSM API By CSM-VI.vi" Type="VI" URL="../Read CSM API By CSM-VI.vi"/>
 		<Item Name="Read CSM API By CSM.vi" Type="VI" URL="../Read CSM API By CSM.vi"/>
+		<Item Name="Read CSM Status By CSM.vi" Type="VI" URL="../Read CSM Status By CSM.vi"/>
+		<Item Name="Read CSM Status By CSM-VI.vi" Type="VI" URL="../Read CSM Status By CSM-VI.vi"/>
 		<Item Name="Read CSM-VIs.vi" Type="VI" URL="../Read CSM-VIs.vi"/>
 		<Item Name="Read CSM Module Info.vi" Type="VI" URL="../Read CSM Module Info.vi"/>
 		<Item Name="Read CSM-VI Info.vi" Type="VI" URL="../Read CSM-VI Info.vi"/>
@@ -32,6 +35,7 @@
 		<Item Name="Read CSM API with lvcsm Support.vi" Type="VI" URL="../Read CSM API with lvcsm Support.vi"/>
 		<Item Name="Read CSM States with lvcsm Support.vi" Type="VI" URL="../Read CSM States with lvcsm Support.vi"/>
 		<Item Name="Read CSM User-States with lvcsm Support.vi" Type="VI" URL="../Read CSM User-States with lvcsm Support.vi"/>
+		<Item Name="Read CSM Status with lvcsm Support.vi" Type="VI" URL="../Read CSM Status with lvcsm Support.vi"/>
 		<Item Name="Scan CSM-VI.vi" Type="VI" URL="../Scan CSM-VI.vi"/>
 		<Item Name="Update Case Frame to Image.vi" Type="VI" URL="../Update Case Frame to Image.vi"/>
 		<Item Name="Delete CSM-VI.vi" Type="VI" URL="../Delete CSM-VI.vi"/>
