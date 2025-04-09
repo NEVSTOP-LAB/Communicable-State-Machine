@@ -6,6 +6,7 @@
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="_interfacebrowser Build Interface Menu.vi" Type="VI" URL="../_interfacebrowser Build Interface Menu.vi"/>
 	<Item Name="_interfacebrowser Build MainTree Menu.vi" Type="VI" URL="../_interfacebrowser Build MainTree Menu.vi"/>
+	<Item Name="_interfacebrowser Build Status Menu.vi" Type="VI" URL="../_interfacebrowser Build Status Menu.vi"/>
 	<Item Name="_interfacebrowser build tree table in CSM mode.vi" Type="VI" URL="../_interfacebrowser build tree table in CSM mode.vi"/>
 	<Item Name="_interfacebrowser build tree table in CSM-VI mode.vi" Type="VI" URL="../_interfacebrowser build tree table in CSM-VI mode.vi"/>
 	<Item Name="_interfacebrowser Filter Tree Data.vi" Type="VI" URL="../_interfacebrowser Filter Tree Data.vi"/>
