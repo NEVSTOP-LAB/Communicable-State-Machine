@@ -39,6 +39,7 @@
 		<Item Name="Scan CSM-VI.vi" Type="VI" URL="../Scan CSM-VI.vi"/>
 		<Item Name="Update Case Frame to Image.vi" Type="VI" URL="../Update Case Frame to Image.vi"/>
 		<Item Name="Delete CSM-VI.vi" Type="VI" URL="../Delete CSM-VI.vi"/>
+		<Item Name="Refresh Online CSMs in lvcsm.vi" Type="VI" URL="../Refresh Online CSMs in lvcsm.vi"/>
 		<Item Name="Delete CSM State.vi" Type="VI" URL="../Delete CSM State.vi"/>
 	</Item>
 </Library>
