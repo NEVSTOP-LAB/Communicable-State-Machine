@@ -36,6 +36,15 @@
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 	</Item>
 	<Item Name="private" Type="Folder">
+		<Item Name="Bulid Status List.vi" Type="VI" URL="../_support/Bulid Status List.vi">
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!$=!!!!#1!%!!!!%%!Q`````Q:4&gt;'&amp;U&gt;8-!!""!-0````](37Z4&gt;'&amp;U:1!+!&amp;!!!A!"!!)!%E"!!!(`````!!-&amp;18*S98E!'%!Q`````QZU=GFN&lt;76E)(.U=GFO:Q!!&amp;E"!!!(`````!!5)18*S98EA;7Y!!"*!-0````]*6'6Y&gt;#Z5:8BU!&amp;1!]!!-!!!!!!!!!!1!!!!!!!!!!!!'!!!!!!!(!Q!!?!!!!!!!!!!!!!!!!!!!#1!!!!!!!!!!!!!!!!!!!!!!!!)1!!!!!!!!!!!!!!)1!!!!!!%!#!!!!!!</Property>
+			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
+			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
+			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1107821072</Property>
+		</Item>
 		<Item Name="CaseNames To CSM States.vi" Type="VI" URL="../_support/CaseNames To CSM States.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!#W!!!!"A!%!!!!'%!Q`````QZU=GFN&lt;76E)(.U=GFO:Q!!&amp;E"!!!(`````!!%*18*S98EA&lt;X6U!"*!-0````]*2H*B&lt;76/97VF!":!1!!"`````Q!$#%&amp;S=G&amp;Z)'FO!!"5!0!!$!!!!!!!!!!#!!!!!!!!!!!!!!!!!!!!"!-!!(A!!!!!!!!!!!!!!!!!!!E!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#%!!!!!!"!!5!!!!!</Property>
 			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
@@ -763,14 +772,5 @@
 		<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
 		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 		<Property Name="NI.ClassItem.State" Type="Int">1082143248</Property>
-	</Item>
-	<Item Name="Bulid Status List.vi" Type="VI" URL="../_support/Bulid Status List.vi">
-		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!$=!!!!#1!%!!!!%%!Q`````Q:4&gt;'&amp;U&gt;8-!!""!-0````](37Z4&gt;'&amp;U:1!+!&amp;!!!A!"!!)!%E"!!!(`````!!-&amp;18*S98E!'%!Q`````QZU=GFN&lt;76E)(.U=GFO:Q!!&amp;E"!!!(`````!!5)18*S98EA;7Y!!"*!-0````]*6'6Y&gt;#Z5:8BU!&amp;1!]!!-!!!!!!!!!!1!!!!!!!!!!!!'!!!!!!!(!Q!!?!!!!!!!!!!!!!!!!!!!#1!!!!!!!!!!!!!!!!!!!!!!!!)1!!!!!!!!!!!!!!)1!!!!!!%!#!!!!!!</Property>
-		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
-		<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
-		<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
-		<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
-		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-		<Property Name="NI.ClassItem.State" Type="Int">1107821072</Property>
 	</Item>
 </LVClass>
