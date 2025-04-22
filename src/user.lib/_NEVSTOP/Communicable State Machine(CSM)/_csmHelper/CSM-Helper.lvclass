@@ -35,6 +35,17 @@
 	<Item Name="CSM-Helper.ctl" Type="Class Private Data" URL="CSM-Helper.ctl">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 	</Item>
+	<Item Name="Utility" Type="Folder">
+		<Item Name="filter CSM States.vi" Type="VI" URL="../../_popupMenuPlugin/_support/filter CSM States.vi">
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!$4!!!!"A!%!!!!%%!Q`````Q:4&gt;(*J&lt;G=!!"R!1!!"`````Q!"$G:J&lt;(2F=G6E)'&amp;S=G&amp;Z!!!V1"9!!QB"5%EN4WZM?1Z6=W6S2'6G)&amp;.U982F=Q."&lt;'Q!%%FO&gt;'6S:G&amp;D:3V';7RU:8)!!"*!1!!"`````Q!""5&amp;S=G&amp;Z!&amp;1!]!!-!!!!!!!!!!)!!!!!!!!!!!!$!!!!!!!%!Q!!?!!!!!!!!!!!!!!!!!!!$1M!!!!!!!!!!!!!!!!!!!!!!!!1!!!!!!!!!!!!!!%3!!!!!!%!"1!!!!!</Property>
+			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+			<Property Name="NI.ClassItem.Flags" Type="Int">160</Property>
+			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
+			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1074278928</Property>
+		</Item>
+	</Item>
 	<Item Name="private" Type="Folder">
 		<Item Name="Bulid Status List.vi" Type="VI" URL="../_support/Bulid Status List.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!$=!!!!#1!%!!!!%%!Q`````Q:4&gt;'&amp;U&gt;8-!!""!-0````](37Z4&gt;'&amp;U:1!+!&amp;!!!A!"!!)!%E"!!!(`````!!-&amp;18*S98E!'%!Q`````QZU=GFN&lt;76E)(.U=GFO:Q!!&amp;E"!!!(`````!!5)18*S98EA;7Y!!"*!-0````]*6'6Y&gt;#Z5:8BU!&amp;1!]!!-!!!!!!!!!!1!!!!!!!!!!!!'!!!!!!!(!Q!!?!!!!!!!!!!!!!!!!!!!#1!!!!!!!!!!!!!!!!!!!!!!!!)1!!!!!!!!!!!!!!)1!!!!!!%!#!!!!!!</Property>
@@ -407,7 +418,7 @@
 			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
 			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-			<Property Name="NI.ClassItem.State" Type="Int">44040208</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">41943056</Property>
 		</Item>
 		<Item Name="standardize CSM Module.vi" Type="VI" URL="../usecase/standardize CSM Module.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%;!!!!#1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!#Z!=!!?!!!5%E.443V):7RQ:8)O&lt;(:D&lt;'&amp;T=Q!!$E.443V):7RQ:8)A&lt;X6U!!!71&amp;!!!Q!!!!%!!ABF=H*P=C"J&lt;A!!,%"Q!"Y!!"131V..,5BF&lt;("F=CZM&gt;G.M98.T!!!.1V..,5BF&lt;("F=C"J&lt;A"B!0!!$!!$!!1!"!!&amp;!!1!"!!%!!1!"A!%!!1!"Q-!!(A!!!U)!!!!!!!!!!!!!!U,!!!!!!!!!!!!!!!!!!!!!!!!#A!!!!!!!!!!!!!!%!!!$1!!!!Q!!!!!!!!!!!!!!1!)!!!!!!</Property>

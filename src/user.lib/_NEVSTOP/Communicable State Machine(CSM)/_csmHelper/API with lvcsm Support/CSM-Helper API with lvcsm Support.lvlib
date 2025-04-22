@@ -9,7 +9,6 @@
 
 </Property>
 	<Item Name="Support" Type="Folder">
-		<Item Name="_interfacebrowser filter CSM States.vi" Type="VI" URL="../../../_popupMenuPlugin/_support/_interfacebrowser filter CSM States.vi"/>
 		<Item Name="_Open VI Reference Without Loading Deps.vi" Type="VI" URL="../_Open VI Reference Without Loading Deps.vi"/>
 		<Item Name="_Request StringList with lvcsm Support.vi" Type="VI" URL="../_Request StringList with lvcsm Support.vi"/>
 		<Item Name="_Read ItemArray.vi" Type="VI" URL="../_Read ItemArray.vi"/>
@@ -36,7 +35,6 @@
 		<Item Name="Read CSM States with lvcsm Support.vi" Type="VI" URL="../Read CSM States with lvcsm Support.vi"/>
 		<Item Name="Read CSM User-States with lvcsm Support.vi" Type="VI" URL="../Read CSM User-States with lvcsm Support.vi"/>
 		<Item Name="Read CSM Status with lvcsm Support.vi" Type="VI" URL="../Read CSM Status with lvcsm Support.vi"/>
-		<Item Name="Scan CSM-VI.vi" Type="VI" URL="../Scan CSM-VI.vi"/>
 		<Item Name="Update Case Frame to Image.vi" Type="VI" URL="../Update Case Frame to Image.vi"/>
 		<Item Name="Delete CSM-VI.vi" Type="VI" URL="../Delete CSM-VI.vi"/>
 		<Item Name="Refresh Online CSMs in lvcsm.vi" Type="VI" URL="../Refresh Online CSMs in lvcsm.vi"/>
