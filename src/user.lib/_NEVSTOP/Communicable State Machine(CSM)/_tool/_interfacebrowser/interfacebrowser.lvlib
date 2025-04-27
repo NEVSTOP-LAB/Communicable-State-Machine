@@ -4,11 +4,11 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">385908736</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
-	<Item Name="_interfacebrowser Build Interface Menu.vi" Type="VI" URL="../_interfacebrowser Build Interface Menu.vi"/>
-	<Item Name="_interfacebrowser Build MainTree Menu.vi" Type="VI" URL="../_interfacebrowser Build MainTree Menu.vi"/>
-	<Item Name="_interfacebrowser Build Status Menu.vi" Type="VI" URL="../_interfacebrowser Build Status Menu.vi"/>
-	<Item Name="_interfacebrowser build tree table in CSM mode.vi" Type="VI" URL="../_interfacebrowser build tree table in CSM mode.vi"/>
-	<Item Name="_interfacebrowser build tree table in CSM-VI mode.vi" Type="VI" URL="../_interfacebrowser build tree table in CSM-VI mode.vi"/>
-	<Item Name="_interfacebrowser Filter Tree Data.vi" Type="VI" URL="../_interfacebrowser Filter Tree Data.vi"/>
 	<Item Name="_VI Missing or Broken.vi" Type="VI" URL="../_VI Missing or Broken.vi"/>
+	<Item Name="Build Interface Menu.vi" Type="VI" URL="../Build Interface Menu.vi"/>
+	<Item Name="Build MainTree Menu.vi" Type="VI" URL="../Build MainTree Menu.vi"/>
+	<Item Name="Build Status Menu.vi" Type="VI" URL="../Build Status Menu.vi"/>
+	<Item Name="build tree table in CSM mode.vi" Type="VI" URL="../build tree table in CSM mode.vi"/>
+	<Item Name="build tree table in CSM-VI mode.vi" Type="VI" URL="../build tree table in CSM-VI mode.vi"/>
+	<Item Name="Filter Tree Data.vi" Type="VI" URL="../Filter Tree Data.vi"/>
 </Library>
