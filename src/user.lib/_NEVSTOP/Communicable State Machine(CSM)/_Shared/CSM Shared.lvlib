@@ -4,8 +4,8 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">385908736</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.SortType" Type="Int">3</Property>
-	<Item Name="Remove Duplicates for String Array.vi" Type="VI" URL="../Remove Duplicates for String Array.vi"/>
-	<Item Name="Remove Emptys From String Array.vi" Type="VI" URL="../Remove Emptys From String Array.vi"/>
+	<Item Name="Remove Duplicates for StrArray.vi" Type="VI" URL="../Remove Duplicates for StrArray.vi"/>
+	<Item Name="Remove Emptys From StrArray.vi" Type="VI" URL="../Remove Emptys From StrArray.vi"/>
 	<Item Name="Remove Comments from Single-line.vi" Type="VI" URL="../Remove Comments from Single-line.vi"/>
 	<Item Name="Split Single-line Message.vi" Type="VI" URL="../Split Single-line Message.vi"/>
 	<Item Name="Trim Single-line Text.vi" Type="VI" URL="../Trim Single-line Text.vi"/>
