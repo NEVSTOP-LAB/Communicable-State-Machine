@@ -35,6 +35,7 @@
 			</Item>
 			<Item Name="Checkmark Status.ctl" Type="VI" URL="/&lt;resource&gt;/plugins/PopupMenus/support/Checkmark Status.ctl"/>
 			<Item Name="CSM - user.lib Dir.vi" Type="VI" URL="../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_Documentation/CSM - user.lib Dir.vi"/>
+			<Item Name="CSM Shared.lvlib" Type="Library" URL="../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_Shared/CSM Shared.lvlib"/>
 			<Item Name="CSM-Helper Utility.lvlib" Type="Library" URL="../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_csmHelper/Utility/CSM-Helper Utility.lvlib"/>
 			<Item Name="csmHelper-CaseStructure.lvlib" Type="Library" URL="../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_csmHelper/Utility/_Support/CaseStructure.llb/csmHelper-CaseStructure.lvlib"/>
 			<Item Name="csmHelper-Relationship.lvlib" Type="Library" URL="../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_csmHelper/Utility/_Support/Relationship.llb/csmHelper-Relationship.lvlib"/>
