@@ -69,6 +69,7 @@
 				<Item Name="NOT a CSM.vi" Type="VI" URL="../testcases/_CSMs/NOT a CSM.vi"/>
 				<Item Name="JKISM.vi" Type="VI" URL="../testcases/_CSMs/JKISM.vi"/>
 				<Item Name="TestCSM.vi" Type="VI" URL="../testcases/_CSMs/TestCSM.vi"/>
+				<Item Name="CSM Status Module.vi" Type="VI" URL="../testcases/_CSMs/CSM Status Module.vi"/>
 			</Item>
 			<Item Name="testcase-csmhelper.lvclass" Type="LVClass" URL="../testcases/testcase-csmhelper/testcase-csmhelper.lvclass"/>
 			<Item Name="testcase-csm-file-logger.lvclass" Type="LVClass" URL="../testcases/testcase-csm-file-logger/testcase-csm-file-logger.lvclass"/>
@@ -77,6 +78,8 @@
 			<Item Name="testcase-documentation.lvclass" Type="LVClass" URL="../testcases/testcase-documentation/testcase-documentation.lvclass"/>
 			<Item Name="testcase-globalLog.lvclass" Type="LVClass" URL="../testcases/testcase-globalLog/testcase-globalLog.lvclass"/>
 			<Item Name="testcase-csm loop support.lvclass" Type="LVClass" URL="../testcases/testcase-csm loop support/testcase-csm loop support.lvclass"/>
+			<Item Name="testcase-CSMAttributes.lvclass" Type="LVClass" URL="../testcases/testcase-CSMAttributes/testcase-CSMAttributes.lvclass"/>
+			<Item Name="testcase-miscellaneous.lvclass" Type="LVClass" URL="../testcases/testcase-miscellaneous/testcase-miscellaneous.lvclass"/>
 		</Item>
 		<Item Name="API Tree.vi" Type="VI" URL="../src/API Tree.vi"/>
 		<Item Name="Communicable State Machine(CSM).vipb" Type="Document" URL="../Communicable State Machine(CSM).vipb"/>
@@ -470,6 +473,7 @@
 				<Item Name="LVPoint32TypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVPoint32TypeDef.ctl"/>
 				<Item Name="RectSize.vi" Type="VI" URL="/&lt;vilib&gt;/picture/PictureSupport.llb/RectSize.vi"/>
 				<Item Name="LVDeltaXY32Cluster.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVDeltaXY32Cluster.ctl"/>
+				<Item Name="LVRowAndColumnUnsignedTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVRowAndColumnUnsignedTypeDef.ctl"/>
 			</Item>
 			<Item Name="Shortcut Menu Item Definition.ctl" Type="VI" URL="/&lt;resource&gt;/plugins/PopupMenus/support/Shortcut Menu Item Definition.ctl"/>
 			<Item Name="Transaction Control.ctl" Type="VI" URL="/&lt;resource&gt;/plugins/PopupMenus/support/Transaction Control.ctl"/>
