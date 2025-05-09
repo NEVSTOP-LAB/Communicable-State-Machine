@@ -185,6 +185,7 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="_CSM_GlobalLog_STATE_TYPE.ctl" Type="VI" URL="../_Support/Typedef/_CSM_GlobalLog_STATE_TYPE.ctl"/>
 			<Item Name="_CSM_GlobalLog Filter Rules - v1.0.ctl" Type="VI" URL="../_Support/Typedef/_CSM_GlobalLog Filter Rules - v1.0.ctl"/>
 			<Item Name="_CSM_GlobalLog Filter Rules - v1.1.ctl" Type="VI" URL="../_Support/Typedef/_CSM_GlobalLog Filter Rules - v1.1.ctl"/>
+			<Item Name="_CSM_List Module Scope.ctl" Type="VI" URL="../_Support/Typedef/_CSM_List Module Scope.ctl"/>
 		</Item>
 		<Item Name="NamingConvention" Type="Folder">
 			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
@@ -197,7 +198,6 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="Parse Register Message.vi" Type="VI" URL="../_Support/Message/Parse Register Message.vi"/>
 			<Item Name="global-TMO for Sync-Rep.vi" Type="VI" URL="../_Support/Message/global-TMO for Sync-Rep.vi"/>
 		</Item>
-		<Item Name="List Modules(+SysLevel).vi" Type="VI" URL="../_Support/List Modules(+SysLevel).vi"/>
 		<Item Name="CSM Dummy Module.vi" Type="VI" URL="../_Support/CSM Dummy Module.vi"/>
 	</Item>
 	<Item Name="Polymophic" Type="Folder">

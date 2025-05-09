@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-04-05 23:15:35" Creator="liyao" Comments="" ID="8d31d7e240399bdf41424f54bf005506">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-05-09 22:07:10" Creator="liyao" Comments="" ID="dacebb3b8224cb3c1170a1db3373a3c0">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
-    <Library_Version>2025.4.0.2</Library_Version>
+    <Library_Version>2025.5.0.1</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>src</Library_Source_Folder>
     <Library_Output_Folder>vip</Library_Output_Folder>
@@ -65,18 +65,9 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
       <Copyright/>
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
-      <Release_Notes>#Core
-[fix] #436 fix that for or Worker mode, when logviewer is open ,terminate workers' caller VI, flood of CSM module will be generated.
-[fix] #423 Throw a CSM Missing Return State Error if the user clears the return state for a message(-&amp;), as this action may potentially lead to an infinite loop issue.
-
-#IDE
-[update] Interface browser Update #430 #424 #425 #428
-
-#Addon
-[update]&lt;loop support&gt;#435 Add option for front insert in CSMLS - Define Loop State(s).vi
-
-#utility
-[update] prompt user that CSM - Internal State Debug Log History.vi is disabled in runtime by default.</Release_Notes>
+      <Release_Notes>##API
+[update] #450 Enhance "CSM - List module" Behavior. Now system level module could be included.
+[update] Add a "&lt;HEXSTR&gt;" prefix in "CSM - Convert Data to HexStr.vi" to identify the argument type.</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
