@@ -152,9 +152,13 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 				<Item Name="GEvt-Set Source Filter Rules - v1.0.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Set Source Filter Rules - v1.0.vi"/>
 			</Item>
 			<Item Name="GEvt-RequestDef.ctl" Type="VI" URL="../_Support/GlobalEvent/GEvt-RequestDef.ctl"/>
+			<Item Name="FGV-GEvt Refs.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GEvt Refs.vi"/>
 			<Item Name="global-GEvnt Filter Change Flag.vi" Type="VI" URL="../_Support/GlobalEvent/global-GEvnt Filter Change Flag.vi"/>
+			<Item Name="global-GEvt Refs Change Flag.vi" Type="VI" URL="../_Support/GlobalEvent/global-GEvt Refs Change Flag.vi"/>
 			<Item Name="Cache-GEvt Filter Object.vi" Type="VI" URL="../_Support/GlobalEvent/Cache-GEvt Filter Object.vi"/>
 			<Item Name="FGV-GlobalEventRef.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GlobalEventRef.vi"/>
+			<Item Name="FGV-GlobalEventQueues.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GlobalEventQueues.vi"/>
+			<Item Name="GEvt-Valid Subscribers.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Valid Subscribers.vi"/>
 			<Item Name="FGV-GEvt Filter Obj.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GEvt Filter Obj.vi"/>
 			<Item Name="Gevt-ThreadQueueName.vi" Type="VI" URL="../_Support/GlobalEvent/Gevt-ThreadQueueName.vi"/>
 			<Item Name="GEvt-BackgroundThread.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-BackgroundThread.vi"/>
@@ -286,11 +290,13 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 		</Item>
 		<Item Name="GlobalEvent" Type="Folder">
 			<Item Name="CSM - Global Log Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Global Log Event.vi"/>
+			<Item Name="CSM - Global Log Queue.vi" Type="VI" URL="../AdvanceAPI/CSM - Global Log Queue.vi"/>
 			<Item Name="CSM - Generate User Global Log.vi" Type="VI" URL="../AdvanceAPI/CSM - Generate User Global Log.vi"/>
 			<Item Name="CSM - Global Log Error Handler.vi" Type="VI" URL="../AdvanceAPI/CSM - Global Log Error Handler.vi"/>
 			<Item Name="CSM - Set Log Filter Rules.vi" Type="VI" URL="../AdvanceAPI/CSM - Set Log Filter Rules.vi"/>
 			<Item Name="CSM - List Log Filter Rules As Strings.vi" Type="VI" URL="../AdvanceAPI/CSM - List Log Filter Rules As Strings.vi"/>
 			<Item Name="CSM - Destroy Global Log Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Destroy Global Log Event.vi"/>
+			<Item Name="CSM - Destroy Global Log Queue.vi" Type="VI" URL="../AdvanceAPI/CSM - Destroy Global Log Queue.vi"/>
 			<Item Name="CSM - Convert Filter Rules.vi" Type="VI" URL="../AdvanceAPI/CSM - Convert Filter Rules.vi"/>
 			<Item Name="CSM - Filter Global Log.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter Global Log.vi"/>
 		</Item>
