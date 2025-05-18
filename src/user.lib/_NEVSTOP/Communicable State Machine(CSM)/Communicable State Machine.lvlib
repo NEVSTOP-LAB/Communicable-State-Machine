@@ -366,6 +366,7 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 		<Item Name="Build Error Cluster.vi" Type="VI" URL="../Utility/Build Error Cluster.vi"/>
 		<Item Name="Trim Both Whitespace.vi" Type="VI" URL="../Utility/Trim Both Whitespace.vi"/>
 		<Item Name="uuid.vi" Type="VI" URL="../Utility/uuid.vi"/>
+		<Item Name="Diff Speed Counter.vi" Type="VI" URL="../Utility/Diff Speed Counter.vi"/>
 		<Item Name="Global Log To String.vi" Type="VI" URL="../Utility/Global Log To String.vi"/>
 		<Item Name="Global Log To String(Source Time).vi" Type="VI" URL="../Utility/Global Log To String(Source Time).vi"/>
 		<Item Name="Global Log History Cacher.vi" Type="VI" URL="../Utility/Global Log History Cacher.vi"/>
