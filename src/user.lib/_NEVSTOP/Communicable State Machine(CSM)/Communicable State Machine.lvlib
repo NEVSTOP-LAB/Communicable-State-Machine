@@ -367,6 +367,7 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 		<Item Name="Trim Both Whitespace.vi" Type="VI" URL="../Utility/Trim Both Whitespace.vi"/>
 		<Item Name="uuid.vi" Type="VI" URL="../Utility/uuid.vi"/>
 		<Item Name="Global Log To String.vi" Type="VI" URL="../Utility/Global Log To String.vi"/>
+		<Item Name="Global Log To String(Source Time).vi" Type="VI" URL="../Utility/Global Log To String(Source Time).vi"/>
 		<Item Name="Global Log History Cacher.vi" Type="VI" URL="../Utility/Global Log History Cacher.vi"/>
 		<Item Name="String History Cacher.vi" Type="VI" URL="../Utility/String History Cacher.vi"/>
 		<Item Name="Random Change Flag.vi" Type="VI" URL="../Utility/Random Change Flag.vi"/>
