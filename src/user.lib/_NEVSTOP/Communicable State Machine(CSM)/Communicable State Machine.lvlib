@@ -357,10 +357,19 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="Set Enum String Value_csm.vi" Type="VI" URL="../Utility/_openG/Set Enum String Value_csm.vi"/>
 		</Item>
 		<Item Name="_Periodic String Filter" Type="Folder">
-			<Item Name="Periodic String Speed Check.vi" Type="VI" URL="../Utility/_support/Periodic String Speed Check.vi"/>
+			<Item Name="Support" Type="Folder">
+				<Item Name="Periodic String Filter Info.ctl" Type="VI" URL="../Utility/Periodic String Filter Info.ctl"/>
+				<Item Name="Periodic String Filter State.ctl" Type="VI" URL="../Utility/Periodic String Filter State.ctl"/>
+				<Item Name="PeriodicFilter-Check Key.vi" Type="VI" URL="../Utility/_support/PeriodicFilter-Check Key.vi"/>
+				<Item Name="PeriodicFilter-Check Speed.vi" Type="VI" URL="../Utility/_support/PeriodicFilter-Check Speed.vi"/>
+				<Item Name="PeriodicFilter-Update Filtered Info.vi" Type="VI" URL="../Utility/_support/PeriodicFilter-Update Filtered Info.vi"/>
+				<Item Name="PeriodicFilter-Remove invalid Entry.vi" Type="VI" URL="../Utility/_support/PeriodicFilter-Remove invalid Entry.vi"/>
+				<Item Name="PeriodicFilter-Remove Filtered Entry2.vi" Type="VI" URL="../Utility/_support/PeriodicFilter-Remove Filtered Entry2.vi"/>
+				<Item Name="Periodic String Filter Data.ctl" Type="VI" URL="../Utility/_support/Periodic String Filter Data.ctl"/>
+				<Item Name="PeriodicFilter-Format Result.vi" Type="VI" URL="../Utility/_support/PeriodicFilter-Format Result.vi"/>
+				<Item Name="PeriodicFilter-Append Filtered Status.vi" Type="VI" URL="../Utility/_support/PeriodicFilter-Append Filtered Status.vi"/>
+			</Item>
 			<Item Name="Periodic String Filter.vi" Type="VI" URL="../Utility/Periodic String Filter.vi"/>
-			<Item Name="Periodic String Filter Info.ctl" Type="VI" URL="../Utility/Periodic String Filter Info.ctl"/>
-			<Item Name="Periodic String Filter State.ctl" Type="VI" URL="../Utility/Periodic String Filter State.ctl"/>
 		</Item>
 		<Item Name="Timeout Selector.vi" Type="VI" URL="../Utility/Timeout Selector.vi"/>
 		<Item Name="Check Timeout.vi" Type="VI" URL="../Utility/Check Timeout.vi"/>
@@ -380,11 +389,11 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 		<Item Name="Match Asterisk Pattern.vi" Type="VI" URL="../Utility/Match Asterisk Pattern.vi"/>
 		<Item Name="Concatenate Submodule Name.vi" Type="VI" URL="../Utility/Concatenate Submodule Name.vi"/>
 		<Item Name="Build State String with Comments.vi" Type="VI" URL="../Utility/Build State String with Comments.vi"/>
+		<Item Name="Overspeed Check.vi" Type="VI" URL="../Utility/Overspeed Check.vi"/>
 	</Item>
 	<Item Name="Parse State Queue++.vi" Type="VI" URL="../Parse State Queue++.vi"/>
 	<Item Name="Add State(s) to Queue By BOOL++.vi" Type="VI" URL="../Add State(s) to Queue By BOOL++.vi"/>
 	<Item Name="Build State String with Arguments++.vi" Type="VI" URL="../Build State String with Arguments++.vi"/>
 	<Item Name="Build Message with Arguments++.vi" Type="VI" URL="../Build Message with Arguments++.vi"/>
 	<Item Name="CSM - Broadcast Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Broadcast Status Change.vi"/>
-	<Item Name="Overspeed Check.vi" Type="VI" URL="../Utility/Overspeed Check.vi"/>
 </Library>
