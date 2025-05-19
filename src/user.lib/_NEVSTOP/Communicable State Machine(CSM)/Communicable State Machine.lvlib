@@ -50,6 +50,7 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 		<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 		<Item Name="CSM - Filter Duplicate Messages By Name.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter Duplicate Messages By Name.vi"/>
 		<Item Name="CSM - Remove Duplicated Following Messages.vi" Type="VI" URL="../AdvanceAPI/CSM - Remove Duplicated Following Messages.vi"/>
+		<Item Name="Periodic String Filter(variant).vi" Type="VI" URL="../../../../_obsolete/Periodic String Filter(variant).vi"/>
 	</Item>
 	<Item Name="Support" Type="Folder">
 		<Property Name="NI.SortType" Type="Int">3</Property>
@@ -356,6 +357,7 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="Set Enum String Value_csm.vi" Type="VI" URL="../Utility/_openG/Set Enum String Value_csm.vi"/>
 		</Item>
 		<Item Name="_Periodic String Filter" Type="Folder">
+			<Item Name="Periodic String Speed Check.vi" Type="VI" URL="../Utility/_support/Periodic String Speed Check.vi"/>
 			<Item Name="Periodic String Filter.vi" Type="VI" URL="../Utility/Periodic String Filter.vi"/>
 			<Item Name="Periodic String Filter Info.ctl" Type="VI" URL="../Utility/Periodic String Filter Info.ctl"/>
 			<Item Name="Periodic String Filter State.ctl" Type="VI" URL="../Utility/Periodic String Filter State.ctl"/>
@@ -384,4 +386,5 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 	<Item Name="Build State String with Arguments++.vi" Type="VI" URL="../Build State String with Arguments++.vi"/>
 	<Item Name="Build Message with Arguments++.vi" Type="VI" URL="../Build Message with Arguments++.vi"/>
 	<Item Name="CSM - Broadcast Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Broadcast Status Change.vi"/>
+	<Item Name="Overspeed Check.vi" Type="VI" URL="../Utility/Overspeed Check.vi"/>
 </Library>
