@@ -9,4 +9,5 @@
 	<Item Name="CSM - Global Log Queue Monitoring Loop.vi" Type="VI" URL="../CSM - Global Log Queue Monitoring Loop.vi"/>
 	<Item Name="CSM - Start Async Call.vi" Type="VI" URL="../CSM - Start Async Call.vi"/>
 	<Item Name="CSM - Synchronized Call.vi" Type="VI" URL="../CSM - Synchronized Call.vi"/>
+	<Item Name="Occurrence Speed Counter.vi" Type="VI" URL="../../Utility/_support/Occurrence Speed Counter.vi"/>
 </Library>
