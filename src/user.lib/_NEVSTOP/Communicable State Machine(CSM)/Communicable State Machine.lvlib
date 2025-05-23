@@ -374,8 +374,7 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 				<Item Name="PeriodicFilter-Append Filtered Status.vi" Type="VI" URL="../Utility/_support/PeriodicFilter-Append Filtered Status.vi"/>
 			</Item>
 			<Item Name="Periodic String Filter.vi" Type="VI" URL="../Utility/Periodic String Filter.vi"/>
-			<Item Name="levele.vi" Type="VI" URL="../Utility/levele.vi"/>
-			<Item Name="Occurrence Speed Counter.vi" Type="VI" URL="../Utility/_support/Occurrence Speed Counter.vi"/>
+			<Item Name="Auto Processing Level.vi" Type="VI" URL="../Utility/Auto Processing Level.vi"/>
 		</Item>
 		<Item Name="Timeout Selector.vi" Type="VI" URL="../Utility/Timeout Selector.vi"/>
 		<Item Name="Check Timeout.vi" Type="VI" URL="../Utility/Check Timeout.vi"/>
@@ -383,7 +382,6 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 		<Item Name="Build Error Cluster.vi" Type="VI" URL="../Utility/Build Error Cluster.vi"/>
 		<Item Name="Trim Both Whitespace.vi" Type="VI" URL="../Utility/Trim Both Whitespace.vi"/>
 		<Item Name="uuid.vi" Type="VI" URL="../Utility/uuid.vi"/>
-		<Item Name="Diff Speed Counter.vi" Type="VI" URL="../Utility/Diff Speed Counter.vi"/>
 		<Item Name="Global Log To String.vi" Type="VI" URL="../Utility/Global Log To String.vi"/>
 		<Item Name="Global Log To String(Source Time).vi" Type="VI" URL="../Utility/Global Log To String(Source Time).vi"/>
 		<Item Name="Global Log History Cacher.vi" Type="VI" URL="../Utility/Global Log History Cacher.vi"/>
@@ -395,7 +393,9 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 		<Item Name="Match Asterisk Pattern.vi" Type="VI" URL="../Utility/Match Asterisk Pattern.vi"/>
 		<Item Name="Concatenate Submodule Name.vi" Type="VI" URL="../Utility/Concatenate Submodule Name.vi"/>
 		<Item Name="Build State String with Comments.vi" Type="VI" URL="../Utility/Build State String with Comments.vi"/>
-		<Item Name="Overspeed Check.vi" Type="VI" URL="../Utility/Overspeed Check.vi"/>
+		<Item Name="Change Speed Counter.vi" Type="VI" URL="../Utility/Change Speed Counter.vi"/>
+		<Item Name="Occurrence Speed Counter.vi" Type="VI" URL="../Utility/Occurrence Speed Counter.vi"/>
+		<Item Name="Debounced Signal.vi" Type="VI" URL="../Utility/Debounced Signal.vi"/>
 		<Item Name="Exit With Empty Queue Check.vi" Type="VI" URL="../Utility/Exit With Empty Queue Check.vi"/>
 	</Item>
 	<Item Name="Parse State Queue++.vi" Type="VI" URL="../Parse State Queue++.vi"/>
