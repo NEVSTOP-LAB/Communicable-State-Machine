@@ -358,6 +358,7 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 		</Item>
 		<Item Name="_Periodic String Filter" Type="Folder">
 			<Item Name="Support" Type="Folder">
+				<Item Name="Periodic String Filter Level.ctl" Type="VI" URL="../Utility/_support/Periodic String Filter Level.ctl"/>
 				<Item Name="Periodic String Filter Info.ctl" Type="VI" URL="../Utility/Periodic String Filter Info.ctl"/>
 				<Item Name="Periodic String Filter State.ctl" Type="VI" URL="../Utility/Periodic String Filter State.ctl"/>
 				<Item Name="PeriodicFilter-Check Key.vi" Type="VI" URL="../Utility/_support/PeriodicFilter-Check Key.vi"/>
@@ -365,11 +366,16 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 				<Item Name="PeriodicFilter-Update Filtered Info.vi" Type="VI" URL="../Utility/_support/PeriodicFilter-Update Filtered Info.vi"/>
 				<Item Name="PeriodicFilter-Remove invalid Entry.vi" Type="VI" URL="../Utility/_support/PeriodicFilter-Remove invalid Entry.vi"/>
 				<Item Name="PeriodicFilter-Remove Filtered Entry2.vi" Type="VI" URL="../Utility/_support/PeriodicFilter-Remove Filtered Entry2.vi"/>
+				<Item Name="PeriodicFilter-Is String Filtered.vi" Type="VI" URL="../Utility/_support/PeriodicFilter-Is String Filtered.vi"/>
 				<Item Name="Periodic String Filter Data.ctl" Type="VI" URL="../Utility/_support/Periodic String Filter Data.ctl"/>
 				<Item Name="PeriodicFilter-Format Result.vi" Type="VI" URL="../Utility/_support/PeriodicFilter-Format Result.vi"/>
+				<Item Name="PeriodicFilter-Filtered Keys.vi" Type="VI" URL="../Utility/_support/PeriodicFilter-Filtered Keys.vi"/>
+				<Item Name="PeriodicFilter-Filtered Entry.vi" Type="VI" URL="../Utility/_support/PeriodicFilter-Filtered Entry.vi"/>
 				<Item Name="PeriodicFilter-Append Filtered Status.vi" Type="VI" URL="../Utility/_support/PeriodicFilter-Append Filtered Status.vi"/>
 			</Item>
 			<Item Name="Periodic String Filter.vi" Type="VI" URL="../Utility/Periodic String Filter.vi"/>
+			<Item Name="levele.vi" Type="VI" URL="../Utility/levele.vi"/>
+			<Item Name="Occurrence Speed Counter.vi" Type="VI" URL="../Utility/_support/Occurrence Speed Counter.vi"/>
 		</Item>
 		<Item Name="Timeout Selector.vi" Type="VI" URL="../Utility/Timeout Selector.vi"/>
 		<Item Name="Check Timeout.vi" Type="VI" URL="../Utility/Check Timeout.vi"/>
