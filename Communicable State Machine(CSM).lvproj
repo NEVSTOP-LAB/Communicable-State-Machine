@@ -70,6 +70,7 @@
 				<Item Name="JKISM.vi" Type="VI" URL="../testcases/_CSMs/JKISM.vi"/>
 				<Item Name="TestCSM.vi" Type="VI" URL="../testcases/_CSMs/TestCSM.vi"/>
 				<Item Name="CSM Status Module.vi" Type="VI" URL="../testcases/_CSMs/CSM Status Module.vi"/>
+				<Item Name="CSM Module.vi" Type="VI" URL="../testcases/_CSMs/CSM Module.vi"/>
 			</Item>
 			<Item Name="testcase-csmhelper.lvclass" Type="LVClass" URL="../testcases/testcase-csmhelper/testcase-csmhelper.lvclass"/>
 			<Item Name="testcase-csm-file-logger.lvclass" Type="LVClass" URL="../testcases/testcase-csm-file-logger/testcase-csm-file-logger.lvclass"/>

@@ -9,6 +9,7 @@
 		<Item Name="List Rules as Strings.vi" Type="VI" URL="../_Support/List Rules as Strings.vi"/>
 	</Item>
 	<Item Name="Background Thread" Type="Folder">
+		<Item Name="CSM-Logger-Thread(Event).vi" Type="VI" URL="../CSM-Logger-Thread(Event).vi"/>
 		<Item Name="CSM-Logger-Thread.vi" Type="VI" URL="../CSM-Logger-Thread.vi"/>
 	</Item>
 	<Item Name="Typedef" Type="Folder">
