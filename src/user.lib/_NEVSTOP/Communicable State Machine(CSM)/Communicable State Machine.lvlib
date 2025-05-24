@@ -397,6 +397,7 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 		<Item Name="Occurrence Speed Counter.vi" Type="VI" URL="../Utility/Occurrence Speed Counter.vi"/>
 		<Item Name="Debounced Signal.vi" Type="VI" URL="../Utility/Debounced Signal.vi"/>
 		<Item Name="Exit With Empty Queue Check.vi" Type="VI" URL="../Utility/Exit With Empty Queue Check.vi"/>
+		<Item Name="Rising Edge.vi" Type="VI" URL="../Utility/Rising Edge.vi"/>
 	</Item>
 	<Item Name="Parse State Queue++.vi" Type="VI" URL="../Parse State Queue++.vi"/>
 	<Item Name="Add State(s) to Queue By BOOL++.vi" Type="VI" URL="../Add State(s) to Queue By BOOL++.vi"/>
