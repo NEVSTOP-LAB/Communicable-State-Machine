@@ -372,6 +372,11 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 				<Item Name="PeriodicFilter-Filtered Keys.vi" Type="VI" URL="../Utility/_support/PeriodicFilter-Filtered Keys.vi"/>
 				<Item Name="PeriodicFilter-Filtered Entry.vi" Type="VI" URL="../Utility/_support/PeriodicFilter-Filtered Entry.vi"/>
 				<Item Name="PeriodicFilter-Append Filtered Status.vi" Type="VI" URL="../Utility/_support/PeriodicFilter-Append Filtered Status.vi"/>
+				<Item Name="PeriodicFilter-Format Normal Info String.vi" Type="VI" URL="../Utility/_support/PeriodicFilter-Format Normal Info String.vi"/>
+				<Item Name="PeriodicFilter-Format L1 Info String.vi" Type="VI" URL="../Utility/_support/PeriodicFilter-Format L1 Info String.vi"/>
+				<Item Name="PeriodicFilter-Format Stop Filter Entrys.vi" Type="VI" URL="../Utility/_support/PeriodicFilter-Format Stop Filter Entrys.vi"/>
+				<Item Name="PeriodicFilter-Format L3 Info String.vi" Type="VI" URL="../Utility/_support/PeriodicFilter-Format L3 Info String.vi"/>
+				<Item Name="PeriodicFilter-Auto Set Filter.vi" Type="VI" URL="../Utility/_support/PeriodicFilter-Auto Set Filter.vi"/>
 			</Item>
 			<Item Name="Periodic String Filter.vi" Type="VI" URL="../Utility/Periodic String Filter.vi"/>
 			<Item Name="Auto Processing Level.vi" Type="VI" URL="../Utility/Auto Processing Level.vi"/>
