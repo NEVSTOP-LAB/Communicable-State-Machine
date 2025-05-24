@@ -5,7 +5,8 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="CSM - Flood of Events Handler Side Loop.vi" Type="VI" URL="../CSM - Flood of Events Handler Side Loop.vi"/>
-	<Item Name="CSM - Global Log Monitoring Loop.vi" Type="VI" URL="../CSM - Global Log Monitoring Loop.vi"/>
+	<Item Name="CSM - Global Log Event Monitoring Loop.vi" Type="VI" URL="../CSM - Global Log Event Monitoring Loop.vi"/>
+	<Item Name="CSM - Global Log Queue Monitoring Loop.vi" Type="VI" URL="../CSM - Global Log Queue Monitoring Loop.vi"/>
 	<Item Name="CSM - Start Async Call.vi" Type="VI" URL="../CSM - Start Async Call.vi"/>
 	<Item Name="CSM - Synchronized Call.vi" Type="VI" URL="../CSM - Synchronized Call.vi"/>
 </Library>

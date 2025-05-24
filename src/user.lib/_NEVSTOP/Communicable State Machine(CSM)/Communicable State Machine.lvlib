@@ -50,6 +50,7 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 		<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 		<Item Name="CSM - Filter Duplicate Messages By Name.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter Duplicate Messages By Name.vi"/>
 		<Item Name="CSM - Remove Duplicated Following Messages.vi" Type="VI" URL="../AdvanceAPI/CSM - Remove Duplicated Following Messages.vi"/>
+		<Item Name="Periodic String Filter(variant).vi" Type="VI" URL="../../../../_obsolete/Periodic String Filter(variant).vi"/>
 	</Item>
 	<Item Name="Support" Type="Folder">
 		<Property Name="NI.SortType" Type="Int">3</Property>
@@ -152,9 +153,13 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 				<Item Name="GEvt-Set Source Filter Rules - v1.0.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Set Source Filter Rules - v1.0.vi"/>
 			</Item>
 			<Item Name="GEvt-RequestDef.ctl" Type="VI" URL="../_Support/GlobalEvent/GEvt-RequestDef.ctl"/>
+			<Item Name="FGV-GEvt Refs.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GEvt Refs.vi"/>
 			<Item Name="global-GEvnt Filter Change Flag.vi" Type="VI" URL="../_Support/GlobalEvent/global-GEvnt Filter Change Flag.vi"/>
+			<Item Name="global-GEvt Refs Change Flag.vi" Type="VI" URL="../_Support/GlobalEvent/global-GEvt Refs Change Flag.vi"/>
 			<Item Name="Cache-GEvt Filter Object.vi" Type="VI" URL="../_Support/GlobalEvent/Cache-GEvt Filter Object.vi"/>
 			<Item Name="FGV-GlobalEventRef.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GlobalEventRef.vi"/>
+			<Item Name="FGV-GlobalEventQueues.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GlobalEventQueues.vi"/>
+			<Item Name="GEvt-Valid Subscribers.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Valid Subscribers.vi"/>
 			<Item Name="FGV-GEvt Filter Obj.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GEvt Filter Obj.vi"/>
 			<Item Name="Gevt-ThreadQueueName.vi" Type="VI" URL="../_Support/GlobalEvent/Gevt-ThreadQueueName.vi"/>
 			<Item Name="GEvt-BackgroundThread.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-BackgroundThread.vi"/>
@@ -286,11 +291,13 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 		</Item>
 		<Item Name="GlobalEvent" Type="Folder">
 			<Item Name="CSM - Global Log Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Global Log Event.vi"/>
+			<Item Name="CSM - Global Log Queue.vi" Type="VI" URL="../AdvanceAPI/CSM - Global Log Queue.vi"/>
 			<Item Name="CSM - Generate User Global Log.vi" Type="VI" URL="../AdvanceAPI/CSM - Generate User Global Log.vi"/>
 			<Item Name="CSM - Global Log Error Handler.vi" Type="VI" URL="../AdvanceAPI/CSM - Global Log Error Handler.vi"/>
 			<Item Name="CSM - Set Log Filter Rules.vi" Type="VI" URL="../AdvanceAPI/CSM - Set Log Filter Rules.vi"/>
 			<Item Name="CSM - List Log Filter Rules As Strings.vi" Type="VI" URL="../AdvanceAPI/CSM - List Log Filter Rules As Strings.vi"/>
 			<Item Name="CSM - Destroy Global Log Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Destroy Global Log Event.vi"/>
+			<Item Name="CSM - Destroy Global Log Queue.vi" Type="VI" URL="../AdvanceAPI/CSM - Destroy Global Log Queue.vi"/>
 			<Item Name="CSM - Convert Filter Rules.vi" Type="VI" URL="../AdvanceAPI/CSM - Convert Filter Rules.vi"/>
 			<Item Name="CSM - Filter Global Log.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter Global Log.vi"/>
 		</Item>
@@ -350,9 +357,30 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="Set Enum String Value_csm.vi" Type="VI" URL="../Utility/_openG/Set Enum String Value_csm.vi"/>
 		</Item>
 		<Item Name="_Periodic String Filter" Type="Folder">
+			<Item Name="Support" Type="Folder">
+				<Item Name="Periodic String Filter Setting.ctl" Type="VI" URL="../Utility/Periodic String Filter Setting.ctl"/>
+				<Item Name="Periodic String Filter Level.ctl" Type="VI" URL="../Utility/_support/Periodic String Filter Level.ctl"/>
+				<Item Name="Periodic String Filter Info.ctl" Type="VI" URL="../Utility/Periodic String Filter Info.ctl"/>
+				<Item Name="Periodic String Filter State.ctl" Type="VI" URL="../Utility/Periodic String Filter State.ctl"/>
+				<Item Name="PeriodicFilter-Check Key.vi" Type="VI" URL="../Utility/_support/PeriodicFilter-Check Key.vi"/>
+				<Item Name="PeriodicFilter-Check Speed.vi" Type="VI" URL="../Utility/_support/PeriodicFilter-Check Speed.vi"/>
+				<Item Name="PeriodicFilter-Update Filtered Info.vi" Type="VI" URL="../Utility/_support/PeriodicFilter-Update Filtered Info.vi"/>
+				<Item Name="PeriodicFilter-Remove invalid Entry.vi" Type="VI" URL="../Utility/_support/PeriodicFilter-Remove invalid Entry.vi"/>
+				<Item Name="PeriodicFilter-Remove Filtered Entry2.vi" Type="VI" URL="../Utility/_support/PeriodicFilter-Remove Filtered Entry2.vi"/>
+				<Item Name="PeriodicFilter-Is String Filtered.vi" Type="VI" URL="../Utility/_support/PeriodicFilter-Is String Filtered.vi"/>
+				<Item Name="Periodic String Filter Data.ctl" Type="VI" URL="../Utility/_support/Periodic String Filter Data.ctl"/>
+				<Item Name="PeriodicFilter-Format Result.vi" Type="VI" URL="../Utility/_support/PeriodicFilter-Format Result.vi"/>
+				<Item Name="PeriodicFilter-Filtered Keys.vi" Type="VI" URL="../Utility/_support/PeriodicFilter-Filtered Keys.vi"/>
+				<Item Name="PeriodicFilter-Filtered Entry.vi" Type="VI" URL="../Utility/_support/PeriodicFilter-Filtered Entry.vi"/>
+				<Item Name="PeriodicFilter-Append Filtered Status.vi" Type="VI" URL="../Utility/_support/PeriodicFilter-Append Filtered Status.vi"/>
+				<Item Name="PeriodicFilter-Format Normal Info String.vi" Type="VI" URL="../Utility/_support/PeriodicFilter-Format Normal Info String.vi"/>
+				<Item Name="PeriodicFilter-Format L1 Info String.vi" Type="VI" URL="../Utility/_support/PeriodicFilter-Format L1 Info String.vi"/>
+				<Item Name="PeriodicFilter-Format Stop Filter Entrys.vi" Type="VI" URL="../Utility/_support/PeriodicFilter-Format Stop Filter Entrys.vi"/>
+				<Item Name="PeriodicFilter-Format L3 Info String.vi" Type="VI" URL="../Utility/_support/PeriodicFilter-Format L3 Info String.vi"/>
+				<Item Name="PeriodicFilter-Auto Set Filter.vi" Type="VI" URL="../Utility/_support/PeriodicFilter-Auto Set Filter.vi"/>
+			</Item>
 			<Item Name="Periodic String Filter.vi" Type="VI" URL="../Utility/Periodic String Filter.vi"/>
-			<Item Name="Periodic String Filter Info.ctl" Type="VI" URL="../Utility/Periodic String Filter Info.ctl"/>
-			<Item Name="Periodic String Filter State.ctl" Type="VI" URL="../Utility/Periodic String Filter State.ctl"/>
+			<Item Name="Auto Processing Level.vi" Type="VI" URL="../Utility/Auto Processing Level.vi"/>
 		</Item>
 		<Item Name="Timeout Selector.vi" Type="VI" URL="../Utility/Timeout Selector.vi"/>
 		<Item Name="Check Timeout.vi" Type="VI" URL="../Utility/Check Timeout.vi"/>
@@ -361,6 +389,7 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 		<Item Name="Trim Both Whitespace.vi" Type="VI" URL="../Utility/Trim Both Whitespace.vi"/>
 		<Item Name="uuid.vi" Type="VI" URL="../Utility/uuid.vi"/>
 		<Item Name="Global Log To String.vi" Type="VI" URL="../Utility/Global Log To String.vi"/>
+		<Item Name="Global Log To String(Source Time).vi" Type="VI" URL="../Utility/Global Log To String(Source Time).vi"/>
 		<Item Name="Global Log History Cacher.vi" Type="VI" URL="../Utility/Global Log History Cacher.vi"/>
 		<Item Name="String History Cacher.vi" Type="VI" URL="../Utility/String History Cacher.vi"/>
 		<Item Name="Random Change Flag.vi" Type="VI" URL="../Utility/Random Change Flag.vi"/>
@@ -370,6 +399,11 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 		<Item Name="Match Asterisk Pattern.vi" Type="VI" URL="../Utility/Match Asterisk Pattern.vi"/>
 		<Item Name="Concatenate Submodule Name.vi" Type="VI" URL="../Utility/Concatenate Submodule Name.vi"/>
 		<Item Name="Build State String with Comments.vi" Type="VI" URL="../Utility/Build State String with Comments.vi"/>
+		<Item Name="Change Speed Counter.vi" Type="VI" URL="../Utility/Change Speed Counter.vi"/>
+		<Item Name="Occurrence Speed Counter.vi" Type="VI" URL="../Utility/Occurrence Speed Counter.vi"/>
+		<Item Name="Debounced Signal.vi" Type="VI" URL="../Utility/Debounced Signal.vi"/>
+		<Item Name="Exit With Empty Queue Check.vi" Type="VI" URL="../Utility/Exit With Empty Queue Check.vi"/>
+		<Item Name="Rising Edge.vi" Type="VI" URL="../Utility/Rising Edge.vi"/>
 	</Item>
 	<Item Name="Parse State Queue++.vi" Type="VI" URL="../Parse State Queue++.vi"/>
 	<Item Name="Add State(s) to Queue By BOOL++.vi" Type="VI" URL="../Add State(s) to Queue By BOOL++.vi"/>
