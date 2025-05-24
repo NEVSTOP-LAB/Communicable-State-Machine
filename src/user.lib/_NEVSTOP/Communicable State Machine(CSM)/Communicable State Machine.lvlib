@@ -358,6 +358,7 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 		</Item>
 		<Item Name="_Periodic String Filter" Type="Folder">
 			<Item Name="Support" Type="Folder">
+				<Item Name="Periodic String Filter Setting.ctl" Type="VI" URL="../Utility/Periodic String Filter Setting.ctl"/>
 				<Item Name="Periodic String Filter Level.ctl" Type="VI" URL="../Utility/_support/Periodic String Filter Level.ctl"/>
 				<Item Name="Periodic String Filter Info.ctl" Type="VI" URL="../Utility/Periodic String Filter Info.ctl"/>
 				<Item Name="Periodic String Filter State.ctl" Type="VI" URL="../Utility/Periodic String Filter State.ctl"/>
