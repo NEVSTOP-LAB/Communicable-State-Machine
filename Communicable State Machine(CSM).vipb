@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-05-24 22:53:54" Creator="liyao" Comments="" ID="0e2d7f3523e45fabc8492ebcb7d5872e">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-05-25 17:14:55" Creator="liyao" Comments="" ID="2ff0358f0c73f2b54cc623a503f8cfd6">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2025.5.0.1</Library_Version>
@@ -76,6 +76,9 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
 [add] #448 #453 #454 #455 #456 #457 Now global event support queue operation.
 [add] #454 New snippet for using Global Event Queue.
 [update] #455 use event source timestamp instead of handling timestamp.
+
+##Example
+[add] add a new example "4. Advance Examples\Global Log Handling Capability" to demostrate the improved global log handling capibility.
 
 ##Tools
 [update] Debug Console add message handling speed indicator.
