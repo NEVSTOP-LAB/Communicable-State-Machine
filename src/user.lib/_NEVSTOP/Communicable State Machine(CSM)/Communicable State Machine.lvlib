@@ -48,6 +48,14 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 </Property>
 	<Item Name="obsolete and hide" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
+		<Item Name="Common" Type="Folder">
+			<Item Name="Splite Single-line Message.vi" Type="VI" URL="../_Support/Common/Splite Single-line Message.vi"/>
+			<Item Name="Splite Reason String Part.vi" Type="VI" URL="../_Support/Common/Splite Reason String Part.vi"/>
+			<Item Name="Remove Comments from Line.vi" Type="VI" URL="../_Support/Common/Remove Comments from Line.vi"/>
+			<Item Name="Trim Single line Text.vi" Type="VI" URL="../_Support/Common/Trim Single line Text.vi"/>
+			<Item Name="Parse Next Single-line State.vi" Type="VI" URL="../_Support/Common/Parse Next Single-line State.vi"/>
+			<Item Name="Concatenate State with Arguments.vi" Type="VI" URL="../_Support/Common/Concatenate State with Arguments.vi"/>
+		</Item>
 		<Item Name="CSM - Filter Duplicate Messages By Name.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter Duplicate Messages By Name.vi"/>
 		<Item Name="CSM - Remove Duplicated Following Messages.vi" Type="VI" URL="../AdvanceAPI/CSM - Remove Duplicated Following Messages.vi"/>
 		<Item Name="Periodic String Filter(variant).vi" Type="VI" URL="../../../../_obsolete/Periodic String Filter(variant).vi"/>
@@ -64,16 +72,9 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 		</Item>
 		<Item Name="Common" Type="Folder">
 			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
-			<Item Name="Trim Single line Text.vi" Type="VI" URL="../_Support/Common/Trim Single line Text.vi"/>
-			<Item Name="Remove Comments from Line.vi" Type="VI" URL="../_Support/Common/Remove Comments from Line.vi"/>
-			<Item Name="Splite Single-line Message.vi" Type="VI" URL="../_Support/Common/Splite Single-line Message.vi"/>
-			<Item Name="Splite Reason String Part.vi" Type="VI" URL="../_Support/Common/Splite Reason String Part.vi"/>
 			<Item Name="CSM-Name to CSM-Mode.vi" Type="VI" URL="../_Support/Common/CSM-Name to CSM-Mode.vi"/>
-			<Item Name="Parse Next Single-line State.vi" Type="VI" URL="../_Support/Common/Parse Next Single-line State.vi"/>
-			<Item Name="Concatenate State with Arguments.vi" Type="VI" URL="../_Support/Common/Concatenate State with Arguments.vi"/>
 			<Item Name="Hex Str to U8 Data.vi" Type="VI" URL="../_Support/Common/Hex Str to U8 Data.vi"/>
 			<Item Name="U8 Data to Hex Str.vi" Type="VI" URL="../_Support/Common/U8 Data to Hex Str.vi"/>
-			<Item Name="Format Timestamp.vi" Type="VI" URL="../_Support/Common/Format Timestamp.vi"/>
 		</Item>
 		<Item Name="CSM-Core" Type="Folder">
 			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
@@ -407,6 +408,7 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 		<Item Name="Exit With Empty Queue Check.vi" Type="VI" URL="../Utility/Exit With Empty Queue Check.vi"/>
 		<Item Name="Rising Edge.vi" Type="VI" URL="../Utility/Rising Edge.vi"/>
 		<Item Name="Falling Edge.vi" Type="VI" URL="../Utility/Falling Edge.vi"/>
+		<Item Name="Format Timestamp.vi" Type="VI" URL="../_Support/Common/Format Timestamp.vi"/>
 	</Item>
 	<Item Name="Parse State Queue++.vi" Type="VI" URL="../Parse State Queue++.vi"/>
 	<Item Name="Add State(s) to Queue By BOOL++.vi" Type="VI" URL="../Add State(s) to Queue By BOOL++.vi"/>
