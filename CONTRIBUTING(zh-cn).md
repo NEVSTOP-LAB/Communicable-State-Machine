@@ -41,6 +41,8 @@ CSM 的 Wiki 是一个开放的知识库，欢迎大家参与维护。你可以�
 
 - @运祺([zhihu](https://www.zhihu.com/people/guo-yun-qi-70)) 反馈大量的用户端使用体验；提交大量的改进建议。
 
+- @小马的编程笔记本([zhihu](https://www.zhihu.com/people/73e99ed0234304b62e9b4ff344b37995)) 反馈用户端使用体验，第一篇CSM相关的用户文章
+
 - @赵栎安([github](https://github.com/ZhaoLi-an)|[zhihu](https://www.zhihu.com/people/shui-zhong-yu-95-38)) 反馈大量的用户端使用体验；提出大量有效的改进建议；提出 CSM Global Log Performance 的改进问题。
 
 - @吴磊([github](https://github.com/wulei2LabVIEW)|[zhihu](https://www.zhihu.com/people/93-92-85-97)) 反馈大量的用户端使用体验；Bilibili 创建了 CSM 的使用教程。
