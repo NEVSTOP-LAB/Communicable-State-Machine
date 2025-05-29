@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-05-28 00:07:02" Creator="liyao" Comments="" ID="349cb5ee66b1ced93f06d28283eac037">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-05-29 21:44:03" Creator="liyao" Comments="" ID="baa69231da9779dd91311f88da814ba0">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
-    <Library_Version>2025.5.0.1</Library_Version>
+    <Library_Version>2025.6.0.1</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>src</Library_Source_Folder>
     <Library_Output_Folder>vip</Library_Output_Folder>
@@ -65,26 +65,7 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
       <Copyright/>
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
-      <Release_Notes>##Core
-[update] #459 Default DequeueTMO is changed from 0ms to 1ms, which will improve debugging performance if any related errors. Thanks @ZhaoLi-an 
-
-##API
-[update] #450 Enhance "CSM - List module" Behavior. Now system level module could be included.
-[update] Add a "&lt;HEXSTR&gt;" prefix in "CSM - Convert Data to HexStr.vi" to identify the argument type.
-[update] Add waiting time for CSM to be alive in CSM Status/Exit Event API
-
-##GlobalLog
-[add] #448 #453 #454 #455 #456 #457 Now global event support queue operation.
-[add] #454 New snippet for using Global Event Queue.
-[update] #455 use event source timestamp instead of handling timestamp.
-
-##Example
-[add] add a new example "4. Advance Examples\Global Log Handling Capability" to demostrate the improved global log handling capibility.
-
-##Tools
-[update] Debug Console add message handling speed indicator.
-[update] #460 Debug Console use queue based global log API.
-[update] #456 CSM File Logger use Queue based global log API.</Release_Notes>
+      <Release_Notes/>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -258,7 +239,6 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
       <close_labview_before_install>true</close_labview_before_install>
       <restart_labview_after_install>true</restart_labview_after_install>
       <skip_mass_compile_after_install>false</skip_mass_compile_after_install>
-      <install_into_global_environment>false</install_into_global_environment>
     </LabVIEW>
     <VI_Docs>
       <Edit_VI_Description>true</Edit_VI_Description>
