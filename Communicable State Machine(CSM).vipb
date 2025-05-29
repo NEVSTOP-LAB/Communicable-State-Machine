@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-05-29 21:44:03" Creator="liyao" Comments="" ID="baa69231da9779dd91311f88da814ba0">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-05-29 21:56:02" Creator="liyao" Comments="" ID="49978909ac03dda1a9f847c1a11ee659">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2025.6.0.1</Library_Version>
@@ -65,7 +65,9 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
       <Copyright/>
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
-      <Release_Notes/>
+      <Release_Notes>#Tools
+[update] improve Debug Console
+[update] minor update #465</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
