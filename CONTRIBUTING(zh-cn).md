@@ -29,6 +29,36 @@ CSM 的 Wiki 是一个开放的知识库，欢迎大家参与维护。你可以�
 
 ## 鸣谢(Acknowledgement)
 
-感谢以下贡献者对 CSM 的贡献，排名不分先后：
+感谢以下贡献者对 CSM 的贡献，排名按时间顺序：
 
-@KivenJia @Leo452379 @SallyTYT @drjdpowell @casey502 @MapleBay
+- @Leo452379([github](https://github.com/Leo452379)) 参与CSM原型的设计和开发。
+
+- @KivenJia([github](https://github.com/KivenJia)|[zhihu](https://www.zhihu.com/people/peng-jia-61-98)) 参与CSM的设计和开发；推送"学习应用篇"系列文章到知乎专栏。
+
+- @SallyTYT([github](https://github.com/SallyTYT)) 参与CSM原型的测试和反馈。
+
+- @汪哥([zhihu](https://www.zhihu.com/people/wang-ge-49-10)) 反馈大量的用户端使用体验；提交大量的改进建议。
+
+- @运祺([zhihu](https://www.zhihu.com/people/guo-yun-qi-70)) 反馈大量的用户端使用体验；提交大量的改进建议。
+
+- @小马的编程笔记本([zhihu](https://www.zhihu.com/people/73e99ed0234304b62e9b4ff344b37995)) 反馈用户端使用体验，第一篇CSM相关的用户文章
+
+- @赵栎安([github](https://github.com/ZhaoLi-an)|[zhihu](https://www.zhihu.com/people/shui-zhong-yu-95-38)) 反馈大量的用户端使用体验；提出大量有效的改进建议；提出 CSM Global Log Performance 的改进问题。
+
+- @吴磊([github](https://github.com/wulei2LabVIEW)|[zhihu](https://www.zhihu.com/people/93-92-85-97)) 反馈大量的用户端使用体验；Bilibili 创建了 CSM 的使用教程。
+
+- @casey([github](https://github.com/casey502)|[zhihu](https://www.zhihu.com/people/casey-21-48)) 反馈大量的用户端使用体验；多次提交 GitHub issues 并被采纳。
+
+- @dinga([zhihu](https://www.zhihu.com/people/5771113))反馈 CSM 在 linux Desktop上的使用问题。
+
+- @drjdpowell([github](https://github.com/drjdpowell)) 提出模板的改进建议并被采纳。
+
+- @MapleBay([github](https://github.com/MapleBay)) 反馈 CSM范例的问题并被采纳。
+
+- @EAST([zhihu](https://www.zhihu.com/people/cheng-dong-fang-15)) 反馈 CSM INI Variable Addon 范例的问题并被采纳。
+
+- @知乎用户D([zhihu](https://www.zhihu.com/people/heng-yi-56-31)) 反馈 CSM INI Variable Addon 的BUG。
+
+- @基友湖渔夫([zhihu](https://www.zhihu.com/people/heng-yi-56-31)) 反馈 CSM Attributes 的需求并被采纳。
+
+- @小橙子([zhihu](https://www.zhihu.com/people/45-59-95-79)) 反馈 CSM INI Variable Addon 范例的问题并被采纳。

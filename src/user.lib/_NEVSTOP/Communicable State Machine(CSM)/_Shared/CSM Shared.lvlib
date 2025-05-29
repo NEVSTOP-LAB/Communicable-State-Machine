@@ -4,14 +4,19 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">385908736</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.SortType" Type="Int">3</Property>
+	<Item Name="Typedef" Type="Folder">
+		<Item Name="CSM Part Property.ctl" Type="VI" URL="../CSM Part Property.ctl"/>
+		<Item Name="Single-Line Type.ctl" Type="VI" URL="../Single-Line Type.ctl"/>
+		<Item Name="Single-Line Selection Type.ctl" Type="VI" URL="../Single-Line Selection Type.ctl"/>
+	</Item>
 	<Item Name="Remove Duplicates for StrArray.vi" Type="VI" URL="../Remove Duplicates for StrArray.vi"/>
 	<Item Name="Remove Emptys From StrArray.vi" Type="VI" URL="../Remove Emptys From StrArray.vi"/>
 	<Item Name="Remove Comments from Single-line.vi" Type="VI" URL="../Remove Comments from Single-line.vi"/>
 	<Item Name="Split Single-line Message.vi" Type="VI" URL="../Split Single-line Message.vi"/>
+	<Item Name="Split Single-line Reason Parts.vi" Type="VI" URL="../Split Single-line Reason Parts.vi"/>
 	<Item Name="Trim Single-line Text.vi" Type="VI" URL="../Trim Single-line Text.vi"/>
 	<Item Name="Single-Line To CSM Parts.vi" Type="VI" URL="../Single-Line To CSM Parts.vi"/>
+	<Item Name="Parse Next Single-line.vi" Type="VI" URL="../Parse Next Single-line.vi"/>
+	<Item Name="Concatenate State with Arguments.vi" Type="VI" URL="../Concatenate State with Arguments.vi"/>
 	<Item Name="CSM Part Property at Cursor.vi" Type="VI" URL="../CSM Part Property at Cursor.vi"/>
-	<Item Name="CSM Part Property.ctl" Type="VI" URL="../CSM Part Property.ctl"/>
-	<Item Name="Single-Line Type.ctl" Type="VI" URL="../Single-Line Type.ctl"/>
-	<Item Name="Single-Line Selection Type.ctl" Type="VI" URL="../Single-Line Selection Type.ctl"/>
 </Library>
