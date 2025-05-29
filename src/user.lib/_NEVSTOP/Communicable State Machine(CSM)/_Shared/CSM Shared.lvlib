@@ -19,4 +19,6 @@
 	<Item Name="Parse Next Single-line.vi" Type="VI" URL="../Parse Next Single-line.vi"/>
 	<Item Name="Concatenate State with Arguments.vi" Type="VI" URL="../Concatenate State with Arguments.vi"/>
 	<Item Name="CSM Part Property at Cursor.vi" Type="VI" URL="../CSM Part Property at Cursor.vi"/>
+	<Item Name="CSM - System States.vi" Type="VI" URL="../CSM - System States.vi"/>
+	<Item Name="CSM - user.lib Dir.vi" Type="VI" URL="../CSM - user.lib Dir.vi"/>
 </Library>
