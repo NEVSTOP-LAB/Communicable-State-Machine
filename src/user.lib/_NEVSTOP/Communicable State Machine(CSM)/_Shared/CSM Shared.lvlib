@@ -21,5 +21,5 @@
 	<Item Name="CSM Part Property at Cursor.vi" Type="VI" URL="../CSM Part Property at Cursor.vi"/>
 	<Item Name="CSM - System States.vi" Type="VI" URL="../CSM - System States.vi"/>
 	<Item Name="CSM - user.lib Dir.vi" Type="VI" URL="../CSM - user.lib Dir.vi"/>
-	<Item Name="CSM - Argument Token.vi" Type="VI" URL="../CSM - Argument Token.vi"/>
+	<Item Name="CSM - Argument Type.vi" Type="VI" URL="../CSM - Argument Type.vi"/>
 </Library>
