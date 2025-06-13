@@ -398,15 +398,8 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 		<Item Name="CSM Data Type String.vi" Type="VI" URL="../Utility/CSM Data Type String.vi"/>
 		<Item Name="CSM Data Type String to Enum.vi" Type="VI" URL="../Utility/CSM Data Type String to Enum.vi"/>
 		<Item Name="Replace Tag with Array.vi" Type="VI" URL="../Utility/Replace Tag with Array.vi"/>
-		<Item Name="Match Asterisk Pattern.vi" Type="VI" URL="../Utility/Match Asterisk Pattern.vi"/>
 		<Item Name="Concatenate Submodule Name.vi" Type="VI" URL="../Utility/Concatenate Submodule Name.vi"/>
-		<Item Name="Build State String with Comments.vi" Type="VI" URL="../Utility/Build State String with Comments.vi"/>
-		<Item Name="Change Speed Counter.vi" Type="VI" URL="../Utility/Change Speed Counter.vi"/>
-		<Item Name="Occurrence Speed Counter.vi" Type="VI" URL="../Utility/Occurrence Speed Counter.vi"/>
-		<Item Name="Debounced Signal.vi" Type="VI" URL="../Utility/Debounced Signal.vi"/>
 		<Item Name="Exit With Empty Queue Check.vi" Type="VI" URL="../Utility/Exit With Empty Queue Check.vi"/>
-		<Item Name="Rising Edge.vi" Type="VI" URL="../Utility/Rising Edge.vi"/>
-		<Item Name="Falling Edge.vi" Type="VI" URL="../Utility/Falling Edge.vi"/>
 		<Item Name="Format Timestamp.vi" Type="VI" URL="../_Support/Common/Format Timestamp.vi"/>
 	</Item>
 	<Item Name="Parse State Queue++.vi" Type="VI" URL="../Parse State Queue++.vi"/>
