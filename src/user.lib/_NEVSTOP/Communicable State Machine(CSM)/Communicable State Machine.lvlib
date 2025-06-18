@@ -85,14 +85,18 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 				</Item>
 				<Item Name="Chain" Type="Folder">
 					<Item Name="_Chain Mapping Map.vi" Type="VI" URL="../_Support/CSMQ/_Chain Mapping Map.vi"/>
-					<Item Name="_CSMObj-Obtain Chain.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Obtain Chain.vi"/>
 					<Item Name="_CSMObj-Append Chain Node.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Append Chain Node.vi"/>
+					<Item Name="_CSMObj-Obtain Chain.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Obtain Chain.vi"/>
 				</Item>
 				<Item Name="Worker" Type="Folder">
 					<Item Name="_CSMObj-Clone Worker.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Clone Worker.vi"/>
+					<Item Name="_CSMObj-Obtain Worker Agent.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Obtain Worker Agent.vi"/>
 				</Item>
+				<Item Name="Normal" Type="Folder">
+					<Item Name="_CSMObj-Obtain CSMObj.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Obtain CSMObj.vi"/>
+				</Item>
+				<Item Name="_CSMObj-Obtain(OLD).vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Obtain(OLD).vi"/>
 				<Item Name="_CSMObj-Obtain.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Obtain.vi"/>
-				<Item Name="_CSMObj-ObtainCore.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-ObtainCore.vi"/>
 				<Item Name="_CSMObj-Unlock.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Unlock.vi"/>
 				<Item Name="_CSMObj-Lock State.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Lock State.vi"/>
 				<Item Name="_CSMObj-Message Check.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Message Check.vi"/>
@@ -138,11 +142,13 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 					<Item Name="ResMgr-Request ExitEvent.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-Request ExitEvent.vi"/>
 					<Item Name="ResMgr-Request PriorityQueue.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-Request PriorityQueue.vi"/>
 					<Item Name="ResMgr-Request StatusEvent.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-Request StatusEvent.vi"/>
+					<Item Name="ResMgr-Request SharedDataDVR.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-Request SharedDataDVR.vi"/>
 				</Item>
 				<Item Name="ResMgr-BackgroundThread.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-BackgroundThread.vi"/>
 				<Item Name="ResMgr-WatchdogThread.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-WatchdogThread.vi"/>
 				<Item Name="ResMgr-RequestDef.ctl" Type="VI" URL="../_Support/ResMgr/ResMgr-RequestDef.ctl"/>
 				<Item Name="ResMgr-StartWatchDog.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-StartWatchDog.vi"/>
+				<Item Name="ResMgr-ObtainBKThreadQ.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-ObtainBKThreadQ.vi"/>
 			</Item>
 			<Item Name="FGV-StatusChangeEventRef.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-StatusChangeEventRef.vi"/>
 		</Item>
@@ -266,6 +272,9 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 				<Item Name="CSM No Target Error.vi" Type="VI" URL="../_Support/Error/CSM No Target Error.vi"/>
 				<Item Name="CSM Not Allowed Message.vi" Type="VI" URL="../_Support/Error/CSM Not Allowed Message.vi"/>
 				<Item Name="CSM Missing Return State Error.vi" Type="VI" URL="../_Support/Error/CSM Missing Return State Error.vi"/>
+				<Item Name="CSM Duplicate Name Error.vi" Type="VI" URL="../_Support/Error/CSM Duplicate Name Error.vi"/>
+				<Item Name="CSM Not Found Error.vi" Type="VI" URL="../_Support/Error/CSM Not Found Error.vi"/>
+				<Item Name="CSM Invalid Name Error.vi" Type="VI" URL="../_Support/Error/CSM Invalid Name Error.vi"/>
 			</Item>
 			<Item Name="CSM - Get New State Notifier Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Get New State Notifier Event.vi"/>
 			<Item Name="CSM - Internal State Debug Log History.vi" Type="VI" URL="../AdvanceAPI/CSM - Internal State Debug Log History.vi"/>
