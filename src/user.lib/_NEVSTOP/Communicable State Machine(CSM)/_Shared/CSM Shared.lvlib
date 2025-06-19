@@ -33,6 +33,7 @@
 		<Item Name="Change Speed Counter.vi" Type="VI" URL="../Change Speed Counter.vi"/>
 		<Item Name="Occurrence Speed Counter.vi" Type="VI" URL="../Occurrence Speed Counter.vi"/>
 		<Item Name="Debounced Signal.vi" Type="VI" URL="../Debounced Signal.vi"/>
+		<Item Name="Is Asynchronous Call.vi" Type="VI" URL="../Is Asynchronous Call.vi"/>
 	</Item>
 	<Item Name="CSM Part Property at Cursor.vi" Type="VI" URL="../CSM Part Property at Cursor.vi"/>
 </Library>
