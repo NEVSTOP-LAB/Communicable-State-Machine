@@ -80,6 +80,8 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="CSMObj" Type="Folder">
 				<Item Name="Typedef" Type="Folder">
 					<Item Name="_CSMObj.ctl" Type="VI" URL="../_Support/CSMQ/_CSMObj.ctl"/>
+					<Item Name="_CSMObj-Info.ctl" Type="VI" URL="../_Support/CSMQ/_CSMObj-Info.ctl"/>
+					<Item Name="_CSMObj-Refs.ctl" Type="VI" URL="../_Support/CSMQ/_CSMObj-Refs.ctl"/>
 					<Item Name="_CSMObj-Data.ctl" Type="VI" URL="../_Support/CSMQ/_CSMObj-Data.ctl"/>
 					<Item Name="_CSMObj-ModeData.ctl" Type="VI" URL="../_Support/CSMQ/_CSMObj-ModeData.ctl"/>
 				</Item>
@@ -95,10 +97,12 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 				<Item Name="Normal" Type="Folder">
 					<Item Name="_CSMObj-Obtain CSMObj.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Obtain CSMObj.vi"/>
 				</Item>
-				<Item Name="_CSMObj-ObtainCore.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-ObtainCore.vi"/>
+				<Item Name="_CSMObj-Information.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Information.vi"/>
 				<Item Name="_CSMObj-Unlock.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Unlock.vi"/>
 				<Item Name="_CSMObj-Lock State.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Lock State.vi"/>
 				<Item Name="_CSMObj-Message Check.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Message Check.vi"/>
+				<Item Name="_CSMObj-Update CSMList.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Update CSMList.vi"/>
+				<Item Name="_CSMObj-Update ChainData.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Update ChainData.vi"/>
 				<Item Name="_CSMObj-Add Internal Registry Rule.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Add Internal Registry Rule.vi"/>
 				<Item Name="_CSMObj-Remove Internal Registry Rule.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Remove Internal Registry Rule.vi"/>
 				<Item Name="_CSMObj-Unregister Internal Registry Rules.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Unregister Internal Registry Rules.vi"/>
@@ -142,6 +146,7 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 					<Item Name="ResMgr-Request PriorityQueue.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-Request PriorityQueue.vi"/>
 					<Item Name="ResMgr-Request StatusEvent.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-Request StatusEvent.vi"/>
 					<Item Name="ResMgr-Request SharedDataDVR.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-Request SharedDataDVR.vi"/>
+					<Item Name="ResMgr-Request NewStateEvent.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-Request NewStateEvent.vi"/>
 				</Item>
 				<Item Name="ResMgr-BackgroundThread.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-BackgroundThread.vi"/>
 				<Item Name="ResMgr-WatchdogThread.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-WatchdogThread.vi"/>
