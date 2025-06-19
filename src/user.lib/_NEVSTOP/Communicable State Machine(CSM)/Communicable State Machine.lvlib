@@ -95,8 +95,7 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 				<Item Name="Normal" Type="Folder">
 					<Item Name="_CSMObj-Obtain CSMObj.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Obtain CSMObj.vi"/>
 				</Item>
-				<Item Name="_CSMObj-Obtain(OLD).vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Obtain(OLD).vi"/>
-				<Item Name="_CSMObj-Obtain.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Obtain.vi"/>
+				<Item Name="_CSMObj-ObtainCore.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-ObtainCore.vi"/>
 				<Item Name="_CSMObj-Unlock.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Unlock.vi"/>
 				<Item Name="_CSMObj-Lock State.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Lock State.vi"/>
 				<Item Name="_CSMObj-Message Check.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Message Check.vi"/>
