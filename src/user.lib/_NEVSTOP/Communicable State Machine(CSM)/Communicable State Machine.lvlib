@@ -61,46 +61,75 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 	</Item>
 	<Item Name="Support" Type="Folder">
 		<Property Name="NI.SortType" Type="Int">3</Property>
-		<Item Name="Priority Queue" Type="Folder">
+		<Item Name="Typedef" Type="Folder">
 			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
-			<Item Name="Priority Queue.lvclass" Type="LVClass" URL="../_Support/Priority Queue/Priority Queue.lvclass"/>
-		</Item>
-		<Item Name="BroadcastRegistry" Type="Folder">
-			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
-			<Item Name="BroadcastRegistry.lvclass" Type="LVClass" URL="../_Support/BroadcastRegistry/BroadcastRegistry.lvclass"/>
+			<Item Name="_Cross CSM State Data.ctl" Type="VI" URL="../_Support/Typedef/_Cross CSM State Data.ctl"/>
+			<Item Name="_Cross CSM State Response.ctl" Type="VI" URL="../_Support/Typedef/_Cross CSM State Response.ctl"/>
+			<Item Name="_CSM_MSG_TYPE.ctl" Type="VI" URL="../_Support/Typedef/_CSM_MSG_TYPE.ctl"/>
+			<Item Name="_CSM_MODE.ctl" Type="VI" URL="../_Support/Typedef/_CSM_MODE.ctl"/>
+			<Item Name="_CSM_NAME_REQUEST.ctl" Type="VI" URL="../_Support/Typedef/_CSM_NAME_REQUEST.ctl"/>
+			<Item Name="_CSM_Response Source Message.ctl" Type="VI" URL="../_Support/Typedef/_CSM_Response Source Message.ctl"/>
+			<Item Name="_CSM_Broadcast_Response_Message_info.ctl" Type="VI" URL="../_Support/Typedef/_CSM_Broadcast_Response_Message_info.ctl"/>
+			<Item Name="_CSM Status Change Event Data.ctl" Type="VI" URL="../_Support/Typedef/_CSM Status Change Event Data.ctl"/>
+			<Item Name="_CSM_GlobalLog_MSG.ctl" Type="VI" URL="../_Support/Typedef/_CSM_GlobalLog_MSG.ctl"/>
+			<Item Name="_CSM_GlobalLog_MSG_TYPE.ctl" Type="VI" URL="../_Support/Typedef/_CSM_GlobalLog_MSG_TYPE.ctl"/>
+			<Item Name="_CSM_GlobalLog_STATE_TYPE.ctl" Type="VI" URL="../_Support/Typedef/_CSM_GlobalLog_STATE_TYPE.ctl"/>
+			<Item Name="_CSM_GlobalLog Filter Rules - v1.0.ctl" Type="VI" URL="../_Support/Typedef/_CSM_GlobalLog Filter Rules - v1.0.ctl"/>
+			<Item Name="_CSM_GlobalLog Filter Rules - v1.1.ctl" Type="VI" URL="../_Support/Typedef/_CSM_GlobalLog Filter Rules - v1.1.ctl"/>
+			<Item Name="_CSM_List Module Scope.ctl" Type="VI" URL="../_Support/Typedef/_CSM_List Module Scope.ctl"/>
 		</Item>
 		<Item Name="Common" Type="Folder">
 			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
+			<Item Name="Priority Queue" Type="Folder">
+				<Item Name="Priority Queue.lvclass" Type="LVClass" URL="../_Support/Priority Queue/Priority Queue.lvclass"/>
+			</Item>
+			<Item Name="NamingConvention" Type="Folder">
+				<Item Name="Naming Check.vi" Type="VI" URL="../_Support/Naming Check.vi"/>
+			</Item>
 			<Item Name="CSM-Name to CSM-Mode.vi" Type="VI" URL="../_Support/Common/CSM-Name to CSM-Mode.vi"/>
 			<Item Name="Hex Str to U8 Data.vi" Type="VI" URL="../_Support/Common/Hex Str to U8 Data.vi"/>
 			<Item Name="U8 Data to Hex Str.vi" Type="VI" URL="../_Support/Common/U8 Data to Hex Str.vi"/>
 		</Item>
 		<Item Name="CSM-Core" Type="Folder">
 			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
-			<Item Name="Support" Type="Folder">
-				<Item Name="_Obtain CSM Data Queue.vi" Type="VI" URL="../_Support/CSMQ/_Obtain CSM Data Queue.vi"/>
-			</Item>
 			<Item Name="CSMObj" Type="Folder">
-				<Item Name="_CSMObj.ctl" Type="VI" URL="../_Support/CSMQ/_CSMObj.ctl"/>
-				<Item Name="_CSMObj-Data.ctl" Type="VI" URL="../_Support/CSMQ/_CSMObj-Data.ctl"/>
-				<Item Name="_CSMObj-ModeData.ctl" Type="VI" URL="../_Support/CSMQ/_CSMObj-ModeData.ctl"/>
-				<Item Name="_CSMObj-Obtain.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Obtain.vi"/>
-				<Item Name="_CSMObj-Obtain Chain.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Obtain Chain.vi"/>
+				<Item Name="Typedef" Type="Folder">
+					<Item Name="_CSMObj.ctl" Type="VI" URL="../_Support/CSMQ/_CSMObj.ctl"/>
+					<Item Name="_CSMObj-Info.ctl" Type="VI" URL="../_Support/CSMQ/_CSMObj-Info.ctl"/>
+					<Item Name="_CSMObj-Refs.ctl" Type="VI" URL="../_Support/CSMQ/_CSMObj-Refs.ctl"/>
+					<Item Name="_CSMObj-Data.ctl" Type="VI" URL="../_Support/CSMQ/_CSMObj-Data.ctl"/>
+					<Item Name="_CSMObj-ModeData.ctl" Type="VI" URL="../_Support/CSMQ/_CSMObj-ModeData.ctl"/>
+				</Item>
+				<Item Name="Chain" Type="Folder">
+					<Item Name="_Chain Mapping Map.vi" Type="VI" URL="../_Support/CSMQ/_Chain Mapping Map.vi"/>
+					<Item Name="_CSMObj-Append Chain Node.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Append Chain Node.vi"/>
+					<Item Name="_CSMObj-Remove Chain Node.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Remove Chain Node.vi"/>
+					<Item Name="_CSMObj-Obtain Chain.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Obtain Chain.vi"/>
+					<Item Name="_CSMObj-Release Chain Node.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Release Chain Node.vi"/>
+				</Item>
+				<Item Name="Worker" Type="Folder">
+					<Item Name="_CSMObj-Clone Worker.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Clone Worker.vi"/>
+					<Item Name="_CSMObj-Obtain Worker Agent.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Obtain Worker Agent.vi"/>
+					<Item Name="_CSMObj-Release Worker.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Release Worker.vi"/>
+				</Item>
+				<Item Name="Normal" Type="Folder">
+					<Item Name="_CSMObj-Obtain CSM.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Obtain CSM.vi"/>
+					<Item Name="_CSMObj-Release CSM.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Release CSM.vi"/>
+				</Item>
+				<Item Name="_CSMObj-Information.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Information.vi"/>
 				<Item Name="_CSMObj-Unlock.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Unlock.vi"/>
 				<Item Name="_CSMObj-Lock State.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Lock State.vi"/>
+				<Item Name="_CSMObj-Is Group Alive.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Is Group Alive.vi"/>
 				<Item Name="_CSMObj-Message Check.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Message Check.vi"/>
-				<Item Name="_CSMObj-Clone Worker.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Clone Worker.vi"/>
+				<Item Name="_CSMObj-Update CSMList.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Update CSMList.vi"/>
+				<Item Name="_CSMObj-Update ChainData.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Update ChainData.vi"/>
 				<Item Name="_CSMObj-Add Internal Registry Rule.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Add Internal Registry Rule.vi"/>
 				<Item Name="_CSMObj-Remove Internal Registry Rule.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Remove Internal Registry Rule.vi"/>
 				<Item Name="_CSMObj-Unregister Internal Registry Rules.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Unregister Internal Registry Rules.vi"/>
-				<Item Name="_CSMObj-Append Chain Node.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Append Chain Node.vi"/>
-				<Item Name="_CSMObj-Remove Chain Node.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Remove Chain Node.vi"/>
 				<Item Name="_CSMObj-Create Status Event.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Create Status Event.vi"/>
 				<Item Name="_CSMObj-Destroy Status Event.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Destroy Status Event.vi"/>
 				<Item Name="_CSMObj-Log Error if in a Remote Session.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Log Error if in a Remote Session.vi"/>
 				<Item Name="_CSMObj-Enqueue Cross-Module Message.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Enqueue Cross-Module Message.vi"/>
-				<Item Name="_CSMObj-Release.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Release.vi"/>
-				<Item Name="_Chain Mapping Map.vi" Type="VI" URL="../_Support/CSMQ/_Chain Mapping Map.vi"/>
 			</Item>
 			<Item Name="CSMOMgr" Type="Folder">
 				<Item Name="Def-CSMOMgr.ctl" Type="VI" URL="../_Support/Def-CSMOMgr.ctl"/>
@@ -128,7 +157,26 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 				<Item Name="CSMP-PostSendMsg.vi" Type="VI" URL="../_Support/Process/CSMP-PostSendMsg.vi"/>
 				<Item Name="CSMP-PostPostMsg.vi" Type="VI" URL="../_Support/Process/CSMP-PostPostMsg.vi"/>
 			</Item>
+			<Item Name="ResMgr" Type="Folder">
+				<Item Name="Request" Type="Folder">
+					<Item Name="ResMgr-Request TagMap.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-Request TagMap.vi"/>
+					<Item Name="ResMgr-Request ExitEvent.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-Request ExitEvent.vi"/>
+					<Item Name="ResMgr-Request PriorityQueue.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-Request PriorityQueue.vi"/>
+					<Item Name="ResMgr-Request StatusEvent.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-Request StatusEvent.vi"/>
+					<Item Name="ResMgr-Request SharedDataDVR.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-Request SharedDataDVR.vi"/>
+					<Item Name="ResMgr-Request NewStateEvent.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-Request NewStateEvent.vi"/>
+				</Item>
+				<Item Name="ResMgr-BackgroundThread.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-BackgroundThread.vi"/>
+				<Item Name="ResMgr-WatchdogThread.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-WatchdogThread.vi"/>
+				<Item Name="ResMgr-RequestDef.ctl" Type="VI" URL="../_Support/ResMgr/ResMgr-RequestDef.ctl"/>
+				<Item Name="ResMgr-StartWatchDog.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-StartWatchDog.vi"/>
+				<Item Name="ResMgr-ObtainBKThreadQ.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-ObtainBKThreadQ.vi"/>
+			</Item>
 			<Item Name="FGV-StatusChangeEventRef.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-StatusChangeEventRef.vi"/>
+		</Item>
+		<Item Name="BroadcastRegistry" Type="Folder">
+			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
+			<Item Name="BroadcastRegistry.lvclass" Type="LVClass" URL="../_Support/BroadcastRegistry/BroadcastRegistry.lvclass"/>
 		</Item>
 		<Item Name="FGV-BroadcastRegistry" Type="Folder">
 			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
@@ -152,7 +200,12 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 				<Item Name="GEvt-Convert Filter Rules - Periodic Setting Only.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Convert Filter Rules - Periodic Setting Only.vi"/>
 				<Item Name="GEvt-Set Source Filter Rules - v1.0.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Set Source Filter Rules - v1.0.vi"/>
 			</Item>
-			<Item Name="GEvt-RequestDef.ctl" Type="VI" URL="../_Support/GlobalEvent/GEvt-RequestDef.ctl"/>
+			<Item Name="ResourceMgr2" Type="Folder">
+				<Item Name="Gevt-ThreadQueueName.vi" Type="VI" URL="../_Support/GlobalEvent/Gevt-ThreadQueueName.vi"/>
+				<Item Name="GEvt-BackgroundThread.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-BackgroundThread.vi"/>
+				<Item Name="GEvt-RequestDef.ctl" Type="VI" URL="../_Support/GlobalEvent/GEvt-RequestDef.ctl"/>
+				<Item Name="GEvt-WatchdogThread.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-WatchdogThread.vi"/>
+			</Item>
 			<Item Name="GEvt-Refs.ctl" Type="VI" URL="../_Support/GlobalEvent/GEvt-Refs.ctl"/>
 			<Item Name="FGV-GEvt Refs.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GEvt Refs.vi"/>
 			<Item Name="global-GEvnt Filter Change Flag.vi" Type="VI" URL="../_Support/GlobalEvent/global-GEvnt Filter Change Flag.vi"/>
@@ -162,9 +215,6 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="FGV-GlobalEventQueues.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GlobalEventQueues.vi"/>
 			<Item Name="GEvt-Valid Subscribers.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Valid Subscribers.vi"/>
 			<Item Name="FGV-GEvt Filter Obj.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GEvt Filter Obj.vi"/>
-			<Item Name="Gevt-ThreadQueueName.vi" Type="VI" URL="../_Support/GlobalEvent/Gevt-ThreadQueueName.vi"/>
-			<Item Name="GEvt-BackgroundThread.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-BackgroundThread.vi"/>
-			<Item Name="GEvt-WatchdogThread.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-WatchdogThread.vi"/>
 			<Item Name="GEvt-Generate Complete Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate Complete Log.vi"/>
 			<Item Name="GEvt-Generate State Change Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate State Change Log.vi"/>
 			<Item Name="GEvt-Generate Remaining States Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate Remaining States Log.vi"/>
@@ -175,27 +225,6 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="GEvt-Generate Module Created Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate Module Created Log.vi"/>
 			<Item Name="GEvt-Generate Module Destroyed Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate Module Destroyed Log.vi"/>
 			<Item Name="GEvt-Generate with Rule Check.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate with Rule Check.vi"/>
-		</Item>
-		<Item Name="Typedef" Type="Folder">
-			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
-			<Item Name="_Cross CSM State Data.ctl" Type="VI" URL="../_Support/Typedef/_Cross CSM State Data.ctl"/>
-			<Item Name="_Cross CSM State Response.ctl" Type="VI" URL="../_Support/Typedef/_Cross CSM State Response.ctl"/>
-			<Item Name="_CSM_MSG_TYPE.ctl" Type="VI" URL="../_Support/Typedef/_CSM_MSG_TYPE.ctl"/>
-			<Item Name="_CSM_MODE.ctl" Type="VI" URL="../_Support/Typedef/_CSM_MODE.ctl"/>
-			<Item Name="_CSM_NAME_REQUEST.ctl" Type="VI" URL="../_Support/Typedef/_CSM_NAME_REQUEST.ctl"/>
-			<Item Name="_CSM_Response Source Message.ctl" Type="VI" URL="../_Support/Typedef/_CSM_Response Source Message.ctl"/>
-			<Item Name="_CSM_Broadcast_Response_Message_info.ctl" Type="VI" URL="../_Support/Typedef/_CSM_Broadcast_Response_Message_info.ctl"/>
-			<Item Name="_CSM Status Change Event Data.ctl" Type="VI" URL="../_Support/Typedef/_CSM Status Change Event Data.ctl"/>
-			<Item Name="_CSM_GlobalLog_MSG.ctl" Type="VI" URL="../_Support/Typedef/_CSM_GlobalLog_MSG.ctl"/>
-			<Item Name="_CSM_GlobalLog_MSG_TYPE.ctl" Type="VI" URL="../_Support/Typedef/_CSM_GlobalLog_MSG_TYPE.ctl"/>
-			<Item Name="_CSM_GlobalLog_STATE_TYPE.ctl" Type="VI" URL="../_Support/Typedef/_CSM_GlobalLog_STATE_TYPE.ctl"/>
-			<Item Name="_CSM_GlobalLog Filter Rules - v1.0.ctl" Type="VI" URL="../_Support/Typedef/_CSM_GlobalLog Filter Rules - v1.0.ctl"/>
-			<Item Name="_CSM_GlobalLog Filter Rules - v1.1.ctl" Type="VI" URL="../_Support/Typedef/_CSM_GlobalLog Filter Rules - v1.1.ctl"/>
-			<Item Name="_CSM_List Module Scope.ctl" Type="VI" URL="../_Support/Typedef/_CSM_List Module Scope.ctl"/>
-		</Item>
-		<Item Name="NamingConvention" Type="Folder">
-			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
-			<Item Name="Naming Check.vi" Type="VI" URL="../_Support/Naming Check.vi"/>
 		</Item>
 		<Item Name="Message" Type="Folder">
 			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
@@ -248,6 +277,9 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 				<Item Name="CSM No Target Error.vi" Type="VI" URL="../_Support/Error/CSM No Target Error.vi"/>
 				<Item Name="CSM Not Allowed Message.vi" Type="VI" URL="../_Support/Error/CSM Not Allowed Message.vi"/>
 				<Item Name="CSM Missing Return State Error.vi" Type="VI" URL="../_Support/Error/CSM Missing Return State Error.vi"/>
+				<Item Name="CSM Duplicate Name Error.vi" Type="VI" URL="../_Support/Error/CSM Duplicate Name Error.vi"/>
+				<Item Name="CSM Not Found Error.vi" Type="VI" URL="../_Support/Error/CSM Not Found Error.vi"/>
+				<Item Name="CSM Invalid Name Error.vi" Type="VI" URL="../_Support/Error/CSM Invalid Name Error.vi"/>
 			</Item>
 			<Item Name="CSM - Get New State Notifier Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Get New State Notifier Event.vi"/>
 			<Item Name="CSM - Internal State Debug Log History.vi" Type="VI" URL="../AdvanceAPI/CSM - Internal State Debug Log History.vi"/>
