@@ -1,0 +1,178 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.2 Chrome/134.0.6998.205 Electron/35.3.0 Safari/537.36" version="27.0.2">
+  <diagram name="第 1 页" id="rZ3F6WsEh6n0-SjLhehS">
+    <mxGraphModel dx="1554" dy="1193" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-16" value="Workers CSM" style="rounded=1;whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="60" y="510" width="460" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-28" value="Workers CSM" style="rounded=1;whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="510" width="510" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-40" value="Chain CSM" style="rounded=1;whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="60" y="990" width="460" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-52" value="Chain CSM" style="rounded=1;whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="990" width="510" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-15" value="普通 CSM" style="rounded=1;whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;" parent="1" vertex="1">
+          <mxGeometry x="60" y="70" width="410" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-5" value="Queue&lt;br&gt;(PriorityQueue)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="215" y="165" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-6" value="User Event&lt;br&gt;(UserEvent)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="215" y="95" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-7" value="Status Change Event&lt;br&gt;(User Event)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="330" y="165" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-8" value="TagMap&lt;br&gt;(DVR)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="330" y="95" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-9" value="CSM-Data&lt;br&gt;(DVR)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="215" y="305" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-10" value="Exit Event&lt;br&gt;(User Event)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="215" y="235" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-11" value="Allowed Messages&lt;br&gt;(StringArray)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="100" y="375" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-1" value="Module Name&lt;br&gt;（String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="100" y="95" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-2" value="Requested Name（String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="100" y="165" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-3" value="Group Name&lt;br&gt;（String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="100" y="235" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-4" value="Mode&lt;br&gt;(ENUM)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="100" y="305" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-17" value="Queue&lt;br&gt;(PriorityQueue)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="380" y="675" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-18" value="User Event&lt;br&gt;(UserEvent)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="215" y="535" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-19" value="Status Change Event&lt;br&gt;(User Event)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="380" y="605" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-20" value="TagMap&lt;br&gt;(DVR)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="380" y="535" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-21" value="CSM-Data&lt;br&gt;(DVR)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="215" y="605" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-22" value="Exit Event&lt;br&gt;(User Event)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="380" y="745" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-23" value="Allowed Messages&lt;br&gt;(StringArray)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="100" y="815" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-24" value="Module Name&lt;br&gt;（String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="100" y="535" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-25" value="Requested Name（String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="100" y="605" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-26" value="Group Name&lt;br&gt;（String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="100" y="675" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-27" value="Mode&lt;br&gt;(ENUM)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="100" y="745" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-30" value="User Event&lt;br&gt;(UserEvent)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="685" y="535" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-33" value="CSM-Data&lt;br&gt;(DVR)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="685" y="605" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-35" value="Allowed Messages&lt;br&gt;(StringArray)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="570" y="815" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-36" value="Module Name&lt;br&gt;（String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="570" y="535" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-37" value="Requested Name（String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="570" y="605" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-38" value="Group Name&lt;br&gt;（String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="570" y="675" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-39" value="Mode&lt;br&gt;(ENUM)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="570" y="745" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-41" value="Queue&lt;br&gt;(PriorityQueue)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="215" y="1155" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-42" value="User Event&lt;br&gt;(UserEvent)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="215" y="1015" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-43" value="Status Change Event&lt;br&gt;(User Event)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="380" y="1085" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-44" value="TagMap&lt;br&gt;(DVR)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="380" y="1015" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-45" value="CSM-Data&lt;br&gt;(DVR)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="215" y="1085" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-46" value="Exit Event&lt;br&gt;(User Event)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="380" y="1225" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-47" value="Allowed Messages&lt;br&gt;(StringArray)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1295" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-48" value="Module Name&lt;br&gt;（String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1015" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-49" value="Requested Name（String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1085" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-50" value="Group Name&lt;br&gt;（String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1155" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-51" value="Mode&lt;br&gt;(ENUM)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="100" y="1225" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-53" value="User Event&lt;br&gt;(UserEvent)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="685" y="1015" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-54" value="CSM-Data&lt;br&gt;(DVR)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="685" y="1085" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-55" value="Allowed Messages&lt;br&gt;(StringArray)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="570" y="1295" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-56" value="Module Name&lt;br&gt;（String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="570" y="1015" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-57" value="Requested Name（String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="570" y="1085" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-58" value="Group Name&lt;br&gt;（String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="570" y="1155" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-59" value="Mode&lt;br&gt;(ENUM)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="570" y="1225" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-61" value="Queue&lt;br&gt;(PriorityQueue)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="685" y="1155" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-62" value="Queue&lt;br&gt;(PriorityQueue)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="380" y="1155" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-63" value="Queue&lt;br&gt;(PriorityQueue)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="215" y="675" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-64" value="Queue&lt;br&gt;(PriorityQueue)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="685" y="675" width="100" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -61,9 +61,34 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 	</Item>
 	<Item Name="Support" Type="Folder">
 		<Property Name="NI.SortType" Type="Int">3</Property>
-		<Item Name="Priority Queue" Type="Folder">
+		<Item Name="Typedef" Type="Folder">
 			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
-			<Item Name="Priority Queue.lvclass" Type="LVClass" URL="../_Support/Priority Queue/Priority Queue.lvclass"/>
+			<Item Name="_Cross CSM State Data.ctl" Type="VI" URL="../_Support/Typedef/_Cross CSM State Data.ctl"/>
+			<Item Name="_Cross CSM State Response.ctl" Type="VI" URL="../_Support/Typedef/_Cross CSM State Response.ctl"/>
+			<Item Name="_CSM_MSG_TYPE.ctl" Type="VI" URL="../_Support/Typedef/_CSM_MSG_TYPE.ctl"/>
+			<Item Name="_CSM_MODE.ctl" Type="VI" URL="../_Support/Typedef/_CSM_MODE.ctl"/>
+			<Item Name="_CSM_NAME_REQUEST.ctl" Type="VI" URL="../_Support/Typedef/_CSM_NAME_REQUEST.ctl"/>
+			<Item Name="_CSM_Response Source Message.ctl" Type="VI" URL="../_Support/Typedef/_CSM_Response Source Message.ctl"/>
+			<Item Name="_CSM_Broadcast_Response_Message_info.ctl" Type="VI" URL="../_Support/Typedef/_CSM_Broadcast_Response_Message_info.ctl"/>
+			<Item Name="_CSM Status Change Event Data.ctl" Type="VI" URL="../_Support/Typedef/_CSM Status Change Event Data.ctl"/>
+			<Item Name="_CSM_GlobalLog_MSG.ctl" Type="VI" URL="../_Support/Typedef/_CSM_GlobalLog_MSG.ctl"/>
+			<Item Name="_CSM_GlobalLog_MSG_TYPE.ctl" Type="VI" URL="../_Support/Typedef/_CSM_GlobalLog_MSG_TYPE.ctl"/>
+			<Item Name="_CSM_GlobalLog_STATE_TYPE.ctl" Type="VI" URL="../_Support/Typedef/_CSM_GlobalLog_STATE_TYPE.ctl"/>
+			<Item Name="_CSM_GlobalLog Filter Rules - v1.0.ctl" Type="VI" URL="../_Support/Typedef/_CSM_GlobalLog Filter Rules - v1.0.ctl"/>
+			<Item Name="_CSM_GlobalLog Filter Rules - v1.1.ctl" Type="VI" URL="../_Support/Typedef/_CSM_GlobalLog Filter Rules - v1.1.ctl"/>
+			<Item Name="_CSM_List Module Scope.ctl" Type="VI" URL="../_Support/Typedef/_CSM_List Module Scope.ctl"/>
+		</Item>
+		<Item Name="Common" Type="Folder">
+			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
+			<Item Name="Priority Queue" Type="Folder">
+				<Item Name="Priority Queue.lvclass" Type="LVClass" URL="../_Support/Priority Queue/Priority Queue.lvclass"/>
+			</Item>
+			<Item Name="NamingConvention" Type="Folder">
+				<Item Name="Naming Check.vi" Type="VI" URL="../_Support/Naming Check.vi"/>
+			</Item>
+			<Item Name="CSM-Name to CSM-Mode.vi" Type="VI" URL="../_Support/Common/CSM-Name to CSM-Mode.vi"/>
+			<Item Name="Hex Str to U8 Data.vi" Type="VI" URL="../_Support/Common/Hex Str to U8 Data.vi"/>
+			<Item Name="U8 Data to Hex Str.vi" Type="VI" URL="../_Support/Common/U8 Data to Hex Str.vi"/>
 		</Item>
 		<Item Name="CSM-Core" Type="Folder">
 			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
@@ -153,12 +178,6 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 			<Item Name="BroadcastRegistry.lvclass" Type="LVClass" URL="../_Support/BroadcastRegistry/BroadcastRegistry.lvclass"/>
 		</Item>
-		<Item Name="Common" Type="Folder">
-			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
-			<Item Name="CSM-Name to CSM-Mode.vi" Type="VI" URL="../_Support/Common/CSM-Name to CSM-Mode.vi"/>
-			<Item Name="Hex Str to U8 Data.vi" Type="VI" URL="../_Support/Common/Hex Str to U8 Data.vi"/>
-			<Item Name="U8 Data to Hex Str.vi" Type="VI" URL="../_Support/Common/U8 Data to Hex Str.vi"/>
-		</Item>
 		<Item Name="FGV-BroadcastRegistry" Type="Folder">
 			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 			<Item Name="FGV-BroadcastRegistry.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/FGV-BroadcastRegistry.vi"/>
@@ -206,27 +225,6 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="GEvt-Generate Module Created Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate Module Created Log.vi"/>
 			<Item Name="GEvt-Generate Module Destroyed Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate Module Destroyed Log.vi"/>
 			<Item Name="GEvt-Generate with Rule Check.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate with Rule Check.vi"/>
-		</Item>
-		<Item Name="Typedef" Type="Folder">
-			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
-			<Item Name="_Cross CSM State Data.ctl" Type="VI" URL="../_Support/Typedef/_Cross CSM State Data.ctl"/>
-			<Item Name="_Cross CSM State Response.ctl" Type="VI" URL="../_Support/Typedef/_Cross CSM State Response.ctl"/>
-			<Item Name="_CSM_MSG_TYPE.ctl" Type="VI" URL="../_Support/Typedef/_CSM_MSG_TYPE.ctl"/>
-			<Item Name="_CSM_MODE.ctl" Type="VI" URL="../_Support/Typedef/_CSM_MODE.ctl"/>
-			<Item Name="_CSM_NAME_REQUEST.ctl" Type="VI" URL="../_Support/Typedef/_CSM_NAME_REQUEST.ctl"/>
-			<Item Name="_CSM_Response Source Message.ctl" Type="VI" URL="../_Support/Typedef/_CSM_Response Source Message.ctl"/>
-			<Item Name="_CSM_Broadcast_Response_Message_info.ctl" Type="VI" URL="../_Support/Typedef/_CSM_Broadcast_Response_Message_info.ctl"/>
-			<Item Name="_CSM Status Change Event Data.ctl" Type="VI" URL="../_Support/Typedef/_CSM Status Change Event Data.ctl"/>
-			<Item Name="_CSM_GlobalLog_MSG.ctl" Type="VI" URL="../_Support/Typedef/_CSM_GlobalLog_MSG.ctl"/>
-			<Item Name="_CSM_GlobalLog_MSG_TYPE.ctl" Type="VI" URL="../_Support/Typedef/_CSM_GlobalLog_MSG_TYPE.ctl"/>
-			<Item Name="_CSM_GlobalLog_STATE_TYPE.ctl" Type="VI" URL="../_Support/Typedef/_CSM_GlobalLog_STATE_TYPE.ctl"/>
-			<Item Name="_CSM_GlobalLog Filter Rules - v1.0.ctl" Type="VI" URL="../_Support/Typedef/_CSM_GlobalLog Filter Rules - v1.0.ctl"/>
-			<Item Name="_CSM_GlobalLog Filter Rules - v1.1.ctl" Type="VI" URL="../_Support/Typedef/_CSM_GlobalLog Filter Rules - v1.1.ctl"/>
-			<Item Name="_CSM_List Module Scope.ctl" Type="VI" URL="../_Support/Typedef/_CSM_List Module Scope.ctl"/>
-		</Item>
-		<Item Name="NamingConvention" Type="Folder">
-			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
-			<Item Name="Naming Check.vi" Type="VI" URL="../_Support/Naming Check.vi"/>
 		</Item>
 		<Item Name="Message" Type="Folder">
 			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
