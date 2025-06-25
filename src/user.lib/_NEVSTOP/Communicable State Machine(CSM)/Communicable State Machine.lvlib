@@ -66,6 +66,7 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="_Cross CSM State Data.ctl" Type="VI" URL="../_Support/Typedef/_Cross CSM State Data.ctl"/>
 			<Item Name="_Cross CSM State Response.ctl" Type="VI" URL="../_Support/Typedef/_Cross CSM State Response.ctl"/>
 			<Item Name="_CSM_MSG_TYPE.ctl" Type="VI" URL="../_Support/Typedef/_CSM_MSG_TYPE.ctl"/>
+			<Item Name="_CSM_STATE_CALL_REASON.ctl" Type="VI" URL="../_Support/Typedef/_CSM_STATE_CALL_REASON.ctl"/>
 			<Item Name="_CSM_MODE.ctl" Type="VI" URL="../_Support/Typedef/_CSM_MODE.ctl"/>
 			<Item Name="_CSM_NAME_REQUEST.ctl" Type="VI" URL="../_Support/Typedef/_CSM_NAME_REQUEST.ctl"/>
 			<Item Name="_CSM_Response Source Message.ctl" Type="VI" URL="../_Support/Typedef/_CSM_Response Source Message.ctl"/>
