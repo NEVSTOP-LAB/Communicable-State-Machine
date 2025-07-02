@@ -7,4 +7,5 @@
 *.csmlog
 /*.lvcsm
 /.ignore
+*.$*.bkp
 /src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_popupMenuPlugin/_support/Default with Image/*
