@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-07-01 22:19:40" Creator="liyao" Comments="" ID="a669e37e1096dc581f5084d180688e32">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-07-08 22:22:06" Creator="liyao" Comments="" ID="f09707762dec2bc9b3aee31f475c1329">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
-    <Library_Version>2025.6.0.1</Library_Version>
+    <Library_Version>2025.7.0.1</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>src</Library_Source_Folder>
     <Library_Output_Folder>vip</Library_Output_Folder>
@@ -65,19 +65,7 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
       <Copyright/>
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
-      <Release_Notes>#Core
-[important] #437 #474 #472 #469 Align the life cycle of resources(Queue,User Event, DVR) of CSM to a background thread VI when CSM is started asynchronously. 
-
-#Arguments
-[update] #466 Add "Argument Token" concept, if user add a new argument type, use &lt;NewType&gt; as prefix to identify the argument type. Use "CSM - Argument Token.vi" to parse the argumen type.
-
-#Tools
-[update] #463 improve Debug Console, support operation of broadcasting status 
-[update] #467 Show speed of filtered log instead of counts
-[update] minor update #465
-
-#utility
-[add] #195 Add a utility VI to identify the state triggered reason(local-call, remote-call, status-callback)</Release_Notes>
+      <Release_Notes/>
     </Description>
     <Destinations>
       <Toolkit_VIs>
