@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-07-15 23:35:08" Creator="liyao" Comments="" ID="c547001fd9c4855369351bde0778a625">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-07-16 19:07:04" Creator="liyao" Comments="" ID="a540a144f8670d0f830a1556b1b19787">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2025.7.0.1</Library_Version>
@@ -66,7 +66,7 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
       <Release_Notes>##Core
-[important] #236 #475 #481 #482 #487 CSM Framework now support register state.
+[important] #236 #475 #481 #482 #487 #490 CSM Framework now support register state.
 
 ##API
 [update] #485 Add "Recursive" option for "CSM - List Submodules.vi"
