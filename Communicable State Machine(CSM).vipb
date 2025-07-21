@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-07-18 15:02:54" Creator="liyao" Comments="" ID="5a747a767e7d0ca53ae3075bd3e5344f">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-07-21 12:10:01" Creator="liyao" Comments="" ID="e6dba470a1660888d38ec236b9eab53d">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2025.7.0.1</Library_Version>
@@ -66,7 +66,7 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
       <Release_Notes>##Core
-[important] #236 #475 #481 #482 #487 #490 CSM Framework now support register state.
+[important] #236 #475 #481 #482 #487 #490 #491 CSM Framework now support register state.
 [important] #488 After "Macro: Initialize" is complete, CSM start to process external message.
 
 ##API
