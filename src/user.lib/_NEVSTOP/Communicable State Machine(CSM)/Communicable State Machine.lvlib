@@ -124,6 +124,7 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 				<Item Name="_CSMObj-Message Check.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Message Check.vi"/>
 				<Item Name="_CSMObj-Update CSMList.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Update CSMList.vi"/>
 				<Item Name="_CSMObj-Update ChainData.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Update ChainData.vi"/>
+				<Item Name="_CSMObj-Mark as Initialized.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Mark as Initialized.vi"/>
 				<Item Name="_CSMObj-Add Internal Registry Rule.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Add Internal Registry Rule.vi"/>
 				<Item Name="_CSMObj-Remove Internal Registry Rule.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Remove Internal Registry Rule.vi"/>
 				<Item Name="_CSMObj-Unregister Internal Registry Rules.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Unregister Internal Registry Rules.vi"/>
@@ -186,6 +187,8 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="global-Broadcast Cache Change Flag.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/global-Broadcast Cache Change Flag.vi"/>
 			<Item Name="global-CSMQ FGV Change Flag.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/global-CSMQ FGV Change Flag.vi"/>
 			<Item Name="Cache-Broadcast Registry Search Result.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/Cache-Broadcast Registry Search Result.vi"/>
+			<Item Name="Cache-BroadcastReg Status of Source.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/Cache-BroadcastReg Status of Source.vi"/>
+			<Item Name="Auto Broadcast State.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/Auto Broadcast State.vi"/>
 		</Item>
 		<Item Name="GlobalEvent" Type="Folder">
 			<Item Name="LogFilter" Type="Folder">

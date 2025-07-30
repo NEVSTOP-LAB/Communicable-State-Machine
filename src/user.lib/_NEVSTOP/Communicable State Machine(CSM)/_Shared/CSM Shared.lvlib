@@ -18,6 +18,9 @@
 		<Item Name="Parse Next Single-line.vi" Type="VI" URL="../Parse Next Single-line.vi"/>
 		<Item Name="Concatenate State with Arguments.vi" Type="VI" URL="../Concatenate State with Arguments.vi"/>
 		<Item Name="Concatenate State with Comments.vi" Type="VI" URL="../Concatenate State with Comments.vi"/>
+		<Item Name="Concatenate PostPostMsg Message.vi" Type="VI" URL="../Concatenate PostPostMsg Message.vi"/>
+		<Item Name="Replace LastResp Token.vi" Type="VI" URL="../Replace LastResp Token.vi"/>
+		<Item Name="Parse Action State After Exit.vi" Type="VI" URL="../Parse Action State After Exit.vi"/>
 	</Item>
 	<Item Name="CSM Tools" Type="Folder">
 		<Item Name="CSM - System States.vi" Type="VI" URL="../CSM - System States.vi"/>
@@ -34,6 +37,7 @@
 		<Item Name="Occurrence Speed Counter.vi" Type="VI" URL="../Occurrence Speed Counter.vi"/>
 		<Item Name="Debounced Signal.vi" Type="VI" URL="../Debounced Signal.vi"/>
 		<Item Name="Is Asynchronous Call.vi" Type="VI" URL="../Is Asynchronous Call.vi"/>
+		<Item Name="Concatenate Non-Empty Strings.vi" Type="VI" URL="../Concatenate Non-Empty Strings.vi"/>
 	</Item>
 	<Item Name="CSM Part Property at Cursor.vi" Type="VI" URL="../CSM Part Property at Cursor.vi"/>
 </Library>
