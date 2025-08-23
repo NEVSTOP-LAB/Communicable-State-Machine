@@ -1,0 +1,19 @@
+{
+  "organization": "NEVSTOP-LAB",
+  "default_days_back": 30,
+  "repositories_to_monitor": [
+    "Communicable-State-Machine",
+    "CSM-API-String-Arugments-Support",
+    "CSM-MassData-Parameter-Support",
+    "CSM-INI-Static-Variable-Support"
+  ],
+  "output_settings": {
+    "json_file": "stargazer_report.json",
+    "include_user_details": true,
+    "save_history": false
+  },
+  "api_settings": {
+    "rate_limit_delay": 1.0,
+    "max_retries": 3
+  }
+}

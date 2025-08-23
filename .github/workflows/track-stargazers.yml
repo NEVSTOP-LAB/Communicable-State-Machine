@@ -1,0 +1,92 @@
+name: Track Repository Stargazers
+
+on:
+  # Run weekly on Mondays at 9 AM UTC
+  schedule:
+    - cron: '0 9 * * 1'
+  
+  # Allow manual triggering
+  workflow_dispatch:
+    inputs:
+      days_back:
+        description: 'Number of days to look back for recent stars'
+        required: false
+        default: '7'
+        type: string
+      repositories:
+        description: 'Specific repositories to check (comma-separated, leave empty for all)'
+        required: false
+        default: ''
+        type: string
+
+jobs:
+  track-stargazers:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+    
+    - name: Install dependencies
+      run: |
+        cd scripts
+        pip install -r requirements.txt
+    
+    - name: Run stargazer tracker
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        cd scripts
+        
+        # Set parameters from workflow inputs or defaults
+        DAYS_BACK="${{ github.event.inputs.days_back || '7' }}"
+        REPOSITORIES="${{ github.event.inputs.repositories }}"
+        
+        # Build command
+        CMD="python stargazer_tracker.py --days $DAYS_BACK --output weekly_stargazer_report.json"
+        
+        # Add specific repositories if provided
+        if [ ! -z "$REPOSITORIES" ]; then
+          # Convert comma-separated to space-separated
+          REPO_LIST=$(echo $REPOSITORIES | tr ',' ' ')
+          CMD="$CMD --repos $REPO_LIST"
+        fi
+        
+        echo "Running: $CMD"
+        $CMD
+    
+    - name: Upload stargazer report
+      uses: actions/upload-artifact@v3
+      with:
+        name: stargazer-report-${{ github.run_number }}
+        path: scripts/weekly_stargazer_report.json
+        retention-days: 30
+    
+    - name: Comment on latest issue (optional)
+      if: success()
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        # This is optional - comment stargazer summary on the latest issue
+        # Uncomment the lines below if you want this feature
+        
+        # cd scripts
+        # LATEST_ISSUE=$(gh issue list --limit 1 --json number --jq '.[0].number')
+        # if [ ! -z "$LATEST_ISSUE" ]; then
+        #   echo "## 🌟 Weekly Stargazer Report" > comment.md
+        #   echo "" >> comment.md
+        #   echo "Here's the latest stargazer activity for our repositories:" >> comment.md
+        #   echo "" >> comment.md
+        #   echo "\`\`\`" >> comment.md
+        #   tail -20 weekly_stargazer_report.json >> comment.md
+        #   echo "\`\`\`" >> comment.md
+        #   echo "" >> comment.md
+        #   echo "Full report available in workflow artifacts." >> comment.md
+        #   
+        #   gh issue comment $LATEST_ISSUE --body-file comment.md
+        # fi

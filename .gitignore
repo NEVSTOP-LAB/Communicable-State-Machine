@@ -9,3 +9,9 @@
 /.ignore
 *.$*.bkp
 /src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_popupMenuPlugin/_support/Default with Image/*
+
+# Stargazer tracker output files
+/scripts/stargazer_report.json
+/scripts/*_stargazer_report.json
+/scripts/test_report*.json
+/scripts/demo_stargazer_report.json

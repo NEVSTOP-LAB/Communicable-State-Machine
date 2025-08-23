@@ -89,3 +89,18 @@ JKISM only supports the STRING TYPE as a parameter, but there is a wide variety 
 |[MassData](https://github.com/NEVSTOP-LAB/CSM-MassData-Parameter-Support) |Addons|Data will be converted to memory and saved in a circle buffer. Pass the StartPos with length as parameter. |
 |[API String Arguments](https://github.com/NEVSTOP-LAB/CSM-API-String-Arugments-Support) |Addons|Support plain string as CSM API parameter|
 |[INI Static Variable Support](https://github.com/NEVSTOP-LAB/CSM-INI-Static-Variable-Support)|Addons|offering ${variable} support for CSM|
+
+## Development Tools
+
+### Stargazer Tracker
+
+The repository includes a Python tool to track recent stargazers across NEVSTOP-LAB repositories. This helps monitor community engagement and growth.
+
+**Quick start:**
+```bash
+cd scripts
+pip install -r requirements.txt
+python stargazer_tracker.py --days 30
+```
+
+For detailed documentation, see [scripts/README.md](scripts/README.md).
