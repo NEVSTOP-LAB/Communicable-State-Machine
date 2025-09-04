@@ -12,6 +12,7 @@ on:
       - '**.drawio'
       - '**.vipb'
       - '**.png'
+      - '**.svg'
       - '**.json'
       - '**.yml'
       
@@ -24,6 +25,7 @@ on:
       - '**.drawio'
       - '**.vipb'
       - '**.png'
+      - '**.svg'
       - '**.json'
       - '**.yml'
 

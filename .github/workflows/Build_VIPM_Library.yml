@@ -14,10 +14,11 @@ on:
       - '**.txt'
       - '**.drawio'
       - '**.png'
+      - '**.svg'
       - '**.json'
+      - '**.yml'
       - 'src/testcases/**'
       - 'src/_TEST/**'
-      - '**.yml'
 
   push:
     paths-ignore:
@@ -25,10 +26,11 @@ on:
       - '**.txt'
       - '**.drawio'
       - '**.png'
+      - '**.svg'
       - '**.json'
+      - '**.yml'
       - 'src/testcases/**'
       - 'src/_TEST/**'
-      - '**.yml'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
