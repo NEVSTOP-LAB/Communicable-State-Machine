@@ -9,6 +9,15 @@ on:
     branches:
       - main
     types: [closed]
+    paths-ignore:
+      - '**.md'
+      - '**.txt'
+      - '**.drawio'
+      - '**.png'
+      - '**.json'
+      - 'src/testcases/**'
+      - 'src/_TEST/**'
+      - '**.yml'
 
   push:
     paths-ignore:
