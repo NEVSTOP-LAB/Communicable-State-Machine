@@ -56,8 +56,10 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="Parse Next Single-line State.vi" Type="VI" URL="../_Support/Common/Parse Next Single-line State.vi"/>
 			<Item Name="Concatenate State with Arguments.vi" Type="VI" URL="../_Support/Common/Concatenate State with Arguments.vi"/>
 		</Item>
+		<Item Name="Typedef" Type="Folder"/>
 		<Item Name="CSM - Filter Duplicate Messages By Name.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter Duplicate Messages By Name.vi"/>
 		<Item Name="CSM - Remove Duplicated Following Messages.vi" Type="VI" URL="../AdvanceAPI/CSM - Remove Duplicated Following Messages.vi"/>
+		<Item Name="ResMgr-RequestDef.ctl" Type="VI" URL="../_Support/ResMgr/ResMgr-RequestDef.ctl"/>
 	</Item>
 	<Item Name="Support" Type="Folder">
 		<Property Name="NI.SortType" Type="Int">3</Property>
@@ -168,9 +170,9 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 					<Item Name="ResMgr-Request SharedDataDVR.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-Request SharedDataDVR.vi"/>
 					<Item Name="ResMgr-Request NewStateEvent.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-Request NewStateEvent.vi"/>
 				</Item>
+				<Item Name="ResMgr-RequestDef.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-RequestDef.vi"/>
 				<Item Name="ResMgr-BackgroundThread.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-BackgroundThread.vi"/>
 				<Item Name="ResMgr-WatchdogThread.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-WatchdogThread.vi"/>
-				<Item Name="ResMgr-RequestDef.ctl" Type="VI" URL="../_Support/ResMgr/ResMgr-RequestDef.ctl"/>
 				<Item Name="ResMgr-StartWatchDog.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-StartWatchDog.vi"/>
 				<Item Name="ResMgr-ObtainBKThreadQ.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-ObtainBKThreadQ.vi"/>
 			</Item>
