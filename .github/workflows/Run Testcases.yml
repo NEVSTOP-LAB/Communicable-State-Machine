@@ -15,10 +15,11 @@ on:
       - '**.svg'
       - '**.json'
       - '**.yml'
-      
+
   pull_request:
     branches:
       - main
+    types: [closed]
     paths-ignore:
       - '**.md'
       - '**.txt'

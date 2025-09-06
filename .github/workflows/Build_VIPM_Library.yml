@@ -5,10 +5,7 @@ name: Build_VIPM_Library
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
-  pull_request:
-    branches:
-      - main
-    types: [closed]
+  push:
     paths-ignore:
       - '**.md'
       - '**.txt'
@@ -20,7 +17,10 @@ on:
       - 'src/testcases/**'
       - 'src/_TEST/**'
 
-  push:
+  pull_request:
+    branches:
+      - main
+    types: [closed]
     paths-ignore:
       - '**.md'
       - '**.txt'
