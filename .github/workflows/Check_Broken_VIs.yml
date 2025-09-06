@@ -43,7 +43,7 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - id: Check_Broken_VIs
-        uses: LV-APT/lvCICD@main
+        uses: NEVSTOP-LAB/lvCICD@main
         with:
           LabVIEW_Version: 2017
           Operation: VIAn_CheckBrokenVIs
