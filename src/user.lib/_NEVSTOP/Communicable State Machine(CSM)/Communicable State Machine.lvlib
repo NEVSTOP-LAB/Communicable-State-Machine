@@ -97,6 +97,12 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="NamingConvention" Type="Folder">
 				<Item Name="Naming Check.vi" Type="VI" URL="../_Support/Naming Check.vi"/>
 			</Item>
+			<Item Name="ChangeFlag" Type="Folder">
+				<Item Name="ChangeFlagDB.vi" Type="VI" URL="../_Support/ChangeFlag/ChangeFlagDB.vi"/>
+				<Item Name="ChangeFlag-Read.vi" Type="VI" URL="../_Support/ChangeFlag/ChangeFlag-Read.vi"/>
+				<Item Name="ChangeFlag-Write.vi" Type="VI" URL="../_Support/ChangeFlag/ChangeFlag-Write.vi"/>
+				<Item Name="CSMQ FGV Change Flag Name.vi" Type="VI" URL="../_Support/ChangeFlag/CSMQ FGV Change Flag Name.vi"/>
+			</Item>
 			<Item Name="CSM-Name to CSM-Mode.vi" Type="VI" URL="../_Support/Common/CSM-Name to CSM-Mode.vi"/>
 			<Item Name="Hex Str to U8 Data.vi" Type="VI" URL="../_Support/Common/Hex Str to U8 Data.vi"/>
 			<Item Name="U8 Data to Hex Str.vi" Type="VI" URL="../_Support/Common/U8 Data to Hex Str.vi"/>
