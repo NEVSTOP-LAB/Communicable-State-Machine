@@ -84,10 +84,24 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 		<Item Name="Common" Type="Folder">
 			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 			<Item Name="Priority Queue" Type="Folder">
-				<Item Name="Priority Queue.lvclass" Type="LVClass" URL="../_Support/Priority Queue/Priority Queue.lvclass"/>
+				<Item Name="Priority Queue.ctl" Type="VI" URL="../_Support/Priority Queue/Priority Queue.ctl"/>
+				<Item Name="def-Data(LowPRI-Q).ctl" Type="VI" URL="../_Support/Priority Queue/def-Data(LowPRI-Q).ctl"/>
+				<Item Name="Obtain Priority Queue.vi" Type="VI" URL="../_Support/Priority Queue/Obtain Priority Queue.vi"/>
+				<Item Name="Dequeue Element.vi" Type="VI" URL="../_Support/Priority Queue/Dequeue Element.vi"/>
+				<Item Name="Enqueue Element.vi" Type="VI" URL="../_Support/Priority Queue/Enqueue Element.vi"/>
+				<Item Name="Not a Refnum.vi" Type="VI" URL="../_Support/Priority Queue/Not a Refnum.vi"/>
+				<Item Name="Get Queue Status.vi" Type="VI" URL="../_Support/Priority Queue/Get Queue Status.vi"/>
+				<Item Name="Flush Queue.vi" Type="VI" URL="../_Support/Priority Queue/Flush Queue.vi"/>
+				<Item Name="Release Priority Queue.vi" Type="VI" URL="../_Support/Priority Queue/Release Priority Queue.vi"/>
 			</Item>
 			<Item Name="NamingConvention" Type="Folder">
 				<Item Name="Naming Check.vi" Type="VI" URL="../_Support/Naming Check.vi"/>
+			</Item>
+			<Item Name="ChangeFlag" Type="Folder">
+				<Item Name="ChangeFlagDB.vi" Type="VI" URL="../_Support/ChangeFlag/ChangeFlagDB.vi"/>
+				<Item Name="ChangeFlag-Read.vi" Type="VI" URL="../_Support/ChangeFlag/ChangeFlag-Read.vi"/>
+				<Item Name="ChangeFlag-Write.vi" Type="VI" URL="../_Support/ChangeFlag/ChangeFlag-Write.vi"/>
+				<Item Name="CSMQ FGV Change Flag Name.vi" Type="VI" URL="../_Support/ChangeFlag/CSMQ FGV Change Flag Name.vi"/>
 			</Item>
 			<Item Name="CSM-Name to CSM-Mode.vi" Type="VI" URL="../_Support/Common/CSM-Name to CSM-Mode.vi"/>
 			<Item Name="Hex Str to U8 Data.vi" Type="VI" URL="../_Support/Common/Hex Str to U8 Data.vi"/>
