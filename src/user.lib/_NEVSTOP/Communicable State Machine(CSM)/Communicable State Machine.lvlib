@@ -168,15 +168,6 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 				<Item Name="CSMOMgr-Update CSMO.vi" Type="VI" URL="../_Support/CSMOMgr/CSMOMgr-Update CSMO.vi"/>
 				<Item Name="CSMOMgr-Delete CSMO.vi" Type="VI" URL="../_Support/CSMOMgr/CSMOMgr-Delete CSMO.vi"/>
 			</Item>
-			<Item Name="CSMOFGV" Type="Folder">
-				<Item Name="_CSMOFGV.vi" Type="VI" URL="../_Support/CSMQ/_CSMOFGV.vi"/>
-				<Item Name="_CSMOFGVOPER.ctl" Type="VI" URL="../_Support/CSMQ/_CSMOFGVOPER.ctl"/>
-				<Item Name="_CSMOFGV Obtain.vi" Type="VI" URL="../_Support/CSMQ/_CSMOFGV Obtain.vi"/>
-				<Item Name="_CSMOFGV Get.vi" Type="VI" URL="../_Support/CSMQ/_CSMOFGV Get.vi"/>
-				<Item Name="_CSMOFGV TagMap.vi" Type="VI" URL="../_Support/CSMQ/_CSMOFGV TagMap.vi"/>
-				<Item Name="_CSMOFGV Dequeue.vi" Type="VI" URL="../_Support/CSMQ/_CSMOFGV Dequeue.vi"/>
-				<Item Name="_CSMOFGV Release.vi" Type="VI" URL="../_Support/CSMQ/_CSMOFGV Release.vi"/>
-			</Item>
 			<Item Name="CSM-Process" Type="Folder">
 				<Item Name="CSMP-Sync Call.vi" Type="VI" URL="../_Support/Process/CSMP-Sync Call.vi"/>
 				<Item Name="CSMP-Async Call.vi" Type="VI" URL="../_Support/Process/CSMP-Async Call.vi"/>
@@ -208,6 +199,17 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 				<Item Name="CSMKVMap-Write.vi" Type="VI" URL="../CSMKVMap-Write.vi"/>
 			</Item>
 			<Item Name="FGV-StatusChangeEventRef.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-StatusChangeEventRef.vi"/>
+		</Item>
+		<Item Name="CSMOFGV" Type="Folder">
+			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
+			<Item Name="_CSMOFGV.vi" Type="VI" URL="../_Support/CSMQ/_CSMOFGV.vi"/>
+			<Item Name="_CSMOFGV(lvlibp).vi" Type="VI" URL="../_Support/CSMQ/_CSMOFGV(lvlibp).vi"/>
+			<Item Name="_CSMOFGVOPER.ctl" Type="VI" URL="../_Support/CSMQ/_CSMOFGVOPER.ctl"/>
+			<Item Name="_CSMOFGV Obtain.vi" Type="VI" URL="../_Support/CSMQ/_CSMOFGV Obtain.vi"/>
+			<Item Name="_CSMOFGV Get.vi" Type="VI" URL="../_Support/CSMQ/_CSMOFGV Get.vi"/>
+			<Item Name="_CSMOFGV TagMap.vi" Type="VI" URL="../_Support/CSMQ/_CSMOFGV TagMap.vi"/>
+			<Item Name="_CSMOFGV Dequeue.vi" Type="VI" URL="../_Support/CSMQ/_CSMOFGV Dequeue.vi"/>
+			<Item Name="_CSMOFGV Release.vi" Type="VI" URL="../_Support/CSMQ/_CSMOFGV Release.vi"/>
 		</Item>
 		<Item Name="BroadcastRegistry" Type="Folder">
 			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
