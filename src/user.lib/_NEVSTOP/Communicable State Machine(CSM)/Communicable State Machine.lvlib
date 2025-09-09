@@ -109,10 +109,14 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 				<Item Name="FlagInstance-GEvt Filter.vi" Type="VI" URL="../_Support/ChangeFlag/FlagInstance-GEvt Filter.vi"/>
 				<Item Name="FlagInstance-Update GEvt Refs.vi" Type="VI" URL="../_Support/ChangeFlag/FlagInstance-Update GEvt Refs.vi"/>
 				<Item Name="FlagInstance-GEvt Refs.vi" Type="VI" URL="../_Support/ChangeFlag/FlagInstance-GEvt Refs.vi"/>
+				<Item Name="FlagInstance-Update CSMKVMap.vi" Type="VI" URL="../_Support/ChangeFlag/FlagInstance-Update CSMKVMap.vi"/>
+				<Item Name="FlagInstance-CSMKVMap.vi" Type="VI" URL="../_Support/ChangeFlag/FlagInstance-CSMKVMap.vi"/>
 			</Item>
-			<Item Name="CSM-Name to CSM-Mode.vi" Type="VI" URL="../_Support/Common/CSM-Name to CSM-Mode.vi"/>
-			<Item Name="Hex Str to U8 Data.vi" Type="VI" URL="../_Support/Common/Hex Str to U8 Data.vi"/>
-			<Item Name="U8 Data to Hex Str.vi" Type="VI" URL="../_Support/Common/U8 Data to Hex Str.vi"/>
+			<Item Name="Utils" Type="Folder">
+				<Item Name="Hex Str to U8 Data.vi" Type="VI" URL="../_Support/Common/Hex Str to U8 Data.vi"/>
+				<Item Name="U8 Data to Hex Str.vi" Type="VI" URL="../_Support/Common/U8 Data to Hex Str.vi"/>
+				<Item Name="CSM-Name to CSM-Mode.vi" Type="VI" URL="../_Support/Common/CSM-Name to CSM-Mode.vi"/>
+			</Item>
 		</Item>
 		<Item Name="CSM-Core" Type="Folder">
 			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
@@ -190,12 +194,18 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 					<Item Name="ResMgr-Request StatusEvent.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-Request StatusEvent.vi"/>
 					<Item Name="ResMgr-Request SharedDataDVR.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-Request SharedDataDVR.vi"/>
 					<Item Name="ResMgr-Request NewStateEvent.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-Request NewStateEvent.vi"/>
+					<Item Name="ResMgr-Request KVMap.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-Request KVMap.vi"/>
 				</Item>
 				<Item Name="ResMgr-RequestDef.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-RequestDef.vi"/>
 				<Item Name="ResMgr-BackgroundThread.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-BackgroundThread.vi"/>
 				<Item Name="ResMgr-WatchdogThread.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-WatchdogThread.vi"/>
 				<Item Name="ResMgr-StartWatchDog.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-StartWatchDog.vi"/>
 				<Item Name="ResMgr-ObtainBKThreadQ.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-ObtainBKThreadQ.vi"/>
+			</Item>
+			<Item Name="CSMKVMap" Type="Folder">
+				<Item Name="CSMKVMapDVR.vi" Type="VI" URL="../_Support/CSMKVMap/CSMKVMapDVR.vi"/>
+				<Item Name="CSMKVMap-Read.vi" Type="VI" URL="../CSMKVMap-Read.vi"/>
+				<Item Name="CSMKVMap-Write.vi" Type="VI" URL="../CSMKVMap-Write.vi"/>
 			</Item>
 			<Item Name="FGV-StatusChangeEventRef.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-StatusChangeEventRef.vi"/>
 		</Item>
