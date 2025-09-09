@@ -496,6 +496,9 @@
 			<Item Name="mxLvSetPopupMenu.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/API/mxLvSetPopupMenu.vi"/>
 			<Item Name="Global_Interface.ctl" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/API/Global_Interface.ctl"/>
 			<Item Name="Item_Interface.ctl" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/API/Item_Interface.ctl"/>
+			<Item Name="Priority Queue.ctl" Type="VI" URL="../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_Support/Priority Queue/Priority Queue.lvclass/Priority Queue.ctl"/>
+			<Item Name="global-CSMQ FGV Change Flag.vi" Type="VI" URL="../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_Support/FGV-BroadcastRegistry/global-CSMQ FGV Change Flag.vi"/>
+			<Item Name="global-GEvnt Filter Change Flag.vi" Type="VI" URL="../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_Support/GlobalEvent/global-GEvnt Filter Change Flag.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Communicable State Machine.lvlibp" Type="Packed Library">

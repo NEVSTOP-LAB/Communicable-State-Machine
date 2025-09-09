@@ -60,8 +60,7 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 		<Item Name="CSM - Filter Duplicate Messages By Name.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter Duplicate Messages By Name.vi"/>
 		<Item Name="CSM - Remove Duplicated Following Messages.vi" Type="VI" URL="../AdvanceAPI/CSM - Remove Duplicated Following Messages.vi"/>
 		<Item Name="ResMgr-RequestDef.ctl" Type="VI" URL="../_Support/ResMgr/ResMgr-RequestDef.ctl"/>
-		<Item Name="global-CSMQ FGV Change Flag.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/global-CSMQ FGV Change Flag.vi"/>
-		<Item Name="global-Broadcast Cache Change Flag.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/global-Broadcast Cache Change Flag.vi"/>
+		<Item Name="global-GEvt Refs Change Flag.vi" Type="VI" URL="../_Support/GlobalEvent/global-GEvt Refs Change Flag.vi"/>
 	</Item>
 	<Item Name="Support" Type="Folder">
 		<Property Name="NI.SortType" Type="Int">3</Property>
@@ -107,6 +106,8 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 				<Item Name="FlagInstance-CSMQ FGV.vi" Type="VI" URL="../_Support/ChangeFlag/FlagInstance-CSMQ FGV.vi"/>
 				<Item Name="FlagInstance-Update Broadcast Cache.vi" Type="VI" URL="../_Support/ChangeFlag/FlagInstance-Update Broadcast Cache.vi"/>
 				<Item Name="FlagInstance-Broadcast Cache.vi" Type="VI" URL="../_Support/ChangeFlag/FlagInstance-Broadcast Cache.vi"/>
+				<Item Name="FlagInstance-Update GEvt Filter.vi" Type="VI" URL="../_Support/ChangeFlag/FlagInstance-Update GEvt Filter.vi"/>
+				<Item Name="FlagInstance-GEvt Filter.vi" Type="VI" URL="../_Support/ChangeFlag/FlagInstance-GEvt Filter.vi"/>
 			</Item>
 			<Item Name="CSM-Name to CSM-Mode.vi" Type="VI" URL="../_Support/Common/CSM-Name to CSM-Mode.vi"/>
 			<Item Name="Hex Str to U8 Data.vi" Type="VI" URL="../_Support/Common/Hex Str to U8 Data.vi"/>
@@ -231,8 +232,6 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			</Item>
 			<Item Name="GEvt-Refs.ctl" Type="VI" URL="../_Support/GlobalEvent/GEvt-Refs.ctl"/>
 			<Item Name="FGV-GEvt Refs.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GEvt Refs.vi"/>
-			<Item Name="global-GEvnt Filter Change Flag.vi" Type="VI" URL="../_Support/GlobalEvent/global-GEvnt Filter Change Flag.vi"/>
-			<Item Name="global-GEvt Refs Change Flag.vi" Type="VI" URL="../_Support/GlobalEvent/global-GEvt Refs Change Flag.vi"/>
 			<Item Name="Cache-GEvt Filter Object.vi" Type="VI" URL="../_Support/GlobalEvent/Cache-GEvt Filter Object.vi"/>
 			<Item Name="FGV-GlobalEventRef.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GlobalEventRef.vi"/>
 			<Item Name="FGV-GlobalEventQueues.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GlobalEventQueues.vi"/>
