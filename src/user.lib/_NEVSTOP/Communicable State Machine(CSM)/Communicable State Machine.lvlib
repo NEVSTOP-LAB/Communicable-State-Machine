@@ -60,6 +60,7 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 		<Item Name="CSM - Filter Duplicate Messages By Name.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter Duplicate Messages By Name.vi"/>
 		<Item Name="CSM - Remove Duplicated Following Messages.vi" Type="VI" URL="../AdvanceAPI/CSM - Remove Duplicated Following Messages.vi"/>
 		<Item Name="ResMgr-RequestDef.ctl" Type="VI" URL="../_Support/ResMgr/ResMgr-RequestDef.ctl"/>
+		<Item Name="global-CSMQ FGV Change Flag.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/global-CSMQ FGV Change Flag.vi"/>
 	</Item>
 	<Item Name="Support" Type="Folder">
 		<Property Name="NI.SortType" Type="Int">3</Property>
@@ -101,7 +102,8 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 				<Item Name="ChangeFlagDB.vi" Type="VI" URL="../_Support/ChangeFlag/ChangeFlagDB.vi"/>
 				<Item Name="ChangeFlag-Read.vi" Type="VI" URL="../_Support/ChangeFlag/ChangeFlag-Read.vi"/>
 				<Item Name="ChangeFlag-Write.vi" Type="VI" URL="../_Support/ChangeFlag/ChangeFlag-Write.vi"/>
-				<Item Name="CSMQ FGV Change Flag Name.vi" Type="VI" URL="../_Support/ChangeFlag/CSMQ FGV Change Flag Name.vi"/>
+				<Item Name="FlagInstance-Update CSMQ FGV.vi" Type="VI" URL="../_Support/ChangeFlag/FlagInstance-Update CSMQ FGV.vi"/>
+				<Item Name="FlagInstance-CSMQ FGV.vi" Type="VI" URL="../_Support/ChangeFlag/FlagInstance-CSMQ FGV.vi"/>
 			</Item>
 			<Item Name="CSM-Name to CSM-Mode.vi" Type="VI" URL="../_Support/Common/CSM-Name to CSM-Mode.vi"/>
 			<Item Name="Hex Str to U8 Data.vi" Type="VI" URL="../_Support/Common/Hex Str to U8 Data.vi"/>
@@ -201,7 +203,6 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="FGV-BroadcastRegistry.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/FGV-BroadcastRegistry.vi"/>
 			<Item Name="Operation-BroadcastRegistry.ctl" Type="VI" URL="../_Support/FGV-BroadcastRegistry/Operation-BroadcastRegistry.ctl"/>
 			<Item Name="global-Broadcast Cache Change Flag.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/global-Broadcast Cache Change Flag.vi"/>
-			<Item Name="global-CSMQ FGV Change Flag.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/global-CSMQ FGV Change Flag.vi"/>
 			<Item Name="Cache-Broadcast Registry Search Result.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/Cache-Broadcast Registry Search Result.vi"/>
 			<Item Name="Cache-BroadcastReg Status of Source.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/Cache-BroadcastReg Status of Source.vi"/>
 			<Item Name="Auto Broadcast State.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/Auto Broadcast State.vi"/>
