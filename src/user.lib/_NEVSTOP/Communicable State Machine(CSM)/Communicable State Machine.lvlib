@@ -60,7 +60,6 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 		<Item Name="CSM - Filter Duplicate Messages By Name.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter Duplicate Messages By Name.vi"/>
 		<Item Name="CSM - Remove Duplicated Following Messages.vi" Type="VI" URL="../AdvanceAPI/CSM - Remove Duplicated Following Messages.vi"/>
 		<Item Name="ResMgr-RequestDef.ctl" Type="VI" URL="../_Support/ResMgr/ResMgr-RequestDef.ctl"/>
-		<Item Name="global-GEvt Refs Change Flag.vi" Type="VI" URL="../_Support/GlobalEvent/global-GEvt Refs Change Flag.vi"/>
 	</Item>
 	<Item Name="Support" Type="Folder">
 		<Property Name="NI.SortType" Type="Int">3</Property>
@@ -108,6 +107,8 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 				<Item Name="FlagInstance-Broadcast Cache.vi" Type="VI" URL="../_Support/ChangeFlag/FlagInstance-Broadcast Cache.vi"/>
 				<Item Name="FlagInstance-Update GEvt Filter.vi" Type="VI" URL="../_Support/ChangeFlag/FlagInstance-Update GEvt Filter.vi"/>
 				<Item Name="FlagInstance-GEvt Filter.vi" Type="VI" URL="../_Support/ChangeFlag/FlagInstance-GEvt Filter.vi"/>
+				<Item Name="FlagInstance-Update GEvt Refs.vi" Type="VI" URL="../_Support/ChangeFlag/FlagInstance-Update GEvt Refs.vi"/>
+				<Item Name="FlagInstance-GEvt Refs.vi" Type="VI" URL="../_Support/ChangeFlag/FlagInstance-GEvt Refs.vi"/>
 			</Item>
 			<Item Name="CSM-Name to CSM-Mode.vi" Type="VI" URL="../_Support/Common/CSM-Name to CSM-Mode.vi"/>
 			<Item Name="Hex Str to U8 Data.vi" Type="VI" URL="../_Support/Common/Hex Str to U8 Data.vi"/>
