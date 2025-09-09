@@ -262,8 +262,8 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="GEvt-Refs.ctl" Type="VI" URL="../_Support/GlobalEvent/GEvt-Refs.ctl"/>
 			<Item Name="FGV-GEvt Refs.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GEvt Refs.vi"/>
 			<Item Name="FGV-GEvt Refs(lvlibp).vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GEvt Refs(lvlibp).vi"/>
-			<Item Name="FGV-GEvt Filter Obj.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GEvt Filter Obj.vi"/>
-			<Item Name="FGV-GEvt Filter Obj(lvlibp).vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GEvt Filter Obj(lvlibp).vi"/>
+			<Item Name="FGV-GEvt Filter Rules.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GEvt Filter Rules.vi"/>
+			<Item Name="FGV-GEvt Filter Rules(lvlibp).vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GEvt Filter Rules(lvlibp).vi"/>
 			<Item Name="Cache-GEvt Filter Object.vi" Type="VI" URL="../_Support/GlobalEvent/Cache-GEvt Filter Object.vi"/>
 			<Item Name="Cache-GlobalEventRef.vi" Type="VI" URL="../_Support/GlobalEvent/Cache-GlobalEventRef.vi"/>
 			<Item Name="Cache-GlobalEventQueues.vi" Type="VI" URL="../_Support/GlobalEvent/Cache-GlobalEventQueues.vi"/>
