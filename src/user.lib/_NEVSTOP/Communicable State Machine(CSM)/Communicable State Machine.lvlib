@@ -212,13 +212,32 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 		</Item>
 		<Item Name="BroadcastRegistry" Type="Folder">
 			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
-			<Item Name="BroadcastRegistry.lvclass" Type="LVClass" URL="../_Support/BroadcastRegistry/BroadcastRegistry.lvclass"/>
+			<Item Name="ObjectInterface" Type="Folder">
+				<Item Name="HelperVI" Type="Folder">
+					<Item Name="Preview.vi" Type="VI" URL="../_Support/BroadcastRegistry/HelperVI/Preview.vi"/>
+					<Item Name="Broadcast Item Key.vi" Type="VI" URL="../_Support/BroadcastRegistry/HelperVI/Broadcast Item Key.vi"/>
+					<Item Name="Remove response API from List.vi" Type="VI" URL="../_Support/BroadcastRegistry/HelperVI/Remove response API from List.vi"/>
+				</Item>
+				<Item Name="API" Type="Folder">
+					<Item Name="Initialize.vi" Type="VI" URL="../_Support/BroadcastRegistry/Initialize.vi"/>
+					<Item Name="Register.vi" Type="VI" URL="../_Support/BroadcastRegistry/Register.vi"/>
+					<Item Name="Unregister.vi" Type="VI" URL="../_Support/BroadcastRegistry/Unregister.vi"/>
+					<Item Name="List Status in Registry.vi" Type="VI" URL="../_Support/BroadcastRegistry/List Status in Registry.vi"/>
+					<Item Name="List Status Of Source Module.vi" Type="VI" URL="../_Support/BroadcastRegistry/List Status Of Source Module.vi"/>
+					<Item Name="List Entries.vi" Type="VI" URL="../_Support/BroadcastRegistry/List Entries.vi"/>
+					<Item Name="Check.vi" Type="VI" URL="../_Support/BroadcastRegistry/Check.vi"/>
+					<Item Name="Delete Source Module.vi" Type="VI" URL="../_Support/BroadcastRegistry/Delete Source Module.vi"/>
+					<Item Name="Delete Target Module.vi" Type="VI" URL="../_Support/BroadcastRegistry/Delete Target Module.vi"/>
+					<Item Name="Remove Module.vi" Type="VI" URL="../_Support/BroadcastRegistry/Remove Module.vi"/>
+				</Item>
+			</Item>
 			<Item Name="FGV-BroadcastRegistry.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/FGV-BroadcastRegistry.vi"/>
 			<Item Name="FGV-BroadcastRegistry(lvlibp).vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/FGV-BroadcastRegistry(lvlibp).vi"/>
 			<Item Name="Operation-BroadcastRegistry.ctl" Type="VI" URL="../_Support/FGV-BroadcastRegistry/Operation-BroadcastRegistry.ctl"/>
 			<Item Name="Cache-Broadcast Registry Search Result.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/Cache-Broadcast Registry Search Result.vi"/>
 			<Item Name="Cache-BroadcastReg Status of Source.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/Cache-BroadcastReg Status of Source.vi"/>
 			<Item Name="Auto Broadcast State.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/Auto Broadcast State.vi"/>
+			<Item Name="BroadcastRegistry.ctl" Type="VI" URL="../_Support/BroadcastRegistry/BroadcastRegistry.ctl"/>
 		</Item>
 		<Item Name="GlobalEvent" Type="Folder">
 			<Item Name="LogFilter" Type="Folder">
