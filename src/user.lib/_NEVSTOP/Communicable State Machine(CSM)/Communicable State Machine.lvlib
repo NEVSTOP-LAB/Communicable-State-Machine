@@ -198,7 +198,6 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 				<Item Name="CSMKVMap-Read.vi" Type="VI" URL="../CSMKVMap-Read.vi"/>
 				<Item Name="CSMKVMap-Write.vi" Type="VI" URL="../CSMKVMap-Write.vi"/>
 			</Item>
-			<Item Name="FGV-StatusChangeEventRef.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-StatusChangeEventRef.vi"/>
 		</Item>
 		<Item Name="CSMOFGV" Type="Folder">
 			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
@@ -214,9 +213,6 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 		<Item Name="BroadcastRegistry" Type="Folder">
 			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 			<Item Name="BroadcastRegistry.lvclass" Type="LVClass" URL="../_Support/BroadcastRegistry/BroadcastRegistry.lvclass"/>
-		</Item>
-		<Item Name="FGV-BroadcastRegistry" Type="Folder">
-			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 			<Item Name="FGV-BroadcastRegistry.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/FGV-BroadcastRegistry.vi"/>
 			<Item Name="FGV-BroadcastRegistry(lvlibp).vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/FGV-BroadcastRegistry(lvlibp).vi"/>
 			<Item Name="Operation-BroadcastRegistry.ctl" Type="VI" URL="../_Support/FGV-BroadcastRegistry/Operation-BroadcastRegistry.ctl"/>
@@ -247,11 +243,13 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="GEvt-Refs.ctl" Type="VI" URL="../_Support/GlobalEvent/GEvt-Refs.ctl"/>
 			<Item Name="FGV-GEvt Refs.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GEvt Refs.vi"/>
 			<Item Name="FGV-GEvt Refs(lvlibp).vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GEvt Refs(lvlibp).vi"/>
-			<Item Name="Cache-GEvt Filter Object.vi" Type="VI" URL="../_Support/GlobalEvent/Cache-GEvt Filter Object.vi"/>
-			<Item Name="FGV-GlobalEventRef.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GlobalEventRef.vi"/>
-			<Item Name="FGV-GlobalEventQueues.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GlobalEventQueues.vi"/>
-			<Item Name="GEvt-Valid Subscribers.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Valid Subscribers.vi"/>
 			<Item Name="FGV-GEvt Filter Obj.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GEvt Filter Obj.vi"/>
+			<Item Name="FGV-GEvt Filter Obj(lvlibp).vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GEvt Filter Obj(lvlibp).vi"/>
+			<Item Name="Cache-GEvt Filter Object.vi" Type="VI" URL="../_Support/GlobalEvent/Cache-GEvt Filter Object.vi"/>
+			<Item Name="Cache-GlobalEventRef.vi" Type="VI" URL="../_Support/GlobalEvent/Cache-GlobalEventRef.vi"/>
+			<Item Name="Cache-GlobalEventQueues.vi" Type="VI" URL="../_Support/GlobalEvent/Cache-GlobalEventQueues.vi"/>
+			<Item Name="Cache-StatusChangeEventRef.vi" Type="VI" URL="../_Support/GlobalEvent/Cache-StatusChangeEventRef.vi"/>
+			<Item Name="GEvt-Valid Subscribers.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Valid Subscribers.vi"/>
 			<Item Name="GEvt-Generate Complete Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate Complete Log.vi"/>
 			<Item Name="GEvt-Generate State Change Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate State Change Log.vi"/>
 			<Item Name="GEvt-Generate Remaining States Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate Remaining States Log.vi"/>
