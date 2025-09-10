@@ -196,8 +196,9 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			</Item>
 			<Item Name="CSMKVMap" Type="Folder">
 				<Item Name="CSMKVMapDVR.vi" Type="VI" URL="../_Support/CSMKVMap/CSMKVMapDVR.vi"/>
-				<Item Name="CSMKVMap-Read.vi" Type="VI" URL="../CSMKVMap-Read.vi"/>
-				<Item Name="CSMKVMap-Write.vi" Type="VI" URL="../CSMKVMap-Write.vi"/>
+				<Item Name="CSMKVMap-Read.vi" Type="VI" URL="../_Support/CSMKVMap/CSMKVMap-Read.vi"/>
+				<Item Name="CSMKVMap-Write.vi" Type="VI" URL="../_Support/CSMKVMap/CSMKVMap-Write.vi"/>
+				<Item Name="Cache-CSMKVMapDVR.vi" Type="VI" URL="../_Support/CSMKVMap/Cache-CSMKVMapDVR.vi"/>
 			</Item>
 		</Item>
 		<Item Name="CSMOFGV" Type="Folder">
