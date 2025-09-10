@@ -186,6 +186,7 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 					<Item Name="ResMgr-Request SharedDataDVR.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-Request SharedDataDVR.vi"/>
 					<Item Name="ResMgr-Request NewStateEvent.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-Request NewStateEvent.vi"/>
 					<Item Name="ResMgr-Request KVMap.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-Request KVMap.vi"/>
+					<Item Name="ResMgr-Request GlobalLogEvent.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-Request GlobalLogEvent.vi"/>
 				</Item>
 				<Item Name="ResMgr-RequestDef.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-RequestDef.vi"/>
 				<Item Name="ResMgr-BackgroundThread.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-BackgroundThread.vi"/>
@@ -253,21 +254,16 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 				<Item Name="GEvt-Convert Filter Rules - Periodic Setting Only.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Convert Filter Rules - Periodic Setting Only.vi"/>
 				<Item Name="GEvt-Set Source Filter Rules - v1.0.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Set Source Filter Rules - v1.0.vi"/>
 			</Item>
-			<Item Name="ResourceMgr2" Type="Folder">
-				<Item Name="Gevt-ThreadQueueName.vi" Type="VI" URL="../_Support/GlobalEvent/Gevt-ThreadQueueName.vi"/>
-				<Item Name="GEvt-BackgroundThread.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-BackgroundThread.vi"/>
-				<Item Name="GEvt-RequestDef.ctl" Type="VI" URL="../_Support/GlobalEvent/GEvt-RequestDef.ctl"/>
-				<Item Name="GEvt-WatchdogThread.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-WatchdogThread.vi"/>
-			</Item>
 			<Item Name="GEvt-Refs.ctl" Type="VI" URL="../_Support/GlobalEvent/GEvt-Refs.ctl"/>
-			<Item Name="FGV-GEvt Refs.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GEvt Refs.vi"/>
-			<Item Name="FGV-GEvt Refs(lvlibp).vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GEvt Refs(lvlibp).vi"/>
+			<Item Name="Cache-GEvt Refs.vi" Type="VI" URL="../_Support/GlobalEvent/Cache-GEvt Refs.vi"/>
+			<Item Name="Cache-GEvt Filter Object.vi" Type="VI" URL="../_Support/GlobalEvent/Cache-GEvt Filter Object.vi"/>
+			<Item Name="Cache-StatusChangeEventRef.vi" Type="VI" URL="../_Support/GlobalEvent/Cache-StatusChangeEventRef.vi"/>
 			<Item Name="FGV-GEvt Filter Rules.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GEvt Filter Rules.vi"/>
 			<Item Name="FGV-GEvt Filter Rules(lvlibp).vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GEvt Filter Rules(lvlibp).vi"/>
-			<Item Name="Cache-GEvt Filter Object.vi" Type="VI" URL="../_Support/GlobalEvent/Cache-GEvt Filter Object.vi"/>
-			<Item Name="Cache-GlobalEventRef.vi" Type="VI" URL="../_Support/GlobalEvent/Cache-GlobalEventRef.vi"/>
-			<Item Name="Cache-GlobalEventQueues.vi" Type="VI" URL="../_Support/GlobalEvent/Cache-GlobalEventQueues.vi"/>
-			<Item Name="Cache-StatusChangeEventRef.vi" Type="VI" URL="../_Support/GlobalEvent/Cache-StatusChangeEventRef.vi"/>
+			<Item Name="FGV-GlobalEventRef.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GlobalEventRef.vi"/>
+			<Item Name="FGV-GlobalEventRef(lvlibp).vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GlobalEventRef(lvlibp).vi"/>
+			<Item Name="FGV-GlobalEventQueues.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GlobalEventQueues.vi"/>
+			<Item Name="FGV-GlobalEventQueues(lvlibp).vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GlobalEventQueues(lvlibp).vi"/>
 			<Item Name="GEvt-Valid Subscribers.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Valid Subscribers.vi"/>
 			<Item Name="GEvt-Generate Complete Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate Complete Log.vi"/>
 			<Item Name="GEvt-Generate State Change Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate State Change Log.vi"/>
