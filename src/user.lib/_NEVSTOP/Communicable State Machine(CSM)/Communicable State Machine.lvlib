@@ -118,6 +118,24 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 				<Item Name="CSM-Name to CSM-Mode.vi" Type="VI" URL="../_Support/Common/CSM-Name to CSM-Mode.vi"/>
 			</Item>
 		</Item>
+		<Item Name="ResMgr" Type="Folder">
+			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
+			<Item Name="Request" Type="Folder">
+				<Item Name="ResMgr-Request TagMap.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-Request TagMap.vi"/>
+				<Item Name="ResMgr-Request ExitEvent.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-Request ExitEvent.vi"/>
+				<Item Name="ResMgr-Request PriorityQueue.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-Request PriorityQueue.vi"/>
+				<Item Name="ResMgr-Request StatusEvent.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-Request StatusEvent.vi"/>
+				<Item Name="ResMgr-Request SharedDataDVR.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-Request SharedDataDVR.vi"/>
+				<Item Name="ResMgr-Request NewStateEvent.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-Request NewStateEvent.vi"/>
+				<Item Name="ResMgr-Request KVMap.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-Request KVMap.vi"/>
+				<Item Name="ResMgr-Request GlobalLogEvent.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-Request GlobalLogEvent.vi"/>
+			</Item>
+			<Item Name="ResMgr-RequestDef.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-RequestDef.vi"/>
+			<Item Name="ResMgr-BackgroundThread.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-BackgroundThread.vi"/>
+			<Item Name="ResMgr-WatchdogThread.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-WatchdogThread.vi"/>
+			<Item Name="ResMgr-StartWatchDog.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-StartWatchDog.vi"/>
+			<Item Name="ResMgr-ObtainBKThreadQ.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-ObtainBKThreadQ.vi"/>
+		</Item>
 		<Item Name="CSM-Core" Type="Folder">
 			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 			<Item Name="CSMObj" Type="Folder">
@@ -176,23 +194,6 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 				<Item Name="CSMP-Broadcast.vi" Type="VI" URL="../_Support/Process/CSMP-Broadcast.vi"/>
 				<Item Name="CSMP-PostSendMsg.vi" Type="VI" URL="../_Support/Process/CSMP-PostSendMsg.vi"/>
 				<Item Name="CSMP-PostPostMsg.vi" Type="VI" URL="../_Support/Process/CSMP-PostPostMsg.vi"/>
-			</Item>
-			<Item Name="ResMgr" Type="Folder">
-				<Item Name="Request" Type="Folder">
-					<Item Name="ResMgr-Request TagMap.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-Request TagMap.vi"/>
-					<Item Name="ResMgr-Request ExitEvent.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-Request ExitEvent.vi"/>
-					<Item Name="ResMgr-Request PriorityQueue.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-Request PriorityQueue.vi"/>
-					<Item Name="ResMgr-Request StatusEvent.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-Request StatusEvent.vi"/>
-					<Item Name="ResMgr-Request SharedDataDVR.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-Request SharedDataDVR.vi"/>
-					<Item Name="ResMgr-Request NewStateEvent.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-Request NewStateEvent.vi"/>
-					<Item Name="ResMgr-Request KVMap.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-Request KVMap.vi"/>
-					<Item Name="ResMgr-Request GlobalLogEvent.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-Request GlobalLogEvent.vi"/>
-				</Item>
-				<Item Name="ResMgr-RequestDef.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-RequestDef.vi"/>
-				<Item Name="ResMgr-BackgroundThread.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-BackgroundThread.vi"/>
-				<Item Name="ResMgr-WatchdogThread.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-WatchdogThread.vi"/>
-				<Item Name="ResMgr-StartWatchDog.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-StartWatchDog.vi"/>
-				<Item Name="ResMgr-ObtainBKThreadQ.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-ObtainBKThreadQ.vi"/>
 			</Item>
 			<Item Name="CSMKVMap" Type="Folder">
 				<Item Name="CSMKVMapDVR.vi" Type="VI" URL="../_Support/CSMKVMap/CSMKVMapDVR.vi"/>
