@@ -136,6 +136,13 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="ResMgr-StartWatchDog.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-StartWatchDog.vi"/>
 			<Item Name="ResMgr-ObtainBKThreadQ.vi" Type="VI" URL="../_Support/ResMgr/ResMgr-ObtainBKThreadQ.vi"/>
 		</Item>
+		<Item Name="CSMKVMap" Type="Folder">
+			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
+			<Item Name="CSMKVMapDVR.vi" Type="VI" URL="../_Support/CSMKVMap/CSMKVMapDVR.vi"/>
+			<Item Name="CSMKVMap-Read.vi" Type="VI" URL="../_Support/CSMKVMap/CSMKVMap-Read.vi"/>
+			<Item Name="CSMKVMap-Write.vi" Type="VI" URL="../_Support/CSMKVMap/CSMKVMap-Write.vi"/>
+			<Item Name="Cache-CSMKVMapDVR.vi" Type="VI" URL="../_Support/CSMKVMap/Cache-CSMKVMapDVR.vi"/>
+		</Item>
 		<Item Name="CSM-Core" Type="Folder">
 			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 			<Item Name="CSMObj" Type="Folder">
@@ -194,12 +201,6 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 				<Item Name="CSMP-Broadcast.vi" Type="VI" URL="../_Support/Process/CSMP-Broadcast.vi"/>
 				<Item Name="CSMP-PostSendMsg.vi" Type="VI" URL="../_Support/Process/CSMP-PostSendMsg.vi"/>
 				<Item Name="CSMP-PostPostMsg.vi" Type="VI" URL="../_Support/Process/CSMP-PostPostMsg.vi"/>
-			</Item>
-			<Item Name="CSMKVMap" Type="Folder">
-				<Item Name="CSMKVMapDVR.vi" Type="VI" URL="../_Support/CSMKVMap/CSMKVMapDVR.vi"/>
-				<Item Name="CSMKVMap-Read.vi" Type="VI" URL="../_Support/CSMKVMap/CSMKVMap-Read.vi"/>
-				<Item Name="CSMKVMap-Write.vi" Type="VI" URL="../_Support/CSMKVMap/CSMKVMap-Write.vi"/>
-				<Item Name="Cache-CSMKVMapDVR.vi" Type="VI" URL="../_Support/CSMKVMap/Cache-CSMKVMapDVR.vi"/>
 			</Item>
 		</Item>
 		<Item Name="CSMOFGV" Type="Folder">
