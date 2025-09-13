@@ -715,6 +715,10 @@
 			<Item Name="mxLvSetPopupMenu.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/API/mxLvSetPopupMenu.vi"/>
 			<Item Name="Global_Interface.ctl" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/API/Global_Interface.ctl"/>
 			<Item Name="Item_Interface.ctl" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/API/Item_Interface.ctl"/>
+			<Item Name="csm-module(lv2017).lvlibp" Type="LVLibp" URL="../src/Example/4. Advance Examples/8. CSM in lvlibp/lvlibp/csm-module(lv2017).lvlibp"/>
+			<Item Name="Communicable State Machine.lvlib" Type="Library" URL="../src/Example/4. Advance Examples/8. CSM in lvlibp/lvlibp/csm-module(lv2017).lvlibp/user.lib/_NEVSTOP/Communicable State Machine(CSM)/Communicable State Machine.lvlib"/>
+			<Item Name="CSM Shared.lvlib" Type="Library" URL="../src/Example/4. Advance Examples/8. CSM in lvlibp/lvlibp/csm-module(lv2017).lvlibp/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_Shared/CSM Shared.lvlib"/>
+			<Item Name="LogFilter.lvclass" Type="LVClass" URL="../src/Example/4. Advance Examples/8. CSM in lvlibp/lvlibp/csm-module(lv2017).lvlibp/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_Support/GlobalEvent/LogFilter/LogFilter.lvclass"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Communicable State Machine.lvlibp" Type="Packed Library">
