@@ -10,14 +10,15 @@
 		<Item Name="Single-Line Selection Type.ctl" Type="VI" URL="../Single-Line Selection Type.ctl"/>
 	</Item>
 	<Item Name="Single-line State Operation" Type="Folder">
+		<Item Name="Add State(s) to Queue__jkism.vi" Type="VI" URL="../Add State(s) to Queue__jkism.vi"/>
+		<Item Name="Concatenate State with Comments.vi" Type="VI" URL="../Concatenate State with Comments.vi"/>
+		<Item Name="Concatenate State with Arguments.vi" Type="VI" URL="../Concatenate State with Arguments.vi"/>
 		<Item Name="Remove Comments from Single-line.vi" Type="VI" URL="../Remove Comments from Single-line.vi"/>
 		<Item Name="Split Single-line Message.vi" Type="VI" URL="../Split Single-line Message.vi"/>
 		<Item Name="Split Single-line Reason Parts.vi" Type="VI" URL="../Split Single-line Reason Parts.vi"/>
 		<Item Name="Trim Single-line Text.vi" Type="VI" URL="../Trim Single-line Text.vi"/>
 		<Item Name="Single-Line To CSM Parts.vi" Type="VI" URL="../Single-Line To CSM Parts.vi"/>
 		<Item Name="Parse Next Single-line.vi" Type="VI" URL="../Parse Next Single-line.vi"/>
-		<Item Name="Concatenate State with Arguments.vi" Type="VI" URL="../Concatenate State with Arguments.vi"/>
-		<Item Name="Concatenate State with Comments.vi" Type="VI" URL="../Concatenate State with Comments.vi"/>
 		<Item Name="Concatenate PostPostMsg Message.vi" Type="VI" URL="../Concatenate PostPostMsg Message.vi"/>
 		<Item Name="Replace LastResp Token.vi" Type="VI" URL="../Replace LastResp Token.vi"/>
 		<Item Name="Parse Action State After Exit.vi" Type="VI" URL="../Parse Action State After Exit.vi"/>
