@@ -287,6 +287,7 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="Parse Register Message.vi" Type="VI" URL="../_Support/Message/Parse Register Message.vi"/>
 		</Item>
 		<Item Name="CSM Dummy Module.vi" Type="VI" URL="../_Support/CSM Dummy Module.vi"/>
+		<Item Name="Minimum lvlibp Compatible Version.vi" Type="VI" URL="../_Support/Minimum lvlibp Compatible Version.vi"/>
 	</Item>
 	<Item Name="Polymophic" Type="Folder">
 		<Item Name="Build Message with Arguments" Type="Folder">
