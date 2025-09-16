@@ -140,7 +140,7 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 		<Item Name="CSMKVMap" Type="Folder">
 			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 			<Item Name="CSMKVMapDVR.vi" Type="VI" URL="../_Support/CSMKVMap/CSMKVMapDVR.vi"/>
-			<Item Name="CSMKVMap-InitDefaultValues.vi" Type="VI" URL="/C/Program Files (x86)/National Instruments/LabVIEW 2020/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_Support/CSMKVMap/CSMKVMap-InitDefaultValues.vi"/>
+			<Item Name="CSMKVMap-InitDefaultValues.vi" Type="VI" URL="../_Support/CSMKVMap/CSMKVMap-InitDefaultValues.vi"/>
 			<Item Name="CSMKVMap-Read.vi" Type="VI" URL="../_Support/CSMKVMap/CSMKVMap-Read.vi"/>
 			<Item Name="CSMKVMap-Write.vi" Type="VI" URL="../_Support/CSMKVMap/CSMKVMap-Write.vi"/>
 			<Item Name="CSMKVMap-Preview.vi" Type="VI" URL="../_Support/CSMKVMap/CSMKVMap-Preview.vi"/>
