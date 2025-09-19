@@ -59,6 +59,16 @@ jobs:
         with:
           LabVIEW_Version: 2017
           VipbPath: ${{ github.workspace }}
+        timeout-minutes: 20
+        continue-on-error: true
+
+      - name: Retry BuildDailyVIP if failed
+        if: ${{ steps.build-vip.outcome == 'failure' }}
+        uses: NEVSTOP-LAB/vipm-BuildViPackage@main
+        with:
+          LabVIEW_Version: 2017
+          VipbPath: ${{ github.workspace }}
+        timeout-minutes: 20
 
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4.3.2
