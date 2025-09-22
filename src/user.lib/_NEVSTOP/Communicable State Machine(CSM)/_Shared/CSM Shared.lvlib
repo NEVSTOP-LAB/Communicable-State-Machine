@@ -44,5 +44,4 @@
 		<Item Name="Semaphore Lock.vi" Type="VI" URL="../Semaphore Lock.vi"/>
 		<Item Name="Semaphore Unlock.vi" Type="VI" URL="../Semaphore Unlock.vi"/>
 	</Item>
-	<Item Name="CSM Part Property at Cursor.vi" Type="VI" URL="../CSM Part Property at Cursor.vi"/>
 </Library>
