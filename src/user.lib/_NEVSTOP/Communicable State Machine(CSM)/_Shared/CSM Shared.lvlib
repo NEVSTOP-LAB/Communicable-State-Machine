@@ -39,6 +39,7 @@
 		<Item Name="Debounced Signal.vi" Type="VI" URL="../Debounced Signal.vi"/>
 		<Item Name="Is Asynchronous Call.vi" Type="VI" URL="../Is Asynchronous Call.vi"/>
 		<Item Name="Concatenate Non-Empty Strings.vi" Type="VI" URL="../Concatenate Non-Empty Strings.vi"/>
+		<Item Name="Pick Lines by Section Pattern.vi" Type="VI" URL="../Pick Lines by Section Pattern.vi"/>
 	</Item>
 	<Item Name="Semaphore" Type="Folder">
 		<Item Name="Semaphore Lock.vi" Type="VI" URL="../Semaphore Lock.vi"/>

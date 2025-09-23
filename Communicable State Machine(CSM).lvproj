@@ -496,6 +496,9 @@
 			<Item Name="mxLvSetPopupMenu.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/API/mxLvSetPopupMenu.vi"/>
 			<Item Name="Global_Interface.ctl" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/API/Global_Interface.ctl"/>
 			<Item Name="Item_Interface.ctl" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/API/Item_Interface.ctl"/>
+			<Item Name="Module.vi" Type="VI" URL="../src/Example/4. Advance Examples/8. CSM in lvlibp/lvlibp/Module(2017)-1.lvlibp/D/Communicable State Machine Framework/CSMF/Communicable-State-Machine/src/Example/4. Advance Examples/8. CSM in lvlibp/moduleCode/Module.vi"/>
+			<Item Name="Module.vi" Type="VI" URL="../src/Example/4. Advance Examples/8. CSM in lvlibp/lvlibp/Module(2017)-2.lvlibp/D/Communicable State Machine Framework/CSMF/Communicable-State-Machine/src/Example/4. Advance Examples/8. CSM in lvlibp/moduleCode/Module.vi"/>
+			<Item Name="Module.vi" Type="VI" URL="../src/Example/4. Advance Examples/8. CSM in lvlibp/lvlibp/Module(2017)-3.lvlibp/D/Communicable State Machine Framework/CSMF/Communicable-State-Machine/src/Example/4. Advance Examples/8. CSM in lvlibp/moduleCode/Module.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Communicable State Machine.lvlibp" Type="Packed Library">
