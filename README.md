@@ -1,4 +1,4 @@
-# Communicable State Machine(CSM)
+# Communicable State Machine (CSM)
 
 [English](./README.md) | [中文](./README(zh-cn).md)
 
@@ -6,10 +6,10 @@
 [![Image](https://www.vipm.io/package/nevstop_lib_communicable_state_machine/badge.svg?metric=stars)](https://www.vipm.io/package/nevstop_lib_communicable_state_machine/)
 [![GitHub all releases](https://img.shields.io/github/downloads/NEVSTOP-LAB/Communicable-State-Machine/total)](https://github.com/NEVSTOP-LAB/Communicable-State-Machine/releases)
 
-Communicable State Machine(CSM) is a LabVIEW application framework that builds upon JKI State Machine(JKISM). It follows the pattern of JKISM and extends the keywords to describe message communication between modules, including concepts such as Sync-Message, Async-Message, Subscription/Unsubscription of status - essential elements for creating reusable code modules. For more information, please visit the CSM wiki: <https://nevstop-lab.github.io/CSM-Wiki/>
+Communicable State Machine (CSM) is a LabVIEW application framework built upon JKI State Machine (JKISM). It follows the JKISM design pattern while extending keywords to describe inter-module message communication mechanisms, including key concepts such as Sync-Message, Async-Message, and status Subscription/Unsubscription—all essential elements for creating reusable code modules. For more information, please visit the CSM Wiki: <https://nevstop-lab.github.io/CSM-Wiki/>
 
-- For instructions on JKI State Machine(JKISM), visit: <http://jki.net/state-machine/>
-- For information on NEVSTOP-LAB, visit: <https://github.com/NEVSTOP-LAB>
+- For more information about JKI State Machine (JKISM), visit: <http://jki.net/state-machine/>
+- For more information about NEVSTOP-LAB, visit: <https://github.com/NEVSTOP-LAB>
 
 ![image](.doc/_img/csm-intro.png)
 
@@ -23,17 +23,17 @@ Template Description:
 API Description:
 [English](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/VI%20Description(EN).md) | [中文](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/VI%20Description(zh-cn).md)
 
-## Create Reuseable Modules
+## Create Reusable Modules
 
-Creating a reusable module typically does not require message interaction with other modules; it only needs to provide an external interface and publish the state of the module. Therefore, as long as these two aspects are clearly described, one can call the reusable module without understanding its internal implementation details.
+Creating a reusable module typically does not require message interaction with other modules; it only needs to provide an external interface and publish module status changes. Therefore, as long as these two aspects are clearly described, you can call the reusable module without understanding its internal implementation details.
 
-In CSM modules, all cases can be considered as messages for invocation, but it is recommended to use API category as external interfaces. When sending status updates, notify external entities of changes by sending either Status or Interrupt Status.
+In CSM modules, all cases can be considered as messages for invocation, but it is recommended to use API categories as external interfaces. When sending status updates, notify external entities of changes by sending either Status or Interrupt Status.
 
-Go to _**/Example/1. Create a reusable module**_ to learn how to create a CSM module.
+Refer to _**/Example/1. Create a reusable module**_ to learn how to create a CSM module.
 
-## Use CSM as application framework Scenario
+## Use CSM as an Application Framework Scenario
 
-In this scenario, inter-module communication solely relies on message string queue operations. You can generate a Message string using the "**Build Message with Arguments++.vi**" function. Alternatively, if you are familiar with the rules, you can directly utilize message description strings.
+In this scenario, inter-module communication solely relies on message string queue operations. You can generate a Message string using the "**Build Message with Arguments++.vi**" function. Alternatively, if you are familiar with the rules, you can directly write message description strings.
 
 ``` c++
 #CSM State Syntax
@@ -68,24 +68,24 @@ In this scenario, inter-module communication solely relies on message string que
     // Another comment line
 ```
 
-Please visit this link for more syntax information: [Syntax.md](https://github.com/NEVSTOP-LAB/Communicable-State-Machine/tree/main/.doc/Syntax.md)
+For more syntax information, please visit: [Syntax.md](https://github.com/NEVSTOP-LAB/Communicable-State-Machine/tree/main/.doc/Syntax.md)
 
-Go to _**/Example/2. Caller is CSM Scenario**_ to find an example for this scenario.
+Refer to _**/Example/2. Caller is CSM Scenario**_ for an example of this scenario.
 
-## Reuse CSM Module in another Application Framework
+## Reuse CSM Module in Another Application Framework
 
-In this scenario, inter-module communication solely relies on Post/Send Message API and module status change user event.
+In this scenario, inter-module communication solely relies on Post/Send Message API and module status change user events.
 
-Go to _**/Example/3. Caller is Other Framework Scenario**_ to find an example for this scenario.
+Refer to _**/Example/3. Caller is Other Framework Scenario**_ for an example of this scenario.
 
-## CSM Arguments Support
+## CSM Parameter Support
 
-JKISM only supports the STRING TYPE as a parameter, but there is a wide variety of data that needs to be transmitted. Therefore, support for parameters is crucial. The table below lists some of the current ways in which different data types are supported, with some being built-in within CSM and others requiring additional installation through addons.
+JKISM only supports the STRING TYPE as a parameter, but there is a wide variety of data that needs to be transmitted. Therefore, parameter support is crucial. The table below lists some of the current ways in which different data types are supported, with some being built-in within CSM and others requiring additional installation through addons.
 
-| Arguments | Type | Description |
+| Parameter | Type | Description |
 |---|---|---|
-| Safe String | Build-in | "->\| -> -@ & <- , ; []{}`"  wil be replaced with %[HEXCODE] |
-| HexStr | Build-in | Data will be converted as variant and changed to Hex String as parameter |
+| Safe String | Built-in | "->\| -> -@ & <- , ; []{}`" will be replaced with %[HEXCODE] |
+| HexStr | Built-in | Data will be converted as variant and changed to Hex String as parameter |
 |[MassData](https://github.com/NEVSTOP-LAB/CSM-MassData-Parameter-Support) |Addons|Data will be converted to memory and saved in a circle buffer. Pass the StartPos with length as parameter. |
 |[API String Arguments](https://github.com/NEVSTOP-LAB/CSM-API-String-Arugments-Support) |Addons|Support plain string as CSM API parameter|
-|[INI Static Variable Support](https://github.com/NEVSTOP-LAB/CSM-INI-Static-Variable-Support)|Addons|offering ${variable} support for CSM|
+|[INI Static Variable Support](https://github.com/NEVSTOP-LAB/CSM-INI-Static-Variable-Support)|Addons|Offering ${variable} support for CSM|

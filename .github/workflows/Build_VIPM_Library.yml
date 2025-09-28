@@ -5,21 +5,32 @@ name: Build_VIPM_Library
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
-  pull_request:
-    branches:
-      - main
-    types: [closed]
-
   push:
     paths-ignore:
       - '**.md'
       - '**.txt'
       - '**.drawio'
       - '**.png'
+      - '**.svg'
       - '**.json'
+      - '**.yml'
       - 'src/testcases/**'
       - 'src/_TEST/**'
+
+  pull_request:
+    branches:
+      - main
+    types: [closed]
+    paths-ignore:
+      - '**.md'
+      - '**.txt'
+      - '**.drawio'
+      - '**.png'
+      - '**.svg'
+      - '**.json'
       - '**.yml'
+      - 'src/testcases/**'
+      - 'src/_TEST/**'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -48,6 +59,16 @@ jobs:
         with:
           LabVIEW_Version: 2017
           VipbPath: ${{ github.workspace }}
+        timeout-minutes: 20
+        continue-on-error: true
+
+      - name: Retry BuildDailyVIP if failed
+        if: ${{ steps.build-vip.outcome == 'failure' }}
+        uses: NEVSTOP-LAB/vipm-BuildViPackage@main
+        with:
+          LabVIEW_Version: 2017
+          VipbPath: ${{ github.workspace }}
+        timeout-minutes: 20
 
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4.3.2

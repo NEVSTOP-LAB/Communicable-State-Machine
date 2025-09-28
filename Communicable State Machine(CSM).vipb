@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-08-16 09:20:21" Creator="liyao" Comments="" ID="2fa141a16d091c2640b94d046a1eae7e">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-09-15 21:12:36" Creator="liyao" Comments="" ID="c3f8383a14d7f72add86fadf03b3b1ac">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
-    <Library_Version>2025.8.0.1</Library_Version>
+    <Library_Version>2025.9.0.1</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>src</Library_Source_Folder>
     <Library_Output_Folder>vip</Library_Output_Folder>
@@ -65,7 +65,11 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
       <Copyright/>
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
-      <Release_Notes/>
+      <Release_Notes>[feature] #502 support module in lvlibp
+[fix] #499 fix critical Error Occurred when csm module is built into lvlibp and ran asyncly.
+[update] #504 do not use global variable as changing flag.
+[update] #501 Use ErrString for Critical Error
+[update] Improve palette/doc</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>

@@ -10,14 +10,15 @@
 		<Item Name="Single-Line Selection Type.ctl" Type="VI" URL="../Single-Line Selection Type.ctl"/>
 	</Item>
 	<Item Name="Single-line State Operation" Type="Folder">
+		<Item Name="Add State(s) to Queue__jkism.vi" Type="VI" URL="../Add State(s) to Queue__jkism.vi"/>
+		<Item Name="Concatenate State with Comments.vi" Type="VI" URL="../Concatenate State with Comments.vi"/>
+		<Item Name="Concatenate State with Arguments.vi" Type="VI" URL="../Concatenate State with Arguments.vi"/>
 		<Item Name="Remove Comments from Single-line.vi" Type="VI" URL="../Remove Comments from Single-line.vi"/>
 		<Item Name="Split Single-line Message.vi" Type="VI" URL="../Split Single-line Message.vi"/>
 		<Item Name="Split Single-line Reason Parts.vi" Type="VI" URL="../Split Single-line Reason Parts.vi"/>
 		<Item Name="Trim Single-line Text.vi" Type="VI" URL="../Trim Single-line Text.vi"/>
 		<Item Name="Single-Line To CSM Parts.vi" Type="VI" URL="../Single-Line To CSM Parts.vi"/>
 		<Item Name="Parse Next Single-line.vi" Type="VI" URL="../Parse Next Single-line.vi"/>
-		<Item Name="Concatenate State with Arguments.vi" Type="VI" URL="../Concatenate State with Arguments.vi"/>
-		<Item Name="Concatenate State with Comments.vi" Type="VI" URL="../Concatenate State with Comments.vi"/>
 		<Item Name="Concatenate PostPostMsg Message.vi" Type="VI" URL="../Concatenate PostPostMsg Message.vi"/>
 		<Item Name="Replace LastResp Token.vi" Type="VI" URL="../Replace LastResp Token.vi"/>
 		<Item Name="Parse Action State After Exit.vi" Type="VI" URL="../Parse Action State After Exit.vi"/>
@@ -38,6 +39,10 @@
 		<Item Name="Debounced Signal.vi" Type="VI" URL="../Debounced Signal.vi"/>
 		<Item Name="Is Asynchronous Call.vi" Type="VI" URL="../Is Asynchronous Call.vi"/>
 		<Item Name="Concatenate Non-Empty Strings.vi" Type="VI" URL="../Concatenate Non-Empty Strings.vi"/>
+		<Item Name="Pick Lines by Section Pattern.vi" Type="VI" URL="../Pick Lines by Section Pattern.vi"/>
 	</Item>
-	<Item Name="CSM Part Property at Cursor.vi" Type="VI" URL="../CSM Part Property at Cursor.vi"/>
+	<Item Name="Semaphore" Type="Folder">
+		<Item Name="Semaphore Lock.vi" Type="VI" URL="../Semaphore Lock.vi"/>
+		<Item Name="Semaphore Unlock.vi" Type="VI" URL="../Semaphore Unlock.vi"/>
+	</Item>
 </Library>

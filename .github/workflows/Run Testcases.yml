@@ -12,6 +12,21 @@ on:
       - '**.drawio'
       - '**.vipb'
       - '**.png'
+      - '**.svg'
+      - '**.json'
+      - '**.yml'
+
+  pull_request:
+    branches:
+      - main
+    types: [closed]
+    paths-ignore:
+      - '**.md'
+      - '**.txt'
+      - '**.drawio'
+      - '**.vipb'
+      - '**.png'
+      - '**.svg'
       - '**.json'
       - '**.yml'
 
@@ -34,3 +49,4 @@ jobs:
           LabVIEW_Version: 2017
           Operation: StartVITester
           Parameter1: ${{ github.workspace }}\Communicable State Machine(CSM).lvproj
+        timeout-minutes: 10
