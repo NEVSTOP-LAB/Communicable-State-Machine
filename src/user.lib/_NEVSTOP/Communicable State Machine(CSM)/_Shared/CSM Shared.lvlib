@@ -4,11 +4,6 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">385908736</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.SortType" Type="Int">3</Property>
-	<Item Name="Typedef" Type="Folder">
-		<Item Name="CSM Part Property.ctl" Type="VI" URL="../CSM Part Property.ctl"/>
-		<Item Name="Single-Line Type.ctl" Type="VI" URL="../Single-Line Type.ctl"/>
-		<Item Name="Single-Line Selection Type.ctl" Type="VI" URL="../Single-Line Selection Type.ctl"/>
-	</Item>
 	<Item Name="Single-line State Operation" Type="Folder">
 		<Item Name="Add State(s) to Queue__jkism.vi" Type="VI" URL="../Add State(s) to Queue__jkism.vi"/>
 		<Item Name="Concatenate State with Comments.vi" Type="VI" URL="../Concatenate State with Comments.vi"/>
