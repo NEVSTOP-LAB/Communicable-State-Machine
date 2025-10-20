@@ -434,7 +434,6 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="Array of VData to VCluster_csm.vi" Type="VI" URL="../Utility/_openG/Array of VData to VCluster_csm.vi"/>
 			<Item Name="End of Line Constant (bug fix)_csm.vi" Type="VI" URL="../Utility/_openG/End of Line Constant (bug fix)_csm.vi"/>
 			<Item Name="Get Data Name_csm.vi" Type="VI" URL="../Utility/_openG/Get Data Name_csm.vi"/>
-			<Item Name="Get Header from TD_csm.vi" Type="VI" URL="../Utility/_openG/Get Header from TD_csm.vi"/>
 			<Item Name="Get Last PString_csm.vi" Type="VI" URL="../Utility/_openG/Get Last PString_csm.vi"/>
 			<Item Name="Get PString_csm.vi" Type="VI" URL="../Utility/_openG/Get PString_csm.vi"/>
 			<Item Name="Get Strings from Enum_csm.vi" Type="VI" URL="../Utility/_openG/Get Strings from Enum_csm.vi"/>

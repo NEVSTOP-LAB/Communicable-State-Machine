@@ -12,7 +12,6 @@
 		<Item Name="Split Single-line Message.vi" Type="VI" URL="../Split Single-line Message.vi"/>
 		<Item Name="Split Single-line Reason Parts.vi" Type="VI" URL="../Split Single-line Reason Parts.vi"/>
 		<Item Name="Trim Single-line Text.vi" Type="VI" URL="../Trim Single-line Text.vi"/>
-		<Item Name="Single-Line To CSM Parts.vi" Type="VI" URL="../Single-Line To CSM Parts.vi"/>
 		<Item Name="Parse Next Single-line.vi" Type="VI" URL="../Parse Next Single-line.vi"/>
 		<Item Name="Concatenate PostPostMsg Message.vi" Type="VI" URL="../Concatenate PostPostMsg Message.vi"/>
 		<Item Name="Replace LastResp Token.vi" Type="VI" URL="../Replace LastResp Token.vi"/>
