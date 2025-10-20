@@ -438,6 +438,7 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="Get PString_csm.vi" Type="VI" URL="../Utility/_openG/Get PString_csm.vi"/>
 			<Item Name="Get Strings from Enum_csm.vi" Type="VI" URL="../Utility/_openG/Get Strings from Enum_csm.vi"/>
 			<Item Name="Set Enum String Value_csm.vi" Type="VI" URL="../Utility/_openG/Set Enum String Value_csm.vi"/>
+			<Item Name="Get Header from TD_csm.vi" Type="VI" URL="../Utility/_openG/Get Header from TD_csm.vi"/>
 		</Item>
 		<Item Name="_Periodic String Filter" Type="Folder">
 			<Item Name="Support" Type="Folder">
