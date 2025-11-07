@@ -20,8 +20,6 @@ on:
       - 'src/_TEST/**'
 
   pull_request:
-    branches:
-      - main
     branches-ignore:
       - '**testcase**'
     types: [closed]
