@@ -4,5 +4,9 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">385908736</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">false</Property>
+	<Item Name="Chain1.vi" Type="VI" URL="../Chain1.vi"/>
+	<Item Name="Chain2.vi" Type="VI" URL="../Chain2.vi"/>
+	<Item Name="Chain3.vi" Type="VI" URL="../Chain3.vi"/>
+	<Item Name="Global-TestcaseCSM.vi" Type="VI" URL="../Global-TestcaseCSM.vi"/>
 	<Item Name="Normal-CSM.vi" Type="VI" URL="../Normal-CSM.vi"/>
 </Library>

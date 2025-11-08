@@ -12,7 +12,6 @@
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="CSM - Debug Console - DebugTool.vi" Type="VI" URL="../../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_tool/CSM - Debug Console - DebugTool.vi"/>
 		<Item Name="CSM-Testcase.lvlib" Type="Library" URL="../CSM/CSM-Testcase.lvlib"/>
-		<Item Name="Global-TestcaseCSM.vi" Type="VI" URL="../CSM/Global-TestcaseCSM.vi"/>
 		<Item Name="testcase-CSMSyncMessage.lvclass" Type="LVClass" URL="../testcase-CSMSyncMessage/testcase-CSMSyncMessage.lvclass"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
@@ -393,7 +392,7 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToProject</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{A89D9A51-BD9C-4565-8F45-AD1D68D344FD}</Property>
-				<Property Name="Bld_version.build" Type="Int">6</Property>
+				<Property Name="Bld_version.build" Type="Int">8</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">CSM-Testcase.lvlibp</Property>
 				<Property Name="Destination[0].path" Type="Path">../CSM/CSM-Testcase.lvlibp</Property>
