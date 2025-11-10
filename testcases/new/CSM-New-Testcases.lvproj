@@ -13,6 +13,7 @@
 		<Item Name="CSM - Debug Console - DebugTool.vi" Type="VI" URL="../../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_tool/CSM - Debug Console - DebugTool.vi"/>
 		<Item Name="CSM-Testcase.lvlib" Type="Library" URL="../CSM/CSM-Testcase.lvlib"/>
 		<Item Name="testcase-CSMSyncMessage.lvclass" Type="LVClass" URL="../testcase-CSMSyncMessage/testcase-CSMSyncMessage.lvclass"/>
+		<Item Name="TestCSMSuite.lvclass" Type="LVClass" URL="../CSMTestSuite/TestCSMSuite.lvclass"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
