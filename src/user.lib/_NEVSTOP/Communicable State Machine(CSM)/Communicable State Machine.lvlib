@@ -51,6 +51,11 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 		<Item Name="CSM - Filter Duplicate Messages By Name.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter Duplicate Messages By Name.vi"/>
 		<Item Name="CSM - Remove Duplicated Following Messages.vi" Type="VI" URL="../AdvanceAPI/CSM - Remove Duplicated Following Messages.vi"/>
 		<Item Name="ResMgr-RequestDef.ctl" Type="VI" URL="../_Support/ResMgr/ResMgr-RequestDef.ctl"/>
+		<Item Name="global-GEvt Refs Change Flag.vi" Type="VI" URL="../_Support/GlobalEvent/global-GEvt Refs Change Flag.vi"/>
+		<Item Name="global-GEvnt Filter Change Flag.vi" Type="VI" URL="../_Support/GlobalEvent/global-GEvnt Filter Change Flag.vi"/>
+		<Item Name="global-CSMQ FGV Change Flag.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/global-CSMQ FGV Change Flag.vi"/>
+		<Item Name="global-Broadcast Cache Change Flag.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/global-Broadcast Cache Change Flag.vi"/>
+		<Item Name="global-TMO for Sync-Rep.vi" Type="VI" URL="../_Support/Message/global-TMO for Sync-Rep.vi"/>
 	</Item>
 	<Item Name="Support" Type="Folder">
 		<Property Name="NI.SortType" Type="Int">3</Property>
