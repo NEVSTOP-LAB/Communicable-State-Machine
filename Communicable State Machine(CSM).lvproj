@@ -23,17 +23,68 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
-		<Item Name="Example" Type="Folder" URL="../src/Example">
-			<Property Name="NI.DISK" Type="Bool">true</Property>
+		<Item Name="Example" Type="Folder">
 			<Property Name="NI.SortType" Type="Int">0</Property>
+			<Item Name="0. Base Concepts" Type="Folder">
+				<Item Name="Arguments - Complex Data As Arguments.vi" Type="VI" URL="../src/Example/0. Base Concepts/Arguments - Complex Data As Arguments.vi"/>
+				<Item Name="Arguments - Error As Arguments.vi" Type="VI" URL="../src/Example/0. Base Concepts/Arguments - Error As Arguments.vi"/>
+				<Item Name="Arguments - Safe Arguments if it contains key words of CSM.vi" Type="VI" URL="../src/Example/0. Base Concepts/Arguments - Safe Arguments if it contains key words of CSM.vi"/>
+				<Item Name="CSM Data Type.vi" Type="VI" URL="../src/Example/0. Base Concepts/CSM Data Type.vi"/>
+				<Item Name="JKISM vs CSM.vi" Type="VI" URL="../src/Example/0. Base Concepts/JKISM vs CSM.vi"/>
+				<Item Name="Message Helper VI and Equivalent String.vi" Type="VI" URL="../src/Example/0. Base Concepts/Message Helper VI and Equivalent String.vi"/>
+				<Item Name="Module Attributes.vi" Type="VI" URL="../src/Example/0. Base Concepts/Module Attributes.vi"/>
+				<Item Name="Module Naming Rules.vi" Type="VI" URL="../src/Example/0. Base Concepts/Module Naming Rules.vi"/>
+				<Item Name="System-Level Module.vi" Type="VI" URL="../src/Example/0. Base Concepts/System-Level Module.vi"/>
+			</Item>
+			<Item Name="1. Create a reuse Module" Type="Folder">
+				<Item Name="1. Create a reuse Module.lvlib" Type="Library" URL="../src/Example/1. Create a reuse Module/1. Create a reuse Module.lvlib"/>
+			</Item>
+			<Item Name="2. Caller is CSM Scenario" Type="Folder">
+				<Item Name="CSM Example - Caller is a CSM.vi" Type="VI" URL="../src/Example/2. Caller is CSM Scenario/CSM Example - Caller is a CSM.vi"/>
+			</Item>
+			<Item Name="3. Caller is Other Framework Scenario" Type="Folder">
+				<Item Name="CSM Example - Caller is NOT a CSM.vi" Type="VI" URL="../src/Example/3. Caller is Other Framework Scenario/CSM Example - Caller is NOT a CSM.vi"/>
+			</Item>
+			<Item Name="4. Advance Examples" Type="Folder">
+				<Item Name="1. Action Workers Example" Type="Folder">
+					<Item Name="Action Worker Mode Example.lvlib" Type="Library" URL="../src/Example/4. Advance Examples/1. Action Workers Example/Action Worker Mode Example.lvlib"/>
+				</Item>
+				<Item Name="2. Chain of Responsiblility Example" Type="Folder">
+					<Item Name="Chain of Responsiblility Example.lvlib" Type="Library" URL="../src/Example/4. Advance Examples/2. Chain of Responsiblility Example/Chain of Responsiblility Example.lvlib"/>
+				</Item>
+				<Item Name="3. Build-in Error Handling Framework" Type="Folder">
+					<Item Name="Build-in Error Handling Framework.lvlib" Type="Library" URL="../src/Example/4. Advance Examples/3. Build-in Error Handling Framework/Build-in Error Handling Framework.lvlib"/>
+				</Item>
+				<Item Name="4. Global Log Filter Example" Type="Folder">
+					<Item Name="Global Log Filter Example - Filter From Source(Event).vi" Type="VI" URL="../src/Example/4. Advance Examples/4. Global Log Filter Example/Global Log Filter Example - Filter From Source(Event).vi"/>
+					<Item Name="Global Log Filter Example - Filter From Source(Queue).vi" Type="VI" URL="../src/Example/4. Advance Examples/4. Global Log Filter Example/Global Log Filter Example - Filter From Source(Queue).vi"/>
+					<Item Name="Global Log Filter Example - Filter From Subscriber(Event).vi" Type="VI" URL="../src/Example/4. Advance Examples/4. Global Log Filter Example/Global Log Filter Example - Filter From Subscriber(Event).vi"/>
+					<Item Name="Global Log Filter Example - Filter From Subscriber(Queue).vi" Type="VI" URL="../src/Example/4. Advance Examples/4. Global Log Filter Example/Global Log Filter Example - Filter From Subscriber(Queue).vi"/>
+				</Item>
+				<Item Name="5. Multi-Loop Module Example" Type="Folder">
+					<Item Name="Multi-Loop Module Example.lvlib" Type="Library" URL="../src/Example/4. Advance Examples/5. Multi-Loop Module Example/Multi-Loop Module Example.lvlib"/>
+				</Item>
+				<Item Name="6. Global Log Handling Capability" Type="Folder">
+					<Item Name="Global Log Handling Capability Example.lvlib" Type="Library" URL="../src/Example/4. Advance Examples/6. Global Log Handling Capability/Global Log Handling Capability Example.lvlib"/>
+				</Item>
+				<Item Name="7. Register State as Status Example" Type="Folder">
+					<Item Name="Register State as Status Example.lvlib" Type="Library" URL="../src/Example/4. Advance Examples/7. Register State as Status Example/Register State as Status Example.lvlib"/>
+				</Item>
+			</Item>
+			<Item Name="Addons - Logger" Type="Folder">
+				<Item Name="CSM Application Running Log Example.csmlog" Type="Document" URL="../src/Example/Addons - Logger/CSM Application Running Log Example.csmlog"/>
+				<Item Name="CSM Application Running Log Example.no-state.csmlog" Type="Document" URL="../src/Example/Addons - Logger/CSM Application Running Log Example.no-state.csmlog"/>
+				<Item Name="CSM Application Running Log Example.vi" Type="VI" URL="../src/Example/Addons - Logger/CSM Application Running Log Example.vi"/>
+			</Item>
+			<Item Name="Addons - Loop Support" Type="Folder">
+				<Item Name="CSMLS - Continuous Loop in CSM Example.csmlog" Type="Document" URL="../src/Example/Addons - Loop Support/CSMLS - Continuous Loop in CSM Example.csmlog"/>
+				<Item Name="CSMLS - Continuous Loop in CSM Example.vi" Type="VI" URL="../src/Example/Addons - Loop Support/CSMLS - Continuous Loop in CSM Example.vi"/>
+			</Item>
 		</Item>
 		<Item Name="vi.lib" Type="Folder" URL="../src/vi.lib">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
 		<Item Name="user.lib" Type="Folder" URL="../src/user.lib">
-			<Property Name="NI.DISK" Type="Bool">true</Property>
-		</Item>
-		<Item Name="_TEST" Type="Folder" URL="../src/_TEST">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
 		<Item Name="_vipm" Type="Folder" URL="../src/_vipm">
