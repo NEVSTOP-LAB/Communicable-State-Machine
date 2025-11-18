@@ -26,15 +26,15 @@
 		<Item Name="Example" Type="Folder">
 			<Property Name="NI.SortType" Type="Int">0</Property>
 			<Item Name="0. Base Concepts" Type="Folder">
-				<Item Name="Arguments - Complex Data As Arguments.vi" Type="VI" URL="../src/Example/0. Base Concepts/Arguments - Complex Data As Arguments.vi"/>
-				<Item Name="Arguments - Error As Arguments.vi" Type="VI" URL="../src/Example/0. Base Concepts/Arguments - Error As Arguments.vi"/>
-				<Item Name="Arguments - Safe Arguments if it contains key words of CSM.vi" Type="VI" URL="../src/Example/0. Base Concepts/Arguments - Safe Arguments if it contains key words of CSM.vi"/>
-				<Item Name="CSM Data Type.vi" Type="VI" URL="../src/Example/0. Base Concepts/CSM Data Type.vi"/>
-				<Item Name="JKISM vs CSM.vi" Type="VI" URL="../src/Example/0. Base Concepts/JKISM vs CSM.vi"/>
-				<Item Name="Message Helper VI and Equivalent String.vi" Type="VI" URL="../src/Example/0. Base Concepts/Message Helper VI and Equivalent String.vi"/>
-				<Item Name="Module Attributes.vi" Type="VI" URL="../src/Example/0. Base Concepts/Module Attributes.vi"/>
-				<Item Name="Module Naming Rules.vi" Type="VI" URL="../src/Example/0. Base Concepts/Module Naming Rules.vi"/>
-				<Item Name="System-Level Module.vi" Type="VI" URL="../src/Example/0. Base Concepts/System-Level Module.vi"/>
+				<Item Name="1. JKISM vs CSM.vi" Type="VI" URL="../src/Example/0. Base Concepts/1. JKISM vs CSM.vi"/>
+				<Item Name="2. Module Naming Rules.vi" Type="VI" URL="../src/Example/0. Base Concepts/2. Module Naming Rules.vi"/>
+				<Item Name="3. Message Helper VI and Equivalent String.vi" Type="VI" URL="../src/Example/0. Base Concepts/3. Message Helper VI and Equivalent String.vi"/>
+				<Item Name="4.1 Arguments - Complex Data As Arguments.vi" Type="VI" URL="../src/Example/0. Base Concepts/4.1 Arguments - Complex Data As Arguments.vi"/>
+				<Item Name="4.2 Arguments - Error As Arguments.vi" Type="VI" URL="../src/Example/0. Base Concepts/4.2 Arguments - Error As Arguments.vi"/>
+				<Item Name="4.3 Arguments - Safe Arguments if it contains key words of CSM.vi" Type="VI" URL="../src/Example/0. Base Concepts/4.3 Arguments - Safe Arguments if it contains key words of CSM.vi"/>
+				<Item Name="5. CSM Data Type.vi" Type="VI" URL="../src/Example/0. Base Concepts/5. CSM Data Type.vi"/>
+				<Item Name="6. Module Attributes.vi" Type="VI" URL="../src/Example/0. Base Concepts/6. Module Attributes.vi"/>
+				<Item Name="7. System-Level Module.vi" Type="VI" URL="../src/Example/0. Base Concepts/7. System-Level Module.vi"/>
 			</Item>
 			<Item Name="1. Create a reuse Module" Type="Folder">
 				<Item Name="1. Create a reuse Module.lvlib" Type="Library" URL="../src/Example/1. Create a reuse Module/1. Create a reuse Module.lvlib"/>
@@ -534,6 +534,20 @@
 				<Item Name="GetTargetBuildSpecs.vi" Type="VI" URL="/&lt;vilib&gt;/AppBuilder/GetTargetBuildSpecs.vi"/>
 				<Item Name="GetTargetBuildSpecs (project reference).vi" Type="VI" URL="/&lt;vilib&gt;/AppBuilder/GetTargetBuildSpecs (project reference).vi"/>
 				<Item Name="AB_Generate_Error_Cluster.vi" Type="VI" URL="/&lt;vilib&gt;/AppBuilder/AB_Generate_Error_Cluster.vi"/>
+				<Item Name="Compare Two Paths.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/Compare Two Paths.vi"/>
+				<Item Name="VIAnCtl Analysis App Info.ctl" Type="VI" URL="/&lt;vilib&gt;/addons/analyzer/_analyzerctrls.llb/VIAnCtl Analysis App Info.ctl"/>
+				<Item Name="Draw Text at Point.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Draw Text at Point.vi"/>
+				<Item Name="Draw Text in Rect.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Draw Text in Rect.vi"/>
+				<Item Name="PCT Pad String.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/PCT Pad String.vi"/>
+				<Item Name="Number To Enum.vim" Type="VI" URL="/&lt;vilib&gt;/Utility/Number To Enum.vim"/>
+				<Item Name="Sort 2D Array - Push Stack.vi" Type="VI" URL="/&lt;vilib&gt;/Array/Sort 2D Array - Push Stack.vi"/>
+				<Item Name="Sort 2D Array - Pop Stack.vi" Type="VI" URL="/&lt;vilib&gt;/Array/Sort 2D Array - Pop Stack.vi"/>
+				<Item Name="Sort 2D Array.vim" Type="VI" URL="/&lt;vilib&gt;/Array/Sort 2D Array.vim"/>
+			</Item>
+			<Item Name="user.lib" Type="Folder">
+				<Item Name="Convert EOLs (String)__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/string/string.llb/Convert EOLs (String)__ogtk.vi"/>
+				<Item Name="Convert EOLs (String Array)__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/string/string.llb/Convert EOLs (String Array)__ogtk.vi"/>
+				<Item Name="Convert EOLs__ogtk.vi" Type="VI" URL="/&lt;userlib&gt;/_OpenG.lib/string/string.llb/Convert EOLs__ogtk.vi"/>
 			</Item>
 			<Item Name="Shortcut Menu Item Definition.ctl" Type="VI" URL="/&lt;resource&gt;/plugins/PopupMenus/support/Shortcut Menu Item Definition.ctl"/>
 			<Item Name="Transaction Control.ctl" Type="VI" URL="/&lt;resource&gt;/plugins/PopupMenus/support/Transaction Control.ctl"/>
@@ -558,6 +572,10 @@
 			<Item Name="CSM-Testcase.lvlib" Type="Library" URL="../testcases/new/CSM/CSM-Testcase.lvlib"/>
 			<Item Name="provcom_StringGlobals.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Common/provcom_StringGlobals.vi"/>
 			<Item Name="testcase-CSMMessage.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMSyncMessage/testcase-CSMMessage.lvclass"/>
+			<Item Name="LV Config Write String.vi" Type="VI" URL="/&lt;resource&gt;/dialog/lvconfig.llb/LV Config Write String.vi"/>
+			<Item Name="LV Config Write Boolean.vi" Type="VI" URL="/&lt;resource&gt;/dialog/lvconfig.llb/LV Config Write Boolean.vi"/>
+			<Item Name="LV Config Read Boolean.vi" Type="VI" URL="/&lt;resource&gt;/dialog/lvconfig.llb/LV Config Read Boolean.vi"/>
+			<Item Name="LV Config Read String.vi" Type="VI" URL="/&lt;resource&gt;/dialog/lvconfig.llb/LV Config Read String.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Communicable State Machine.lvlibp" Type="Packed Library">
