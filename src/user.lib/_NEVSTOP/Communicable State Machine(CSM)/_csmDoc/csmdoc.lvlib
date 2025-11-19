@@ -24,4 +24,6 @@
 	<Item Name="csmdoc_import_doc_to_singleVI.vi" Type="VI" URL="../csmdoc_import_doc_to_singleVI.vi"/>
 	<Item Name="csmdoc_import_all_csm_VI_description_doc.vi" Type="VI" URL="../csmdoc_import_all_csm_VI_description_doc.vi"/>
 	<Item Name="csmdoc_export_all_csm_VI_description_doc.vi" Type="VI" URL="../csmdoc_export_all_csm_VI_description_doc.vi"/>
+	<Item Name="DocElement.ctl" Type="VI" URL="../_Typedef/DocElement.ctl"/>
+	<Item Name="DocNote.ctl" Type="VI" URL="../_Typedef/DocNote.ctl"/>
 </Library>
