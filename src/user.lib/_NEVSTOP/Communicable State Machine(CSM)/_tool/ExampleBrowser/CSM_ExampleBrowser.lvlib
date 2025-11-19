@@ -4,5 +4,10 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">385908736</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
+	<Item Name="Support" Type="Folder">
+		<Item Name="_Change Bookmark Image.vi" Type="VI" URL="../support/_Change Bookmark Image.vi"/>
+		<Item Name="_List Example VIs.vi" Type="VI" URL="../support/_List Example VIs.vi"/>
+		<Item Name="_UpdatePictureControl.vi" Type="VI" URL="../support/_UpdatePictureControl.vi"/>
+	</Item>
 	<Item Name="CSM_ExampleBrowser.vi" Type="VI" URL="../CSM_ExampleBrowser.vi"/>
 </Library>
