@@ -2,7 +2,7 @@
 
 ## Basic Concepts
 
-### JKISM vs CSM.vi
+### 1. JKISM vs CSM.vi
 
 #### Overview
 
@@ -32,7 +32,7 @@ Step4: CSM expands the debug tools, please refer to palette CSM->CSM Debug Tools
 Step5: CSM also has further addons for further customized functionalities, please refer to palette CSM->addons for further details.
 
 
-### Module Naming Rules.vi
+### 2. Module Naming Rules.vi
 
 #### Overview
 
@@ -43,7 +43,7 @@ Demonstrates basic string-naming rules for CSM module names. A valid CSM module 
 
 Demonstrates basic string-naming rules for CSM module names. A valid CSM module name is a string that should NOT contain any of the following special characters: `~!@%^&*()\[\]{}+=|\\/?'"<>,.\t\r\n`. These characters are reserved keywords for other purposes within the CSM framework.
 
-### Message Helper VI and Equivalent String.vi
+### 3. Message Helper VI and Equivalent String.vi
 
 #### Overview
 
@@ -62,25 +62,7 @@ This example explains the following types of string syntax format of inter-CSM-m
 
 You can use the LabVIEW API to build these strings, or you can create these strings manually by following message rules.
 
-### Arguments - Safe Arguments if it contains key words of CSM.vi
-
-#### Overview
-Demonstrates how to convert reserved CSM keywords in an argument string to a HEXSTR (0-9, A-F) format and how to convert back to original form to prevent affecting parsing of CSM message strings.
-
-#### VI-Description
-This example demonstrates how to convert reserved CSM keywords in an argument string to a %HEXSTR (0-9, A-F) format and how to convert back to original form to prevent affecting parsing of CSM message strings.
-
-### Arguments - Error As Arguments.vi
-
-#### Overview
-
-Converts a LabVIEW error cluster into a CSM-compatible error string, which allows the CSM core parse engine to process LabVIEW errors from the message queue. The converted error string uses the following format: `[Error: error-code] error-description-As-safe-argument-string`.
-
-#### VI-Description
-
-This example converts a LabVIEW error cluster into a CSM-compatible error string, which allows the CSM core parse engine to process LabVIEW errors from the message queue. The converted error string uses the following format: `[Error: error-code] error-description-As-safe-argument-string`. Furthermore, the CSM-Argument Type.vi gets the argument token, in this case `ErrStr`.
-
-### Arguments - Complex Data As Arguments.vi
+### 4.1 Arguments - Complex Data As Arguments.vi
 
 #### Overview
 
@@ -90,7 +72,25 @@ Converts complex LabVIEW data types, such as clusters and arrays, into a CSM-com
 
 Converts complex LabVIEW data types, such as clusters and arrays, into a CSM-compatible HEXSTR (0-9, A-F) format and then converts the strings back to the original data type. This process uses complex data safely as a state parameter without disrupting CSM message string parsing. Furthermore, the CSM-Argument Type.vi gets the argument token, in this case `HEXSTR`.
 
-### CSM Data Type.vi
+### 4.2 Arguments - Error As Arguments.vi
+
+#### Overview
+
+Converts a LabVIEW error cluster into a CSM-compatible error string, which allows the CSM core parse engine to process LabVIEW errors from the message queue. The converted error string uses the following format: `[Error: error-code] error-description-As-safe-argument-string`.
+
+#### VI-Description
+
+This example converts a LabVIEW error cluster into a CSM-compatible error string, which allows the CSM core parse engine to process LabVIEW errors from the message queue. The converted error string uses the following format: `[Error: error-code] error-description-As-safe-argument-string`. Furthermore, the CSM-Argument Type.vi gets the argument token, in this case `ErrStr`.
+
+### 4.3 Arguments - Safe Arguments if it contains key words of CSM.vi
+
+#### Overview
+Demonstrates how to convert reserved CSM keywords in an argument string to a HEXSTR (0-9, A-F) format and how to convert back to original form to prevent affecting parsing of CSM message strings.
+
+#### VI-Description
+This example demonstrates how to convert reserved CSM keywords in an argument string to a %HEXSTR (0-9, A-F) format and how to convert back to original form to prevent affecting parsing of CSM message strings.
+
+### 5. CSM Data Type.vi
 
 #### Overview
 
@@ -100,7 +100,40 @@ Identifies the data type of LabVIEW input data. You can use this example for fur
 
 This example identifies the data type of LabVIEW input data. You can use this example for further customized data type conversion within the CSM framework.
 
-### System-Level Module.vi
+### 6. Module Attributes.vi
+
+#### Overview
+
+Demonstrates how to dynamically interact with CSM module attributes using VIs from outside the CSM framework.
+
+#### VI-Description
+
+This example demonstrates how to dynamically interact with CSM module attributes using VIs from outside the CSM framework.
+
+The following are three ways of interaction within CSM framework:
+
+- Use string message queue to transfer message locally/outside of CSM framework, such as State >> Argument -@ DestModuleName.
+- Broadcast/Interrupt a status change event from a CSM module, register/unregister that event from another CSM/non-CSM module.
+- Use Module Attribute related VIs to get/set/remove/list CSM module attributes.
+
+The core function of this example is from outside the CSM module to dynamically set another random number value to the CSM module, and then get the value from the CSM module and display the value on the UI.
+
+#### Steps
+
+Step 1: Drop the VI template from LabVIEW CSM palette.
+
+Step 2: Add one new line of state string after Macro:Initialize, namely API: Define ABC Attribute.
+
+Step 3: Set Module Attribute inside the CSM module: abc as attribute, a random number as value.
+
+Step 4: Set Module Attribute from outside the CSM module: abc as attribute, a random number as value.
+
+Step 5: Set Module Attribute from outside the CSM module: abc as attribute, retrieve the set random number as value.
+
+Step 6: Send a synchronous message to stop the CSM module from outside the CSM module.
+
+
+### 7. System-Level Module.vi
 
 #### Overview
 
@@ -123,8 +156,6 @@ Step 4: List all active CSM modules, by default no system-level modules will be 
 Step 5: Use high-level API VI under CSM->API->Non-CSM Caller Support to send synchronous Macro:Exit messages to all the active CSM modules to stop all those modules/VIs.
 
 These Non-CSM Caller Support VIs are recommended to be used if we want to send inter-modules messages from a Non-CSM module to CSM-modules.
-
-### Module Attributes.vi
 
 #### Overview
 

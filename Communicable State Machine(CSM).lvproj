@@ -56,10 +56,7 @@
 					<Item Name="Build-in Error Handling Framework.lvlib" Type="Library" URL="../src/Example/4. Advance Examples/3. Build-in Error Handling Framework/Build-in Error Handling Framework.lvlib"/>
 				</Item>
 				<Item Name="4. Global Log Filter Example" Type="Folder">
-					<Item Name="Global Log Filter Example - Filter From Source(Event).vi" Type="VI" URL="../src/Example/4. Advance Examples/4. Global Log Filter Example/Global Log Filter Example - Filter From Source(Event).vi"/>
-					<Item Name="Global Log Filter Example - Filter From Source(Queue).vi" Type="VI" URL="../src/Example/4. Advance Examples/4. Global Log Filter Example/Global Log Filter Example - Filter From Source(Queue).vi"/>
-					<Item Name="Global Log Filter Example - Filter From Subscriber(Event).vi" Type="VI" URL="../src/Example/4. Advance Examples/4. Global Log Filter Example/Global Log Filter Example - Filter From Subscriber(Event).vi"/>
-					<Item Name="Global Log Filter Example - Filter From Subscriber(Queue).vi" Type="VI" URL="../src/Example/4. Advance Examples/4. Global Log Filter Example/Global Log Filter Example - Filter From Subscriber(Queue).vi"/>
+					<Item Name="CSM Global Log Filter Example.lvlib" Type="Library" URL="../src/Example/4. Advance Examples/4. Global Log Filter Example/CSM Global Log Filter Example.lvlib"/>
 				</Item>
 				<Item Name="5. Multi-Loop Module Example" Type="Folder">
 					<Item Name="Multi-Loop Module Example.lvlib" Type="Library" URL="../src/Example/4. Advance Examples/5. Multi-Loop Module Example/Multi-Loop Module Example.lvlib"/>
