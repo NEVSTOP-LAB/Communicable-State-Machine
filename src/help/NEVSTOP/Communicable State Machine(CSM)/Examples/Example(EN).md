@@ -414,7 +414,7 @@ Step 1: Use the CSM VI template to create the GlobalErrorHandlingExample CSM mod
 
 Step 2: Add one more line of inter-module string message to register "Error Occurred" broadcast event, which is generated any time if any CSM submodule got error: "Error Occurred@* >> Error Handler -><register>", then process the captured event accordingly in the "Error Handler" case.
 
-### Global Log Filter Example(Global Log Filter Example - Filter From Source(Event).vi)
+### Global Log Filter Example(Filter From Source(Event).vi)
 
 #### Overview
 
@@ -440,7 +440,7 @@ Step 5: Capture the user-event and handle it, in this example, we print it into 
 
 Step 6: Use CSM_Run Scripts VI to send "Macro:Exit" message to synchronously exit all the running CSM modules and also destroy the CSM global state user event handle.
 
-### Global Log Filter Example(Global Log Filter Example - Filter From Source(Queue).vi)
+### Global Log Filter Example(Filter From Source(Queue).vi)
 
 #### Overview
 
@@ -466,7 +466,7 @@ Then dynamically change the global filter rules if user changes it directly from
 
 Step 5: Use CSM_Run Scripts VI to send "Macro:Exit" message to synchronously exit all the running CSM modules and also destroy the CSM global state user event queue.
 
-### Global Log Filter Example(Global Log Filter Example - Filter From Subscriber(Event).vi)
+### Global Log Filter Example(Filter From Subscriber(Event).vi)
 
 #### Overview
 
@@ -490,7 +490,7 @@ Step 4: Capture the user-event and handle it, in this example, we print it into 
 
 Step 5: Use CSM_Run Scripts VI to send "Macro:Exit" message to synchronously exit all the running CSM modules and also destroy the CSM global state user event handle.
 
-### Global Log Filter Example(Global Log Filter Example - Filter From Subscriber(Queue).vi)
+### Global Log Filter Example(Filter From Subscriber(Queue).vi)
 
 #### Overview
 
