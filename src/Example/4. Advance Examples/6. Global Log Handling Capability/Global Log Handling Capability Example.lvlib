@@ -5,7 +5,7 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="SubModules" Type="Folder">
-		<Item Name="Module to Generate Flood of Logs.vi" Type="VI" URL="../Module to Generate Flood of Logs.vi"/>
+		<Item Name="Module to Generate Flood of Logs.vi" Type="VI" URL="../SubModules/Module to Generate Flood of Logs.vi"/>
 	</Item>
 	<Item Name="TopVI" Type="Folder">
 		<Item Name="Global Log Handling Capability Example.vi" Type="VI" URL="../Global Log Handling Capability Example.vi"/>

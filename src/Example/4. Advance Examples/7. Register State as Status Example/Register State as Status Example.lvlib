@@ -6,7 +6,7 @@
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Property Name="NI.SortType" Type="Int">3</Property>
 	<Item Name="SubModules" Type="Folder">
-		<Item Name="SubModule.vi" Type="VI" URL="../SubModule.vi"/>
+		<Item Name="SubModule.vi" Type="VI" URL="../SubModules/SubModule.vi"/>
 	</Item>
 	<Item Name="TopVI" Type="Folder">
 		<Item Name="Register State as Status Example.vi" Type="VI" URL="../Register State as Status Example.vi"/>
