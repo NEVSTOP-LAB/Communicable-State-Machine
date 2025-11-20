@@ -23,61 +23,6 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
-		<Item Name="Example" Type="Folder">
-			<Property Name="NI.SortType" Type="Int">0</Property>
-			<Item Name="0. Base Concepts" Type="Folder">
-				<Item Name="1. JKISM vs CSM.vi" Type="VI" URL="../src/Example/0. Base Concepts/1. JKISM vs CSM.vi"/>
-				<Item Name="2. Module Naming Rules.vi" Type="VI" URL="../src/Example/0. Base Concepts/2. Module Naming Rules.vi"/>
-				<Item Name="3. Message Helper VI and Equivalent String.vi" Type="VI" URL="../src/Example/0. Base Concepts/3. Message Helper VI and Equivalent String.vi"/>
-				<Item Name="4.1 Arguments - Complex Data As Arguments.vi" Type="VI" URL="../src/Example/0. Base Concepts/4.1 Arguments - Complex Data As Arguments.vi"/>
-				<Item Name="4.2 Arguments - Error As Arguments.vi" Type="VI" URL="../src/Example/0. Base Concepts/4.2 Arguments - Error As Arguments.vi"/>
-				<Item Name="4.3 Arguments - Safe Arguments if it contains key words of CSM.vi" Type="VI" URL="../src/Example/0. Base Concepts/4.3 Arguments - Safe Arguments if it contains key words of CSM.vi"/>
-				<Item Name="5. CSM Data Type.vi" Type="VI" URL="../src/Example/0. Base Concepts/5. CSM Data Type.vi"/>
-				<Item Name="6. Module Attributes.vi" Type="VI" URL="../src/Example/0. Base Concepts/6. Module Attributes.vi"/>
-				<Item Name="7. System-Level Module.vi" Type="VI" URL="../src/Example/0. Base Concepts/7. System-Level Module.vi"/>
-			</Item>
-			<Item Name="1. Create a reuse Module" Type="Folder">
-				<Item Name="1. Create a reuse Module.lvlib" Type="Library" URL="../src/Example/1. Create a reuse Module/1. Create a reuse Module.lvlib"/>
-			</Item>
-			<Item Name="2. Caller is CSM Scenario" Type="Folder">
-				<Item Name="CSM Example - Caller is a CSM.vi" Type="VI" URL="../src/Example/2. Caller is CSM Scenario/CSM Example - Caller is a CSM.vi"/>
-			</Item>
-			<Item Name="3. Caller is Other Framework Scenario" Type="Folder">
-				<Item Name="CSM Example - Caller is NOT a CSM.vi" Type="VI" URL="../src/Example/3. Caller is Other Framework Scenario/CSM Example - Caller is NOT a CSM.vi"/>
-			</Item>
-			<Item Name="4. Advance Examples" Type="Folder">
-				<Item Name="1. Action Workers Example" Type="Folder">
-					<Item Name="Action Worker Mode Example.lvlib" Type="Library" URL="../src/Example/4. Advance Examples/1. Action Workers Example/Action Worker Mode Example.lvlib"/>
-				</Item>
-				<Item Name="2. Chain of Responsiblility Example" Type="Folder">
-					<Item Name="Chain of Responsiblility Example.lvlib" Type="Library" URL="../src/Example/4. Advance Examples/2. Chain of Responsiblility Example/Chain of Responsiblility Example.lvlib"/>
-				</Item>
-				<Item Name="3. Build-in Error Handling Framework" Type="Folder">
-					<Item Name="Build-in Error Handling Framework.lvlib" Type="Library" URL="../src/Example/4. Advance Examples/3. Build-in Error Handling Framework/Build-in Error Handling Framework.lvlib"/>
-				</Item>
-				<Item Name="4. Global Log Filter Example" Type="Folder">
-					<Item Name="CSM Global Log Filter Example.lvlib" Type="Library" URL="../src/Example/4. Advance Examples/4. Global Log Filter Example/CSM Global Log Filter Example.lvlib"/>
-				</Item>
-				<Item Name="5. Multi-Loop Module Example" Type="Folder">
-					<Item Name="Multi-Loop Module Example.lvlib" Type="Library" URL="../src/Example/4. Advance Examples/5. Multi-Loop Module Example/Multi-Loop Module Example.lvlib"/>
-				</Item>
-				<Item Name="6. Global Log Handling Capability" Type="Folder">
-					<Item Name="Global Log Handling Capability Example.lvlib" Type="Library" URL="../src/Example/4. Advance Examples/6. Global Log Handling Capability/Global Log Handling Capability Example.lvlib"/>
-				</Item>
-				<Item Name="7. Register State as Status Example" Type="Folder">
-					<Item Name="Register State as Status Example.lvlib" Type="Library" URL="../src/Example/4. Advance Examples/7. Register State as Status Example/Register State as Status Example.lvlib"/>
-				</Item>
-			</Item>
-			<Item Name="Addons - Logger" Type="Folder">
-				<Item Name="CSM Application Running Log Example.csmlog" Type="Document" URL="../src/Example/Addons - Logger/CSM Application Running Log Example.csmlog"/>
-				<Item Name="CSM Application Running Log Example.no-state.csmlog" Type="Document" URL="../src/Example/Addons - Logger/CSM Application Running Log Example.no-state.csmlog"/>
-				<Item Name="CSM Application Running Log Example.vi" Type="VI" URL="../src/Example/Addons - Logger/CSM Application Running Log Example.vi"/>
-			</Item>
-			<Item Name="Addons - Loop Support" Type="Folder">
-				<Item Name="CSMLS - Continuous Loop in CSM Example.csmlog" Type="Document" URL="../src/Example/Addons - Loop Support/CSMLS - Continuous Loop in CSM Example.csmlog"/>
-				<Item Name="CSMLS - Continuous Loop in CSM Example.vi" Type="VI" URL="../src/Example/Addons - Loop Support/CSMLS - Continuous Loop in CSM Example.vi"/>
-			</Item>
-		</Item>
 		<Item Name="vi.lib" Type="Folder" URL="../src/vi.lib">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
@@ -103,6 +48,9 @@
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
 		<Item Name="_obsolete" Type="Folder" URL="../src/_obsolete">
+			<Property Name="NI.DISK" Type="Bool">true</Property>
+		</Item>
+		<Item Name="examples" Type="Folder" URL="../src/examples">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
 		<Item Name="testcases" Type="Folder">
@@ -522,10 +470,6 @@
 				<Item Name="RectSize.vi" Type="VI" URL="/&lt;vilib&gt;/picture/PictureSupport.llb/RectSize.vi"/>
 				<Item Name="LVDeltaXY32Cluster.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVDeltaXY32Cluster.ctl"/>
 				<Item Name="LVRowAndColumnUnsignedTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVRowAndColumnUnsignedTypeDef.ctl"/>
-				<Item Name="TCP Listen.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/tcp.llb/TCP Listen.vi"/>
-				<Item Name="Internecine Avoider.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/tcp.llb/Internecine Avoider.vi"/>
-				<Item Name="TCP Listen List Operations.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/tcp.llb/TCP Listen List Operations.ctl"/>
-				<Item Name="TCP Listen Internal List.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/tcp.llb/TCP Listen Internal List.vi"/>
 				<Item Name="NI_App_Builder_API.lvlib" Type="Library" URL="/&lt;vilib&gt;/AppBuilder/AB_API_Simple/NI_App_Builder_API.lvlib"/>
 				<Item Name="Invoke BuildTarget.vi" Type="VI" URL="/&lt;vilib&gt;/AppBuilder/Invoke BuildTarget.vi"/>
 				<Item Name="GetTargetBuildSpecs.vi" Type="VI" URL="/&lt;vilib&gt;/AppBuilder/GetTargetBuildSpecs.vi"/>
@@ -541,6 +485,10 @@
 				<Item Name="Sort 2D Array - Pop Stack.vi" Type="VI" URL="/&lt;vilib&gt;/Array/Sort 2D Array - Pop Stack.vi"/>
 				<Item Name="Sort 2D Array.vim" Type="VI" URL="/&lt;vilib&gt;/Array/Sort 2D Array.vim"/>
 				<Item Name="LVBookmarkInfoTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVBookmarkInfoTypeDef.ctl"/>
+				<Item Name="TCP Listen.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/tcp.llb/TCP Listen.vi"/>
+				<Item Name="Internecine Avoider.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/tcp.llb/Internecine Avoider.vi"/>
+				<Item Name="TCP Listen List Operations.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/tcp.llb/TCP Listen List Operations.ctl"/>
+				<Item Name="TCP Listen Internal List.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/tcp.llb/TCP Listen Internal List.vi"/>
 			</Item>
 			<Item Name="Shortcut Menu Item Definition.ctl" Type="VI" URL="/&lt;resource&gt;/plugins/PopupMenus/support/Shortcut Menu Item Definition.ctl"/>
 			<Item Name="Transaction Control.ctl" Type="VI" URL="/&lt;resource&gt;/plugins/PopupMenus/support/Transaction Control.ctl"/>
@@ -634,7 +582,7 @@
 				<Property Name="Source[0].itemID" Type="Str">{DB7E31B9-80A7-4C7A-BC27-A90EEF82D280}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Example/1. Create a reuse Module/1. Create a reuse Module.lvlib</Property>
+				<Property Name="Source[1].itemID" Type="Ref"></Property>
 				<Property Name="Source[1].Library.allowMissingMembers" Type="Bool">true</Property>
 				<Property Name="Source[1].Library.atomicCopy" Type="Bool">true</Property>
 				<Property Name="Source[1].Library.LVLIBPtopLevel" Type="Bool">true</Property>

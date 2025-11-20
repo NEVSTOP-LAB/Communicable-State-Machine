@@ -14,6 +14,8 @@
 	<Property Name="NI.SortType" Type="Int">3</Property>
 	<Item Name="Support" Type="Folder">
 		<Item Name="Parse VI Documentation String.vi" Type="VI" URL="../Support/Parse VI Documentation String.vi"/>
+		<Item Name="_List Example VIs.vi" Type="VI" URL="../Support/_List Example VIs.vi"/>
+		<Item Name="_Match String Inside Pattern.vi" Type="VI" URL="../Support/_Match String Inside Pattern.vi"/>
 	</Item>
 	<Item Name="api" Type="Folder">
 		<Item Name="csmdoc_export_VI_description.vi" Type="VI" URL="../csmdoc_export_VI_description.vi"/>
@@ -29,4 +31,5 @@
 	<Item Name="Refresh Example Description.vi" Type="VI" URL="../Refresh Example Description.vi"/>
 	<Item Name="Refresh Single Example Description.vi" Type="VI" URL="../Refresh Single Example Description.vi"/>
 	<Item Name="Overwrite Decoration Content.vi" Type="VI" URL="../Support/Overwrite Decoration Content.vi"/>
+	<Item Name="csmdoc-Populate Example Description.vi" Type="VI" URL="../csmdoc-Populate Example Description.vi"/>
 </Library>
