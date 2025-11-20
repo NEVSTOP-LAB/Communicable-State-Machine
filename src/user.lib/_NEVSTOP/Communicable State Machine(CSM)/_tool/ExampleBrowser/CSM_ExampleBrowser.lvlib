@@ -7,6 +7,7 @@
 	<Item Name="Support" Type="Folder">
 		<Item Name="_Change Bookmark Image.vi" Type="VI" URL="../support/_Change Bookmark Image.vi"/>
 		<Item Name="_List Example VIs.vi" Type="VI" URL="../support/_List Example VIs.vi"/>
+		<Item Name="_Match String Inside Pattern.vi" Type="VI" URL="../support/_Match String Inside Pattern.vi"/>
 		<Item Name="_UpdatePictureControl.vi" Type="VI" URL="../support/_UpdatePictureControl.vi"/>
 	</Item>
 	<Item Name="CSM_ExampleBrowser.vi" Type="VI" URL="../CSM_ExampleBrowser.vi"/>

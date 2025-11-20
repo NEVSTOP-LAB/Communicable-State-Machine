@@ -5,7 +5,7 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="SubModules" Type="Folder">
-		<Item Name="Action Worker.vi" Type="VI" URL="../Action Worker.vi"/>
+		<Item Name="Action Worker.vi" Type="VI" URL="../SubModules/Action Worker.vi"/>
 	</Item>
 	<Item Name="TopVI" Type="Folder">
 		<Item Name="Action Worker Mode Example.vi" Type="VI" URL="../Action Worker Mode Example.vi"/>

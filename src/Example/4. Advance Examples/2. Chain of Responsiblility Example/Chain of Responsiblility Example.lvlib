@@ -5,11 +5,11 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="SubModules" Type="Folder">
-		<Item Name="ChainNode A.vi" Type="VI" URL="../ChainNode A.vi"/>
-		<Item Name="ChainNode B.vi" Type="VI" URL="../ChainNode B.vi"/>
-		<Item Name="ChainNode C.vi" Type="VI" URL="../ChainNode C.vi"/>
+		<Item Name="ChainNode A.vi" Type="VI" URL="../SubModules/ChainNode A.vi"/>
+		<Item Name="ChainNode B.vi" Type="VI" URL="../SubModules/ChainNode B.vi"/>
+		<Item Name="ChainNode C.vi" Type="VI" URL="../SubModules/ChainNode C.vi"/>
 	</Item>
 	<Item Name="TopVI" Type="Folder">
-		<Item Name="Chain of Responsiblility Example.vi" Type="VI" URL="../Chain of Responsiblility Example.vi"/>
+		<Item Name="Chain of Responsibility Example.vi" Type="VI" URL="../Chain of Responsibility Example.vi"/>
 	</Item>
 </Library>
