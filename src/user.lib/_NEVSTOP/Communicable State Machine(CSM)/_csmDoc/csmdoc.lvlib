@@ -26,4 +26,7 @@
 	<Item Name="csmdoc_export_all_csm_VI_description_doc.vi" Type="VI" URL="../csmdoc_export_all_csm_VI_description_doc.vi"/>
 	<Item Name="DocElement.ctl" Type="VI" URL="../_Typedef/DocElement.ctl"/>
 	<Item Name="DocNote.ctl" Type="VI" URL="../_Typedef/DocNote.ctl"/>
+	<Item Name="Refresh Example Description.vi" Type="VI" URL="../Refresh Example Description.vi"/>
+	<Item Name="Refresh Single Example Description.vi" Type="VI" URL="../Refresh Single Example Description.vi"/>
+	<Item Name="Overwrite Decoration Content.vi" Type="VI" URL="../Support/Overwrite Decoration Content.vi"/>
 </Library>
