@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Markdown渲染示例</title>
-    <!-- 引入marked.js库 -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- 引入Polyfill以支持IE浏览器 -->
+    <script src="https://cdn.jsdelivr.net/npm/core-js@3.6.5/client/core.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/regenerator-runtime@0.13.7/runtime.min.js"></script>
+    <!-- 引入支持IE11的marked.js版本 -->
+    <script src="https://cdn.jsdelivr.net/npm/marked@4.0.18/marked.min.js"></script>
     <style>
         /* CSS样式 */
         body {
@@ -99,17 +102,22 @@ console.log("Hello, World!");
         <div id="content"></div>
     
     <script>
-        // 渲染函数：从markdown div中读取原始Markdown内容，然后使用marked.parse渲染到content div中
+        // 渲染函数：从markdown div中读取原始Markdown内容，然后使用marked渲染到content div中
         function renderMarkdown() {
             // 1. 读取markdown元素中的原始Markdown内容
-            const markdownElement = document.getElementById('markdown');
-            const originalMarkdown = markdownElement.textContent; // 使用textContent获取原始文本内容
+            var markdownElement = document.getElementById('markdown');
+            var originalMarkdown = markdownElement.textContent || markdownElement.innerText; // 兼容IE
             
-            // 2. 使用marked.parse渲染Markdown内容
-            const renderedHtml = marked.parse(originalMarkdown);
+            // 2. 使用marked渲染Markdown内容（兼容不同版本的marked.js）
+            var renderedHtml;
+            if (typeof marked.parse === 'function') {
+                renderedHtml = marked.parse(originalMarkdown);
+            } else {
+                renderedHtml = marked(originalMarkdown);
+            }
             
             // 3. 将渲染后的HTML结果放到content元素中
-            const contentElement = document.getElementById('content');
+            var contentElement = document.getElementById('content');
             contentElement.innerHTML = renderedHtml;
             
             console.log('Markdown渲染完成！');
@@ -118,11 +126,20 @@ console.log("Hello, World!");
         }
         
         // 页面加载完成后自动渲染
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('页面加载完成，等待渲染Markdown...');
-            // 页面加载完成后自动渲染
-            renderMarkdown();
-        });
+        if (document.addEventListener) {
+            document.addEventListener('DOMContentLoaded', function() {
+                console.log('页面加载完成，等待渲染Markdown...');
+                renderMarkdown();
+            });
+        } else if (document.attachEvent) {
+            // IE8及以下版本的兼容
+            document.attachEvent('onreadystatechange', function() {
+                if (document.readyState === 'complete') {
+                    console.log('页面加载完成，等待渲染Markdown...');
+                    renderMarkdown();
+                }
+            });
+        }
     </script>
 </body>
 </html>

@@ -8,7 +8,7 @@
 
 演示 JKISM 和 CSM 状态机模板的框架结构。两个框架都使用基于字符串的消息队列来实现核心状态机。
 
-#### VI-Description
+#### Introduction
 
 本示例比较 JKISM 框架和 CSM 框架之间的代码。两个框架都使用基于字符串的消息队列来实现核心状态机。
 
@@ -42,7 +42,7 @@
 
 演示 CSM 模块名称的基本字符串命名规则。一个有效的 CSM 模块名称是一个字符串，不应包含以下任何特殊字符：`~!@%^&*()\[\]{}+=|\\/?'"<>,.\t\r\n`。这些字符是 CSM 框架内保留用于其他目的的关键字。
 
-#### VI-Description
+#### Introduction
 
 演示 CSM 模块名称的基本字符串命名规则。一个有效的 CSM 模块名称是一个字符串，不应包含以下任何特殊字符：`~!@%^&*()\[\]{}+=|\\/?'"<>,.\t\r\n`。这些字符是 CSM 框架内保留用于其他目的的关键字。
 
@@ -52,7 +52,7 @@
 
 演示 CSM 框架内消息通信的字符串语法格式。
 
-#### VI-Description
+#### Introduction
 
 本示例解释了 CSM 模块间消息通信的以下几种字符串语法格式：
 
@@ -72,7 +72,7 @@
 
 将复杂的 LabVIEW 数据类型（例如簇和数组）转换为 CSM 兼容的 HEXSTR (0-9, A-F) 格式，然后再将字符串转换回原始数据类型。此过程使用复杂数据作为状态参数，而不会干扰 CSM 消息字符串的解析。
 
-#### VI-Description
+#### Introduction
 
 将复杂的 LabVIEW 数据类型（例如簇和数组）转换为 CSM 兼容的 HEXSTR (0-9, A-F) 格式，然后再将字符串转换回原始数据类型。此过程使用复杂数据作为状态参数，而不会干扰 CSM 消息字符串的解析。此外，CSM-Argument Type.vi 获取参数标记，在本例中为 `HEXSTR`。
 
@@ -82,7 +82,7 @@
 
 将 LabVIEW 错误簇转换为 CSM 兼容的错误字符串，这允许 CSM 核心解析引擎处理来自消息队列的 LabVIEW 错误。转换后的错误字符串使用以下格式：`[Error: error-code] error-description-As-safe-argument-string`。
 
-#### VI-Description
+#### Introduction
 
 本示例将 LabVIEW 错误簇转换为 CSM 兼容的错误字符串，这允许 CSM 核心解析引擎处理来自消息队列的 LabVIEW 错误。转换后的错误字符串使用以下格式：`[Error: error-code] error-description-As-safe-argument-string`。此外，CSM-Argument Type.vi 获取参数标记，在本例中为 `ErrStr`。
 
@@ -92,7 +92,7 @@
 
 演示如何将参数字符串中的 CSM 保留关键字转换为 HEXSTR (0-9, A-F) 格式，以及如何转换回原始形式，以防止影响 CSM 消息字符串的解析。
 
-#### VI-Description
+#### Introduction
 
 本示例演示如何将参数字符串中的 CSM 保留关键字转换为 %HEXSTR (0-9, A-F) 格式，以及如何转换回原始形式，以防止影响 CSM 消息字符串的解析。
 
@@ -102,7 +102,7 @@
 
 识别 LabVIEW 输入数据的数据类型。您可以使用此示例在 CSM 框架内进行进一步的自定义数据类型转换。
 
-#### VI-Description
+#### Introduction
 
 本示例识别 LabVIEW 输入数据的数据类型。您可以使用此示例在 CSM 框架内进行进一步的自定义数据类型转换。
 
@@ -112,7 +112,7 @@
 
 演示如何使用 CSM 框架之外的 VI 动态地与 CSM 模块属性交互。
 
-#### VI-Description
+#### Introduction
 
 本示例演示如何使用 CSM 框架之外的 VI 动态地与 CSM 模块属性交互。
 
@@ -144,7 +144,7 @@
 
 演示如何创建系统级模块，并说明在列出所有活动模块时，系统级模块与常规 CSM 模块之间的区别。系统级模块通常用于大型项目，以方便代码开发和调试。
 
-#### VI-Description
+#### Introduction
 
 本示例演示如何创建系统级模块，并说明在列出所有活动模块时，系统级模块与常规 CSM 模块之间的区别。系统级模块通常用于大型项目，以方便代码开发和调试。
 
@@ -172,7 +172,7 @@
 
 每秒生成一个随机数，并将该数字与用户定义的阈值进行比较。当生成的随机数超过阈值时，广播一个更新。
 
-#### VI-Description
+#### Introduction
 
 本示例每秒生成一个随机数，并将该数字与用户定义的阈值进行比较。当生成的随机数超过阈值时，广播一个更新。
 
@@ -226,7 +226,7 @@
 
 本示例同步调用 CSM Reuse Module.vi 的两个实例，通过 API 实现动态状态订阅和模块控制。
 
-#### VI-Description
+#### Introduction
 
 演示如何在 CSM 框架内调用 CSM 模块。在本示例中，模块间通信通过消息字符串队列操作执行。您可以使用 Build Message with Arguments++ VI 生成消息字符串，或者如果您熟悉格式，也可以直接使用消息描述字符串。
 
@@ -286,7 +286,7 @@
 
 本示例异步调用 CSM Reuse Module.vi 的两个实例，通过 API 实现动态消息订阅和模块控制。
 
-#### VI-Description
+#### Introduction
 
 演示如何从另一个框架应用程序调用 CSM 模块。在本示例中，模块间通信是使用 Post/Send Message API 和模块状态更改用户事件来实现的。
 
@@ -348,7 +348,7 @@ Panel close? UI 事件：
 
 在本示例中，四个工作者实例在后台运行。检查历史日志以查看是哪个实例处理了每条消息。
 
-#### VI-Description
+#### Introduction
 
 本示例演示 CSM 框架中的工作者模式 (Worker Mode)。在工作者模式中，多个可克隆的 CSM 实例作为子模块运行。为避免命名冲突，CSM 会自动向工作者模块名称附加“#”后缀。当消息发送给工作者时，第一个空闲实例将使用公平队列机制处理它。从外部看，系统表现得好像只有一个模块在运行，而所有 CSM 概念（例如同步、异步和状态消息）都保持不变。
 
@@ -382,7 +382,7 @@ Panel close? UI 事件：
 
 每条消息都从最低顺序的模块传递到最高顺序的模块。当一个模块成功处理该消息时，处理停止，并且该消息不会转发到后续模块。如果链中没有模块可以处理该消息，本示例将返回一个错误。
 
-#### VI-Description
+#### Introduction
 
 本示例演示 CSM 框架中的责任链模式。责任链 CSM 模块应始终以后缀“$”和整数标记，例如 "CSMName$1"、"CSMName$2" 等。
 
@@ -419,7 +419,7 @@ Panel close? UI 事件：
 
 如果调用者 VI 不是 CSM 模块，您可以使用 Non-CSM Caller Support VI 实现相同的功能。
 
-#### VI-Description
+#### Introduction
 
 本示例演示如何使用内置的错误处理框架来订阅所有活动的 CSM 子模块的错误。
 
@@ -439,7 +439,7 @@ Panel close? UI 事件：
 
 演示使用 CSM 全局日志 API 记录状态更改事件以进行调试和监控。本示例使用基于源视图 (source-view)、基于用户事件 (user-event-based) 的机制。
 
-#### VI-Description
+#### Introduction
 
 本示例演示使用 CSM 全局日志 API 记录状态更改事件以进行调试和监控。本示例使用基于源视图 (source-view)、基于用户事件 (user-event-based) 的机制。
 
@@ -465,7 +465,7 @@ Panel close? UI 事件：
 
 演示使用 CSM 全局日志 API 记录状态更改事件以进行调试和监控。本示例使用基于源视图 (source-view)、基于队列 (queue-based) 的机制。
 
-#### VI-Description
+#### Introduction
 
 本示例演示使用 CSM 全局日志 API 记录状态更改事件以进行调试和监控。本示例使用基于源视图 (source-view)、基于队列 (queue-based) 的机制。
 
@@ -491,7 +491,7 @@ Panel close? UI 事件：
 
 演示使用 CSM 全局日志 API 记录状态更改事件以进行调试和监控。本示例使用基于订阅者视图 (subscriber-view)、基于用户事件 (user-event-based) 的机制。
 
-#### VI-Description
+#### Introduction
 
 本示例演示使用 CSM 全局日志 API 记录状态更改事件以进行调试和监控。本示例使用基于订阅者视图 (subscriber-view)、基于用户事件 (user-event-based) 的机制。
 
@@ -515,7 +515,7 @@ Panel close? UI 事件：
 
 演示使用 CSM 全局日志 API 记录状态更改事件以进行调试和监控。本示例使用基于订阅者视图 (subscriber-view)、基于队列 (queue-based) 的机制。
 
-#### VI-Description
+#### Introduction
 
 本示例演示使用 CSM 全局日志 API 记录状态更改事件以进行调试和监控。本示例使用基于订阅者视图 (subscriber-view)、基于队列 (queue-based) 的机制。
 
@@ -539,7 +539,7 @@ Panel close? UI 事件：
 
 演示在旁路循环中调用 CSM 子模块。在外部，该模块的交互类似于标准 CSM 子模块，但请注意其特定的 API 和状态更改行为。
 
-#### VI-Description
+#### Introduction
 
 本示例演示在旁路循环中调用 CSM 子模块。在外部，该模块的交互类似于标准 CSM 子模块，但请注意其特定的 API 和状态更改行为。
 
@@ -558,7 +558,7 @@ Panel close? UI 事件：
 
 使用此示例来基准测试 CSM 的全局日志性能，并作为自定义实现的参考。
 
-#### VI-Description
+#### Introduction
 
 本示例演示 CSM 的全局日志处理能力。本示例调用 30 个持续生成事件的子模块。主 VI 捕h获这些事件，并使用全局日志 API 来计算和显示关键处理指标，例如 LogInQ、更改速度和处理速度。
 
@@ -584,7 +584,7 @@ Panel close? UI 事件：
 
 CSM 核心引擎会自动管理注册过程，因此不需要手动注销。
 
-#### VI-Description
+#### Introduction
 
 本示例演示使用 CSM <register> 消息字符串进行动态状态注册。该消息可以使用 Build Message With Arguments ++.vi 构建，也可以手动创建。单击示例 UI 中的按钮，查看相应的响应。您还可以在示例 UI 中更改注册字符串，以查看进一步的自定义响应。
 
@@ -608,7 +608,7 @@ CSM 核心引擎会自动管理注册过程，因此不需要手动注销。
 
 演示如何使用 CSM Logger VI 来实现全局 CSM 事件文件记录功能。
 
-#### VI-Description
+#### Introduction
 
 本示例演示如何使用 CSM Logger VI 来实现全局 CSM 事件文件记录功能。
 
@@ -634,7 +634,7 @@ CSM 核心引擎会自动管理注册过程，因此不需要手动注销。
 
 本示例展示了 CSM 框架内的连续 DAQ 采集。单击 Start 开始连续采集，单击 Stop（或触发高优先级错误）结束循环。作为比较，单击 DAQ:once 运行单次采集。低优先级错误不会停止循环。
 
-#### VI-Description
+#### Introduction
 
 本示例演示如何使用 CSM Loop-Support VI 来创建类似于 while 循环的连续循环机制。您无需手动嵌入 while 循环，而是可以使用高级 API 来定义、附加和终止循环。CSM 框架会自动处理所有底层操作。
 
@@ -677,7 +677,7 @@ CSM 核心引擎会自动管理注册过程，因此不需要手动注销。
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -697,7 +697,7 @@ CSM 核心引擎会自动管理注册过程，因此不需要手动注销。
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -717,7 +717,7 @@ CSM 核心引擎会自动管理注册过程，因此不需要手动注销。
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -737,7 +737,7 @@ CSM 核心引擎会自动管理注册过程，因此不需要手动注销。
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -757,7 +757,7 @@ CSM 核心引擎会自动管理注册过程，因此不需要手动注销。
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -777,7 +777,7 @@ CSM 核心引擎会自动管理注册过程，因此不需要手动注销。
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -797,7 +797,7 @@ CSM 核心引擎会自动管理注册过程，因此不需要手动注销。
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -817,7 +817,7 @@ CSM 核心引擎会自动管理注册过程，因此不需要手动注销。
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -837,7 +837,7 @@ CSM 核心引擎会自动管理注册过程，因此不需要手动注销。
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -857,7 +857,7 @@ CSM 核心引擎会自动管理注册过程，因此不需要手动注销。
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -877,7 +877,7 @@ CSM 核心引擎会自动管理注册过程，因此不需要手动注销。
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -897,7 +897,7 @@ CSM 核心引擎会自动管理注册过程，因此不需要手动注销。
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -917,7 +917,7 @@ CSM 核心引擎会自动管理注册过程，因此不需要手动注销。
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -937,7 +937,7 @@ CSM 核心引擎会自动管理注册过程，因此不需要手动注销。
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -957,7 +957,7 @@ CSM 核心引擎会自动管理注册过程，因此不需要手动注销。
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -979,7 +979,7 @@ CSM 核心引擎会自动管理注册过程，因此不需要手动注销。
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -999,7 +999,7 @@ CSM 核心引擎会自动管理注册过程，因此不需要手动注销。
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -1019,7 +1019,7 @@ CSM 核心引擎会自动管理注册过程，因此不需要手动注销。
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -1039,7 +1039,7 @@ CSM 核心引擎会自动管理注册过程，因此不需要手动注销。
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -1061,7 +1061,7 @@ CSM 核心引擎会自动管理注册过程，因此不需要手动注销。
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -1081,7 +1081,7 @@ CSM 核心引擎会自动管理注册过程，因此不需要手动注销。
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -1101,7 +1101,7 @@ CSM 核心引擎会自动管理注册过程，因此不需要手动注销。
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -1121,7 +1121,7 @@ CSM 核心引擎会自动管理注册过程，因此不需要手动注销。
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -1141,7 +1141,7 @@ CSM 核心引擎会自动管理注册过程，因此不需要手动注销。
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -1161,7 +1161,7 @@ CSM 核心引擎会自动管理注册过程，因此不需要手动注销。
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -1181,7 +1181,7 @@ CSM 核心引擎会自动管理注册过程，因此不需要手动注销。
 
 
 
-#### VI-Description
+#### Introduction
 
 
 

@@ -8,7 +8,7 @@
 
 Demonstrates the framework structures of the JKISM and CSM state machine templates. Both frameworks use string-based message queues to implement the core state machine.
 
-#### VI-Description
+#### Introduction
 
 This example compares code between JKISM framework and CSM framework. Both frameworks use string-based message queues to implement the core state machine.
 
@@ -39,7 +39,7 @@ Step5: CSM also has further addons for further customized functionalities, pleas
 Demonstrates basic string-naming rules for CSM module names. A valid CSM module name is a string that should NOT contain any of the following special characters: `~!@%^&*()\[\]{}+=|\\/?'"<>,.\t\r\n`. These characters are reserved keywords for other purposes within the CSM framework.
 
 
-#### VI-Description
+#### Introduction
 
 Demonstrates basic string-naming rules for CSM module names. A valid CSM module name is a string that should NOT contain any of the following special characters: `~!@%^&*()\[\]{}+=|\\/?'"<>,.\t\r\n`. These characters are reserved keywords for other purposes within the CSM framework.
 
@@ -49,7 +49,7 @@ Demonstrates basic string-naming rules for CSM module names. A valid CSM module 
 
 Demonstrates string syntax format for message communications within the CSM framework.
 
-#### VI-Description
+#### Introduction
 
 This example explains the following types of string syntax format of inter-CSM-module message communication:
 - Sync message
@@ -68,7 +68,7 @@ You can use the LabVIEW API to build these strings, or you can create these stri
 
 Converts complex LabVIEW data types, such as clusters and arrays, into a CSM-compatible HEXSTR (0-9, A-F) format and then converts the strings back to the original data type. This process uses complex data safely as a state parameter without disrupting CSM message string parsing.
 
-#### VI-Description
+#### Introduction
 
 Converts complex LabVIEW data types, such as clusters and arrays, into a CSM-compatible HEXSTR (0-9, A-F) format and then converts the strings back to the original data type. This process uses complex data safely as a state parameter without disrupting CSM message string parsing. Furthermore, the CSM-Argument Type.vi gets the argument token, in this case `HEXSTR`.
 
@@ -78,7 +78,7 @@ Converts complex LabVIEW data types, such as clusters and arrays, into a CSM-com
 
 Converts a LabVIEW error cluster into a CSM-compatible error string, which allows the CSM core parse engine to process LabVIEW errors from the message queue. The converted error string uses the following format: `[Error: error-code] error-description-As-safe-argument-string`.
 
-#### VI-Description
+#### Introduction
 
 This example converts a LabVIEW error cluster into a CSM-compatible error string, which allows the CSM core parse engine to process LabVIEW errors from the message queue. The converted error string uses the following format: `[Error: error-code] error-description-As-safe-argument-string`. Furthermore, the CSM-Argument Type.vi gets the argument token, in this case `ErrStr`.
 
@@ -87,7 +87,7 @@ This example converts a LabVIEW error cluster into a CSM-compatible error string
 #### Overview
 Demonstrates how to convert reserved CSM keywords in an argument string to a HEXSTR (0-9, A-F) format and how to convert back to original form to prevent affecting parsing of CSM message strings.
 
-#### VI-Description
+#### Introduction
 This example demonstrates how to convert reserved CSM keywords in an argument string to a %HEXSTR (0-9, A-F) format and how to convert back to original form to prevent affecting parsing of CSM message strings.
 
 ### 5. CSM Data Type.vi
@@ -96,7 +96,7 @@ This example demonstrates how to convert reserved CSM keywords in an argument st
 
 Identifies the data type of LabVIEW input data. You can use this example for further customized data type conversion within the CSM framework.
 
-#### VI-Description
+#### Introduction
 
 This example identifies the data type of LabVIEW input data. You can use this example for further customized data type conversion within the CSM framework.
 
@@ -106,7 +106,7 @@ This example identifies the data type of LabVIEW input data. You can use this ex
 
 Demonstrates how to dynamically interact with CSM module attributes using VIs from outside the CSM framework.
 
-#### VI-Description
+#### Introduction
 
 This example demonstrates how to dynamically interact with CSM module attributes using VIs from outside the CSM framework.
 
@@ -139,7 +139,7 @@ Step 6: Send a synchronous message to stop the CSM module from outside the CSM m
 
 Demonstrates how to create a system-level module and illustrates the differences between system-level and regular CSM modules when listing all active modules. System-level modules are typically used in large-scale projects to facilitate code development and debugging.
 
-#### VI-Description
+#### Introduction
 
 This example demonstrates how to create a system-level module and illustrates the differences between system-level and regular CSM modules when listing all active modules. System-level modules are typically used in large-scale projects to facilitate code development and debugging.
 
@@ -161,7 +161,7 @@ These Non-CSM Caller Support VIs are recommended to be used if we want to send i
 
 Demonstrates how to dynamically interact with CSM module attributes using VIs from outside the CSM framework.
 
-#### VI-Description
+#### Introduction
 
 This example demonstrates how to dynamically interact with CSM module attributes using VIs from outside the CSM framework.
 
@@ -195,7 +195,7 @@ Step 6: Send a synchronous message to stop the CSM module from outside the CSM m
 #### Overview
 Generates a random number every second and compare the number against a user-defined threshold. Broadcasts an update when the generated random number exceeds the threshold.
 
-#### VI-Description
+#### Introduction
 This example generates a random number every second and compare the number against a user-defined threshold. Broadcasts an update when the generated random number exceeds the threshold.
 
 #### Steps
@@ -233,7 +233,7 @@ Demonstrates how to invoke CSM module within the CSM framework. In this example,
 
 This example synchronously calls two instances of CSM Reuse Module.vi, enabling dynamic status subscription and module control through the API.
 
-#### VI-Description
+#### Introduction
 
 Demonstrates how to invoke CSM module within the CSM framework. In this example, inter-module communication is performed through message string queue operations. You can generate a message string using the Build Message with Arguments++ VI or directly use message description strings if you are familiar with the format.
 
@@ -283,7 +283,7 @@ Demonstrates how to invoke a CSM module from another framework application. In t
 
 This example asynchronously calls two instances of CSM Reuse Module.vi, enabling dynamic message subscription and module control through the API.
 
-#### VI-Description
+#### Introduction
 
 This example demonstrates how to invoke a CSM module from another framework application. In this example, inter-module communication is implemented using the Post/Send Message API and module status change user events.
 
@@ -332,7 +332,7 @@ Demonstrates the Worker Mode in the CSM framework. In Worker Mode, multiple clon
 
 In this example, four worker instances of worker run in the background. Check the history log to see which instance processed each message.
 
-#### VI-Description
+#### Introduction
 
 This example demonstrates the Worker Mode in the CSM framework. In Worker Mode, multiple clonable CSM instances operate as sub-modules. To avoid naming conflicts, CSM automatically appends a “#” postfix to worker module names. When a message is sent to worker, the first idle instance handles it using a fair queue mechanism. From the outside, the system behaves as if only one module is running, while all CSM concepts—such as synchronous, asynchronous, and status messages—remain unchanged.
 
@@ -363,7 +363,7 @@ Demonstrates the responsibility chain design pattern implemented in the CSM fram
 
 Each message is passed through the chain from the lowest-ordered module to the highest-ordered module. Processing stops when a module successfully handles the message, and the message is not forwarded to subsequent modules. If no module in the chain can process the message, this example returns an error.
 
-#### VI-Description
+#### Introduction
 
 This example demonstrates the responsibility chain mode in the CSM framework. Responsibility chain CSM module should always be marked with a "$" and an integer number as suffix, such as "CSMName$1", "CSMName$2", and so on. 
 
@@ -400,7 +400,7 @@ Each CSM module automatically broadcasts an Error Occurred status update when an
 
 If the caller VI is not a CSM module, you can achieve the same functionality using the Non-CSM Caller Support VIs.
 
-#### VI-Description
+#### Introduction
 
 This example demonstrates how to subscribe to errors from all active CSM sub-modules using the built-in error handling framework.
 
@@ -420,7 +420,7 @@ Step 2: Add one more line of inter-module string message to register "Error Occu
 
 Demonstrates using the CSM Global Log APIs to record state change events for debugging and monitoring. This example uses a source-view, user-event-based mechanism.
 
-#### VI-Description
+#### Introduction
 
 This example demonstrates using the CSM Global Log APIs to record state change events for debugging and monitoring. This example uses a source-view, user-event-based mechanism.
 
@@ -446,7 +446,7 @@ Step 6: Use CSM_Run Scripts VI to send "Macro:Exit" message to synchronously exi
 
 Demonstrates using the CSM Global Log APIs to record state change events for debugging and monitoring. This example uses a source-view, queue-based mechanism.
 
-#### VI-Description
+#### Introduction
 
 This example demonstrates using the CSM Global Log APIs to record state change events for debugging and monitoring. This example uses a source-view, queue-based mechanism.
 
@@ -472,7 +472,7 @@ Step 5: Use CSM_Run Scripts VI to send "Macro:Exit" message to synchronously exi
 
 Demonstrates using the CSM Global Log APIs to record state change events for debugging and monitoring. This example uses a subscriber-view, user-event-based mechanism.
 
-#### VI-Description
+#### Introduction
 
 This example demonstrates using the CSM Global Log APIs to record state change events for debugging and monitoring. This example uses a subscriber-view, user-event-based mechanism.
 
@@ -496,7 +496,7 @@ Step 5: Use CSM_Run Scripts VI to send "Macro:Exit" message to synchronously exi
 
 Demonstrates using the CSM Global Log APIs to record state change events for debugging and monitoring. This example uses a subscriber-view, queue-based mechanism.
 
-#### VI-Description
+#### Introduction
 
 This example demonstrates using the CSM Global Log APIs to record state change events for debugging and monitoring. This example uses a subscriber-view, queue-based mechanism.
 
@@ -520,7 +520,7 @@ Step 4: Use CSM_Run Scripts VI to send "Macro:Exit" message to synchronously exi
 
 Demonstrates invoking a CSM submodule in a side loop. Externally, this module interacts like a standard CSM submodule, but note its specific API and status change behavior.
 
-#### VI-Description
+#### Introduction
 
 This example demonstrates invoking a CSM submodule in a side loop. Externally, this module interacts like a standard CSM submodule, but note its specific API and status change behavior.
 
@@ -539,7 +539,7 @@ Demonstrates global log handling capability of CSM. This example calls 30 sub-mo
 
 Use this example to benchmark global log performance of CSM and as a reference for custom implementations.
 
-#### VI-Description
+#### Introduction
 
 This example demonstrates global log handling capability of CSM. This example calls 30 sub-modules that continuously generate events. The main VI captures these events and uses the Global Log APIs to calculate and display key processing metrics, such as LogInQ, changing speed, and handling speed.
 
@@ -565,7 +565,7 @@ A key feature of this example is the ability to cascade or pipeline event regist
 
 The CSM core engine automatically manages the registration process, so manual unregistration is not required.
 
-#### VI-Description
+#### Introduction
 
 This example demonstrates dynamic state registration using the CSM <register> message string. The message can be built using Build Message With Arguments ++.vi or created manually. Click the buttons in the example UI and see corresponding responses. You can also change the registration string in the example UI to see further customized responses.
 
@@ -589,7 +589,7 @@ Step 3: Add "Echo:Echo1" case: we use the utility VI to further get the source o
 
 Demonstrates how to use the CSM Logger VIs to implement a global CSM event file logging function.
 
-#### VI-Description
+#### Introduction
 
 This example demonstrates how to use the CSM Logger VIs to implement a global CSM event file logging function.
 
@@ -615,7 +615,7 @@ Demonstrates how to use CSM Loop-Support VIs to create a continuous loop mechani
 
 This example showcases continuous DAQ acquisition within the CSM framework. Click Start to begin continuous acquisition and Stop (or trigger a high-priority error) to end the loop. For comparison, clicking DAQ:once runs a single acquisition. Low-priority errors do not stop the loop.
 
-#### VI-Description
+#### Introduction
 
 This example demonstrates how to use CSM Loop-Support VIs to create a continuous loop mechanism similar to a while loop. Instead of embedding a while loop manually, you can use high-level APIs to define, append, and terminate the loop. The CSM framework automatically handles all underlying operations.
 
@@ -656,7 +656,7 @@ Step3: Use CSM Loop-support API VIs to implement while-loop.
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -670,7 +670,7 @@ Step3: Use CSM Loop-support API VIs to implement while-loop.
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -686,7 +686,7 @@ Step3: Use CSM Loop-support API VIs to implement while-loop.
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -702,7 +702,7 @@ Step3: Use CSM Loop-support API VIs to implement while-loop.
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -718,7 +718,7 @@ Step3: Use CSM Loop-support API VIs to implement while-loop.
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -734,7 +734,7 @@ Step3: Use CSM Loop-support API VIs to implement while-loop.
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -750,7 +750,7 @@ Step3: Use CSM Loop-support API VIs to implement while-loop.
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -766,7 +766,7 @@ Step3: Use CSM Loop-support API VIs to implement while-loop.
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -782,7 +782,7 @@ Step3: Use CSM Loop-support API VIs to implement while-loop.
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -798,7 +798,7 @@ Step3: Use CSM Loop-support API VIs to implement while-loop.
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -814,7 +814,7 @@ Step3: Use CSM Loop-support API VIs to implement while-loop.
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -830,7 +830,7 @@ Step3: Use CSM Loop-support API VIs to implement while-loop.
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -846,7 +846,7 @@ Step3: Use CSM Loop-support API VIs to implement while-loop.
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -862,7 +862,7 @@ Step3: Use CSM Loop-support API VIs to implement while-loop.
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -878,7 +878,7 @@ Step3: Use CSM Loop-support API VIs to implement while-loop.
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -896,7 +896,7 @@ Step3: Use CSM Loop-support API VIs to implement while-loop.
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -910,7 +910,7 @@ Step3: Use CSM Loop-support API VIs to implement while-loop.
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -926,7 +926,7 @@ Step3: Use CSM Loop-support API VIs to implement while-loop.
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -942,7 +942,7 @@ Step3: Use CSM Loop-support API VIs to implement while-loop.
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -958,7 +958,7 @@ Step3: Use CSM Loop-support API VIs to implement while-loop.
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -972,7 +972,7 @@ Step3: Use CSM Loop-support API VIs to implement while-loop.
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -986,7 +986,7 @@ Step3: Use CSM Loop-support API VIs to implement while-loop.
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -1000,7 +1000,7 @@ Step3: Use CSM Loop-support API VIs to implement while-loop.
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -1014,7 +1014,7 @@ Step3: Use CSM Loop-support API VIs to implement while-loop.
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -1028,7 +1028,7 @@ Step3: Use CSM Loop-support API VIs to implement while-loop.
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
@@ -1042,7 +1042,7 @@ Step3: Use CSM Loop-support API VIs to implement while-loop.
 
 
 
-#### VI-Description
+#### Introduction
 
 
 
