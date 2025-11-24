@@ -271,9 +271,7 @@ CSM框架中，创建一个可重用模块通常不需要与其他模块进行�
 
 #### Overview
 
-演示如何在 CSM 框架内调用 CSM 模块。在本示例中，模块间通信通过消息字符串队列操作执行。您可以使用 Build Message with Arguments++ VI 生成消息字符串，或者如果您熟悉格式，也可以直接使用消息描述字符串。
-
-本示例同步调用 CSM Reuse Module.vi 的两个实例，通过 API 实现动态状态订阅和模块控制。
+演示如何在 CSM 框架内调用 CSM 模块。本示例同步调用 CSM Reuse Module.vi 的两个实例，通过 API 实现动态状态订阅和模块控制。
 
 #### Introduction
 
@@ -283,47 +281,26 @@ CSM框架中，创建一个可重用模块通常不需要与其他模块进行�
 
 #### Steps
 
-Step1：从 LabVIEW 选板拖放一个 VI CSM UI Module Template，将 CSM 名称更改为 "CSMScenarioExample"。
-
-Step2：同步调用 CSM Reuse Module.vi 两次，并分别命名为 SubModule0 和 SubModule1。有关如何创建此类可重用 CSM 模块的更多详细信息，请参阅另一个名为 1. Create a reuse Module 的 CSM 示例。
-
-Step3：在 "Macro:Initialize" case 下的现有标准字符串队列中添加一行新的自定义消息字符串，即 "Macro: Switch Active Module"，作为最后一行，以便我们可以在不同的子模块之间切换。
-
-Step4：为内部数据初始化添加一个字符串常量 SubModule0。对于更多自定义的内部数据初始化，我们可以在此处添加更多代码。
-
-Step5：在 UI 中添加一个字符串控件，用于切换和显示活动/目标模块（Combox box）。
-
-Step5.1：在 " 'Target Module': Value Change" UI 事件下，将字符串控件设置为活动模块内部数据，并发送一个模块内消息 Macro: Switch Active. Module。
-
-Step5.2：在 "UI: Initialize" case 下，更新活动/目标模块。
-
-Step6：在 "Macro: Switch Active Module" case 下，使用高级 VI 向活动子模块发送模块间同步消息 "API: Get Level -@ modulename"。
-
-或者，如果您熟悉 CSM 字符串语法规则，也可以手动键入字符串常量。
-
-Step7：现在状态队列为空，CSM 状态机正在 ' "", "Event Structure", "Idle" ' 下的超时 UI 事件中等待。下一步取决于用户提供的 UI 交互。
-
-Step8：在 UI 中创建本地测试按钮/控件如下：
-
-Step8.1：创建 API:Start 按钮，当用户单击此按钮时，将发送一条异步无回复消息 "API: Start -> modulename" 以启动活动的子模块。
-
-Step8.2：创建 Register All Status Change 按钮，当用户单击此按钮时，此 CSM 模块将从活动子模块注册以下广播/中断消息 "Status Changed@* >> Action: Status Change Handler -><register>"。
-
-Step8.3：创建 Unregister All Status Change 按钮，当用户单击此按钮时，此 CSM 模块将从活动子模块注销以下广播/中断消息 "Status Changed@* >> Action: Status Change Handler -><unregister>"。
-
-Step8.4：此处没有代码，但是由于注册的状态更改，您可以在调用时看到日志。收到此广播/中断消息后，可以在此处添加任何进一步的自定义代码。
-
-Step8.5：创建 API:Stop 按钮，当用户单击此按钮时，将发送一条异步无回复消息 "API: Stop -> modulename" 以停止活动的子模块。
-
-Step8.6：创建 Level DBL 控件，当用户更改值时，将向活动子模块发送一条异步消息 "API: Set Level >> 0.3 ->| modulename"。
-
-Step8.7：创建 API: Get Level(Async) 按钮，当用户单击此按钮时，将向活动子模块发送一条异步消息 "API: Get Level -> modulename"。相应地处理 "Async Message Posted" 和 "Async Response" case，在本示例中，Level 显示将被更新。
-
-Step8.8：创建 UI: create Front Panel State >> Open 按钮，当用户单击该按钮时，将向活动子模块发送一条带无回复的异步消息 "UI: Front Panel State >> Open ->| modulename"。
-
-Step8.9：创建 UI: create Front Panel State >> Close 按钮，当用户单击该按钮时，将向活动子模块发送一条带无回复的异步消息 "UI: Front Panel State >> Close ->| modulename"。
-
-Step9：在 "Panel Close?" UI 事件下，在 "Macro:Exit" 之前添加两个新的字符串消息："Macro: Exit -@ SubModule0" 和 "Macro: Exit -@ SubModule1"，以便我们可以在最终关闭 CSM 调用者/主模块之前安全地关闭所有 CSM 子模块。
+- Step1：从 LabVIEW 选板拖放一个 VI CSM UI Module Template，将 CSM 名称更改为 "CSMScenarioExample"。
+- Step2：同步调用 CSM Reuse Module.vi 两次，并分别命名为 SubModule0 和 SubModule1。有关如何创建此类可重用 CSM 模块的更多详细信息，请参阅另一个名为 1. Create a reuse Module 的 CSM 示例。
+- Step3：在 "Macro:Initialize" case 下的现有标准字符串队列中添加一行新的自定义消息字符串，即 "Macro: Switch Active Module"，作为最后一行，以便我们可以在不同的子模块之间切换。
+- Step4：为内部数据初始化添加一个字符串常量 SubModule0。对于更多自定义的内部数据初始化，我们可以在此处添加更多代码。
+- Step5：在 UI 中添加一个字符串控件，用于切换和显示活动/目标模块（Combox box）。
+    - Step5.1：在 " 'Target Module': Value Change" UI 事件下，将字符串控件设置为活动模块内部数据。
+    - Step5.2：同样使用“Macro: Switch Active Module”，更新活动模块。
+- Step6：在 "Macro: Switch Active Module" case 下，使用高级 VI 向活动子模块发送模块间同步消息 "API: Get Level -@ modulename"。或者，如果您熟悉 CSM 字符串语法规则，也可以手动键入字符串常量。
+- Step7：现在状态队列为空，CSM 状态机正在 ' "", "Event Structure", "Idle" ' 下的超时 UI 事件中等待。下一步取决于用户提供的 UI 交互。
+- Step8：在 UI 中创建本地测试按钮/控件如下：
+    - Step8.1：创建 API:Start 按钮，当用户单击此按钮时，将发送一条异步无回复消息 "API: Start -> modulename" 以启动活动的子模块。
+    - Step8.2：创建 Register All Status Change 按钮，当用户单击此按钮时，此 CSM 模块将从活动子模块注册以下广播/中断消息 "Status Changed@* >> Action: Status Change Handler -><register>"。
+    - Step8.3：创建 Unregister All Status Change 按钮，当用户单击此按钮时，此 CSM 模块将从活动子模块注销以下广播/中断消息 "Status Changed@* >> Action: Status Change Handler -><unregister>"。
+    - Step8.4：此处用于收到消息时跳出事件结构，以处理状态更改。
+    - Step8.5：创建 API:Stop 按钮，当用户单击此按钮时，将发送一条异步无回复消息 "API: Stop -> modulename" 以停止活动的子模块。
+    - Step8.6：创建 Level DBL 控件，当用户更改值时，将向活动子模块发送一条异步消息 "API: Set Level >> 0.3 ->| modulename"。
+    - Step8.7：创建 API: Get Level(Async) 按钮，当用户单击此按钮时，将向活动子模块发送一条异步消息 "API: Get Level -> modulename"。相应地处理 "Async Message Posted" 和 "Async Response" case，在本示例中，Level 显示将被更新。
+    - Step8.8：创建 UI: create Front Panel State >> Open 按钮，当用户单击该按钮时，将向活动子模块发送一条带无回复的异步消息 "UI: Front Panel State >> Open ->| modulename"。
+    - Step8.9：创建 UI: create Front Panel State >> Close 按钮，当用户单击该按钮时，将向活动子模块发送一条带无回复的异步消息 "UI: Front Panel State >> Close ->| modulename"。
+- Step9：在 "Panel Close?" UI 事件下，在 "Macro:Exit" 之前添加两个新的字符串消息："Macro: Exit -@ SubModule0" 和 "Macro: Exit -@ SubModule1"，以便我们可以在最终关闭 CSM 调用者/主模块之前安全地关闭所有 CSM 子模块。
 
 ## Caller is Other Framework Scenario
 
