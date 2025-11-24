@@ -71,17 +71,49 @@ CSM 是仿照 JKISM 逻辑设计的 LabVIEW 程序开发框架，两个框架都
 
 #### Introduction
 
-本示例解释了 CSM 模块间消息通信的以下几种字符串语法格式：
+本示例解释了 CSM 模块间消息通信的语法格式，您可以使用 LabVIEW API 来构建这些字符串，或者如果您熟悉消息规则，也可以手动创建这些字符串。 CSM定义的语法如下：
 
-- 同步消息
-- 带回复的异步消息
-- 不带回复的异步消息
-- 广播一个正常的状态字符串
-- 广播一个中断或高优先级的状态字符串
-- 注册一个状态
-- 注销一个状态
+```
+#CSM 状态语法
+    // 本地消息示例
+    DoSth: DoA >> 参数
 
-您可以使用 LabVIEW API 来构建这些字符串，或者如果您熟悉消息规则，也可以手动创建这些字符串。
+    // 同步调用示例
+    API: xxxx >> 参数 -@ TargetModule
+
+    // 异步调用示例
+    API: xxxx >> 参数 -> TargetModule
+
+    // 无应答异步调用示例
+    API: xxxx >> 参数 ->| TargetModule
+
+    // 广播正常状态：
+    Status >> StatusArguments -><status>
+
+    // 广播中断状态：
+    Interrupt >> StatusArguments -><interrupt>
+
+    // 将源模块的状态注册到处理程序模块
+    Status@Source Module >> API@Handler Module -><register>
+
+    // 取消注册源模块的状态
+    Status@Source Module >> API@Handler Module -><unregister>
+
+#CSM 注释
+    // 要添加注释，请使用 "//"，右边的所有文本将被忽略。
+    UI: Initialize // 初始化 UI
+    // Another comment line
+```
+
+#### Steps
+
+- Step1. 同步消息。发送方会原地等待回复，直到超时或收到回复。
+- Step2. 带回复的异步消息。发送方会继续执行后续操作，而不会等待回复；接收方处理完消息后，会回复发送方。
+- Step3. 不带回复的异步消息。发送方会继续执行后续操作，而不会等待回复；接收方处理完消息后，不会回复发送方。
+- Step4. 广播一个正常的状态字符串。
+- Step5. 广播一个中断或高优先级的状态字符串
+- Step6. 注册一个状态, 当状态发生变化时, 会自动触发所注册的处理程序模块的消息。
+- Step7. 注销一个状态，取消注册状态变化触发的消息。
 
 ### 4.1 Arguments - Complex Data As Arguments.vi
 
