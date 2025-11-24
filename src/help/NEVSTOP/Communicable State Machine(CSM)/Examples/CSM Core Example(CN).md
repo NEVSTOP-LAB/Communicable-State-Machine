@@ -138,11 +138,17 @@ CSM的参数表现形式只能为 String 类型。HEXSTR (0-9, A-F) 格式 是 C
 
 #### Overview
 
-将 LabVIEW 错误簇转换为 CSM 兼容的错误字符串，这允许 CSM 核心解析引擎处理来自消息队列的 LabVIEW 错误。转换后的错误字符串使用以下格式：`[Error: error-code] error-description-As-safe-argument-string`。
+本范例用于展示 LabVIEW错误如何作为CSM参数传递。
 
 #### Introduction
 
-本示例将 LabVIEW 错误簇转换为 CSM 兼容的错误字符串，这允许 CSM 核心解析引擎处理来自消息队列的 LabVIEW 错误。转换后的错误字符串使用以下格式：`[Error: error-code] error-description-As-safe-argument-string`。此外，CSM-Argument Type.vi 获取参数标记，在本例中为 `ErrStr`。
+本示例将 LabVIEW 错误簇转换为 CSM 兼容的错误字符串，这允许 CSM 核心解析引擎处理来自消息队列的 LabVIEW 错误，也便于在日志中记录内部发生的错误。转换后的错误字符串使用以下格式：`<ErrStr>[Error: error-code] error-description-As-safe-argument-string`。此外，CSM-Argument Type.vi 获取参数标记，在本例中为 `ErrStr`。
+
+#### Steps
+
+- Step1. 展示将错误转换为 ErrStr 并还原
+- Step2. (向前兼容) 展示将之前的 ErrStr 转换为错误簇
+- Step3. 展示将将之前的 ErrStr 转换为错误簇，并获取CSM-Argument Type
 
 ### 4.3 Arguments - Safe Arguments if it contains key words of CSM.vi
 
