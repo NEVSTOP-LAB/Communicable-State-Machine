@@ -51,7 +51,6 @@
 							<Item Name="Action Worker Mode Example.lvlib" Type="Library" URL="../src/examples/NEVSTOP/Communicable State Machine(CSM)/4. Advance Examples/1. Action Workers Example/Action Worker Mode Example.lvlib"/>
 						</Item>
 						<Item Name="2. Chain of Responsiblility Example" Type="Folder">
-							<Item Name="SubModules" Type="Folder"/>
 							<Item Name="Chain of Responsiblility Example.lvlib" Type="Library" URL="../src/examples/NEVSTOP/Communicable State Machine(CSM)/4. Advance Examples/2. Chain of Responsiblility Example/Chain of Responsiblility Example.lvlib"/>
 						</Item>
 						<Item Name="3. Build-in Error Handling Framework" Type="Folder">
