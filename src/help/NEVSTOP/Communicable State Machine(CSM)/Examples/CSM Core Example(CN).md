@@ -235,51 +235,35 @@ CSM框架中，参数的只能以String类型的表现形式进行传递。为�
 
 #### Overview
 
-每秒生成一个随机数，并将该数字与用户定义的阈值进行比较。当生成的随机数超过阈值时，广播一个更新。
+CSM框架中，创建一个可重用模块通常不需要与其他模块进行消息交互，只需提供外部接口并发布模块的状态变化。因此，只要这两个方面描述清晰，即使不了解内部实现细节，也能调用该可重用模块。本范例用于展示如何创建一个可重用模块，该模块用于检查随机数据是否超过用户定义的阈值。
+
+在CSM模块中，所有case分支都可被视为可调用的消息，但建议使用API分组作为外部接口。当需要发送状态更新时，可以通过发送Status或Interrupt Status来通知外部模块内部的状态变化。
 
 #### Introduction
 
-本示例每秒生成一个随机数，并将该数字与用户定义的阈值进行比较。当生成的随机数超过阈值时，广播一个更新。
+本示例描述编写的一个CSM模块，它的功能是每秒生成一个随机数，并将该数字与用户定义的阈值进行比较。当生成的随机数超过阈值时，广播一个更新。
 
 #### Steps
 
-Step1. 从选板拖放 CSM 模板。
-
-Step2. 将 "Level" 添加到 Internal Data 中。默认值为 0.5。
-
-Step3. 创建 "DoSth: Check If Greater than 0.5"。在此实现核心功能。
-
-Step3.1 比较随机数据并更新 UI
-
-Step3.2 当随机数据超过 level 时，发布 "Status Changed" 状态。
-
-Step4. 将 timeout 更改为移位寄存器。它将用于启动/停止超时事件。在每种情况下连接 timeout 的连线。
-
-Step5. 在 Timeout Event 中，将 "DoSth: Check If Greater than 0.5" 添加到 State Queue。
-
-Step6. 为此模块创建 API。
-
-Step6.1 创建 "API: Start" 将 timeout 更改为 0.5s，这将每秒触发一次 "DoSth: Check If Greater than 0.5"。在这种情况下，将广播 "Check Started" 状态。
-
-Step6.2 创建 "API: Stop" 将 timeout 更改为 -1，这将停止检查。"Check Stopped" 状态将被广播。
-
-Step6.3 创建 "API: Set Level" 以更改 Level 设置。
-
-Step6.4 创建 "API: Get Level" 以从外部获取当前 Level。
-
-Step7. 创建本地测试按钮/控件
-
-Step7.1 创建 Level 控件，调用 "API: Set Level" 以在本地更改 level 设置。
-
-Step7.2 创建 Start 按钮，调用 "API: Start" 以在本地开始检查。
-
-Step7.3 创建 Stop 按钮，调用 "API: Stop" 以在本地开始检查。
-
-Step8. 在适当的情况下正确更新 UI。
-
-Step8.1 启动时初始化 UI。
-
-Step8.2 注释掉 "Macro: Initialize" 中的 "UI: Front Panel State >> Open"。当它作为子模块工作时，UI 将自动隐藏而不是弹出。
+- Step1. 从选板拖放 CSM 模板。
+- Step2. 将 "Level" 添加到 Internal Data 中。默认值为 0.5。
+- Step3. 创建 "DoSth: Check If Greater than 0.5"。在此实现核心功能。
+    - Step3.1 比较随机数据并更新 UI
+    - Step3.2 当随机数据超过 level 时，发布 "Status Changed" 状态。
+- Step4. 将 timeout 更改为移位寄存器。它将用于启动/停止超时事件。在每种情况下连接 timeout 的连线。
+- Step5. 在 Timeout Event 中，将 "DoSth: Check If Greater than 0.5" 添加到 State Queue。
+- Step6. 为此模块创建 API。
+    - Step6.1 创建 "API: Start" 将 timeout 更改为 0.5s，这将每秒触发一次 "DoSth: Check If Greater than 0.5"。在这种情况下，将广播 "Check Started" 状态。
+    - Step6.2 创建 "API: Stop" 将 timeout 更改为 -1，这将停止检查。"Check Stopped" 状态将被广播。
+    - Step6.3 创建 "API: Set Level" 以更改 Level 设置。
+    - Step6.4 创建 "API: Get Level" 以从外部获取当前 Level。
+- Step7. 创建本地测试按钮/控件
+    - Step7.1 创建 Level 控件，调用 "API: Set Level" 以在本地更改 level 设置。
+    - Step7.2 创建 Start 按钮，调用 "API: Start" 以在本地开始检查。
+    - Step7.3 创建 Stop 按钮，调用 "API: Stop" 以在本地开始检查。
+- Step8. 在适当的情况下正确更新 UI。
+    - Step8.1 启动时初始化 UI。
+    - Step8.2 注释掉 "Macro: Initialize" 中的 "UI: Front Panel State >> Open"。当它作为子模块工作时，UI 将自动隐藏而不是弹出。
 
 ## Caller is CSM Scenario
 
