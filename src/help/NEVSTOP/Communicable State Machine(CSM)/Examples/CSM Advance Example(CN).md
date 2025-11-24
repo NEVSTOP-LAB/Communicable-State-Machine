@@ -17,7 +17,7 @@
 #### Steps
 
 - Step1：使用高级 VI 将 CSM 模块标标记为worker模式（添加#作为后缀），如果您熟悉 CSM 规则，也可以只键入正确的名称后缀，而不使用此VI。 然后异步调用 4 个工作者 CSM 模块，无需等待回复。或者，您也可以同步调用 4 个工作者 CSM 模块，甚至异步调用并带回复，请参阅禁用 case 中的代码。
-- Step2：此循环为主程序模块，名称是 WorkerModeExample。
+- Step2：此循环为主程序模块，模块名称是 WorkerModeExample。
 - Step3：使用 while 循环来获取所有正在运行的 CSM 模块的状态信息，包括名称、模式、实例数和要处理的消息队列数。使用高级 VI 停止 while 循环，即一旦调用者/主 CSM 模块退出，while 循环将停止。
 - Step4：
     - Step4.1：UI 事件处理，在用户单击六个用户按钮 "DoSth: DoA -> Worker", "DoSth: DoA -@ Worker", "DoSth: Error -> Worker", "DoSth: Error -@ Worker" , "Macro: Exit -@ Worker", "Macro: Exit -> Worker" 中的任何一个后，将向第一个空闲的工作者 CSM 模块发送一条模块间消息。
@@ -45,15 +45,21 @@
 - Step2. 添加 "DoSth: Error" 方法
 - Step3. 设置 VI 执行属性为可重入
 
-## Chain of Responsibility Example(Chain of Responsibility Example.vi)
+## 责任链模式范例
 
-### Overview
+### 调用程序(Chain of Responsibility Example.vi)
 
-演示 CSM 框架中实现的责任链 (responsibility chain) 设计模式。通过单击前面板上的按钮，您可以观察责任链如何按定义的顺序处理允许的消息。
+#### Overview
 
-每条消息都从最低顺序的模块传递到最高顺序的模块。当一个模块成功处理该消息时，处理停止，并且该消息不会转发到后续模块。如果链中没有模块可以处理该消息，本示例将返回一个错误。
+演示 CSM 框架中实现的责任链 (responsibility chain) 设计模式。通过单击前面板上的按钮，您可以观察责任链如何按定义的顺序处理允许的消息。每条消息都从最低顺序的模块传递到最高顺序的模块。当一个模块成功处理该消息时，处理停止，并且该消息不会转发到后续模块。如果链中没有模块可以处理该消息，本示例将返回一个错误。
 
-### Introduction
+#### Instructions
+
+1. 运行此 VI。
+2. 单击前面板上的任何按钮，例如 "Action: action 1 -> Chain"，然后您可以看到哪个链模块处理了哪条消息。
+3. 单击 "Macro: Exit -> Chain" 或 "Macro: Exit -@ Chain" 按钮，然后您可以看到链模块将按顺序启动。
+
+#### Introduction
 
 本示例演示 CSM 框架中的责任链模式。责任链 CSM 模块应始终以后缀“$”和整数标记，例如 "CSMName$1"、"CSMName$2" 等。
 
@@ -62,19 +68,43 @@
 - 每个单独的链模块只能处理特别允许的消息。
 - 如果一条消息被多个链模块允许，则顺序最低的链模块将处理该消息，并且该消息不会再被更高顺序的链模块处理。
 
-### Instructions
-
-1. 运行此 VI。
-2. 单击前面板上的任何按钮，例如 "Action: action 1 -> Chain"，然后您可以看到哪个链模块处理了哪条消息。
-3. 单击 "Macro: Exit -> Chain" 或 "Macro: Exit -@ Chain" 按钮，然后您可以看到链模块将按顺序启动。
-
-### Steps
+#### Steps
 
 - Step1：为每个将标记为链模式的 CSM 子模块添加特殊允许的消息，例如本示例中 "Chain$1" CSM 子模块的 "Action: action 1" 和 "Action: action 2"。
-- Step2：拖放一个带 UI 的模板 CSM VI，并将其命名为 ChainModeExample。
+- Step2：此循环为主程序模块，模块名称是 ChainModeExample。
 - Step3：在 UI 中创建布尔按钮，例如 "Action: action 1 -> Chain" 等，以模拟模块间消息传输。
-- Step4：使用高级 API 监控所有正在运行的 CSM 模块的状态。
+- Step4：使用 while 循环来获取所有正在运行的 CSM 模块的状态信息，包括名称、模式、实例数和要处理的消息队列数。使用高级 VI 停止 while 循环，即一旦调用者/主 CSM 模块退出，while 循环将停止。
 - Step5：使用全局日志 API 计算和监控实时日志记录能力，更多详情请参阅 4. Advance Examples\6. Global Log Handling Capability。
+
+### 责任链模式模块实现(ChainNode A.vi)
+
+#### Overview
+
+本示例为责任链模式中CSM模块节点的实现。它被Chain of Responsibility Example.vi调用。
+
+#### Introduction
+
+本示例为责任链模式中CSM模块节点的实现。通过"Allowed Messages"参数，定义了该节点可以处理的消息名称。例如，本 CSM 模块的 "Action: action 1" 和 "Action: action 2" 消息。
+
+### 责任链模式模块实现(ChainNode B.vi)
+
+#### Overview
+
+本示例为责任链模式中CSM模块节点的实现。它被Chain of Responsibility Example.vi调用。
+
+#### Introduction
+
+本示例为责任链模式中CSM模块节点的实现。通过"Allowed Messages"参数，定义了该节点可以处理的消息名称。例如，本 CSM 模块的 "Action: action 2", "Action: action 3", "Action: action 4", "Action: action 5" 消息。
+
+### 责任链模式模块实现(ChainNode C.vi)
+
+#### Overview
+
+本示例为责任链模式中CSM模块节点的实现。它被Chain of Responsibility Example.vi调用。
+
+#### Introduction
+
+本示例为责任链模式中CSM模块节点的实现。通过"Allowed Messages"参数，定义了该节点可以处理的消息名称。例如，本 CSM 模块的 "Action: action 4", "Action: action 5", "Action: action 6"消息。
 
 ## Build-in Error Handling Framework(Topmost VI who Registers all Errors.vi)
 
