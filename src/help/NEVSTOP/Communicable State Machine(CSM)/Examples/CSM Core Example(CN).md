@@ -198,38 +198,36 @@ CSM框架中，参数的只能以String类型的表现形式进行传递。为�
 
 #### Steps
 
-- Step 1：这是一个从模板建立的CSM模块，名称为“CSM”
-- Step 2：在 Macro:Initialize 之后添加一行新的状态字符串，即 API: Define ABC Attribute。
-- Step 3：API: Define ABC Attribute 中设置模块属性：abc 作为属性，一个随机数作为值。
-- Step 4：从 CSM 模块外部可以设置模块属性：abc 作为属性，一个随机数作为值。
-- Step 5：从 CSM 模块外部可以读取模块属性：abc 作为属性。
-- Step 6：从 CSM 模块外部发送同步消息以停止 CSM 模块。
+- Step1：这是一个从模板建立的CSM模块，名称为“CSM”
+- Step2：在 Macro:Initialize 之后添加一行新的状态字符串，即 API: Define ABC Attribute。
+- Step3：API: Define ABC Attribute 中设置模块属性：abc 作为属性，一个随机数作为值。
+- Step4：从 CSM 模块外部可以设置模块属性：abc 作为属性，一个随机数作为值。
+- Step5：从 CSM 模块外部可以读取模块属性：abc 作为属性。
+- Step6：从 CSM 模块外部发送同步消息以停止 CSM 模块。
 
 ### 7. System-Level Module.vi
 
 #### Overview
 
-演示如何创建系统级模块，并说明在列出所有活动模块时，系统级模块与常规 CSM 模块之间的区别。系统级模块通常用于大型项目，以方便代码开发和调试。
+演示如何创建系统级模块，并说明在列出所有活动模块时，系统级模块与常规 CSM 模块之间的区别。
 
 #### Introduction
 
-本示例演示如何创建系统级模块，并说明在列出所有活动模块时，系统级模块与常规 CSM 模块之间的区别。系统级模块通常用于大型项目，以方便代码开发和调试。
+系统级（SystemLevel）模块系统级模块的名称前会添加一个“.”作为前缀，标记为系统级模块。功能上与普通模块无异，可以进行消息通讯和状态订阅。他们之间的区别在于系统级的模块，不会自动被列出在活动模块列表中。这样在普通的逻辑调度中，系统级模块不会被直接调用，只能通过显式的消息发送，才能被触发。
+
+因此系统级模块通常用于实现一些全局的后台功能，例如 TCP程序中的调度模块等。
+
+本范例就用于展示这个区别。
 
 #### Steps
 
-Step 1：使用高级 API VI 创建一个系统级模块名称（在 CSM 名称前添加“.”作为前缀，标记为系统级模块）。如果您熟悉规则，也可以直接输入相应的名称字符串和规则符号，而无需调用此 API。
-
-Step 2：同步调用几个“普通”/非系统级的 CSM 模块。
-
-Step 3：检查 CSM 模块名称是否有效，否则将生成错误。一个有效的 CSM 模块名称是一个字符串，不应包含以下任何特殊字符 ~!@%^&*()
-
-{}+=|\/?'"<>,\t\r\n，因为这些是 CSM 框架内部用于其他明确定义用途的保留关键字。更多详情请参阅另一个名为 Module Naming Rules.vi 的示例代码。
-
-Step 4：列出所有活动的 CSM 模块，默认情况下不会列出系统级模块。通过使用这种高级 VI，我们可以将系统级模块与其他常规模块分开，以便更好地进行代码开发、调试等。
-
-Step 5：使用 CSM->API->Non-CSM Caller Support 下的高级 API VI，向所有活动的 CSM 模块发送同步的 Macro:Exit 消息，以停止所有这些模块/VI。
-
-如果我们要从非 CSM 模块向 CSM 模块发送模块间消息，建议使用这些 Non-CSM Caller Support VI。
+- Step1：使用高级 API VI 创建一个系统级模块名称（在 CSM 名称前添加“.”作为前缀，标记为系统级模块）。如果您熟悉规则，也可以直接输入相应的名称字符串和规则符号，而无需调用此 API。
+- Step2：同步调用几个“普通”/非系统级的 CSM 模块。
+- Step3：(optional) 检查 CSM 模块名称是否有效，更多详情请参阅另一个名为 Module Naming Rules.vi 的示例代码。
+- Step4: 等待1s, 确保所有模块完成启动
+- Step5：列出所有活动的 CSM 模块，默认情况下不会列出系统级模块。通过使用这种高级 VI，我们可以将系统级模块与其他常规模块分开，以便更好地进行代码开发、调试等。
+- Step6：使用统一的逻辑，发送“Macro:Exit”消息给所有活动的普通 CSM 模块，以停止所有这些模块。
+- Step7: 依然可以使用发送消息给系统级模块，例如发送 Macro:Exit 消息，以停止系统级模块。
 
 ## Create a reuse Module
 
@@ -301,47 +299,47 @@ Step8.2 注释掉 "Macro: Initialize" 中的 "UI: Front Panel State >> Open"。�
 
 #### Steps
 
-Step 1：从 LabVIEW 选板拖放一个 VI CSM UI Module Template，将 CSM 名称更改为 "CSMScenarioExample"。
+Step1：从 LabVIEW 选板拖放一个 VI CSM UI Module Template，将 CSM 名称更改为 "CSMScenarioExample"。
 
-Step 2：同步调用 CSM Reuse Module.vi 两次，并分别命名为 SubModule0 和 SubModule1。有关如何创建此类可重用 CSM 模块的更多详细信息，请参阅另一个名为 1. Create a reuse Module 的 CSM 示例。
+Step2：同步调用 CSM Reuse Module.vi 两次，并分别命名为 SubModule0 和 SubModule1。有关如何创建此类可重用 CSM 模块的更多详细信息，请参阅另一个名为 1. Create a reuse Module 的 CSM 示例。
 
-Step 3：在 "Macro:Initialize" case 下的现有标准字符串队列中添加一行新的自定义消息字符串，即 "Macro: Switch Active Module"，作为最后一行，以便我们可以在不同的子模块之间切换。
+Step3：在 "Macro:Initialize" case 下的现有标准字符串队列中添加一行新的自定义消息字符串，即 "Macro: Switch Active Module"，作为最后一行，以便我们可以在不同的子模块之间切换。
 
-Step 4：为内部数据初始化添加一个字符串常量 SubModule0。对于更多自定义的内部数据初始化，我们可以在此处添加更多代码。
+Step4：为内部数据初始化添加一个字符串常量 SubModule0。对于更多自定义的内部数据初始化，我们可以在此处添加更多代码。
 
-Step 5：在 UI 中添加一个字符串控件，用于切换和显示活动/目标模块（Combox box）。
+Step5：在 UI 中添加一个字符串控件，用于切换和显示活动/目标模块（Combox box）。
 
-Step 5.1：在 " 'Target Module': Value Change" UI 事件下，将字符串控件设置为活动模块内部数据，并发送一个模块内消息 Macro: Switch Active. Module。
+Step5.1：在 " 'Target Module': Value Change" UI 事件下，将字符串控件设置为活动模块内部数据，并发送一个模块内消息 Macro: Switch Active. Module。
 
-Step 5.2：在 "UI: Initialize" case 下，更新活动/目标模块。
+Step5.2：在 "UI: Initialize" case 下，更新活动/目标模块。
 
-Step 6：在 "Macro: Switch Active Module" case 下，使用高级 VI 向活动子模块发送模块间同步消息 "API: Get Level -@ modulename"。
+Step6：在 "Macro: Switch Active Module" case 下，使用高级 VI 向活动子模块发送模块间同步消息 "API: Get Level -@ modulename"。
 
 或者，如果您熟悉 CSM 字符串语法规则，也可以手动键入字符串常量。
 
-Step 7：现在状态队列为空，CSM 状态机正在 ' "", "Event Structure", "Idle" ' 下的超时 UI 事件中等待。下一步取决于用户提供的 UI 交互。
+Step7：现在状态队列为空，CSM 状态机正在 ' "", "Event Structure", "Idle" ' 下的超时 UI 事件中等待。下一步取决于用户提供的 UI 交互。
 
-Step 8：在 UI 中创建本地测试按钮/控件如下：
+Step8：在 UI 中创建本地测试按钮/控件如下：
 
-Step 8.1：创建 API:Start 按钮，当用户单击此按钮时，将发送一条异步无回复消息 "API: Start -> modulename" 以启动活动的子模块。
+Step8.1：创建 API:Start 按钮，当用户单击此按钮时，将发送一条异步无回复消息 "API: Start -> modulename" 以启动活动的子模块。
 
-Step 8.2：创建 Register All Status Change 按钮，当用户单击此按钮时，此 CSM 模块将从活动子模块注册以下广播/中断消息 "Status Changed@* >> Action: Status Change Handler -><register>"。
+Step8.2：创建 Register All Status Change 按钮，当用户单击此按钮时，此 CSM 模块将从活动子模块注册以下广播/中断消息 "Status Changed@* >> Action: Status Change Handler -><register>"。
 
-Step 8.3：创建 Unregister All Status Change 按钮，当用户单击此按钮时，此 CSM 模块将从活动子模块注销以下广播/中断消息 "Status Changed@* >> Action: Status Change Handler -><unregister>"。
+Step8.3：创建 Unregister All Status Change 按钮，当用户单击此按钮时，此 CSM 模块将从活动子模块注销以下广播/中断消息 "Status Changed@* >> Action: Status Change Handler -><unregister>"。
 
-Step 8.4：此处没有代码，但是由于注册的状态更改，您可以在调用时看到日志。收到此广播/中断消息后，可以在此处添加任何进一步的自定义代码。
+Step8.4：此处没有代码，但是由于注册的状态更改，您可以在调用时看到日志。收到此广播/中断消息后，可以在此处添加任何进一步的自定义代码。
 
-Step 8.5：创建 API:Stop 按钮，当用户单击此按钮时，将发送一条异步无回复消息 "API: Stop -> modulename" 以停止活动的子模块。
+Step8.5：创建 API:Stop 按钮，当用户单击此按钮时，将发送一条异步无回复消息 "API: Stop -> modulename" 以停止活动的子模块。
 
-Step 8.6：创建 Level DBL 控件，当用户更改值时，将向活动子模块发送一条异步消息 "API: Set Level >> 0.3 ->| modulename"。
+Step8.6：创建 Level DBL 控件，当用户更改值时，将向活动子模块发送一条异步消息 "API: Set Level >> 0.3 ->| modulename"。
 
-Step 8.7：创建 API: Get Level(Async) 按钮，当用户单击此按钮时，将向活动子模块发送一条异步消息 "API: Get Level -> modulename"。相应地处理 "Async Message Posted" 和 "Async Response" case，在本示例中，Level 显示将被更新。
+Step8.7：创建 API: Get Level(Async) 按钮，当用户单击此按钮时，将向活动子模块发送一条异步消息 "API: Get Level -> modulename"。相应地处理 "Async Message Posted" 和 "Async Response" case，在本示例中，Level 显示将被更新。
 
-Step 8.8：创建 UI: create Front Panel State >> Open 按钮，当用户单击该按钮时，将向活动子模块发送一条带无回复的异步消息 "UI: Front Panel State >> Open ->| modulename"。
+Step8.8：创建 UI: create Front Panel State >> Open 按钮，当用户单击该按钮时，将向活动子模块发送一条带无回复的异步消息 "UI: Front Panel State >> Open ->| modulename"。
 
-Step 8.9：创建 UI: create Front Panel State >> Close 按钮，当用户单击该按钮时，将向活动子模块发送一条带无回复的异步消息 "UI: Front Panel State >> Close ->| modulename"。
+Step8.9：创建 UI: create Front Panel State >> Close 按钮，当用户单击该按钮时，将向活动子模块发送一条带无回复的异步消息 "UI: Front Panel State >> Close ->| modulename"。
 
-Step 9：在 "Panel Close?" UI 事件下，在 "Macro:Exit" 之前添加两个新的字符串消息："Macro: Exit -@ SubModule0" 和 "Macro: Exit -@ SubModule1"，以便我们可以在最终关闭 CSM 调用者/主模块之前安全地关闭所有 CSM 子模块。
+Step9：在 "Panel Close?" UI 事件下，在 "Macro:Exit" 之前添加两个新的字符串消息："Macro: Exit -@ SubModule0" 和 "Macro: Exit -@ SubModule1"，以便我们可以在最终关闭 CSM 调用者/主模块之前安全地关闭所有 CSM 子模块。
 
 ## Caller is Other Framework Scenario
 
@@ -361,49 +359,49 @@ Step 9：在 "Panel Close?" UI 事件下，在 "Macro:Exit" 之前添加两个�
 
 #### Steps
 
-Step 1：在 100ms-UI 事件超时中，检查是否有任何 CSM 模块正在运行/存在。
+Step1：在 100ms-UI 事件超时中，检查是否有任何 CSM 模块正在运行/存在。
 
 启动和停止 CSM 子模块：
 
-Step 2：异步调用选定的 CSM 子模块。
+Step2：异步调用选定的 CSM 子模块。
 
-Step 3：向选定的 CSM 子模块发送异步消息（无回复）以停止/退出 CSM 子模块。该高级 API 可在 LabVIEW 选板 -> Communicable State Machine(CSM) -> API -> Non-CSM Caller Support 下找到。
+Step3：向选定的 CSM 子模块发送异步消息（无回复）以停止/退出 CSM 子模块。该高级 API 可在 LabVIEW 选板 -> Communicable State Machine(CSM) -> API -> Non-CSM Caller Support 下找到。
 
 注册和注销状态更改：
 
-Step 4：使用高级 API 从所选子模块获取状态更改事件句柄并注册它。该高级 API 可在 LabVIEW 选板 -> Communicable State Machine(CSM) -> API -> Non-CSM Caller Support 下找到。
+Step4：使用高级 API 从所选子模块获取状态更改事件句柄并注册它。该高级 API 可在 LabVIEW 选板 -> Communicable State Machine(CSM) -> API -> Non-CSM Caller Support 下找到。
 
-Step 5：注销用户事件。使用高级 API 销毁并释放状态更改事件句柄。该高级 API 可在 LabVIEW 选板 -> Communicable State Machine(CSM) -> API -> Non-CSM Caller Support 下找到。
+Step5：注销用户事件。使用高级 API 销毁并释放状态更改事件句柄。该高级 API 可在 LabVIEW 选板 -> Communicable State Machine(CSM) -> API -> Non-CSM Caller Support 下找到。
 
 API 调用：
 
-Step 6：使用高级 API 向所选子模块发送异步消息（无回复）："API:start"。该高级 API 可在 LabVIEW 选板 -> Communicable State Machine(CSM) -> API -> Non-CSM Caller Support 下找到。
+Step6：使用高级 API 向所选子模块发送异步消息（无回复）："API:start"。该高级 API 可在 LabVIEW 选板 -> Communicable State Machine(CSM) -> API -> Non-CSM Caller Support 下找到。
 
-Step 7：使用相同的高级 API 向所选子模块发送异步消息（无回复）："API:stop"。
+Step7：使用相同的高级 API 向所选子模块发送异步消息（无回复）："API:stop"。
 
 所选 CSM 子模块的 UI 前面板：
 
-Step 8：使用高级 API 向所选子模块发送异步消息（无回复）："UI: Front Panel State >> Open"。该高级 API 可在 LabVIEW 选板 -> Communicable State Machine(CSM) -> API -> Non-CSM Caller Support 下找到。
+Step8：使用高级 API 向所选子模块发送异步消息（无回复）："UI: Front Panel State >> Open"。该高级 API 可在 LabVIEW 选板 -> Communicable State Machine(CSM) -> API -> Non-CSM Caller Support 下找到。
 
-Step 9：使用相同的高级 API 向所选子模块发送异步消息（无回复）："UI: Front Panel State >> Close"。
+Step9：使用相同的高级 API 向所选子模块发送异步消息（无回复）："UI: Front Panel State >> Close"。
 
 选择一个模块：
 
-Step 10：使用高级 API 发送同步消息并等待返回消息，在本例中为 level 值："API: Get Level"。该高级 API 可在 LabVIEW 选板 -> Communicable State Machine(CSM) -> API -> Non-CSM Caller Support 下找到。
+Step10：使用高级 API 发送同步消息并等待返回消息，在本例中为 level 值："API: Get Level"。该高级 API 可在 LabVIEW 选板 -> Communicable State Machine(CSM) -> API -> Non-CSM Caller Support 下找到。
 
 获取和设置 Level：
 
-Step 11：使用高级 API 发送同步消息并等待返回消息："API: Set Level >> value"。该高级 API 可在 LabVIEW 选板 -> Communicable State Machine(CSM) -> API -> Non-CSM Caller Support 下找到。
+Step11：使用高级 API 发送同步消息并等待返回消息："API: Set Level >> value"。该高级 API 可在 LabVIEW 选板 -> Communicable State Machine(CSM) -> API -> Non-CSM Caller Support 下找到。
 
-Step 12：使用相同的高级 API 发送同步消息并等待返回消息："API: Get Level"。
+Step12：使用相同的高级 API 发送同步消息并等待返回消息："API: Get Level"。
 
 处理子模块的状态更改事件：
 
-Step 13：注册状态更改事件后，我们可以在此处处理此事件。例如，我们将用户事件数据打印到状态历史记录中，该历史记录也直接显示在 UI 上。
+Step13：注册状态更改事件后，我们可以在此处处理此事件。例如，我们将用户事件数据打印到状态历史记录中，该历史记录也直接显示在 UI 上。
 
 Panel close? UI 事件：
 
-Step 14：首先使用高级 API 发送同步消息以退出所选子模块："Macro:Exit"，然后退出调用者/主模块。
+Step14：首先使用高级 API 发送同步消息以退出所选子模块："Macro:Exit"，然后退出调用者/主模块。
 
 ## Advance Examples
 
@@ -423,23 +421,23 @@ Step 14：首先使用高级 API 发送同步消息以退出所选子模块："M
 
 #### Steps
 
-Step 1：使用高级 VI 将 CSM 模块标记为工作者模式（添加#作为后缀），如果您熟悉 CSM 规则，也可以只键入正确的名称后缀，而不使用此高级 VI。
+Step1：使用高级 VI 将 CSM 模块标记为工作者模式（添加#作为后缀），如果您熟悉 CSM 规则，也可以只键入正确的名称后缀，而不使用此高级 VI。
 
 然后异步调用 4 个工作者 CSM 模块，无需等待回复。或者，您也可以同步调用 4 个工作者 CSM 模块，甚至异步调用并带回复，请参阅禁用 case 中的代码。
 
-Step 2：拖放一个带 UI 的模板 CSM VI，并将其命名为 WorkerModeExample。
+Step2：拖放一个带 UI 的模板 CSM VI，并将其命名为 WorkerModeExample。
 
-Step 3：使用 while 循环来获取所有正在运行的 CSM 模块的状态信息，包括名称、模式、实例数和要处理的消息队列数。使用高级 VI 停止 while 循环，即一旦调用者/主 CSM 模块退出，while 循环将停止。
+Step3：使用 while 循环来获取所有正在运行的 CSM 模块的状态信息，包括名称、模式、实例数和要处理的消息队列数。使用高级 VI 停止 while 循环，即一旦调用者/主 CSM 模块退出，while 循环将停止。
 
-Step 4：转到 "Macro:Initialize" case，并添加一个消息字符串作为最后一行，''UI: Update Worker Info''。目前，''UI: Update Worker Info" case 中没有放置任何代码，但您可以在此处编写任何自定义代码。
+Step4：转到 "Macro:Initialize" case，并添加一个消息字符串作为最后一行，''UI: Update Worker Info''。目前，''UI: Update Worker Info" case 中没有放置任何代码，但您可以在此处编写任何自定义代码。
 
-Step 5：
+Step5：
 
-Step 5.1：UI 事件处理，在用户单击六个用户按钮 "DoSth: DoA -> Worker", "DoSth: DoA -@ Worker", "DoSth: Error -> Worker", "DoSth: Error -@ Worker" , "Macro: Exit -@ Worker", "Macro: Exit -> Worker" 中的任何一个后，将向第一个空闲的工作者 CSM 模块发送一条模块间消息。
+Step5.1：UI 事件处理，在用户单击六个用户按钮 "DoSth: DoA -> Worker", "DoSth: DoA -@ Worker", "DoSth: Error -> Worker", "DoSth: Error -@ Worker" , "Macro: Exit -@ Worker", "Macro: Exit -> Worker" 中的任何一个后，将向第一个空闲的工作者 CSM 模块发送一条模块间消息。
 
-Step 5.2 然后在 UI 中添加一个 Response Source Manager 指示器，以处理 "Async Response" 和 "Response" case，并发送一个本地消息 ''UI: Update Worker Info"。
+Step5.2 然后在 UI 中添加一个 Response Source Manager 指示器，以处理 "Async Response" 和 "Response" case，并发送一个本地消息 ''UI: Update Worker Info"。
 
-Step 6：在 Panel Close? UI 事件下，使用高级 API 向所有正在运行的 CSM 工作者模块发送 "Macro:Exit" 同步消息（您也可以手动键入模块间消息，注意有多少个正在运行的工作者模块。每个正在运行的工作者模式都需要一条消息），并向调用者/主 CSM 模块发送本地消息 "Macro:Exit"。然后所有 CSM 模块将按顺序退出。
+Step6：在 Panel Close? UI 事件下，使用高级 API 向所有正在运行的 CSM 工作者模块发送 "Macro:Exit" 同步消息（您也可以手动键入模块间消息，注意有多少个正在运行的工作者模块。每个正在运行的工作者模式都需要一条消息），并向调用者/主 CSM 模块发送本地消息 "Macro:Exit"。然后所有 CSM 模块将按顺序退出。
 
 ### Chain of Responsibility Example(Chain of Responsibility Example.vi)
 
@@ -466,15 +464,15 @@ Step 6：在 Panel Close? UI 事件下，使用高级 API 向所有正在运行�
 
 #### Steps
 
-Step 1：为每个将标记为链模式的 CSM 子模块添加特殊允许的消息，例如本示例中 "Chain$1" CSM 子模块的 "Action: action 1" 和 "Action: action 2"。
+Step1：为每个将标记为链模式的 CSM 子模块添加特殊允许的消息，例如本示例中 "Chain$1" CSM 子模块的 "Action: action 1" 和 "Action: action 2"。
 
-Step 2：拖放一个带 UI 的模板 CSM VI，并将其命名为 ChainModeExample。
+Step2：拖放一个带 UI 的模板 CSM VI，并将其命名为 ChainModeExample。
 
-Step 3：在 UI 中创建布尔按钮，例如 "Action: action 1 -> Chain" 等，以模拟模块间消息传输。
+Step3：在 UI 中创建布尔按钮，例如 "Action: action 1 -> Chain" 等，以模拟模块间消息传输。
 
-Step 4：使用高级 API 监控所有正在运行的 CSM 模块的状态。
+Step4：使用高级 API 监控所有正在运行的 CSM 模块的状态。
 
-Step 5：使用全局日志 API 计算和监控实时日志记录能力，更多详情请参阅 4. Advance Examples\6. Global Log Handling Capability。
+Step5：使用全局日志 API 计算和监控实时日志记录能力，更多详情请参阅 4. Advance Examples\6. Global Log Handling Capability。
 
 ### Build-in Error Handling Framework(Topmost VI who Registers all Errors.vi)
 
@@ -496,9 +494,9 @@ Step 5：使用全局日志 API 计算和监控实时日志记录能力，更多
 
 #### Steps
 
-Step 1：使用 CSM VI 模板创建 GlobalErrorHandlingExample CSM 模块，并同步调用另外两个 CSM 模块。
+Step1：使用 CSM VI 模板创建 GlobalErrorHandlingExample CSM 模块，并同步调用另外两个 CSM 模块。
 
-Step 2：添加一行模块间字符串消息以注册 "Error Occurred" 广播事件，该事件在任何 CSM 子模块出错时生成："Error Occurred@* >> Error Handler -><register>"，然后在 "Error Handler" case 中相应地处理捕获的事件。
+Step2：添加一行模块间字符串消息以注册 "Error Occurred" 广播事件，该事件在任何 CSM 子模块出错时生成："Error Occurred@* >> Error Handler -><register>"，然后在 "Error Handler" case 中相应地处理捕获的事件。
 
 ### Global Log Filter Example(Filter From Source(Event).vi)
 
@@ -512,19 +510,19 @@ Step 2：添加一行模块间字符串消息以注册 "Error Occurred" 广播�
 
 #### Steps
 
-Step 1：获取 CSM 全局状态用户事件句柄，并注册它。
+Step1：获取 CSM 全局状态用户事件句柄，并注册它。
 
-Step 2：设置全局过滤规则。规则下有两个簇，第一个用于全局过滤，第二个用于特定的 CSM 模块。
+Step2：设置全局过滤规则。规则下有两个簇，第一个用于全局过滤，第二个用于特定的 CSM 模块。
 
 例如，我们过滤掉来自 Module2 的所有日志（全局）以及 Module1 的 "State Change" LogType（特定模块日志）。
 
-Step 3：使用 CSM_Run Scripts VI 向所有四个同步调用的 CSM 模块发送 "API:start" 消息。
+Step3：使用 CSM_Run Scripts VI 向所有四个同步调用的 CSM 模块发送 "API:start" 消息。
 
-Step 4：在 UI 事件中动态更改全局过滤规则。
+Step4：在 UI 事件中动态更改全局过滤规则。
 
-Step 5：捕获用户事件并处理它，在本示例中，我们将其打印到 LabVIEW UI。
+Step5：捕获用户事件并处理它，在本示例中，我们将其打印到 LabVIEW UI。
 
-Step 6：使用 CSM_Run Scripts VI 发送 "Macro:Exit" 消息，以同步退出所有正在运行的 CSM 模块，并销毁 CSM 全局状态用户事件句柄。
+Step6：使用 CSM_Run Scripts VI 发送 "Macro:Exit" 消息，以同步退出所有正在运行的 CSM 模块，并销毁 CSM 全局状态用户事件句柄。
 
 ### Global Log Filter Example(Filter From Source(Queue).vi)
 
@@ -538,19 +536,19 @@ Step 6：使用 CSM_Run Scripts VI 发送 "Macro:Exit" 消息，以同步退出�
 
 #### Steps
 
-Step 1：获取 CSM 全局状态用户事件队列。
+Step1：获取 CSM 全局状态用户事件队列。
 
-Step 2：设置全局过滤规则。规则下有两个簇，第一个用于全局过滤，第二个用于特定的 CSM 模块。
+Step2：设置全局过滤规则。规则下有两个簇，第一个用于全局过滤，第二个用于特定的 CSM 模块。
 
 例如，我们过滤掉来自 Module2 的所有日志（全局）以及 Module1 的 "State Change" LogType（特定模块日志）。
 
-Step 3：使用 CSM_Run Scripts VI 向所有四个同步调用的 CSM 模块发送 "API:start" 消息。
+Step3：使用 CSM_Run Scripts VI 向所有四个同步调用的 CSM 模块发送 "API:start" 消息。
 
-Step 4：首先使用 LabVIEW 队列 VI 获取队列状态并出队一个元素以进行一些日志记录计算，例如速度和 LogInQ 等。我们还将日志打印到 LabVIEW UI。
+Step4：首先使用 LabVIEW 队列 VI 获取队列状态并出队一个元素以进行一些日志记录计算，例如速度和 LogInQ 等。我们还将日志打印到 LabVIEW UI。
 
 然后，如果用户直接从 UI 更改，则动态更改全局过滤规则。
 
-Step 5：使用 CSM_Run Scripts VI 发送 "Macro:Exit" 消息，以同步退出所有正在运行的 CSM 模块，并销毁 CSM 全局状态用户事件队列。
+Step5：使用 CSM_Run Scripts VI 发送 "Macro:Exit" 消息，以同步退出所有正在运行的 CSM 模块，并销毁 CSM 全局状态用户事件队列。
 
 ### Global Log Filter Example(Filter From Subscriber(Event).vi)
 
@@ -564,17 +562,17 @@ Step 5：使用 CSM_Run Scripts VI 发送 "Macro:Exit" 消息，以同步退出�
 
 #### Steps
 
-Step 1：获取 CSM 全局状态用户事件句柄，并注册它。
+Step1：获取 CSM 全局状态用户事件句柄，并注册它。
 
-Step 2：使用 CSM_Run Scripts VI 向所有四个同步调用的 CSM 模块发送 "API:start" 消息。
+Step2：使用 CSM_Run Scripts VI 向所有四个同步调用的 CSM 模块发送 "API:start" 消息。
 
-Step 3：在 UI 事件中动态设置全局过滤规则。规则下有两个簇，第一个用于全局过滤，第二个用于特定的 CSM 模块。
+Step3：在 UI 事件中动态设置全局过滤规则。规则下有两个簇，第一个用于全局过滤，第二个用于特定的 CSM 模块。
 
 例如，我们过滤掉来自 Module2 的所有日志（全局）以及 Module1 的 "State Change" LogType（特定模块日志）。
 
-Step 4：捕获用户事件并处理它，在本示例中，我们将其打印到 LabVIEW UI。
+Step4：捕获用户事件并处理它，在本示例中，我们将其打印到 LabVIEW UI。
 
-Step 5：使用 CSM_Run Scripts VI 发送 "Macro:Exit" 消息，以同步退出所有正在运行的 CSM 模块，并销毁 CSM 全局状态用户事件句柄。
+Step5：使用 CSM_Run Scripts VI 发送 "Macro:Exit" 消息，以同步退出所有正在运行的 CSM 模块，并销毁 CSM 全局状态用户事件句柄。
 
 ### Global Log Filter Example(Filter From Subscriber(Queue).vi)
 
@@ -588,17 +586,17 @@ Step 5：使用 CSM_Run Scripts VI 发送 "Macro:Exit" 消息，以同步退出�
 
 #### Steps
 
-Step 1：获取 CSM 全局状态用户事件队列。
+Step1：获取 CSM 全局状态用户事件队列。
 
-Step 2：使用 CSM_Run Scripts VI 向所有四个同步调用的 CSM 模块发送 "API:start" 消息。
+Step2：使用 CSM_Run Scripts VI 向所有四个同步调用的 CSM 模块发送 "API:start" 消息。
 
-Step 3 首先使用 LabVIEW 队列 VI 获取队列状态并出队一个元素以进行一些日志记录计算，例如速度和 LogInQ 等。
+Step3 首先使用 LabVIEW 队列 VI 获取队列状态并出队一个元素以进行一些日志记录计算，例如速度和 LogInQ 等。
 
 然后，如果用户直接从 UI 更改，则动态更改全局过滤规则。
 
 最后，我们还将日志打印到 LabVIEW UI。
 
-Step 4：使用 CSM_Run Scripts VI 发送 "Macro:Exit" 消息，以同步退出所有正在运行的 CSM 模块，并销毁 CSM 全局状态用户事件队列。
+Step4：使用 CSM_Run Scripts VI 发送 "Macro:Exit" 消息，以同步退出所有正在运行的 CSM 模块，并销毁 CSM 全局状态用户事件队列。
 
 ### Multi-Loop Module Example(Main - Call and Monitor TCP Traffic.vi)
 
@@ -633,13 +631,13 @@ Step 4：使用 CSM_Run Scripts VI 发送 "Macro:Exit" 消息，以同步退出�
 
 #### Steps
 
-Step 1：异步调用 30 个 CSM 子模块，每个子模块随后将持续生成事件。
+Step1：异步调用 30 个 CSM 子模块，每个子模块随后将持续生成事件。
 
-Step 2：启动 CSM 看门狗 (Watchdog) 线程，以确保所有异步启动的 CSM 模块在主程序退出后都能正常退出。
+Step2：启动 CSM 看门狗 (Watchdog) 线程，以确保所有异步启动的 CSM 模块在主程序退出后都能正常退出。
 
-Step 3：使用 CSM 的内置全局日志 API 捕获和计算一些典型的日志记录能力数据。
+Step3：使用 CSM 的内置全局日志 API 捕获和计算一些典型的日志记录能力数据。
 
-Step 4：退出调用者和所有其他正在运行的 CSM 模块。
+Step4：退出调用者和所有其他正在运行的 CSM 模块。
 
 ### Register State as Status Example(Register State as Status Example.vi)
 
@@ -661,11 +659,11 @@ CSM 核心引擎会自动管理注册过程，因此不需要手动注销。
 
 #### Steps
 
-Step 1：基于模板 VI 创建一个带 UI 的 CSM 模块，并同步调用两个 CSM 子模块（在调用子模块前等待 1 秒，以获得更好的 UI 显示顺序）。
+Step1：基于模板 VI 创建一个带 UI 的 CSM 模块，并同步调用两个 CSM 子模块（在调用子模块前等待 1 秒，以获得更好的 UI 显示顺序）。
 
-Step 2：手动添加一系列 "<register>" 字符串，以动态注册不同 CSM 模块之间的模块间事件。如果您不熟悉此字符串语法，也可以使用高级 API Build Message With Arguments ++.vi。
+Step2：手动添加一系列 "<register>" 字符串，以动态注册不同 CSM 模块之间的模块间事件。如果您不熟悉此字符串语法，也可以使用高级 API Build Message With Arguments ++.vi。
 
-Step 3：添加 "Echo:Echo1" case：我们使用实用 VI 来进一步获取注册的来源，无论是本地调用、远程调用还是状态回调。如果您想知道注册的事件源，此实用 VI 非常有用。同时添加 "Echo:Echo2" case，目前没有放置任何代码。但您可以实现任何自定义代码。您不需要手动注销这些事件，因为 CSM 核心引擎会自动处理它。
+Step3：添加 "Echo:Echo1" case：我们使用实用 VI 来进一步获取注册的来源，无论是本地调用、远程调用还是状态回调。如果您想知道注册的事件源，此实用 VI 非常有用。同时添加 "Echo:Echo2" case，目前没有放置任何代码。但您可以实现任何自定义代码。您不需要手动注销这些事件，因为 CSM 核心引擎会自动处理它。
 
 ## Addons - Logger
 
@@ -681,13 +679,13 @@ Step 3：添加 "Echo:Echo1" case：我们使用实用 VI 来进一步获取注�
 
 #### Steps
 
-Step 1：使用 CSM VI 模板获取一个带 UI 的 CSM 模块。
+Step1：使用 CSM VI 模板获取一个带 UI 的 CSM 模块。
 
-Step 1.1：给 CSM 模块一个名称，例如 "RunningLogExample"。
+Step1.1：给 CSM 模块一个名称，例如 "RunningLogExample"。
 
-Step 1.2：在 UI 事件中广播消息。
+Step1.2：在 UI 事件中广播消息。
 
-Step 2：使用高级 CSM-Start File Logger.vi（此 VI 可以在 LabVIEW 选板 -> CSM -> Addons -> Logger 下找到）来快速实现全局 CSM 事件文件记录功能。
+Step2：使用高级 CSM-Start File Logger.vi（此 VI 可以在 LabVIEW 选板 -> CSM -> Addons -> Logger 下找到）来快速实现全局 CSM 事件文件记录功能。
 
 例如，我们按顺序放置两个这样的 VI，手动设置日志记录的文件路径和名称，并分别启用全局规则过滤器。运行此示例后，您还可以找到并查看相应的日志文件，以加深理解。如果以后要添加/调用更多 CSM 模块，您无需更改此处的任何代码以实现日志记录功能。总之，您只需要这样一个高级 CSM 附加组件日志记录器 VI 即可快速实现全局日志记录功能。
 
@@ -716,23 +714,23 @@ Step 2：使用高级 CSM-Start File Logger.vi（此 VI 可以在 LabVIEW 选板
 
 #### Steps
 
-Step 1：
+Step1：
 
- Step 1.1 如果 UI 事件变得非常复杂，建议使用 CSM DQMH-Style Template，以便我们可以将 UI 逻辑与其他 CSM 相关逻辑分开处理。您可以在 LabVIEW 选板 -> CSM -> More Templates 下找到此模板。
+ Step1.1 如果 UI 事件变得非常复杂，建议使用 CSM DQMH-Style Template，以便我们可以将 UI 逻辑与其他 CSM 相关逻辑分开处理。您可以在 LabVIEW 选板 -> CSM -> More Templates 下找到此模板。
 
- Step 1.2：此外，已使用多循环支持 API 将状态从 DQMH 循环转发到 CSM 主循环。例如，在用户单击 Start 按钮后，"Macro:DAQ continuous" 消息可以被转发到 CSM 主循环中进行进一步的逻辑处理。
+ Step1.2：此外，已使用多循环支持 API 将状态从 DQMH 循环转发到 CSM 主循环。例如，在用户单击 Start 按钮后，"Macro:DAQ continuous" 消息可以被转发到 CSM 主循环中进行进一步的逻辑处理。
 
-Step 2：使用 CSM-Addon Logger Start File Logger.vi 来快速实现 CSM 全局事件文件记录功能。
+Step2：使用 CSM-Addon Logger Start File Logger.vi 来快速实现 CSM 全局事件文件记录功能。
 
 Step3：使用 CSM Loop-support API VI 来实现 while 循环。
 
- Step 3.1：Define Loop States(s).vi：定义多个消息字符串，用 "-><loop>" 标记该字符串，以便该消息字符串被连续处理。将所有这些字符串发送到 Define Loop States(s).VI 中。
+ Step3.1：Define Loop States(s).vi：定义多个消息字符串，用 "-><loop>" 标记该字符串，以便该消息字符串被连续处理。将所有这些字符串发送到 Define Loop States(s).VI 中。
 
- Step 3.2：Append Continuous States.vi：添加任何必要的连续参数，并将其附加到其他状态和参数中，以便所有这些都可以在一个循环中运行。
+ Step3.2：Append Continuous States.vi：添加任何必要的连续参数，并将其附加到其他状态和参数中，以便所有这些都可以在一个循环中运行。
 
- Step 3.3 Remove Loop Tag to Break.vi：使用此 VI 停止 while 循环并处理循环后状态。
+ Step3.3 Remove Loop Tag to Break.vi：使用此 VI 停止 while 循环并处理循环后状态。
 
- Step 3.4：Remove Loop Tag and Previous States to Break.vi：使用此 VI 停止 while 循环，同时移除先前的状态，然后处理循环后状态。
+ Step3.4：Remove Loop Tag and Previous States to Break.vi：使用此 VI 停止 while 循环，同时移除先前的状态，然后处理循环后状态。
 
 ## Addons - API String Arguments Support
 
