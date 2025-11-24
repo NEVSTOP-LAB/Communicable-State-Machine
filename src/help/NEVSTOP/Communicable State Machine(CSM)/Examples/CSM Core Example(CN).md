@@ -308,9 +308,7 @@ CSM框架中，创建一个可重用模块通常不需要与其他模块进行�
 
 #### Overview
 
-演示如何从另一个框架应用程序调用 CSM 模块。在本示例中，模块间通信是使用 Post/Send Message API 和模块状态更改用户事件来实现的。
-
-本示例异步调用 CSM Reuse Module.vi 的两个实例，通过 API 实现动态消息订阅和模块控制。
+演示如何从另一个框架应用程序调用 CSM 模块。本示例异步调用 CSM Reuse Module.vi 的两个实例，通过 API 实现动态消息订阅和模块控制。
 
 #### Introduction
 
@@ -320,49 +318,23 @@ CSM框架中，创建一个可重用模块通常不需要与其他模块进行�
 
 #### Steps
 
-Step1：在 100ms-UI 事件超时中，检查是否有任何 CSM 模块正在运行/存在。
-
-启动和停止 CSM 子模块：
-
-Step2：异步调用选定的 CSM 子模块。
-
-Step3：向选定的 CSM 子模块发送异步消息（无回复）以停止/退出 CSM 子模块。该高级 API 可在 LabVIEW 选板 -> Communicable State Machine(CSM) -> API -> Non-CSM Caller Support 下找到。
-
-注册和注销状态更改：
-
-Step4：使用高级 API 从所选子模块获取状态更改事件句柄并注册它。该高级 API 可在 LabVIEW 选板 -> Communicable State Machine(CSM) -> API -> Non-CSM Caller Support 下找到。
-
-Step5：注销用户事件。使用高级 API 销毁并释放状态更改事件句柄。该高级 API 可在 LabVIEW 选板 -> Communicable State Machine(CSM) -> API -> Non-CSM Caller Support 下找到。
-
-API 调用：
-
-Step6：使用高级 API 向所选子模块发送异步消息（无回复）："API:start"。该高级 API 可在 LabVIEW 选板 -> Communicable State Machine(CSM) -> API -> Non-CSM Caller Support 下找到。
-
-Step7：使用相同的高级 API 向所选子模块发送异步消息（无回复）："API:stop"。
-
-所选 CSM 子模块的 UI 前面板：
-
-Step8：使用高级 API 向所选子模块发送异步消息（无回复）："UI: Front Panel State >> Open"。该高级 API 可在 LabVIEW 选板 -> Communicable State Machine(CSM) -> API -> Non-CSM Caller Support 下找到。
-
-Step9：使用相同的高级 API 向所选子模块发送异步消息（无回复）："UI: Front Panel State >> Close"。
-
-选择一个模块：
-
-Step10：使用高级 API 发送同步消息并等待返回消息，在本例中为 level 值："API: Get Level"。该高级 API 可在 LabVIEW 选板 -> Communicable State Machine(CSM) -> API -> Non-CSM Caller Support 下找到。
-
-获取和设置 Level：
-
-Step11：使用高级 API 发送同步消息并等待返回消息："API: Set Level >> value"。该高级 API 可在 LabVIEW 选板 -> Communicable State Machine(CSM) -> API -> Non-CSM Caller Support 下找到。
-
-Step12：使用相同的高级 API 发送同步消息并等待返回消息："API: Get Level"。
-
-处理子模块的状态更改事件：
-
-Step13：注册状态更改事件后，我们可以在此处处理此事件。例如，我们将用户事件数据打印到状态历史记录中，该历史记录也直接显示在 UI 上。
-
-Panel close? UI 事件：
-
-Step14：首先使用高级 API 发送同步消息以退出所选子模块："Macro:Exit"，然后退出调用者/主模块。
+- Step1：在 100ms-UI 事件超时中，检查是否有任何 CSM 模块正在运行/存在。
+- Step2. 启动和停止 CSM 子模块
+    - Step2.1：异步调用选定的 CSM 子模块。
+    - Step2.2：向选定的 CSM 子模块发送异步消息（无回复）以停止/退出 CSM 子模块。该高级 API 可在 LabVIEW 选板 -> Communicable State Machine(CSM) -> API -> Non-CSM Caller Support 下找到。
+- Step3. 注册和注销状态更改
+    - Step3.1：使用高级 API 从所选子模块获取状态更改事件句柄并注册它。该高级 API 可在 LabVIEW 选板 -> Communicable State Machine(CSM) -> API -> Non-CSM Caller Support 下找到。
+    - Step3.2：注销用户事件。使用高级 API 销毁并释放状态更改事件句柄。该高级 API 可在 LabVIEW 选板 -> Communicable State Machine(CSM) -> API -> Non-CSM Caller Support 下找到。
+- Step4. API 调用
+    - Step4.1：使用高级 API 向所选子模块发送异步消息（无回复）："API:start"。该高级 API 可在 LabVIEW 选板 -> Communicable State Machine(CSM) -> API -> Non-CSM Caller Support 下找到。
+    - Step4.2：使用相同的高级 API 向所选子模块发送异步消息（无回复）："API:stop"。
+    - Step4.3：使用高级 API 向所选子模块发送异步消息（无回复）："UI: Front Panel State >> Open"。该高级 API 可在 LabVIEW 选板 -> Communicable State Machine(CSM) -> API -> Non-CSM Caller Support 下找到。
+    - Step4.4：使用相同的高级 API 向所选子模块发送异步消息（无回复）："UI: Front Panel State >> Close"。
+    - Step4.5：使用高级 API 发送同步消息并等待返回消息，在本例中为 level 值："API: Get Level"。该高级 API 可在 LabVIEW 选板 -> Communicable State Machine(CSM) -> API -> Non-CSM Caller Support 下找到。
+    - Step4.6：使用高级 API 发送同步消息并等待返回消息："API: Set Level >> value"。该高级 API 可在 LabVIEW 选板 -> Communicable State Machine(CSM) -> API -> Non-CSM Caller Support 下找到。
+- Step5. 处理子模块的状态更改事件
+    - Step5.1：注册状态更改事件后，我们可以在此处处理此事件。例如，我们将用户事件数据打印到状态历史记录中，该历史记录也直接显示在 UI 上。
+- Step6. 程序退出。在 "Panel close?" UI 事件中，给所有的子模块发送同步消息 Macro: Exit, 等待所有子模块退出。
 
 ## Advance Examples
 
