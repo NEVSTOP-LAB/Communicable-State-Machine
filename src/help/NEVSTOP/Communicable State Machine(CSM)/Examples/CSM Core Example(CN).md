@@ -187,33 +187,23 @@ CSM框架中，参数的只能以String类型的表现形式进行传递。为�
 
 #### Overview
 
-演示如何使用 CSM 框架之外的 VI 动态地与 CSM 模块属性交互。
+演示CSM Attribute的使用方法。CSM Attribute 是CSM框架内用于存储模块配置的一种机制。它被用于：
+
+1. 提供一种无需消息访问的配置方法，外部通过模块名称、属性名称、数据类型即可直接读写模块的属性值。
+2. 提供一种worker模式、Chain模式模块内部节点数据共享的机制。不同的节点共享同一个Attribute空间，节点可以通过读写Attribute来实现数据共享。
 
 #### Introduction
 
-本示例演示如何使用 CSM 框架之外的 VI 动态地与 CSM 模块属性交互。
-
-以下是 CSM 框架内的三种交互方式：
-
-- 使用字符串消息队列在 CSM 框架本地/外部传输消息，例如 State >> Argument -@ DestModuleName。
-- 从 CSM 模块广播/中断状态更改事件，从另一个 CSM/非 CSM 模块注册/注销该事件。
-- 使用与模块属性相关的 VI 来获取/设置/移除/列出 CSM 模块属性。
-
-本示例的核心功能是从 CSM 模块外部动态设置另一个随机数值到 CSM 模块，然后从 CSM 模块获取该值并在 UI 上显示。
+本示例演示如何使用 CSM 框架之外的 VI 动态地与 CSM 模块属性交互。本示例的核心功能是从 CSM 模块外部动态设置另一个随机数值到 CSM 模块，然后从 CSM 模块获取该值并在 UI 上显示。
 
 #### Steps
 
-Step 1：从 LabVIEW CSM 选板拖放 VI 模板。
-
-Step 2：在 Macro:Initialize 之后添加一行新的状态字符串，即 API: Define ABC Attribute。
-
-Step 3：在 CSM 模块内部设置模块属性：abc 作为属性，一个随机数作为值。
-
-Step 4：从 CSM 模块外部设置模块属性：abc 作为属性，一个随机数作为值。
-
-Step 5：从 CSM 模块外部设置模块属性：abc 作为属性，检索设置的随机数作为值。
-
-Step 6：从 CSM 模块外部发送同步消息以停止 CSM 模块。
+- Step 1：这是一个从模板建立的CSM模块，名称为“CSM”
+- Step 2：在 Macro:Initialize 之后添加一行新的状态字符串，即 API: Define ABC Attribute。
+- Step 3：API: Define ABC Attribute 中设置模块属性：abc 作为属性，一个随机数作为值。
+- Step 4：从 CSM 模块外部可以设置模块属性：abc 作为属性，一个随机数作为值。
+- Step 5：从 CSM 模块外部可以读取模块属性：abc 作为属性。
+- Step 6：从 CSM 模块外部发送同步消息以停止 CSM 模块。
 
 ### 7. System-Level Module.vi
 
