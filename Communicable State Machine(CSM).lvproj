@@ -63,11 +63,9 @@
 							<Item Name="Multi-Loop Module Example.lvlib" Type="Library" URL="../src/examples/NEVSTOP/Communicable State Machine(CSM)/4. Advance Examples/5. Multi-Loop Module Example/Multi-Loop Module Example.lvlib"/>
 						</Item>
 						<Item Name="6. Global Log Handling Capability" Type="Folder">
-							<Item Name="SubModules" Type="Folder"/>
 							<Item Name="Global Log Handling Capability Example.lvlib" Type="Library" URL="../src/examples/NEVSTOP/Communicable State Machine(CSM)/4. Advance Examples/6. Global Log Handling Capability/Global Log Handling Capability Example.lvlib"/>
 						</Item>
 						<Item Name="7. Register State as Status Example" Type="Folder">
-							<Item Name="SubModules" Type="Folder"/>
 							<Item Name="Register State as Status Example.lvlib" Type="Library" URL="../src/examples/NEVSTOP/Communicable State Machine(CSM)/4. Advance Examples/7. Register State as Status Example/Register State as Status Example.lvlib"/>
 						</Item>
 						<Item Name="8. CSM in lvlibp.7z" Type="Document" URL="../src/examples/NEVSTOP/Communicable State Machine(CSM)/4. Advance Examples/8. CSM in lvlibp.7z"/>
