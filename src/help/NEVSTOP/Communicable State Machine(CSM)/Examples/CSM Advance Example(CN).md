@@ -320,7 +320,7 @@ CSM 循环作为接口，允许您使用 “TCP: Send” 通过 TCP 发送消息
 
 ### Introduction
 
-本示例演示 CSM 的全局日志处理能力。本示例调用 30 个持续生成事件的子模块。主 VI 捕h获这些事件，并使用全局日志 API 来计算和显示关键处理指标，例如 LogInQ、更改速度和处理速度。
+本示例演示 CSM 的全局日志处理能力。本示例调用 30 个持续生成事件的子模块。主 VI 捕获这些事件，并使用全局日志 API 来计算和显示关键处理指标，例如 LogInQ、更改速度和处理速度。
 
 使用此示例来基准测试 CSM 的全局日志性能，并作为自定义实现的参考。
 
@@ -331,29 +331,62 @@ CSM 循环作为接口，允许您使用 “TCP: Send” 通过 TCP 发送消息
 - Step3：使用 CSM 的内置全局日志 API 捕获和计算一些典型的日志记录能力数据。
 - Step4：退出调用者和所有其他正在运行的 CSM 模块。
 
-## Register State as Status Example(Register State as Status Example.vi)
+## State订阅范例
 
-### Overview
+### State订阅范例子模块(State Register Example Submodule.vi)
 
-演示使用 CSM <register> 消息字符串进行动态状态注册。该消息可以使用 Build Message With Arguments ++.vi 构建，也可以手动创建。单击示例 UI 中的按钮，查看相应的响应。您还可以在示例 UI 中更改注册字符串，以查看进一步的自定义响应。
+#### Overview
 
-本示例的一个关键特性是能够级联或流水线化 (pipeline) 事件注册。例如，当 A 注册 B 且 B 注册 C 时，来自 A 的事件首先被 B 捕获，然后传递给 C 进行进一步处理。单击 API: API2 -@submodule1 查看此演示。
+本示例为状态订阅的子模块。它被State订阅范例主程序(Register State as Status Example.vi)调用。
 
-CSM 核心引擎会自动管理注册过程，因此不需要手动注销。
+#### Introduction
 
-### Introduction
+本示例为状态订阅的子模块。它被State订阅范例主程序(Register State as Status Example.vi)调用。本程序界面按钮点击时，会运行按钮名称上的状态。
 
-本示例演示使用 CSM <register> 消息字符串进行动态状态注册。该消息可以使用 Build Message With Arguments ++.vi 构建，也可以手动创建。单击示例 UI 中的按钮，查看相应的响应。您还可以在示例 UI 中更改注册字符串，以查看进一步的自定义响应。
+### State订阅范例主程序(Register State as Status Example.vi)
 
-本示例的一个关键特性是能够级联或流水线化 (pipeline) 事件注册。例如，当 A 注册 B 且 B 注册 C 时，来自 A 的事件首先被 B 捕获，然后传递给 C 进行进一步处理。单击 API: API2 -@submodule1 查看此演示。
+#### Overview
 
-CSM 核心引擎会自动管理注册过程，因此不需要手动注销。
+在2025.8版本中，新增了对状态订阅的支持。本实例主要演示了如何使用状态订阅功能。
 
-### Steps
+和状态变化(Status)相比，状态订阅的优势在于：
+- 不需要显示的发布状态变化(status)，只要运行到某个状态，只要被订阅，就会自动触发，并将状态的Response 作为参数传递给订阅者。
+- 可以很容易的不侵入原先代码，实现观察者模式。
+- 可以实现链式的订阅，但是要注意逻辑上不要形成循环订阅，否则会导致死循环。
 
-- Step1：基于模板 VI 创建一个带 UI 的 CSM 模块，并同步调用两个 CSM 子模块（在调用子模块前等待 1 秒，以获得更好的 UI 显示顺序）。
-- Step2：手动添加一系列 "<register>" 字符串，以动态注册不同 CSM 模块之间的模块间事件。如果您不熟悉此字符串语法，也可以使用高级 API Build Message With Arguments ++.vi。
-- Step3：添加 "Echo:Echo1" case：我们使用实用 VI 来进一步获取注册的来源，无论是本地调用、远程调用还是状态回调。如果您想知道注册的事件源，此实用 VI 非常有用。同时添加 "Echo:Echo2" case，目前没有放置任何代码。但您可以实现任何自定义代码。您不需要手动注销这些事件，因为 CSM 核心引擎会自动处理它。
+#### Introduction
+
+本示例演示如何使用状态订阅功能。单击示例 UI 中的按钮，查看相应的响应。您还可以在示例 UI 中更改注册字符串，以查看进一步的自定义响应。
+
+状态订阅和状态变化(Status)的订阅语法上没有任何不同，区别在于状态变化(Status)需要通过API显示抛出，而状态变化可以订阅CSM任意一个状态。
+
+以本范例为例：
+
+```
+//任意模块的 Macro: Initialize 状态执行完毕后，都会触发主程序CSM模块(缺省)的Echo: Echo1
+Macro: Initialize@* >> Echo: Echo1 -><register> 
+//任意模块的 API: API1 状态执行完毕后，都会触发主程序CSM模块(缺省)的Echo: Echo1
+API: API1@* >> Echo: Echo1-><register>
+//SubModule1的 API: API2 状态执行完毕后，都会触发主程序CSM模块(缺省)的Echo: Echo2
+API: API2@SubModule1 >> Echo: Echo2 -><register>
+//Main模块的Echo: Echo2 状态执行完毕后，都会触发SubModule1的API: API1
+Echo: Echo2@main >> API: API1@submodule1 -><register>
+//SubModule1的 Exit 状态执行完毕后，都会触发主程序CSM模块(缺省)的Echo: Echo1
+Exit@submodule1 >> Echo: Echo1 -><register>
+//SubModule2的 Macro: Exit 状态执行完毕后，都会触发主程序CSM模块(缺省)的Echo: Echo1
+Macro: Exit@submodule2 >> Echo: Echo1 -><register>
+```
+
+其中，main 模块 Echo: Echo2 执行后，触发 SubModule1 的 API: API1 状态; 根据零一条规则，API: API1 状态执行完毕后，会触发主程序CSM模块(缺省)的Echo: Echo1。这是一个链式订阅的场景。
+
+#### Steps
+- Step1: 根据全局日志模板，创建一个监控循环，用于观测系统中所有模块的状态变化。
+- Step2: 异步调用两个 CSM 子模块（在调用子模块前等待 1 秒，以获得更好的 UI 显示顺序）子模块可以通过点击界面按钮，触发其状态变化。
+- Step3: 通过模板实现一个 CSM主程序模块，名字叫做 main.
+    - Step3.1: 主程序界面按钮的点击，会触发其状态发生变化。逻辑上将按钮的名称作为状态，用于减少代码编写。
+    - Step3.2：主程序启动时，自动订阅预设的状态订阅规则。
+    - Step3.3: "Echo: Echo1" 状态中，会将参数等信息以弹窗的形式显示出来。这个状态的运行，同时会在全局日志中有记录。
+- Step4：可以点击主界面的按钮，或子模块界面的按钮，触发对应的逻辑，查看全局日志，验证状态订阅是否生效。
 
 # Addons - Logger
 
