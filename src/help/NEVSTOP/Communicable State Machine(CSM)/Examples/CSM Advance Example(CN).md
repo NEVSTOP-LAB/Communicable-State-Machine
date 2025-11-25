@@ -365,15 +365,19 @@ CSM 核心引擎会自动管理注册过程，因此不需要手动注销。
 
 ### Introduction
 
-本示例演示如何使用 CSM Logger VI 来实现全局 CSM 事件文件记录功能。
+本示例演示如何使用 CSM Logger VI 来实现全局 CSM 事件文件记录功能。使用高级 CSM-Start File Logger.vi（此 VI 可以在 LabVIEW 选板 -> CSM -> Addons -> Logger 下找到）来快速实现全局 CSM 事件文件记录功能。
+
+例如，我们按顺序放置两个这样的 VI，手动设置日志记录的文件路径和名称，并分别启用全局规则过滤器。运行此示例后，您还可以找到并查看相应的日志文件，以加深理解。如果以后要添加/调用更多 CSM 模块，您无需更改此处的任何代码以实现日志记录功能。总之，您只需要这样一个高级 CSM 附加组件日志记录器 VI 即可快速实现全局日志记录功能。
 
 ### Steps
 
-- Step1：使用 CSM VI 模板获取一个带 UI 的 CSM 模块。
-    - Step1.1：给 CSM 模块一个名称，例如 "RunningLogExample"。
-    - Step1.2：在 UI 事件中广播消息。
-- Step2：使用高级 CSM-Start File Logger.vi（此 VI 可以在 LabVIEW 选板 -> CSM -> Addons -> Logger 下找到）来快速实现全局 CSM 事件文件记录功能。
-例如，我们按顺序放置两个这样的 VI，手动设置日志记录的文件路径和名称，并分别启用全局规则过滤器。运行此示例后，您还可以找到并查看相应的日志文件，以加深理解。如果以后要添加/调用更多 CSM 模块，您无需更改此处的任何代码以实现日志记录功能。总之，您只需要这样一个高级 CSM 附加组件日志记录器 VI 即可快速实现全局日志记录功能。
+- Step1：这是一个简单的CSM模块，名称为RunningLogExample
+- Setp2: 任何的一个按钮，都会运行到"API: Button Click"状态, 并抛出同名的一个状态变化，他们的参数都是按钮的名称。
+- step3: 在 API: Button Click 中，不需要做任何事情，因为我们要观察的是日志文件。
+- step4：程序启动后，会启动两个log文件的后台记录线程，他们会随着程序的退出而退出。
+- Step5: 运行完程序后，在范例VI所在目录，检查是否存在两个日志文件。
+    - Step5.1: CSM Application Running Log Example.csmlog 记录了所有的日志。
+    - Step5.2: CSM Application Running Log Example.no-state.csmlog 所记录的日志，没有状态变化记录。
 
 # Addons - Loop Support
 
@@ -381,13 +385,7 @@ CSM 核心引擎会自动管理注册过程，因此不需要手动注销。
 
 ### Overview
 
-演示如何使用 CSM Loop-Support VI 来创建类似于 while 循环的连续循环机制。您无需手动嵌入 while 循环，而是可以使用高级 API 来定义、附加和终止循环。CSM 框架会自动处理所有底层操作。
-
-本示例展示了 CSM 框架内的连续 DAQ 采集。单击 Start 开始连续采集，单击 Stop（或触发高优先级错误）结束循环。作为比较，单击 DAQ:once 运行单次采集。低优先级错误不会停止循环。
-
-### Introduction
-
-本示例演示如何使用 CSM Loop-Support VI 来创建类似于 while 循环的连续循环机制。您无需手动嵌入 while 循环，而是可以使用高级 API 来定义、附加和终止循环。CSM 框架会自动处理所有底层操作。
+循环是状态机运行的基本单位，它会在状态机运行时不断地执行。用户可以自己通过逻辑来定义循环的条件，也可以使用CSM推荐的循环支持API来定义循环。它的优势是可以在循环运行时，依然响应其他事件，而不会阻塞状态机的运行。这类似于 while 循环的连续循环机制。您无需手动嵌入 while 循环，而是可以使用 CSM Loop-Support VI 来定义、附加和终止循环。这组API通过对状态队列的分析来完成此功能。
 
 本示例展示了 CSM 框架内的连续 DAQ 采集。单击 Start 开始连续采集，单击 Stop（或触发高优先级错误）结束循环。作为比较，单击 DAQ:once 运行单次采集。低优先级错误不会停止循环。
 
@@ -398,14 +396,22 @@ CSM 核心引擎会自动管理注册过程，因此不需要手动注销。
 3. 单击 **Stop** 或 **High-Priority Error** 终止循环。
 4. 循环运行时，单击 **Low-Priority Error**。错误被忽略，循环仍会运行。
 
+### Introduction
+
+本示例演示如何使用 CSM Loop-Support VI 来实现 while 循环的连续 DAQ 采集的功能。单击 Start 开始连续采集，单击 Stop（或触发高优先级错误）结束循环。作为比较，单击 DAQ:once 运行单次采集。
+
 ### Steps
 
-- Step1：
+- Step1： 界面事件处理循环
     - Step1.1 如果 UI 事件变得非常复杂，建议使用 CSM DQMH-Style Template，以便我们可以将 UI 逻辑与其他 CSM 相关逻辑分开处理。您可以在 LabVIEW 选板 -> CSM -> More Templates 下找到此模板。
     - Step1.2：此外，已使用多循环支持 API 将状态从 DQMH 循环转发到 CSM 主循环。例如，在用户单击 Start 按钮后，"Macro:DAQ continuous" 消息可以被转发到 CSM 主循环中进行进一步的逻辑处理。
 - Step2：使用 CSM-Addon Logger Start File Logger.vi 来快速实现 CSM 全局事件文件记录功能。
-- Step3：使用 CSM Loop-support API VI 来实现 while 循环。
-    - Step3.1：Define Loop States(s).vi：定义多个消息字符串，用 "-><loop>" 标记该字符串，以便该消息字符串被连续处理。将所有这些字符串发送到 Define Loop States(s).VI 中。
-    - Step3.2：Append Continuous States.vi：添加任何必要的连续参数，并将其附加到其他状态和参数中，以便所有这些都可以在一个循环中运行。
-    - Step3.3 Remove Loop Tag to Break.vi：使用此 VI 停止 while 循环并处理循环后状态。
-    - Step3.4：Remove Loop Tag and Previous States to Break.vi：使用此 VI 停止 while 循环，同时移除先前的状态，然后处理循环后状态。
+- Step3：CSM 循环，用于处理界面的操作，及外部的响应，并实现具体的操作逻辑。
+    - Step3.1：在 DAQ 分组中，实现对 DAQ 采集的具体操作逻辑。
+- Step4: 使用 CSM Loop-support API VI 来实现 while 循环。
+    - Step4.1：Define Loop States(s).vi：定义连续的状态，用 "-><loop>" 标记该循环检查状态，以便该消息字符串被连续处理。
+    - Step4.2：Append Continuous States.vi：添加下一轮的状态，并通过参数将状态检查循环继续添加到状态队列中。
+    - Step4.3 Remove Loop Tag to Break.vi：使用此 VI 移除 <loop> 标签，以便退出循环状态，本次循环相关的状态可以被正常处理。
+    - Step4.4：Remove Loop Tag and Previous States to Break.vi：移除 <loop> 标签，以及之前的所有状态，以便退出循环状态，本次循环相关的状态被移除。
+    - Step4.5: 需要添加延迟函数，控制循环的速率。
+- Step5：可以看出，可以使用相同的状态，实现普通的单次采集。
