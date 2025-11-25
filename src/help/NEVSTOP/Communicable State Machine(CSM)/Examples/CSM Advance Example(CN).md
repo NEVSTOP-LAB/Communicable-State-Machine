@@ -144,78 +144,102 @@
 - Step2：这个错误信息会触发 CSM 模块轮转到 Error Handler 状态, 这个行为和 JKISM 一致。
 - Step3：在 Error handler 状态中，会将错误信息通过 Error Occurred 状态抛出。
 
-## Global Log Filter Example(Filter From Source(Event).vi)
+## 全局日志过滤示例
 
-### Overview
+### 基于事件的源过滤示例(Filter From Source(Event).vi)
 
-演示使用 CSM 全局日志 API 记录状态更改事件以进行调试和监控。本示例使用基于源视图 (source-view)、基于用户事件 (user-event-based) 的机制。
+#### Overview
 
-### Introduction
+演示使用 CSM 全局日志 API 记录状态更改事件以进行调试和监控。本示例基于用户事件机制，并设置了源端过滤规则。
 
-本示例演示使用 CSM 全局日志 API 记录状态更改事件以进行调试和监控。本示例使用基于源视图 (source-view)、基于用户事件 (user-event-based) 的机制。
+#### Introduction
 
-### Steps
+本示例演示使用 CSM 全局日志 API 记录状态更改事件以进行调试和监控。本示例基于用户事件机制，并设置了源端过滤规则。
 
-- Step1：获取 CSM 全局状态用户事件句柄，并注册它。
-- Step2：设置全局过滤规则。规则下有两个簇，第一个用于全局过滤，第二个用于特定的 CSM 模块。例如，我们过滤掉来自 Module2 的所有日志（全局）以及 Module1 的 "State Change" LogType（特定模块日志）。
-- Step3：使用 CSM_Run Scripts VI 向所有四个同步调用的 CSM 模块发送 "API:start" 消息。
-- Step4：在 UI 事件中动态更改全局过滤规则。
-- Step5：捕获用户事件并处理它，在本示例中，我们将其打印到 LabVIEW UI。
-- Step6：使用 CSM_Run Scripts VI 发送 "Macro:Exit" 消息，以同步退出所有正在运行的 CSM 模块，并销毁 CSM 全局状态用户事件句柄。
 
-## Global Log Filter Example(Filter From Source(Queue).vi)
+#### Steps
 
-### Overview
+- Step1: 使用事件结构获取CSM 全局日志，并显示在界面
+    - Step1.1：获取 CSM 全局状态用户事件句柄，并注册它。
+    - Step1.2：设置源端全局过滤规则。第一个用于全局过滤，第二个用于特定的 CSM 模块。例如，我们过滤掉来自 Module2 的所有日志（全局）以及 Module1 的 "State Change" LogType（特定模块日志）。
+    - Step1.3: 在<CSM Global Log Event>中，处理 CSM 全局日志事件，将其打印到 LabVIEW UI。
+    - Step1.4: 程序退出过程中，注销 CSM 全局状态用户事件句柄。
+- Step2: 同步调用 `1. Create a reuse Module\CSM Reuse Module.vi`, 创建四个运行的CSM模块实例。
+    - Step2.1: 创建四个运行的CSM模块实例
+    - Step2.2: 在全局日志处理准备好后，发送 "API:start" 消息，让所有的模块开始运行。
+    - Step2.3: 观测运行中的 Log 信息，可以看到规则中下相关日志已经被过滤。
+    - Step2.4: 程序开始退出后，发送 “Macro: Exit" 消息，以同步退出所有正在运行的 CSM 模块。
 
-演示使用 CSM 全局日志 API 记录状态更改事件以进行调试和监控。本示例使用基于源视图 (source-view)、基于队列 (queue-based) 的机制。
+### 基于队列的源过滤示例(Filter From Source(Queue).vi)
 
-### Introduction
+#### Overview
 
-本示例演示使用 CSM 全局日志 API 记录状态更改事件以进行调试和监控。本示例使用基于源视图 (source-view)、基于队列 (queue-based) 的机制。
+演示使用 CSM 全局日志 API 记录状态更改事件以进行调试和监控。本示例基于用户事件机制，并设置了源端过滤规则。
 
-### Steps
+#### Introduction
 
-- Step1：获取 CSM 全局状态用户事件队列。
-- Step2：设置全局过滤规则。规则下有两个簇，第一个用于全局过滤，第二个用于特定的 CSM 模块。例如，我们过滤掉来自 Module2 的所有日志（全局）以及 Module1 的 "State Change" LogType（特定模块日志）。
-- Step3：使用 CSM_Run Scripts VI 向所有四个同步调用的 CSM 模块发送 "API:start" 消息。
-- Step4：首先使用 LabVIEW 队列 VI 获取队列状态并出队一个元素以进行一些日志记录计算，例如速度和 LogInQ 等。我们还将日志打印到 LabVIEW UI。
-然后，如果用户直接从 UI 更改，则动态更改全局过滤规则。
-- Step5：使用 CSM_Run Scripts VI 发送 "Macro:Exit" 消息，以同步退出所有正在运行的 CSM 模块，并销毁 CSM 全局状态用户事件队列。
+本示例演示使用 CSM 全局日志 API 记录状态更改事件以进行调试和监控。本示例基于基于队列 (queue-based) 的机制，并设置了源端过滤规则。
 
-## Global Log Filter Example(Filter From Subscriber(Event).vi)
+#### Steps
 
-### Overview
+- Step1: 使用事件结构获取CSM 全局日志，并显示在界面
+    - Step1.1：获取 CSM 全局状态队列句柄，并注册它。
+    - Step1.2：设置源端全局过滤规则。第一个用于全局过滤，第二个用于特定的 CSM 模块。例如，我们过滤掉来自 Module2 的所有日志（全局）以及 Module1 的 "State Change" LogType（特定模块日志）。
+    - Step1.3: 查询队列状态，并计算日志处理速度等指标。
+    - Step1.4: 使用出队结构，处理 CSM 全局日志事件，将其打印到 LabVIEW UI。
+    - Step1.5: 程序退出过程中，注销 CSM 全局状态队列句柄。
+- Step2: 同步调用 `1. Create a reuse Module\CSM Reuse Module.vi`, 创建四个运行的CSM模块实例。
+    - Step2.1: 创建四个运行的CSM模块实例
+    - Step2.2: 在全局日志处理准备好后，发送 "API:start" 消息，让所有的模块开始运行。
+    - Step2.3: 观测运行中的 Log 信息，可以看到规则中下相关日志已经被过滤。
+    - Step2.4: 程序开始退出后，发送 “Macro: Exit" 消息，以同步退出所有正在运行的 CSM 模块。
 
-演示使用 CSM 全局日志 API 记录状态更改事件以进行调试和监控。本示例使用基于订阅者视图 (subscriber-view)、基于用户事件 (user-event-based) 的机制。
+### 基于事件的订阅端过滤示例(Filter From Subscriber(Event).vi)
 
-### Introduction
+#### Overview
 
-本示例演示使用 CSM 全局日志 API 记录状态更改事件以进行调试和监控。本示例使用基于订阅者视图 (subscriber-view)、基于用户事件 (user-event-based) 的机制。
+演示使用 CSM 全局日志 API 记录状态更改事件以进行调试和监控。本示例基于用户事件机制，并设置了订阅端过滤规则。订阅端规则的设置，只影响订阅端接收到的日志，不会影响其他订阅端或全局日志。
 
-### Steps
+#### Introduction
 
-- Step1：获取 CSM 全局状态用户事件句柄，并注册它。
-- Step2：使用 CSM_Run Scripts VI 向所有四个同步调用的 CSM 模块发送 "API:start" 消息。
-- Step3：在 UI 事件中动态设置全局过滤规则。规则下有两个簇，第一个用于全局过滤，第二个用于特定的 CSM 模块。例如，我们过滤掉来自 Module2 的所有日志（全局）以及 Module1 的 "State Change" LogType（特定模块日志）。
-- Step4：捕获用户事件并处理它，在本示例中，我们将其打印到 LabVIEW UI。
-- Step5：使用 CSM_Run Scripts VI 发送 "Macro:Exit" 消息，以同步退出所有正在运行的 CSM 模块，并销毁 CSM 全局状态用户事件句柄。
+本示例演示使用 CSM 全局日志 API 记录状态更改事件以进行调试和监控。本示例基于用户事件机制，并设置了订阅端过滤规则。订阅端规则的设置，只影响订阅端接收到的日志，不会影响其他订阅端或全局日志。
 
-## Global Log Filter Example(Filter From Subscriber(Queue).vi)
+#### Steps
 
-### Overview
+- Step1: 使用事件结构获取CSM 全局日志，并显示在界面
+    - Step1.1：获取 CSM 全局状态用户事件句柄，并注册它。
+    - Step1.2：设置订阅端全局过滤规则。第一个用于全局过滤，第二个用于特定的 CSM 模块。例如，我们过滤掉来自 Module2 的所有日志（全局）以及 Module1 的 "State Change" LogType（特定模块日志）。
+    - Step1.3: 在<CSM Global Log Event>中，处理 CSM 全局日志事件，将其打印到 LabVIEW UI。
+    - Step1.4: 程序退出过程中，注销 CSM 全局状态用户事件句柄。
+- Step2: 同步调用 `1. Create a reuse Module\CSM Reuse Module.vi`, 创建四个运行的CSM模块实例。
+    - Step2.1: 创建四个运行的CSM模块实例
+    - Step2.2: 在全局日志处理准备好后，发送 "API:start" 消息，让所有的模块开始运行。
+    - Step2.3: 观测运行中的 Log 信息，可以看到规则中下相关日志已经被过滤。
+    - Step2.4: 程序开始退出后，发送 “Macro: Exit" 消息，以同步退出所有正在运行的 CSM 模块。
 
-演示使用 CSM 全局日志 API 记录状态更改事件以进行调试和监控。本示例使用基于订阅者视图 (subscriber-view)、基于队列 (queue-based) 的机制。
+### 基于队列的订阅端过滤示例(Filter From Subscriber(Queue).vi)
 
-### Introduction
+#### Overview
 
-本示例演示使用 CSM 全局日志 API 记录状态更改事件以进行调试和监控。本示例使用基于订阅者视图 (subscriber-view)、基于队列 (queue-based) 的机制。
+演示使用 CSM 全局日志 API 记录状态更改事件以进行调试和监控。本示例基于用户事件机制，并设置了订阅端过滤规则。订阅端规则的设置，只影响订阅端接收到的日志，不会影响其他订阅端或全局日志。
 
-### Steps
+#### Introduction
 
-- Step1：获取 CSM 全局状态用户事件队列。
-- Step2：使用 CSM_Run Scripts VI 向所有四个同步调用的 CSM 模块发送 "API:start" 消息。
-- Step3 首先使用 LabVIEW 队列 VI 获取队列状态并出队一个元素以进行一些日志记录计算，例如速度和 LogInQ 等。然后，如果用户直接从 UI 更改，则动态更改全局过滤规则。最后，我们还将日志打印到 LabVIEW UI。
-- Step4：使用 CSM_Run Scripts VI 发送 "Macro:Exit" 消息，以同步退出所有正在运行的 CSM 模块，并销毁 CSM 全局状态用户事件队列。
+本示例演示使用 CSM 全局日志 API 记录状态更改事件以进行调试和监控。本示例基于基于队列 (queue-based) 的机制，并设置了订阅端过滤规则。订阅端规则的设置，只影响订阅端接收到的日志，不会影响其他订阅端或全局日志。
+
+#### Steps
+
+- Step1: 使用事件结构获取CSM 全局日志，并显示在界面
+    - Step1.1：获取 CSM 全局状态队列句柄，并注册它。
+    - Step1.2：设置订阅端全局过滤规则。第一个用于全局过滤，第二个用于特定的 CSM 模块。例如，我们过滤掉来自 Module2 的所有日志（全局）以及 Module1 的 "State Change" LogType（特定模块日志）。
+    - Step1.3: 查询队列状态，并计算日志处理速度等指标。
+    - Step1.4: 使用出队结构，处理 CSM 全局日志事件，将其打印到 LabVIEW UI。
+    - Step1.5: 程序退出过程中，注销 CSM 全局状态队列句柄。
+- Step2: 同步调用 `1. Create a reuse Module\CSM Reuse Module.vi`, 创建四个运行的CSM模块实例。
+    - Step2.1: 创建四个运行的CSM模块实例
+    - Step2.2: 在全局日志处理准备好后，发送 "API:start" 消息，让所有的模块开始运行。
+    - Step2.3: 观测运行中的 Log 信息，可以看到规则中下相关日志已经被过滤。
+    - Step2.4: 程序开始退出后，发送 “Macro: Exit" 消息，以同步退出所有正在运行的 CSM 模块。
 
 ## Multi-Loop Module Example(Main - Call and Monitor TCP Traffic.vi)
 
