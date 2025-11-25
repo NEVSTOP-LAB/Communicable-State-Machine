@@ -106,28 +106,43 @@
 
 本示例为责任链模式中CSM模块节点的实现。通过"Allowed Messages"参数，定义了该节点可以处理的消息名称。例如，本 CSM 模块的 "Action: action 4", "Action: action 5", "Action: action 6"消息。
 
-## Build-in Error Handling Framework(Topmost VI who Registers all Errors.vi)
+## 全局错误处理机制示例
 
-### Overview
+### 主程序(Topmost VI who Registers all Errors.vi)
 
-演示如何使用内置的错误处理框架来订阅所有活动的 CSM 子模块的错误。
+#### Overview
 
-每个 CSM 模块在检测到错误时会自动广播 Error Occurred 状态更新。要捕获这些事件，请在顶级 CSM 模块中添加一个模块间消息字符串以注册该广播。
+演示如何使用状态订阅机制，实现全局的错误处理机制，主程序也兼职错误处理模块，所有CSM子模块的错误都可以在主程序中捕获并处理。
 
-如果调用者 VI 不是 CSM 模块，您可以使用 Non-CSM Caller Support VI 实现相同的功能。
+#### Introduction
 
-### Introduction
 
-本示例演示如何使用内置的错误处理框架来订阅所有活动的 CSM 子模块的错误。
+演示如何使用状态订阅机制，实现全局的错误处理机制，主程序也兼职错误处理模块，所有CSM子模块的错误都可以在主程序中捕获并处理。每个 CSM 模块在发生错误时，会自动广播 Error Occurred 状态更新。通过在主程序中添加一个模块间消息字符串以注册该广播，即可捕获所有CSM子模块的错误。
 
-每个 CSM 模块在检测到错误时会自动广播 Error Occurred 状态更新。要捕获这些事件，请在顶级 CSM 模块中添加一个模块间消息字符串以注册该广播。
+如果调用者 VI 不是 CSM 模块，您可以使用 Non-CSM Caller Support VI 实现订阅CSM模块错误的功能。
 
-如果调用者 VI 不是 CSM 模块，您可以使用 Non-CSM Caller Support VI 实现相同的功能。
+#### Steps
 
-### Steps
+- Step1：主程序核心为一个名为 GlobalErrorHandlingExample 的 CSM 模块
+- Step2: 并同步调用另外两个 CSM 模块，这两个子模块可以通过点击按钮产生一些预定的错误。
+- Step3：启动时就注册 "Error Occurred" 广播事件，"Error Occurred@* >> Error Handler -><register>". 该事件在任何 CSM 子模块抛出 Error Occurred 状态变化时，会触发 GlobalErrorHandlingExample 的 "Error Handler", 处理捕获的事件。
+- Step4: (optional) 退出逻辑中，通过 “CSM - Filter Messages to Non-Existing Modules.vi” 过滤掉所有不存在的 CSM 模块的消息，以避免在退出时触发错误。
 
-- Step1：使用 CSM VI 模板创建 GlobalErrorHandlingExample CSM 模块，并同步调用另外两个 CSM 模块。
-- Step2：添加一行模块间字符串消息以注册 "Error Occurred" 广播事件，该事件在任何 CSM 子模块出错时生成："Error Occurred@* >> Error Handler -><register>"，然后在 "Error Handler" case 中相应地处理捕获的事件。
+### 模拟错误生成模块(Error Module.vi)
+
+#### Overview
+
+一个CSM 示例模块，用于在点击按钮时产生预定的错误。
+
+#### Introduction
+
+本示例为全局错误处理机制的一个子模块，用于在点击按钮时产生预定的错误。这个CSM模块被设置为可重入，可以同时运行多个实例。启动后面板被自动打开。点击界面上上的产生错误按钮，会生成一个模拟的错误。这个错误通过状态机的轮转，会运行至“Error handler” 状态，并将此错误通过 Error Occurred 状态抛出。任何订阅该模块 Error Occurred 状态的模块，可以捕获并处理此错误。
+
+#### Steps
+
+- Step1：产生一个模拟的错误，通过错误线传递到模块中，这也是通常我们会遇到的错误场景。
+- Step2：这个错误信息会触发 CSM 模块轮转到 Error Handler 状态, 这个行为和 JKISM 一致。
+- Step3：在 Error handler 状态中，会将错误信息通过 Error Occurred 状态抛出。
 
 ## Global Log Filter Example(Filter From Source(Event).vi)
 

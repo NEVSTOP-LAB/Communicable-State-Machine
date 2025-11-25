@@ -54,7 +54,6 @@
 							<Item Name="Chain of Responsibility Example.lvlib" Type="Library" URL="../src/examples/NEVSTOP/Communicable State Machine(CSM)/4. Advance Examples/2. Chain of Responsiblility Example/Chain of Responsibility Example.lvlib"/>
 						</Item>
 						<Item Name="3. Build-in Error Handling Framework" Type="Folder">
-							<Item Name="SubModules" Type="Folder"/>
 							<Item Name="Build-in Error Handling Framework.lvlib" Type="Library" URL="../src/examples/NEVSTOP/Communicable State Machine(CSM)/4. Advance Examples/3. Build-in Error Handling Framework/Build-in Error Handling Framework.lvlib"/>
 						</Item>
 						<Item Name="4. Global Log Filter Example" Type="Folder">
