@@ -241,22 +241,74 @@
     - Step2.3: 观测运行中的 Log 信息，可以看到规则中下相关日志已经被过滤。
     - Step2.4: 程序开始退出后，发送 “Macro: Exit" 消息，以同步退出所有正在运行的 CSM 模块。
 
-## Multi-Loop Module Example(Main - Call and Monitor TCP Traffic.vi)
+## 多循环模块示例(Main - Call and Monitor TCP Traffic.vi)
 
-### Overview
+### 多循环模块(TCP Server Module(Multi-Loop Support).vi)
 
-演示在旁路循环中调用 CSM 子模块。在外部，该模块的交互类似于标准 CSM 子模块，但请注意其特定的 API 和状态更改行为。
+#### Overview
 
-### Introduction
+本示例演示如何创建一个带有旁路循环的 CSM 模块。在某些场景下，将逻辑放在 CSM 循环之外实现会简单得多。此时，您可以利用旁路循环支持 API，将您的逻辑与 CSM 循环集成，从而构成一个子模块。
 
-本示例演示在旁路循环中调用 CSM 子模块。在外部，该模块的交互类似于标准 CSM 子模块，但请注意其特定的 API 和状态更改行为。
+本示例创建了一个简单的 TCP 服务器子模块，直观易懂，并充分利用了 CSM 作为接口的优势。
 
-### Instructions
+#### Instructions
 
-1. 运行此 VI。
+- 运行此VI。
+- 运行经过轻微修改的Simple TCP - Client.vi，该VI基于LabVIEW示例。
+- 修改此前面板和客户端上的String控件，观察日志信息。
+- 您可以重新启动Simple TCP - Client.vi来查看日志。
+
+#### Introduction
+
+CSM 循环作为接口，允许您使用 “TCP: Send” 通过 TCP 发送消息，“TCP: Receive” 用于处理接收到的消息。本示例中仅将消息显示出来。通过将 CSM 循环与旁路 TCP 循环结合，该模块可作为 TCP 服务，用于与客户端之间通过 TCP 连接收发消息。
+
+可以看出，这种编写方式，可以很方便的改造已有的代码，将CSM作为通讯接口，与其他模块进行交互。 尤其在一些对定时要求高的场景，需要使用定时循环，多循环模式就是一种很好的选择。
+
+#### Steps
+
+- step1: CSM 循环作作为通讯接口
+    - step1.1: 创建 TCP: Send 接口，用于处理发送TCP数据包
+    - step1.2: 创建 TCP: Receive 接口，用于处理接收TCP数据包，
+    - step1.3: 将接收到的TCP数据包通过“TCP Received” 状态变化抛出
+- step2: TCP 旁路循环
+    - step2.1: TCP 监听。硬编码端口号。
+    - step2.2: 当TCP首次连接时广播“TCP Connected”状态。
+    - step2.3: 监控TCP连接是否有消息传入。
+    - step2.4: 清除错误56，因为它表示TCP空闲。
+    - step2.5: 调用旁路循环API："CSM Module Turns Invalid.vi"使旁路循环随CSM循环一起退出
+    - step2.6: 停止内部循环。
+    - step2.7: 关闭TCP引用句柄。
+    - step2.8: 当TCP连接断开时广播"TCP Disconnected"状态。
+    - step2.9: 停止外部循环。
+
+### TCP 服务器程序(TCP Client Module(Multi-Loop Support).vi)
+
+#### Overview
+
+基于调用`TCP Server Module(Multi-Loop Support).vi`实现一个TCP服务器程序。可以看出，从外部看，该模块的交互与标准CSM模块的交互相同，只是在内部，该模块的状态变化是通过旁路循环抛出的。
+
+#### Instructions
+
+1. 运行本 VI。
 2. 运行 Simple TCP - Client.vi。
-3. 修改此 VI 和客户端上的字符串控件以观察通信日志。
-4. 根据需要重新启动 Simple TCP - Client.vi 以观察重新连接日志。
+3. 在本 VI 和客户端 VI 上修改字符串控件，观察通信日志。
+4. 根据需要重新启动 Simple TCP - Client.vi，观察重连日志。
+
+#### Introduction
+
+不使用CSM框架，调用`TCP Server Module(Multi-Loop Support).vi`实现一个TCP服务器程序。可以看出，从外部看，该模块的交互与标准CSM模块的交互相同，只是在内部，该模块的状态变化是通过旁路循环抛出的。
+
+#### Steps
+
+- Step1：初始化UI
+- Step2：异步调用 `TCP Server Module(Multi-Loop Support).vi`, 启动名称为 TCPServer 的CSM模块
+- step3：订阅 TCPServer 模块的状态变化事件
+- step4：在客户端 VI 上修改字符串控件，观察通信日志。
+- Step5: 运行 Simple TCP - Client.vi，在这个VI上点击发送按钮，发送一条TCP消息到服务器。
+- step6：任何收到的TCP消息，会被TCPServer以“TCP Received”状态变化抛出，因此在状态处理事件中可以处理此状态，本程序将其显示在界面上。
+- step7：String控件修改内容并键入回车后，本程序将其作为TCP消息发送到Client。
+- step8：程序开始退出后，取消订阅 TCPServer 模块的状态变化事件
+- step9: 发送“Macro: Exit”消息，以同步退出 TCPServer 模块。
 
 ## Global Log Handling Capability(Global Log Handling Capability Example.vi)
 
