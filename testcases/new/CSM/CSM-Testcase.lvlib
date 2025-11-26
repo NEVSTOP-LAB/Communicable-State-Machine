@@ -9,6 +9,5 @@
 	<Item Name="Chain3.vi" Type="VI" URL="../Chain3.vi"/>
 	<Item Name="Global-TestcaseCSM.vi" Type="VI" URL="../Global-TestcaseCSM.vi"/>
 	<Item Name="Normal-CSM.vi" Type="VI" URL="../Normal-CSM.vi"/>
-	<Item Name="Normal-CSM_Argument.vi" Type="VI" URL="../Normal-CSM_Argument.vi"/>
 	<Item Name="Strip CSM name.vi" Type="VI" URL="../Strip CSM name.vi"/>
 </Library>
