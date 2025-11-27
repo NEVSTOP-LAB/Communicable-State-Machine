@@ -1,13 +1,13 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
 <Library LVVersion="17008000">
 	<Property Name="EndevoGOOP_ColorFrame" Type="UInt">0</Property>
-	<Property Name="EndevoGOOP_ColorHeader" Type="UInt">5470832</Property>
+	<Property Name="EndevoGOOP_ColorHeader" Type="UInt">1351424</Property>
 	<Property Name="EndevoGOOP_ColorPrivate" Type="UInt">9868950</Property>
-	<Property Name="EndevoGOOP_ColorPublic" Type="UInt">16448250</Property>
+	<Property Name="EndevoGOOP_ColorPublic" Type="UInt">12713864</Property>
 	<Property Name="EndevoGOOP_ColorTextBody" Type="UInt">0</Property>
 	<Property Name="EndevoGOOP_ColorTextHeader" Type="UInt">16777215</Property>
 	<Property Name="EndevoGOOP_FrameThickness" Type="UInt">1</Property>
-	<Property Name="NI.Lib.Icon" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!*'!!!*Q(C=\&gt;5^&lt;B.2&amp;-8R!UJ"[RUA,S$.X9+XY#X=AI)GB6N+6_HP&amp;CQ&amp;+IP#%CMY9A@O5HM"&lt;M*`HK_$J5CY!921XMM&lt;?][]DV`?4#&lt;3+/_E'TV&gt;+]&gt;@&amp;KZ,@$,&gt;=8S/&lt;]&gt;TS(7.](A[0@7[/)TLX6^&gt;,Q\H]=@T_=PRJ[(K&lt;C`8P_;`5P2;8MP`84Z&gt;`30YYX](&lt;T3^C'CG&amp;3VJ-&lt;U&gt;^'2SEZP=Z#9X?:%8?:%8?:%8?:)H?:)H?:)H?:!(?:!(?:!(_;DE)B?ZS#':R=V#:F)TA?E-2?:A0-:D0-&lt;$K9T(?)T(?)S(,D)?YT%?YT%?BMFYD-&gt;YD-&gt;YG'J)0#IZ(O.B?B7?QF.Y#E`B95E6HA*1,&amp;:-8%Q#1]8&amp;YEPB+4S&amp;B[]K0)7H]"3?QM.F&amp;:\#5XA+4_&amp;BS.C6'JKJEO.B'C7?R*.Y%E`C97IFHM34?"*0YG%Z*:\%ES#3":0*)3A:F(2)4B*0YO&amp;$C3@R**\%EXCY./Z1DJW:.&amp;-FRR.Y!E`A#4S"BSE5?!*0Y!E]A9&gt;J&amp;8A#4_!*0)'(J22Y!E`A#3$"ICSP9,*A9.!J#!)00_.JC8'8;EBC6+E@8P6$K8\9V!_2_O&amp;1XX4VT64@*08GKT&gt;6P6HK46$`=GKU'K.?2$VY[KA$RTVN2^P1VL16&lt;5F&lt;U/;UW44U.X=](!\;\`@;\8&lt;;&lt;$:;L^&gt;;L6:;,J&gt;;,";;T_?;T7&lt;0LY(XV/=8QM`XUP@&lt;_\PNY`&lt;BWY@NF[_@NQ`_?(`XF`Y``Q0P2LX6Z2LMU1]3PK=Y!!!!!!</Property>
+	<Property Name="NI.Lib.Icon" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!*'!!!*Q(C=\&gt;5^&lt;B.2&amp;-8R![+A^1[1&amp;Z$G&lt;M&amp;&lt;]":O15'4QGV+6_HP&amp;CQ&amp;+IP#%JW\I_T!(&lt;7X%0\T@"UM2=).))4S8N\9=_:^`0*G-J&amp;'?3_^U^/VMP^FY&lt;L%*^0NR_@YND_(8.=)^[@45[_,Q\D?`&gt;8VYH!?PT_@PRR`'KLO^H,^;`YL2;`FN@T@Z?\K(]%@`TNYI_F&amp;2$/N;%G,[?WA*Z/&lt;X/1G.\H*C\T)C\T)C\T)ETT*ETT*ETT*ATT)ATT)ATT)2S58O=B&amp;$MEM&lt;B9SEZI*4'=I-A@D-2\D-2Z/:4T'9TT'9TRUE@%9D`%9D`%Q4-:D0-:D0-&lt;$6%0C5=HR'!`4K`!5HM*4?!I03[LQ&amp;)"CM7,C9B)9+CY78QJ0Y3E]@&amp;8B+4S&amp;J`!5(C[L]"3?QF.Y#A^$RK\5U%S6(!`4+0%EHM34?")05SPR**\%EXA3$]MJ]33?"*%MG%Q/1=GAJ%.SEHA3$R^+0)EH]33?R-/F=9&gt;S\-SEG3IZHM!4?!*0Y!E]4+(!%XA#4_!*0%SLQ".Y!E`A#4QMJ=!4?!*0!!E7:8E&amp;EQ5$AUZ"%(DY'5^,D,N51R+D3PXQKB^+^=/G@ID5$Y@[JKNPJPIGK4&gt;@P;HKT6*PAPK85[06'05C[M&amp;42RUZ(GA\WI;WJKVI3^K#.K@.JK'`O?0R?.4B=."ON^.GM^&amp;[P&gt;:KN&gt;*SO&gt;2CM&gt;"]0N&gt;M.HN_$8SA0L]1@L[8(G`O&lt;\@@NQ`@0G[`@0W]@@#H_^O`^0`Z(XAX[KUOVW#0@A$36ID*!!!!!!</Property>
 	<Property Name="NI.Lib.SourceVersion" Type="Int">385908736</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
@@ -23,8 +23,8 @@
 		<Item Name="_Load Markdown File.vi" Type="VI" URL="../Support/_Load Markdown File.vi"/>
 	</Item>
 	<Item Name="api" Type="Folder">
-		<Item Name="csmdoc-Populate Single Example Description.vi" Type="VI" URL="../csmdoc-Populate Single Example Description.vi"/>
-		<Item Name="csmdoc-Populate Example Description.vi" Type="VI" URL="../csmdoc-Populate Example Description.vi"/>
+		<Item Name="Populate Single Example Description.vi" Type="VI" URL="../Populate Single Example Description.vi"/>
+		<Item Name="Populate Example Description.vi" Type="VI" URL="../Populate Example Description.vi"/>
 	</Item>
 	<Item Name="Typedef" Type="Folder">
 		<Item Name="DocElement.ctl" Type="VI" URL="../_Typedef/DocElement.ctl"/>
@@ -38,7 +38,6 @@
 		<Item Name="csmdoc_import_doc_to_singleVI.vi" Type="VI" URL="../csmdoc_import_doc_to_singleVI.vi"/>
 		<Item Name="csmdoc_import_all_csm_VI_description_doc.vi" Type="VI" URL="../csmdoc_import_all_csm_VI_description_doc.vi"/>
 		<Item Name="csmdoc_export_all_csm_VI_description_doc.vi" Type="VI" URL="../csmdoc_export_all_csm_VI_description_doc.vi"/>
-		<Item Name="Refresh Example Description.vi" Type="VI" URL="../Refresh Example Description.vi"/>
 		<Item Name="Parse VI Documentation String.vi" Type="VI" URL="../Parse VI Documentation String.vi"/>
 	</Item>
 </Library>
