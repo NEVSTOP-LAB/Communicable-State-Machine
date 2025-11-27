@@ -5,9 +5,24 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="Support" Type="Folder">
-		<Item Name="_BookmarkInfo to MultiCol Table.vi" Type="VI" URL="../support/_BookmarkInfo to MultiCol Table.vi"/>
+		<Item Name="_BMarkInfo to MCTable.vi" Type="VI" URL="../support/_BMarkInfo to MCTable.vi"/>
 		<Item Name="_Change Bookmark Image.vi" Type="VI" URL="../support/_Change Bookmark Image.vi"/>
+		<Item Name="_Get App Ref from Info.vi" Type="VI" URL="../support/_Get App Ref from Info.vi"/>
+		<Item Name="_Get Bookmarks for VI.vi" Type="VI" URL="../support/_Get Bookmarks for VI.vi"/>
+		<Item Name="_Get Bookmarks.vi" Type="VI" URL="../support/_Get Bookmarks.vi"/>
+		<Item Name="_Get VIs in Project.vi" Type="VI" URL="../support/_Get VIs in Project.vi"/>
+		<Item Name="_Highlight Bookmark.vi" Type="VI" URL="../support/_Highlight Bookmark.vi"/>
+		<Item Name="_Highlight Object.vi" Type="VI" URL="../support/_Highlight Object.vi"/>
+		<Item Name="_Return App Info.vi" Type="VI" URL="../support/_Return App Info.vi"/>
 		<Item Name="_UpdatePictureControl.vi" Type="VI" URL="../support/_UpdatePictureControl.vi"/>
+	</Item>
+	<Item Name="Typedef" Type="Folder">
+		<Item Name="BMark_Array of Bookmarks.ctl" Type="VI" URL="../controls/BMark_Array of Bookmarks.ctl"/>
+		<Item Name="BMark_Bookmark Cluster.ctl" Type="VI" URL="../controls/BMark_Bookmark Cluster.ctl"/>
+		<Item Name="BMark_Bookmark Data.ctl" Type="VI" URL="../controls/BMark_Bookmark Data.ctl"/>
+		<Item Name="BMark_UI Data.ctl" Type="VI" URL="../controls/BMark_UI Data.ctl"/>
+		<Item Name="BMark_VI_Identifier.ctl" Type="VI" URL="../controls/BMark_VI_Identifier.ctl"/>
+		<Item Name="User Visible Strings.vi" Type="VI" URL="../globals/User Visible Strings.vi"/>
 	</Item>
 	<Item Name="CSM_ExampleBrowser.vi" Type="VI" URL="../CSM_ExampleBrowser.vi"/>
 </Library>
