@@ -399,15 +399,6 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="CSM - Filter JKISM String Queue.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter JKISM String Queue.vi"/>
 		</Item>
 		<Item Name="Advance" Type="Folder">
-			<Item Name="Sys-Level Mode" Type="Folder">
-				<Item Name="CSM - Mark As System-Level Module.vi" Type="VI" URL="../AdvanceAPI/CSM - Mark As System-Level Module.vi"/>
-			</Item>
-			<Item Name="Chain Mode" Type="Folder">
-				<Item Name="CSM - Mark As Chain Module.vi" Type="VI" URL="../AdvanceAPI/CSM - Mark As Chain Module.vi"/>
-			</Item>
-			<Item Name="Worker Mode" Type="Folder">
-				<Item Name="CSM - Mark As Worker Module.vi" Type="VI" URL="../AdvanceAPI/CSM - Mark As Worker Module.vi"/>
-			</Item>
 			<Item Name="Multi-Loop Module Support" Type="Folder">
 				<Item Name="CSM - Request CSM to Post Message.vi" Type="VI" URL="../AdvanceAPI/CSM - Request CSM to Post Message.vi"/>
 				<Item Name="CSM - Request CSM to Broadcast Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Request CSM to Broadcast Status Change.vi"/>
@@ -415,6 +406,10 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 				<Item Name="CSM - Forward States to CSM.vi" Type="VI" URL="../AdvanceAPI/CSM - Forward States to CSM.vi"/>
 				<Item Name="CSM - Forward UI Operations to CSM.vi" Type="VI" URL="../AdvanceAPI/CSM - Forward UI Operations to CSM.vi"/>
 			</Item>
+			<Item Name="CSM - Mark As System-Level Module.vi" Type="VI" URL="../AdvanceAPI/CSM - Mark As System-Level Module.vi"/>
+			<Item Name="CSM - Mark As Chain Module.vi" Type="VI" URL="../AdvanceAPI/CSM - Mark As Chain Module.vi"/>
+			<Item Name="CSM - Mark As Worker Module.vi" Type="VI" URL="../AdvanceAPI/CSM - Mark As Worker Module.vi"/>
+			<Item Name="CSM - Resolve Node Module.vi" Type="VI" URL="../AdvanceAPI/CSM - Resolve Node Module.vi"/>
 		</Item>
 	</Item>
 	<Item Name="Argument" Type="Folder">
