@@ -71,12 +71,9 @@
 						<Item Name="8. CSM in lvlibp.7z" Type="Document" URL="../src/examples/NEVSTOP/Communicable State Machine(CSM)/4. Advance Examples/8. CSM in lvlibp.7z"/>
 					</Item>
 					<Item Name="Addons - Logger" Type="Folder">
-						<Item Name="CSM Application Running Log Example.csmlog" Type="Document" URL="../src/examples/NEVSTOP/Communicable State Machine(CSM)/Addons - Logger/CSM Application Running Log Example.csmlog"/>
-						<Item Name="CSM Application Running Log Example.no-state.csmlog" Type="Document" URL="../src/examples/NEVSTOP/Communicable State Machine(CSM)/Addons - Logger/CSM Application Running Log Example.no-state.csmlog"/>
 						<Item Name="CSM Application Running Log Example.vi" Type="VI" URL="../src/examples/NEVSTOP/Communicable State Machine(CSM)/Addons - Logger/CSM Application Running Log Example.vi"/>
 					</Item>
 					<Item Name="Addons - Loop Support" Type="Folder">
-						<Item Name="CSMLS - Continuous Loop in CSM Example.csmlog" Type="Document" URL="../src/examples/NEVSTOP/Communicable State Machine(CSM)/Addons - Loop Support/CSMLS - Continuous Loop in CSM Example.csmlog"/>
 						<Item Name="CSMLS - Continuous Loop in CSM Example.vi" Type="VI" URL="../src/examples/NEVSTOP/Communicable State Machine(CSM)/Addons - Loop Support/CSMLS - Continuous Loop in CSM Example.vi"/>
 					</Item>
 				</Item>
@@ -568,11 +565,13 @@
 			<Item Name="Item_Interface.ctl" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/API/Item_Interface.ctl"/>
 			<Item Name="CSM-Testcase.lvlib" Type="Library" URL="../testcases/new/CSM/CSM-Testcase.lvlib"/>
 			<Item Name="provcom_StringGlobals.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Common/provcom_StringGlobals.vi"/>
-			<Item Name="testcase-CSMMessage.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMSyncMessage/testcase-CSMMessage.lvclass"/>
 			<Item Name="LV Config Write String.vi" Type="VI" URL="/&lt;resource&gt;/dialog/lvconfig.llb/LV Config Write String.vi"/>
 			<Item Name="LV Config Write Boolean.vi" Type="VI" URL="/&lt;resource&gt;/dialog/lvconfig.llb/LV Config Write Boolean.vi"/>
 			<Item Name="LV Config Read Boolean.vi" Type="VI" URL="/&lt;resource&gt;/dialog/lvconfig.llb/LV Config Read Boolean.vi"/>
 			<Item Name="LV Config Read String.vi" Type="VI" URL="/&lt;resource&gt;/dialog/lvconfig.llb/LV Config Read String.vi"/>
+			<Item Name="testcase-CSMMessage.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMMessage/testcase-CSMMessage.lvclass"/>
+			<Item Name="testcase-CSMArgument.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMArgument/testcase-CSMArgument.lvclass"/>
+			<Item Name="testcase-CSMResponse.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMResponse/testcase-CSMResponse.lvclass"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Communicable State Machine.lvlibp" Type="Packed Library">

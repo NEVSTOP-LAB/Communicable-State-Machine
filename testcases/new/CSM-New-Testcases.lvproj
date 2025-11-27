@@ -1,6 +1,7 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
 <Project Type="Project" LVVersion="17008000">
 	<Item Name="My Computer" Type="My Computer">
+		<Property Name="NI.SortType" Type="Int">3</Property>
 		<Property Name="server.app.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="server.control.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="server.tcp.enabled" Type="Bool">false</Property>
@@ -12,7 +13,9 @@
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="CSM - Debug Console - DebugTool.vi" Type="VI" URL="../../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_tool/CSM - Debug Console - DebugTool.vi"/>
 		<Item Name="CSM-Testcase.lvlib" Type="Library" URL="../CSM/CSM-Testcase.lvlib"/>
-		<Item Name="testcase-CSMMessage.lvclass" Type="LVClass" URL="../testcase-CSMSyncMessage/testcase-CSMMessage.lvclass"/>
+		<Item Name="testcase-CSMArgument.lvclass" Type="LVClass" URL="../testcase-CSMArgument/testcase-CSMArgument.lvclass"/>
+		<Item Name="testcase-CSMMessage.lvclass" Type="LVClass" URL="../testcase-CSMMessage/testcase-CSMMessage.lvclass"/>
+		<Item Name="testcase-CSMResponse.lvclass" Type="LVClass" URL="../testcase-CSMResponse/testcase-CSMResponse.lvclass"/>
 		<Item Name="TestCSMSuite.lvclass" Type="LVClass" URL="../CSMTestSuite/TestCSMSuite.lvclass"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
@@ -366,6 +369,7 @@
 				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
 			</Item>
 			<Item Name="Communicable State Machine.lvlib" Type="Library" URL="../../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/Communicable State Machine.lvlib"/>
+			<Item Name="CSM Attributes API(VIM).lvlib" Type="Library" URL="../../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/addons/AttributesVIM/CSM Attributes API(VIM).lvlib"/>
 			<Item Name="CSM Shared.lvlib" Type="Library" URL="../../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_Shared/CSM Shared.lvlib"/>
 			<Item Name="CSM-Helper API with lvcsm Support.lvlib" Type="Library" URL="../../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_csmHelper/API with lvcsm Support/CSM-Helper API with lvcsm Support.lvlib"/>
 			<Item Name="CSM-Helper Utility.lvlib" Type="Library" URL="../../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_csmHelper/Utility/CSM-Helper Utility.lvlib"/>
@@ -393,7 +397,7 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToProject</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{A89D9A51-BD9C-4565-8F45-AD1D68D344FD}</Property>
-				<Property Name="Bld_version.build" Type="Int">165</Property>
+				<Property Name="Bld_version.build" Type="Int">208</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">CSM-Testcase.lvlibp</Property>
 				<Property Name="Destination[0].path" Type="Path">../CSM/CSM-Testcase.lvlibp</Property>
@@ -434,7 +438,7 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToProject</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{DF3A8CD5-4937-4FE8-B30A-163F6FCA54B2}</Property>
-				<Property Name="Bld_version.build" Type="Int">166</Property>
+				<Property Name="Bld_version.build" Type="Int">206</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">CSM-Testcase2.lvlibp</Property>
 				<Property Name="Destination[0].path" Type="Path">../CSM/CSM-Testcase2.lvlibp</Property>
