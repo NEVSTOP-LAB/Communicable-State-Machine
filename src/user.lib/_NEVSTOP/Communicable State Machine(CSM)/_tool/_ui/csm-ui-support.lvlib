@@ -6,6 +6,8 @@
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="Auto Resize All MultiListbox Columns (Uniform Text).vi" Type="VI" URL="../Auto Resize All MultiListbox Columns (Uniform Text).vi"/>
 	<Item Name="Center Callee in Window Bounds.vi" Type="VI" URL="../Center Callee in Window Bounds.vi"/>
+	<Item Name="Dashboard Cell Resize.vi" Type="VI" URL="../Dashboard Cell Resize.vi"/>
+	<Item Name="Dashboard Cell2 Array Resize.vi" Type="VI" URL="../Dashboard Cell2 Array Resize.vi"/>
 	<Item Name="Defer Panel Updates_csm.vi" Type="VI" URL="../Defer Panel Updates_csm.vi"/>
 	<Item Name="Populate Tree with Delimited Strings_csm.vi" Type="VI" URL="../Populate Tree with Delimited Strings_csm.vi"/>
 	<Item Name="Relocate Splitter Posistion.vi" Type="VI" URL="../Relocate Splitter Posistion.vi"/>

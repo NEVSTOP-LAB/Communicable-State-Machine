@@ -14,17 +14,22 @@
 	<Property Name="NI.SortType" Type="Int">3</Property>
 	<Item Name="Support" Type="Folder">
 		<Item Name="_List Example VIs.vi" Type="VI" URL="../Support/_List Example VIs.vi"/>
+		<Item Name="_list_CSM documented VIs.vi" Type="VI" URL="../Support/_list_CSM documented VIs.vi"/>
 		<Item Name="_Match String Inside Pattern.vi" Type="VI" URL="../Support/_Match String Inside Pattern.vi"/>
 		<Item Name="_N-MarkdownTitle.vi" Type="VI" URL="../Support/_N-MarkdownTitle.vi"/>
 		<Item Name="_Parse Markdown Doc Elements.vi" Type="VI" URL="../Support/_Parse Markdown Doc Elements.vi"/>
 		<Item Name="_Parse Markdown Note Elements.vi" Type="VI" URL="../Support/_Parse Markdown Note Elements.vi"/>
+		<Item Name="_Parse Markdown Control Elements.vi" Type="VI" URL="../Support/_Parse Markdown Control Elements.vi"/>
 		<Item Name="_Generate DocMap.vi" Type="VI" URL="../Support/_Generate DocMap.vi"/>
+		<Item Name="_Generate ControlDocMap.vi" Type="VI" URL="../Support/_Generate ControlDocMap.vi"/>
 		<Item Name="_Overwrite Decoration Content.vi" Type="VI" URL="../Support/_Overwrite Decoration Content.vi"/>
 		<Item Name="_Load Markdown File.vi" Type="VI" URL="../Support/_Load Markdown File.vi"/>
 	</Item>
 	<Item Name="api" Type="Folder">
 		<Item Name="Populate Single Example Description.vi" Type="VI" URL="../Populate Single Example Description.vi"/>
+		<Item Name="Populate Single VI Help.vi" Type="VI" URL="../Populate Single VI Help.vi"/>
 		<Item Name="Populate Example Description.vi" Type="VI" URL="../Populate Example Description.vi"/>
+		<Item Name="Populate VI Help.vi" Type="VI" URL="../Populate VI Help.vi"/>
 	</Item>
 	<Item Name="Typedef" Type="Folder">
 		<Item Name="DocElement.ctl" Type="VI" URL="../_Typedef/DocElement.ctl"/>
@@ -33,9 +38,7 @@
 	<Item Name="old" Type="Folder">
 		<Item Name="csmdoc_export_VI_description.vi" Type="VI" URL="../csmdoc_export_VI_description.vi"/>
 		<Item Name="csmdoc_import_VI_description.vi" Type="VI" URL="../csmdoc_import_VI_description.vi"/>
-		<Item Name="csmdoc_list_all_csm_documented_VIs.vi" Type="VI" URL="../csmdoc_list_all_csm_documented_VIs.vi"/>
 		<Item Name="csmdoc_load vi description map.vi" Type="VI" URL="../csmdoc_load vi description map.vi"/>
-		<Item Name="csmdoc_import_doc_to_singleVI.vi" Type="VI" URL="../csmdoc_import_doc_to_singleVI.vi"/>
 		<Item Name="csmdoc_import_all_csm_VI_description_doc.vi" Type="VI" URL="../csmdoc_import_all_csm_VI_description_doc.vi"/>
 		<Item Name="csmdoc_export_all_csm_VI_description_doc.vi" Type="VI" URL="../csmdoc_export_all_csm_VI_description_doc.vi"/>
 		<Item Name="Parse VI Documentation String.vi" Type="VI" URL="../Parse VI Documentation String.vi"/>
