@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-11-27 17:50:05" Creator="liyao" Comments="" ID="05d3cf3b564760eb92566b7ce686f5dd">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-11-29 19:42:30" Creator="liyao" Comments="" ID="a1d41a54645b2aa2eac8debc2d9c9749">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2025.10.0.1</Library_Version>
@@ -74,7 +74,8 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
 [fix] #533 CSM Attribute should be case insensitive.
 [fix] #535 Fix CSM Attribute TagDVR cache error
 [fix] #540 Fix "VI Reference" is not  allowed in Chain Mode by default.
-[add] #543 add ¡°CSM - Resolve Module Name.vi¡± to get module name from worker/chain node name</Release_Notes>
+[add] #543 add ¡°CSM - Resolve Module Name.vi¡± to get module name from worker/chain node name
+[fix] #549 reset CSM - Module VI Reference.vi cache after topmost VI is restarted.</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
