@@ -364,6 +364,7 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="CSM - List Status in Broadcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - List Status in Broadcast Registry.vi"/>
 			<Item Name="CSM - List Mapping Relationships in Broadcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - List Mapping Relationships in Broadcast Registry.vi"/>
 			<Item Name="CSM - Check Mapping Relationship in Broadcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - Check Mapping Relationship in Broadcast Registry.vi"/>
+			<Item Name="CSM - Drop Broadcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - Drop Broadcast Registry.vi"/>
 		</Item>
 		<Item Name="Module API" Type="Folder">
 			<Item Name="CSM - Wait for All Modules to be Alive.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait for All Modules to be Alive.vi"/>
