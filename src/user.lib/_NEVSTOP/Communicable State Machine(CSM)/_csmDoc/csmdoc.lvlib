@@ -25,6 +25,10 @@
 		<Item Name="_Overwrite Decoration Content.vi" Type="VI" URL="../Support/_Overwrite Decoration Content.vi"/>
 		<Item Name="_Load Markdown File.vi" Type="VI" URL="../Support/_Load Markdown File.vi"/>
 	</Item>
+	<Item Name="Typedef" Type="Folder">
+		<Item Name="DocElement.ctl" Type="VI" URL="../_Typedef/DocElement.ctl"/>
+		<Item Name="DocNote.ctl" Type="VI" URL="../_Typedef/DocNote.ctl"/>
+	</Item>
 	<Item Name="api" Type="Folder">
 		<Item Name="Single" Type="Folder">
 			<Item Name="Populate Single Example Description.vi" Type="VI" URL="../Populate Single Example Description.vi"/>
@@ -34,10 +38,7 @@
 		<Item Name="Group" Type="Folder">
 			<Item Name="Populate Example Description.vi" Type="VI" URL="../Populate Example Description.vi"/>
 			<Item Name="Populate VI Help.vi" Type="VI" URL="../Populate VI Help.vi"/>
+			<Item Name="Export VI Help.vi" Type="VI" URL="../Export VI Help.vi"/>
 		</Item>
-	</Item>
-	<Item Name="Typedef" Type="Folder">
-		<Item Name="DocElement.ctl" Type="VI" URL="../_Typedef/DocElement.ctl"/>
-		<Item Name="DocNote.ctl" Type="VI" URL="../_Typedef/DocNote.ctl"/>
 	</Item>
 </Library>
