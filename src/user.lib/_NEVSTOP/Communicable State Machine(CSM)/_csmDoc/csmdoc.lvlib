@@ -26,21 +26,18 @@
 		<Item Name="_Load Markdown File.vi" Type="VI" URL="../Support/_Load Markdown File.vi"/>
 	</Item>
 	<Item Name="api" Type="Folder">
-		<Item Name="Populate Single Example Description.vi" Type="VI" URL="../Populate Single Example Description.vi"/>
-		<Item Name="Populate Single VI Help.vi" Type="VI" URL="../Populate Single VI Help.vi"/>
-		<Item Name="Populate Example Description.vi" Type="VI" URL="../Populate Example Description.vi"/>
-		<Item Name="Populate VI Help.vi" Type="VI" URL="../Populate VI Help.vi"/>
+		<Item Name="Single" Type="Folder">
+			<Item Name="Populate Single Example Description.vi" Type="VI" URL="../Populate Single Example Description.vi"/>
+			<Item Name="Populate Single VI Help.vi" Type="VI" URL="../Populate Single VI Help.vi"/>
+			<Item Name="Export Single VI Help.vi" Type="VI" URL="../Export Single VI Help.vi"/>
+		</Item>
+		<Item Name="Group" Type="Folder">
+			<Item Name="Populate Example Description.vi" Type="VI" URL="../Populate Example Description.vi"/>
+			<Item Name="Populate VI Help.vi" Type="VI" URL="../Populate VI Help.vi"/>
+		</Item>
 	</Item>
 	<Item Name="Typedef" Type="Folder">
 		<Item Name="DocElement.ctl" Type="VI" URL="../_Typedef/DocElement.ctl"/>
 		<Item Name="DocNote.ctl" Type="VI" URL="../_Typedef/DocNote.ctl"/>
-	</Item>
-	<Item Name="old" Type="Folder">
-		<Item Name="csmdoc_export_VI_description.vi" Type="VI" URL="../csmdoc_export_VI_description.vi"/>
-		<Item Name="csmdoc_import_VI_description.vi" Type="VI" URL="../csmdoc_import_VI_description.vi"/>
-		<Item Name="csmdoc_load vi description map.vi" Type="VI" URL="../csmdoc_load vi description map.vi"/>
-		<Item Name="csmdoc_import_all_csm_VI_description_doc.vi" Type="VI" URL="../csmdoc_import_all_csm_VI_description_doc.vi"/>
-		<Item Name="csmdoc_export_all_csm_VI_description_doc.vi" Type="VI" URL="../csmdoc_export_all_csm_VI_description_doc.vi"/>
-		<Item Name="Parse VI Documentation String.vi" Type="VI" URL="../Parse VI Documentation String.vi"/>
 	</Item>
 </Library>
