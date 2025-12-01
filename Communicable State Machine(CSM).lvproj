@@ -126,6 +126,7 @@
 				<Item Name="testcase-CSMMessage.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMMessage/testcase-CSMMessage.lvclass"/>
 				<Item Name="testcase-CSMArgument.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMArgument/testcase-CSMArgument.lvclass"/>
 				<Item Name="testcase-CSMResponse.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMResponse/testcase-CSMResponse.lvclass"/>
+				<Item Name="testcase-CSMStatusStateRegisterUnregister.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMStatus/testcase-CSMStatusStateRegisterUnregister.lvclass"/>
 			</Item>
 			<Item Name="testcase-csmhelper.lvclass" Type="LVClass" URL="../testcases/testcase-csmhelper/testcase-csmhelper.lvclass"/>
 			<Item Name="testcase-csm-file-logger.lvclass" Type="LVClass" URL="../testcases/testcase-csm-file-logger/testcase-csm-file-logger.lvclass"/>
