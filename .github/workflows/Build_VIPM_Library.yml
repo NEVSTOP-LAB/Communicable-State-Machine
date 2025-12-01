@@ -61,7 +61,7 @@ jobs:
         with:
           LabVIEW_Version: 2017
           VipbPath: ${{ github.workspace }}
-        timeout-minutes: 20
+        timeout-minutes: 30
         continue-on-error: true
 
       - name: Retry BuildDailyVIP if failed
@@ -70,7 +70,7 @@ jobs:
         with:
           LabVIEW_Version: 2017
           VipbPath: ${{ github.workspace }}
-        timeout-minutes: 20
+        timeout-minutes: 30
 
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4.3.2
