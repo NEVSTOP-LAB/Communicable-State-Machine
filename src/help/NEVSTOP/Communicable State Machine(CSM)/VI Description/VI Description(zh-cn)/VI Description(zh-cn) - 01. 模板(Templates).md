@@ -2,78 +2,134 @@
 
 ## 模板(Templates)
 
-> [!NOTE] CSM Name 规则
-> - CSM 模块名称应该是唯一的，否则会导致 CSM 进入 "Critical Error" 状态。
-> - 如果输入为 ""，将使用 UUID 作为模块名称。该模块被标记为独立模式，不会包含在模块列表中。
-> - 如果输入以 '#' 结尾，则该模块将在工作模式下运行。具有相同名称的模块将共享同一消息队列。任何外部消息将由其中一个模块处理，取决于哪个模块空闲。
+> [!NOTE] CSM 名称规则(CSM Name Rule)
+> - CSM 模块名称必须唯一，否则将导致 CSM 进入 "Critical Error" 状态。
+> - 若输入为空字符串("")，系统将使用 UUID 作为模块名称。该模块会被标记为独立模式，不会包含在模块列表中。
+> - 若输入以 '#' 结尾，则会实例化一个工作者模式节点，多个节点可共同组成一个工作者模式模块。
+> - 若输入以 "$" + 数字结尾，则会实例化一个责任链模式节点，多个节点可共同组成一个责任链模式模块。
+> - 若输入以 "." 开头，则该模块为系统级模块。在默认参数下，此类模块不会被 CSM - List Module.vi 列出，适用于实例化后台运行的模块。
 
-> [!NOTE] CSM 初始化状态
-> - 默认值和 JKISM 状态机保持一致, 是 "Macro: Initialize"。
-> - 通常不会修改此状态，作为输入的目的是为了方便外部程序化修改初始化状态。
+> [!NOTE] CSM 初始化状态("Macro: Initialize")
+> - 默认值与 JKISM 状态机保持一致，为 "Macro: Initialize"。
+> - 该状态用于初始化 CSM 模块的状态机，CSM 模块仅在完成该宏状态后，才会处理外部发送的消息。
+
+> [!NOTE] CSM 退出状态("Macro: Exit")
+> - 默认值与 JKISM 状态机保持一致，为 "Macro: Exit"。
+> - 该状态用于退出 CSM 模块的状态机，CSM 模块进入该状态后，将不会再处理外部发送的消息。
+
+### CSM User Interface(UI) Module Template.vi
+
+用于创建带用户界面的 CSM 模块的模板，该模板包含用于响应用户操作的用户事件结构。
+
+> Ref: CSM 名称规则
+> Ref: CSM 初始化状态
+> Ref: CSM 退出状态
+
+-- <b>输入控件</b> --
+- <b>Name ("" to use UUID)</b>: CSM 模块名称，请参考CSM名称规范要求
 
 ### CSM Module Template.vi
 
-用于创建具有无用户界面的 CSM 模块的模板
+用于创建无用户界面的 CSM 模块的模板, 这个模板是最常使用的CSM模板，在模板中还包含了一个用于调试中退出模块的事件响应循环，请在模块调试完成后，将其删除。
 
-> Ref: CSM Name 规则
+> Ref: CSM 名称规则
 > Ref: CSM 初始化状态
+> Ref: CSM 退出状态
 
 -- <b>输入控件</b> --
-- <b>Name("" to use uuid)</b>: CSM 模块名称
-- <b>Init State("Macro: Initialize")</b>: CSM 初始化状态, 默认为 "Macro: Initialize"
-- <b>Name ("" to Use UUID)</b>:Controls
-### CSM User Interface(UI) Module Template.vi
+- <b>Name ("" to use UUID)</b>: CSM 模块名称，请参考CSM名称规范要求
 
-用于创建具有用户界面的 CSM 模块的模板，模板中包含用户事件结构用于响应用户操作。
-
-> Ref: CSM Name 规则
-> Ref: CSM 初始化状态
-
--- <b>输入控件</b> --
-- <b>Name("" to use uuid)</b>: CSM 模块名称
-- <b>Init State("Macro: Initialize")</b>: CSM 初始化状态, 默认为 "Macro: Initialize"
-- <b>Name ("" to Use UUID)</b>:Controls
 ### CSM Module Template - Tiny.vi
 
-用于创建具有无用户界面的 CSM 模块的模板。此模板的代码比较紧凑。
+用于创建无用户界面的 CSM 模块的紧凑代码模板。该模板功能与 CSM Module Template.vi 完全相同，区别仅在于代码更加紧凑.
 
-> Ref: CSM Name 规则
+> Ref: CSM 名称规则
 > Ref: CSM 初始化状态
+> Ref: CSM 退出状态
 
 -- <b>输入控件</b> --
-- <b>Name("" to use uuid)</b>: CSM 模块名称
-- <b>Init State("Macro: Initialize")</b>: CSM 初始化状态, 默认为 "Macro: Initialize"
+- <b>Name ("" to use UUID)</b>: CSM 模块名称，请参考CSM名称规范要求
 
 ### CSM User Interface(UI) Module Template - Tiny.vi
 
-用于创建具有用户界面的 CSM 模块的模板，模板中包含用户事件结构用于响应用户操作。此模板的代码比较紧凑。
+用于创建带用户界面的 CSM 模块的紧凑代码模板，该模板包含用于响应用户操作的用户事件结构。该模板功能与 CSM User Interface(UI) Module Template.vi 完全相同，区别仅在于代码更加紧凑.
 
-> Ref: CSM Name 规则
+> Ref: CSM 名称规则
 > Ref: CSM 初始化状态
+> Ref: CSM 退出状态
 
 -- <b>输入控件</b> --
-- <b>Name("" to use uuid)</b>: CSM 模块名称
-- <b>Init State("Macro: Initialize")</b>: CSM 初始化状态, 默认为 "Macro: Initialize"
+- <b>Name ("" to use UUID)</b>: CSM 模块名称，请参考CSM名称规范要求
+
+### CSM DQMH-Style Template.vi
+
+用于创建一个DQMH风格的CSM模块模板，该结构将响应用户操作的用户事件结构外置在独立的循环中，主要用于处理一些复杂的用户操作场景。例如：
+
+- 用户界面操作非常复杂，需要组合逻辑完成协同工作，例如鼠标按下拖动并释放后触发某事件
+- 用户界面需要响应会快速产生的事件，如鼠标移动、窗口大小调整等，这些事件中如果生成消息，会迅速产生多条重复消息
+
+用户操作的用户事件结构循环通过 "CSM - Flood of Events Handler Side Loop.vi" 模板创建。用户也可以通过组合 "CSM - Flood of Events Handler Side Loop.vi" 与 ”CSM Module Template.vi“ 来创建完整的DQMH风格的CSM模块模板。
+
+可参考范例："[CSM-Example]\4. Advance Examples\CSMLS - Continuous Loop in CSM Example.vi"
+
+> Ref: CSM 名称规则
+> Ref: CSM 初始化状态
+> Ref: CSM 退出状态
+
+-- <b>输入控件</b> --
+- <b>Name ("" to use UUID)</b>: CSM 模块名称，请参考CSM名称规范要求
+
+### 其他代码片段
+
+#### CSM - Start Async Call.vi
+
+异步启动 CSM 模块的代码片段。拖至程序框图后，请将 VI 静态引用改为目标 CSM 模块。
+
+可参考范例："[CSM-Example]\3. Caller is Other Framework Scenario\CSM Example - Caller is NOT a CSM.vi"
+
+#### CSM - Synchronized Call.vi
+
+同步调用 CSM 模块的代码片段。实质上是把 CSM 模块当作子 VI 直接调用。
+
+可参考范例："[CSM-Example]\2. Caller is CSM Scenario\CSM Example - Caller is a CSM.vi"
+
+#### CSM - Flood of Events Handler Side Loop.vi
+
+该模板是 DQMH 风格的 CSM 模块的用户事件结构循环模板，主要用于处理用户界面操作非常复杂，需要组合逻辑完成协同工作的场景。
+
+可参考范例："[CSM-Example]\4. Advance Examples\CSMLS - Continuous Loop in CSM Example.vi"
+
+#### CSM - Global Log Queue Monitoring Loop.vi
+
+此模板用于创建一个全局日志队列监控循环，用于查询监控全局日志队列中的消息。
+
+可参考范例："[CSM-Example]\4. Advance Examples\2. Chain of Responsibility Example\Chain of Responsibility Example.vi"
+
+#### CSM - Global Log Event Monitoring Loop.vi
+
+此模板用于创建一个全局日志事件监控循环，用于查询监控全局日志队列中的消息。
+
+可参考范例："[CSM-Example]\4. Advance Examples\4. Global Log Filter Example\" 中的任一范例
 
 ### 模板支持
 
 #### CSM - Get New State Notifier Event.vi
 
-获取用户事件句柄。用在包含事件结构的 CSM 模块中。包含事件结构的 CSM 模块，通常都在事件结构处等待，这个事件用于收到新的消息时中断在事件结构中的等待，继续执行。
+获取用户事件句柄，适用于包含事件结构的 CSM 模块。包含事件结构的 CSM 模块通常会在事件结构处等待，此事件用于在收到新消息时中断事件结构中的等待，使模块继续执行。
 
 -- <b>输入控件</b> --
-- <b>Name("" to use uuid) in</b>: CSM 模块名称
+- <b>Name ("" to use UUID)</b>: CSM 模块名称，请参考CSM名称规范要求
 
 -- <b>输出控件</b> --
-- <b>New State Notifier Event</b>: 用户事件句柄，用来当收到消息时，使用CSM模块中断在事件结构中的等待
-- <b>Name ("" to Use UUID) In</b>:Controls
+- <b>New State Notifier Event</b>: 用户事件句柄，用于在收到消息时中断 CSM 模块在事件结构中的等待
+
 #### Timeout Selector.vi
 
-用于包含用户事件结构的模板中
+适用于包含用户事件结构的模板, 如果超时为-1时，<b>Remaining States</b> 中依然还有剩余状态，那么超时值将被修改为0，以保证立刻跳出用户事件结构(user event structure), 并继续处理剩余状态。
 
 -- <b>输入控件</b> --
 - <b>Timeout Expected</b>: 预期的超时设置
-- <b>Remaining States</b>: 如果还有剩余的状态，输出将为 0，否则输出为预期值
+- <b>Remaining States</b>: 若还有剩余状态，则输出为 0；否则输出为预期值
 
 -- <b>输出控件</b> --
 - <b>Timeout</b>: 仲裁后使用的超时设置
@@ -82,37 +138,36 @@
 
 ##### CSM Critical Error.vi
 
-生成 CSM 模块的严重错误消息，通常是由于模块名称重复导致的。
+生成 CSM 严重错误描述的错误簇。严重错误为 CSM 框架发生的严重错误消息，无法有用户代码处理回复，常见原因是模块名称重复。
 
 -- <b>输入控件</b> --
-- <b>Arguments(as Reason)</b>: 错误原因
+- <b>Arguments (As Reason)</b>: 错误原因
 - <b>CSM Name</b>: CSM 模块名称
-- <b>Arugments (As Reason)</b>:Controls
+
 ##### CSM No Target Error.vi
 
-当必须要输入 CSM 模块名称但输入了空字符串时，生成 CSM 模块的目标模块不存在错误消息。
+生成 CSM 无目标消息错误描述的错误簇。无目标消息错误发生在CSM尝试发送一个消息，但目标模块名称为空字符串。
 
 ##### CSM Target Error.vi
 
-生成 CSM 模块的消息目标模块不存在错误消息。
+生成 CSM 消息目标模块不存在的错误描述的错误簇。目标模块不存在错误发生在CSM尝试发送一个消息到一个不存在的目标模块时。·
 
 -- <b>输入控件</b> --
-- <b>Arguments(as CSM Name)</b>: 连接参数，传递的内容是目标模块名称
-- <b>Arguments (As CSM Name)</b>:Controls
+- <b>Arguments (As CSM Name)</b>: 连接参数，传递目标模块名称
+
 ##### CSM Target Timeout Error.vi
 
-生成 CSM 模块的消息目标模块超时错误消息。
+生成 CSM 消息目标模块超时的错误描述的错误簇。目标模块超时错误发生在CSM尝试发送一个同步消息到一个目标模块，但在指定的超时时间内未收到回复时。
 
 -- <b>输入控件</b> --
-- <b>Arguments(as CSM Name)</b>: 连接参数，传递的内容是目标模块名称
-- <b>Arguments (As CSM Name)</b>:Controls
+- <b>Arguments (As CSM Name)</b>: 连接参数，传递目标模块名称
+
 ##### CSM Unhandled State Error.vi
 
-生成 CSM 模块的未处理状态错误消息。可能的情况：
-- 内部消息轮转中使用了本模块未定义的状态时报错(和 JKISM 行为一致)
-- 收到外部发送本模块未定义的状态时报错
+生成 CSM 未处理状态的错误描述的错误簇。CSM 未处理状态的错误可能的情况包括：
+- 内部消息轮转中使用了本模块未定义的状态时（与 JKISM 行为一致）
+- 收到外部发送至本模块的消息未定义时
 
 -- <b>输入控件</b> --
 - <b>Undefined State</b>: 未定义的状态
 - <b>CSM Name</b>: CSM 模块名称
-- <b>Current State</b>:Controls

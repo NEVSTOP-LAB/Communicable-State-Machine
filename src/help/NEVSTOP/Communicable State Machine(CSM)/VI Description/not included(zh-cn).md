@@ -67,11 +67,6 @@ Bulid Status List.vi
 - <b>Array</b>:Indicators
 - <b>Text.Text</b>:Controls
 
-CSM - Argument Type.vi
-
-- <b>Argument Type</b>:Indicators
-- <b>Arguments (Dup)</b>:Indicators
-- <b>Arguments</b>:Controls
 
 CSM - Delete Module Attribute.vi
 
@@ -159,11 +154,6 @@ CSM - Get Module Attribute.vi
 - <b>Wait (5000 ms)</b>:Controls
 - <b>Waited (ms)</b>:Indicators
 
-CSM - Global Log Event Monitoring Loop.vi
-
-
-
-CSM - Global Log Queue Monitoring Loop.vi
 
 
 

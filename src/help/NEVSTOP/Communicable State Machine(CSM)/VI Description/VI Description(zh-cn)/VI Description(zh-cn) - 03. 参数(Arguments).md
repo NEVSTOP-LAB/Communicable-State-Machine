@@ -3,34 +3,64 @@
 ## 参数(Arguments)
 
 > [!NOTE] CSM 消息关键字
-> 包括: '->','->|','-@','-&','<-", "\r", "\n", "//", ">>", ">>>", ">>>>", ";", ","
+> 包括：'->'、'->|'、'-@'、'-&'、'<-'、"\r"、"\n"、"//"、">>"、">>>"、">>>"、";"、","
+
+> [!NOTE] CSM 参数类型(Argument Type)
+> 在 CSM 中，所有参数均以字符串形式呈现，但其背后可承载任意数据类型。因此，发送端需先进行编码，接收端再进行解码。  
+> 例如 CSM 内置 HEXSTR 编码方案，也可按需扩展自定义编解码器。  
+> 为便于识别编码方式，推荐将编码后的参数写成 “<Argument Type> STRING FORMAT ARGUMENT” 格式。  
+> 使用 “CSM - Argument Type.vi” 即可提取类型标记，据此选择对应的解码函数。
 
 > [!NOTE] CSM HEXSTR 格式参数
-> 为了在 CSM 参数中传递任何数据类型，CSM 默认提供了一种 名为 HEXSTR 的参数格式，用于传递任何数据类型。
-> HEXSTR：将 LabVIEW 任意数据类型转换为变体，然后将此变体的内存格式表示为十六进制字符串，以便在 CSM 参数中传递。
-> HEXSTR可以安全地用作状态参数，而不会破坏 CSM 消息字符串的解析。
+> 为了在 CSM 参数中传递任意数据类型，CSM 内置了 HEXSTR 格式参数编解码方案。其参数类型字符串为 "HEXSTR"。转换过程如下：
+> 1. 将 LabVIEW 数据先转为变体；  
+> 2. 再将变体的内存映像序列化为十六进制字符串；
+> 3. 得到“<HEXSTR> 十六进制字符串” 形式的参数，可安全嵌入状态字符串，不会破坏 CSM 消息解析。  
 
-> [!NOTE] CSM ERROR 参数
-> LabVIEW 错误簇信息通常包含回车，并且可能包含 CSM 的消息关键字，因此它通常不能直接作为 CSM 参数传递。
-> 虽然可以将错误簇信息转换为 HEXSTR 格式，但是它并不具备可读性，在 log 中不能直观的读取信息。
-> 因此为了在 CSM 参数中传递 LabVIEW 错误信息, 提供了一个标准的 CSM 错误参数格式。可以安全地用作状态参数，而不会破坏 CSM 消息字符串的解析。
-> 它的格式为: "[Error: error-code] error-description-As-safe-argument-string"
+> [!NOTE] CSM ERRSTR 格式参数
+> LabVIEW 错误簇是一个复杂数据类型，错误信息字符串中通常包含回车符，因此它通常不能直接作为 CSM 参数传递。虽然可以将错误簇信息转换为 HEXSTR 格式，但这种方式缺乏可读性，在日志中无法直观读取信息。
+> 因此，为了在 CSM 参数中传递 LabVIEW 错误信息，CSM 内置了 ERRSTR 格式参数编解码方案。其参数类型字符串为 "ERRSTR"。转换过程如下：
+> 1. 将错误簇中的 code、source 格式化为以下格式的字符串：
+>    错误："<ERRSTR>[Error: error-code] error-description-As-safe-argument-string"
+>    警告："<ERRSTR>[Warning: error-code] warning-description-As-safe-argument-string"
+> 2. 将这段字符串中的特殊字符替换为安全字符；
+> 3. 得到 CSM ERRSTR 格式参数，可安全嵌入状态字符串，不会破坏 CSM 消息解析。
+
+> [!NOTE] CSM 安全字符串参数（CSM Safe String Argument）
+> 为了在 CSM 参数中传递任意字符串且不破坏消息解析，CSM 内置了 Safe-String 编解码方案，其参数类型字符串为 "SAFESTR"。转换过程如下：
+> 1. 扫描输入字符串，若出现 CSM 关键字（如 `->`、`;`、`\r` 等），则将其替换为 `%Hex` 转义序列；
+> 2. 最终得到形如 `<SAFESTR> 已转义字符串` 的参数，可安全嵌入状态字符串，不会破坏 CSM 消息解析。
+
+### CSM - Argument Type.vi
+
+从编码后的参数字符串中提取参数的编码类型标记。
+
+> Ref: CSM 参数类型
+
+-- <b>输入控件</b> --
+- <b>Arguments</b>: 参数字符串
+
+-- <b>输出控件</b> --
+- <b>Argument Type</b>: 参数字符串的编码类型标记
+- <b>Arguments (Dup)</b>: 输入的参数字符串副本
+
 
 ### CSM - Keywords.vi
 
-CSM 消息中的关键字列表。
+用于罗列 CSM 消息中的关键字及其 %Hex 格式。
 
 > Ref: CSM 消息关键字
 
 -- <b>输出控件</b> --
 - <b>keywords</b>: CSM 关键字列表
-- <b>keywords(%Hex format)</b>: CSM 关键字列表的%Hex格式
-- <b>Keywords (%Hex Format)</b>:Indicators
+- <b>Keywords (%Hex Format)</b>: CSM 关键字列表的%Hex格式
+
 ### CSM - Make String Arguments Safe.vi
 
-将参数字符串中的 CSM 关键字转换为%Hex格式, 保证不影响 CSM 消息字符串解析。
+将参数字符串中的 CSM 关键字转换为 %Hex 格式，确保不影响 CSM 消息字符串解析。
 
 > Ref: CSM 消息关键字
+> Ref: CSM 安全字符串参数
 
 -- <b>输入控件</b> --
 - <b>Argument String</b>: 字符串参数
@@ -40,9 +70,10 @@ CSM 消息中的关键字列表。
 
 ### CSM - Revert Arguments-Safe String.vi
 
-将安全的字符串参数中的 %Hex格式的 CSM 关键字转换回普通格式。
+将安全的字符串参数中的 %Hex 格式的 CSM 关键字转换回普通格式。
 
 > Ref: CSM 消息关键字
+> Ref: CSM 安全字符串参数
 
 -- <b>输入控件</b> --
 - <b>Safe Argument String</b>:  安全的字符串参数
@@ -52,33 +83,36 @@ CSM 消息中的关键字列表。
 
 ### CSM - Convert Data to HexStr.vi
 
-将 LabVIEW 任意数据类型转换为为 HEXSTR 格式参数字符串。
+将 LabVIEW 任意数据类型转换为 HEXSTR 格式参数字符串。
 
+> Ref: CSM 参数类型
 > Ref: CSM HEXSTR 格式参数
 
 -- <b>输入控件</b> --
 - <b>Variant</b>: LabVIEW 数据，通过变体支持任意数据类型
 
 -- <b>输出控件</b> --
-- <b>HEXSTR</b>: CSM HEXSTR 格式参数
-- <b>HEX String (0-9,A-F)</b>:Indicators
+- <b>HEX String (0-9,A-F)</b>: CSM HEXSTR 格式参数
+
 ### CSM - Convert HexStr to Data.vi
 
 将十六进制字符串参数转换回变体数据。
 
+> Ref: CSM 参数类型
 > Ref: CSM HEXSTR 格式参数
 
 -- <b>输入控件</b> --
-- <b>HEXSTR</b>: CSM HEXSTR 格式参数
+- <b>HEX String</b>: CSM HEXSTR 格式参数
 
 -- <b>输出控件</b> --
 - <b>Variant</b>: LabVIEW 数据，通过变体支持任意数据类型
-- <b>HEX String</b>:Controls
+
 ### CSM - Convert Error to Argument.vi
 
 将 LabVIEW 错误簇转换为 CSM 错误参数格式。
 
-> Ref: CSM ERROR 参数
+> Ref: CSM 参数类型
+> Ref: CSM ERRSTR 格式参数
 
 -- <b>输入控件</b> --
 - <b>error</b>: LabVIEW 错误簇
@@ -90,7 +124,8 @@ CSM 消息中的关键字列表。
 
 将 CSM 错误参数格式转换为 LabVIEW 错误簇。
 
-> Ref: CSM ERROR 参数
+> Ref: CSM 参数类型
+> Ref: CSM ERRSTR 格式参数
 
 -- <b>输入控件</b> --
 - <b>Argument</b>: CSM 错误参数格式
