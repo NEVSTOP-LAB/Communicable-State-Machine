@@ -159,11 +159,6 @@ CSM - Get Module Attribute.vi
 - <b>Wait (5000 ms)</b>:Controls
 - <b>Waited (ms)</b>:Indicators
 
-CSM - Global Log Event Monitoring Loop.vi
-
-
-
-CSM - Global Log Queue Monitoring Loop.vi
 
 
 

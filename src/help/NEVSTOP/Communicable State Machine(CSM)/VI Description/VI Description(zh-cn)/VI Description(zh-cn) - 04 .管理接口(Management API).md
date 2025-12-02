@@ -8,14 +8,6 @@
 > 3. Action Worker: 工作者模式。在模块名称后添加“#”，以标记此模块为工作者，其与具有相同名称的其他工作者共享相同的消息队列。
 > 4. Chain Node: 链式节点。在模块名称后添加“$”，以标记此模块为链式节点，同一个链上的消息，将依次传递，直到某个节点处理消息。
 
-### CSM - Start Async Call.vi
-
-异步调用模板代码的VI片段
-
-### CSM - Synchronized Call.vi
-
-同步调用模板代码的VI片段
-
 ### CSM - Module VI Reference.vi
 
 通过 发送 "VI Reference" 同步消息，查询获取 CSM 模块的 VI 引用。
