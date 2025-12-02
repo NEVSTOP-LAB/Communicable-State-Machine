@@ -349,6 +349,7 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="CSM - Flush Queue.vi" Type="VI" URL="../AdvanceAPI/CSM - Flush Queue.vi"/>
 			<Item Name="CSM - Check If Module Exists.vi" Type="VI" URL="../AdvanceAPI/CSM - Check If Module Exists.vi"/>
 			<Item Name="CSM - Set TMO of Sync-Reply.vi" Type="VI" URL="../AdvanceAPI/CSM - Set TMO of Sync-Reply.vi"/>
+			<Item Name="CSM - Filter JKISM String Queue.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter JKISM String Queue.vi"/>
 		</Item>
 		<Item Name="AttributeAPI" Type="Folder">
 			<Item Name="CSM - List Module Attributes.vi" Type="VI" URL="../AdvanceAPI/CSM - List Module Attributes.vi"/>
@@ -397,7 +398,6 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="CSM - Build Exit Messages of CSMs.vi" Type="VI" URL="../AdvanceAPI/CSM - Build Exit Messages of CSMs.vi"/>
 			<Item Name="CSM - Compact Multiple States.vi" Type="VI" URL="../AdvanceAPI/CSM - Compact Multiple States.vi"/>
 			<Item Name="CSM - Break Down Multiple States String.vi" Type="VI" URL="../AdvanceAPI/CSM - Break Down Multiple States String.vi"/>
-			<Item Name="CSM - Filter JKISM String Queue.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter JKISM String Queue.vi"/>
 		</Item>
 		<Item Name="Advance" Type="Folder">
 			<Item Name="Multi-Loop Module Support" Type="Folder">
