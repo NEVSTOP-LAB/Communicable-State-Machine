@@ -25,7 +25,7 @@
 > Ref: CSM 初始化状态
 > Ref: CSM 退出状态
 
--- <b>输入控件</b> --
+-- <b>Controls(输入控件)</b> --
 - <b>Name ("" to use UUID)</b>: CSM 模块名称，请参考CSM名称规范要求
 
 ### CSM Module Template.vi
@@ -36,7 +36,7 @@
 > Ref: CSM 初始化状态
 > Ref: CSM 退出状态
 
--- <b>输入控件</b> --
+-- <b>Controls(输入控件)</b> --
 - <b>Name ("" to use UUID)</b>: CSM 模块名称，请参考CSM名称规范要求
 
 ### CSM Module Template - Tiny.vi
@@ -47,7 +47,7 @@
 > Ref: CSM 初始化状态
 > Ref: CSM 退出状态
 
--- <b>输入控件</b> --
+-- <b>Controls(输入控件)</b> --
 - <b>Name ("" to use UUID)</b>: CSM 模块名称，请参考CSM名称规范要求
 
 ### CSM User Interface(UI) Module Template - Tiny.vi
@@ -58,7 +58,7 @@
 > Ref: CSM 初始化状态
 > Ref: CSM 退出状态
 
--- <b>输入控件</b> --
+-- <b>Controls(输入控件)</b> --
 - <b>Name ("" to use UUID)</b>: CSM 模块名称，请参考CSM名称规范要求
 
 ### CSM DQMH-Style Template.vi
@@ -76,7 +76,7 @@
 > Ref: CSM 初始化状态
 > Ref: CSM 退出状态
 
--- <b>输入控件</b> --
+-- <b>Controls(输入控件)</b> --
 - <b>Name ("" to use UUID)</b>: CSM 模块名称，请参考CSM名称规范要求
 
 ### 其他代码片段
@@ -117,21 +117,21 @@
 
 获取用户事件句柄，适用于包含事件结构的 CSM 模块。包含事件结构的 CSM 模块通常会在事件结构处等待，此事件用于在收到新消息时中断事件结构中的等待，使模块继续执行。
 
--- <b>输入控件</b> --
+-- <b>Controls(输入控件)</b> --
 - <b>Name ("" to use UUID)</b>: CSM 模块名称，请参考CSM名称规范要求
 
--- <b>输出控件</b> --
+-- <b>Indicators(输出控件)</b> --
 - <b>New State Notifier Event</b>: 用户事件句柄，用于在收到消息时中断 CSM 模块在事件结构中的等待
 
 #### Timeout Selector.vi
 
 适用于包含用户事件结构的模板, 如果超时为-1时，<b>Remaining States</b> 中依然还有剩余状态，那么超时值将被修改为0，以保证立刻跳出用户事件结构(user event structure), 并继续处理剩余状态。
 
--- <b>输入控件</b> --
+-- <b>Controls(输入控件)</b> --
 - <b>Timeout Expected</b>: 预期的超时设置
 - <b>Remaining States</b>: 若还有剩余状态，则输出为 0；否则输出为预期值
 
--- <b>输出控件</b> --
+-- <b>Indicators(输出控件)</b> --
 - <b>Timeout</b>: 仲裁后使用的超时设置
 
 #### 模板错误处理
@@ -140,7 +140,7 @@
 
 生成 CSM 严重错误描述的错误簇。严重错误为 CSM 框架发生的严重错误消息，无法有用户代码处理回复，常见原因是模块名称重复。
 
--- <b>输入控件</b> --
+-- <b>Controls(输入控件)</b> --
 - <b>Arguments (As Reason)</b>: 错误原因
 - <b>CSM Name</b>: CSM 模块名称
 
@@ -152,14 +152,14 @@
 
 生成 CSM 消息目标模块不存在的错误描述的错误簇。目标模块不存在错误发生在CSM尝试发送一个消息到一个不存在的目标模块时。·
 
--- <b>输入控件</b> --
+-- <b>Controls(输入控件)</b> --
 - <b>Arguments (As CSM Name)</b>: 连接参数，传递目标模块名称
 
 ##### CSM Target Timeout Error.vi
 
 生成 CSM 消息目标模块超时的错误描述的错误簇。目标模块超时错误发生在CSM尝试发送一个同步消息到一个目标模块，但在指定的超时时间内未收到回复时。
 
--- <b>输入控件</b> --
+-- <b>Controls(输入控件)</b> --
 - <b>Arguments (As CSM Name)</b>: 连接参数，传递目标模块名称
 
 ##### CSM Unhandled State Error.vi
@@ -168,6 +168,6 @@
 - 内部消息轮转中使用了本模块未定义的状态时（与 JKISM 行为一致）
 - 收到外部发送至本模块的消息未定义时
 
--- <b>输入控件</b> --
+-- <b>Controls(输入控件)</b> --
 - <b>Undefined State</b>: 未定义的状态
 - <b>CSM Name</b>: CSM 模块名称

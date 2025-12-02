@@ -36,10 +36,10 @@
 > Ref: 名称拼接API
 > Ref: CSM 工作者模式(worker mode)
 
--- <b>输入控件</b> --
+-- <b>Controls(输入控件)</b> --
 - <b>CSM Name</b>: CSM 模块名称
 
--- <b>输出控件</b> --
+-- <b>Indicators(输出控件)</b> --
 - <b>CSM Name(marked as worker)</b>: 添加“#”标记的CSM模块名称
 - <b>CSM Name (Marked As Worker)</b>:Indicators
 ## 责任链模式 (Chain of Responsibility API) - 待完善
@@ -78,11 +78,11 @@
 > Ref: CSM 责任链模式(Chain of Responsibility mode)
 > Ref: 名称拼接API
 
--- <b>输入控件</b> --
+-- <b>Controls(输入控件)</b> --
 - <b>CSM Name</b>:  CSM 模块名称
 - <b>Order</b>:  责任链模式下的顺序
 
--- <b>输出控件</b> --
+-- <b>Indicators(输出控件)</b> --
 - <b>CSM Name(marked as Chain)</b>:添加“$”标记的CSM模块名称
 - <b>CSM Name (Marked As Chain)</b>:Indicators
 ## 旁路循环支持(Side-Loop Support)
@@ -91,7 +91,7 @@
 
 申请 CSM 发送消息。通常用于和CSM并行的功能循环，这些功能循环和 CSM 一起完成完整模块功能。
 
--- <b>输入控件</b> --
+-- <b>Controls(输入控件)</b> --
 - <b>Module Name</b>:发送状态的CSM
 - <b>Status</b>: 将被广播的状态
 - <b>Arguments ("")</b>: 将被广播的状态参数
@@ -104,7 +104,7 @@
 
 申请 CSM 发布状态。通常用于和CSM并行的功能循环，这些功能循环和 CSM 一起完成完整模块功能。
 
--- <b>输入控件</b> --
+-- <b>Controls(输入控件)</b> --
 - <b>Module Name</b>:发送状态的CSM
 - <b>Status</b>: 将被广播的状态
 - <b>Arguments ("")</b>: 将被广播的状态参数
@@ -115,17 +115,17 @@
 
 检查CSM是否已经退出。通常用于和CSM并行的功能循环，这些功能循环和 CSM 一起完成完整模块功能。 本VI用于并行循环的退出条件。
 
--- <b>输入控件</b> --
+-- <b>Controls(输入控件)</b> --
 - <b>CSM Name</b>: 模块名称
 
--- <b>输出控件</b> --
+-- <b>Indicators(输出控件)</b> --
 - <b>Turn Invalid(Exit)?</b>: 是否已经退出
 - <b>Turn Invalid (Exit)?</b>:Indicators
 ### CSM - Flood of Events Handler Side Loop.vi
 
 ### CSM - Forward States to CSM.vi
 
--- <b>输入控件</b> --
+-- <b>Controls(输入控件)</b> --
 - <b>High Priority(T)</b>:
 - <b>Module Name</b>:Returns any argument(s) that may be used in the current state string. These arguments come after the ">>" characters
 - <b>State(s) in ("")</b>:Wire the existing states to this input. The default is an empty string.
@@ -133,11 +133,11 @@
 - <b>State (S) In ("")</b>:Controls
 ### CSM - Forward UI Operations to CSM.vi
 
--- <b>输入控件</b> --
+-- <b>Controls(输入控件)</b> --
 - <b>Name("" to use uuid)</b>:
 - <b>State(s) in ("")</b>:
 
--- <b>输出控件</b> --
+-- <b>Indicators(输出控件)</b> --
 - <b>States Out</b>:
 - <b>Name ("" to Use UUID)</b>:Controls
 - <b>State (S) In ("")</b>:Controls

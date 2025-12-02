@@ -22,7 +22,7 @@
 
 > Ref: CSM 全局日志功能
 
--- <b>输出控件</b> --
+-- <b>Indicators(输出控件)</b> --
 - <b>CSM Global Log Event</b>: CSM 全局状态用户事件句柄
 - <b>Timeout In ms (5000 ms)</b>:Controls
 ### CSM - Destroy Global Log Event.vi
@@ -31,7 +31,7 @@
 
 > Ref: CSM 全局日志功能
 
--- <b>输入控件</b> --
+-- <b>Controls(输入控件)</b> --
 - <b>CSM Global Log Event</b>: CSM 全局状态用户事件句柄
 - <b>Force Destroy?</b>:Controls
 - <b>Timeout In ms (5000 ms)</b>:Controls
@@ -39,7 +39,7 @@
 
 生成用户全局事件，用途调试等场景。
 
--- <b>输入控件</b> --
+-- <b>Controls(输入控件)</b> --
 - <b>Log</b>: 事件名称
 - <b>Arguments</b>: 事件参数
 - <b>From Who</b>: 来源
@@ -49,7 +49,7 @@
 
 CSM 错误处理函数。如果发生错误，错误信息将通过 CSM Global log 发布，在调试工具、后台 log 记录中都能记录。
 
--- <b>输入控件</b> --
+-- <b>Controls(输入控件)</b> --
 - <b>Place("" to use VI's Name)</b>: 标记发生错误的地点
 - <b>Clear Error(T)</b>: 是否清除错误，默认清除
 - <b>Clear Error? (T)</b>:Controls
@@ -62,7 +62,7 @@ CSM 错误处理函数。如果发生错误，错误信息将通过 CSM Global log 发布，在调试工具、
 
 列出全局的过滤规则。
 
--- <b>输出控件</b> --
+-- <b>Indicators(输出控件)</b> --
 - <b>Rule Strings</b>: 过滤规则字符串
 
 ### CSM - Convert Filter Rules.vi

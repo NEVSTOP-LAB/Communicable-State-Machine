@@ -37,10 +37,10 @@
 
 > Ref: CSM 参数类型
 
--- <b>输入控件</b> --
+-- <b>Controls(输入控件)</b> --
 - <b>Arguments</b>: 参数字符串
 
--- <b>输出控件</b> --
+-- <b>Indicators(输出控件)</b> --
 - <b>Argument Type</b>: 参数字符串的编码类型标记
 - <b>Arguments (Dup)</b>: 输入的参数字符串副本
 
@@ -51,7 +51,7 @@
 
 > Ref: CSM 消息关键字
 
--- <b>输出控件</b> --
+-- <b>Indicators(输出控件)</b> --
 - <b>keywords</b>: CSM 关键字列表
 - <b>Keywords (%Hex Format)</b>: CSM 关键字列表的%Hex格式
 
@@ -62,10 +62,12 @@
 > Ref: CSM 消息关键字
 > Ref: CSM 安全字符串参数
 
--- <b>输入控件</b> --
+可参考范例："[CSM-Example]\0. Base Concepts\4.3 Arguments - Safe Arguments if it contains key words of CSM.vi"
+
+-- <b>Controls(输入控件)</b> --
 - <b>Argument String</b>: 字符串参数
 
--- <b>输出控件</b> --
+-- <b>Indicators(输出控件)</b> --
 - <b>Safe Argument String</b>: 安全的字符串参数
 
 ### CSM - Revert Arguments-Safe String.vi
@@ -75,10 +77,12 @@
 > Ref: CSM 消息关键字
 > Ref: CSM 安全字符串参数
 
--- <b>输入控件</b> --
+可参考范例："[CSM-Example]\0. Base Concepts\4.3 Arguments - Safe Arguments if it contains key words of CSM.vi"
+
+-- <b>Controls(输入控件)</b> --
 - <b>Safe Argument String</b>:  安全的字符串参数
 
--- <b>输出控件</b> --
+-- <b>Indicators(输出控件)</b> --
 - <b>Origin Argument String</b>: 字符串参数
 
 ### CSM - Convert Data to HexStr.vi
@@ -88,10 +92,12 @@
 > Ref: CSM 参数类型
 > Ref: CSM HEXSTR 格式参数
 
--- <b>输入控件</b> --
+可参考范例："[CSM-Example]\0. Base Concepts\4.1 Arguments - Complex Data As Arguments.vi"
+
+-- <b>Controls(输入控件)</b> --
 - <b>Variant</b>: LabVIEW 数据，通过变体支持任意数据类型
 
--- <b>输出控件</b> --
+-- <b>Indicators(输出控件)</b> --
 - <b>HEX String (0-9,A-F)</b>: CSM HEXSTR 格式参数
 
 ### CSM - Convert HexStr to Data.vi
@@ -101,10 +107,12 @@
 > Ref: CSM 参数类型
 > Ref: CSM HEXSTR 格式参数
 
--- <b>输入控件</b> --
+可参考范例："[CSM-Example]\0. Base Concepts\4.1 Arguments - Complex Data As Arguments.vi"
+
+-- <b>Controls(输入控件)</b> --
 - <b>HEX String</b>: CSM HEXSTR 格式参数
 
--- <b>输出控件</b> --
+-- <b>Indicators(输出控件)</b> --
 - <b>Variant</b>: LabVIEW 数据，通过变体支持任意数据类型
 
 ### CSM - Convert Error to Argument.vi
@@ -114,10 +122,12 @@
 > Ref: CSM 参数类型
 > Ref: CSM ERRSTR 格式参数
 
--- <b>输入控件</b> --
+可参考范例："[CSM-Example]\0. Base Concepts\4.2 Arguments - Error As Arguments.vi"
+
+-- <b>Controls(输入控件)</b> --
 - <b>error</b>: LabVIEW 错误簇
 
--- <b>输出控件</b> --
+-- <b>Indicators(输出控件)</b> --
 - <b>Argument</b>: CSM 错误参数格式
 
 ### CSM - Convert Argument to Error.vi
@@ -127,8 +137,10 @@
 > Ref: CSM 参数类型
 > Ref: CSM ERRSTR 格式参数
 
--- <b>输入控件</b> --
+可参考范例："[CSM-Example]\0. Base Concepts\4.2 Arguments - Error As Arguments.vi"
+
+-- <b>Controls(输入控件)</b> --
 - <b>Argument</b>: CSM 错误参数格式
 
--- <b>输出控件</b> --
+-- <b>Indicators(输出控件)</b> --
 - <b>error</b>: LabVIEW 错误簇

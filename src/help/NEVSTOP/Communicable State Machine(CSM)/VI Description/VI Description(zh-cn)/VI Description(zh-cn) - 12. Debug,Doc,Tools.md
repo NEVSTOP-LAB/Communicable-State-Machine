@@ -10,7 +10,7 @@
 
 ### CSM Dummy Module.vi
 
--- <b>输入控件</b> --
+-- <b>Controls(输入控件)</b> --
 - <b>Init State("Macro: Initialize")</b>:
 - <b>Name("" to use uuid)</b>:
 - <b>Name ("" to Use UUID)</b>:Controls

@@ -19,7 +19,7 @@ CSM Watchdog 线程，用于保证在主程序退出后，所有的异步启动的 CSM 模块都能正常退出
 
 > Ref: CSM WatchDog 实现的原理
 
--- <b>输入控件</b> --
+-- <b>Controls(输入控件)</b> --
 - <b>WatchdogQ</b>: Watchdog 队列资源，
 
 ### CSM File Logger
@@ -34,7 +34,7 @@ CSM Watchdog 线程，用于保证在主程序退出后，所有的异步启动的 CSM 模块都能正常退出
 
 > Ref: CSM File Logger 实现的原理
 
--- <b>输入控件</b> --
+-- <b>Controls(输入控件)</b> --
 - <b>Log File Path</b>: 记录文件路径
 - <b>Enable? (T)</b>: 是否启用
 - <b>log limit</b>: 记录文件限制
@@ -43,7 +43,7 @@ CSM Watchdog 线程，用于保证在主程序退出后，所有的异步启动的 CSM 模块都能正常退出
 - <b>Filter Rules</b>: 时间过滤规则
 - <b>Exit When All Module Exist?(F)</b>: CSM 全部模块退出后是否退出
 
--- <b>输出控件</b> --
+-- <b>Indicators(输出控件)</b> --
 - <b>LogFile</b>: CSM lOG 文件路径
 - <b>WatchDogQueue</b>: WatchDog 资源句柄
 - <b>Exit When All Module Exist? (F)</b>:Controls
@@ -55,7 +55,7 @@ CSM Watchdog 线程，用于保证在主程序退出后，所有的异步启动的 CSM 模块都能正常退出
 
 > Ref: CSM File Logger 实现的原理
 
--- <b>输入控件</b> --
+-- <b>Controls(输入控件)</b> --
 - <b>Log File Path</b>: 记录文件路径
 - <b>log limit</b>: 记录文件限制
 - <b>Timestamp format</b>: 时间格式
@@ -79,25 +79,25 @@ CSM Watchdog 线程，用于保证在主程序退出后，所有的异步启动的 CSM 模块都能正常退出
 
 退出时检查循环。
 
--- <b>输入控件</b> --
+-- <b>Controls(输入控件)</b> --
 - <b>States Queue</b>: 整个状态队列被连接到此输入
 - <b>Exiting States</b>: 退出所需的状态
 
--- <b>输出控件</b> --
+-- <b>Indicators(输出控件)</b> --
 - <b>Remaining States</b>: 剩余的消息队列
 - <b><loop> Found</b>:Indicators
 #### CSMLS - Append Continuous State.vi
 
 添加循环状态。
 
--- <b>输入控件</b> --
+-- <b>Controls(输入控件)</b> --
 - <b>States Queue</b>: 整个状态队列被连接到此输入
 - <b>Loop State(s) and Arguments</b>: 循环状态
 - <b>Continuous State</b>:循环状态名称
 - <b>Continuous Arguments ("")</b>: 循环状态参数
 - <b>Append(T)</b>: 是否添加
 
--- <b>输出控件</b> --
+-- <b>Indicators(输出控件)</b> --
 - <b>Remaining States</b>: 剩余的消息队列
 - <b>Append? (T)</b>:Controls
 - <b>Continous Arguments ("")</b>:Controls
@@ -107,11 +107,11 @@ CSM Watchdog 线程，用于保证在主程序退出后，所有的异步启动的 CSM 模块都能正常退出
 
 定义循环操作。
 
--- <b>输入控件</b> --
+-- <b>Controls(输入控件)</b> --
 - <b>States Queue</b>: 整个状态队列被连接到此输入
 - <b>Loop State(s) and Arguments</b>: 循环状态
 
--- <b>输出控件</b> --
+-- <b>Indicators(输出控件)</b> --
 - <b>Remaining States</b>: 剩余的消息队列
 - <b>Front? (T)/Back(F)</b>:Controls
 - <b>Loop State (S) And Arguments</b>:Controls
@@ -130,10 +130,10 @@ CSM Watchdog 线程，用于保证在主程序退出后，所有的异步启动的 CSM 模块都能正常退出
 
 相当于不会执行任何DAQ操作，立即直接进入停止和释放。
 
--- <b>输入控件</b> --
+-- <b>Controls(输入控件)</b> --
 - <b>States Queue</b>: 整个状态队列被连接到此输入
 
--- <b>输出控件</b> --
+-- <b>Indicators(输出控件)</b> --
 - <b>Remaining States</b>: 剩余的消息队列
 
 #### CSMLS - Remove Loop Tag to Break.vi
@@ -151,8 +151,8 @@ CSM Watchdog 线程，用于保证在主程序退出后，所有的异步启动的 CSM 模块都能正常退出
 
 相当于依然会执行当前的DAQ操作，然后进入停止和释放。
 
--- <b>输入控件</b> --
+-- <b>Controls(输入控件)</b> --
 - <b>States Queue</b>: 整个状态队列被连接到此输入
 
--- <b>输出控件</b> --
+-- <b>Indicators(输出控件)</b> --
 - <b>Remaining States</b>: 剩余的消息队列
