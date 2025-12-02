@@ -25,7 +25,7 @@ CSM 消息中的关键字列表。
 -- <b>输出控件</b> --
 - <b>keywords</b>: CSM 关键字列表
 - <b>keywords(%Hex format)</b>: CSM 关键字列表的%Hex格式
-
+- <b>Keywords (%Hex Format)</b>:Indicators
 ### CSM - Make String Arguments Safe.vi
 
 将参数字符串中的 CSM 关键字转换为%Hex格式, 保证不影响 CSM 消息字符串解析。
@@ -61,7 +61,7 @@ CSM 消息中的关键字列表。
 
 -- <b>输出控件</b> --
 - <b>HEXSTR</b>: CSM HEXSTR 格式参数
-
+- <b>HEX String (0-9,A-F)</b>:Indicators
 ### CSM - Convert HexStr to Data.vi
 
 将十六进制字符串参数转换回变体数据。
@@ -73,7 +73,7 @@ CSM 消息中的关键字列表。
 
 -- <b>输出控件</b> --
 - <b>Variant</b>: LabVIEW 数据，通过变体支持任意数据类型
-
+- <b>HEX String</b>:Controls
 ### CSM - Convert Error to Argument.vi
 
 将 LabVIEW 错误簇转换为 CSM 错误参数格式。

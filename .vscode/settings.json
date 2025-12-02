@@ -15,5 +15,6 @@
         "Splite",
         "Struct",
         "usecase"
-    ]
+    ],
+    "files.autoGuessEncoding": true
 }

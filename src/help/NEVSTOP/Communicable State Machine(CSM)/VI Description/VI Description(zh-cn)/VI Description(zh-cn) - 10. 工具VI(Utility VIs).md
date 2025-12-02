@@ -34,7 +34,7 @@
 
 -- <b>输出控件</b> --
 - <b>States</b>: 拼接生成的CSM消息字符串
-
+- <b>State With Arguments ("Macro: Exit“)</b>:Controls
 ### CSM - Filter Duplicate Messages By Name.vi
 
 过滤重复的消息，只保留最新的消息。
@@ -47,7 +47,8 @@
 
 -- <b>输出控件</b> --
 - <b>Filtered States</b>: 过滤后的消息字符串
-
+- <b>States Out</b>:Indicators
+- <b>Whole Messages In Check? (T)</b>:Controls
 ### CSM - Filter Messages to Non-Existing Modules.vi
 
 过滤发送给不存在的模块的消息。
@@ -58,7 +59,8 @@
 
 -- <b>输出控件</b> --
 - <b>Filtered States</b>: 过滤后的消息字符串
-
+- <b>State (S) In ("")</b>:Controls
+- <b>States Out</b>:Indicators
 ### CSM - Remove Duplicated Following Messages.vi
 
 -- <b>输入控件</b> --
@@ -67,7 +69,8 @@
 
 -- <b>输出控件</b> --
 - <b>Remaining States Left</b>:
-
+- <b>Current State</b>:Controls
+- <b>Remaining States Left</b>:Indicators
 ### CSM Data Type String to Enum.vi
 
 ### CSM Data Type String.vi
@@ -77,7 +80,7 @@
 
 -- <b>输出控件</b> --
 - <b>Data Type String</b>:
-
+- <b>Data Type String</b>:Indicators
 ### Replace Tag with Array.vi
 
 -- <b>输入控件</b> --
@@ -87,7 +90,9 @@
 
 -- <b>输出控件</b> --
 - <b>States</b>:
-
+- <b>Enum</b>:Controls
+- <b>Replace String</b>:Controls
+- <b>States</b>:Indicators
 ### CSM Data Type String to Enum(RefnumEnum).vi
 
 -- <b>输入控件</b> --
@@ -97,7 +102,9 @@
 - <b>Array Dim</b>:
 - <b>Secondary Type</b>:
 - <b>Primary Type</b>:
-
+- <b>Array Dim</b>:Indicators
+- <b>Primary Type</b>:Indicators
+- <b>Secondary Type</b>:Indicators
 ### CSM Data Type String to Enum(String).vi
 
 -- <b>输入控件</b> --
@@ -107,7 +114,9 @@
 - <b>Array Dim</b>:
 - <b>Secondary Type String</b>:
 - <b>Primary Type</b>:
-
+- <b>Array Dim</b>:Indicators
+- <b>Primary Type</b>:Indicators
+- <b>Secondary Type String</b>:Indicators
 ### CSM Data Type String to Enum(TypeEnum).vi
 
 -- <b>输入控件</b> --
@@ -117,7 +126,9 @@
 - <b>Array Dim</b>:
 - <b>Secondary Type</b>:
 - <b>Primary Type</b>:
-
+- <b>Array Dim</b>:Indicators
+- <b>Primary Type</b>:Indicators
+- <b>Secondary Type</b>:Indicators
 ### Build Error Cluster.vi
 
 创建一个错误簇(error cluster)，以标准 LabVIEW 的方式从调用 VI 的调用链中构建源字符串。构建的源字符串形式为：
@@ -140,7 +151,8 @@
 
 -- <b>输出控件</b> --
 - <b>CSM Message String</b>: 拼接生成的 CSM 消息字符串
-
+- <b>>> Response Source Message >></b>:Controls
+- <b>State With Arguments</b>:Indicators
 ### String History Cacher.vi
 
 保存当前输入的字符串到缓存，缓存的历史字符串，当超出最大长度限制时，最先进入的缓存字符串将被覆盖。用于调试CSM的历史状态。
@@ -152,7 +164,8 @@
 
 -- <b>输出控件</b> --
 - <b>String Cache</b>: 缓存的历史字符串
-
+- <b>Format String</b>:Controls
+- <b>Include Timestamp? (T)</b>:Controls
 ### Trim Both Whitespace.vi
 
 开头、结尾或两者同时移除所有 ASCII 空白字符(空格、制表符、回车和换行)。
@@ -197,3 +210,5 @@
 
 -- <b>输出控件</b> --
 - <b>HEX String (0-9,A-F)</b>:
+- <b>HEX String (0-9,A-F)</b>:Indicators
+- <b>U8 Data[]</b>:Controls

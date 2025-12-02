@@ -34,7 +34,12 @@
 - <b>Name Used</b>: 分配给此CSM模块的实际名称
 - <b>Argument - State</b>: 如果是 CSM 定义的内置状态，此参数表示此状态的前状态
 - <b>From Who</b>: 如果<b>Current State</b> 是由外部发送的，则这是源CSM模块名称。
-
+- <b>>> Response Source Message >></b>:Indicators
+- <b>>> Source CSM >></b>:Indicators
+- <b>Allowed Messages (Empty for All)</b>:Controls
+- <b>Dequeue (1 ms)</b>:Controls
+- <b>Name ("" to Use UUID)</b>:Controls
+- <b>Response Timeout (-2 Use Global Settings)</b>:Controls
 ### Build State String with Arguments++.vi
 
 此 VI 用于构建 CSM 消息字符串(包含状态、参数、目标模块、消息类型等信息)，以便发送到其他 CSM 模块。
@@ -69,7 +74,7 @@
 
 -- <b>输出控件</b> --
 - <b>CSM Message String</b>: 拼接生成的 CSM 消息字符串
-
+- <b>Type</b>:Controls
 ### Build Message with Arguments++.vi
 
 此 VI 用于构建 CSM 消息字符串、操作字符串。
@@ -210,7 +215,8 @@
 
 -- <b>输出控件</b> --
 - <b>CSM Message String</b>:拼接生成的 CSM 消息字符串
-
+- <b>API (If "", Same As "Status")</b>:Controls
+- <b>Source CSM (* as Default)</b>:Controls
 #### Build Unregister Status Message.vi
 
 拼接取消注册状态操作消息字符串，消息格式如下：
@@ -234,7 +240,8 @@
 
 -- <b>输出控件</b> --
 - <b>CSM Message String</b>:拼接生成的 CSM 消息字符串
-
+- <b>API (* as Default)</b>:Controls
+- <b>Source CSM (* as Default)</b>:Controls
 #### CSM - Replace Substitution Marks in Messages.vi
 
 为了能够便利的编辑多条 CSM 消息字符串，提供批量替换标记的功能。有4个标记可以替换：
@@ -272,7 +279,10 @@
 
 -- <b>输出控件</b> --
 - <b>States</b>: 替换后
-
+- <b><1></b>:Controls
+- <b><2></b>:Controls
+- <b><param></b>:Controls
+- <b><target></b>:Controls
 ### CSM - Broadcast Status Change.vi
 
 向系统广播状态更改。已注册状态的 CSM 模块将接收到状态更改。例如：
@@ -291,7 +301,8 @@
 
 -- <b>输出控件</b> --
 - <b>Remaining States</b>: 拼接后的所有状态及参数。
-
+- <b>Broadcast? (T)</b>:Controls
+- <b>State Queue</b>:Controls
 ### Add State(s) to Queue By BOOL++.vi
 
 将 CSM 消息字符串并入 CSM 消息队列中。提供了 TRUE/FALSE 两种状态的字符串选项，能够避免使用条件结构，提高代码可读性，提高编程效率。
@@ -319,7 +330,10 @@
 
 -- <b>输出控件</b> --
 - <b>Remaining States</b>: 拼接后的所有状态及参数。
-
+- <b>FALSE ("")</b>:Controls
+- <b>High Priority? (F)</b>:Controls
+- <b>State Queue ("")</b>:Controls
+- <b>TRUE ("")</b>:Controls
 #### Add State(s) to Queue By BOOL(Array Left).vi
 
 将 CSM 消息字符串并入 CSM 消息队列中。提供了 TRUE/FALSE 两种状态的字符串选项，能够避免使用条件结构，提高代码可读性，提高编程效率。
@@ -335,7 +349,10 @@
 
 -- <b>输出控件</b> --
 - <b>Remaining States</b>: 拼接后的所有状态及参数。
-
+- <b>FALSE ("")</b>:Controls
+- <b>High Priority? (F)</b>:Controls
+- <b>State Queue ("")</b>:Controls
+- <b>TRUE ("")</b>:Controls
 #### Add State(s) to Queue By BOOL(Array Right).vi
 
 将 CSM 消息字符串并入 CSM 消息队列中。提供了 TRUE/FALSE 两种状态的字符串选项，能够避免使用条件结构，提高代码可读性，提高编程效率。
@@ -351,7 +368,10 @@
 
 -- <b>输出控件</b> --
 - <b>Remaining States</b>: 拼接后的所有状态及参数。
-
+- <b>FALSE ("")</b>:Controls
+- <b>High Priority? (F)</b>:Controls
+- <b>State Queue ("")</b>:Controls
+- <b>TRUE ("")</b>:Controls
 #### Add State(s) to Queue By BOOL(Array All).vi
 
 根据高优先级和Bool输入，此VI生成TRUE/False和剩余状态的连接状态。
@@ -369,3 +389,7 @@ Bool输入决定要连接的字符串是TRUE还是False。
 
 -- <b>输出控件</b> --
 - <b>Remaining States</b>: 拼接后的所有状态及参数。
+- <b>FALSE ("")</b>:Controls
+- <b>High Priority? (F)</b>:Controls
+- <b>State Queue ("")</b>:Controls
+- <b>TRUE ("")</b>:Controls

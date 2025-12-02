@@ -46,7 +46,9 @@ CSM Watchdog 线程，用于保证在主程序退出后，所有的异步启动的 CSM 模块都能正常退出
 -- <b>输出控件</b> --
 - <b>LogFile</b>: CSM lOG 文件路径
 - <b>WatchDogQueue</b>: WatchDog 资源句柄
-
+- <b>Exit When All Module Exist? (F)</b>:Controls
+- <b>Log File</b>:Indicators
+- <b>Watchdog Queue</b>:Indicators
 #### CSM-Logger-Thread.vi
 
 启动 CSM Global Log 文件记录线程VI。
@@ -60,7 +62,10 @@ CSM Watchdog 线程，用于保证在主程序退出后，所有的异步启动的 CSM 模块都能正常退出
 - <b>WatchDogQ</b>: WatchDog资源，用于检测主程序是否退出
 - <b>GlobalLogFilter.lvclass</b>: 事件过滤器对象
 - <b>Exit When All Module Exist?(F)</b>: CSM 全部模块退出后是否退出
-
+- <b>Exit When All Module Exist? (F)</b>:Controls
+- <b>File Path (Use Dialog)</b>:Controls
+- <b>Format String</b>:Controls
+- <b>GlobalLogFilter.lvclass</b>:Controls
 ### CSM Loop Support
 
 > [!NOTE] CSM LOOP 设计的原因
@@ -80,7 +85,7 @@ CSM Watchdog 线程，用于保证在主程序退出后，所有的异步启动的 CSM 模块都能正常退出
 
 -- <b>输出控件</b> --
 - <b>Remaining States</b>: 剩余的消息队列
-
+- <b><loop> Found</b>:Indicators
 #### CSMLS - Append Continuous State.vi
 
 添加循环状态。
@@ -94,7 +99,10 @@ CSM Watchdog 线程，用于保证在主程序退出后，所有的异步启动的 CSM 模块都能正常退出
 
 -- <b>输出控件</b> --
 - <b>Remaining States</b>: 剩余的消息队列
-
+- <b>Append? (T)</b>:Controls
+- <b>Continous Arguments ("")</b>:Controls
+- <b>Continous State</b>:Controls
+- <b>Loop State (S) And Arguments</b>:Controls
 #### CSMLS - Define Loop State(s).vi
 
 定义循环操作。
@@ -105,7 +113,8 @@ CSM Watchdog 线程，用于保证在主程序退出后，所有的异步启动的 CSM 模块都能正常退出
 
 -- <b>输出控件</b> --
 - <b>Remaining States</b>: 剩余的消息队列
-
+- <b>Front? (T)/Back(F)</b>:Controls
+- <b>Loop State (S) And Arguments</b>:Controls
 #### CSMLS - Remove Loop Tag and previous State(s) to Break.vi
 
 通过移除 <loop> 标记和 <loop> 标记前的所有状态，达到停止循环。

@@ -24,7 +24,7 @@
 
 -- <b>输出控件</b> --
 - <b>CSM Global Log Event</b>: CSM 全局状态用户事件句柄
-
+- <b>Timeout In ms (5000 ms)</b>:Controls
 ### CSM - Destroy Global Log Event.vi
 
 释放 CSM 全局状态用户事件句柄
@@ -33,7 +33,8 @@
 
 -- <b>输入控件</b> --
 - <b>CSM Global Log Event</b>: CSM 全局状态用户事件句柄
-
+- <b>Force Destroy?</b>:Controls
+- <b>Timeout In ms (5000 ms)</b>:Controls
 ### CSM - Generate User Global Log.vi
 
 生成用户全局事件，用途调试等场景。
@@ -43,7 +44,7 @@
 - <b>Arguments</b>: 事件参数
 - <b>From Who</b>: 来源
 - <b>ModuleName</b>: 模块名称
-
+- <b>Place ("" to Use VI's Name)</b>:Controls
 ### CSM - Global Log Error Handler.vi
 
 CSM 错误处理函数。如果发生错误，错误信息将通过 CSM Global log 发布，在调试工具、后台 log 记录中都能记录。
@@ -51,7 +52,8 @@ CSM 错误处理函数。如果发生错误，错误信息将通过 CSM Global log 发布，在调试工具、
 -- <b>输入控件</b> --
 - <b>Place("" to use VI's Name)</b>: 标记发生错误的地点
 - <b>Clear Error(T)</b>: 是否清除错误，默认清除
-
+- <b>Clear Error? (T)</b>:Controls
+- <b>Place ("" to Use VI's Name)</b>:Controls
 ### CSM - Set Log Filter Rules.vi
 
 设置全局的过滤规则。这个规则应用在发送源头，当 log 满足过滤规则时，将不会在源头被发送，因此任何工具也将不能再检测到这个 log 记录。

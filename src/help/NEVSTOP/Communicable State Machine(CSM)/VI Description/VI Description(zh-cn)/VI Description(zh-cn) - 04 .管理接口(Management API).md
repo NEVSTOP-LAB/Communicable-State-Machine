@@ -27,7 +27,9 @@
 
 -- <b>输出控件</b> --
 - <b>CSM Module VIRef</b>: CSM 模块的 VI 引用
-
+- <b>Current Module ("" to Generate an ID)</b>:Controls
+- <b>Force? (F)</b>:Controls
+- <b>Response Timeout (-2 Using Global Settings)</b>:Controls
 ### CSM - Check If Module Exists.vi
 
 检查 CSM 模块是否存在
@@ -38,7 +40,7 @@
 -- <b>输出控件</b> --
 - <b>Exist?</b>: 返回模式是否存在
 - <b>CSM Name(dup)</b>: 返回 <b>CSM Name</b>
-
+- <b>CSM Name (Dup)</b>:Indicators
 ### CSM - List Modules.vi
 
 列出所有活动的CSM模块。
@@ -50,7 +52,8 @@
 
 -- <b>输出控件</b> --
 - <b>Module Names</b>: CSM 模块名称列表
-
+- <b>Scope (Normal)</b>:Controls
+- <b>With Instance? (F)</b>:Controls
 ### CSM - Module Status.vi
 
 获取CSM模块的状态，包括：工作模式、工作者数量、消息队列中的待处理消息个数。
@@ -65,3 +68,6 @@
 - <b>#As Worker</b>: 工作者模式下，此模块的工作者数量
 - <b>#msg to be processed</b>: CSM消息队列中的待处理消息个数
 - <b>CSM Name(dup)</b>: 返回 <b>CSM Name</b>
+- <b>#Elements In Queue</b>:Indicators
+- <b>#Instance</b>:Indicators
+- <b>CSM Name (Dup)</b>:Indicators

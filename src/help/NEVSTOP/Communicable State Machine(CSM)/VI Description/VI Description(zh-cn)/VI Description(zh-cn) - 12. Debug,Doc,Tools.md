@@ -13,7 +13,7 @@
 -- <b>ÊäÈë¿Ø¼þ</b> --
 - <b>Init State("Macro: Initialize")</b>:
 - <b>Name("" to use uuid)</b>:
-
+- <b>Name ("" to Use UUID)</b>:Controls
 ## CSM Debug Tools
 
 ### CSM - Add VI Reference Case to CSMs.vi

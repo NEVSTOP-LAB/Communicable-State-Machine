@@ -41,7 +41,7 @@
 
 -- <b>输出控件</b> --
 - <b>CSM Name(marked as worker)</b>: 添加“#”标记的CSM模块名称
-
+- <b>CSM Name (Marked As Worker)</b>:Indicators
 ## 责任链模式 (Chain of Responsibility API) - 待完善
 
 > [!NOTE] CSM 责任链模式(Chain of Responsibility mode)
@@ -84,7 +84,7 @@
 
 -- <b>输出控件</b> --
 - <b>CSM Name(marked as Chain)</b>:添加“$”标记的CSM模块名称
-
+- <b>CSM Name (Marked As Chain)</b>:Indicators
 ## 旁路循环支持(Side-Loop Support)
 
 ### CSM - Request CSM to Post Message.vi
@@ -96,7 +96,10 @@
 - <b>Status</b>: 将被广播的状态
 - <b>Arguments ("")</b>: 将被广播的状态参数
 - <b>Target Module</b>:目标模块
-
+- <b>Immediately? (F)</b>:Controls
+- <b>State</b>:Controls
+- <b>Target Module ("" By Default)</b>:Controls
+- <b>Without Reply? (F)</b>:Controls
 ### CSM - Request CSM to Broadcast Status Change.vi
 
 申请 CSM 发布状态。通常用于和CSM并行的功能循环，这些功能循环和 CSM 一起完成完整模块功能。
@@ -106,7 +109,8 @@
 - <b>Status</b>: 将被广播的状态
 - <b>Arguments ("")</b>: 将被广播的状态参数
 - <b>Broadcast(T)</b>: 控制是否广播的开关输入
-
+- <b>Broadcast? (T)</b>:Controls
+- <b>Immediately? (F)</b>:Controls
 ### CSM - Module Turns Invalid.vi
 
 检查CSM是否已经退出。通常用于和CSM并行的功能循环，这些功能循环和 CSM 一起完成完整模块功能。 本VI用于并行循环的退出条件。
@@ -116,7 +120,7 @@
 
 -- <b>输出控件</b> --
 - <b>Turn Invalid(Exit)?</b>: 是否已经退出
-
+- <b>Turn Invalid (Exit)?</b>:Indicators
 ### CSM - Flood of Events Handler Side Loop.vi
 
 ### CSM - Forward States to CSM.vi
@@ -125,7 +129,8 @@
 - <b>High Priority(T)</b>:
 - <b>Module Name</b>:Returns any argument(s) that may be used in the current state string. These arguments come after the ">>" characters
 - <b>State(s) in ("")</b>:Wire the existing states to this input. The default is an empty string.
-
+- <b>High Priority? (T)</b>:Controls
+- <b>State (S) In ("")</b>:Controls
 ### CSM - Forward UI Operations to CSM.vi
 
 -- <b>输入控件</b> --
@@ -134,3 +139,6 @@
 
 -- <b>输出控件</b> --
 - <b>States Out</b>:
+- <b>Name ("" to Use UUID)</b>:Controls
+- <b>State (S) In ("")</b>:Controls
+- <b>States Out</b>:Indicators

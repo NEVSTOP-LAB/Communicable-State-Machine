@@ -21,7 +21,7 @@
 -- <b>输入控件</b> --
 - <b>Name("" to use uuid)</b>: CSM 模块名称
 - <b>Init State("Macro: Initialize")</b>: CSM 初始化状态, 默认为 "Macro: Initialize"
-
+- <b>Name ("" to Use UUID)</b>:Controls
 ### CSM User Interface(UI) Module Template.vi
 
 用于创建具有用户界面的 CSM 模块的模板，模板中包含用户事件结构用于响应用户操作。
@@ -32,7 +32,7 @@
 -- <b>输入控件</b> --
 - <b>Name("" to use uuid)</b>: CSM 模块名称
 - <b>Init State("Macro: Initialize")</b>: CSM 初始化状态, 默认为 "Macro: Initialize"
-
+- <b>Name ("" to Use UUID)</b>:Controls
 ### CSM Module Template - Tiny.vi
 
 用于创建具有无用户界面的 CSM 模块的模板。此模板的代码比较紧凑。
@@ -66,7 +66,7 @@
 
 -- <b>输出控件</b> --
 - <b>New State Notifier Event</b>: 用户事件句柄，用来当收到消息时，使用CSM模块中断在事件结构中的等待
-
+- <b>Name ("" to Use UUID) In</b>:Controls
 #### Timeout Selector.vi
 
 用于包含用户事件结构的模板中
@@ -87,7 +87,7 @@
 -- <b>输入控件</b> --
 - <b>Arguments(as Reason)</b>: 错误原因
 - <b>CSM Name</b>: CSM 模块名称
-
+- <b>Arugments (As Reason)</b>:Controls
 ##### CSM No Target Error.vi
 
 当必须要输入 CSM 模块名称但输入了空字符串时，生成 CSM 模块的目标模块不存在错误消息。
@@ -98,14 +98,14 @@
 
 -- <b>输入控件</b> --
 - <b>Arguments(as CSM Name)</b>: 连接参数，传递的内容是目标模块名称
-
+- <b>Arguments (As CSM Name)</b>:Controls
 ##### CSM Target Timeout Error.vi
 
 生成 CSM 模块的消息目标模块超时错误消息。
 
 -- <b>输入控件</b> --
 - <b>Arguments(as CSM Name)</b>: 连接参数，传递的内容是目标模块名称
-
+- <b>Arguments (As CSM Name)</b>:Controls
 ##### CSM Unhandled State Error.vi
 
 生成 CSM 模块的未处理状态错误消息。可能的情况：
@@ -115,4 +115,4 @@
 -- <b>输入控件</b> --
 - <b>Undefined State</b>: 未定义的状态
 - <b>CSM Name</b>: CSM 模块名称
-
+- <b>Current State</b>:Controls
