@@ -67,11 +67,6 @@ Bulid Status List.vi
 - <b>Array</b>:Indicators
 - <b>Text.Text</b>:Controls
 
-CSM - Argument Type.vi
-
-- <b>Argument Type</b>:Indicators
-- <b>Arguments (Dup)</b>:Indicators
-- <b>Arguments</b>:Controls
 
 CSM - Delete Module Attribute.vi
 
