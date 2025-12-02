@@ -8,4 +8,5 @@
 	<Item Name="Split String Array By Patterns_CSM.vi" Type="VI" URL="../Split String Array By Patterns_CSM.vi"/>
 	<Item Name="Text To Lines_CSM.vi" Type="VI" URL="../Text To Lines_CSM.vi"/>
 	<Item Name="TxtFile Load_CSM.vi" Type="VI" URL="../TxtFile Load_CSM.vi"/>
+	<Item Name="TxtFile Save_CSM.vi" Type="VI" URL="../TxtFile Save_CSM.vi"/>
 </Library>
