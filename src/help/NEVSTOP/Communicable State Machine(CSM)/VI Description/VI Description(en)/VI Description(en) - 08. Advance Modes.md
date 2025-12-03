@@ -107,16 +107,6 @@ Request CSM to publish status. Typically used for functional loops running in pa
 - <b>Arguments ("")</b>: Parameters of the status to be broadcasted
 - <b>Broadcast (T)</b>: Control switch input for broadcasting
 
-### CSM - Module Turns Invalid.vi
-
-Check if CSM has exited. Typically used for functional loops running in parallel with CSM, these loops complete the full module functionality together with CSM. This VI is used as the exit condition for parallel loops.
-
--- <b>Controls</b> --
-- <b>CSM Name</b>: Module name
-
--- <b>Indicators</b> --
-- <b>Turn Invalid (Exit)?</b>: Whether it has exited
-
 ### CSM - Flood of Events Handler Side Loop.vi
 
 ### CSM - Forward States to CSM.vi

@@ -68,14 +68,7 @@ Bulid Status List.vi
 - <b>Text.Text</b>:Controls
 
 
-CSM - Delete Module Attribute.vi
 
-- <b>Attribute</b>:Controls
-- <b>CSM Name (Dup)</b>:Indicators
-- <b>CSM Name</b>:Controls
-- <b>Found</b>:Indicators
-- <b>Wait (5000 ms)</b>:Controls
-- <b>Waited (ms)</b>:Indicators
 
 CSM - Destroy Global Log Queue.vi
 
@@ -89,16 +82,7 @@ CSM - Drop Broadcast Registry.vi
 
 
 
-CSM - Get Module Attribute.vi
 
-- <b>Attribute</b>:Controls
-- <b>CSM Name (Dup)</b>:Indicators
-- <b>CSM Name</b>:Controls
-- <b>Default Value (Empty Variant)</b>:Controls
-- <b>Found</b>:Indicators
-- <b>Value</b>:Indicators
-- <b>Wait (5000 ms)</b>:Controls
-- <b>Waited (ms)</b>:Indicators
 
 
 
@@ -123,15 +107,7 @@ CSM - Internal State Debug Log History.vi
 - <b>Source ("")</b>:Controls
 - <b>State</b>:Controls
 
-CSM - List Module Attributes.vi
 
-- <b>Attributes</b>:Indicators
-- <b>CSM Name (Dup)</b>:Indicators
-- <b>CSM Name</b>:Controls
-- <b>Include Value? (F)</b>:Controls
-- <b>Values</b>:Indicators
-- <b>Wait (5000 ms)</b>:Controls
-- <b>Waited (ms)</b>:Indicators
 
 
 CSM - Mark As System-Level Module.vi
@@ -144,15 +120,7 @@ CSM - Resolve Node Module.vi
 - <b>CSM Module Name</b>:Indicators
 - <b>Node Name</b>:Controls
 
-CSM - Set Module Attribute.vi
 
-- <b>Attribute</b>:Controls
-- <b>CSM Name (Dup)</b>:Indicators
-- <b>CSM Name</b>:Controls
-- <b>Replaced</b>:Indicators
-- <b>Value</b>:Controls
-- <b>Wait (5000 ms)</b>:Controls
-- <b>Waited (ms)</b>:Indicators
 
 CSM - System States.vi
 
