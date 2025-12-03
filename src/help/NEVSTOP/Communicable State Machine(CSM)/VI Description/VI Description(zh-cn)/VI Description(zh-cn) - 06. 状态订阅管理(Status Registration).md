@@ -18,6 +18,7 @@
 - <b>CSM Name (Dup)</b>:Indicators
 - <b>Response Message (If "", Same as Source Message)</b>:Controls
 - <b>Source CSM Name (* as Default)</b>:Controls
+
 ### CSM - Unregister Status Change.vi
 
 取消注册其他 CSM 模块状态更改的通知。
@@ -32,6 +33,7 @@
 - <b>CSM Name (Dup)</b>:Indicators
 - <b>Response Message ("*" as Default)</b>:Controls
 - <b>Source CSM Name (* as Default)</b>:Controls
+
 ### CSM - List All Status Registration.vi
 
 -- <b>Indicators(输出控件)</b> --
@@ -42,16 +44,19 @@
 -- <b>Indicators(输出控件)</b> --
 - <b>Mapping Relationships</b>:
 - <b>Array</b>:Indicators
+
 ### CSM - List Rules in Broadcast Registry.vi
 
 -- <b>Indicators(输出控件)</b> --
 - <b>Rules</b>:
 - <b>Entries</b>:Indicators
+
 ### CSM - List Status in Broadcast Registry.vi
 
 -- <b>Indicators(输出控件)</b> --
 - <b>Status in Registry</b>:
 - <b>Status In Registry</b>:Indicators
+
 ### CSM - Check Mapping Relationship in Broadcast Registry.vi
 
 -- <b>Controls(输入控件)</b> --
@@ -62,6 +67,7 @@
 - <b>Array</b>:
 - <b>Array</b>:Indicators
 - <b>CSM Name</b>:Controls
+
 ### CSM - Check Status Registration.vi
 
 -- <b>Controls(输入控件)</b> --

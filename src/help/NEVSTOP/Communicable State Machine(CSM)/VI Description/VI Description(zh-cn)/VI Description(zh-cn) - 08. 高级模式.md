@@ -111,16 +111,17 @@
 - <b>Broadcast(T)</b>: 控制是否广播的开关输入
 - <b>Broadcast? (T)</b>:Controls
 - <b>Immediately? (F)</b>:Controls
+
 ### CSM - Module Turns Invalid.vi
 
-检查CSM是否已经退出。通常用于和CSM并行的功能循环，这些功能循环和 CSM 一起完成完整模块功能。 本VI用于并行循环的退出条件。
+检查CSM是否已经退出。通常用于和CSM并行的功能循环的退出条件。
 
 -- <b>Controls(输入控件)</b> --
 - <b>CSM Name</b>: 模块名称
 
 -- <b>Indicators(输出控件)</b> --
-- <b>Turn Invalid(Exit)?</b>: 是否已经退出
-- <b>Turn Invalid (Exit)?</b>:Indicators
+- <b>Turn Invalid (Exit)?</b>: 是否已经退出
+
 ### CSM - Flood of Events Handler Side Loop.vi
 
 ### CSM - Forward States to CSM.vi
