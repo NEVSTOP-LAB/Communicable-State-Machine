@@ -352,6 +352,21 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="CSM - Set TMO of Sync-Reply.vi" Type="VI" URL="../AdvanceAPI/CSM - Set TMO of Sync-Reply.vi"/>
 			<Item Name="CSM - Filter JKISM String Queue.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter JKISM String Queue.vi"/>
 		</Item>
+		<Item Name="Module API" Type="Folder">
+			<Item Name="CSM - Wait for All Modules to be Alive.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait for All Modules to be Alive.vi"/>
+			<Item Name="CSM - Wait for All Modules to Exit.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait for All Modules to Exit.vi"/>
+			<Item Name="CSM - Wait for Module to Be Alive.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait for Module to Be Alive.vi"/>
+			<Item Name="CSM - Broadcast Message Type.ctl" Type="VI" URL="../AdvanceAPI/CSM - Broadcast Message Type.ctl"/>
+			<Item Name="CSM - Message Type.ctl" Type="VI" URL="../AdvanceAPI/CSM - Message Type.ctl"/>
+			<Item Name="CSM - Post Message.vi" Type="VI" URL="../AdvanceAPI/CSM - Post Message.vi"/>
+			<Item Name="CSM - Send Message and Wait for Reply.vi" Type="VI" URL="../AdvanceAPI/CSM - Send Message and Wait for Reply.vi"/>
+			<Item Name="CSM - Wait and Post Message.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait and Post Message.vi"/>
+			<Item Name="CSM - Wait and Send Message for Reply.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait and Send Message for Reply.vi"/>
+			<Item Name="CSM - Status Change Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Status Change Event.vi"/>
+			<Item Name="CSM - Destroy Status Change Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Destroy Status Change Event.vi"/>
+			<Item Name="CSM - Module Exit Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Module Exit Event.vi"/>
+			<Item Name="CSM - Run Script.vi" Type="VI" URL="../AdvanceAPI/CSM - Run Script.vi"/>
+		</Item>
 		<Item Name="AttributeAPI" Type="Folder">
 			<Item Name="CSM - List Module Attributes.vi" Type="VI" URL="../AdvanceAPI/CSM - List Module Attributes.vi"/>
 			<Item Name="CSM - Set Module Attribute.vi" Type="VI" URL="../AdvanceAPI/CSM - Set Module Attribute.vi"/>
@@ -367,21 +382,6 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="CSM - List Mapping Relationships in Broadcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - List Mapping Relationships in Broadcast Registry.vi"/>
 			<Item Name="CSM - Check Mapping Relationship in Broadcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - Check Mapping Relationship in Broadcast Registry.vi"/>
 			<Item Name="CSM - Drop Broadcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - Drop Broadcast Registry.vi"/>
-		</Item>
-		<Item Name="Module API" Type="Folder">
-			<Item Name="CSM - Wait for All Modules to be Alive.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait for All Modules to be Alive.vi"/>
-			<Item Name="CSM - Wait for All Modules to Exit.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait for All Modules to Exit.vi"/>
-			<Item Name="CSM - Wait for Module to Be Alive.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait for Module to Be Alive.vi"/>
-			<Item Name="CSM - Broadcast Message Type.ctl" Type="VI" URL="../AdvanceAPI/CSM - Broadcast Message Type.ctl"/>
-			<Item Name="CSM - Message Type.ctl" Type="VI" URL="../AdvanceAPI/CSM - Message Type.ctl"/>
-			<Item Name="CSM - Post Message.vi" Type="VI" URL="../AdvanceAPI/CSM - Post Message.vi"/>
-			<Item Name="CSM - Send Message and Wait for Reply.vi" Type="VI" URL="../AdvanceAPI/CSM - Send Message and Wait for Reply.vi"/>
-			<Item Name="CSM - Wait and Post Message.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait and Post Message.vi"/>
-			<Item Name="CSM - Wait and Send Message for Reply.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait and Send Message for Reply.vi"/>
-			<Item Name="CSM - Status Change Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Status Change Event.vi"/>
-			<Item Name="CSM - Destroy Status Change Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Destroy Status Change Event.vi"/>
-			<Item Name="CSM - Module Exit Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Module Exit Event.vi"/>
-			<Item Name="CSM - Run Script.vi" Type="VI" URL="../AdvanceAPI/CSM - Run Script.vi"/>
 		</Item>
 		<Item Name="GlobalEvent" Type="Folder">
 			<Item Name="CSM - Global Log Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Global Log Event.vi"/>
