@@ -65,6 +65,7 @@ jobs:
         continue-on-error: true
 
       - name: Retry BuildDailyVIP if failed
+        id: retry-build-vip
         if: ${{ steps.build-vip.outcome == 'failure' }}
         uses: NEVSTOP-LAB/vipm-BuildViPackage@main
         with:
@@ -76,8 +77,8 @@ jobs:
         uses: actions/upload-artifact@v4.3.2
         with:
           # Artifact name
-          name: ${{ steps.build-vip.outputs.vipName }}
-          path: ${{ steps.build-vip.outputs.vipPathName }}
+          name: ${{ steps.retry-build-vip.outputs.vipName || steps.build-vip.outputs.vipName }}
+          path: ${{ steps.retry-build-vip.outputs.vipPathName || steps.build-vip.outputs.vipPathName }}
           # The desired behavior if no files are found using the provided path.
           if-no-files-found: warn
           retention-days: 90
