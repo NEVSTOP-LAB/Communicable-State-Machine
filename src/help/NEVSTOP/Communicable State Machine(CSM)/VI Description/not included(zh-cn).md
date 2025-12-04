@@ -28,15 +28,7 @@ Auto Broadcast State.vi
 - <b>Remaining States Queue</b>:Indicators
 - <b>States Queue</b>:Controls
 
-Auto Processing Level.vi
 
-- <b>#Left In Q</b>:Controls
-- <b>Debounce Period (5s)</b>:Controls
-- <b>Level</b>:Indicators
-- <b>LogInQ Changing Speed (#/s)</b>:Indicators
-- <b>Period (0.1s)</b>:Controls
-- <b>Reset? (F)</b>:Controls
-- <b>Since Upgraded (S)</b>:Indicators
 
 Build Interface Menu.vi
 
@@ -305,12 +297,6 @@ Concatenate State with Comments.vi
 - <b>State With Arguments</b>:Indicators
 - <b>State</b>:Controls
 
-Concatenate Submodule Name.vi
-
-- <b>CSM Name</b>:Controls
-- <b>Name</b>:Controls
-- <b>Submodule Name</b>:Indicators
-
 Debounced Signal.vi
 
 - <b>Debounce Period (5s)</b>:Controls
@@ -348,13 +334,7 @@ Destroy JKISM Message Event.vi
 
 - <b>Module</b>:Controls
 
-Exit With Empty Queue Check.vi
 
-- <b>Exit</b>:Indicators
-- <b>Queue</b>:Controls
-- <b>Since Exiting (S)</b>:Indicators
-- <b>Stop</b>:Controls
-- <b>Timeout (5s)</b>:Controls
 
 Export Single VI Help.vi
 
@@ -517,17 +497,7 @@ Get Status List From Term.vi
 - <b>Term Refnum</b>:Controls
 - <b>need Symbol?</b>:Controls
 
-Global Log History Cacher.vi
 
-- <b> Time Format String</b>:Controls
-- <b>Cross CSM Data</b>:Controls
-- <b>Length (10000)</b>:Controls
-- <b>Level (Normal)</b>:Controls
-- <b>Remove Immediately? (F)</b>:Controls
-- <b>Reset?</b>:Controls
-- <b>Settings</b>:Controls
-- <b>String Cache</b>:Indicators
-- <b>With Periodic Info? (T)</b>:Controls
 
 Global Log To String(Periodic Check).vi
 
@@ -540,11 +510,7 @@ Global Log To String(Periodic Check).vi
 - <b>Settings</b>:Controls
 - <b>String</b>:Indicators
 
-Global Log To String(Source Time).vi
 
-- <b>Format String</b>:Controls
-- <b>Log String</b>:Indicators
-- <b>Log</b>:Controls
 
 Interface Browser.vi
 
@@ -1098,13 +1064,7 @@ Split String Array By Patterns_CSM.vi
 - <b>Patterns</b>:Controls
 - <b>Text Array</b>:Controls
 
-State Triggered Reason.vi
 
-- <b>>> Response Source Message >> (In)</b>:Controls
-- <b>>> Response Source Message >></b>:Indicators
-- <b>>> Source CSM >> (In)</b>:Controls
-- <b>>> Source CSM >></b>:Indicators
-- <b>Reason</b>:Indicators
 
 Text To Lines_CSM.vi
 

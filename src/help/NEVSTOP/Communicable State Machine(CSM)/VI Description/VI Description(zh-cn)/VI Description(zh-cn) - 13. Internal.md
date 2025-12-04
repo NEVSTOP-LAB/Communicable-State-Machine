@@ -173,16 +173,7 @@ Returns any argument(s) that may be used in the current state string. These argu
 - <b>CSM Mode</b>:Indicators
 - <b>ParentCSM Name</b>:Indicators
 - <b>Requested Name</b>:Indicators
-### Format Timestamp.vi
 
--- <b>Controls(输入控件)</b> --
-- <b>timestamp</b>:
-- <b>format string</b>:
-
--- <b>Indicators(输出控件)</b> --
-- <b>String</b>:
-- <b>String</b>:Indicators
-- <b>Timestamp</b>:Controls
 ### Hex Str to U8 Data.vi
 
 -- <b>Controls(输入控件)</b> --

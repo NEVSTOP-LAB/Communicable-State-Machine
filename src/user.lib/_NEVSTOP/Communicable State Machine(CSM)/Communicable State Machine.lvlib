@@ -341,6 +341,7 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			</Item>
 			<Item Name="CSM - Get New State Notifier Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Get New State Notifier Event.vi"/>
 			<Item Name="CSM - Internal State Debug Log History.vi" Type="VI" URL="../AdvanceAPI/CSM - Internal State Debug Log History.vi"/>
+			<Item Name="Timeout Selector.vi" Type="VI" URL="../Utility/Timeout Selector.vi"/>
 		</Item>
 		<Item Name="Management API" Type="Folder">
 			<Item Name="CSM - Module VI Reference.vi" Type="VI" URL="../AdvanceAPI/CSM - Module VI Reference.vi"/>
@@ -425,11 +426,6 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 		<Item Name="CSM - Convert Argument to Error.vi" Type="VI" URL="../AdvanceAPI/CSM - Convert Argument to Error.vi"/>
 	</Item>
 	<Item Name="Utility" Type="Folder">
-		<Item Name="_Support" Type="Folder">
-			<Item Name="CSM Data Type String to Enum(String).vi" Type="VI" URL="../Utility/_support/CSM Data Type String to Enum(String).vi"/>
-			<Item Name="CSM Data Type String to Enum(TypeEnum).vi" Type="VI" URL="../Utility/_support/CSM Data Type String to Enum(TypeEnum).vi"/>
-			<Item Name="CSM Data Type String to Enum(RefnumEnum).vi" Type="VI" URL="../Utility/_support/CSM Data Type String to Enum(RefnumEnum).vi"/>
-		</Item>
 		<Item Name="_openG" Type="Folder">
 			<Item Name="1D Array to String_csm.vi" Type="VI" URL="../Utility/_openG/1D Array to String_csm.vi"/>
 			<Item Name="String to 1D Array_csm.vi" Type="VI" URL="../Utility/_openG/String to 1D Array_csm.vi"/>
@@ -467,25 +463,33 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 				<Item Name="PeriodicFilter-Auto Set Filter.vi" Type="VI" URL="../Utility/_support/PeriodicFilter-Auto Set Filter.vi"/>
 			</Item>
 			<Item Name="Periodic String Filter.vi" Type="VI" URL="../Utility/Periodic String Filter.vi"/>
-			<Item Name="Auto Processing Level.vi" Type="VI" URL="../Utility/Auto Processing Level.vi"/>
 		</Item>
-		<Item Name="Timeout Selector.vi" Type="VI" URL="../Utility/Timeout Selector.vi"/>
+		<Item Name="HIDE" Type="Folder">
+			<Item Name="Build Internal State String.vi" Type="VI" URL="../Utility/Build Internal State String.vi"/>
+			<Item Name="Trim Both Whitespace.vi" Type="VI" URL="../Utility/Trim Both Whitespace.vi"/>
+			<Item Name="Build Error Cluster.vi" Type="VI" URL="../Utility/Build Error Cluster.vi"/>
+			<Item Name="Global Log To String(Periodic Check).vi" Type="VI" URL="../Utility/Global Log To String(Periodic Check).vi"/>
+			<Item Name="Replace Tag with Array.vi" Type="VI" URL="../Utility/Replace Tag with Array.vi"/>
+			<Item Name="Exit With Empty Queue Check.vi" Type="VI" URL="../Utility/Exit With Empty Queue Check.vi"/>
+		</Item>
+		<Item Name="Data Type String" Type="Folder">
+			<Item Name="_Support" Type="Folder">
+				<Item Name="CSM Data Type String to Enum(String).vi" Type="VI" URL="../Utility/_support/CSM Data Type String to Enum(String).vi"/>
+				<Item Name="CSM Data Type String to Enum(TypeEnum).vi" Type="VI" URL="../Utility/_support/CSM Data Type String to Enum(TypeEnum).vi"/>
+				<Item Name="CSM Data Type String to Enum(RefnumEnum).vi" Type="VI" URL="../Utility/_support/CSM Data Type String to Enum(RefnumEnum).vi"/>
+			</Item>
+			<Item Name="CSM Data Type String.vi" Type="VI" URL="../Utility/CSM Data Type String.vi"/>
+			<Item Name="CSM Data Type String to Enum.vi" Type="VI" URL="../Utility/CSM Data Type String to Enum.vi"/>
+		</Item>
+		<Item Name="String History Cacher.vi" Type="VI" URL="../Utility/String History Cacher.vi"/>
 		<Item Name="Check Timeout.vi" Type="VI" URL="../Utility/Check Timeout.vi"/>
-		<Item Name="Build Internal State String.vi" Type="VI" URL="../Utility/Build Internal State String.vi"/>
-		<Item Name="Build Error Cluster.vi" Type="VI" URL="../Utility/Build Error Cluster.vi"/>
-		<Item Name="Trim Both Whitespace.vi" Type="VI" URL="../Utility/Trim Both Whitespace.vi"/>
 		<Item Name="uuid.vi" Type="VI" URL="../Utility/uuid.vi"/>
+		<Item Name="Random Change Flag.vi" Type="VI" URL="../Utility/Random Change Flag.vi"/>
 		<Item Name="Global Log To String.vi" Type="VI" URL="../Utility/Global Log To String.vi"/>
 		<Item Name="Global Log To String(Source Time).vi" Type="VI" URL="../Utility/Global Log To String(Source Time).vi"/>
-		<Item Name="Global Log To String(Periodic Check).vi" Type="VI" URL="../Utility/Global Log To String(Periodic Check).vi"/>
 		<Item Name="Global Log History Cacher.vi" Type="VI" URL="../Utility/Global Log History Cacher.vi"/>
-		<Item Name="String History Cacher.vi" Type="VI" URL="../Utility/String History Cacher.vi"/>
-		<Item Name="Random Change Flag.vi" Type="VI" URL="../Utility/Random Change Flag.vi"/>
-		<Item Name="CSM Data Type String.vi" Type="VI" URL="../Utility/CSM Data Type String.vi"/>
-		<Item Name="CSM Data Type String to Enum.vi" Type="VI" URL="../Utility/CSM Data Type String to Enum.vi"/>
-		<Item Name="Replace Tag with Array.vi" Type="VI" URL="../Utility/Replace Tag with Array.vi"/>
+		<Item Name="Auto Processing Level.vi" Type="VI" URL="../Utility/Auto Processing Level.vi"/>
 		<Item Name="Concatenate Submodule Name.vi" Type="VI" URL="../Utility/Concatenate Submodule Name.vi"/>
-		<Item Name="Exit With Empty Queue Check.vi" Type="VI" URL="../Utility/Exit With Empty Queue Check.vi"/>
 		<Item Name="Format Timestamp.vi" Type="VI" URL="../_Support/Common/Format Timestamp.vi"/>
 		<Item Name="State Triggered Reason.vi" Type="VI" URL="../Utility/State Triggered Reason.vi"/>
 	</Item>

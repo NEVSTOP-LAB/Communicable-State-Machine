@@ -132,6 +132,7 @@
 - <b>State(s) in ("")</b>:Wire the existing states to this input. The default is an empty string.
 - <b>High Priority? (T)</b>:Controls
 - <b>State (S) In ("")</b>:Controls
+
 ### CSM - Forward UI Operations to CSM.vi
 
 -- <b>Controls(输入控件)</b> --
@@ -143,3 +144,11 @@
 - <b>Name ("" to Use UUID)</b>:Controls
 - <b>State (S) In ("")</b>:Controls
 - <b>States Out</b>:Indicators
+
+## 子模块
+
+### Concatenate Submodule Name.vi
+
+- <b>CSM Name</b>:Controls
+- <b>Name</b>:Controls
+- <b>Submodule Name</b>:Indicators
