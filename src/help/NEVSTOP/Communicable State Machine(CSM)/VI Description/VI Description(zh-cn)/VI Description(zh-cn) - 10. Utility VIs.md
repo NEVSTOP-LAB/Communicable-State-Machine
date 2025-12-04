@@ -121,9 +121,7 @@
 - <b>Secondary Type String</b>:Refnum子类型枚举
 - <b>Array Dim</b>:如果是数组数据类型，返回数组维度。
 
-
-
-##
+## 其他工具VI
 
 ### uuid.vi
 

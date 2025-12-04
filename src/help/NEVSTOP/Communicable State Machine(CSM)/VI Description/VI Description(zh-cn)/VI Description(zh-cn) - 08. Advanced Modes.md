@@ -42,6 +42,7 @@
 -- <b>Indicators(输出控件)</b> --
 - <b>CSM Name(marked as worker)</b>: 添加“#”标记的CSM模块名称
 - <b>CSM Name (Marked As Worker)</b>:Indicators
+
 ## 责任链模式 (Chain of Responsibility API) - 待完善
 
 > [!NOTE] CSM 责任链模式(Chain of Responsibility mode)
@@ -85,6 +86,7 @@
 -- <b>Indicators(输出控件)</b> --
 - <b>CSM Name(marked as Chain)</b>:添加“$”标记的CSM模块名称
 - <b>CSM Name (Marked As Chain)</b>:Indicators
+
 ## 旁路循环支持(Side-Loop Support)
 
 ### CSM - Request CSM to Post Message.vi
@@ -100,6 +102,7 @@
 - <b>State</b>:Controls
 - <b>Target Module ("" By Default)</b>:Controls
 - <b>Without Reply? (F)</b>:Controls
+
 ### CSM - Request CSM to Broadcast Status Change.vi
 
 申请 CSM 发布状态。通常用于和CSM并行的功能循环，这些功能循环和 CSM 一起完成完整模块功能。
