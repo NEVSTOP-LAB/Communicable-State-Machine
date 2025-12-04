@@ -144,16 +144,7 @@ CSM Duplicate Name Error.vi
 - <b>CSM Name</b>:Controls
 - <b>Occured</b>:Controls
 
-CSM Get Module Attribute.vim
 
-- <b>Attribute</b>:Controls
-- <b>CSM Name (Dup)</b>:Indicators
-- <b>CSM Name</b>:Controls
-- <b>Default Value (Empty Variant)</b>:Controls
-- <b>Found</b>:Indicators
-- <b>Value</b>:Indicators
-- <b>Wait (5000 ms)</b>:Controls
-- <b>Waited (ms)</b>:Indicators
 
 CSM Invalid Name Error.vi
 
@@ -181,15 +172,7 @@ CSM Part Property at Cursor.vi
 - <b>Property</b>:Indicators
 - <b>Single-line Text</b>:Controls
 
-CSM Set Module Attribute.vim
 
-- <b>Attribute</b>:Controls
-- <b>CSM Name (Dup)</b>:Indicators
-- <b>CSM Name</b>:Controls
-- <b>Replaced</b>:Indicators
-- <b>Value</b>:Controls
-- <b>Wait (5000 ms)</b>:Controls
-- <b>Waited (ms)</b>:Indicators
 
 CSM-Logger-Thread(Event).vi
 

@@ -367,7 +367,7 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="CSM - Destroy Status Change Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Destroy Status Change Event.vi"/>
 			<Item Name="CSM - Module Exit Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Module Exit Event.vi"/>
 		</Item>
-		<Item Name="AttributeAPI" Type="Folder">
+		<Item Name="Attribute API" Type="Folder">
 			<Item Name="CSM - List Module Attributes.vi" Type="VI" URL="../AdvanceAPI/CSM - List Module Attributes.vi"/>
 			<Item Name="CSM - Set Module Attribute.vi" Type="VI" URL="../AdvanceAPI/CSM - Set Module Attribute.vi"/>
 			<Item Name="CSM - Get Module Attribute.vi" Type="VI" URL="../AdvanceAPI/CSM - Get Module Attribute.vi"/>

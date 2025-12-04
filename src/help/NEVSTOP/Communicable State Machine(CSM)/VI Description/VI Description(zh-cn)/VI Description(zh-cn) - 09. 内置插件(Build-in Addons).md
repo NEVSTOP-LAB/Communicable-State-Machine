@@ -156,3 +156,17 @@ CSM Watchdog 线程，用于保证在主程序退出后，所有的异步启动的 CSM 模块都能正常退出
 
 -- <b>Indicators(输出控件)</b> --
 - <b>Remaining States</b>: 剩余的消息队列
+
+### CSM Attributes 补充功能
+
+#### CSM Set Module Attribute.vim
+
+此API提供 `CSM - Set Module Attribute.vi` 自动适应输入数据类型的版本。
+
+> Ref: CSM - Set Module Attribute.vi
+
+#### CSM Get Module Attribute.vim
+
+此API提供 `CSM - Get Module Attribute.vi` 自动适应输入数据类型的版本。
+
+> Ref: CSM - Get Module Attribute.vi
