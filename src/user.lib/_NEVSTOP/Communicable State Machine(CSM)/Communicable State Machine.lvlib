@@ -48,15 +48,21 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 </Property>
 	<Item Name="obsolete and hide" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
-		<Item Name="CSM - Filter Duplicate Messages By Name.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter Duplicate Messages By Name.vi"/>
-		<Item Name="CSM - Remove Duplicated Following Messages.vi" Type="VI" URL="../AdvanceAPI/CSM - Remove Duplicated Following Messages.vi"/>
-		<Item Name="ResMgr-RequestDef.ctl" Type="VI" URL="../_Support/ResMgr/ResMgr-RequestDef.ctl"/>
-		<Item Name="global-GEvt Refs Change Flag.vi" Type="VI" URL="../_Support/GlobalEvent/global-GEvt Refs Change Flag.vi"/>
-		<Item Name="global-GEvnt Filter Change Flag.vi" Type="VI" URL="../_Support/GlobalEvent/global-GEvnt Filter Change Flag.vi"/>
-		<Item Name="global-CSMQ FGV Change Flag.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/global-CSMQ FGV Change Flag.vi"/>
-		<Item Name="global-Broadcast Cache Change Flag.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/global-Broadcast Cache Change Flag.vi"/>
-		<Item Name="global-TMO for Sync-Rep.vi" Type="VI" URL="../_Support/Message/global-TMO for Sync-Rep.vi"/>
-		<Item Name="FGV-GEvt Refs.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GEvt Refs.vi"/>
+		<Item Name="2025Q3" Type="Folder">
+			<Item Name="global-GEvt Refs Change Flag.vi" Type="VI" URL="../_Support/GlobalEvent/global-GEvt Refs Change Flag.vi"/>
+			<Item Name="global-GEvnt Filter Change Flag.vi" Type="VI" URL="../_Support/GlobalEvent/global-GEvnt Filter Change Flag.vi"/>
+			<Item Name="global-CSMQ FGV Change Flag.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/global-CSMQ FGV Change Flag.vi"/>
+			<Item Name="global-Broadcast Cache Change Flag.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/global-Broadcast Cache Change Flag.vi"/>
+			<Item Name="global-TMO for Sync-Rep.vi" Type="VI" URL="../_Support/Message/global-TMO for Sync-Rep.vi"/>
+			<Item Name="FGV-GEvt Refs.vi" Type="VI" URL="../_Support/GlobalEvent/FGV-GEvt Refs.vi"/>
+			<Item Name="CSM - Filter Duplicate Messages By Name.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter Duplicate Messages By Name.vi"/>
+			<Item Name="CSM - Remove Duplicated Following Messages.vi" Type="VI" URL="../AdvanceAPI/CSM - Remove Duplicated Following Messages.vi"/>
+			<Item Name="ResMgr-RequestDef.ctl" Type="VI" URL="../_Support/ResMgr/ResMgr-RequestDef.ctl"/>
+		</Item>
+		<Item Name="2025Q4" Type="Folder">
+			<Item Name="CSM - Replace Substitution Marks in Messages.vi" Type="VI" URL="../AdvanceAPI/CSM - Replace Substitution Marks in Messages.vi"/>
+			<Item Name="Replace Tag with Array.vi" Type="VI" URL="../Utility/Replace Tag with Array.vi"/>
+		</Item>
 	</Item>
 	<Item Name="Support" Type="Folder">
 		<Property Name="NI.SortType" Type="Int">3</Property>
@@ -303,7 +309,6 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="Build Unregister Status Message.vi" Type="VI" URL="../_Polymophic/Build Unregister Status Message.vi"/>
 			<Item Name="Build Normal Status Message.vi" Type="VI" URL="../_Polymophic/Build Normal Status Message.vi"/>
 			<Item Name="Build Interrupt Status Message.vi" Type="VI" URL="../_Polymophic/Build Interrupt Status Message.vi"/>
-			<Item Name="CSM - Replace Substitution Marks in Messages.vi" Type="VI" URL="../AdvanceAPI/CSM - Replace Substitution Marks in Messages.vi"/>
 			<Item Name="CSM - Replace Marks in Messages.vi" Type="VI" URL="../_Polymophic/CSM - Replace Marks in Messages.vi"/>
 			<Item Name="CSM - Replace Mark with String Array.vi" Type="VI" URL="../_Polymophic/CSM - Replace Mark with String Array.vi"/>
 		</Item>
@@ -403,7 +408,7 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="CSM - Compact Multiple States.vi" Type="VI" URL="../AdvanceAPI/CSM - Compact Multiple States.vi"/>
 			<Item Name="CSM - Break Down Multiple States String.vi" Type="VI" URL="../AdvanceAPI/CSM - Break Down Multiple States String.vi"/>
 		</Item>
-		<Item Name="Advance" Type="Folder">
+		<Item Name="Advanced" Type="Folder">
 			<Item Name="Multi-Loop Module Support" Type="Folder">
 				<Item Name="CSM - Request CSM to Post Message.vi" Type="VI" URL="../AdvanceAPI/CSM - Request CSM to Post Message.vi"/>
 				<Item Name="CSM - Request CSM to Broadcast Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Request CSM to Broadcast Status Change.vi"/>
@@ -428,6 +433,13 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 		<Item Name="CSM - Convert Argument to Error.vi" Type="VI" URL="../AdvanceAPI/CSM - Convert Argument to Error.vi"/>
 	</Item>
 	<Item Name="Utility" Type="Folder">
+		<Item Name="_hide" Type="Folder">
+			<Item Name="Build Internal State String.vi" Type="VI" URL="../Utility/Build Internal State String.vi"/>
+			<Item Name="Trim Both Whitespace.vi" Type="VI" URL="../Utility/Trim Both Whitespace.vi"/>
+			<Item Name="Build Error Cluster.vi" Type="VI" URL="../Utility/Build Error Cluster.vi"/>
+			<Item Name="Global Log To String(Periodic Check).vi" Type="VI" URL="../Utility/Global Log To String(Periodic Check).vi"/>
+			<Item Name="Exit With Empty Queue Check.vi" Type="VI" URL="../Utility/Exit With Empty Queue Check.vi"/>
+		</Item>
 		<Item Name="_openG" Type="Folder">
 			<Item Name="1D Array to String_csm.vi" Type="VI" URL="../Utility/_openG/1D Array to String_csm.vi"/>
 			<Item Name="String to 1D Array_csm.vi" Type="VI" URL="../Utility/_openG/String to 1D Array_csm.vi"/>
@@ -441,7 +453,7 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="Set Enum String Value_csm.vi" Type="VI" URL="../Utility/_openG/Set Enum String Value_csm.vi"/>
 			<Item Name="Get Header from TD_csm.vi" Type="VI" URL="../Utility/_openG/Get Header from TD_csm.vi"/>
 		</Item>
-		<Item Name="_Periodic String Filter" Type="Folder">
+		<Item Name="Periodic String Filter" Type="Folder">
 			<Item Name="Support" Type="Folder">
 				<Item Name="Periodic String Filter Setting.ctl" Type="VI" URL="../Utility/Periodic String Filter Setting.ctl"/>
 				<Item Name="Periodic String Filter Level.ctl" Type="VI" URL="../Utility/_support/Periodic String Filter Level.ctl"/>
@@ -465,14 +477,6 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 				<Item Name="PeriodicFilter-Auto Set Filter.vi" Type="VI" URL="../Utility/_support/PeriodicFilter-Auto Set Filter.vi"/>
 			</Item>
 			<Item Name="Periodic String Filter.vi" Type="VI" URL="../Utility/Periodic String Filter.vi"/>
-		</Item>
-		<Item Name="HIDE" Type="Folder">
-			<Item Name="Build Internal State String.vi" Type="VI" URL="../Utility/Build Internal State String.vi"/>
-			<Item Name="Trim Both Whitespace.vi" Type="VI" URL="../Utility/Trim Both Whitespace.vi"/>
-			<Item Name="Build Error Cluster.vi" Type="VI" URL="../Utility/Build Error Cluster.vi"/>
-			<Item Name="Global Log To String(Periodic Check).vi" Type="VI" URL="../Utility/Global Log To String(Periodic Check).vi"/>
-			<Item Name="Replace Tag with Array.vi" Type="VI" URL="../Utility/Replace Tag with Array.vi"/>
-			<Item Name="Exit With Empty Queue Check.vi" Type="VI" URL="../Utility/Exit With Empty Queue Check.vi"/>
 		</Item>
 		<Item Name="Data Type String" Type="Folder">
 			<Item Name="_Support" Type="Folder">
