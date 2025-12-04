@@ -37,29 +37,6 @@
 
 ### Replace Tag with Array.vi
 
-将单条状态字符串中的标签替换为数组字符串，并合并成描述一组状态的符串。
+此VI将不在维护，请使用CSM - Replace Mark with String Array.vi
 
-    例如：对于 `Draw >> <1> -@ Painter`
-    
-    <b>Tag</b> 应该选择 <1>
-
-    输入数组[Line,Circle,Rectangle]，可以得到：
-        Draw >> Line -@ Painter
-        Draw >> Circle -@ Painter
-        Draw >> Rectangle -@ Painter
-
--- <b>Controls(输入控件)</b> --
-- <b>single-line text</b>:单条状态字符串，包含<1>,<2>,<3>,等标签
-- <b>Tag</b>:要替换的标签，例如<1>,<2>,<3>,等
-- <b>replace string</b>:待替换的数组字符串
-
--- <b>Indicators(输出控件)</b> --
-- <b>States</b>:合并后的状态字符串
-
-### Exit With Empty Queue Check.vi
-
-- <b>Exit</b>:Indicators
-- <b>Queue</b>:Controls
-- <b>Since Exiting (S)</b>:Indicators
-- <b>Stop</b>:Controls
-- <b>Timeout (5s)</b>:Controls
+> Ref: CSM - Replace Mark with String Array.vi

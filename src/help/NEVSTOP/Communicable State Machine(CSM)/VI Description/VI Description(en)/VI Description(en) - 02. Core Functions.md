@@ -235,7 +235,7 @@ Example: Unbind the download completion message of the downloader module from th
 <b>Indicators</b>
 - <b>CSM Message String</b>: The concatenated CSM message string.
 
-#### CSM - Replace Substitution Marks in Messages.vi
+#### CSM - Replace Marks in Messages.vi
 
 Provides a batch replacement function for editing multiple CSM message strings conveniently. There are 4 markers that can be replaced:
 - <param> Marker: Usually represents the same parameter.

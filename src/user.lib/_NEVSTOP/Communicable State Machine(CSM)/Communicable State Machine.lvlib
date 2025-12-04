@@ -304,6 +304,8 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="Build Normal Status Message.vi" Type="VI" URL="../_Polymophic/Build Normal Status Message.vi"/>
 			<Item Name="Build Interrupt Status Message.vi" Type="VI" URL="../_Polymophic/Build Interrupt Status Message.vi"/>
 			<Item Name="CSM - Replace Substitution Marks in Messages.vi" Type="VI" URL="../AdvanceAPI/CSM - Replace Substitution Marks in Messages.vi"/>
+			<Item Name="CSM - Replace Marks in Messages.vi" Type="VI" URL="../_Polymophic/CSM - Replace Marks in Messages.vi"/>
+			<Item Name="CSM - Replace Mark with String Array.vi" Type="VI" URL="../_Polymophic/CSM - Replace Mark with String Array.vi"/>
 		</Item>
 		<Item Name="Add State(s) to Queue By BOOL" Type="Folder">
 			<Item Name="Add State(s) to Queue By BOOL(Element).vi" Type="VI" URL="../_Polymophic/Add State(s) to Queue By BOOL(Element).vi"/>
