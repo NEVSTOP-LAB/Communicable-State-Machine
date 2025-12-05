@@ -102,10 +102,7 @@ CSM - Internal State Debug Log History.vi
 
 
 
-CSM - Mark As System-Level Module.vi
 
-- <b>CSM Name (Marked As Sysetem-Level Module)</b>:Indicators
-- <b>CSM Name</b>:Controls
 
 CSM - Resolve Node Module.vi
 
