@@ -67,6 +67,7 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="Build Unregister Status Message.vi" Type="VI" URL="../_Polymophic/Build Unregister Status Message.vi"/>
 			<Item Name="Build Normal Status Message.vi" Type="VI" URL="../_Polymophic/Build Normal Status Message.vi"/>
 			<Item Name="Build Interrupt Status Message.vi" Type="VI" URL="../_Polymophic/Build Interrupt Status Message.vi"/>
+			<Item Name="CSM - Unregister Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Unregister Status Change.vi"/>
 		</Item>
 	</Item>
 	<Item Name="Support" Type="Folder">
@@ -387,8 +388,9 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="CSM - Delete Module Attribute.vi" Type="VI" URL="../AdvanceAPI/CSM - Delete Module Attribute.vi"/>
 		</Item>
 		<Item Name="Broadcast Registry" Type="Folder">
+			<Item Name="CSM - Register Broadcast.vi" Type="VI" URL="../AdvanceAPI/CSM - Register Broadcast.vi"/>
+			<Item Name="CSM - Unregister Broadcast.vi" Type="VI" URL="../AdvanceAPI/CSM - Unregister Broadcast.vi"/>
 			<Item Name="CSM - Register Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Register Status Change.vi"/>
-			<Item Name="CSM - Unregister Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Unregister Status Change.vi"/>
 			<Item Name="CSM - Remove Module in Broadcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - Remove Module in Broadcast Registry.vi"/>
 			<Item Name="CSM - List Rules in Broadcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - List Rules in Broadcast Registry.vi"/>
 			<Item Name="CSM - List Status in Broadcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - List Status in Broadcast Registry.vi"/>

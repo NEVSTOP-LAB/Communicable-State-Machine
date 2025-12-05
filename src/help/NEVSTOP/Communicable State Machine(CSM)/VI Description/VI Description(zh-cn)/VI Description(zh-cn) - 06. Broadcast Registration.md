@@ -1,8 +1,6 @@
-# 状态订阅管理(Status Registration)
+# 广播订阅管理(Broadcast Registration)
 
-> [!NOTE]
-
-## CSM - Register Status Change.vi
+## CSM - Register Broadcast.vi
 
 注册以接收其他CSM模块状态更改的通知。如果未连接 “Response Message” 或输入为空，则将使用相同的<b>Status</b> 名称作为响应消息。
 
@@ -19,7 +17,7 @@
 - <b>Response Message (If "", Same as Source Message)</b>:Controls
 - <b>Source CSM Name (* as Default)</b>:Controls
 
-## CSM - Unregister Status Change.vi
+## CSM - Unregister Broadcast.vi
 
 取消注册其他 CSM 模块状态更改的通知。
 
@@ -88,4 +86,4 @@
 
 ## CSM - Drop Broadcast Registry.vi
 
-重置后台广播注册的所有信息。
+重置后台广播注册的所有信息，应用在完全重置订阅关系的场景中。

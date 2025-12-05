@@ -94,6 +94,7 @@
 拼接生成CSM消息字符串，消息的类型符号会根据输入的<b>State with Arguments</b>自动检测。
 
 > Ref: 消息拼接API
+> Ref: CSM消息的目标模块说明
 
 -- <b>Controls(输入控件)</b> --
 - <b>State with Arguments</b>：CSM状态字符串，可包含参数和目标模块信息
@@ -110,6 +111,8 @@
       Message >> Arguments -@ Target
 
 > Ref: 消息拼接API
+> Ref: 同步消息
+> Ref: CSM消息的目标模块说明
 
 -- <b>Controls(输入控件)</b> --
 - <b>State with Arguments</b>：CSM状态字符串。
@@ -126,6 +129,8 @@
       Message >> Arguments -> Target
 
 > Ref: 消息拼接API
+> Ref: 异步消息
+> Ref: CSM消息的目标模块说明
 
 -- <b>Controls(输入控件)</b> --
 - <b>State with Arguments</b>：CSM状态字符串。
@@ -142,6 +147,8 @@
       Message >> Arguments ->| Target
 
 > Ref: 消息拼接API
+> Ref: 异步消息
+> Ref: CSM消息的目标模块说明
 
 -- <b>Controls(输入控件)</b> --
 - <b>State with Arguments</b>：CSM状态字符串。
