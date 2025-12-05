@@ -147,7 +147,7 @@
 -- <b>Indicators(输出控件)</b> --
 - <b>CSM Message String</b>：拼接生成的CSM消息字符串
 
-#### Build Normal Status Message.vi
+#### Build Status Broadcast Message.vi
 
 拼接普通状态消息字符串，消息格式如下：
 
@@ -165,7 +165,7 @@
 -- <b>Indicators(输出控件)</b> --
 - <b>CSM Message String</b>：拼接生成的CSM消息字符串
 
-#### Build Interrupt Status Message.vi
+#### Build Interrupt Broadcast Message.vi
 
 拼接中断状态消息，消息格式如下：
 
@@ -180,7 +180,7 @@
 -- <b>Indicators(输出控件)</b> --
 - <b>CSM Message String</b>：拼接生成的CSM消息字符串
 
-#### Build Register Status Message.vi
+#### Build Register Message.vi
 
 拼接注册状态操作消息字符串，消息格式如下：
 
@@ -207,7 +207,7 @@
 -- <b>Indicators(输出控件)</b> --
 - <b>CSM Message String</b>：拼接生成的CSM消息字符串
 
-#### Build Unregister Status Message.vi
+#### Build Unregister Message.vi
 
 拼接取消注册状态操作消息字符串，消息格式如下：
 

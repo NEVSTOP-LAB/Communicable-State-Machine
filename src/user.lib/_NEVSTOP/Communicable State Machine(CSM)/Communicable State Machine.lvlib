@@ -62,6 +62,11 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 		<Item Name="2025Q4" Type="Folder">
 			<Item Name="CSM - Replace Substitution Marks in Messages.vi" Type="VI" URL="../AdvanceAPI/CSM - Replace Substitution Marks in Messages.vi"/>
 			<Item Name="Replace Tag with Array.vi" Type="VI" URL="../Utility/Replace Tag with Array.vi"/>
+			<Item Name="Build State String with Arguments++.vi" Type="VI" URL="../Build State String with Arguments++.vi"/>
+			<Item Name="Build Register Status Message.vi" Type="VI" URL="../_Polymophic/Build Register Status Message.vi"/>
+			<Item Name="Build Unregister Status Message.vi" Type="VI" URL="../_Polymophic/Build Unregister Status Message.vi"/>
+			<Item Name="Build Normal Status Message.vi" Type="VI" URL="../_Polymophic/Build Normal Status Message.vi"/>
+			<Item Name="Build Interrupt Status Message.vi" Type="VI" URL="../_Polymophic/Build Interrupt Status Message.vi"/>
 		</Item>
 	</Item>
 	<Item Name="Support" Type="Folder">
@@ -305,10 +310,10 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="Build Asynchronous Message with Arguments.vi" Type="VI" URL="../_Polymophic/Build Asynchronous Message with Arguments.vi"/>
 			<Item Name="Build No-Reply Asynchronous Message with Arguments.vi" Type="VI" URL="../_Polymophic/Build No-Reply Asynchronous Message with Arguments.vi"/>
 			<Item Name="Build Message with Arguments(Auto Check).vi" Type="VI" URL="../_Polymophic/Build Message with Arguments(Auto Check).vi"/>
-			<Item Name="Build Register Status Message.vi" Type="VI" URL="../_Polymophic/Build Register Status Message.vi"/>
-			<Item Name="Build Unregister Status Message.vi" Type="VI" URL="../_Polymophic/Build Unregister Status Message.vi"/>
-			<Item Name="Build Normal Status Message.vi" Type="VI" URL="../_Polymophic/Build Normal Status Message.vi"/>
-			<Item Name="Build Interrupt Status Message.vi" Type="VI" URL="../_Polymophic/Build Interrupt Status Message.vi"/>
+			<Item Name="Build Status Broadcast Message.vi" Type="VI" URL="../_Polymophic/Build Status Broadcast Message.vi"/>
+			<Item Name="Build Interrupt Broadcast Message.vi" Type="VI" URL="../_Polymophic/Build Interrupt Broadcast Message.vi"/>
+			<Item Name="Build Register Message.vi" Type="VI" URL="../_Polymophic/Build Register Message.vi"/>
+			<Item Name="Build Unregister Message.vi" Type="VI" URL="../_Polymophic/Build Unregister Message.vi"/>
 			<Item Name="CSM - Replace Marks in Messages.vi" Type="VI" URL="../_Polymophic/CSM - Replace Marks in Messages.vi"/>
 			<Item Name="CSM - Replace Mark with String Array.vi" Type="VI" URL="../_Polymophic/CSM - Replace Mark with String Array.vi"/>
 		</Item>
@@ -501,7 +506,6 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 	</Item>
 	<Item Name="Parse State Queue++.vi" Type="VI" URL="../Parse State Queue++.vi"/>
 	<Item Name="Add State(s) to Queue By BOOL++.vi" Type="VI" URL="../Add State(s) to Queue By BOOL++.vi"/>
-	<Item Name="Build State String with Arguments++.vi" Type="VI" URL="../Build State String with Arguments++.vi"/>
 	<Item Name="Build Message with Arguments++.vi" Type="VI" URL="../Build Message with Arguments++.vi"/>
 	<Item Name="CSM - Broadcast Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Broadcast Status Change.vi"/>
 </Library>
