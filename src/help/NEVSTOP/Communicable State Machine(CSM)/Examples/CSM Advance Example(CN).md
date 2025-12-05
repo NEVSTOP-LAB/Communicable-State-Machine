@@ -1,16 +1,16 @@
 # CSM Advance Example Description
 
-## 工作者模式范例
+## 协作者模式范例
 
 ### 调用程序(Action Worker Mode Example.vi)
 
 #### Overview
 
-本示例演示 CSM 框架中的工作者模式 (Worker Mode)。在本示例中，四个worker 在后台运行,共同组成了一个处于工作者模式的CSM模块。
+本示例演示 CSM 框架中的协作者模式 (Worker Mode)。在本示例中，四个worker 在后台运行,共同组成了一个处于协作者模式的CSM模块。
 
 #### Introduction
 
-本示例演示 CSM 框架中的工作者模式 (Worker Mode)。在工作者模式中，多个可克隆的 CSM 实例作为node 运行。为避免命名冲突，使用附加“#”后缀的模块名称，告知CSM框架这是一个工作者模块。当消息发送给工作者时，将使用公平队列机制处理它，第一个空闲的模块将会处理这个消息。从外部看，系统表现得好像只有一个模块在运行，所有 CSM 概念（例如同步、异步和状态消息）都保持不变。
+本示例演示 CSM 框架中的协作者模式 (Worker Mode)。在协作者模式中，多个可克隆的 CSM 实例作为node 运行。为避免命名冲突，使用附加“#”后缀的模块名称，告知CSM框架这是一个工作者模块。当消息发送给工作者时，将使用公平队列机制处理它，第一个空闲的模块将会处理这个消息。从外部看，系统表现得好像只有一个模块在运行，所有 CSM 概念（例如同步、异步和状态消息）都保持不变。
 
 在本示例中，四个worker 在后台运行。
 
@@ -22,22 +22,22 @@
 - Step4：
     - Step4.1：UI 事件处理，在用户单击六个用户按钮 "DoSth: DoA -> Worker", "DoSth: DoA -@ Worker", "DoSth: Error -> Worker", "DoSth: Error -@ Worker" , "Macro: Exit -@ Worker", "Macro: Exit -> Worker" 中的任何一个后，将向第一个空闲的工作者 CSM 模块发送一条模块间消息。
     - Step4.2 然后在 UI 中添加一个 Response Source Manager 指示器，以处理 "Async Response" 和 "Response" case
-- Step5：模块退出。在 Macro: Exit 消息中，使用 "CSM - Build Exit Messages of CSMs.vi" 创建所有正在运行的 CSM 工作者模块发送 "Macro:Exit" 的同步消息（您也可以手动键入模块间消息，注意有多少个正在运行的工作者模块。每个正在运行的工作者模式都需要一条消息），并向调用者/主 CSM 模块发送本地消息 "Macro:Exit"。然后所有 CSM 模块将按顺序退出。
+- Step5：模块退出。在 Macro: Exit 消息中，使用 "CSM - Build Exit Messages of CSMs.vi" 创建所有正在运行的 CSM 工作者模块发送 "Macro:Exit" 的同步消息（您也可以手动键入模块间消息，注意有多少个正在运行的工作者模块。每个正在运行的协作者模式都需要一条消息），并向调用者/主 CSM 模块发送本地消息 "Macro:Exit"。然后所有 CSM 模块将按顺序退出。
 
-### 工作者模式模块实现(Action Worker.vi)
+### 协作者模式模块实现(Action Worker.vi)
 
 #### Overview
 
-本示例为工作者模式中CSM模块节点的实现。它被Action Worker Mode Example.vi调用，实例化出多个节点，共同组成了一个处于工作者模式的CSM模块。为了能够同时运行，CSM工作者模块的VI，必须设置为可重入。
+本示例为协作者模式中CSM模块节点的实现。它被Action Worker Mode Example.vi调用，实例化出多个节点，共同组成了一个处于协作者模式的CSM模块。为了能够同时运行，CSM工作者模块的VI，必须设置为可重入。
 
 #### Introduction
 
-本示例为工作者模式中CSM模块节点的实现。提供以下两个方法：
+本示例为协作者模式中CSM模块节点的实现。提供以下两个方法：
 
 1. DoSth: DoA: 无实际操作，仅用于演示。
 2. DoSth: Error: 无实际操作，会产生一个Code=12345的错误，仅用于演示。
 
-为了工作者模式的node能够同时运行，VI执行属性设置为可重入。
+为了协作者模式的node能够同时运行，VI执行属性设置为可重入。
 
 #### Steps
 
