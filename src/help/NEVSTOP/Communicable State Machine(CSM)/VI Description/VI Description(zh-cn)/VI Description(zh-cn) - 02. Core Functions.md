@@ -68,11 +68,15 @@
 
 该VI用于构建CSM消息字符串及操作字符串。
 
-> [!NOTE] 消息拼接API
+> [!NOTE] 
+> **消息拼接API**
+>
 > 该类型API不会直接发送消息，仅用于拼接消息字符串。需将字符串并入CSM的状态队列后，在Parse State Queue++.vi中发送消息并执行操作。
 > 在熟悉CSM规则的情况下，可不必使用此类API，直接在字符串中键入对应的消息字符串或操作字符串。
 
-> [!NOTE] 多态VI(Polymorphic VI)选项:
+> [!NOTE] 
+> **多态VI(Polymorphic VI)选项**
+>
 > - Build Message with Arguments(Auto Check).vi：根据输入的消息符号，自动拼接消息字符串。
 > - Build Asynchronous Message with Arguments.vi：拼接生成CSM异步消息字符串，消息类型符号为"->"
 > - Build No-Reply Asynchronous Message with Arguments.vi：拼接生成CSM异步不等待返回消息字符串，消息类型符号为"->|"
@@ -308,7 +312,9 @@
       //广播状态更改
       Status >> Arguments -><broadcast>
 
-> [!NOTE] CSM 的状态队列操作API
+> [!NOTE] 
+> **CSM 的状态队列操作API**
+>
 > 该类型API不会直接发送消息，只是拼接消息字符串。在Parse State Queue++.vi中发送消息、执行操作。
 > 与消息拼接API不同的是，此类API会包含CSM的状态队列字符串输入，相当于在状态队列中插入消息。
 
@@ -326,7 +332,9 @@
 
 > Ref: CSM 的状态队列操作API
 
-> [!NOTE] 多态VI(Polymorphic VI)选项:
+> [!NOTE] 
+> **多态VI(Polymorphic VI)选项**
+>
 > - Add State(s) to Queue By BOOL(Element).vi
 > - Add State(s) to Queue By BOOL(Array Left).vi
 > - Add State(s) to Queue By BOOL(Array Right).vi

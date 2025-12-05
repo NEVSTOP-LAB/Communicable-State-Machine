@@ -1,8 +1,8 @@
-# CSM API
+# 状态订阅管理(Status Registration)
 
-## 状态订阅管理(Status Registration)
+> [!NOTE]
 
-### CSM - Register Status Change.vi
+## CSM - Register Status Change.vi
 
 注册以接收其他CSM模块状态更改的通知。如果未连接 “Response Message” 或输入为空，则将使用相同的<b>Status</b> 名称作为响应消息。
 
@@ -19,7 +19,7 @@
 - <b>Response Message (If "", Same as Source Message)</b>:Controls
 - <b>Source CSM Name (* as Default)</b>:Controls
 
-### CSM - Unregister Status Change.vi
+## CSM - Unregister Status Change.vi
 
 取消注册其他 CSM 模块状态更改的通知。
 
@@ -34,30 +34,30 @@
 - <b>Response Message ("*" as Default)</b>:Controls
 - <b>Source CSM Name (* as Default)</b>:Controls
 
-### CSM - List All Status Registration.vi
+## CSM - List All Status Registration.vi
 
 -- <b>Indicators(输出控件)</b> --
 - <b>Status Array</b>:
 
-### CSM - List Mapping Relationships in Broadcast Registry.vi
+## CSM - List Mapping Relationships in Broadcast Registry.vi
 
 -- <b>Indicators(输出控件)</b> --
 - <b>Mapping Relationships</b>:
 - <b>Array</b>:Indicators
 
-### CSM - List Rules in Broadcast Registry.vi
+## CSM - List Rules in Broadcast Registry.vi
 
 -- <b>Indicators(输出控件)</b> --
 - <b>Rules</b>:
 - <b>Entries</b>:Indicators
 
-### CSM - List Status in Broadcast Registry.vi
+## CSM - List Status in Broadcast Registry.vi
 
 -- <b>Indicators(输出控件)</b> --
 - <b>Status in Registry</b>:
 - <b>Status In Registry</b>:Indicators
 
-### CSM - Check Mapping Relationship in Broadcast Registry.vi
+## CSM - Check Mapping Relationship in Broadcast Registry.vi
 
 -- <b>Controls(输入控件)</b> --
 - <b>CSM Name</b>:
@@ -68,7 +68,7 @@
 - <b>Array</b>:Indicators
 - <b>CSM Name</b>:Controls
 
-### CSM - Check Status Registration.vi
+## CSM - Check Status Registration.vi
 
 -- <b>Controls(输入控件)</b> --
 - <b>CSM Name</b>:
@@ -77,7 +77,7 @@
 -- <b>Indicators(输出控件)</b> --
 - <b>Array</b>:
 
-### CSM - Remove Module in Broadcast Registry.vi
+## CSM - Remove Module in Broadcast Registry.vi
 
 -- <b>Controls(输入控件)</b> --
 - <b>CSM Name</b>:
@@ -85,3 +85,7 @@
 -- <b>Indicators(输出控件)</b> --
 - <b>CSM Name(dup)</b>:
 - <b>CSM Name (Dup)</b>:Indicators
+
+## CSM - Drop Broadcast Registry.vi
+
+重置后台广播注册的所有信息。

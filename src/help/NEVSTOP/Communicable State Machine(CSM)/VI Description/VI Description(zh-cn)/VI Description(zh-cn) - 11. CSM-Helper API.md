@@ -6,7 +6,9 @@
 
 使用最少的VI调用，判断是否是 CSM 模块，用于 LabVIEW 插件预先判断。
 
-> [!NOTE] 多态VI(Polymorphic VI)选项:
+> [!NOTE] 
+> **多态VI(Polymorphic VI)选项**
+>
 > - Is CSM Module - VIRef.vi
 > - Is CSM Module - WhileLoop.vi
 > - Is CSM Module - Structure.vi

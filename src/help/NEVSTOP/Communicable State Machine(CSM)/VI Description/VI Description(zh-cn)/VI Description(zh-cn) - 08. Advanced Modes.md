@@ -1,11 +1,14 @@
 # CSM API
 
-> [!NOTE] 名称拼接API
+> [!NOTE] 
+> **名称拼接API**
+>
 > 这个 VI 只操作了模块名称字符串，并没有实际功能，因此当熟悉 CSM 规则后，可以直接输入对应的名称字符串和规则符号，不是必须调用此API.
 
 ## 工作者模式 (Work Mode API)
 
-> [!NOTE] CSM 工作者模式(worker mode)
+> [!NOTE] 
+> **CSM 工作者模式(worker mode)**
 >
 > 一个 CSM 模块，通过实例化多个实例，申请的名称后添加“#”,并共享相同的消息队列，实现工作者模式。
 > - 从外部调用上看，这些实例一起组成了一个复合的模块，命名为 Worker Agent。
@@ -45,7 +48,8 @@
 
 ## 责任链模式 (Chain of Responsibility API) - 待完善
 
-> [!NOTE] CSM 责任链模式(Chain of Responsibility mode)
+> [!NOTE] 
+> **CSM 责任链模式(Chain of Responsibility mode)**
 >
 > 多个 CSM 模块，申请的名称后添加“$”,组成处理事务的一个链条，通过责任链模式形成一个完整的模块。
 

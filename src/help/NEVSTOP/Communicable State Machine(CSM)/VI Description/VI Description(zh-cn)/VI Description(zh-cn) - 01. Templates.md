@@ -2,18 +2,24 @@
 
 ## 模板(Templates)
 
-> [!NOTE] CSM 名称规则(CSM Name Rule)
+> [!NOTE] 
+> **CSM 名称规则(CSM Name Rule)**
+>
 > - CSM 模块名称必须唯一，否则将导致 CSM 进入 "Critical Error" 状态。
 > - 若输入为空字符串("")，系统将使用 UUID 作为模块名称。该模块会被标记为独立模式，不会包含在模块列表中。
 > - 若输入以 '#' 结尾，则会实例化一个工作者模式节点，多个节点可共同组成一个工作者模式模块。
 > - 若输入以 "$" + 数字结尾，则会实例化一个责任链模式节点，多个节点可共同组成一个责任链模式模块。
 > - 若输入以 "." 开头，则该模块为系统级模块。在默认参数下，此类模块不会被 CSM - List Module.vi 列出，适用于实例化后台运行的模块。
 
-> [!NOTE] CSM 初始化状态("Macro: Initialize")
+> [!NOTE] 
+> **CSM 初始化状态("Macro: Initialize")**
+>
 > - 默认值与 JKISM 状态机保持一致，为 "Macro: Initialize"。
 > - 该状态用于初始化 CSM 模块的状态机，CSM 模块仅在完成该宏状态后，才会处理外部发送的消息。
 
-> [!NOTE] CSM 退出状态("Macro: Exit")
+> [!NOTE] 
+> **CSM 退出状态("Macro: Exit")**
+>
 > - 默认值与 JKISM 状态机保持一致，为 "Macro: Exit"。
 > - 该状态用于退出 CSM 模块的状态机，CSM 模块进入该状态后，将不会再处理外部发送的消息。
 
