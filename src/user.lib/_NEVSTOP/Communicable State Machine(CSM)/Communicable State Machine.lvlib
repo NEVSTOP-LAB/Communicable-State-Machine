@@ -417,10 +417,12 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 		</Item>
 		<Item Name="Advanced" Type="Folder">
 			<Item Name="Multi-Loop Module Support" Type="Folder">
+				<Item Name="HIDE" Type="Folder">
+					<Item Name="CSM - Forward States to CSM.vi" Type="VI" URL="../AdvanceAPI/CSM - Forward States to CSM.vi"/>
+				</Item>
 				<Item Name="CSM - Request CSM to Post Message.vi" Type="VI" URL="../AdvanceAPI/CSM - Request CSM to Post Message.vi"/>
 				<Item Name="CSM - Request CSM to Broadcast Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Request CSM to Broadcast Status Change.vi"/>
 				<Item Name="CSM - Module Turns Invalid.vi" Type="VI" URL="../AdvanceAPI/CSM - Module Turns Invalid.vi"/>
-				<Item Name="CSM - Forward States to CSM.vi" Type="VI" URL="../AdvanceAPI/CSM - Forward States to CSM.vi"/>
 				<Item Name="CSM - Forward UI Operations to CSM.vi" Type="VI" URL="../AdvanceAPI/CSM - Forward UI Operations to CSM.vi"/>
 			</Item>
 			<Item Name="CSM - Mark As System-Level Module.vi" Type="VI" URL="../AdvanceAPI/CSM - Mark As System-Level Module.vi"/>

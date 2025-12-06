@@ -107,7 +107,6 @@ Request CSM to publish status. Typically used for functional loops running in pa
 - <b>Arguments ("")</b>: Parameters of the status to be broadcasted
 - <b>Broadcast (T)</b>: Control switch input for broadcasting
 
-### CSM - Flood of Events Handler Side Loop.vi
 
 ### CSM - Forward States to CSM.vi
 

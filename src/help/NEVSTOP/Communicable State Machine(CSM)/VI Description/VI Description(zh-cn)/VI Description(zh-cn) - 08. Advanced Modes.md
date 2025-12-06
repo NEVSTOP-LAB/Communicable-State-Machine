@@ -32,6 +32,7 @@
 -- <b>Indicators(输出控件)</b> --
 - <b>CSM Name (Marked As Sysetem-Level Module)</b>: 添加“.”标记的CSM模块名称
 
+
 ## 子模块
 
 > [!NOTE] 
@@ -47,6 +48,12 @@
 > 但可以通过 CSM - List Submodules.vi 来获取"Group"的所有逻辑上的子模块，包括"Group.SubModuleA"和"Group.SubModuleB"。
 >
 > 协作者模式、责任链模式的CSM模块名称, 也可以包含".", 因为只是逻辑分组，不影响模块的运行。
+
+### Concatenate Submodule Name.vi
+
+- <b>CSM Name</b>:Controls
+- <b>Name</b>:Controls
+- <b>Submodule Name</b>:Indicators
 
 ## 工作者模式 (Work Mode API)
 
@@ -96,7 +103,7 @@
 > **CSM 责任链模式(Chain of Responsibility mode)**
 >
 > 多个 CSM 模块，申请的名称后添加“$”,组成处理事务的一个链条，通过责任链模式形成一个完整的模块。
-
+>
 > - 从外部调用上看，这些实例一起组成了一个复合的模块，命名为 Chain。
 > - 每一个实例，命名为 chain node。
 >
@@ -104,21 +111,22 @@
 > 外部调用者可以认为 Chain 就是一个 CSM 模块，可以进行消息通讯、状态注册等操作。
 > 从内部看，Nodes 会根据排列顺序依次尝试处理消息，当 node 具有当前消息处理的能力时，消息被处理，不再向后传递。
 >
-> 举例：
-> //申请模块名称为 module$, module 是 chain 名称，实例化 4 个实例，这四个实例的名字可能为：
-> // - module$1
-> // - module$2
-> // - module$3
-> // - module$4
-> // 组成的 Chain 顺序为 module$1(head) >> module$2 >> module$3 >> module$4(tail)
-> // 假设 module$3 module$4 能够处理 "csm message"
-> csm message >> arguments -@ module
-> // 这个消息将被 module$3 处理, module$4 不会响应
+>     举例：
+>     //申请模块名称为 module$, module 是 chain 名称，实例化 4 个实例，这四个实例的名字可能为：
+>     // - module$1
+>     // - module$2
+>     // - module$3
+>     // - module$4
+>     // 组成的 Chain 顺序为 module$1(head) >> module$2 >> module$3 >> module$4(tail)
+>     // 假设 module$3 module$4 能够处理 "csm message"
+>     csm message >> arguments -@ module
+>     // 这个消息将被 module$3 处理, module$4 不会响应
 >
 > 应用场景：
 > 1. 权限审批过程，按照职位层级，具有某职能权限的人员，就可以直接审批，无需继续传递。
 > 2. 功能拼接，不同模块实现不同的任务，通过拼接可以完成不同功能合集的组合
 > 3. 功能覆盖，通过覆盖实现OOP中的重载
+> 4. 工作者模式的场景，通常不适合具有界面操作。
 
 ### CSM - Mark As Chain Module.vi
 
@@ -138,71 +146,91 @@
 -- <b>Indicators(输出控件)</b> --
 - <b>CSM Name (Marked As Chain)</b>:添加“$”标记的CSM模块名称
 
-## 旁路循环支持(Side-Loop Support)
+### CSM - Resolve Node Module.vi
+
+通过将高级模式的节点名称解析出对应的CSM模块名称。
+
+    例如：
+    工作者模式节点的名称为 module#59703F3AD837 得到的结果时 module
+    责任链模式节点的名称为 module$1 得到的结果时 module
+
+- <b>CSM Module Name</b>:Indicators
+- <b>Node Name</b>:Controls
+
+## 多循环模式支持(Multi-Loop Support)
+
+> [!NOTE]
+> **CSM 多循环模式(Multi-Loop mode)**
+>
+> 在有些场景下，适合使用多个循环构成同一个CSM模块，例如：
+> - 一段已有的功能代码上改造为CSM模块，例如TCP连接循环、DAQmx数据采集循环，为了保证原本的逻辑清晰，可以在已有的代码包裹While循环，再附加CSM通讯循环，实现改造功能
+> - 在实时要求高的情况，需要使用定时循环实现，则需要 CSM循环作为通讯接口，定时循环作为功能循环的实现方案
+> - 在界面操作非常复杂的情况下，建议将界面操作和CSM通讯循环分离，界面操作循环处理界面操作，产生模块间的消息，CSM循环作为实际功能循环。
+>
+> 多循环支持模式API用于此场景下在模块内部循环间传递内部消息，或提供非CSM循环的CSM接口功能。
+>
 
 ### CSM - Request CSM to Post Message.vi
 
-申请 CSM 发送消息。通常用于和CSM并行的功能循环，这些功能循环和 CSM 一起完成完整模块功能。
+申请 CSM 模块给出异步消息。此API主要用于 CSM 多循环模式下，其他模块中申请CSM发出消息。
+
+在此场景下，通常我们也可以使用 CSM - Post Message.vi，但是它发送的时刻无法确定，而且也不能获得异步消息的返回值。此VI是一个补充。
+
+参考范例：
+4. Advance Examples\5. Multi-Loop Module Example\TCP Server Module(Multi-Loop Support).vi
+
+> Ref: CSM 多循环模式
 
 -- <b>Controls(输入控件)</b> --
 - <b>Module Name</b>:发送状态的CSM
-- <b>Status</b>: 将被广播的状态
+- <b>State</b>: 消息名称
 - <b>Arguments ("")</b>: 将被广播的状态参数
-- <b>Target Module</b>:目标模块
-- <b>Immediately? (F)</b>:Controls
-- <b>State</b>:Controls
-- <b>Target Module ("" By Default)</b>:Controls
-- <b>Without Reply? (F)</b>:Controls
+- <b>Without Reply? (F)</b>:是否需要返回。当需要返回时，发出的是异步消息；不需要返回时，发出的是异步无返回消息。
+- <b>Target Module ("" By Default)</b>:目标模块
+- <b>Immediately? (F)</b>:立即执行选项。立即发送会让此消息在CSM循环中立即被处理，而不是等待CSM循环中现存的消息执行完毕。
 
 ### CSM - Request CSM to Broadcast Status Change.vi
 
-申请 CSM 发布状态。通常用于和CSM并行的功能循环，这些功能循环和 CSM 一起完成完整模块功能。
+申请 CSM 发送广播。此API主要用于 CSM 多循环模式下，其他模块中申请CSM发出广播，通知其他模块状态改变。
+
+> [!WARNING]
+> 当然，只要知道模块名称， 我们完全可以在CSM模块外部，使用这个VI伪装这个模块发出广播消息，但是这样做是不推荐的，因为这种逻辑会让整体的逻辑变得混乱，提高调试的难度。因此只建议在CSM多循环模式下使用此VI。
+
+参考范例：
+4. Advance Examples\5. Multi-Loop Module Example\TCP Server Module(Multi-Loop Support).vi
+
+> Ref: CSM 多循环模式
 
 -- <b>Controls(输入控件)</b> --
 - <b>Module Name</b>:发送状态的CSM
 - <b>Status</b>: 将被广播的状态
 - <b>Arguments ("")</b>: 将被广播的状态参数
-- <b>Broadcast(T)</b>: 控制是否广播的开关输入
-- <b>Broadcast? (T)</b>:Controls
-- <b>Immediately? (F)</b>:Controls
+- <b>Broadcast? (T)</b>: 控制是否广播的开关输入
+- <b>Immediately? (F)</b>:立即执行选项。立即发送会让此消息在CSM循环中立即被处理，而不是等待CSM循环中现存的消息执行完毕。
+
+### CSM - Forward UI Operations to CSM.vi
+
+此VI主要应用于多循环模式下，将并行于CSM循环的UI循环中用户操作产生的时间，转发到CSM循环中处理。CSM DQMH-Style Template.vi 模板就是这个逻辑。
+
+参考范例：
+Addons - Loop Support\CSMLS - Continuous Loop in CSM Example.vi
+
+> Ref: CSM 多循环模式
+
+-- <b>Controls(输入控件)</b> --
+- <b>State(s) In ("")</b>: 待处理的状态
+- <b>Name ("" to Use UUID)</b>: 模块的名称
+- <b>High Priority? (T)</b>: 立即执行选项。立即发送会让此消息在CSM循环中立即被处理，而不是等待CSM循环中现存的消息执行完毕。
+
+-- <b>Indicators(输出控件)</b> --
+- <b>States Out</b>: 输入始终为空，是为了在模板中保证连线一致性设置的输出端。
 
 ### CSM - Module Turns Invalid.vi
 
-检查CSM是否已经退出。通常用于和CSM并行的功能循环的退出条件。
+检查CSM是否已经退出。通常用于和CSM并行的功能循环的跟随CSM循环退出。
 
 -- <b>Controls(输入控件)</b> --
 - <b>CSM Name</b>: 模块名称
 
 -- <b>Indicators(输出控件)</b> --
 - <b>Turn Invalid (Exit)?</b>: 是否已经退出
-
-### CSM - Flood of Events Handler Side Loop.vi
-
-### CSM - Forward States to CSM.vi
-
--- <b>Controls(输入控件)</b> --
-- <b>High Priority(T)</b>:
-- <b>Module Name</b>:Returns any argument(s) that may be used in the current state string. These arguments come after the ">>" characters
-- <b>State(s) in ("")</b>:Wire the existing states to this input. The default is an empty string.
-- <b>High Priority? (T)</b>:Controls
-- <b>State (S) In ("")</b>:Controls
-
-### CSM - Forward UI Operations to CSM.vi
-
--- <b>Controls(输入控件)</b> --
-- <b>Name("" to use uuid)</b>:
-- <b>State(s) in ("")</b>:
-
--- <b>Indicators(输出控件)</b> --
-- <b>States Out</b>:
-- <b>Name ("" to Use UUID)</b>:Controls
-- <b>State (S) In ("")</b>:Controls
-- <b>States Out</b>:Indicators
-
-## 子模块
-
-### Concatenate Submodule Name.vi
-
-- <b>CSM Name</b>:Controls
-- <b>Name</b>:Controls
-- <b>Submodule Name</b>:Indicators
