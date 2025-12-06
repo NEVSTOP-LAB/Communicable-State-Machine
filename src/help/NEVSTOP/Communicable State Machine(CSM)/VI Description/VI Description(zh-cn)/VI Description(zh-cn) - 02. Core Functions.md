@@ -304,14 +304,6 @@
 -- <b>Indicators(输出控件)</b> --
 - <b>States</b>:合并后的状态字符串
 
-### Exit With Empty Queue Check.vi
-
-- <b>Exit</b>:Indicators
-- <b>Queue</b>:Controls
-- <b>Since Exiting (S)</b>:Indicators
-- <b>Stop</b>:Controls
-- <b>Timeout (5s)</b>:Controls
-
 ### CSM - Broadcast Status Change.vi
 
 向系统广播状态更改，已注册状态的CSM模块将接收此状态更改，例如：

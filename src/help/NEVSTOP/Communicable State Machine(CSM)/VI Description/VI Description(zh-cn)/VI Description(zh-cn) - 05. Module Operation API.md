@@ -173,7 +173,7 @@
 
 > Ref: CSM 模块属性
 
-可参考范例："[CSM-Example]\0. Base Concepts\6. Module Attributes.vi"
+参考范例："[CSM-Example]\0. Base Concepts\6. Module Attributes.vi"
 
 -- <b>Controls(输入控件)</b> --
 - <b>CSM Name</b>: CSM 模块名称
@@ -192,7 +192,7 @@
 
 > Ref: CSM 模块属性
 
-可参考范例："[CSM-Example]\0. Base Concepts\6. Module Attributes.vi"
+参考范例："[CSM-Example]\0. Base Concepts\6. Module Attributes.vi"
 
 -- <b>Controls(输入控件)</b> --
 - <b>CSM Name</b>: CSM 模块名称
@@ -212,7 +212,7 @@
 
 > Ref: CSM 模块属性
 
-可参考范例："[CSM-Example]\0. Base Concepts\6. Module Attributes.vi"
+参考范例："[CSM-Example]\0. Base Concepts\6. Module Attributes.vi"
 
 -- <b>Controls(输入控件)</b> --
 - <b>CSM Name</b>: CSM 模块名称
@@ -231,7 +231,7 @@
 
 > Ref: CSM 模块属性
 
-可参考范例："[CSM-Example]\0. Base Concepts\6. Module Attributes.vi"
+参考范例："[CSM-Example]\0. Base Concepts\6. Module Attributes.vi"
 
 -- <b>Controls(输入控件)</b> --
 - <b>Attribute</b>:属性名称，不能为空字符串

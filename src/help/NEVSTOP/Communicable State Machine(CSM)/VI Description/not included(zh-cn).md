@@ -62,9 +62,7 @@ Bulid Status List.vi
 
 
 
-CSM - Destroy Global Log Queue.vi
 
-- <b>Global Log Queue</b>:Controls
 
 CSM - Drop Broadcast Registry.vi
 
@@ -79,9 +77,7 @@ CSM - Drop Broadcast Registry.vi
 
 
 
-CSM - Global Log Queue.vi
 
-- <b>GlobalEvent Queue</b>:Indicators
 
 CSM - Interface Browser.vi
 

@@ -14,7 +14,7 @@
 
 构建包含 JKI 状态机状态、参数等信息的字符串。
 
--- <b>Controls(输入控件)</b> --s
+-- <b>Controls(输入控件)</b> --
 - <b>State</b>: 状态字符串
 - <b>Arguments ("")</b>: <b>State</b>的参数
 - <b>Arg-State ("")</b>: 发送此消息的模块在发送此消息时处于的状态

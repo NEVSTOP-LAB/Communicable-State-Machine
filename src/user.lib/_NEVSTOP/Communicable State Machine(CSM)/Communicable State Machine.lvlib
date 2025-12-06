@@ -398,15 +398,15 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="CSM - Check Mapping Relationship in Broadcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - Check Mapping Relationship in Broadcast Registry.vi"/>
 			<Item Name="CSM - Drop Broadcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - Drop Broadcast Registry.vi"/>
 		</Item>
-		<Item Name="GlobalEvent" Type="Folder">
+		<Item Name="Global Log" Type="Folder">
 			<Item Name="CSM - Global Log Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Global Log Event.vi"/>
 			<Item Name="CSM - Global Log Queue.vi" Type="VI" URL="../AdvanceAPI/CSM - Global Log Queue.vi"/>
+			<Item Name="CSM - Destroy Global Log Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Destroy Global Log Event.vi"/>
+			<Item Name="CSM - Destroy Global Log Queue.vi" Type="VI" URL="../AdvanceAPI/CSM - Destroy Global Log Queue.vi"/>
 			<Item Name="CSM - Generate User Global Log.vi" Type="VI" URL="../AdvanceAPI/CSM - Generate User Global Log.vi"/>
 			<Item Name="CSM - Global Log Error Handler.vi" Type="VI" URL="../AdvanceAPI/CSM - Global Log Error Handler.vi"/>
 			<Item Name="CSM - Set Log Filter Rules.vi" Type="VI" URL="../AdvanceAPI/CSM - Set Log Filter Rules.vi"/>
 			<Item Name="CSM - List Log Filter Rules As Strings.vi" Type="VI" URL="../AdvanceAPI/CSM - List Log Filter Rules As Strings.vi"/>
-			<Item Name="CSM - Destroy Global Log Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Destroy Global Log Event.vi"/>
-			<Item Name="CSM - Destroy Global Log Queue.vi" Type="VI" URL="../AdvanceAPI/CSM - Destroy Global Log Queue.vi"/>
 			<Item Name="CSM - Convert Filter Rules.vi" Type="VI" URL="../AdvanceAPI/CSM - Convert Filter Rules.vi"/>
 			<Item Name="CSM - Filter Global Log.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter Global Log.vi"/>
 		</Item>

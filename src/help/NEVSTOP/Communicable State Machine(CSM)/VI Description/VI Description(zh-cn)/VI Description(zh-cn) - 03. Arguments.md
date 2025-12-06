@@ -72,7 +72,7 @@
 > Ref: CSM 消息关键字
 > Ref: CSM 安全字符串参数
 
-可参考范例："[CSM-Example]\0. Base Concepts\4.3 Arguments - Safe Arguments if it contains key words of CSM.vi"
+参考范例："[CSM-Example]\0. Base Concepts\4.3 Arguments - Safe Arguments if it contains key words of CSM.vi"
 
 -- <b>Controls(输入控件)</b> --
 - <b>Argument String</b>: 字符串参数
@@ -87,7 +87,7 @@
 > Ref: CSM 消息关键字
 > Ref: CSM 安全字符串参数
 
-可参考范例："[CSM-Example]\0. Base Concepts\4.3 Arguments - Safe Arguments if it contains key words of CSM.vi"
+参考范例："[CSM-Example]\0. Base Concepts\4.3 Arguments - Safe Arguments if it contains key words of CSM.vi"
 
 -- <b>Controls(输入控件)</b> --
 - <b>Safe Argument String</b>:  安全的字符串参数
@@ -102,7 +102,7 @@
 > Ref: CSM 参数类型
 > Ref: CSM HEXSTR 格式参数
 
-可参考范例："[CSM-Example]\0. Base Concepts\4.1 Arguments - Complex Data As Arguments.vi"
+参考范例："[CSM-Example]\0. Base Concepts\4.1 Arguments - Complex Data As Arguments.vi"
 
 -- <b>Controls(输入控件)</b> --
 - <b>Variant</b>: LabVIEW 数据，通过变体支持任意数据类型
@@ -117,7 +117,7 @@
 > Ref: CSM 参数类型
 > Ref: CSM HEXSTR 格式参数
 
-可参考范例："[CSM-Example]\0. Base Concepts\4.1 Arguments - Complex Data As Arguments.vi"
+参考范例："[CSM-Example]\0. Base Concepts\4.1 Arguments - Complex Data As Arguments.vi"
 
 -- <b>Controls(输入控件)</b> --
 - <b>HEX String</b>: CSM HEXSTR 格式参数
@@ -132,7 +132,7 @@
 > Ref: CSM 参数类型
 > Ref: CSM ERRSTR 格式参数
 
-可参考范例："[CSM-Example]\0. Base Concepts\4.2 Arguments - Error As Arguments.vi"
+参考范例："[CSM-Example]\0. Base Concepts\4.2 Arguments - Error As Arguments.vi"
 
 -- <b>Controls(输入控件)</b> --
 - <b>error</b>: LabVIEW 错误簇
@@ -147,7 +147,7 @@
 > Ref: CSM 参数类型
 > Ref: CSM ERRSTR 格式参数
 
-可参考范例："[CSM-Example]\0. Base Concepts\4.2 Arguments - Error As Arguments.vi"
+参考范例："[CSM-Example]\0. Base Concepts\4.2 Arguments - Error As Arguments.vi"
 
 -- <b>Controls(输入控件)</b> --
 - <b>Argument</b>: CSM 错误参数格式
