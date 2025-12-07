@@ -44,3 +44,13 @@
 ### CSM - Forward States to CSM.vi
 
 > Ref: CSM - Forward UI Operations to CSM.vi
+
+
+## CSM - Check Status Registration.vi
+
+> Ref: CSM - Check Mapping Relationship in Broadcast Registry.vi
+
+
+## CSM - List Status in Broadcast Registry.vi
+
+> Ref: CSM - List Sources in Broadcast Registry.vi
