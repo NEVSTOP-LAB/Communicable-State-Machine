@@ -229,6 +229,8 @@ Addons - Loop Support\CSMLS - Continuous Loop in CSM Example.vi
 
 检查CSM是否已经退出。通常用于和CSM并行的功能循环的跟随CSM循环退出。
 
+CSM高级模式的模块(协作者模式、责任链模式)只有在最后一个节点退出后，才会触发模块退出事件。
+
 -- <b>Controls(输入控件)</b> --
 - <b>CSM Name</b>: 模块名称
 
