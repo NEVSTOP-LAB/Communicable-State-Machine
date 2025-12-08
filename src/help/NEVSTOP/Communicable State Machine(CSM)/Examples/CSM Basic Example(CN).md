@@ -55,6 +55,8 @@ CSM是仿照JKISM逻辑设计的LabVIEW程序开发框架，两个框架都使�
 
 通过不同情况的分析，展示一个有效的CSM模块名称是怎样的.
 
+#### Steps
+
 - Step1：展示普通模块名称的情况。
 - Step2：展示有空格模块的情况。
 - Step3：这是有：的情况。
@@ -77,7 +79,7 @@ CSM是仿照JKISM逻辑设计的LabVIEW程序开发框架，两个框架都使�
 本示例解释了CSM模块间消息通信的语法格式，您可以使用LabVIEW API来构建这些字符串，或者如果您熟悉消息规则，也可以手动创建这些字符串。CSM定义的语法如下：
 
 ```
-#CSM 状态语法
+    //--- CSM 状态语法 ---
     // 本地消息示例
     DoSth: DoA >> 参数
 
@@ -102,7 +104,7 @@ CSM是仿照JKISM逻辑设计的LabVIEW程序开发框架，两个框架都使�
     // 取消注册源模块的状态
     Status@Source Module >> API@Handler Module -><unregister>
 
-#CSM 注释
+    //--- CSM 注释 ---
     // 要添加注释，请使用 "//"，右边的所有文本将被忽略。
     UI: Initialize // 初始化 UI
     // Another comment line

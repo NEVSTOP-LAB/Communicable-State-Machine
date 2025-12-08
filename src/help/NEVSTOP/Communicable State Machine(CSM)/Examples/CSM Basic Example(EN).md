@@ -54,6 +54,8 @@ Demonstrates the basic string naming rules for CSM modules. A valid CSM module n
 
 This example demonstrates what constitutes a valid CSM module name by analyzing different scenarios.
 
+#### Steps
+
 - Step1: Regular module name.
 - Step2: Valid name containing spaces.
 - Step3: Name containing a colon (`:`).
@@ -78,7 +80,7 @@ Demonstrates the string syntax format for message communication within the CSM f
 This example explains the syntax format for inter-module message communication in CSM. You can use LabVIEW APIs to build these strings. If you are familiar with the message rules, you can create them manually. The syntax defined by CSM is as follows:
 
 ```
-# CSM State Syntax
+    //--- CSM State Syntax ---
     // Local Message Example
     DoSth: DoA >> Arguments
 
@@ -103,7 +105,7 @@ This example explains the syntax format for inter-module message communication i
     // Unregister Source Module's State
     Status@Source Module >> API@Handler Module -><unregister>
 
-# CSM Comments
+    //--- CSM Comments ---
     // To add a comment, use "//". All text to the right will be ignored.
     UI: Initialize // Initialize UI
     // Another comment line
