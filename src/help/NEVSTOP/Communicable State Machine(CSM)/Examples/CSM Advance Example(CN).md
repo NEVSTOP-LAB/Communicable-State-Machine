@@ -339,7 +339,7 @@ CSM循环作为接口，允许您使用“TCP: Send”通过TCP发送消息，�
 
 ## State订阅范例
 
-### State订阅范例子模块(SubModule.vi)
+### State订阅范例子模块(State Register Example Submodule.vi)
 
 #### Overview
 

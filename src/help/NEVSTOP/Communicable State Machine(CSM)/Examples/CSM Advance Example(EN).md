@@ -367,7 +367,7 @@ Use this example to benchmark CSM global log performance and as a reference for 
 
 ## State Subscription Example
 
-### State Subscription Example Submodule (SubModule.vi)
+### State Subscription Example Submodule (State Register Example Submodule.vi)
 
 #### Overview
 
