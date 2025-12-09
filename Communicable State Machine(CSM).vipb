@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-12-09 09:54:04" Creator="liyao" Comments="" ID="29bcf25dde8cf086904d984201710811">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-12-09 20:59:57" Creator="liyao" Comments="" ID="eba7c08883594b938f481e955cf64a9d">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2025.10.0.1</Library_Version>
@@ -81,7 +81,8 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
 [update] #555 When CSM start to process Macro: Exit state, it will not process any message anymore.
 [add] #561 Add &lt;Logger Thread Exit&gt; log and show the number of logs left. 
 [add] #520 Show call-chain of CSM module in "module created " log
-[fix] #548 fix CSM - Remove Module in Broadcast Registry.vi</Release_Notes>
+[fix] #548 fix CSM - Remove Module in Broadcast Registry.vi
+[fix] #557 fix remove internal registry rules for chain/worker</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
