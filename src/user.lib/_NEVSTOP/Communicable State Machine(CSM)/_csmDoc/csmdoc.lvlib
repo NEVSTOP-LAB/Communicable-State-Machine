@@ -20,6 +20,7 @@
 		<Item Name="_Parse Markdown Doc Elements.vi" Type="VI" URL="../Support/_Parse Markdown Doc Elements.vi"/>
 		<Item Name="_Parse Markdown Note Elements.vi" Type="VI" URL="../Support/_Parse Markdown Note Elements.vi"/>
 		<Item Name="_Parse Markdown Control Elements.vi" Type="VI" URL="../Support/_Parse Markdown Control Elements.vi"/>
+		<Item Name="_Parse Markdown Steps.vi" Type="VI" URL="../Support/_Parse Markdown Steps.vi"/>
 		<Item Name="_Generate DocMap.vi" Type="VI" URL="../Support/_Generate DocMap.vi"/>
 		<Item Name="_Generate ControlDocMap.vi" Type="VI" URL="../Support/_Generate ControlDocMap.vi"/>
 		<Item Name="_Overwrite Decoration Content.vi" Type="VI" URL="../Support/_Overwrite Decoration Content.vi"/>
