@@ -365,7 +365,7 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToProject</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{A89D9A51-BD9C-4565-8F45-AD1D68D344FD}</Property>
-				<Property Name="Bld_version.build" Type="Int">285</Property>
+				<Property Name="Bld_version.build" Type="Int">295</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">CSM-Testcase.lvlibp</Property>
 				<Property Name="Destination[0].path" Type="Path">../CSM/CSM-Testcase.lvlibp</Property>
@@ -377,7 +377,7 @@
 				<Property Name="Destination[1].path.type" Type="Str">relativeToProject</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="PackedLib_callersAdapt" Type="Bool">true</Property>
-				<Property Name="Source[0].itemID" Type="Str">{2443FC34-835C-4FF3-8DDD-35B34316726F}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{8ACD2EE0-7F2A-4DDF-9C13-67BB3F9ECC94}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/CSM-Testcase.lvlib</Property>
@@ -406,7 +406,7 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToProject</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{DF3A8CD5-4937-4FE8-B30A-163F6FCA54B2}</Property>
-				<Property Name="Bld_version.build" Type="Int">250</Property>
+				<Property Name="Bld_version.build" Type="Int">260</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">CSM-Testcase2.lvlibp</Property>
 				<Property Name="Destination[0].path" Type="Path">../CSM/CSM-Testcase2.lvlibp</Property>
