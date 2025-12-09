@@ -70,6 +70,8 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="CSM - Register Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Register Status Change.vi"/>
 			<Item Name="CSM - Unregister Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Unregister Status Change.vi"/>
 			<Item Name="CSM - List Status in Broadcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - List Status in Broadcast Registry.vi"/>
+			<Item Name="CSM - Status Change Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Status Change Event.vi"/>
+			<Item Name="CSM - Destroy Status Change Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Destroy Status Change Event.vi"/>
 		</Item>
 	</Item>
 	<Item Name="Support" Type="Folder">
@@ -379,8 +381,8 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="CSM - Send Message and Wait for Reply.vi" Type="VI" URL="../AdvanceAPI/CSM - Send Message and Wait for Reply.vi"/>
 			<Item Name="CSM - Wait and Send Message for Reply.vi" Type="VI" URL="../AdvanceAPI/CSM - Wait and Send Message for Reply.vi"/>
 			<Item Name="CSM - Run Script.vi" Type="VI" URL="../AdvanceAPI/CSM - Run Script.vi"/>
-			<Item Name="CSM - Status Change Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Status Change Event.vi"/>
-			<Item Name="CSM - Destroy Status Change Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Destroy Status Change Event.vi"/>
+			<Item Name="CSM - Broadcast Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Broadcast Event.vi"/>
+			<Item Name="CSM - Destroy Broadcast Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Destroy Broadcast Event.vi"/>
 			<Item Name="CSM - Module Exit Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Module Exit Event.vi"/>
 		</Item>
 		<Item Name="Attribute API" Type="Folder">
