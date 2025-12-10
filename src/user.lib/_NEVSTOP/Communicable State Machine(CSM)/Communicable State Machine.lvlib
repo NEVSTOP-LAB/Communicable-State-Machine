@@ -251,6 +251,10 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 					<Item Name="Delete Target Module.vi" Type="VI" URL="../_Support/BroadcastRegistry/Delete Target Module.vi"/>
 					<Item Name="Remove Module.vi" Type="VI" URL="../_Support/BroadcastRegistry/Remove Module.vi"/>
 				</Item>
+				<Item Name="Typedef" Type="Folder">
+					<Item Name="BroadcastRegistry-Value.ctl" Type="VI" URL="../_Support/BroadcastRegistry/BroadcastRegistry-Value.ctl"/>
+					<Item Name="BroadcastRegistry.ctl" Type="VI" URL="../_Support/BroadcastRegistry/BroadcastRegistry.ctl"/>
+				</Item>
 			</Item>
 			<Item Name="FGV-BroadcastRegistry.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/FGV-BroadcastRegistry.vi"/>
 			<Item Name="FGV-BroadcastRegistry(lvlibp).vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/FGV-BroadcastRegistry(lvlibp).vi"/>
@@ -258,9 +262,8 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="Cache-Broadcast Registry Search Result.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/Cache-Broadcast Registry Search Result.vi"/>
 			<Item Name="Cache-BroadcastReg Status of Source.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/Cache-BroadcastReg Status of Source.vi"/>
 			<Item Name="Auto Broadcast State.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/Auto Broadcast State.vi"/>
-			<Item Name="BroadcastRegistry.ctl" Type="VI" URL="../_Support/BroadcastRegistry/BroadcastRegistry.ctl"/>
 		</Item>
-		<Item Name="GlobalEvent" Type="Folder">
+		<Item Name="Global Log" Type="Folder">
 			<Item Name="LogFilter" Type="Folder">
 				<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 				<Item Name="LogFilter.lvclass" Type="LVClass" URL="../_Support/GlobalEvent/LogFilter/LogFilter.lvclass"/>
