@@ -139,6 +139,9 @@
 			<Item Name="testcase-CSMAttributes.lvclass" Type="LVClass" URL="../testcases/testcase-CSMAttributes/testcase-CSMAttributes.lvclass"/>
 			<Item Name="testcase-miscellaneous.lvclass" Type="LVClass" URL="../testcases/testcase-miscellaneous/testcase-miscellaneous.lvclass"/>
 		</Item>
+		<Item Name="_TEST" Type="Folder" URL="../src/_TEST">
+			<Property Name="NI.DISK" Type="Bool">true</Property>
+		</Item>
 		<Item Name="API Tree.vi" Type="VI" URL="../src/API Tree.vi"/>
 		<Item Name="Communicable State Machine(CSM).vipb" Type="Document" URL="../Communicable State Machine(CSM).vipb"/>
 		<Item Name="LICENSE" Type="Document" URL="../LICENSE"/>
@@ -565,6 +568,8 @@
 			<Item Name="Global_Interface.ctl" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/API/Global_Interface.ctl"/>
 			<Item Name="Item_Interface.ctl" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/API/Item_Interface.ctl"/>
 			<Item Name="provcom_StringGlobals.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Common/provcom_StringGlobals.vi"/>
+			<Item Name="Module to Generate Flood of Logs.vi" Type="VI" URL="../src/Example/4. Advance Examples/6. Global Log Handling Capability/Module to Generate Flood of Logs.vi"/>
+			<Item Name="Global Log Handling Capability Example.vi" Type="VI" URL="../src/Example/4. Advance Examples/6. Global Log Handling Capability/Global Log Handling Capability Example.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Communicable State Machine.lvlibp" Type="Packed Library">
