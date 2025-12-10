@@ -258,7 +258,7 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="FGV-BroadcastRegistry(lvlibp).vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/FGV-BroadcastRegistry(lvlibp).vi"/>
 			<Item Name="Operation-BroadcastRegistry.ctl" Type="VI" URL="../_Support/FGV-BroadcastRegistry/Operation-BroadcastRegistry.ctl"/>
 			<Item Name="Cache-Broadcast Registry Search Result.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/Cache-Broadcast Registry Search Result.vi"/>
-			<Item Name="Cache-Broadcast Registry Search Result(NonCSM).vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/Cache-Broadcast Registry Search Result(NonCSM).vi"/>
+			<Item Name="Cache-BroadcastReg(NonCSM).vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/Cache-BroadcastReg(NonCSM).vi"/>
 			<Item Name="Cache-BroadcastReg Status of Source.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/Cache-BroadcastReg Status of Source.vi"/>
 			<Item Name="Auto Broadcast State.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/Auto Broadcast State.vi"/>
 		</Item>
