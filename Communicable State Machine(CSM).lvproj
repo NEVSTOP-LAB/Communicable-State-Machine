@@ -146,7 +146,6 @@
 		<Item Name="CONTRIBUTING.md" Type="Document" URL="../CONTRIBUTING.md"/>
 		<Item Name="README(zh-cn).md" Type="Document" URL="../README(zh-cn).md"/>
 		<Item Name="README.md" Type="Document" URL="../README.md"/>
-		<Item Name="test register module.vi" Type="VI" URL="../src/_TEST/test register module.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Add State(s) to Queue__JKI_lib_State_Machine.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/State Machine/_JKI_lib_State_Machine.llb/Add State(s) to Queue__JKI_lib_State_Machine.vi"/>

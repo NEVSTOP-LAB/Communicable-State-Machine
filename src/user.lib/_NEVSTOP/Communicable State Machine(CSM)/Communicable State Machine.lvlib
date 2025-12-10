@@ -70,8 +70,6 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="CSM - Register Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Register Status Change.vi"/>
 			<Item Name="CSM - Unregister Status Change.vi" Type="VI" URL="../AdvanceAPI/CSM - Unregister Status Change.vi"/>
 			<Item Name="CSM - List Status in Broadcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - List Status in Broadcast Registry.vi"/>
-			<Item Name="CSM - Status Change Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Status Change Event.vi"/>
-			<Item Name="CSM - Destroy Status Change Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Destroy Status Change Event.vi"/>
 		</Item>
 	</Item>
 	<Item Name="Support" Type="Folder">
@@ -299,6 +297,7 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="GEvt-Generate Module Created Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate Module Created Log.vi"/>
 			<Item Name="GEvt-Generate Module Destroyed Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate Module Destroyed Log.vi"/>
 			<Item Name="GEvt-Generate with Rule Check.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate with Rule Check.vi"/>
+			<Item Name="GEvt-Generate Message Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate Message Log.vi"/>
 		</Item>
 		<Item Name="Message" Type="Folder">
 			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
@@ -396,6 +395,8 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="CSM - Delete Module Attribute.vi" Type="VI" URL="../AdvanceAPI/CSM - Delete Module Attribute.vi"/>
 		</Item>
 		<Item Name="Broadcast Registry" Type="Folder">
+			<Item Name="CSM - Status Change Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Status Change Event.vi"/>
+			<Item Name="CSM - Destroy Status Change Event.vi" Type="VI" URL="../AdvanceAPI/CSM - Destroy Status Change Event.vi"/>
 			<Item Name="CSM - Register Broadcast.vi" Type="VI" URL="../AdvanceAPI/CSM - Register Broadcast.vi"/>
 			<Item Name="CSM - Unregister Broadcast.vi" Type="VI" URL="../AdvanceAPI/CSM - Unregister Broadcast.vi"/>
 			<Item Name="CSM - List Rules in Broadcast Registry.vi" Type="VI" URL="../AdvanceAPI/CSM - List Rules in Broadcast Registry.vi"/>
