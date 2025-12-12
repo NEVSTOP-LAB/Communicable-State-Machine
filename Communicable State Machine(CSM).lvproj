@@ -127,6 +127,7 @@
 				<Item Name="testcase-CSMMessage.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMMessage/testcase-CSMMessage.lvclass"/>
 				<Item Name="testcase-CSMArgument.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMArgument/testcase-CSMArgument.lvclass"/>
 				<Item Name="testcase-CSMResponse.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMResponse/testcase-CSMResponse.lvclass"/>
+				<Item Name="testcase-CSMGlobalLog.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMGlobalLog/testcase-CSMGlobalLog.lvclass"/>
 				<Item Name="testcase-CSMStatusStateRegisterUnregister.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMStatus/testcase-CSMStatusStateRegisterUnregister.lvclass"/>
 			</Item>
 			<Item Name="testcase-csmhelper.lvclass" Type="LVClass" URL="../testcases/testcase-csmhelper/testcase-csmhelper.lvclass"/>
@@ -568,8 +569,6 @@
 			<Item Name="Global_Interface.ctl" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/API/Global_Interface.ctl"/>
 			<Item Name="Item_Interface.ctl" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/API/Item_Interface.ctl"/>
 			<Item Name="provcom_StringGlobals.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Common/provcom_StringGlobals.vi"/>
-			<Item Name="Module to Generate Flood of Logs.vi" Type="VI" URL="../src/Example/4. Advance Examples/6. Global Log Handling Capability/Module to Generate Flood of Logs.vi"/>
-			<Item Name="Global Log Handling Capability Example.vi" Type="VI" URL="../src/Example/4. Advance Examples/6. Global Log Handling Capability/Global Log Handling Capability Example.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Communicable State Machine.lvlibp" Type="Packed Library">
