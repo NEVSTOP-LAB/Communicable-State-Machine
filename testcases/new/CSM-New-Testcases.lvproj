@@ -15,6 +15,7 @@
 		<Item Name="testcase-CSMArgument.lvclass" Type="LVClass" URL="../testcase-CSMArgument/testcase-CSMArgument.lvclass"/>
 		<Item Name="testcase-CSMMessage.lvclass" Type="LVClass" URL="../testcase-CSMMessage/testcase-CSMMessage.lvclass"/>
 		<Item Name="testcase-CSMResponse.lvclass" Type="LVClass" URL="../testcase-CSMResponse/testcase-CSMResponse.lvclass"/>
+		<Item Name="testcase-CSMBroadcast.lvclass" Type="LVClass" URL="../testcase-CSMStatus/testcase-CSMBroadcast.lvclass"/>
 		<Item Name="testcase-CSMGlobalLog.lvclass" Type="LVClass" URL="../testcase-CSMGlobalLog/testcase-CSMGlobalLog.lvclass"/>
 		<Item Name="TestCSMSuite.lvclass" Type="LVClass" URL="../CSMTestSuite/TestCSMSuite.lvclass"/>
 		<Item Name="Dependencies" Type="Dependencies">
@@ -343,6 +344,11 @@
 				<Item Name="VITesterUtilities.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/VI Tester/_support/VITesterUtilities.lvlib"/>
 				<Item Name="Waveform Subtype Enum__ogtk__jki_vi_tester.ctl" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/VI Tester/_support/Support.llb/Waveform Subtype Enum__ogtk__jki_vi_tester.ctl"/>
 				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
+				<Item Name="Set Cursor (Icon Pict).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/cursorutil.llb/Set Cursor (Icon Pict).vi"/>
+				<Item Name="Set Cursor (Cursor ID).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/cursorutil.llb/Set Cursor (Cursor ID).vi"/>
+				<Item Name="Set Cursor.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/cursorutil.llb/Set Cursor.vi"/>
+				<Item Name="Set Busy.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/cursorutil.llb/Set Busy.vi"/>
+				<Item Name="Unset Busy.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/cursorutil.llb/Unset Busy.vi"/>
 			</Item>
 			<Item Name="Communicable State Machine.lvlib" Type="Library" URL="../../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/Communicable State Machine.lvlib"/>
 			<Item Name="CSM Attributes API(VIM).lvlib" Type="Library" URL="../../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/addons/AttributesVIM/CSM Attributes API(VIM).lvlib"/>
@@ -360,7 +366,7 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToProject</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{A89D9A51-BD9C-4565-8F45-AD1D68D344FD}</Property>
-				<Property Name="Bld_version.build" Type="Int">307</Property>
+				<Property Name="Bld_version.build" Type="Int">308</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">CSM-Testcase.lvlibp</Property>
 				<Property Name="Destination[0].path" Type="Path">../CSM/CSM-Testcase.lvlibp</Property>
@@ -401,7 +407,7 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToProject</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{DF3A8CD5-4937-4FE8-B30A-163F6FCA54B2}</Property>
-				<Property Name="Bld_version.build" Type="Int">272</Property>
+				<Property Name="Bld_version.build" Type="Int">273</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">CSM-Testcase2.lvlibp</Property>
 				<Property Name="Destination[0].path" Type="Path">../CSM/CSM-Testcase2.lvlibp</Property>
