@@ -5,7 +5,7 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Property Name="NI.SortType" Type="Int">3</Property>
-	<Item Name="Single-line State Operation" Type="Folder">
+	<Item Name="Single-line String" Type="Folder">
 		<Item Name="Add State(s) to Queue__jkism.vi" Type="VI" URL="../Add State(s) to Queue__jkism.vi"/>
 		<Item Name="Concatenate State with Comments.vi" Type="VI" URL="../Concatenate State with Comments.vi"/>
 		<Item Name="Concatenate State with Arguments.vi" Type="VI" URL="../Concatenate State with Arguments.vi"/>
