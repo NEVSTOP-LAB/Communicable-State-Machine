@@ -17,6 +17,8 @@
 		<Item Name="testcase-CSMResponse.lvclass" Type="LVClass" URL="../testcase-CSMResponse/testcase-CSMResponse.lvclass"/>
 		<Item Name="testcase-CSMBroadcast.lvclass" Type="LVClass" URL="../testcase-CSMStatus/testcase-CSMBroadcast.lvclass"/>
 		<Item Name="testcase-CSMGlobalLog.lvclass" Type="LVClass" URL="../testcase-CSMGlobalLog/testcase-CSMGlobalLog.lvclass"/>
+		<Item Name="testcase-CSMSystemLevelModule.lvclass" Type="LVClass" URL="../testcase-CSMSystemLevelModule/testcase-CSMSystemLevelModule.lvclass"/>
+		<Item Name="testcase-CSMSubModule.lvclass" Type="LVClass" URL="../testcase-CSMSubModule/testcase-CSMSubModule.lvclass"/>
 		<Item Name="TestCSMSuite.lvclass" Type="LVClass" URL="../CSMTestSuite/TestCSMSuite.lvclass"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
@@ -366,7 +368,7 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToProject</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{A89D9A51-BD9C-4565-8F45-AD1D68D344FD}</Property>
-				<Property Name="Bld_version.build" Type="Int">313</Property>
+				<Property Name="Bld_version.build" Type="Int">314</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">CSM-Testcase.lvlibp</Property>
 				<Property Name="Destination[0].path" Type="Path">../CSM/CSM-Testcase.lvlibp</Property>
@@ -407,7 +409,7 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToProject</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{DF3A8CD5-4937-4FE8-B30A-163F6FCA54B2}</Property>
-				<Property Name="Bld_version.build" Type="Int">278</Property>
+				<Property Name="Bld_version.build" Type="Int">279</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">CSM-Testcase2.lvlibp</Property>
 				<Property Name="Destination[0].path" Type="Path">../CSM/CSM-Testcase2.lvlibp</Property>
