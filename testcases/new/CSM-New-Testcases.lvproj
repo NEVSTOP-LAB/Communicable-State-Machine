@@ -21,6 +21,7 @@
 		<Item Name="testcase-CSMSubModule.lvclass" Type="LVClass" URL="../testcase-CSMSubModule/testcase-CSMSubModule.lvclass"/>
 		<Item Name="testcase-CSMWorkerMode.lvclass" Type="LVClass" URL="../testcase-CSMWorkerMode/testcase-CSMWorkerMode.lvclass"/>
 		<Item Name="testcase-CSMChainMode.lvclass" Type="LVClass" URL="../testcase-CSMChainMode/testcase-CSMChainMode.lvclass"/>
+		<Item Name="testcase-CSMManagementAPI.lvclass" Type="LVClass" URL="../testcase-CSMChainMode/testcase-CSMManagementAPI/testcase-CSMManagementAPI.lvclass"/>
 		<Item Name="TestCSMSuite.lvclass" Type="LVClass" URL="../CSMTestSuite/TestCSMSuite.lvclass"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
