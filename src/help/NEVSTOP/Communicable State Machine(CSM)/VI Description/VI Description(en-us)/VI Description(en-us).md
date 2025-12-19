@@ -15,7 +15,6 @@
 - [13. Internal](https://www.google.com/search?q=./VI%20Description(zh-cn)%20-%2013.%20Internal.md)
 
 > [!NOTE] 
->
 > <b>CSM Inter-module Communication Types</b>
 >
 > Communication between CSM modules is divided into two categories: Messages and Broadcasts.
@@ -24,7 +23,6 @@
 > - <b>Broadcasts:</b> 1:N communication between modules. The broadcasting module pushes the broadcast to all modules registered to that broadcast. Based on the broadcast processing priority, it can be further divided into Status Broadcast and Interrupt Broadcast.
 
 > [!NOTE] 
->
 > <b>CSM Module External Interfaces</b>
 >
 > Modules written based on the CSM framework have good reusability. You only need to understand the following interface information to use CSM modules without knowing the specific implementation.
@@ -34,7 +32,6 @@
 > - <b>Attribute:</b> Attribute names usable by the module and attribute data types (LabVIEW data types).
 
 > [!NOTE] 
->
 > <b>CSM Message Types</b>
 >
 > CSM messages are divided into three categories: Synchronous Call (`-@`), Asynchronous Call (`->`), and Asynchronous Call without Reply (`->|`).
@@ -44,7 +41,6 @@
 > - <b>Asynchronous Call without Reply (`->|`):</b> The module immediately continues to execute subsequent code without waiting for the target module to return a result. Unlike Asynchronous Call (`->`), Asynchronous Call without Reply (`->|`) will not wait for the target module to return a result, nor will it throw an error.
 
 > [!NOTE] 
->
 > <b>CSM Message Format Parsing</b>
 >
 > ```
@@ -59,13 +55,11 @@
 > - <b>Comments:</b> Comment information, which will not be parsed.
 
 > [!NOTE] 
->
 > <b>CSM Message Target Module Description</b>
 >
 > In Normal Mode, the target module for a CSM message is the specified module name. System-level modules start with a `.` in their name. The target module for a CSM message includes the `.` in the name. For example, if the requested module name is `.System`, the target module for the CSM message is `.System`. In Worker Mode, the target module for a CSM message can only be the overall module name, not the node name. For example, if the requested module name is `Worker#`, the target module for the CSM message is `Worker`. In Chain of Responsibility Mode, the target module for a CSM message can only be the overall module name, not the node name. For example, if the requested module name is `Chain$1`, the target module for the CSM message is `Chain`.
 
 > [!NOTE] 
->
 > <b>Synchronous Message</b>
 >
 > A Synchronous Message is a type of message. After a CSM sends a synchronous message, it pauses state transitions and waits for the callee to complete message processing. Synchronous messages are described via `-@`. A call from one JKISM module to another via a synchronous message is called a synchronous call.
@@ -92,7 +86,6 @@
 >   - Errors occurring at both the caller and callee are merged into the error cluster output.
 
 > [!NOTE] 
->
 > <b>Asynchronous Message</b>
 >
 > An Asynchronous Message is a type of message. After a CSM sends an asynchronous message, it immediately continues to execute subsequent code without waiting for the callee to complete message processing. Asynchronous messages are divided into Asynchronous Call (`->`) and Asynchronous Call without Reply (`->|`). The only difference is that with an Asynchronous Call without Reply (`->|`), the callee will not return the result to the caller after completing the operation.
@@ -115,7 +108,6 @@
 > - There is no return if the API can only send Asynchronous without Reply messages.
 
 > [!NOTE] 
->
 > <b>CSM Operation Message Format Parsing</b>
 >
 > CSM defines operations required by the system, such as sending broadcasts, registering to broadcasts, and unregistering. Based on this definition, system functionality can be extended.
@@ -128,7 +120,6 @@
 > ```
 
 > [!NOTE] 
->
 > <b>CSM Broadcast</b>
 >
 > Broadcasts in CSM are divided into three types: Status Broadcast, Interrupt Broadcast, and State Broadcast. The module pushes the Status Broadcast to all modules registered to that Status Broadcast. Status Broadcast and Interrupt Broadcast are explicitly called broadcasts, while State Broadcast is an implicit broadcast. When a subscription relationship exists, the State Broadcast is automatically triggered when the CSM completes a certain state.
@@ -138,7 +129,6 @@
 > - <b>State Broadcast:</b> State Broadcast is an implicit broadcast. When a subscription relationship exists, the State Broadcast is automatically triggered when the CSM completes a certain state. The argument for the State Broadcast is the Response of the CSM state.
 
 > [!NOTE] 
->
 > <b>CSM Broadcast Format Parsing</b>
 >
 > `[CSM Broadcast String] >> [Arguments] -> <broadcast> // [Comments]` `[CSM Status Broadcast String] >> [Arguments] -> <status> // [Comments]` `[CSM Interrupt Broadcast String] >> [Arguments] -> <interrupt> // [Comments]`
@@ -150,7 +140,6 @@
 > - <b>Comments:</b> Comment information, which will not be parsed.
 
 > [!NOTE] 
->
 > <b>CSM Registration</b>
 >
 > Registration associates a broadcast with a bound interface (API). When the broadcast is triggered, the bound interface (API) is called. Registrations can also be cancelled. In CSM, there are two types of broadcasts:

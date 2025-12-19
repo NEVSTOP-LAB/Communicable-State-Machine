@@ -58,7 +58,6 @@ Lists all rules in the CSM registry.
 Lists all broadcast registration relationships for the current CSM module. Unlike rules, broadcast registration relationships represent all specific registrations of the current CSM module under the current rules.
 
 > [!NOTE] 
->
 > CSM uses Register/Unregister operations to add CSM module broadcast registration rules. Based on the current rules and actually existing modules, all broadcast registration relationships for the current CSM module can be deduced. CSM internally caches the current registration relationships. The registration relationship cache is automatically updated when the registration rules or the number of CSM modules changes.
 
 > Ref: CSM Broadcast 

@@ -1,7 +1,6 @@
 # Global Log
 
 > [!NOTE] 
->
 > <b>CSM Global Log Functionality</b>
 >
 > The CSM Global Log functionality is used to view global log change events, serving scenarios such as debugging and monitoring.
@@ -19,13 +18,11 @@
 > Debugging tools are primarily developed based on the Global Log API. You can develop debugging tools according to your own needs.
 
 > [!NOTE] 
->
 > <b>CSM Global Log Acquisition Methods</b>
 >
 > CSM provides two methods for acquiring global logs: Queue and Event. The Queue processing method is recommended because the queue interface is more efficient and offers greater flexibility in selecting log processing schemes based on the number of accumulated logs in the queue.
 
 > [!NOTE] 
-> 
 > <b>Global Log Filter Rules</b>
 
 ## CSM - Global Log Queue.vi
@@ -118,7 +115,6 @@ Generates a custom user log for scenarios such as debugging. When the input para
 ## Filter Rules
 
 > [!NOTE] 
-> 
 > <b>Global Log Filter Location</b>
 >
 > There are two types of global log filtering: source-side filtering and subscriber-side filtering.
@@ -129,7 +125,6 @@ Generates a custom user log for scenarios such as debugging. When the input para
 > Source-side processing completely prevents logs from being sent, reducing system load. Subscriber-side filtering only affects the logic of that specific subscriber and does not affect background log saving, offering higher flexibility.
 
 > [!NOTE] 
->
 > <b>Global Log Filter Rules</b>
 >
 > Global log filter rules allow a category of logs to be filtered out so they do not appear in the global log.
@@ -155,7 +150,6 @@ Generates a custom user log for scenarios such as debugging. When the input para
 Sets global source-side filtering rules. When a log satisfies the filtering rules, the log will not be sent from the source, so no tools will be able to detect this log record.
 
 > [!NOTE] 
->
 > This VI is a polymorphic VI. To ensure forward compatibility of the interface after modifications, it is recommended to select the instance with the newer version for this VI.
 
 > Ref: Global Log Filter Location 
@@ -181,7 +175,6 @@ Lists global filter rules in string format, with each rule occupying one line fo
 Converts a list of filter rule clusters into filter rule class instances. Providing the interface in the form of a class ensures forward compatibility. When functions are modified, the old interface remains unchanged. Currently, this VI is mainly used for the CSM File Logger Addon.
 
 > [!NOTE] 
->
 > This VI is designed as a polymorphic VI in order to ensure forward compatibility of the interface after modifications. It is recommended to select the instance with the newer version.
 
 > Ref: Global Log Filter Rules

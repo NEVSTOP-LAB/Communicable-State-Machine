@@ -1,7 +1,6 @@
 # CSM API String Addon
 
 > [!NOTE] 
-> 
 > <b>API String Parameter Support</b>
 >
 > API String parameter support is used to enhance the API parameter functionality of the Communicable State Machine (CSM). API String supports passing various data types in plain text format and is specifically optimized for manual input experiences. API String does not define an argument type. The result obtained via the CSM - Argument Type VI is empty, and it is typically handled in the default case. The following are supported data types:
@@ -25,7 +24,6 @@
 >   You can also refer to the examples. All data types have detailed descriptions and examples.
 
 > [!NOTE] 
-> 
 > <b>Default Strings for TRUE Value</b>
 >
 > Supports `1`, `Active`, `Enable`, `Non-null`, `On`, `T`, `True`, `valid`, `yes` 
@@ -33,7 +31,6 @@
 > Case insensitive.
 
 > [!NOTE] 
-> 
 > <b>Default Strings for FALSE Value</b>
 >
 > Supports `0`, `Disable`, `F`, `False`, `Inactive`, `Invalid`, `No`, `Off`, `Void`, `null` 
@@ -41,13 +38,11 @@
 > Case insensitive.
 
 > [!NOTE] 
-> 
 > <b>Default Floating-point Format</b>
 >
 > The default floating-point format is `%.6p`.
 
 > [!NOTE] 
-> 
 > <b>Indexed Enum</b>
 >
 > Format: `[Index Number][Separator][Enum String]`. 

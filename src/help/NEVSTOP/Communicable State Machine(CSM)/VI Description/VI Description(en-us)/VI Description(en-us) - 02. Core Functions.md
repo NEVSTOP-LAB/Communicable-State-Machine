@@ -31,7 +31,6 @@ Parses the CSM state queue and returns the next current state to execute, along 
 ### Build State String with Arguments++.vi
 
 > [!WARNING] 
->
 > This VI cannot concatenate "Asynchronous without Reply" messages. This VI is hidden from the Functions palette. It is recommended to use the Build Message with Arguments++ VI instead of this VI.
 
 Builds CSM message strings, containing information such as state, arguments, target module, message type, etc., for sending to other CSM modules.
@@ -76,13 +75,11 @@ Builds CSM message strings, containing information such as state, arguments, tar
 Builds CSM message strings and operation strings.
 
 > [!NOTE] 
->
 > <b>Message Building API</b>
 >
 > This type of API is only used to concatenate message strings and does not send messages directly. The strings need to be merged into the CSM state queue, and the messages will be sent and the operation executed within the Parse State Queue++ VI. If you are familiar with CSM rules, you do not need to use this type of API. You can type the corresponding message string or operation string directly into the string.
 
 > [!NOTE] 
->
 > <b>Polymorphic VI Options</b>
 >
 > - Build Message with Arguments(Auto Check).vi: Concatenates message strings based on the input message symbols.
@@ -358,7 +355,6 @@ Broadcasts a status change to the system. CSM modules with registered states wil
 ```
 
 > [!NOTE] 
-> 
 > <b>CSM State Queue Operation API</b>
 >
 > This type of API only concatenates message strings and does not send messages directly. The message is sent and the operation executed within the Parse State Queue++ VI. Unlike the Message Building API, this type of API includes a CSM state queue string input, which is equivalent to inserting a message into the state queue.
@@ -380,7 +376,6 @@ Merges CSM message strings into the CSM message queue. This VI provides string o
 > Ref: CSM State Queue Operation API
 
 > [!NOTE] 
-> 
 > <b>Polymorphic VI Options</b>
 >
 > - Add State(s) to Queue By BOOL(Element).vi

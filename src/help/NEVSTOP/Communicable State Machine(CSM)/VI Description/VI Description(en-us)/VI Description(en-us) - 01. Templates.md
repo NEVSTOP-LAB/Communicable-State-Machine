@@ -3,7 +3,6 @@
 ## Templates
 
 > [!NOTE] 
->
 > <b>CSM Naming Rules</b>
 >
 > - CSM module name must be unique. Otherwise, CSM enters a "Critical Error" state.
@@ -14,14 +13,12 @@
 > - Submodule Rule: "." is also allowed in a module name to separate the module name into multiple parts. CSM does not have strict rules for submodules. The "." in the module name only marks the logical relationship between different modules. From an execution perspective, they are considered independent modules. The only difference is that you can obtain a list of logical submodules via the CSM - List Submodules VI.
 
 > [!NOTE] 
->
 > <b>CSM Initialize State ("Macro: Initialize")</b>
 >
 > - The default value is "Macro: Initialize", which is consistent with the JKISM state machine.
 > - This state is used to initialize the state machine of a CSM module. A CSM module will process externally sent messages only after completing this macro state.
 
 > [!NOTE] 
->
 > <b>CSM Exit State ("Macro: Exit")</b>
 >
 > - The default value is "Macro: Exit", which is consistent with the JKISM state machine.

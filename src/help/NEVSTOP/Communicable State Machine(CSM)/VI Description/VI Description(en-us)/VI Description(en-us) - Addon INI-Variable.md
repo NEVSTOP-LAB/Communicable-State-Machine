@@ -1,7 +1,6 @@
 # CSM INI-Variable Addon
 
 > [!NOTE] 
-> 
 > <b>CSM INI-Variable Addon</b>
 >
 > Configuration files are an essential component of application development. The CSM INI-Variable Addon provides simple and easy-to-use configuration file support for CSM, allowing users to configure applications without explicitly reading or writing configuration files.
@@ -19,7 +18,6 @@
 > This library includes and utilizes a copy of [LabVIEW-Config](https://www.google.com/search?q=https://github.com/rcpacini/LabVIEW-Config) developed by [@rcpacini](https://github.com/rcpacini).
 
 > [!NOTE] 
-> 
 > <b>CSM INI-Variable Format</b>
 >
 > Format Definition: `${section.variable:defaultValue}`
@@ -36,7 +34,6 @@
 > - The default value is optional. If unspecified, it defaults to an empty string ("").
 
 > [!NOTE] 
-> 
 > <b>CSM INI-Variable Configuration File Path</b>
 >
 > - <b>Development State:</b> The first INI configuration file found in the Application Directory. If no configuration file exists, it defaults to `csm-app.ini`.
@@ -49,7 +46,6 @@
 >   - To avoid circular references, the same configuration file will be automatically ignored if loaded a second time.
 
 > [!NOTE] 
-> 
 > <b>CSM INI-Variable Multi-File Configuration Scenario</b>
 >
 > - When loading multiple files, configuration items in files loaded later will overwrite identical items in previously loaded files.

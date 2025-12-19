@@ -1,7 +1,6 @@
 # CSM API
 
 > [!NOTE] 
-> 
 > <b>Name Concatenation API</b>
 >
 > This VI only manipulates the module name string and has no actual functionality. Therefore, once you are familiar with the CSM rules, you can directly enter name string and rule symbols without calling this API.
@@ -9,7 +8,6 @@
 ## System-Level Module API
 
 > [!NOTE] 
-> 
 > <b>CSM System-Level Module</b>
 >
 > CSM functions of a system-level module are almost identical to those of a normal module. The only difference is that the CSM - List Modules VI does not list system-level modules. Therefore, a system-level module is typically used to implement functional modules running in the background. When processing the operational logic of normal modules in a unified manner, interference with these background running logics can be avoided. CSM system-level modules usually start with ".", for example: `.MainApp` and `.BackgroundTask`. The "." is part of the name, so operations like message sending and subscription must include the "." in the name. For example, you can name the main program loop `.MainApp`. You can then use the CSM - List Modules VI to get a list of all normal modules without listing `.MainApp`. If the main program needs to exit all other modules, you can send "Macro: Exit" to the results of the CSM - List Modules VI. This allows you to exit all normal modules without affecting the operation of the system-level module.
@@ -36,7 +34,6 @@ Reference Example: `0. Base Concepts\7. System-Level Module.vi`.
 ## Submodule
 
 > [!NOTE] 
-> 
 > <b>CSM Submodule</b>
 >
 > There are no strict submodules in CSM. The "." in the module name is only used to mark the logical relationship between different modules. From an actual execution perspective, each module is independent and has no hierarchical relationship. For example, modules "ModuleA" and "ModuleA.SubmoduleB" are two different modules. From the code logic perspective, they are completely independent and do not interfere with each other. However, the CSM - List Submodules VI can be used to retrieve all logical submodules of "ModuleA", including "ModuleA.SubmoduleB".
@@ -61,7 +58,6 @@ Constructs a submodule name.
 ## Work Mode API
 
 > [!NOTE] 
-> 
 > <b>CSM Worker Mode</b>
 >
 > A CSM module implements Worker Mode by instantiating multiple instances, appending "#" to the requested name, and sharing the same message queue.
@@ -114,7 +110,6 @@ Reference Example: "4. Advance Examples\1. Action Workers Example".
 ## Chain of Responsibility API
 
 > [!NOTE] 
-> 
 > <b>CSM Chain of Responsibility Mode</b>
 >
 > Multiple CSM modules form a complete module via Chain of Responsibility Mode by appending "$" to the requested name to form a chain for processing transactions.
@@ -180,7 +175,6 @@ For a Chain of Responsibility Mode node named `module$1`, the result is `module`
 ## Multi-Loop Support
 
 > [!NOTE] 
-> 
 > <b>CSM Multi-Loop Mode</b>
 >
 > In some scenarios, it is suitable to use multiple loops to constitute the same CSM module. For example:
