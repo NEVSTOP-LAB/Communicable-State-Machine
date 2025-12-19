@@ -1,156 +1,159 @@
 # CSM API
 
-## ²ÎÊı(Arguments)
+## å‚æ•°(Arguments)
 
 > [!NOTE] 
-> **CSM ÏûÏ¢¹Ø¼ü×Ö**
+> **CSMæ¶ˆæ¯å…³é”®å­—**
 >
-> °üÀ¨£º'->'¡¢'->|'¡¢'-@'¡¢'-&'¡¢'<-'¡¢"\r"¡¢"\n"¡¢"//"¡¢">>"¡¢">>>"¡¢">>>"¡¢";"¡¢","
+> åŒ…æ‹¬ï¼š'->'ã€'->|'ã€'-@'ã€'-&'ã€'<-'ã€"\r"ã€"\n"ã€"//"ã€">>"ã€">>>"ã€">>>"ã€";"ã€","
 
 > [!NOTE] 
-> **CSM ²ÎÊıÀàĞÍ(Argument Type)**
+> **CSMå‚æ•°ç±»å‹ï¼ˆArgument Typeï¼‰**
 >
-> ÔÚ CSM ÖĞ£¬ËùÓĞ²ÎÊı/·µ»Ø¾ùÒÔ×Ö·û´®ĞÎÊ½³ÊÏÖ£¬µ«Æä±³ºó¿É³ĞÔØÈÎÒâÊı¾İÀàĞÍ¡£Òò´Ë£¬·¢ËÍ¶ËĞèÏÈ½øĞĞ±àÂë£¬½ÓÊÕ¶ËÔÙ½øĞĞ½âÂë¡£  
-> ÀıÈç CSM ÄÚÖÃ HEXSTR ±àÂë·½°¸£¬Ò²¿É°´ĞèÀ©Õ¹×Ô¶¨Òå±à½âÂëÆ÷¡£  
-> Îª±ãÓÚÊ¶±ğ±àÂë·½Ê½£¬ÍÆ¼ö½«±àÂëºóµÄ²ÎÊıĞ´³É ¡°<Argument Type> STRING FORMAT ARGUMENT¡± ¸ñÊ½¡£  
-> Ê¹ÓÃ ¡°CSM - Argument Type.vi¡± ¼´¿ÉÌáÈ¡ÀàĞÍ±ê¼Ç£¬¾İ´ËÑ¡Ôñ¶ÔÓ¦µÄ½âÂëº¯Êı¡£
+> åœ¨CSMä¸­ï¼Œæ‰€æœ‰å‚æ•°/è¿”å›å‡ä»¥å­—ç¬¦ä¸²å½¢å¼å‘ˆç°ï¼Œä½†å…¶èƒŒåå¯æ‰¿è½½ä»»æ„æ•°æ®ç±»å‹ã€‚å› æ­¤ï¼Œå‘é€ç«¯éœ€å…ˆè¿›è¡Œç¼–ç ï¼Œæ¥æ”¶ç«¯å†è¿›è¡Œè§£ç ã€‚
+> ä¾‹å¦‚CSMå†…ç½®HEXSTRç¼–ç æ–¹æ¡ˆï¼Œä¹Ÿå¯æŒ‰éœ€æ‰©å±•è‡ªå®šä¹‰ç¼–è§£ç å™¨ã€‚
+> ä¸ºä¾¿äºè¯†åˆ«ç¼–ç æ–¹å¼ï¼Œæ¨èå°†ç¼–ç åçš„å‚æ•°å†™æˆâ€œ<Argument Type> STRING FORMAT ARGUMENTâ€æ ¼å¼ã€‚
+> ä½¿ç”¨CSM - Argument Type VIå³å¯æå–ç±»å‹æ ‡è®°ï¼Œæ®æ­¤é€‰æ‹©å¯¹åº”çš„è§£ç å‡½æ•°ã€‚
 
 > [!NOTE] 
-> **CSM HEXSTR ¸ñÊ½²ÎÊı**
+> **CSM HEXSTRæ ¼å¼å‚æ•°**
 >
-> ÎªÁËÔÚ CSM ²ÎÊıÖĞ´«µİÈÎÒâÊı¾İÀàĞÍ£¬CSM ÄÚÖÃÁË HEXSTR ¸ñÊ½²ÎÊı±à½âÂë·½°¸¡£Æä²ÎÊıÀàĞÍ×Ö·û´®Îª "HEXSTR"¡£×ª»»¹ı³ÌÈçÏÂ£º
-> 1. ½« LabVIEW Êı¾İÏÈ×ªÎª±äÌå£»  
-> 2. ÔÙ½«±äÌåµÄÄÚ´æÓ³ÏñĞòÁĞ»¯ÎªÊ®Áù½øÖÆ×Ö·û´®£»
-> 3. µÃµ½¡°<HEXSTR> Ê®Áù½øÖÆ×Ö·û´®¡± ĞÎÊ½µÄ²ÎÊı£¬¿É°²È«Ç¶Èë×´Ì¬×Ö·û´®£¬²»»áÆÆ»µ CSM ÏûÏ¢½âÎö¡£  
+> ä¸ºäº†åœ¨CSMå‚æ•°ä¸­ä¼ é€’ä»»æ„æ•°æ®ç±»å‹ï¼ŒCSMå†…ç½®äº†HEXSTRæ ¼å¼å‚æ•°ç¼–è§£ç æ–¹æ¡ˆã€‚å…¶å‚æ•°ç±»å‹å­—ç¬¦ä¸²ä¸º"HEXSTR"ã€‚è½¬æ¢è¿‡ç¨‹å¦‚ä¸‹ï¼š
+> 1. å°†LabVIEWæ•°æ®å…ˆè½¬ä¸ºå˜ä½“ï¼›  
+> 2. å†å°†å˜ä½“çš„å†…å­˜æ˜ åƒåºåˆ—åŒ–ä¸ºåå…­è¿›åˆ¶å­—ç¬¦ä¸²ï¼›
+> 3. å¾—åˆ°â€œ<HEXSTR>åå…­è¿›åˆ¶å­—ç¬¦ä¸²â€ å½¢å¼çš„å‚æ•°ï¼Œå¯å®‰å…¨åµŒå…¥çŠ¶æ€å­—ç¬¦ä¸²ï¼Œä¸ä¼šç ´åCSMæ¶ˆæ¯è§£æã€‚  
 
 > [!NOTE] 
-> **CSM ERRSTR ¸ñÊ½²ÎÊı**
+> **CSM ERRSTRæ ¼å¼å‚æ•°**
 >
-> LabVIEW ´íÎó´ØÊÇÒ»¸ö¸´ÔÓÊı¾İÀàĞÍ£¬´íÎóĞÅÏ¢×Ö·û´®ÖĞÍ¨³£°üº¬»Ø³µ·û£¬Òò´ËËüÍ¨³£²»ÄÜÖ±½Ó×÷Îª CSM ²ÎÊı´«µİ¡£ËäÈ»¿ÉÒÔ½«´íÎó´ØĞÅÏ¢×ª»»Îª HEXSTR ¸ñÊ½£¬µ«ÕâÖÖ·½Ê½È±·¦¿É¶ÁĞÔ£¬ÔÚÈÕÖ¾ÖĞÎŞ·¨Ö±¹Û¶ÁÈ¡ĞÅÏ¢¡£
-> Òò´Ë£¬ÎªÁËÔÚ CSM ²ÎÊıÖĞ´«µİ LabVIEW ´íÎóĞÅÏ¢£¬CSM ÄÚÖÃÁË ERRSTR ¸ñÊ½²ÎÊı±à½âÂë·½°¸¡£Æä²ÎÊıÀàĞÍ×Ö·û´®Îª "ERRSTR"¡£×ª»»¹ı³ÌÈçÏÂ£º
-> 1. ½«´íÎó´ØÖĞµÄ code¡¢source ¸ñÊ½»¯ÎªÒÔÏÂ¸ñÊ½µÄ×Ö·û´®£º
->    ´íÎó£º"<ERRSTR>[Error: error-code] error-description-As-safe-argument-string"
->    ¾¯¸æ£º"<ERRSTR>[Warning: error-code] warning-description-As-safe-argument-string"
-> 2. ½«Õâ¶Î×Ö·û´®ÖĞµÄÌØÊâ×Ö·ûÌæ»»Îª°²È«×Ö·û£»
-> 3. µÃµ½ CSM ERRSTR ¸ñÊ½²ÎÊı£¬¿É°²È«Ç¶Èë×´Ì¬×Ö·û´®£¬²»»áÆÆ»µ CSM ÏûÏ¢½âÎö¡£
+> LabVIEWé”™è¯¯ç°‡æ˜¯ä¸€ä¸ªå¤æ‚æ•°æ®ç±»å‹ï¼Œé”™è¯¯ä¿¡æ¯å­—ç¬¦ä¸²ä¸­é€šå¸¸åŒ…å«å›è½¦ç¬¦ï¼Œå› æ­¤å®ƒé€šå¸¸ä¸èƒ½ç›´æ¥ä½œä¸ºCSMå‚æ•°ä¼ é€’ã€‚è™½ç„¶å¯ä»¥å°†é”™è¯¯ç°‡ä¿¡æ¯è½¬æ¢ä¸ºHEXSTRæ ¼å¼ï¼Œä½†è¿™ç§æ–¹å¼ç¼ºä¹å¯è¯»æ€§ï¼Œåœ¨æ—¥å¿—ä¸­æ— æ³•ç›´è§‚è¯»å–ä¿¡æ¯ã€‚
+> å› æ­¤ï¼Œä¸ºäº†åœ¨CSMå‚æ•°ä¸­ä¼ é€’LabVIEWé”™è¯¯ä¿¡æ¯ï¼ŒCSMå†…ç½®äº†ERRSTRæ ¼å¼å‚æ•°ç¼–è§£ç æ–¹æ¡ˆã€‚å…¶å‚æ•°ç±»å‹å­—ç¬¦ä¸²ä¸º"ERRSTR"ã€‚è½¬æ¢è¿‡ç¨‹å¦‚ä¸‹ï¼š
+>
+> 1. å°†é”™è¯¯ç°‡ä¸­çš„codeã€sourceæ ¼å¼åŒ–ä¸ºä»¥ä¸‹æ ¼å¼çš„å­—ç¬¦ä¸²ï¼š
+>    é”™è¯¯ï¼š"<ERRSTR>[Error: error-code] error-description-As-safe-argument-string"
+>    è­¦å‘Šï¼š"<ERRSTR>[Warning: error-code] warning-description-As-safe-argument-string"
+> 2. å°†è¿™æ®µå­—ç¬¦ä¸²ä¸­çš„ç‰¹æ®Šå­—ç¬¦æ›¿æ¢ä¸ºå®‰å…¨å­—ç¬¦ï¼›
+> 3. å¾—åˆ°CSM ERRSTRæ ¼å¼å‚æ•°ï¼Œå¯å®‰å…¨åµŒå…¥çŠ¶æ€å­—ç¬¦ä¸²ï¼Œä¸ä¼šç ´åCSMæ¶ˆæ¯è§£æã€‚
 
 > [!NOTE] 
-> **CSM °²È«×Ö·û´®²ÎÊı£¨CSM Safe String Argument£©**
+> **CSMå®‰å…¨å­—ç¬¦ä¸²å‚æ•°ï¼ˆCSM Safe String Argumentï¼‰**
 >
-> ÎªÁËÔÚ CSM ²ÎÊıÖĞ´«µİÈÎÒâ×Ö·û´®ÇÒ²»ÆÆ»µÏûÏ¢½âÎö£¬CSM ÄÚÖÃÁË Safe-String ±à½âÂë·½°¸£¬Æä²ÎÊıÀàĞÍ×Ö·û´®Îª "SAFESTR"¡£×ª»»¹ı³ÌÈçÏÂ£º
-> 1. É¨ÃèÊäÈë×Ö·û´®£¬Èô³öÏÖ CSM ¹Ø¼ü×Ö£¨Èç `->`¡¢`;`¡¢`\r` µÈ£©£¬Ôò½«ÆäÌæ»»Îª `%Hex` ×ªÒåĞòÁĞ£»
-> 2. ×îÖÕµÃµ½ĞÎÈç `<SAFESTR> ÒÑ×ªÒå×Ö·û´®` µÄ²ÎÊı£¬¿É°²È«Ç¶Èë×´Ì¬×Ö·û´®£¬²»»áÆÆ»µ CSM ÏûÏ¢½âÎö¡£
+> ä¸ºäº†åœ¨CSMå‚æ•°ä¸­ä¼ é€’ä»»æ„å­—ç¬¦ä¸²ä¸”ä¸ç ´åæ¶ˆæ¯è§£æï¼ŒCSMå†…ç½®äº†Safe-Stringç¼–è§£ç æ–¹æ¡ˆï¼Œå…¶å‚æ•°ç±»å‹å­—ç¬¦ä¸²ä¸º"SAFESTR"ã€‚è½¬æ¢è¿‡ç¨‹å¦‚ä¸‹ï¼š
+> 1. æ‰«æè¾“å…¥å­—ç¬¦ä¸²ï¼Œè‹¥å‡ºç°CSMå…³é”®å­—ï¼ˆå¦‚`->`ã€`;`ã€`\r`ç­‰ï¼‰ï¼Œåˆ™å°†å…¶æ›¿æ¢ä¸º`%Hex`è½¬ä¹‰åºåˆ—ï¼›
+> 2. æœ€ç»ˆå¾—åˆ°å½¢å¦‚`<SAFESTR> å·²è½¬ä¹‰å­—ç¬¦ä¸²`çš„å‚æ•°ï¼Œå¯å®‰å…¨åµŒå…¥çŠ¶æ€å­—ç¬¦ä¸²ï¼Œä¸ä¼šç ´åCSMæ¶ˆæ¯è§£æã€‚
 
 ### CSM - Argument Type.vi
 
-´Ó±àÂëºóµÄ²ÎÊı×Ö·û´®ÖĞÌáÈ¡²ÎÊıµÄ±àÂëÀàĞÍ±ê¼Ç¡£
+ä»ç¼–ç åçš„å‚æ•°å­—ç¬¦ä¸²ä¸­æå–å‚æ•°çš„ç¼–ç ç±»å‹æ ‡è®°ã€‚
 
-> Ref: CSM ²ÎÊıÀàĞÍ
+> Ref: CSMå‚æ•°ç±»å‹
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>Arguments</b>: ²ÎÊı×Ö·û´®
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>Arguments</b>ï¼šå‚æ•°å­—ç¬¦ä¸²ã€‚
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>Argument Type</b>: ²ÎÊı×Ö·û´®µÄ±àÂëÀàĞÍ±ê¼Ç
-- <b>Arguments (Dup)</b>: ÊäÈëµÄ²ÎÊı×Ö·û´®¸±±¾
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>Arguments (Dup)</b>ï¼šè¾“å…¥çš„å‚æ•°å­—ç¬¦ä¸²å‰¯æœ¬ã€‚
+- <b>Argument Type</b>ï¼šå‚æ•°å­—ç¬¦ä¸²çš„ç¼–ç ç±»å‹æ ‡è®°ã€‚
 
 
-### CSM - Keywords.vi
+### CSM - Keywords.vi<!-- åœ¨è½¯ä»¶ä¸­æ²¡æœ‰æ‰¾åˆ°è¿™ä¸ªVIã€‚-->
 
-ÓÃÓÚÂŞÁĞ CSM ÏûÏ¢ÖĞµÄ¹Ø¼ü×Ö¼°Æä %Hex ¸ñÊ½¡£
+ç”¨äºç½—åˆ—CSMæ¶ˆæ¯ä¸­çš„å…³é”®å­—åŠå…¶%Hexæ ¼å¼ã€‚
 
-> Ref: CSM ÏûÏ¢¹Ø¼ü×Ö
+> Ref: CSMæ¶ˆæ¯å…³é”®å­—
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>keywords</b>: CSM ¹Ø¼ü×ÖÁĞ±í
-- <b>Keywords (%Hex Format)</b>: CSM ¹Ø¼ü×ÖÁĞ±íµÄ%Hex¸ñÊ½
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+
+- <b>keywords</b>ï¼šCSMå…³é”®å­—åˆ—è¡¨ã€‚
+- <b>Keywords (%Hex Format)</b>ï¼šCSMå…³é”®å­—åˆ—è¡¨çš„%Hexæ ¼å¼ã€‚
 
 ### CSM - Make String Arguments Safe.vi
 
-½«²ÎÊı×Ö·û´®ÖĞµÄ CSM ¹Ø¼ü×Ö×ª»»Îª %Hex ¸ñÊ½£¬È·±£²»Ó°Ïì CSM ÏûÏ¢×Ö·û´®½âÎö¡£
+å°†å‚æ•°å­—ç¬¦ä¸²ä¸­çš„CSMå…³é”®å­—è½¬æ¢ä¸º%Hexæ ¼å¼ï¼Œç¡®ä¿ä¸å½±å“CSMæ¶ˆæ¯å­—ç¬¦ä¸²è§£æã€‚
 
-> Ref: CSM ÏûÏ¢¹Ø¼ü×Ö
-> Ref: CSM °²È«×Ö·û´®²ÎÊı
+> Ref: CSMæ¶ˆæ¯å…³é”®å­—
+> Ref: CSMå®‰å…¨å­—ç¬¦ä¸²å‚æ•°
 
-²Î¿¼·¶Àı£º"[CSM-Example]\0. Base Concepts\4.3 Arguments - Safe Arguments if it contains key words of CSM.vi"
+å‚è€ƒèŒƒä¾‹ï¼š"[CSM-Example]\0. Base Concepts\4.3 Arguments - Safe Arguments if it contains key words of CSM.vi"ã€‚
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>Argument String</b>: ×Ö·û´®²ÎÊı
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>Argument String</b>ï¼šå­—ç¬¦ä¸²å‚æ•°ã€‚
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>Safe Argument String</b>: °²È«µÄ×Ö·û´®²ÎÊı
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>Safe Argument String</b>ï¼šå®‰å…¨çš„å­—ç¬¦ä¸²å‚æ•°ã€‚
 
 ### CSM - Revert Arguments-Safe String.vi
 
-½«°²È«µÄ×Ö·û´®²ÎÊıÖĞµÄ %Hex ¸ñÊ½µÄ CSM ¹Ø¼ü×Ö×ª»»»ØÆÕÍ¨¸ñÊ½¡£
+å°†å®‰å…¨çš„å­—ç¬¦ä¸²å‚æ•°ä¸­çš„%Hexæ ¼å¼çš„CSMå…³é”®å­—è½¬æ¢å›æ™®é€šæ ¼å¼ã€‚
 
-> Ref: CSM ÏûÏ¢¹Ø¼ü×Ö
-> Ref: CSM °²È«×Ö·û´®²ÎÊı
+> Ref: CSMæ¶ˆæ¯å…³é”®å­—
+> Ref: CSMå®‰å…¨å­—ç¬¦ä¸²å‚æ•°
 
-²Î¿¼·¶Àı£º"[CSM-Example]\0. Base Concepts\4.3 Arguments - Safe Arguments if it contains key words of CSM.vi"
+å‚è€ƒèŒƒä¾‹ï¼š"[CSM-Example]\0. Base Concepts\4.3 Arguments - Safe Arguments if it contains key words of CSM.vi"ã€‚
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>Safe Argument String</b>:  °²È«µÄ×Ö·û´®²ÎÊı
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>Safe Argument String</b>:  å®‰å…¨çš„å­—ç¬¦ä¸²å‚æ•°ã€‚
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>Origin Argument String</b>: ×Ö·û´®²ÎÊı
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+
+- <b>Origin Argument String</b>ï¼šå­—ç¬¦ä¸²å‚æ•°ã€‚
 
 ### CSM - Convert Data to HexStr.vi
 
-½« LabVIEW ÈÎÒâÊı¾İÀàĞÍ×ª»»Îª HEXSTR ¸ñÊ½²ÎÊı×Ö·û´®¡£
+å°†LabVIEWä»»æ„æ•°æ®ç±»å‹è½¬æ¢ä¸ºHEXSTRæ ¼å¼å‚æ•°å­—ç¬¦ä¸²ã€‚
 
-> Ref: CSM ²ÎÊıÀàĞÍ
-> Ref: CSM HEXSTR ¸ñÊ½²ÎÊı
+> Ref: CSMå‚æ•°ç±»å‹
+> Ref: CSM HEXSTRæ ¼å¼å‚æ•°
 
-²Î¿¼·¶Àı£º"[CSM-Example]\0. Base Concepts\4.1 Arguments - Complex Data As Arguments.vi"
+å‚è€ƒèŒƒä¾‹ï¼š"[CSM-Example]\0. Base Concepts\4.1 Arguments - Complex Data As Arguments.vi"ã€‚
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>Variant</b>: LabVIEW Êı¾İ£¬Í¨¹ı±äÌåÖ§³ÖÈÎÒâÊı¾İÀàĞÍ
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>Variant</b>ï¼šLabVIEWæ•°æ®ï¼Œé€šè¿‡å˜ä½“æ”¯æŒä»»æ„æ•°æ®ç±»å‹ã€‚
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>HEX String (0-9,A-F)</b>: CSM HEXSTR ¸ñÊ½²ÎÊı
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>HEX String (0-9,A-F)</b>ï¼šCSM HEXSTRæ ¼å¼å‚æ•°ã€‚
 
 ### CSM - Convert HexStr to Data.vi
 
-½«Ê®Áù½øÖÆ×Ö·û´®²ÎÊı×ª»»»Ø±äÌåÊı¾İ¡£
+å°†åå…­è¿›åˆ¶å­—ç¬¦ä¸²å‚æ•°è½¬æ¢å›å˜ä½“æ•°æ®ã€‚
 
-> Ref: CSM ²ÎÊıÀàĞÍ
-> Ref: CSM HEXSTR ¸ñÊ½²ÎÊı
+> Ref: CSMå‚æ•°ç±»å‹
+> Ref: CSM HEXSTRæ ¼å¼å‚æ•°
 
-²Î¿¼·¶Àı£º"[CSM-Example]\0. Base Concepts\4.1 Arguments - Complex Data As Arguments.vi"
+å‚è€ƒèŒƒä¾‹ï¼š"[CSM-Example]\0. Base Concepts\4.1 Arguments - Complex Data As Arguments.vi"ã€‚
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>HEX String</b>: CSM HEXSTR ¸ñÊ½²ÎÊı
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>HEX String</b>ï¼šCSM HEXSTRæ ¼å¼å‚æ•°ã€‚
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>Variant</b>: LabVIEW Êı¾İ£¬Í¨¹ı±äÌåÖ§³ÖÈÎÒâÊı¾İÀàĞÍ
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>Variant</b>ï¼šLabVIEWæ•°æ®ï¼Œé€šè¿‡å˜ä½“æ”¯æŒä»»æ„æ•°æ®ç±»å‹ã€‚
 
 ### CSM - Convert Error to Argument.vi
 
-½« LabVIEW ´íÎó´Ø×ª»»Îª CSM ´íÎó²ÎÊı¸ñÊ½¡£
+å°† LabVIEW é”™è¯¯ç°‡è½¬æ¢ä¸º CSM é”™è¯¯å‚æ•°æ ¼å¼ã€‚
 
-> Ref: CSM ²ÎÊıÀàĞÍ
-> Ref: CSM ERRSTR ¸ñÊ½²ÎÊı
+> Ref: CSM å‚æ•°ç±»å‹
+> Ref: CSM ERRSTR æ ¼å¼å‚æ•°
 
-²Î¿¼·¶Àı£º"[CSM-Example]\0. Base Concepts\4.2 Arguments - Error As Arguments.vi"
+å‚è€ƒèŒƒä¾‹ï¼š"[CSM-Example]\0. Base Concepts\4.2 Arguments - Error As Arguments.vi"
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>error</b>: LabVIEW ´íÎó´Ø
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>Error</b>ï¼šLabVIEWé”™è¯¯ç°‡ã€‚
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>Argument</b>: CSM ´íÎó²ÎÊı¸ñÊ½
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>Argument</b>ï¼šCSMé”™è¯¯å‚æ•°æ ¼å¼ã€‚
 
 ### CSM - Convert Argument to Error.vi
 
-½« CSM ´íÎó²ÎÊı¸ñÊ½×ª»»Îª LabVIEW ´íÎó´Ø¡£
+å°†CSMé”™è¯¯å‚æ•°æ ¼å¼è½¬æ¢ä¸ºLabVIEWé”™è¯¯ç°‡ã€‚
 
-> Ref: CSM ²ÎÊıÀàĞÍ
-> Ref: CSM ERRSTR ¸ñÊ½²ÎÊı
+> Ref: CSMå‚æ•°ç±»å‹
+> Ref: CSM ERRSTRæ ¼å¼å‚æ•°
 
-²Î¿¼·¶Àı£º"[CSM-Example]\0. Base Concepts\4.2 Arguments - Error As Arguments.vi"
+å‚è€ƒèŒƒä¾‹ï¼š"[CSM-Example]\0. Base Concepts\4.2 Arguments - Error As Arguments.vi"ã€‚
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>Argument</b>: CSM ´íÎó²ÎÊı¸ñÊ½
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>Argument</b>ï¼šCSMé”™è¯¯å‚æ•°æ ¼å¼ã€‚
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>error</b>: LabVIEW ´íÎó´Ø
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>Error</b>ï¼šLabVIEWé”™è¯¯ç°‡ã€‚

@@ -1,238 +1,247 @@
 # CSM API
 
 > [!NOTE] 
-> **����ƴ��API**
+> **名称拼接API**
 >
-> ��� VI ֻ������ģ�������ַ�������û��ʵ�ʹ��ܣ���˵���Ϥ CSM ����󣬿���ֱ�������Ӧ�������ַ����͹�����ţ����Ǳ�����ô�API.
+> 这个VI只操作了模块名称字符串，并没有实际功能，因此当熟悉CSM规则后，可以直接输入对应的名称字符串和规则符号，不是必须调用此API。
 
-## ϵͳ��ģ�� (System-Level Module API)
+## 系统级模块 (System-Level Module API)
 
 > [!NOTE] 
-> **CSMϵͳ��ģ��**
+> **CSM系统级模块**
 >
-> ϵͳ��ģ�������CSM���ܣ�������ͨģ����ͬ������ͨģ��Ψһ����������Ĭ�ϵ� CSM - List Modules.vi �����г�ϵͳ��ģ�顣�����ͨ������ʵ��һЩ��̨���еĹ���ģ�飬����ͳһ������ͨģ������߼�ʱ�����Ա������Щ��̨�����߼��ĸ��š�
-> CSMϵͳ��ģ��ͨ����"."��ͷ�����磺".MainApp"��".BackgroundTask"�ȣ�"."�����Ƶ�һ���֣���Ϣ���͡����ĵȲ�����Ҫ������ҲҪ����"."��
-> ���磺
-> ���ǿ��Խ�������ѭ������Ϊ ".MainApp", ���ǾͿ���ͨ�� CSM - List Modules.vi ����ȡ������ͨģ����б����������г�".MainApp"�������������Ҫ�˳�����ȫ��ģ�飬�Ϳ��Է��͡�Macro: Exit���� CSM - List Modules.vi �Ľ���������Ϳ����˳�������ͨģ�飬������Ӱ��ϵͳ��ģ������С�
+> 系统级模块的其他CSM功能，均与普通模块相同，和普通模块唯一的区别，在于默认的CSM - List Modules VI不会列出系统级模块。因此它通常用于实现一些后台运行的功能模块，而在统一处理普通模块操作逻辑时，可以避免对这些后台运行逻辑的干扰。
+> CSM系统级模块通常以"."开头，例如：".MainApp"、".BackgroundTask"等，"."是名称的一部分，消息发送、订阅等操作需要的名称也要包含"."。
+> 例如：
+> 您可以将主程序循环命名为".MainApp"，就可以通过CSM - List Modules VI来获取所有普通模块的列表，而不会列出".MainApp"，如果主程序需要退出其他全部模块，就可以发送”Macro: Exit“给CSM - List Modules VI的结果，这样就可以退出所有普通模块，而不会影响系统级模块的运行。
 >
-> Э����ģʽ��������ģʽ��CSMģ�����ƣ�Ҳ�����ԡ�.����ͷ����Ϊϵͳ��ģ�����С�
+> 协作者模式、责任链模式的CSM模块名称，也可以以”.“开头，作为系统级模块运行。
 
 ### CSM - Mark As System-Level Module.vi
 
-�������ַ���ǰ����"."�����ɽ���ģ����Ϊϵͳ��ģ�飬��������Ϊ"UIModule", ���Ϊ".UIModule"��
+在输入字符串前添加"."，即可将此模块标记为系统级模块，例如输入为"UIModule"，输出为".UIModule"。
 
-�ο�������0. Base Concepts\7. System-Level Module.vi
+参考范例：“0. Base Concepts\7. System-Level Module.vi”。
 
-> Ref: ����ƴ��API
-> Ref: CSMϵͳ��ģ��
+> Ref: 名称拼接API
+> Ref: CSM系统级模块
 
--- <b>Controls(����ؼ�)</b> --
-- <b>CSM Name</b>: CSM ģ������
+-- <b>Controls(输入控件)</b> --
+- <b>CSM Name</b>：CSM模块名称。
 
--- <b>Indicators(����ؼ�)</b> --
-- <b>CSM Name (Marked As Sysetem-Level Module)</b>: ���ӡ�.����ǵ�CSMģ������
+-- <b>Indicators(输出控件)</b> --
+- <b>CSM Name (Marked As Sysetem-Level Module)</b>：添加“.”标记的CSM模块名称。
 
 
-## ��ģ��
+## 子模块
 
 > [!NOTE] 
-> **CSM��ģ��**
+> **CSM子模块**
 >
-> CSM�в�û���ϸ������ϵ���ģ�飬��ͨ��ģ�������е�"."����ǲ�ͬģ����߼���ϵ����ʵ�����нǶ�������ÿ��ģ�鶼�Ƕ�����û�в㼶��ϵ�ġ�
-> ���磺
-> ģ��"ModuleA"��"ModuleA.SubmoduleB"��������ͬ��ģ�飬�Ӵ����߼��Ͽ�����������ȫ�����ģ��������š�
-> ������ͨ�� CSM - List Submodules.vi ����ȡģ��"ModuleA"�������߼��ϵ���ģ�飬����"ModuleA.SubmoduleB"��
+> CSM中并没有严格意义上的子模块，仅通过模块名称中的"."来标记不同模块的逻辑关系，从实际运行角度来看，每个模块都是独立且没有层级关系的。
+> 例如：
+> 模块"ModuleA"和"ModuleA.SubmoduleB"是两个不同的模块，从代码逻辑上看，它们是完全独立的，互不干扰。
+> 但可以通过CSM - List Submodules VI来获取模块"ModuleA"的所有逻辑上的子模块，包括"ModuleA.SubmoduleB"。
 > 
-> ��Ҫע����ǣ�ModuleA Ҳ���Բ�ʵ�ʴ��ڣ�����Ϊ�߼����飬���磺
-> ģ�� Group.SubModuleA �� Group.SubModuleB ��������ͬ��ģ�飬�Ӵ����߼��Ͽ�����������ȫ�����ģ��������š�
-> ������ͨ�� CSM - List Submodules.vi ����ȡ"Group"�������߼��ϵ���ģ�飬����"Group.SubModuleA"��"Group.SubModuleB"��
+> 需要注意的是，ModuleA也可以不实际存在，仅作为逻辑分组，例如：
+> 模块Group.SubModuleA和Group.SubModuleB是两个不同的模块，从代码逻辑上看，它们是完全独立的，互不干扰。
+> 但可以通过CSM - List Submodules VI来获取"Group"的所有逻辑上的子模块，包括"Group.SubModuleA"和"Group.SubModuleB"。
 >
-> Э����ģʽ��������ģʽ��CSMģ������, Ҳ���԰���".", ��Ϊֻ���߼����飬��Ӱ��ģ������С�
+> 协作者模式、责任链模式的CSM模块名称, 也可以包含".", 因为只是逻辑分组，不影响模块的运行。
 
 ### Concatenate Submodule Name.vi
 
-- <b>CSM Name</b>:Controls
-- <b>Name</b>:Controls
-- <b>Submodule Name</b>:Indicators
+拼接生成子模块名。
 
-## ������ģʽ (Work Mode API)
+-- <b>Controls(输入控件)</b> --
+
+- <b>CSM Name</b>：CSM模块名称。
+- <b>Name</b>：要拼接的名称。
+
+-- <b>Indicators(输出控件)</b> --
+
+- <b>Submodule Name</b>：拼接生成的子模块名。
+
+## 工作者模式 (Work Mode API)
 
 > [!NOTE] 
-> **CSM ������ģʽ(worker mode)**
+> **CSM工作者模式（Worker Mode）**
 >
-> һ�� CSM ģ�飬ͨ��ʵ�������ʵ������������ƺ����ӡ�#��,��������ͬ����Ϣ���У�ʵ�ֹ�����ģʽ��
-> - ���ⲿ�����Ͽ�����Щʵ��һ�������һ�����ϵ�ģ�飬����Ϊ Worker Agent��
-> - ÿһ��ʵ��������Ϊ Worker��
+> 一个CSM模块，通过实例化多个实例，申请的名称后添加“#”，并共享相同的消息队列，实现工作者模式。
+> - 从外部调用上看，这些实例一起组成了一个复合的模块，命名为 Worker Agent。
+> - 每一个实例，命名为Worker。
 >
-> ��Ϊ��
-> �ⲿ�����߿�����Ϊ Worker Agent ����һ��CSMģ�飬���Խ�����ϢͨѶ��״̬ע��Ȳ�����
-> ���ڲ��������е� Worker ��� Worker Agent ��Ϣ������ȡ����Ϣ��������Ϣ����ˣ�Worker ģʽ�ܹ�ʵ��һ�� CSM ģ��Ĳ�����Ϣ������
+> 行为：
+> 外部调用者可以认为Worker Agent就是一个CSM模块，可以进行消息通讯、状态注册等操作。
+> 从内部看，空闲的Worker会从Worker Agent消息队列中取出消息，处理消息。因此，工作者模式能够实现一个CSM模块的并发消息处理。
 >
-> ������
-> //����ģ������Ϊ module#, module �� Worker Agent���ƣ�ʵ���� 2 ��ʵ������2��ʵ�������ֿ���Ϊ��
+> 举例：
+> //申请模块名称为module#，module是Worker Agent名称，实例化2个实例，这2个实例的名字可能为：
 > // - module#59703F3AD837
 > // - module#106A470BA5EC
-> // ����ֱ�Ӻ� worker ����ͨѶ����Ҫ�� Worker Agent ͨѶ������
-> csm message >> arguments -@ module //ͬ����Ϣ�����е� worker ����������Ϣ
-> csm message >> arguments -> module //ͬ����Ϣ�����е� worker ����������Ϣ
+> // 不能直接和Worker进行通讯，需要和Worker Agent通讯，例如：
+> csm message >> arguments -@ module //同步消息，空闲的Worker将处理此消息。
+> csm message >> arguments -> module //同步消息，空闲的Worker将处理此消息。
 >
-> Ӧ�ó�����
-> 1. 10086 ����Ա�ĳ���
-> 2. �������������صĳ���
-> 3. ��������������ĳ���
-> 4. TCP Server �������Client����
+> 应用场景：
+> - 10086接线员的场景
+> - 下载器并发下载的场景
+> - 编译器并发编译的场景
+> - TCP Server处理多个Client连接
 
 ### CSM - Mark As Worker Module.vi
 
-��CSM���ƺ����ӡ�#�����Ա�Ǵ�ģ��ΪЭ����ģʽģ�顣
+在CSM名称后添加“#”，以标记此模块为协作者模式模块。
 
-�ο�������4. Advance Examples\1. Action Workers Example
+参考范例：“4. Advance Examples\1. Action Workers Example”。
 
-> Ref: ����ƴ��API
-> Ref: CSM ������ģʽ(worker mode)
+> Ref: 名称拼接API
+> Ref: CSM工作者模式（Worker Mode）
 
--- <b>Controls(����ؼ�)</b> --
-- <b>CSM Name</b>: CSM ģ������
+-- <b>Controls(输入控件)</b> --
 
--- <b>Indicators(����ؼ�)</b> --
-- <b>CSM Name (Marked As Worker)</b>: ���ӡ�#����ǵ�CSMģ������
+- <b>CSM Name</b>：CSM模块名称。
 
-## ������ģʽ (Chain of Responsibility API) - ������
+-- <b>Indicators(输出控件)</b> --
+
+- <b>CSM Name (Marked As Worker)</b>：添加“#”标记的CSM模块名称。
+
+## 责任链模式 (Chain of Responsibility API) - 待完善
 
 > [!NOTE] 
-> **CSM ������ģʽ(Chain of Responsibility mode)**
+> **CSM责任链模式（Chain of Responsibility Mode）**
 >
-> ��� CSM ģ�飬��������ƺ����ӡ�$��,��ɴ��������һ��������ͨ��������ģʽ�γ�һ��������ģ�顣
+> 多个CSM模块，申请的名称后添加“$”，组成处理事务的一个链条，通过责任链模式形成一个完整的模块。
 >
-> - ���ⲿ�����Ͽ�����Щʵ��һ�������һ�����ϵ�ģ�飬����Ϊ Chain��
-> - ÿһ��ʵ��������Ϊ chain node��
+> - 从外部调用上看，这些实例一起组成了一个复合的模块，命名为Chain。
+> - 每一个实例，命名为Chain Node。
 >
-> ��Ϊ��
-> �ⲿ�����߿�����Ϊ Chain ����һ�� CSM ģ�飬���Խ�����ϢͨѶ��״̬ע��Ȳ�����
-> ���ڲ�����Nodes ���������˳�����γ��Դ�����Ϣ���� node ���е�ǰ��Ϣ����������ʱ����Ϣ��������������󴫵ݡ�
+> 行为：
+> 外部调用者可以认为Chain就是一个CSM模块，可以进行消息通讯、状态注册等操作。
+> 从内部看，nodes会根据排列顺序依次尝试处理消息，当node具有当前消息处理的能力时，消息被处理，不再向后传递。
 >
->     ������
->     //����ģ������Ϊ module$, module �� chain ���ƣ�ʵ���� 4 ��ʵ�������ĸ�ʵ�������ֿ���Ϊ��
+>     举例：
+>     //申请模块名称为module$, module是chain名称，实例化4个实例，这四个实例的名字可能为：
 >     // - module$1
 >     // - module$2
 >     // - module$3
 >     // - module$4
->     // ��ɵ� Chain ˳��Ϊ module$1(head) >> module$2 >> module$3 >> module$4(tail)
->     // ���� module$3 module$4 �ܹ����� "csm message"
+>     // 组成的Chain顺序为module$1(head) >> module$2 >> module$3 >> module$4(tail)
+>     // 假设module$3 module$4能够处理"csm message"
 >     csm message >> arguments -@ module
->     // �����Ϣ���� module$3 ����, module$4 ������Ӧ
+>     // 这个消息将被module$3处理, module$4不会响应
 >
-> Ӧ�ó�����
-> 1. Ȩ���������̣�����ְλ�㼶������ĳְ��Ȩ�޵���Ա���Ϳ���ֱ������������������ݡ�
-> 2. ����ƴ�ӣ���ͬģ��ʵ�ֲ�ͬ������ͨ��ƴ�ӿ�����ɲ�ͬ���ܺϼ������
-> 3. ���ܸ��ǣ�ͨ������ʵ��OOP�е�����
-> 4. ������ģʽ�ĳ�����ͨ�����ʺϾ��н��������
+> 应用场景：
+> - 权限审批过程，按照职位层级，具有某职能权限的人员，就可以直接审批，无需继续传递。。
+> - 功能拼接，不同模块实现不同的任务，通过拼接可以完成不同功能合集的组合。
+> - 功能覆盖，通过覆盖实现OOP中的重载。
+> - 工作者模式的场景，通常不适合具有界面操作。
 
 ### CSM - Mark As Chain Module.vi
 
-[!WARNING] ���鹦�ܻ�δ��ȫ��֤���������ʹ�á�
+[!WARNING] 此组功能还未完全验证过，请谨慎使用。
 
-ƴ��������ģʽģ������ƣ�ʹ�á�$����Ϊ�ָ�����ע�� Order �������������Ǳ���Ψһ�����С�Ľڵ㣬����������������ǰ�档
+拼接责任链模式模块的名称，使用“$”作为分隔符。注意Order不必连续，但是必须唯一，编号小的节点，将排列在责任链的前面。
 
-�ο�������4. Advance Examples\2. Chain of Responsibility Example
+参考范例：“4. Advance Examples\2. Chain of Responsibility Example”。
 
-> Ref: CSM ������ģʽ(Chain of Responsibility mode)
-> Ref: ����ƴ��API
+> Ref: CSM责任链模式（Chain of Responsibility Mode）
+> Ref: 名称拼接API
 
--- <b>Controls(����ؼ�)</b> --
-- <b>CSM Name</b>:  CSM ģ������
-- <b>Order</b>:  ������ģʽ�µ�˳��, ���С�Ľڵ㣬����������������ǰ�档
+-- <b>Controls(输入控件)</b> --
+- <b>CSM Name</b>:  CSM模块名称。
+- <b>Order</b>：责任链模式下的顺序，编号小的节点，将排列在责任链的前面。
 
--- <b>Indicators(����ؼ�)</b> --
-- <b>CSM Name (Marked As Chain)</b>:���ӡ�$����ǵ�CSMģ������
+-- <b>Indicators(输出控件)</b> --
+- <b>CSM Name (Marked As Chain)</b>：添加“$”标记的CSM模块名称。
 
 ### CSM - Resolve Node Module.vi
 
-ͨ�����߼�ģʽ�Ľڵ����ƽ�������Ӧ��CSMģ�����ơ�
+通过将高级模式的节点名称解析出对应的CSM模块名称。
 
-    ���磺
-    ������ģʽ�ڵ������Ϊ module#59703F3AD837 �õ��Ľ��ʱ module
-    ������ģʽ�ڵ������Ϊ module$1 �õ��Ľ��ʱ module
+    例如：
+    工作者模式节点的名称为module#59703F3AD837得到的结果时module
+    责任链模式节点的名称为module$1得到的结果时module
 
-- <b>CSM Module Name</b>:Indicators
-- <b>Node Name</b>:Controls
+- <b>CSM Module Name</b>：CSM模块名称。
+- <b>Node Name</b>：节点名称。
 
-## ��ѭ��ģʽ֧��(Multi-Loop Support)
+## 多循环模式支持(Multi-Loop Support)
 
 > [!NOTE]
-> **CSM ��ѭ��ģʽ(Multi-Loop mode)**
+> **CSM多循环模式（Multi-Loop Mode）**
 >
-> ����Щ�����£��ʺ�ʹ�ö��ѭ������ͬһ��CSMģ�飬���磺
-> - һ�����еĹ��ܴ����ϸ���ΪCSMģ�飬����TCP����ѭ����DAQmx���ݲɼ�ѭ����Ϊ�˱�֤ԭ�����߼����������������еĴ������Whileѭ�����ٸ���CSMͨѶѭ����ʵ�ָ��칦��
-> - ��ʵʱҪ��ߵ��������Ҫʹ�ö�ʱѭ��ʵ�֣�����Ҫ CSMѭ����ΪͨѶ�ӿڣ���ʱѭ����Ϊ����ѭ����ʵ�ַ���
-> - �ڽ�������ǳ����ӵ�����£����齫���������CSMͨѶѭ�����룬�������ѭ�������������������ģ������Ϣ��CSMѭ����Ϊʵ�ʹ���ѭ����
+> 在有些场景下，适合使用多个循环构成同一个CSM模块，例如：
+> - 一段已有的功能代码上改造为CSM模块，例如TCP连接循环、DAQmx数据采集循环，为了保证原本的逻辑清晰，可以在已有的代码包裹While循环，再附加CSM通讯循环，实现改造功能。
+> - 在实时要求高的情况，需要使用定时循环实现，则需要CSM循环作为通讯接口，定时循环作为功能循环的实现方案。
+> - 在界面操作非常复杂的情况下，建议将界面操作和CSM通讯循环分离，界面操作循环处理界面操作，产生模块间的消息，CSM循环作为实际功能循环。
 >
-> ��ѭ��֧��ģʽAPI���ڴ˳�������ģ���ڲ�ѭ���䴫���ڲ���Ϣ�����ṩ��CSMѭ����CSM�ӿڹ��ܡ�
+> 多循环支持模式API用于此场景下在模块内部循环间传递内部消息，或提供非CSM循环的CSM接口功能。
 >
 
 ### CSM - Request CSM to Post Message.vi
 
-���� CSM ģ������첽��Ϣ����API��Ҫ���� CSM ��ѭ��ģʽ�£�����ģ��������CSM������Ϣ��
+申请CSM模块给出异步消息。此API主要用于CSM多循环模式下，其他模块中申请CSM发出消息。
 
-�ڴ˳����£�ͨ������Ҳ����ʹ�� CSM - Post Message.vi�����������͵�ʱ���޷�ȷ��������Ҳ���ܻ���첽��Ϣ�ķ���ֵ����VI��һ�����䡣
+在此场景下，通常我们也可以使用CSM - Post Message VI，但是它发送的时刻无法确定，而且也不能获得异步消息的返回值。此VI是一个补充。
 
-�ο�������
+参考范例：
 4. Advance Examples\5. Multi-Loop Module Example\TCP Server Module(Multi-Loop Support).vi
 
-> Ref: CSM ��ѭ��ģʽ
+> Ref: CSM多循环模式（Multi-Loop Mode）
 
--- <b>Controls(����ؼ�)</b> --
-- <b>Module Name</b>:����״̬��CSM
-- <b>State</b>: ��Ϣ����
-- <b>Arguments ("")</b>: �����㲥��״̬����
-- <b>Without Reply? (F)</b>:�Ƿ���Ҫ���ء�����Ҫ����ʱ�����������첽��Ϣ������Ҫ����ʱ�����������첽�޷�����Ϣ��
-- <b>Target Module ("" By Default)</b>:Ŀ��ģ��
-- <b>Immediately? (F)</b>:����ִ��ѡ��������ͻ��ô���Ϣ��CSMѭ���������������������ǵȴ�CSMѭ�����ִ����Ϣִ����ϡ�
+-- <b>Controls(输入控件)</b> --
+- <b>Module Name</b>：发送状态的CSM。
+- <b>State</b>：消息名称。
+- <b>Arguments ("")</b>：将被广播的状态参数。
+- <b>Without Reply? (F)</b>：是否需要返回。当需要返回时，发出的是异步消息；不需要返回时，发出的是异步无返回消息。
+- <b>Target Module ("" By Default)</b>：目标模块。
+- <b>Immediately? (F)</b>：立即执行选项。立即发送会让此消息在CSM循环中立即被处理，而不是等待CSM循环中现存的消息执行完毕。
 
 ### CSM - Request CSM to Broadcast Status Change.vi
 
-���� CSM ���͹㲥����API��Ҫ���� CSM ��ѭ��ģʽ�£�����ģ��������CSM�����㲥��֪ͨ����ģ��״̬�ı䡣
+申请CSM发送广播。此API主要用于CSM多循环模式下，其他模块中申请CSM发出广播，通知其他模块状态改变。
 
 > [!WARNING]
-> ��Ȼ��ֻҪ֪��ģ�����ƣ� ������ȫ������CSMģ���ⲿ��ʹ�����VIαװ���ģ�鷢���㲥��Ϣ�������������ǲ��Ƽ��ģ���Ϊ�����߼�����������߼���û��ң���ߵ��Ե��Ѷȡ����ֻ������CSM��ѭ��ģʽ��ʹ�ô�VI��
+> 只要知道模块名称， 您可以在CSM模块外部，使用这个VI伪装这个模块发出广播消息，但是这样做是不推荐的，因为这种逻辑会让整体的逻辑变得混乱，提高调试的难度。因此只建议在CSM多循环模式下使用此VI。
 
-�ο�������
+参考范例：
 4. Advance Examples\5. Multi-Loop Module Example\TCP Server Module(Multi-Loop Support).vi
 
-> Ref: CSM ��ѭ��ģʽ
+> Ref: CSM多循环模式（Multi-Loop Mode）
 
--- <b>Controls(����ؼ�)</b> --
-- <b>Module Name</b>:����״̬��CSM
-- <b>Status</b>: �����㲥��״̬
-- <b>Arguments ("")</b>: �����㲥��״̬����
-- <b>Broadcast? (T)</b>: �����Ƿ�㲥�Ŀ�������
-- <b>Immediately? (F)</b>:����ִ��ѡ��������ͻ��ô���Ϣ��CSMѭ���������������������ǵȴ�CSMѭ�����ִ����Ϣִ����ϡ�
+-- <b>Controls(输入控件)</b> --
+- <b>Module Name</b>：发送状态的CSM。
+- <b>Status</b>：将被广播的状态。
+- <b>Arguments ("")</b>：将被广播的状态参数。
+- <b>Broadcast? (T)</b>：控制是否广播的开关输入。
+- <b>Immediately? (F)</b>：立即执行选项。立即发送会让此消息在CSM循环中立即被处理，而不是等待CSM循环中现存的消息执行完毕。
 
 ### CSM - Forward UI Operations to CSM.vi
 
-��VI��ҪӦ���ڶ�ѭ��ģʽ�£���������CSMѭ����UIѭ�����û�����������ʱ�䣬ת����CSMѭ���д�����CSM DQMH-Style Template.vi ģ���������߼���
+此VI主要应用于多循环模式下，将并行于CSM循环的UI循环中用户操作产生的时间，转发到CSM循环中处理。CSM DQMH-Style Template VI模板就是这个逻辑。
 
-�ο�������
-Addons - Loop Support\CSMLS - Continuous Loop in CSM Example.vi
+参考范例：
+“Addons - Loop Support\CSMLS - Continuous Loop in CSM Example.vi”。
 
-> Ref: CSM ��ѭ��ģʽ
+> Ref: CSM多循环模式（Multi-Loop Mode）
 
--- <b>Controls(����ؼ�)</b> --
-- <b>State(s) In ("")</b>: ��������״̬
-- <b>Name ("" to Use UUID)</b>: ģ�������
-- <b>High Priority? (T)</b>: ����ִ��ѡ��������ͻ��ô���Ϣ��CSMѭ���������������������ǵȴ�CSMѭ�����ִ����Ϣִ����ϡ�
+-- <b>Controls(输入控件)</b> --
+- <b>State(s) In ("")</b>：待处理的状态。
+- <b>Name ("" to Use UUID)</b>：模块的名称。
+- <b>High Priority? (T)</b>：立即执行选项。立即发送会让此消息在CSM循环中立即被处理，而不是等待CSM循环中现存的消息执行完毕。
 
--- <b>Indicators(����ؼ�)</b> --
-- <b>States Out</b>: ����ʼ��Ϊ�գ���Ϊ����ģ���б�֤����һ�������õ�����ˡ�
+-- <b>Indicators(输出控件)</b> --
+- <b>States Out</b>：输入始终为空，是为了在模板中保证连线一致性设置的输出端。
 
 ### CSM - Module Turns Invalid.vi
 
-���CSM�Ƿ��Ѿ��˳���ͨ�����ں�CSM���еĹ���ѭ���ĸ���CSMѭ���˳���
+检查CSM是否已经退出。通常用于和CSM并行的功能循环的跟随CSM循环退出。
 
-CSM�߼�ģʽ��ģ��(Э����ģʽ��������ģʽ)ֻ�������һ���ڵ��˳��󣬲Żᴥ��ģ���˳��¼���
+CSM高级模式的模块（协作者模式、责任链模式）只有在最后一个节点退出后，才会触发模块退出事件。
 
--- <b>Controls(����ؼ�)</b> --
-- <b>CSM Name</b>: ģ������
+-- <b>Controls(输入控件)</b> --
+- <b>CSM Name</b>：CSM模块名称。
 
--- <b>Indicators(����ؼ�)</b> --
-- <b>Turn Invalid (Exit)?</b>: �Ƿ��Ѿ��˳�
+-- <b>Indicators(输出控件)</b> --
+- <b>Turn Invalid (Exit)?</b>：CSM模块是否已经退出。

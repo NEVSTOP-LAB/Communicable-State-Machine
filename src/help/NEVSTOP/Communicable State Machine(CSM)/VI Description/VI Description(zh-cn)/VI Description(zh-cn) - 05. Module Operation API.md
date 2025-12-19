@@ -1,246 +1,255 @@
 # CSM API
 
-## ģ������ӿ�(Module Operation API)
+## 模块操作接口(Module Operation API)
 
 ### CSM - Wait for Module to Be Alive.vi
 
-��ָ���ĳ�ʱʱ���ڵȴ�CSMģ������,���صȴ�ʱ�䣬��ʱ�󷵻ش����ڲ�ͨ��1ms�ļ��, ������ʹ�� CSM - Check If Module Exit ���ģ���Ƿ����ߡ�
+在指定的超时时间内等待CSM模块上线，返回等待时间，超时后返回错误。内部通过1 ms的间隔，周期性使用CSM - Check If Module Exists VI检查模块是否上线。
 
--- <b>Controls(����ؼ�)</b> --
-- <b>CSM Name</b>: CSM ģ������
-- <b>Wait (5000ms)</b>: �ȴ���ʱʱ�䣬Ĭ��Ϊ5000ms
+-- <b>Controls(输入控件)</b> --
+- <b>CSM Name</b>：CSM模块名称。
+- <b>Wait (5000ms)</b>：等待超时时间，默认为5000 ms。
 
--- <b>Indicators(����ؼ�)</b> --
-- <b>CSM Name (Dup)</b>: CSM ģ������
-- <b>Waited (ms)</b>: �ѵȴ���ʱ��
+-- <b>Indicators(输出控件)</b> --
+- <b>CSM Name (Dup)</b>：CSM模块名称。
+- <b>Waited (ms)</b>：已等待的时间。
 
 ### CSM - Wait for All Modules to be Alive.vi
 
-��ָ���ĳ�ʱʱ���ڵȴ�һ�� CSM ģ��ȫ�����ߣ����صȴ�ʱ�䣬��ʱ�󷵻ش���δ���ߵ�ģ�����ơ��ڲ�ͨ��5ms�ļ��, ������ʹ�� CSM - List Module.vi ����Ƿ�����ģ�鶼�����ߡ�
+在指定的超时时间内等待一组CSM模块全部上线，返回等待时间，超时后返回错误及未上线的模块名称。内部通过5 ms的间隔，周期性使用CSM - List Module VI检查是否所有模块都已上线。
 
--- <b>Controls(����ؼ�)</b> --
-- <b>CSM Names</b>: CSM ģ������
-- <b>Timeout (5000ms)</b>: �ȴ���ʱʱ�䣬Ĭ��Ϊ5000ms
+-- <b>Controls(输入控件)</b> --
+- <b>CSM Names</b>：CSM模块名称。
+- <!-- 这里不是"Wait (5000 ms)"吗？--><b>Timeout (5000ms)</b>：等待超时时间，默认为5000 ms。
 
--- <b>Indicators(����ؼ�)</b> --
-- <b>CSMs Left</b>: ��ʱ��δ���ߵ� CSM ģ��
-- <b>Waited (ms)</b>: �ѵȴ���ʱ��
+-- <b>Indicators(输出控件)</b> --
+- <b>CSMs Left</b>：超时后还未上线的CSM模块。
+- <b>Waited (ms)</b>：已等待的时间。
 
 ### CSM - Wait for All Modules to Exit.vi
 
-��ָ���ĳ�ʱʱ���ڵȴ�һ�� CSM ģ��ȫ�����ߣ����صȴ�ʱ�䣬��ʱ�󷵻ش���δ���ߵ�ģ�����ơ�ͨ�����ڳ����˳���
+在指定的超时时间内等待一组CSM模块全部下线，返回等待时间，超时后返回错误及未下线的模块名称。通常用于程序退出。
 
--- <b>Controls(����ؼ�)</b> --
-- <b>CSM Names</b>: CSM ģ������
-- <b>Timeout (5000ms)</b>: �ȴ���ʱʱ�䣬Ĭ��Ϊ5000ms
+-- <b>Controls(输入控件)</b> --
+- <b>CSM Names</b>：CSM 模块名称。
+- <!-- 这里不是"Wait (5000 ms)"吗？--><b>Timeout (5000ms)</b>：等待超时时间，默认为5000 ms。
 
--- <b>Indicators(����ؼ�)</b> --
-- <b>CSMs Left</b>: ��ʱ��δ���ߵ� CSM ģ��
-- <b>Waited (ms)</b>: �ѵȴ���ʱ��
+-- <b>Indicators(输出控件)</b> --
+
+- <b>CSMs Left</b>：超时后还未下线的CSM模块。
+- <b>Waited (ms)</b>：已等待的时间。
 
 ### CSM - Post Message.vi
 
-�����첽��Ϣ��ָ����CSMģ�飬�������첽���ͣ���˲���ȴ����أ���Ϣ���ͺ����ִ��֮��Ĵ��롣���CSMģ�鲻���ڣ������� Target Error.
+发送异步消息到指定的CSM模块。由于是异步发送，因此不会等待返回，消息发送后继续执行之后的代码。如果CSM模块不存在，将返回Target Error。
 
 > ![NOTE] 
-> ʹ��API���͵��첽��Ϣ��Ϊ�첽�޷�����Ϣ���޷���ȡ�첽��Ϣ�ķ��ز�����
+> 使用API发送的异步消息均为异步无返回消息，无法获取异步消息的返回参数。
 
-> Ref: �첽��Ϣ
-> Ref: CSM��Ϣ��Ŀ��ģ��˵��
+> Ref: 异步消息
+> Ref: CSM消息的目标模块说明
 
--- <b>Controls(����ؼ�)</b> --
-- <b>State</b>: ��Ϣ�ַ���
-- <b>Arguments ("")</b>: ��Ϣ����
-- <b>Target Module</b>:Ŀ��ģ�������
-- <b>Current Module ("" to Generate an ID)</b>:��ǰģ�����ƣ���û������ʱ������һ����ʱID�����ڵ����ж�λ�á�
+-- <b>Controls(输入控件)</b> --
+- <b>Current Module ("" to Generate an ID)</b>：当前模块名称，当没有输入时，生成一个临时ID，便于调试判断位置。
+- <b>State</b>：消息字符串。
+- <b>Arguments ("")</b>：消息参数。
+- <b>Target Module</b>：目标模块的名称。
 
 ### CSM - Wait and Post Message.vi
 
-�����첽��Ϣ��ָ����CSMģ�飬�������첽���ͣ���˲���ȴ����أ���Ϣ���ͺ����ִ��֮��Ĵ��롣���CSMģ�鲻���ڣ�����ȴ�ָ���ĳ�ʱʱ�䣬��Ȼ��ʱ�᷵�س�ʱ����
+发送异步消息到指定的CSM模块，由于是异步发送，因此不会等待返回，消息发送后继续执行之后的代码。如果CSM模块不存在，将会等待指定的超时时间，仍然超时会返回超时错误。
 
-> Ref: �첽��Ϣ
-> Ref: CSM��Ϣ��Ŀ��ģ��˵��
+> Ref: 异步消息
+> Ref: CSM消息的目标模块说明
 
--- <b>Controls(����ؼ�)</b> --
-- <b>State</b>: ��Ϣ�ַ���
-- <b>Arguments ("")</b>: ��Ϣ����
-- <b>Target Module</b>:Ŀ��ģ�������
-- <b>Current Module ("" to Generate an ID)</b>: ��ǰģ�����ƣ���û������ʱ������һ����ʱID�����ڵ����ж�λ�á�
-- <b>Wait (5000ms)</b>: �ȴ���ʱʱ�䣬Ĭ��Ϊ5000ms
+-- <b>Controls(输入控件)</b> --
+- <b>Current Module ("" to Generate an ID)</b>：当前模块名称，当没有输入时，生成一个临时ID，便于调试判断位置。
+- <b>State</b>：消息字符串。
+- <b>Arguments ("")</b>：消息参数。
+- <b>Target Module</b>：目标模块的名称。
+- <b>Wait (5000ms)</b>：等待超时时间，默认为5000 ms。
 
--- <b>Indicators(����ؼ�)</b> --
-- <b>Waited (ms)</b>: �ѵȴ���ʱ��
+-- <b>Indicators(输出控件)</b> --
+- <!-- 软件里面没有这个输出。--><b>Waited (ms)</b>：已等待的时间。
 
 ### CSM - Send Message and Wait for Reply.vi
 
-����ͬ����Ϣ��CSM���ȴ����غ����ִ��֮��Ĵ��롣
-- ��ʱδ��ȡ��������Ϣ�������� CSM Timeout Error.
-- Ŀ��ģ�鲻���ڣ������� Target Error.
+发送同步消息到CSM，等待返回后继续执行之后的代码。
+- 超时未获取到返回消息，将返回CSM Timeout Error。
+- 目标模块不存在，将返回Target Error。
 
-> Ref: ͬ����Ϣ
-> Ref: ȫ�ֳ�ʱʱ������
-> Ref: CSM��Ϣ��Ŀ��ģ��˵��
+> Ref: 同步消息
+> Ref: 全局超时时间设置
+> Ref: CSM消息的目标模块说明
 
--- <b>Controls(����ؼ�)</b> --
-- <b>State</b>: ��Ϣ�ַ���
-- <b>Arguments ("")</b>: ��Ϣ����
-- <b>Target Module</b>: Ŀ�� CSM ģ������
-- <b>Response Timeout (-2 Using Global Settings)</b>: �ȴ����صĳ�ʱ���ã�Ĭ�� 5000ms.
+-- <b>Controls(输入控件)</b> --
+- <b>Current Module ("" to Generate an ID)</b>：当前模块名称，当没有输入时，生成一个临时ID，便于调试判断位置。
+- <b>State</b>：消息字符串。
+- <b>Arguments ("")</b>：消息参数。
+- <b>Target Module</b>：目标CSM模块名称。
+- <b>Response Timeout (-2 Using Global Settings)</b>：等待返回的超时设置，默认5000 ms。
 
--- <b>Indicators(����ؼ�)</b> --
-- <b>Response</b>: ���ص���Ӧ
-- <b>Source CSM</b>: ���ص���Ӧ����Դ CSM ģ������, ��Э����ģʽ��������ģʽ�·��ؽڵ������
+-- <b>Indicators(输出控件)</b> --
+- <b>Response</b>：返回的响应。
+- <!-- 在软件里是">>Msg/Rep's CSM"。请确认正确名称。--><b>Source CSM</b>：返回的响应的来源CSM模块名称，在协作者模式或责任链模式下返回节点的名称。
 
 ### CSM - Wait and Send Message for Reply.vi
 
-����ͬ����Ϣ��CSM���ȴ����غ����ִ��֮��Ĵ��롣���CSMģ�鲻���ڣ�����ȴ�ָ���ĳ�ʱʱ�䡣���ܳ������´���
-- ���ģ�鷢��ʱ�����ڣ��ȴ���ʱ�󷵻س�ʱ����
-- ���Է�����Ϣ������ʱδ��ȡ��������Ϣ�������� CSM Timeout Error.
+发送同步消息到CSM，等待返回后继续执行之后的代码。如果CSM模块不存在，将会等待指定的超时时间。可能出现以下错误：
+- 如果模块发送时不存在，等待超时后返回超时错误。
+- 可以发送消息，但超时未获取到返回消息，将返回CSM Timeout Error。
 
-> Ref: ͬ����Ϣ
-> Ref: ȫ�ֳ�ʱʱ������
-> Ref: CSM��Ϣ��Ŀ��ģ��˵��
+> Ref: 同步消息
+> Ref: 全局超时时间设置
+> Ref: CSM消息的目标模块说明
 
--- <b>Controls(����ؼ�)</b> --
-- <b>State</b>: ��Ϣ�ַ���
-- <b>Arguments ("")</b>: ��Ϣ����
-- <b>Target Module</b>: CSM ģ������
-- <b>Response Timeout (-2 Using Global Settings)</b>: ͬ�����õĳ�ʱʱ�䣬Ĭ��Ϊ-2��ʹ��ȫ�����á������ͨ��"CSM - Set TMO of Sync-Reply.vi" ����ȫ�ֳ�ʱʱ�䡣
-- <b>Current Module ("" to Generate an ID)</b>: ��ǰģ�����ƣ���û������ʱ������һ����ʱID�����ڵ����ж�λ�á�
-- <b>Wait (5000ms)</b>: �ȴ���ʱʱ�䣬Ĭ��Ϊ5000ms
+-- <b>Controls(输入控件)</b> --
+- <b>Current Module ("" to Generate an ID)</b>：当前模块名称，当没有输入时，生成一个临时ID，便于调试判断位置。
+- <b>State</b>：消息字符串。
+- <b>Arguments ("")</b>：消息参数。
+- <b>Target Module</b>：CSM模块名称。
+- <b>Wait (5000ms)</b>：等待超时时间，默认为5000 ms。
+- <b>Response Timeout (-2 Using Global Settings)</b>：同步调用的超时时间，默认为-2，使用全局设置。你可以通过CSM - Set TMO of Sync-Reply VI设置全局超时时间。
 
--- <b>Indicators(����ؼ�)</b> --
-- <b>Response</b>: ���ص���Ӧ
-- <b>Source CSM</b>: ���ص���Ӧ����Դ CSM ģ������, ��Э����ģʽ��������ģʽ�·��ؽڵ������
+-- <b>Indicators(输出控件)</b> --
+
+- <b>Response</b>：返回的响应。
+- <b>Source CSM</b>：返回的响应的来源CSM模块名称，在协作者模式或责任链模式下返回节点的名称。
 
 ### CSM - Run Script.vi
 
-һ���Ե�ִ�ж���CSMָ�֧��ͬ����Ϣ���첽��Ϣ�Ͷ��ġ�
+一次性的执行多条CSM指令，支持同步消息、异步消息和订阅。
 
-> Ref: CSM��Ϣ��Ŀ��ģ��˵��
+> Ref: CSM消息的目标模块说明
 
--- <b>Controls(����ؼ�)</b> --
-- <b>CSM Scripts</b>: �����е�CSMָ��
-- <b>Response Timeout (-2 Using Global Settings)</b>: ͬ�����õĳ�ʱʱ�䣬Ĭ��Ϊ-2��ʹ��ȫ�����á������ͨ��"CSM - Set TMO of Sync-Reply.vi" ����ȫ�ֳ�ʱʱ�䡣
-- <b>Continue If Error? (F)</b>:�����������Ƿ����ִ��, Ĭ�ϲ�����ִ��
-- <b>Current Module ("" to Generate an ID)</b>: ��ǰģ�����ƣ���û������ʱ������һ����ʱID�����ڵ����ж�λ�á�
-- <b>Wait (5000ms)</b>: �ȴ���ʱʱ�䣬Ĭ��Ϊ5000ms
+-- <b>Controls(输入控件)</b> --
+- <b>Current Module ("" to Generate an ID)</b>：当前模块名称，当没有输入时，生成一个临时ID，便于调试判断位置。
+- <b>CSM Scripts</b>：待运行的CSM指令。
+- <b>Continue If Error? (F)</b>：发生错误是是否继续执行, 默认不继续执行。
+- <b>Wait (5000 ms)</b>：等待超时时间，默认为5000 ms。
+- <b>Response Timeout (-2 Using Global Settings)</b>：同步调用的超时时间，默认为-2，使用全局设置。你可以通过CSM - Set TMO of Sync-Reply VI设置全局超时时间。
 
--- <b>Indicators(����ؼ�)</b> --
-- <b>Scripts Left</b>: ʣ��δִ�еĽű�
-- <b>Response</b>: ִ�нű��ķ��ؽ����ֻ��ͬ����Ϣ�Ż�Я�����أ�������ָ���Ӧ��Ϊ���ַ�����
+-- <b>Indicators(输出控件)</b> --
+- <b>Response</b>：执行脚本的返回结果。只有同步消息才会携带返回，其他的指令对应列为空字符串。
+- <b>Scripts Left</b>：剩余未执行的脚本。
 
 ### CSM - Status Change Event.vi
 
-��ȡ CSM ״̬�����¼������
+获取CSM状态更改事件句柄。
 
--- <b>Controls(����ؼ�)</b> --
-- <b>CSM Module</b>: CSM ģ������
+-- <b>Controls(输入控件)</b> --
+- <b>CSM Module</b>：CSM模块名称。
+- <b>Wait (5000 ms)</b>：等待超时时间，默认为5000 ms。
 
--- <b>Indicators(����ؼ�)</b> --
-- <b>Status Change Event</b>: CSM ״̬�����¼����
-- <b>Waited (ms)</b>: �ѵȴ���ʱ��
+-- <b>Indicators(输出控件)</b> --
+- <b>Status Change Event</b>：CSM状态更改事件句柄。
+- <b>Waited (ms)</b>：已等待的时间。
 
 ### CSM - Destroy Status Change Event.vi
 
-�ͷ� CSM ״̬�����¼������
+释放CSM状态更改事件句柄。
 
--- <b>Controls(����ؼ�)</b> --
-- <b>Status Change Event</b>: CSM ״̬�����¼����
+-- <b>Controls(输入控件)</b> --
+
+- <b>Status Change Event</b>：CSM状态更改事件句柄。
 
 ### CSM - Module Exit Event.vi
 
-��ȡ CSM ģ���˳��¼���������ģ�鲻���ڣ�����ȴ�ָ���ĳ�ʱʱ�䡣��ʱ�������ģ�黹�����ڣ������س�ʱ����
+获取CSM模块退出事件句柄，如果模块不存在，将会等待指定的超时时间。超时过后如果模块还不存在，将返回超时错误。
 
-CSM�߼�ģʽ��ģ��(Э����ģʽ��������ģʽ)ֻ�������һ���ڵ��˳��󣬲Żᴥ��ģ���˳��¼���
+CSM高级模式的模块（协作者模式、责任链模式）只有在最后一个节点退出后，才会触发模块退出事件。
 
--- <b>Controls(����ؼ�)</b> --
-- <b>CSM Module</b>: CSM ģ������
-- <b>Name ("" to Use UUID) In</b>:Controls
+-- <b>Controls(输入控件)</b> --
 
--- <b>Indicators(����ؼ�)</b> --
-- <b>CSM Exit Event</b>: CSM ģ���˳��¼����
-- <b>Waited (ms)</b>: �ѵȴ���ʱ��
+- <b>Name ("" to Use UUID) In</b>：CSM模块名称。请参考*CSM名称规则*。
+- <b>Wait (5000 ms)</b>：等待超时时间，默认为5000 ms。
 
-### ����(Attribute)
+-- <b>Indicators(输出控件)</b> --
+- <b>CSM Exit Event</b>：CSM模块退出事件句柄。
+- <b>Waited (ms)</b>：已等待的时间。
 
-> ![NOTE] CSM ģ������
-> CSMģ��������һ����Ա���ģ�����á�״̬����������ͨ�����������ʡ��������������³�����
-> 1. �ṩһ��������Ϣ���ɷ����޸ĵ����á�״̬��Ϣ������ TCP ģ���б�ʾ�Ƿ��Ѿ����ӵ����� "Connected" ���ԣ�ֱ�ӷ��ʻ���ӷ��㡣
-> 2. �ڸ߼�ģʽ(Э����ģʽ��������ģʽ)�����µĽڵ㹲��ͬһ����������������ģ��֮�乲�����ݡ�
+### 属性（Attribute）
+
+> ![NOTE] **CSM模块属性**
+> CSM模块属性是一块可以保存模块配置、状态的数据区域，通过名称来访问。它可以用作以下场景：
+>
+> - 提供一种无需消息即可访问修改的配置、状态信息。例如TCP模块中表示是否已经连接的属性"Connected"属性，直接访问会更加方便。
+> - 在高级模式（协作者模式、责任链模式）运行下的节点共享同一个数据区域，用于在模块之间共享数据。
 
 #### CSM - Set Module Attribute.vi
 
-����ָ��ģ�������ֵ��������Բ����ڣ�������һ���µ����ԣ�<b>Replaced</b> ����FALSE, ���򷵻�TRUE�����CSMģ�鲻���ڣ�����ȴ�ָ���ĳ�ʱʱ�䣬��ʱ�᷵�س�ʱ����
+设置指定模块的属性值。如果属性不存在，将创建一个新的属性，<b>Replaced</b>返回FALSE, 否则返回TRUE。如果CSM模块不存在，将会等待指定的超时时间，超时会返回超时错误。
 
-> Ref: CSM ģ������
+> Ref: CSM模块属性
 
-�ο�������"[CSM-Example]\0. Base Concepts\6. Module Attributes.vi"
+参考范例："[CSM-Example]\0. Base Concepts\6. Module Attributes.vi"。
 
--- <b>Controls(����ؼ�)</b> --
-- <b>CSM Name</b>: CSM ģ������
-- <b>Attribute</b>:�������ƣ�����Ϊ���ַ���
-- <b>Value</b>:��������
-- <b>Wait (5000 ms)</b>:�ȴ���ʱʱ�䣬Ĭ��Ϊ5000ms
+-- <b>Controls(输入控件)</b> --
+- <b>CSM Name</b>：CSM模块名称。
+- <b>Attribute</b>：属性名称，不能为空字符串。
+- <b>Value</b>：属性数据。
+- <b>Wait (5000 ms)</b>：等待超时时间，默认为5000 ms。
 
--- <b>Indicators(����ؼ�)</b> --
-- <b>CSM Name (Dup)</b>:�����CSMģ�����Ƹ���
-- <b>Replaced</b>:�����Ƿ��滻
-- <b>Waited (ms)</b>: �ѵȴ���ʱ��
+-- <b>Indicators(输出控件)</b> --
+- <b>CSM Name (Dup)</b>：输入的CSM模块名称副本。
+- <b>Replaced</b>：属性是否被替换。
+- <b>Waited (ms)</b>：已等待的时间。
 
 #### CSM - Get Module Attribute.vi
 
-��ȡָ��ģ�������ֵ��������Բ����ڣ�������Ĭ��ֵ��<b>Found</b> ����FALSE, ���򷵻�TRUE�����CSMģ�鲻���ڣ�����ȴ�ָ���ĳ�ʱʱ�䣬��ʱ�᷵�س�ʱ����
+读取指定模块的属性值。如果属性不存在，将返回默认值，<b>Found</b>返回FALSE, 否则返回TRUE。如果CSM模块不存在，将会等待指定的超时时间，超时会返回超时错误。
 
-> Ref: CSM ģ������
+> Ref: CSM模块属性
 
-�ο�������"[CSM-Example]\0. Base Concepts\6. Module Attributes.vi"
+参考范例："[CSM-Example]\0. Base Concepts\6. Module Attributes.vi"。
 
--- <b>Controls(����ؼ�)</b> --
-- <b>CSM Name</b>: CSM ģ������
-- <b>Attribute</b>:�������ƣ�����Ϊ���ַ���
-- <b>Default Value (Empty Variant)</b>:Ĭ��ֵ�������Բ�����ʱ����
-- <b>Wait (5000 ms)</b>:�ȴ���ʱʱ�䣬Ĭ��Ϊ5000ms
+-- <b>Controls(输入控件)</b> --
+- <b>CSM Name</b>：CSM模块名称。
+- <b>Attribute</b>：属性名称，不能为空字符串。
+- <b>Default Value (Empty Variant)</b>：默认值，当属性不存在时返回。
+- <b>Wait (5000 ms)</b>：等待超时时间，默认为 5000ms。
 
--- <b>Indicators(����ؼ�)</b> --
-- <b>CSM Name (Dup)</b>:�����CSMģ�����Ƹ���
-- <b>Value</b>:����ֵ
-- <b>Found</b>:�����Ƿ����
-- <b>Waited (ms)</b>: �ѵȴ���ʱ��
+-- <b>Indicators(输出控件)</b> --
+
+- <b>CSM Name (Dup)</b>：输入的CSM模块名称副本。
+- <b>Found</b>：属性是否存在。
+- <b>Value</b>：属性值。
+- <b>Waited (ms)</b>：已等待的时间。
 
 #### CSM - List Module Attributes.vi
 
-�г�ָ��ģ��������������ơ����CSMģ�鲻���ڣ�����ȴ�ָ���ĳ�ʱʱ�䣬��ʱ�᷵�س�ʱ����
+列出指定模块的所有属性名称。如果CSM模块不存在，将会等待指定的超时时间，超时会返回超时错误。
 
-> Ref: CSM ģ������
+> Ref: CSM模块属性
 
-�ο�������"[CSM-Example]\0. Base Concepts\6. Module Attributes.vi"
+参考范例："[CSM-Example]\0. Base Concepts\6. Module Attributes.vi"。
 
--- <b>Controls(����ؼ�)</b> --
-- <b>CSM Name</b>: CSM ģ������
-- <b>Include Value? (F)</b>:�Ƿ��������ֵ��Ĭ�ϲ�����
-- <b>Wait (5000 ms)</b>:�ȴ���ʱʱ�䣬Ĭ��Ϊ5000ms
+-- <b>Controls(输入控件)</b> --
+- <b>CSM Name</b>：CSM模块名称。
+- <b>Include Value? (F)</b>：是否包含属性值，默认不包含。
+- <b>Wait (5000 ms)</b>：等待超时时间，默认为5000 ms。
 
--- <b>Indicators(����ؼ�)</b> --
-- <b>CSM Name (Dup)</b>:�����CSMģ�����Ƹ���
-- <b>Attributes</b>:���������б�
-- <b>Values</b>:����ֵ�б�
-- <b>Waited (ms)</b>: �ѵȴ���ʱ��
+-- <b>Indicators(输出控件)</b> --
+- <b>CSM Name (Dup)</b>：输入的CSM模块名称副本。
+- <b>Attributes</b>：属性名称列表。
+- <b>Values</b>：属性值列表。
+- <b>Waited (ms)</b>：已等待的时间。
 
 #### CSM - Delete Module Attribute.vi
 
-ɾ��ָ��ģ������ԡ�������Բ����ڣ�������FALSE, ���򷵻�TRUE�����CSMģ�鲻���ڣ�����ȴ�ָ���ĳ�ʱʱ�䣬��ʱ�᷵�س�ʱ����
+删除指定模块的属性。如果属性不存在，将返回FALSE, 否则返回TRUE。如果CSM模块不存在，将会等待指定的超时时间，超时会返回超时错误。
 
-> Ref: CSM ģ������
+> Ref: CSM模块属性
 
-�ο�������"[CSM-Example]\0. Base Concepts\6. Module Attributes.vi"
+参考范例："[CSM-Example]\0. Base Concepts\6. Module Attributes.vi"。
 
--- <b>Controls(����ؼ�)</b> --
-- <b>Attribute</b>:�������ƣ�����Ϊ���ַ���
-- <b>CSM Name</b>: CSM ģ������
-- <b>Wait (5000 ms)</b>:�ȴ���ʱʱ�䣬Ĭ��Ϊ5000ms
+-- <b>Controls(输入控件)</b> --
+- <b>CSM Name</b>：CSM模块名称。
+- <b>Attribute</b>：属性名称，不能为空字符串。
+- <b>Wait (5000 ms)</b>：等待超时时间，默认为5000 ms。
 
--- <b>Indicators(����ؼ�)</b> --
-- <b>CSM Name (Dup)</b>:�����CSMģ�����Ƹ���
-- <b>Found</b>:�����Ƿ����
-- <b>Waited (ms)</b>: �ѵȴ���ʱ��
+-- <b>Indicators(输出控件)</b> --
+
+- <b>CSM Name (Dup)</b>：输入的CSM模块名称副本。
+- <b>Found</b>：属性是否存在。
+- <b>Waited (ms)</b>：已等待的时间。

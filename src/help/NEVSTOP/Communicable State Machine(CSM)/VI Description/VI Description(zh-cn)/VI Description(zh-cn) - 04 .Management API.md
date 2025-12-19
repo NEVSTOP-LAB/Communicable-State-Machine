@@ -1,263 +1,277 @@
 # CSM API
 
-## �����ӿ�(Management API)
+## 管理接口(Management API)
 
 > [!NOTE] 
-> **CSM ����ģʽ**
+> **CSM工作模式**
 >
-> 1. Stand-alone����������ģʽ��������ģ�����ƣ����Զ�����һ�����ID�����ڱ�ʶģ�顣
-> 2. CSM����ͨ CSM ģ�顣
-> 3. Action Worker��Э����ģʽ����ģ�����ƺ����ӡ�#�����Ա�Ǵ�ģ��Ϊ�����ߣ���ģ���������ͬ���Ƶ����������߹�����ͬ����Ϣ���С�
-> 4. Chain Node����ʽ�ڵ㡣��ģ�����ƺ����ӡ�$�����Ա�Ǵ�ģ��Ϊ��ʽ�ڵ㣬ͬһ�����ϵ���Ϣ�����δ��ݣ�ֱ��ĳ���ڵ㴦����Ϣ��
+> - Stand-alone：独立工作模式。不输入模块名称，将自动生成一个随机ID，用于标识模块。
+> - CSM：普通CSM模块。
+> - Action Worker：协作者模式。在模块名称后添加“#”，以标记此模块为工作者，该模块与具有相同名称的其他工作者共享相同的消息队列。
+> - Chain Node：链式节点。在模块名称后添加“$”，以标记此模块为链式节点，同一个链上的消息将依次传递，直到某个节点处理消息。
 
 > [!NOTE] 
-> **CSM���ȼ��������**
+> **CSM优先级队列设计**
 >
-> CSM ��̨ʵ������Ȼʹ�� LabVIEW ������ʵ��ģ���ͨѶ������ʹ���������������ֱ�洢��ͬ���ȼ�����Ϣ��
-> - ��ͨ���ȼ����У����ڴ����첽��Ϣ���źŹ㲥
-> - �����ȼ���Ϣ���У����ڴ���ͬ����Ϣ���жϹ㲥
-> �����ȼ������е���Ϣ�ᱻ���ȴ�������ͨ���ȼ������е���Ϣ����ڸ����ȼ������е���Ϣ������ɺ�Żᱻ������
+> CSM后台实质上依然使用LabVIEW队列来实现模块间通讯，但它使用了两个队列来分别存储不同优先级的消息：
+> - 普通优先级队列：用于传递异步消息和信号广播
+> - 高优先级消息队列：用于传递同步消息和中断广播
+> 高优先级队列中的消息会被优先处理，普通优先级队列中的消息则会在高优先级队列中的消息处理完成后才会被处理。
 
 ### CSM - Check If Module Exists.vi
 
-��� CSM ģ���Ƿ���ڡ��� CSM ģ��������Э����ģʽ��������ģʽ�£�ֻ�е����ģ������нڵ��˳���ģ��Żᱻ���Ϊ�����ڡ�
+检查CSM模块是否存在。当CSM模块运行在协作者模式或责任链模式下，只有当组成模块的所有节点退出后，模块才会被标记为不存在。
 
--- <b>Controls(����ؼ�)</b> --
-- <b>CSM Name</b>��CSM ģ������
+-- <b>Controls(输入控件)</b> --
+- <b>CSM Name</b>：CSM模块名称。
 
--- <b>Indicators(����ؼ�)</b> --
-- <b>Exist?</b>������ģ���Ƿ����
-- <b>CSM Name (dup)</b>�������CSMģ�����Ƹ���
+-- <b>Indicators(输出控件)</b> --
+
+- <b>CSM Name (dup)</b>：输入的CSM模块名称副本。
+- <b>Exist?</b>：返回模块是否存在。
 
 ### CSM - List Modules.vi
 
-�г����л��CSMģ�顣��VI��������ѡ�
-- ��Χѡ�����ڱ���Ƿ�����ϵͳ��ģ�飬Ĭ�ϲ��г�����ѡ�� ��ͨ/��ϵͳ��ģ��/����ģ��
-- �Ƿ�����ڵ�ѡ�����Э����ģʽ��������ģʽ���������ڵ�ʱ����ͬʱ�г��ڵ㣬������г�ģ�飬Ĭ�ϲ������ڵ�
+列出所有活动的CSM模块。该VI具有两组选项：
+- 范围选项用于标记是否罗列系统级模块，默认不列出，可选择 普通/仅系统级模块/所有模块。
+- 是否包含节点选项针对协作者模式和责任链模式，当包括节点时，将同时列出节点，否则仅列出模块，默认不包含节点。
 
-> Ref: CSM ����ģʽ
+> Ref: CSM工作模式
 
--- <b>Controls(����ؼ�)</b> --
-- <b>Scope (Normal)</b>����Χѡ���ѡ�� ��ͨ/��ϵͳ��ģ��/����ģ��
-- <b>With Nodes? (F)</b>���Ƿ�����ڵ㣬���Э����ģʽ��������ģʽ���������ڵ�ʱ����ͬʱ�г��ڵ㣬������г�ģ�飬Ĭ�ϲ������ڵ�
+-- <b>Controls(输入控件)</b> --
+- <b>Scope (Normal)</b>：范围选项，可选择 普通/仅系统级模块/所有模块。
+- <!-- 软件里叫"With Instance? (F)" ?--><b>With Nodes? (F)</b>：是否包含节点，针对协作者模式和责任链模式，当包括节点时，将同时列出节点，否则仅列出模块，默认不包含节点。
 
--- <b>Indicators(����ؼ�)</b> --
-- <b>Module Names</b>��CSM ģ�������б�
+-- <b>Indicators(输出控件)</b> --
+
+- <b>Module Names</b>：CSM模块名称列表。
 
 ### CSM - List Submodules.vi
 
-�г���ǰ�����ģ���������ģ�顣<b>Recursive? (T)</b> Ϊ True ʱ�����ݹ��г����в㼶����ģ�飬������г�ֱ����һ����ģ�顣
+列出当前分组或模块的所有子模块。<b>Recursive? (T)</b>为True时，将递归列出所有层级的子模块，否则仅列出直接下一级子模块。
 
-    ������ϵͳ���� Level1.Level2A��Level1.Level2A.Node1��Level1.Level2A.Node2��Level1.Level2B.Node1��Level1.Level2B.Node2 ��5��ģ�飬
-     - �� <b>Parent Name</b> Ϊ "Level1" ʱ��
-        <b>Recursive? (T)</b> Ϊ True ʱ�����ݹ��г����в㼶����ģ�飬���� Level1.Level2A��Level1.Level2A.Node1��Level1.Level2A.Node2��Level1.Level2B.Node1��Level1.Level2B.Node2
-        <b>Recursive? (T)</b> Ϊ False ʱ�����г�ֱ����һ����ģ�飬������ Level1.Level2A��ע�� Level1.Level2B ����һ��ģ��ʵ������˲����ᱻ�����ڽ����
+    举例：系统存在Level1.Level2A、Level1.Level2A.Node1、Level1.Level2A.Node2、Level1.Level2B.Node1、Level1.Level2B.Node2这5个模块，
+     - 当<b>Parent Name</b>为"Level1"时：
+        <b>Recursive? (T)</b>为True时，将递归列出所有层级的子模块，包括Level1.Level2A、Level1.Level2A.Node1、Level1.Level2A.Node2、Level1.Level2B.Node1、Level1.Level2B.Node2
+        <b>Recursive? (T)</b>为False时，仅列出直接下一级子模块，仅包括Level1.Level2A，注意Level1.Level2B不是一个模块实例，因此并不会被包含在结果中
 
 > [!NOTE] 
-> ��ģ��ֻ����ͨCSMģ����Ч����Э����ģʽ��������ģʽ��ģ����Ч��
+> 子模块只对普通CSM模块有效，对协作者模式或责任链模式的模块无效。
 
-> Ref: CSM��ģ��
+> Ref: CSM子模块
 
--- <b>Controls(����ؼ�)</b> --
-- <b>Parent Name</b>������򸸽ڵ�����
-- <b>Recursive? (T)</b>���Ƿ�ݹ��г����в㼶����ģ�飬Ĭ��Ϊ True
+-- <b>Controls(输入控件)</b> --
+- <!-- 软件里面是"CSM Name"? --><b>Parent Name</b>：分组或父节点名称。
+- <b>Recursive? (T)</b>：是否递归列出所有层级的子模块，默认为 True。
 
--- <b>Indicators(����ؼ�)</b> --
-- <b>Parent Name (Dup)</b>������ķ���򸸽ڵ����Ƹ���
-- <b>Submodules</b>����ģ�������б�
+-- <b>Indicators(输出控件)</b> --
+
+- <b>Parent Name (Dup)</b>：输入的分组或父节点名称副本。
+- <b>Submodules</b>：子模块名称列表。
 
 ### CSM - Module VI Reference.vi
 
-��ȡ����ģ��� VI ���á�VI�߼���
-- ��VIͨ������ "VI Reference" ͬ����Ϣ����ѯ��ȡ CSM ģ��� VI ���ã�����������뷢��ͬ����ϢVI�����Ƶ��������
-- ��VI�ں�̨�����˱������������в�ѯ����CSMģ���VI���ã����ٴβ�ѯ��ͬ��ģ���Ҳ�ѯ����VI������Ȼ��Чʱ����ֱ�ӷ��ػ����VI���ã����������·���ͬ����Ϣ��ѯ
-- �����Ҫǿ�����²�ѯģ���VI���ã������� <b>Force? (F)</b> Ϊ True
+获取输入模块的VI引用。VI逻辑：
+- 该VI通过发送"VI Reference"同步消息，查询获取CSM模块的VI引用，因此它具有与发送同步消息VI相类似的输入参数。
+- 该VI在后台缓存了本次主程序运行查询过的CSM模块的VI引用，当再次查询相同的模块且查询到的VI引用依然有效时，将直接返回缓存的VI引用，而不是重新发送同步消息查询。
+- 如果需要强制重新查询模块的VI引用，可设置<b>Force? (F)</b>为True。
 
-������������ģʽ��CSM����Ϊ��
-- Э����ģʽ�����ش���"VI Reference" ��Ϣ�Ĺ����߽ڵ��VI����
-- ������ģʽ������������ģʽ��CSMģ��ĵ�һ���ڵ��VI����
-- ϵͳ��ģ�飺����ͨģʽCSM��ͬ������ϵͳ��ģ���VI����
+对于特殊运行模式的CSM的行为：
+- 协作者模式：返回处理"VI Reference"消息的工作者节点的VI引用。
+- 责任链模式：返回责任链模式的CSM模块的第一个节点的VI引用。
+- 系统级模块：与普通模式CSM相同，返回系统级模块的VI引用。
 
--- <b>Controls(����ؼ�)</b> --
-- <b>CSM Name</b>��CSM ģ������
-- <b>Current Module ("" to Generate an ID)</b>����ѯCSMģ��ı�ǣ�Ϊ��ʱ������һ��Ψһ��ID
-- <b>Response Timeout (-2 Using Global Settings)</b>��ͬ�����õĳ�ʱʱ�䣬Ĭ��Ϊ-2��ʹ��ȫ�����á�������ͨ��"CSM - Set TMO of Sync-Reply.vi" ����ȫ�ֳ�ʱʱ��
-- <b>Force? (F)</b>���Ƿ�ǿ�����²�ѯģ���VI���ã�Ĭ��Ϊ False
+-- <b>Controls(输入控件)</b> --
+- <b>Current Module ("" to Generate an ID)</b>：查询CSM模块的标记，为空时将生成一个唯一的ID。
+- <b>CSM Name</b>：CSM模块名称。
+- <b>Force? (F)</b>：是否强制重新查询模块的VI引用，默认为 False。
+- <b>Response Timeout (-2 Using Global Settings)</b>：同步调用的超时时间，默认为-2，使用全局设置。您可以通过CSM - Set TMO of Sync-Reply VI设置全局超时时间。
 
--- <b>Indicators(����ؼ�)</b> --
-- <b>CSM Module VIRef</b>��CSM ģ��� VI ����
+-- <b>Indicators(输出控件)</b> --
+
+- <b>CSM Module VIRef</b>：CSM模块的VI引用。
 
 ### CSM - Set TMO of Sync-Reply.vi
 
-����CSM����ȫ�ֵ�ͬ�����ó�ʱʱ�䣬��λΪ���롣������Ϊ-2ʱ���������޸�ȫ�ֳ�ʱʱ�䣬����ֵΪ��ǰȫ�ֳ�ʱʱ�䣻������Ϊ������ֵʱ�����޸�ȫ�ֳ�ʱʱ��Ϊ��ֵ�������µ�ȫ�ֳ�ʱʱ��
+设置CSM程序全局的同步调用超时时间，单位为毫秒。当输入为-2时，将不会修改全局超时时间，返回值为当前全局超时时间；当输入为其他正值时，将修改全局超时时间为该值，返回新的全局超时时间
 
 > [!NOTE] 
-> **CSMͬ����Ϣȫ�ֳ�ʱ**
+> **CSM同步消息全局超时**
 >
-> 1. CSM ģ���ͨ�ţ���ʹ��ͬ����Ϣ����VIʱ��Ĭ�ϵĳ�ʱʱ��Ϊ-2����ʱ��ʹ��ȫ�����õĳ�ʱʱ��
-> 2. ȫ�ֳ�ʱʱ�����ͨ�� CSM - Set TMO of Sync-Reply.vi ����Ϊ������ֵ���Ը���ȫ�����õĳ�ʱʱ��
-> 3. ȫ�ֳ�ʱʱ�����ͬ��������Ч���첽���ò���Ӱ��
+> - CSM 模块间通信，或使用同步消息发送VI时，默认的超时时间为-2，此时将使用全局设置的超时时间
+> - 全局超时时间可以通过CSM - Set TMO of Sync-Reply VI设置为其他正值，以覆盖全局设置的超时时间
+> - 全局超时时间仅对同步调用生效，异步调用不受影响
 
-CSM ģ��/API ����ʱ��Ĭ�ϵĳ�ʱʱ��Ϊ-2����ʱ��ʹ��ȫ�����õĳ�ʱʱ�䣻�������Ϊ������ֵ����ʹ�ø�ֵ��Ϊ��ʱʱ�䡣
+CSM模块/API调用时，默认的超时时间为-2，此时将使用全局设置的超时时间；如果设置为其他正值，则将使用该值作为超时时间。
 
-- <b>TMO For Sync-Rep (ms) In</b>��ȫ�ֳ�ʱʱ�����룬-2��ʾ���޸�ȫ�ֳ�ʱʱ�䣬������ֵ��ʾ�޸�ȫ�ֳ�ʱʱ��Ϊ��ֵ
-- <b>TMO For Sync-Rep (ms) Out</b>����ǰȫ�ֳ�ʱʱ��
+-- <b>Controls(输入控件)</b> --
+
+- <b>TMO For Sync-Rep (ms) In</b>：全局超时时间输入，-2表示不修改全局超时时间，其他正值表示修改全局超时时间为该值。
+
+-- <b>Indicators(输出控件)</b> --
+
+- <!-- 软件里的名字是"TMO For Sync-Rep (ms)" --><b>TMO For Sync-Rep (ms) Out</b>：当前全局超时时间。
 
 ### CSM - Module Status.vi
 
-��ȡCSMģ���״̬������������ģʽ����������������Ϣ�����еĴ�������Ϣ����
+获取CSM模块的状态，包括：工作模式、工作者数量、消息队列中的待处理消息个数。
 
-> Ref: CSM ����ģʽ
+> Ref: CSM工作模式
 
--- <b>Controls(����ؼ�)</b> --
-- <b>CSM Name</b>��CSM ģ������
+-- <b>Controls(输入控件)</b> --
 
--- <b>Indicators(����ؼ�)</b> --
-- <b>CSM Name (dup)</b>�������CSMģ�����Ƹ���
-- <b>Mode</b>������ģ��Ĺ���ģʽ
-- <b>#Nodes</b>��Э����ģʽ��������ģʽ�µĽڵ�����
-- <b>#msg to be processed</b>��CSM��Ϣ�����еĴ�������Ϣ����
-- <b>#Elements In Queue</b>��CSM��Ϣ�����е�Ԫ�ظ���
+- <b>CSM Name</b>：CSM模块名称。
+
+-- <b>Indicators(输出控件)</b> --
+
+- <!-- 软件里的名字是"CSM Name (Dup)" --><b>CSM Name (dup)</b>：输入的CSM模块名称副本。
+- <b>Mode</b>：返回模块的工作模式。
+- <!-- 这是原来的"#Instance"吗？--><b>#Nodes</b>：协作者模式或责任链模式下的节点数量。
+- <!-- 软件里没看到这个输出。--><b>#msg to be processed</b>：CSM消息队列中的待处理消息个数。
+- <b>#Elements In Queue</b>：CSM消息队列中的元素个数。
 
 ### CSM - Flush Queue.vi
 
-���CSMģ���̨����ģ���ͨ�ŵ�LabVIEW����
+清空CSM模块后台用于模块间通信的LabVIEW队列。
 
-> Ref: CSM���ȼ��������
+> Ref: CSM优先级队列设计
 
 > [!WARNING] 
-> CSMģ��ͨ��������ʹ�ø�VI��CSM����ͨ����Ʊ�����Ϣ��ģ���еĶѻ�����˽���ͨ����Ʊ�����CSMģ����ʹ�ø�VI��պ�̨����Ϣ����
+> CSM模块通常不建议使用该VI。CSM建议通过设计避免消息在模块中的堆积，因此建议通过设计避免在CSM模块中使用该VI清空后台的消息队列
 
--- <b>Controls(����ؼ�)</b> --
-- <b>CSM Name</b>��CSM ģ������
-- <b>Option (Low Priority As Default)</b>�������Ķ��С�����ѡ�� All��Low Priority��High Priority��Ĭ��ֵΪ Low Priority
+-- <b>Controls(输入控件)</b> --
+- <b>CSM Name</b>：CSM模块名称。
+- <b>Option (Low Priority As Default)</b>：清理的队列。可以选择All、Low Priority、High Priority。默认值为Low Priority。
 
--- <b>Indicators(����ؼ�)</b> --
-- <b>CSM Name (Dup)</b>������CSM ģ�����Ƶĸ���
-- <b>#Flushed</b>������������Ϣ�����е�Ԫ�ظ���
+-- <b>Indicators(输出控件)</b> --
+- <b>CSM Name (Dup)</b>：输入CSM模块名称的副本。
+- <b>#Flushed</b>：被清理的消息队列中的元素个数。
 
 ### Filter JKISM String Queue
 
 #### CSM - Filter JKISM String Queue.vi
 
-��VI���ڹ���CSM״̬�����е��ض�״̬
+该VI用于过滤CSM状态队列中的特定状态
 
 > [!WARNING] 
-> CSMģ��ͨ��������ʹ�ø�VI��CSM����ͨ����Ʊ�����Ϣ��ģ���еĶѻ�����˽���ͨ����Ʊ������JKISM�ַ������С�
-> ������������JKISM�ַ������У�����ͨ�����ø���VI���JKISM�ַ������У�����ʹ���ַ�������
+> CSM模块通常不建议使用该VI。CSM建议通过设计避免消息在模块中的堆积，因此建议通过设计避免清空JKISM字符串队列。
+> 但如果必须清空JKISM字符串队列，建议通过调用该组VI清空JKISM字符串队列，而非使用字符串操作
 
 > [!NOTE] 
-> **��̬VI(Polymorphic VI)ѡ��**
+> **多态VI(Polymorphic VI)选项**
 >
-> - CSM - Filter Local States.vi�����˱���״̬
-> - CSM - Filter Messges.vi�������������͵���Ϣ
-> - CSM - Filter Sync Messages.vi������ͬ����Ϣ
-> - CSM - Filter Async Messages.vi�������첽��Ϣ
-> - CSM - Filter Async without Reply Messages.vi�������첽�޻ظ���Ϣ
-> - CSM - Filter Messages to Non-Existing Modules.vi�����˷��͵�������ģ�����Ϣ
-> - CSM - Filter Broadcasts.vi�����˹㲥��Ϣ
-> - CSM - Filter Status Broadcasts.vi������״̬�㲥��Ϣ
-> - CSM - Filter Interrupt Broadcasts.vi�������жϹ㲥��Ϣ
-> - CSM - Filter Duplicated Lines.vi�������ظ���
+> - CSM - Filter Local States.vi：过滤本地状态
+> - CSM - Filter Messges.vi：过滤所有类型的消息
+> - CSM - Filter Sync Messages.vi：过滤同步消息
+> - CSM - Filter Async Messages.vi：过滤异步消息
+> - CSM - Filter Async without Reply Messages.vi：过滤异步无回复消息
+> - CSM - Filter Messages to Non-Existing Modules.vi：过滤发送到不存在模块的消息
+> - CSM - Filter Broadcasts.vi：过滤广播消息
+> - CSM - Filter Status Broadcasts.vi：过滤状态广播消息
+> - CSM - Filter Interrupt Broadcasts.vi：过滤中断广播消息
+> - CSM - Filter Duplicated Lines.vi：过滤重复行
 
 #### CSM - Filter Local States.vi
 
-��VI���ڹ���CSM״̬�����еı���״̬
+该VI用于过滤CSM状态队列中的本地状态
 
--- <b>Controls(����ؼ�)</b> --
-- <b>States In</b>�������˵�����״̬�����ַ���
+-- <b>Controls(输入控件)</b> --
+- <!-- 软件里是"State (S) In ("")"。请确认。--><b>States In</b>：待过滤的整段状态描述字符串。
 
--- <b>Indicators(����ؼ�)</b> --
-- <b>States Out</b>�����˺��״̬�����ַ���
+-- <b>Indicators(输出控件)</b> --
+
+- <b>States Out</b>：过滤后的状态描述字符串。
 
 #### CSM - Filter Messages.vi
 
-��VI���ڹ���CSM״̬�����е��������͵���Ϣ
+该VI用于过滤CSM状态队列中的所有类型的消息。
 
--- <b>Controls(����ؼ�)</b> --
-- <b>States In</b>�������˵�����״̬�����ַ���
+-- <b>Controls(输入控件)</b> --
+- <b>States In</b>：待过滤的整段状态描述字符串。
 
--- <b>Indicators(����ؼ�)</b> --
-- <b>States Out</b>�����˺��״̬�����ַ���
+-- <b>Indicators(输出控件)</b> --
+
+- <b>States Out</b>：过滤后的状态描述字符串。
 
 #### CSM - Filter Sync Messages.vi
 
-��VI���ڹ���CSM״̬�����е�ͬ����Ϣ
+该VI用于过滤CSM状态队列中的同步消息。
 
--- <b>Controls(����ؼ�)</b> --
-- <b>States In</b>�������˵�����״̬�����ַ���
+-- <b>Controls(输入控件)</b> --
+- <b>States In</b>：待过滤的整段状态描述字符串。
 
--- <b>Indicators(����ؼ�)</b> --
-- <b>States Out</b>�����˺��״̬�����ַ���
+-- <b>Indicators(输出控件)</b> --
+- <b>States Out</b>：过滤后的状态描述字符串。
 
 #### CSM - Filter Async Messages.vi
 
-��VI���ڹ���CSM״̬�����е��첽��Ϣ
+该VI用于过滤CSM状态队列中的异步消息。
 
--- <b>Controls(����ؼ�)</b> --
-- <b>States In</b>�������˵�����״̬�����ַ���
+-- <b>Controls(输入控件)</b> --
+- <b>States In</b>：待过滤的整段状态描述字符串。
 
--- <b>Indicators(����ؼ�)</b> --
-- <b>States Out</b>�����˺��״̬�����ַ���
+-- <b>Indicators(输出控件)</b> --
+- <b>States Out</b>：过滤后的状态描述字符串。
 
 #### CSM - Filter Async without Reply Messages.vi
 
-��VI���ڹ���CSM״̬�����е��첽�޻ظ���Ϣ
+该VI用于过滤CSM状态队列中的异步无回复消息。
 
--- <b>Controls(����ؼ�)</b> --
-- <b>States In</b>�������˵�����״̬�����ַ���
+-- <b>Controls(输入控件)</b> --
+- <b>States In</b>：待过滤的整段状态描述字符串。
 
--- <b>Indicators(����ؼ�)</b> --
-- <b>States Out</b>�����˺��״̬�����ַ���
+-- <b>Indicators(输出控件)</b> --
+- <b>States Out</b>：过滤后的状态描述字符串。
 
 #### CSM - Filter Messages to Non-Existing Modules.vi
 
-��VI���ڹ���CSM״̬�����з��͵�������ģ�����Ϣ�����VI�л�ʹ�� CSM - List Modules.vi ��ȡ���л��CSMģ�飬Ȼ����˵����͸�������ģ�����Ϣ��
+该VI用于过滤CSM状态队列中发送到不存在模块的消息。这个VI中会使用CSM - List Modules VI获取所有活动的CSM模块，然后过滤掉发送给不存在模块的消息。
 
--- <b>Controls(����ؼ�)</b> --
-- <b>States In</b>�������˵�����״̬�����ַ���
+-- <b>Controls(输入控件)</b> --
+- <b>States In</b>：待过滤的整段状态描述字符串。
 
--- <b>Indicators(����ؼ�)</b> --
-- <b>States Out</b>�����˺��״̬�����ַ���
+-- <b>Indicators(输出控件)</b> --
+- <b>States Out</b>：过滤后的状态描述字符串。
 
 #### CSM - Filter Broadcasts.vi
 
-��VI���ڹ���CSM״̬�����еĹ㲥��Ϣ
+该VI用于过滤CSM状态队列中的广播消息。
 
--- <b>Controls(����ؼ�)</b> --
-- <b>States In</b>�������˵�����״̬�����ַ���
+-- <b>Controls(输入控件)</b> --
+- <b>States In</b>：待过滤的整段状态描述字符串。
 
--- <b>Indicators(����ؼ�)</b> --
-- <b>States Out</b>�����˺��״̬�����ַ���
+-- <b>Indicators(输出控件)</b> --
+- <b>States Out</b>：过滤后的状态描述字符串。
 
 #### CSM - Filter Status Broadcasts.vi
 
-��VI���ڹ���CSM״̬�����е�״̬�㲥��Ϣ
+该VI用于过滤CSM状态队列中的状态广播消息。
 
--- <b>Controls(����ؼ�)</b> --
-- <b>States In</b>�������˵�����״̬�����ַ���
+-- <b>Controls(输入控件)</b> --
+- <b>States In</b>：待过滤的整段状态描述字符串。
 
--- <b>Indicators(����ؼ�)</b> --
-- <b>States Out</b>�����˺��״̬�����ַ���
+-- <b>Indicators(输出控件)</b> --
+- <b>States Out</b>：过滤后的状态描述字符串。
 
 #### CSM - Filter Interrupt Broadcasts.vi
 
-��VI���ڹ���CSM״̬�����е��жϹ㲥��Ϣ
+该VI用于过滤CSM状态队列中的中断广播消息。
 
--- <b>Controls(����ؼ�)</b> --
-- <b>States In</b>�������˵�����״̬�����ַ���
+-- <b>Controls(输入控件)</b> --
 
--- <b>Indicators(����ؼ�)</b> --
-- <b>States Out</b>�����˺��״̬�����ַ���
+- <b>States In</b>：待过滤的整段状态描述字符串。
+
+-- <b>Indicators(输出控件)</b> --
+- <b>States Out</b>：过滤后的状态描述字符串。
 
 #### CSM - Filter Duplicated Lines.vi
 
-��VI���ڹ���CSM״̬�����е��ظ���
+该VI用于过滤CSM状态队列中的重复行。
 
--- <b>Controls(����ؼ�)</b> --
-- <b>States In</b>�������˵�����״̬�����ַ���
-- <b>Keep First Matched? (T)</b>���Ƿ�����һ��ƥ���Ĭ��ΪTrue
-- <b>Option</b>������ѡ��
+-- <b>Controls(输入控件)</b> --
+- <b>Keep First Matched? (T)</b>：是否保留第一个匹配项，默认为True。
+- <b>States In</b>：待过滤的整段状态描述字符串。
+- <b>Option</b>：过滤选项。
 
--- <b>Indicators(����ؼ�)</b> --
-- <b>States Out</b>�����˺��״̬�����ַ���
+-- <b>Indicators(输出控件)</b> --
+- <b>States Out</b>：过滤后的状态描述字符串。

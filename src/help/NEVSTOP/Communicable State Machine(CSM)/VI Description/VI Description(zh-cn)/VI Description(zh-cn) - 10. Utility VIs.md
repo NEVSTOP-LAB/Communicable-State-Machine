@@ -1,87 +1,85 @@
 # CSM API
 
-## ¹¤¾ßVI(Utility VIs)
+## å·¥å…·VIï¼ˆUtility VIsï¼‰
 
-## ×´Ì¬×Ö·û´®²Ù×÷
+## çŠ¶æ€å­—ç¬¦ä¸²æ“ä½œ
 
 ### CSM - Compact Multiple States.vi
 
-½«¶à¸ö×´Ì¬½ô´Õ³Éµ¥¸ö×Ö·û´®ÒÔ¹©ÊäÈëÊ¹ÓÃ
+å°†å¤šä¸ªçŠ¶æ€ç´§å‡‘æˆå•ä¸ªå­—ç¬¦ä¸²ä»¥ä¾›è¾“å…¥ä½¿ç”¨ã€‚
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>Multiple States</b>: CSM×´Ì¬×Ö·û´®Êı×é
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>Multiple States</b>ï¼šCSMçŠ¶æ€å­—ç¬¦ä¸²æ•°ç»„ã€‚
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>States</b>: °üº¬¶àĞĞCSM×´Ì¬×Ö·û´®µÄ×Ö·û´®
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>States</b>ï¼šåŒ…å«å¤šè¡ŒCSMçŠ¶æ€å­—ç¬¦ä¸²çš„å­—ç¬¦ä¸²ã€‚
 
 ### CSM - Break Down Multiple States String.vi
 
-½«°üº¬¶àĞĞCSM×´Ì¬×Ö·û´®µÄ×Ö·û´®ÇĞ¸î³ÉCSM×´Ì¬×Ö·û´®Êı×é
+å°†åŒ…å«å¤šè¡ŒCSMçŠ¶æ€å­—ç¬¦ä¸²çš„å­—ç¬¦ä¸²åˆ‡å‰²æˆCSMçŠ¶æ€å­—ç¬¦ä¸²æ•°ç»„ã€‚
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>States</b>: °üº¬¶àĞĞCSM×´Ì¬×Ö·û´®µÄ×Ö·û´®
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>States</b>ï¼šåŒ…å«å¤šè¡ŒCSMçŠ¶æ€å­—ç¬¦ä¸²çš„å­—ç¬¦ä¸²ã€‚
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>Multiple States</b>: CSM×´Ì¬×Ö·û´®Êı×é
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>Multiple States</b>ï¼šCSMçŠ¶æ€å­—ç¬¦ä¸²æ•°ç»„ã€‚
 
 ### CSM - Build Exit Messages of CSMs.vi
 
-ÊäÈëCSMÄ£¿éÃû³Æ£¬Æ´½ÓÉú³ÉÍË³öÏûÏ¢("Macro: Exit")¡£
+è¾“å…¥CSMæ¨¡å—åç§°ï¼Œæ‹¼æ¥ç”Ÿæˆé€€å‡ºæ¶ˆæ¯ï¼ˆ"Macro: Exit"ï¼‰ã€‚
 
-> Ref: ÏûÏ¢Æ´½ÓAPI
+> Ref: æ¶ˆæ¯æ‹¼æ¥API
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>CSMs</b>: CSMÄ£¿éÃû³ÆÊı×é
-- <b>State with Arguments("Macro: Exit¡°)</b>: ÍË³öÏûÏ¢
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>States</b>: Æ´½ÓÉú³ÉµÄCSMÏûÏ¢×Ö·û´®
-- <b>State With Arguments ("Macro: Exit¡°)</b>:Controls
+- <b>CSMs</b>ï¼šCSMæ¨¡å—åç§°æ•°ç»„ã€‚
+- <b>State with Arguments("Macro: Exitâ€œ)</b>ï¼šé€€å‡ºæ¶ˆæ¯ã€‚
+
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>States</b>ï¼šæ‹¼æ¥ç”Ÿæˆçš„CSMæ¶ˆæ¯å­—ç¬¦ä¸²ã€‚
 
 ### CSM - Filter Duplicate Messages By Name.vi
 
-¹ıÂËÖØ¸´µÄÏûÏ¢£¬Ö»±£Áô×îĞÂµÄÏûÏ¢¡£
+è¿‡æ»¤é‡å¤çš„æ¶ˆæ¯ï¼Œåªä¿ç•™æœ€æ–°çš„æ¶ˆæ¯ã€‚
 
-> Ref: ÏûÏ¢Æ´½ÓAPI
+> Ref: æ¶ˆæ¯æ‹¼æ¥API
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>States</b>: ÊäÈëµÄÏûÏ¢×Ö·û´®
-- <b>Whole Messages in Check?(T)</b>: ÊÇ·ñ¼ì²éÕû¸öÏûÏ¢×Ö·û´®¡£Èç¹ûÊÇ FALSE£¬ÔòÖ»¼ì²éÏûÏ¢Ãû³Æ¡£
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>States</b>ï¼šè¾“å…¥çš„æ¶ˆæ¯å­—ç¬¦ä¸²ã€‚
+- <b>Whole Messages in Check?(T)</b>ï¼šæ˜¯å¦æ£€æŸ¥æ•´ä¸ªæ¶ˆæ¯å­—ç¬¦ä¸²ã€‚å¦‚æœæ˜¯ FALSEï¼Œåˆ™åªæ£€æŸ¥æ¶ˆæ¯åç§°ã€‚
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>Filtered States</b>: ¹ıÂËºóµÄÏûÏ¢×Ö·û´®
-- <b>States Out</b>:Indicators
-- <b>Whole Messages In Check? (T)</b>:Controls
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>Filtered States</b>ï¼šè¿‡æ»¤åçš„æ¶ˆæ¯å­—ç¬¦ä¸²ã€‚
 
 ### CSM - Remove Duplicated Following Messages.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>Current State</b>:
-- <b>Remaining States</b>:
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>Current State</b>ï¼š
+- <b>Remaining States</b>ï¼š
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>Remaining States Left</b>:
-- <b>Current State</b>:Controls
-- <b>Remaining States Left</b>:Indicators
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>Remaining States Left</b>ï¼š
+- <b>Current State</b>ï¼šControls
+- <b>Remaining States Left</b>ï¼šIndicators
 
-## Êı¾İÀàĞÍ×Ö·û´®ÃèÊö
+## æ•°æ®ç±»å‹å­—ç¬¦ä¸²æè¿°
 
 ### CSM Data Type String.vi
 
-»ñÈ¡ÊäÈëÊı¾İ¶ÔÓ¦µÄÊı¾İÀàĞÍÃèÊö×Ö·û´®£¬Í¨³£ÓÃÔÚ²ÎÊıÃèÊöÖĞ£¬ÓÃÓÚÅĞ¶Ï²ÎÊıĞ¯´øµÄ²ÎÊıÀàĞÍ¡£
+è·å–è¾“å…¥æ•°æ®å¯¹åº”çš„æ•°æ®ç±»å‹æè¿°å­—ç¬¦ä¸²ï¼Œé€šå¸¸ç”¨åœ¨å‚æ•°æè¿°ä¸­ï¼Œç”¨äºåˆ¤æ–­å‚æ•°æºå¸¦çš„å‚æ•°ç±»å‹ã€‚
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>Data</b>: ÊäÈëÊı¾İ
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>Data</b>ï¼šè¾“å…¥æ•°æ®ã€‚
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>Data Type String</b>:Êı¾İÀàĞÍÃèÊö×Ö·û´®
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>Data Type String</b>ï¼šæ•°æ®ç±»å‹æè¿°å­—ç¬¦ä¸²ã€‚
 
 ### CSM Data Type String to Enum.vi
 
-´ÓÊı¾İÀàĞÍÃèÊö×Ö·û´®ÖĞLabVIEW ¶¨ÒåµÄÊı¾İÀàĞÍÃ¶¾Ù¡£
+ä»æ•°æ®ç±»å‹æè¿°å­—ç¬¦ä¸²ä¸­LabVIEWå®šä¹‰çš„æ•°æ®ç±»å‹æšä¸¾ã€‚
 
 > [!NOTE] 
-> **¶àÌ¬VI(Polymorphic VI)Ñ¡Ïî**
+> **å¤šæ€VI(Polymorphic VI)é€‰é¡¹**
 >
 > - CSM Data Type String to Enum(String).vi
 > - CSM Data Type String to Enum(TypeEnum).vi
@@ -89,97 +87,98 @@
 
 #### CSM Data Type String to Enum(String).vi
 
-´ÓÊı¾İÀàĞÍÃèÊö×Ö·û´®ÖĞLabVIEW ¶¨ÒåµÄÊı¾İÀàĞÍÃ¶¾Ù£¬×ÓÀàĞÍÊ¹ÓÃ×Ö·û´®ÃèÊö¡£
+ä»æ•°æ®ç±»å‹æè¿°å­—ç¬¦ä¸²ä¸­LabVIEWå®šä¹‰çš„æ•°æ®ç±»å‹æšä¸¾ï¼Œå­ç±»å‹ä½¿ç”¨å­—ç¬¦ä¸²æè¿°ã€‚
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>Data Type String</b>:ÊäÈëµÄÊı¾İÀàĞÍÃèÊö×Ö·û´®
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>Data Type String</b>ï¼šè¾“å…¥çš„æ•°æ®ç±»å‹æè¿°å­—ç¬¦ä¸²ã€‚
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>Primary Type</b>:Êı¾İÀàĞÍÃ¶¾Ù
-- <b>Secondary Type String</b>:Èç¹ûÊÇ¸´ºÏµÄÊı¾İÀàĞÍ£¬·µ»Ø×ÓÀàĞÍ×Ö·û´®£¬ÀıÈçArray Êı¾İÀàĞÍÖĞµÄÔªËØÀàĞÍ¡£
-- <b>Array Dim</b>:Èç¹ûÊÇÊı×éÊı¾İÀàĞÍ£¬·µ»ØÊı×éÎ¬¶È¡£
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>Primary Type</b>ï¼šæ•°æ®ç±»å‹æšä¸¾ã€‚
+- <b>Secondary Type String</b>ï¼šå¦‚æœæ˜¯å¤åˆçš„æ•°æ®ç±»å‹ï¼Œè¿”å›å­ç±»å‹å­—ç¬¦ä¸²ï¼Œä¾‹å¦‚Arrayæ•°æ®ç±»å‹ä¸­çš„å…ƒç´ ç±»å‹ã€‚
+- <b>Array Dim</b>ï¼šå¦‚æœæ˜¯æ•°ç»„æ•°æ®ç±»å‹ï¼Œè¿”å›æ•°ç»„ç»´åº¦ã€‚
 
 #### CSM Data Type String to Enum(TypeEnum).vi
 
-´ÓÊı¾İÀàĞÍÃèÊö×Ö·û´®ÖĞLabVIEW ¶¨ÒåµÄÊı¾İÀàĞÍÃ¶¾Ù£¬²¢·µ»ØArray×ÓÀàĞÍÊ¹ÓÃÃ¶¾Ù¡£
+ä»æ•°æ®ç±»å‹æè¿°å­—ç¬¦ä¸²ä¸­LabVIEWå®šä¹‰çš„æ•°æ®ç±»å‹æšä¸¾ï¼Œå¹¶è¿”å›Arrayå­ç±»å‹ä½¿ç”¨æšä¸¾ã€‚
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>Data Type String</b>:ÊäÈëµÄÊı¾İÀàĞÍÃèÊö×Ö·û´®
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>Data Type String</b>ï¼šè¾“å…¥çš„æ•°æ®ç±»å‹æè¿°å­—ç¬¦ä¸²ã€‚
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>Primary Type</b>:Êı¾İÀàĞÍÃ¶¾Ù
-- <b>Secondary Type String</b>:Array×ÓÀàĞÍÃ¶¾Ù
-- <b>Array Dim</b>:Èç¹ûÊÇÊı×éÊı¾İÀàĞÍ£¬·µ»ØÊı×éÎ¬¶È¡£
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>Primary Type</b>ï¼šæ•°æ®ç±»å‹æšä¸¾ã€‚
+- <b>Secondary Type String</b>ï¼šArrayå­ç±»å‹æšä¸¾ã€‚
+- <b>Array Dim</b>ï¼šå¦‚æœæ˜¯æ•°ç»„æ•°æ®ç±»å‹ï¼Œè¿”å›æ•°ç»„ç»´åº¦ã€‚
 
 #### CSM Data Type String to Enum(RefnumEnum).vi
 
-´ÓÊı¾İÀàĞÍÃèÊö×Ö·û´®ÖĞLabVIEW ¶¨ÒåµÄÊı¾İÀàĞÍÃ¶¾Ù£¬²¢·µ»ØRefnum×ÓÀàĞÍÊ¹ÓÃÃ¶¾Ù¡£
+ä»æ•°æ®ç±»å‹æè¿°å­—ç¬¦ä¸²ä¸­LabVIEWå®šä¹‰çš„æ•°æ®ç±»å‹æšä¸¾ï¼Œå¹¶è¿”å›Refnumå­ç±»å‹ä½¿ç”¨æšä¸¾ã€‚
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>Data Type String</b>:ÊäÈëµÄÊı¾İÀàĞÍÃèÊö×Ö·û´®
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>Data Type String</b>ï¼šè¾“å…¥çš„æ•°æ®ç±»å‹æè¿°å­—ç¬¦ä¸²ã€‚
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>Primary Type</b>:Êı¾İÀàĞÍÃ¶¾Ù
-- <b>Secondary Type String</b>:Refnum×ÓÀàĞÍÃ¶¾Ù
-- <b>Array Dim</b>:Èç¹ûÊÇÊı×éÊı¾İÀàĞÍ£¬·µ»ØÊı×éÎ¬¶È¡£
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>Primary Type</b>ï¼šæ•°æ®ç±»å‹æšä¸¾ã€‚
+- <b>Secondary Type String</b>ï¼šRefnumå­ç±»å‹æšä¸¾ã€‚
+- <b>Array Dim</b>ï¼šå¦‚æœæ˜¯æ•°ç»„æ•°æ®ç±»å‹ï¼Œè¿”å›æ•°ç»„ç»´åº¦ã€‚
 
-## ÆäËû¹¤¾ßVI
+## å…¶ä»–å·¥å…·VI
 
 ### uuid.vi
 
-¸ù¾İ±ê×¼·½·¨Éú³É <b>Universally Unique Identifier(UUID)</b>¡£ ÀıÈç:
+æ ¹æ®æ ‡å‡†æ–¹æ³•ç”ŸæˆUniversally Unique Identifier (UUID)ã€‚ ä¾‹å¦‚:
 - 59703F3AD837
 - 106A470BA5EC
 - 9B781DB313AF
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>UUID</b>: Éú³ÉµÄ UUID
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+
+- <b>UUID</b>ï¼šç”Ÿæˆçš„UUIDã€‚
 
 ### String History Cacher.vi
 
-±£´æµ±Ç°ÊäÈëµÄ×Ö·û´®µ½»º´æ£¬»º´æµÄÀúÊ·×Ö·û´®£¬µ±³¬³ö×î´ó³¤¶ÈÏŞÖÆÊ±£¬×îÏÈ½øÈëµÄ»º´æ×Ö·û´®½«±»¸²¸Ç¡£ÓÃÓÚµ÷ÊÔCSMµÄÀúÊ·×´Ì¬¡£
+ä¿å­˜å½“å‰è¾“å…¥çš„å­—ç¬¦ä¸²åˆ°ç¼“å­˜ï¼Œç¼“å­˜çš„å†å²å­—ç¬¦ä¸²ï¼Œå½“è¶…å‡ºæœ€å¤§é•¿åº¦é™åˆ¶æ—¶ï¼Œæœ€å…ˆè¿›å…¥çš„ç¼“å­˜å­—ç¬¦ä¸²å°†è¢«è¦†ç›–ã€‚ç”¨äºè°ƒè¯•CSMçš„å†å²çŠ¶æ€ã€‚
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>String</b>: ´ı»º´æ×Ö·û´®
-- <b>length</b>: »º´æµÄÀúÊ·×Ö·û´®×î´ó×Ö·û´®³¤¶È
-- <b>Include Timestamp? (T)</b>: ÊÇ·ñÔÚÃ¿ĞĞ¿ªÍ·°üº¬Ê±¼ä´Á¡£
-- <b>Format String</b>:Ê±¼ä´ÁµÄ¸ñÊ½
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>String</b>ï¼šå¾…ç¼“å­˜å­—ç¬¦ä¸²ã€‚
+- <b>length</b>ï¼šç¼“å­˜çš„å†å²å­—ç¬¦ä¸²æœ€å¤§å­—ç¬¦ä¸²é•¿åº¦ã€‚
+- <b>Include Timestamp? (T)</b>ï¼šæ˜¯å¦åœ¨æ¯è¡Œå¼€å¤´åŒ…å«æ—¶é—´æˆ³ã€‚
+- <b>Format String</b>ï¼šæ—¶é—´æˆ³çš„æ ¼å¼ã€‚
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>String Cache</b>: »º´æµÄÀúÊ·×Ö·û´®
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>String Cache</b>ï¼šç¼“å­˜çš„å†å²å­—ç¬¦ä¸²ã€‚
 
 ### Random Change Flag.vi
 
-Éú³ÉÒ»¸öËæ»úµÄÊıÖµ£¬ÓÃÓÚ±ê¼Ç×´Ì¬µÄ±ä»¯£¬CSMÖĞÎªÁËÌá¸ßĞ§ÂÊ£¬ÓĞĞ©µØ·½µÄ»º´æ(cache)ÀûÓÃÕâ¸ö±ê¼ÇÀ´ÅĞ¶ÏÊÇ·ñĞèÒª¸üĞÂ¡£
+ç”Ÿæˆä¸€ä¸ªéšæœºçš„æ•°å€¼ï¼Œç”¨äºæ ‡è®°çŠ¶æ€çš„å˜åŒ–ï¼ŒCSMä¸­ä¸ºäº†æé«˜æ•ˆç‡ï¼Œæœ‰äº›åœ°æ–¹çš„ç¼“å­˜ï¼ˆcacheï¼‰åˆ©ç”¨è¿™ä¸ªæ ‡è®°æ¥åˆ¤æ–­æ˜¯å¦éœ€è¦æ›´æ–°ã€‚
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>Random Change Flag</b>: Éú³ÉµÄËæ»úÊıÖµ
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>Random Change Flag</b>ï¼šç”Ÿæˆçš„éšæœºæ•°å€¼ã€‚
 
 ### State Triggered Reason.vi
 
-´Ó `Parse State Queue++.vi` µÄÊä³ö Additional Information ºÍ Source CSM ÍÆ¶Ï³ö´¥·¢µ±Ç°×´Ì¬µÄÔ­Òò¡£
+ä»Parse State Queue++ VIçš„è¾“å‡ºAdditional Informationå’ŒSource CSMæ¨æ–­å‡ºè§¦å‘å½“å‰çŠ¶æ€çš„åŸå› ã€‚
 
-½á¹û¿ÉÄÜÊÇ£º
-- LocalCall: ±¾µØµ÷ÓÃ£¬·ÇÍâ²¿´¥·¢
-- Message: Íâ²¿ÏûÏ¢´¥·¢
-- Broadcast: ÓÉ¹ã²¥´¥·¢
+ç»“æœå¯èƒ½æ˜¯ï¼š
+- LocalCallï¼šæœ¬åœ°è°ƒç”¨ï¼Œéå¤–éƒ¨è§¦å‘
+- Messageï¼šå¤–éƒ¨æ¶ˆæ¯è§¦å‘
+- Broadcastï¼šç”±å¹¿æ’­è§¦å‘
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>Additional Information</b>:´Ë×´Ì¬µÄ¶îÍâĞÅÏ¢
-- <b>Source CSM</b>:Ô´Ä£¿éĞÅÏ¢
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>Additional Information</b>ï¼šæ­¤çŠ¶æ€çš„é¢å¤–ä¿¡æ¯ã€‚
+- <b>Source CSM</b>ï¼šæºæ¨¡å—ä¿¡æ¯ã€‚
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>Additional Information (dup)</b>:ÊäÈëµÄ¶îÍâĞÅÏ¢¸±±¾
-- <b>Source CSM (dup)</b>:ÊäÈëµÄÔ´Ä£¿éĞÅÏ¢¸±±¾
-- <b>Reason</b>:´¥·¢µ±Ç°×´Ì¬µÄÔ­Òò
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>Additional Information (dup)</b>ï¼šè¾“å…¥çš„é¢å¤–ä¿¡æ¯å‰¯æœ¬ã€‚
+- <b>Source CSM (dup)</b>ï¼šè¾“å…¥çš„æºæ¨¡å—ä¿¡æ¯å‰¯æœ¬ã€‚
+- <b>Reason</b>ï¼šè§¦å‘å½“å‰çŠ¶æ€çš„åŸå› ã€‚
 
 ### Format Timestamp.vi
 
-¸ñÊ½»¯Ê±¼ä´ÁÎªÖ¸¶¨µÄ×Ö·û´®¸ñÊ½, ´ËVIÎªCSM Global Log ÖĞÊ¹ÓÃ¡£
+æ ¼å¼åŒ–æ—¶é—´æˆ³ä¸ºæŒ‡å®šçš„å­—ç¬¦ä¸²æ ¼å¼, æ­¤VIä¸ºCSM Global Logä¸­ä½¿ç”¨ã€‚
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>Timestamp</b>:Ê±¼ä´Á£¬µ¥Î»ÎªÃë
-- <b>Format String</b>:Ê±¼ä´Á¸ñÊ½×Ö·û´®£¬ÀıÈç£º"%<%Y/%m/%d %H:%M:%S%3u>T"
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>Timestamp</b>ï¼šæ—¶é—´æˆ³ï¼Œå•ä½ä¸ºç§’ã€‚
+- <b>Format String</b>ï¼šæ—¶é—´æˆ³æ ¼å¼å­—ç¬¦ä¸²ï¼Œä¾‹å¦‚ï¼š"%<%Y/%m/%d %H:%M:%S%3u>T"ã€‚
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>String</b>:¸ñÊ½»¯ºóµÄÊ±¼ä´Á×Ö·û´®
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>String</b>ï¼šæ ¼å¼åŒ–åçš„æ—¶é—´æˆ³å­—ç¬¦ä¸²ã€‚

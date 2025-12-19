@@ -1,268 +1,271 @@
 # CSM API
 
-## ºËĞÄ¹¦ÄÜ(Core Functions)
+## æ ¸å¿ƒåŠŸèƒ½(Core Functions)
 
 ### Parse State Queue++.vi
 
-½âÎöCSM×´Ì¬¶ÓÁĞ£¬·µ»Ø½«Ö´ĞĞµÄÏÂÒ»¸öµ±Ç°×´Ì¬¡¢²ÎÊıµÈĞÅÏ¢¡£
+è§£æCSMçŠ¶æ€é˜Ÿåˆ—ï¼Œè¿”å›å°†æ‰§è¡Œçš„ä¸‹ä¸€ä¸ªå½“å‰çŠ¶æ€ã€å‚æ•°ç­‰ä¿¡æ¯ã€‚
 
-> Ref: CSM Ä£¿é¼äÍ¨ĞÅÀàĞÍ
+> Ref: CSM æ¨¡å—é—´é€šä¿¡ç±»å‹
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>Name ("" to use UUID)</b>£ºCSM Ä£¿éÃû³Æ
-- <b>State Queue</b>£ºÕû¸ö×´Ì¬¶ÓÁĞ±»Á¬½Óµ½´ËÊäÈë¡£ÕâÓ¦¸ÃÀ´×Ô CSM µÄÒÆÎ»¼Ä´æÆ÷¡£
-- <b>Previous Error</b>£ºÀ´×Ô CSM µÄ´íÎó´Ø±»Á¬½Óµ½´ËÊäÈë¡£Èç¹û·¢Éú´íÎó²¢³öÏÖÔÚ´ËÊäÈëÉÏ£¬Ôòµ±Ç°×´Ì¬Êä³ö½«·µ»Ø "Error Handler" ×´Ì¬¡£
-- <b>Response Timeout (-2 Use Global Settings)</b>£ºÍ¬²½µ÷ÓÃµÄ³¬Ê±Ê±¼ä£¬Ä¬ÈÏÎª-2£¬Ê¹ÓÃÈ«¾ÖÉèÖÃ¡£Äú¿ÉÒÔÍ¨¹ı"CSM - Set TMO of Sync-Reply.vi" ÉèÖÃÈ«¾Ö³¬Ê±Ê±¼ä¡£
-- <b>Dequeue (1 ms)</b>£º¼ì²é CSM ÏûÏ¢¶ÓÁĞµÄ³¬Ê±ÉèÖÃ£¬Ä¬ÈÏÎª1ms, ²»ÉèÖÃÎª 0 ÊÇÎªÁË±ÜÃâÄ³Ğ©´íÎóÇé¿öÏÂ²úÉúº£Á¿µÄ¿ÕÏûÏ¢
-- <b>Response Arguments</b>£ºÀ´×ÔÉÏÒ»¸ö×´Ì¬µÄÏìÓ¦²ÎÊı¡£ËüÓ¦¸ÃÁ¬½Óµ½ CSM µÄÒÆÎ»¼Ä´æÆ÷£¬ÓÃÓÚ´«µİÍâ²¿µ÷ÓÃµÄ·µ»ØÖµ¡£
-- <b>Allowed Messages (Empty for All)</b>£ºÔÊĞíµÄÏûÏ¢Ãû³ÆÁĞ±í£¬Îª¿Õ±íÊ¾ÔÊĞíËùÓĞÏûÏ¢¡£
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>Response Arguments</b>ï¼šæ¥è‡ªä¸Šä¸€ä¸ªçŠ¶æ€çš„å“åº”å‚æ•°ã€‚å®ƒåº”è¯¥è¿æ¥åˆ° CSMçš„ç§»ä½å¯„å­˜å™¨ï¼Œç”¨äºä¼ é€’å¤–éƒ¨è°ƒç”¨çš„è¿”å›å€¼ã€‚
+- <b>Name ("" to use UUID)</b>ï¼šCSMæ¨¡å—åç§°ã€‚è¯·å‚è€ƒ*CSMåç§°è§„åˆ™*ã€‚
+- <b>State Queue</b>ï¼šæ•´ä¸ªçŠ¶æ€é˜Ÿåˆ—è¢«è¿æ¥åˆ°æ­¤è¾“å…¥ã€‚è¿™åº”è¯¥æ¥è‡ªCSMçš„ç§»ä½å¯„å­˜å™¨ã€‚
+- <b>Previous Error</b>ï¼šæ¥è‡ªCSMçš„é”™è¯¯ç°‡è¢«è¿æ¥åˆ°æ­¤è¾“å…¥ã€‚å¦‚æœå‘ç”Ÿé”™è¯¯å¹¶å‡ºç°åœ¨æ­¤è¾“å…¥ä¸Šï¼Œåˆ™å½“å‰çŠ¶æ€è¾“å‡ºå°†è¿”å›"Error Handler"çŠ¶æ€ã€‚
+- <b>Dequeue (1 ms)</b>ï¼šæ£€æŸ¥CSMæ¶ˆæ¯é˜Ÿåˆ—çš„è¶…æ—¶è®¾ç½®ï¼Œé»˜è®¤ä¸º1 ms, ä¸è®¾ç½®ä¸º0æ˜¯ä¸ºäº†é¿å…æŸäº›é”™è¯¯æƒ…å†µä¸‹äº§ç”Ÿæµ·é‡çš„ç©ºæ¶ˆæ¯ã€‚
+- <b>Response Timeout (-2 Use Global Settings)</b>ï¼šåŒæ­¥è°ƒç”¨çš„è¶…æ—¶æ—¶é—´ï¼Œé»˜è®¤ä¸º-2ï¼Œä½¿ç”¨å…¨å±€è®¾ç½®ã€‚æ‚¨å¯ä»¥é€šè¿‡CSM - Set TMO of Sync-Reply VIè®¾ç½®å…¨å±€è¶…æ—¶æ—¶é—´ã€‚
+- <b>Allowed Messages (Empty for All)</b>ï¼šå…è®¸çš„æ¶ˆæ¯åç§°åˆ—è¡¨ï¼Œä¸ºç©ºè¡¨ç¤ºå…è®¸æ‰€æœ‰æ¶ˆæ¯ã€‚
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>Name Used</b>£º·ÖÅä¸ø¸ÃCSMÄ£¿éµÄÊµ¼ÊÃû³Æ
-- <b>Remaining States</b>£ºÆ´½ÓºóµÄËùÓĞ×´Ì¬¼°²ÎÊı
-- <b>Current State</b>£º½«Ö´ĞĞµÄÏÂÒ»¸öµ±Ç°×´Ì¬
-- <b>Arguments</b>£º·µ»Ø¿ÉÄÜÔÚµ±Ç°×´Ì¬×Ö·û´®ÖĞÊ¹ÓÃµÄÈÎºÎ²ÎÊı£¬ÕâĞ©²ÎÊıÎ»ÓÚ¡°>>¡±×Ö·ûÖ®ºó¡£<b>×¢Òâ£º</b>²ÎÊı±äÁ¿²»µÃ°üº¬ÈÎºÎ²»¿É´òÓ¡µÄ×Ö·û£¬Èç»»ĞĞ·û»ò»Ø³µ·û¡£
-- <b>Additional Information</b>£º¶îÍâµÄ²¹³äĞÅÏ¢¡£¹ã²¥´¥·¢µÄ×´Ì¬ÖĞ£¬¸ÃĞÅÏ¢°üº¬¹ã²¥µÄÃû³Æ¡¢²ÎÊı¡£
-- <b>Source CSM</b>£ºÈç¹û<b>Current State</b>ÓÉÍâ²¿·¢ËÍ£¬ÔòÕâÊÇÔ´CSMÄ£¿éÃû³Æ¡£
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>Name Used</b>ï¼šåˆ†é…ç»™è¯¥CSMæ¨¡å—çš„å®é™…åç§°ã€‚
+- <b>Remaining States</b>ï¼šæ‹¼æ¥åçš„æ‰€æœ‰çŠ¶æ€åŠå‚æ•°ã€‚
+- <b>Current State</b>ï¼šå°†æ‰§è¡Œçš„ä¸‹ä¸€ä¸ªå½“å‰çŠ¶æ€ã€‚
+- <b>Arguments</b>ï¼šè¿”å›å¯èƒ½åœ¨å½“å‰çŠ¶æ€å­—ç¬¦ä¸²ä¸­ä½¿ç”¨çš„ä»»ä½•å‚æ•°ï¼Œè¿™äº›å‚æ•°ä½äºâ€œ>>â€å­—ç¬¦ä¹‹åã€‚<b>æ³¨æ„ï¼š</b>å‚æ•°å˜é‡ä¸å¾—åŒ…å«ä»»ä½•ä¸å¯æ‰“å°çš„å­—ç¬¦ï¼Œå¦‚æ¢è¡Œç¬¦æˆ–å›è½¦ç¬¦ã€‚
+- <b>Additional Information</b>ï¼šé¢å¤–çš„è¡¥å……ä¿¡æ¯ã€‚å¹¿æ’­è§¦å‘çš„çŠ¶æ€ä¸­ï¼Œè¯¥ä¿¡æ¯åŒ…å«å¹¿æ’­çš„åç§°ã€å‚æ•°ã€‚<!-- è½¯ä»¶é‡Œåå­—æ˜¯Response Source Message -->
+- <b>Source CSM</b>ï¼šå¦‚æœ<b>Current State</b>ç”±å¤–éƒ¨å‘é€ï¼Œåˆ™è¿™æ˜¯æºCSMæ¨¡å—åç§°ã€‚
 
 
 ### Build State String with Arguments++.vi
 
 > [!WARNING]
-> ¸Ã VI ²»ÄÜÆ´½Ó"Òì²½²»µÈ´ı·µ»Ø"µÄÒì²½ÏûÏ¢£¬ÒÑÔÚº¯ÊıÃæ°åÖĞÒş²Ø£¬½¨ÒéÊ¹ÓÃ Build Message with Arguments++.vi ´úÌæ¸Ã VI¡£
+> è¯¥ VI ä¸èƒ½æ‹¼æ¥"å¼‚æ­¥ä¸ç­‰å¾…è¿”å›"çš„å¼‚æ­¥æ¶ˆæ¯ï¼Œå·²åœ¨å‡½æ•°é¢æ¿ä¸­éšè—ï¼Œå»ºè®®ä½¿ç”¨ Build Message with Arguments++ VIä»£æ›¿è¯¥ VIã€‚
 
-¸ÃVIÓÃÓÚ¹¹½¨CSMÏûÏ¢×Ö·û´®£¨°üº¬×´Ì¬¡¢²ÎÊı¡¢Ä¿±êÄ£¿é¡¢ÏûÏ¢ÀàĞÍµÈĞÅÏ¢£©£¬ÒÔ±ã·¢ËÍµ½ÆäËûCSMÄ£¿é¡£
+è¯¥VIç”¨äºæ„å»ºCSMæ¶ˆæ¯å­—ç¬¦ä¸²ï¼ˆåŒ…å«çŠ¶æ€ã€å‚æ•°ã€ç›®æ ‡æ¨¡å—ã€æ¶ˆæ¯ç±»å‹ç­‰ä¿¡æ¯ï¼‰ï¼Œä»¥ä¾¿å‘é€åˆ°å…¶ä»–CSMæ¨¡å—ã€‚
 
-> Ref: CSM ÏûÏ¢ÀàĞÍ
-> Ref: CSM ÏûÏ¢¸ñÊ½½âÎö
+> Ref: CSM æ¶ˆæ¯ç±»å‹
+> Ref: CSM æ¶ˆæ¯æ ¼å¼è§£æ
 
-      - <B>ÀıÈç£º</B>
+      - <B>ä¾‹å¦‚ï¼š</B>
+    
+      å‘é€ç»™æœ¬åœ°çŠ¶æ€æœºæ—¶ï¼Œ<b>Target Module ("")</b>åº”è®¾ä¸ºç©º
+    
+            If State = Aå¹¶ä¸”æ²¡æœ‰å‚æ•°ï¼Œé‚£ä¹ˆ<b>State with Arguments</b> = A
+            If State = A , Arguments = Bé‚£ä¹ˆ <b>State with Arguments</b> = A >> B
+    
+      åœ¨å‘é€ç»™å…¶ä»–CSMçš„æƒ…å†µä¸‹ï¼Œå‡è®¾<b>Target Module ("")</b>çš„åç§°ä¸º"Target"ã€‚
+    
+      - åŒæ­¥è°ƒç”¨ï¼ˆå‘é€æ¶ˆæ¯åç­‰å¾…è¿”å›ï¼‰ï¼š
+    
+            If State = Aå¹¶ä¸”æ²¡æœ‰å‚æ•°ï¼Œé‚£ä¹ˆ<b>State with Arguments</b> = A -@target
+            If State = A , Arguments = Bé‚£ä¹ˆ <b>State with Arguments</b> = A >> B -@target
+    
+      - å¼‚æ­¥è°ƒç”¨ï¼ˆå‘é€æ¶ˆæ¯åå°†è¿›å…¥"Async Message Posted"çŠ¶æ€ï¼Œå½“å¤–éƒ¨æ¨¡å—å¤„ç†å®Œæ¯•åï¼Œæœ¬åœ°æ¨¡å—å°†æ”¶åˆ°"Async Response"æ¶ˆæ¯ï¼‰ï¼š
+    
+            If State = Aå¹¶ä¸”æ²¡æœ‰å‚æ•°ï¼Œé‚£ä¹ˆ<b>State with Arguments</b> = A ->target
+            If State = A , Arguments = Bé‚£ä¹ˆ<b>State with Arguments</b> = A >> B ->target
 
-      ·¢ËÍ¸ø±¾µØ×´Ì¬»úÊ±£¬<b>Target Module ("")</b> Ó¦ÉèÎª¿Õ
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>State</b>ï¼šçŠ¶æ€æˆ–æ¶ˆæ¯åç§°å­—ç¬¦ä¸²ã€‚
+- <b>Arguments ("")</b>ï¼š<b>State</b>çš„å‚æ•°ã€‚
+- <b>Target Module ("")</b>ï¼šè¯¥æ¶ˆæ¯å‘é€çš„ç›®æ ‡CSMæ¨¡å—åç§°ã€‚
+- <b>Type</b>ï¼šæ¶ˆæ¯ç±»å‹ï¼Œå¯é€‰ Async, Async Without Reply, Syncã€‚
 
-            If State = A ²¢ÇÒÃ»ÓĞ²ÎÊı£¬ÄÇÃ´ <b>State with Arguments</b> = A
-            If State = A , Arguments = B ÄÇÃ´ <b>State with Arguments</b> = A >> B
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 
-      ÔÚ·¢ËÍ¸øÆäËûCSMµÄÇé¿öÏÂ£¬¼ÙÉè <b>Target Module ("")</b> µÄÃû³ÆÎª "Target"
-
-      - Í¬²½µ÷ÓÃ£¨·¢ËÍÏûÏ¢ºóµÈ´ı·µ»Ø£©£º
-
-            If State = A ²¢ÇÒÃ»ÓĞ²ÎÊı£¬ÄÇÃ´ <b>State with Arguments</b> = A -@target
-            If State = A , Arguments = B ÄÇÃ´ <b>State with Arguments</b> = A >> B -@target
-
-      - Òì²½µ÷ÓÃ£¨·¢ËÍÏûÏ¢ºó½«½øÈë"Async Message Posted"×´Ì¬£¬µ±Íâ²¿Ä£¿é´¦ÀíÍê±Ïºó£¬±¾µØÄ£¿é½«ÊÕµ½"Async Response"ÏûÏ¢£©£º
-
-            If State = A ²¢ÇÒÃ»ÓĞ²ÎÊı£¬ÄÇÃ´ <b>State with Arguments</b> = A ->target
-            If State = A , Arguments = B ÄÇÃ´ <b>State with Arguments</b> = A >> B ->target
-
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>State</b>£º×´Ì¬»òÏûÏ¢Ãû³Æ×Ö·û´®
-- <b>Arguments ("")</b>£º<b>State</b> µÄ²ÎÊı
-- <b>Target Module ("")</b>£º¸ÃÏûÏ¢·¢ËÍµÄÄ¿±êCSMÄ£¿éÃû³Æ
-- <b>Type</b>£ºÏûÏ¢ÀàĞÍ£¬¿ÉÑ¡ Async, Async Without Reply, Sync
-
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>CSM Message String</b>£ºÆ´½ÓÉú³ÉµÄ CSM ÏûÏ¢×Ö·û´®
+- <b>CSM Message String</b>ï¼šæ‹¼æ¥ç”Ÿæˆçš„CSMæ¶ˆæ¯å­—ç¬¦ä¸²ã€‚
 
 ### Build Message with Arguments++.vi
 
-¸ÃVIÓÃÓÚ¹¹½¨CSMÏûÏ¢×Ö·û´®¼°²Ù×÷×Ö·û´®¡£
+è¯¥VIç”¨äºæ„å»ºCSMæ¶ˆæ¯å­—ç¬¦ä¸²åŠæ“ä½œå­—ç¬¦ä¸²ã€‚
 
 > [!NOTE] 
-> **ÏûÏ¢Æ´½ÓAPI**
+> **æ¶ˆæ¯æ‹¼æ¥API**
 >
-> ¸ÃÀàĞÍAPI²»»áÖ±½Ó·¢ËÍÏûÏ¢£¬½öÓÃÓÚÆ´½ÓÏûÏ¢×Ö·û´®¡£Ğè½«×Ö·û´®²¢ÈëCSMµÄ×´Ì¬¶ÓÁĞºó£¬ÔÚParse State Queue++.viÖĞ·¢ËÍÏûÏ¢²¢Ö´ĞĞ²Ù×÷¡£
-> ÔÚÊìÏ¤CSM¹æÔòµÄÇé¿öÏÂ£¬¿É²»±ØÊ¹ÓÃ´ËÀàAPI£¬Ö±½ÓÔÚ×Ö·û´®ÖĞ¼üÈë¶ÔÓ¦µÄÏûÏ¢×Ö·û´®»ò²Ù×÷×Ö·û´®¡£
+> è¯¥ç±»å‹APIä¸ä¼šç›´æ¥å‘é€æ¶ˆæ¯ï¼Œä»…ç”¨äºæ‹¼æ¥æ¶ˆæ¯å­—ç¬¦ä¸²ã€‚éœ€å°†å­—ç¬¦ä¸²å¹¶å…¥CSMçš„çŠ¶æ€é˜Ÿåˆ—åï¼Œåœ¨Parse State Queue++ VIä¸­å‘é€æ¶ˆæ¯å¹¶æ‰§è¡Œæ“ä½œã€‚
+> åœ¨ç†Ÿæ‚‰CSMè§„åˆ™çš„æƒ…å†µä¸‹ï¼Œå¯ä¸å¿…ä½¿ç”¨æ­¤ç±»APIï¼Œç›´æ¥åœ¨å­—ç¬¦ä¸²ä¸­é”®å…¥å¯¹åº”çš„æ¶ˆæ¯å­—ç¬¦ä¸²æˆ–æ“ä½œå­—ç¬¦ä¸²ã€‚
 
 > [!NOTE] 
-> **¶àÌ¬VI(Polymorphic VI)Ñ¡Ïî**
+> **å¤šæ€VI(Polymorphic VI)é€‰é¡¹**
 >
-> - Build Message with Arguments(Auto Check).vi£º¸ù¾İÊäÈëµÄÏûÏ¢·ûºÅ£¬×Ô¶¯Æ´½ÓÏûÏ¢×Ö·û´®¡£
-> - Build Asynchronous Message with Arguments.vi£ºÆ´½ÓÉú³ÉCSMÒì²½ÏûÏ¢×Ö·û´®£¬ÏûÏ¢ÀàĞÍ·ûºÅÎª"->"
-> - Build No-Reply Asynchronous Message with Arguments.vi£ºÆ´½ÓÉú³ÉCSMÒì²½²»µÈ´ı·µ»ØÏûÏ¢×Ö·û´®£¬ÏûÏ¢ÀàĞÍ·ûºÅÎª"->|"
-> - Build Synchronous Message with Arguments.vi£ºÆ´½ÓÉú³ÉCSMÍ¬²½ÏûÏ¢×Ö·û´®£¬ÏûÏ¢ÀàĞÍ·ûºÅÎª"-@"
-> - Build Interrupt Status Message.vi£ºÆ´½ÓÉú³ÉCSMÖĞ¶Ï¹ã²¥×Ö·û´®
-> - Build Normal Status Message.vi£ºÆ´½ÓÉú³ÉCSMĞÅºÅ¹ã²¥×Ö·û´®
-> - Build Register Status Message.vi£ºÆ´½ÓÉú³ÉCSM×¢²á×´Ì¬²Ù×÷×Ö·û´®
-> - Build Unregister Status Message.vi£ºÆ´½ÓÉú³ÉCSM×¢Ïú×´Ì¬²Ù×÷×Ö·û´®
-> - CSM - Replace Substitution Marks in Messages.vi£ºÌæ»»ÏûÏ¢×Ö·û´®ÖĞµÄÕ¼Î»·û
+> - Build Message with Arguments(Auto Check).viï¼šæ ¹æ®è¾“å…¥çš„æ¶ˆæ¯ç¬¦å·ï¼Œè‡ªåŠ¨æ‹¼æ¥æ¶ˆæ¯å­—ç¬¦ä¸²ã€‚
+> - Build Asynchronous Message with Arguments.viï¼šæ‹¼æ¥ç”ŸæˆCSMå¼‚æ­¥æ¶ˆæ¯å­—ç¬¦ä¸²ï¼Œæ¶ˆæ¯ç±»å‹ç¬¦å·ä¸º"->"ã€‚
+> - Build No-Reply Asynchronous Message with Arguments.viï¼šæ‹¼æ¥ç”ŸæˆCSMå¼‚æ­¥ä¸ç­‰å¾…è¿”å›æ¶ˆæ¯å­—ç¬¦ä¸²ï¼Œæ¶ˆæ¯ç±»å‹ç¬¦å·ä¸º"->|"ã€‚
+> - Build Synchronous Message with Arguments.viï¼šæ‹¼æ¥ç”ŸæˆCSMåŒæ­¥æ¶ˆæ¯å­—ç¬¦ä¸²ï¼Œæ¶ˆæ¯ç±»å‹ç¬¦å·ä¸º"-@"ã€‚
+> - <!-- ä»¥ä¸‹4ä¸ªVIçš„åå­—å’Œåé¢çš„å®é™…æ ‡é¢˜åå­—ä¸ä¸€è‡´ã€‚-->Build Interrupt Status Message.viï¼šæ‹¼æ¥ç”ŸæˆCSMä¸­æ–­å¹¿æ’­å­—ç¬¦ä¸²ã€‚
+> - Build Normal Status Message.viï¼šæ‹¼æ¥ç”ŸæˆCSMä¿¡å·å¹¿æ’­å­—ç¬¦ä¸²ã€‚
+> - Build Register Status Message.viï¼šæ‹¼æ¥ç”ŸæˆCSMæ³¨å†ŒçŠ¶æ€æ“ä½œå­—ç¬¦ä¸²ã€‚
+> - Build Unregister Status Message.viï¼šæ‹¼æ¥ç”ŸæˆCSMæ³¨é”€çŠ¶æ€æ“ä½œå­—ç¬¦ä¸²ã€‚
+> - CSM - Replace Substitution Marks in Messages.viï¼šæ›¿æ¢æ¶ˆæ¯å­—ç¬¦ä¸²ä¸­çš„å ä½ç¬¦ã€‚
 
-> Ref: CSM Ä£¿é¼äÍ¨ĞÅÀàĞÍ
+> Ref: CSM æ¨¡å—é—´é€šä¿¡ç±»å‹
 
 #### Build Message with Arguments(Auto Check).vi
 
-Æ´½ÓÉú³ÉCSMÏûÏ¢×Ö·û´®£¬ÏûÏ¢µÄÀàĞÍ·ûºÅ»á¸ù¾İÊäÈëµÄ<b>State with Arguments</b>×Ô¶¯¼ì²â¡£
+æ‹¼æ¥ç”ŸæˆCSMæ¶ˆæ¯å­—ç¬¦ä¸²ï¼Œæ¶ˆæ¯çš„ç±»å‹ç¬¦å·ä¼šæ ¹æ®è¾“å…¥çš„<b>State with Arguments</b>è‡ªåŠ¨æ£€æµ‹ã€‚
 
-> Ref: ÏûÏ¢Æ´½ÓAPI
-> Ref: CSMÏûÏ¢µÄÄ¿±êÄ£¿éËµÃ÷
+> Ref: æ¶ˆæ¯æ‹¼æ¥API
+> Ref: CSMæ¶ˆæ¯çš„ç›®æ ‡æ¨¡å—è¯´æ˜
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>State with Arguments</b>£ºCSM×´Ì¬×Ö·û´®£¬¿É°üº¬²ÎÊıºÍÄ¿±êÄ£¿éĞÅÏ¢
-- <b>Arguments ("")</b>£º²ÎÊıĞÅÏ¢£¬<b>State with Arguments</b>ÖĞ°üº¬µÄ²ÎÊı½«±»Ìæ»»
-- <b>Target Module ("")</b>£ºÄ¿±êÄ£¿é£¬Îª¿ÕÊ±½«Ê¹ÓÃ<b>State with Arguments</b>ÖĞµÄÄ¬ÈÏÄ£¿é
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>State with Arguments</b>ï¼šCSMçŠ¶æ€å­—ç¬¦ä¸²ï¼Œå¯åŒ…å«å‚æ•°å’Œç›®æ ‡æ¨¡å—ä¿¡æ¯ã€‚
+- <b>Arguments ("")</b>ï¼šå‚æ•°ä¿¡æ¯ï¼Œ<b>State with Arguments</b>ä¸­åŒ…å«çš„å‚æ•°å°†è¢«æ›¿æ¢ã€‚
+- <b>Target Module ("")</b>ï¼šç›®æ ‡æ¨¡å—ï¼Œä¸ºç©ºæ—¶å°†ä½¿ç”¨<b>State with Arguments</b>ä¸­çš„é»˜è®¤æ¨¡å—ã€‚
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>CSM Message String</b>£ºÆ´½ÓÉú³ÉµÄCSMÏûÏ¢×Ö·û´®
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>CSM Message String</b>ï¼šæ‹¼æ¥ç”Ÿæˆçš„CSMæ¶ˆæ¯å­—ç¬¦ä¸²ã€‚
 
 #### Build Synchronous Message with Arguments.vi
 
-Æ´½ÓÉú³ÉCSMÍ¬²½ÏûÏ¢×Ö·û´®£¬ÏûÏ¢ÀàĞÍ·ûºÅÎª"-@"£¬ÀıÈç£º
+æ‹¼æ¥ç”ŸæˆCSMåŒæ­¥æ¶ˆæ¯å­—ç¬¦ä¸²ï¼Œæ¶ˆæ¯ç±»å‹ç¬¦å·ä¸º"-@"ï¼Œä¾‹å¦‚ï¼š
 
       Message >> Arguments -@ Target
 
-> Ref: ÏûÏ¢Æ´½ÓAPI
-> Ref: Í¬²½ÏûÏ¢
-> Ref: CSMÏûÏ¢µÄÄ¿±êÄ£¿éËµÃ÷
+> Ref: æ¶ˆæ¯æ‹¼æ¥API
+> Ref: åŒæ­¥æ¶ˆæ¯
+> Ref: CSMæ¶ˆæ¯çš„ç›®æ ‡æ¨¡å—è¯´æ˜
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>State with Arguments</b>£ºCSM×´Ì¬×Ö·û´®¡£
-- <b>Arguments ("")</b>£º²ÎÊıĞÅÏ¢¡£<b>State with Arguments</b>ÖĞ°üº¬µÄ²ÎÊı»á±»Ìæ»»¡£
-- <b>Target Module ("")</b>£ºÄ¿±êÄ£¿é¡£Îª¿ÕÊ±£¬½«Ê¹ÓÃ<b>State with Arguments</b>ÖĞµÄÄ¬ÈÏÄ£¿é¡£
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>State with Arguments</b>ï¼šCSMçŠ¶æ€å­—ç¬¦ä¸²ã€‚
+- <b>Arguments ("")</b>ï¼šå‚æ•°ä¿¡æ¯ã€‚<b>State with Arguments</b>ä¸­åŒ…å«çš„å‚æ•°ä¼šè¢«æ›¿æ¢ã€‚
+- <b>Target Module ("")</b>ï¼šç›®æ ‡æ¨¡å—ã€‚ä¸ºç©ºæ—¶ï¼Œå°†ä½¿ç”¨<b>State with Arguments</b>ä¸­çš„é»˜è®¤æ¨¡å—ã€‚
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>CSM Message String</b>£ºÆ´½ÓÉú³ÉµÄCSMÏûÏ¢×Ö·û´®
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>CSM Message String</b>ï¼šæ‹¼æ¥ç”Ÿæˆçš„CSMæ¶ˆæ¯å­—ç¬¦ä¸²ã€‚
 
 #### Build Asynchronous Message with Arguments.vi
 
-Æ´½ÓÉú³ÉCSMÒì²½ÏûÏ¢×Ö·û´®£¬ÏûÏ¢ÀàĞÍ·ûºÅÎª"->"£¬ÀıÈç£º
+æ‹¼æ¥ç”ŸæˆCSMå¼‚æ­¥æ¶ˆæ¯å­—ç¬¦ä¸²ï¼Œæ¶ˆæ¯ç±»å‹ç¬¦å·ä¸º"->"ï¼Œä¾‹å¦‚ï¼š
 
       Message >> Arguments -> Target
 
-> Ref: ÏûÏ¢Æ´½ÓAPI
-> Ref: Òì²½ÏûÏ¢
-> Ref: CSMÏûÏ¢µÄÄ¿±êÄ£¿éËµÃ÷
+> Ref: æ¶ˆæ¯æ‹¼æ¥API
+> Ref: å¼‚æ­¥æ¶ˆæ¯
+> Ref: CSMæ¶ˆæ¯çš„ç›®æ ‡æ¨¡å—è¯´æ˜
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>State with Arguments</b>£ºCSM×´Ì¬×Ö·û´®¡£
-- <b>Arguments ("")</b>£º²ÎÊıĞÅÏ¢¡£<b>State with Arguments</b>ÖĞ°üº¬µÄ²ÎÊı»á±»Ìæ»»¡£
-- <b>Target Module ("")</b>£ºÄ¿±êÄ£¿é¡£Îª¿ÕÊ±£¬½«Ê¹ÓÃ<b>State with Arguments</b>ÖĞµÄÄ¬ÈÏÄ£¿é¡£
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>State with Arguments</b>ï¼šCSMçŠ¶æ€å­—ç¬¦ä¸²ã€‚
+- <b>Arguments ("")</b>ï¼šå‚æ•°ä¿¡æ¯ã€‚<b>State with Arguments</b>ä¸­åŒ…å«çš„å‚æ•°ä¼šè¢«æ›¿æ¢ã€‚
+- <b>Target Module ("")</b>ï¼šç›®æ ‡æ¨¡å—ã€‚ä¸ºç©ºæ—¶ï¼Œå°†ä½¿ç”¨<b>State with Arguments</b>ä¸­çš„é»˜è®¤æ¨¡å—ã€‚
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>CSM Message String</b>£ºÆ´½ÓÉú³ÉµÄCSMÏûÏ¢×Ö·û´®
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>CSM Message String</b>ï¼šæ‹¼æ¥ç”Ÿæˆçš„CSMæ¶ˆæ¯å­—ç¬¦ä¸²ã€‚
 
 #### Build No-Reply Asynchronous Message with Arguments.vi
 
-Æ´½ÓÉú³ÉCSMÒì²½ÎŞ·µ»ØÏûÏ¢×Ö·û´®£¬ÏûÏ¢ÀàĞÍ·ûºÅÎª"->|"£¬ÀıÈç£º
+æ‹¼æ¥ç”ŸæˆCSMå¼‚æ­¥æ— è¿”å›æ¶ˆæ¯å­—ç¬¦ä¸²ï¼Œæ¶ˆæ¯ç±»å‹ç¬¦å·ä¸º"->|"ï¼Œä¾‹å¦‚ï¼š
 
       Message >> Arguments ->| Target
 
-> Ref: ÏûÏ¢Æ´½ÓAPI
-> Ref: Òì²½ÏûÏ¢
-> Ref: CSMÏûÏ¢µÄÄ¿±êÄ£¿éËµÃ÷
+> Ref: æ¶ˆæ¯æ‹¼æ¥API
+> Ref: å¼‚æ­¥æ¶ˆæ¯
+> Ref: CSMæ¶ˆæ¯çš„ç›®æ ‡æ¨¡å—è¯´æ˜
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>State with Arguments</b>£ºCSM×´Ì¬×Ö·û´®¡£
-- <b>Arguments ("")</b>£º²ÎÊıĞÅÏ¢¡£<b>State with Arguments</b>ÖĞ°üº¬µÄ²ÎÊı»á±»Ìæ»»¡£
-- <b>Target Module ("")</b>£ºÄ¿±êÄ£¿é¡£Îª¿ÕÊ±£¬½«Ê¹ÓÃ<b>State with Arguments</b>ÖĞµÄÄ¬ÈÏÄ£¿é¡£
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>State with Arguments</b>ï¼šCSMçŠ¶æ€å­—ç¬¦ä¸²ã€‚
+- <b>Arguments ("")</b>ï¼šå‚æ•°ä¿¡æ¯ã€‚<b>State with Arguments</b>ä¸­åŒ…å«çš„å‚æ•°ä¼šè¢«æ›¿æ¢ã€‚
+- <b>Target Module ("")</b>ï¼šç›®æ ‡æ¨¡å—ã€‚ä¸ºç©ºæ—¶ï¼Œå°†ä½¿ç”¨<b>State with Arguments</b>ä¸­çš„é»˜è®¤æ¨¡å—ã€‚
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>CSM Message String</b>£ºÆ´½ÓÉú³ÉµÄCSMÏûÏ¢×Ö·û´®
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>CSM Message String</b>ï¼šæ‹¼æ¥ç”Ÿæˆçš„CSMæ¶ˆæ¯å­—ç¬¦ä¸²ã€‚
 
-#### Build Status Broadcast Message.vi
+#### Build Status Broadcast Message.vi<!-- è¿™æ˜¯åŸæ¥çš„Build Normal Status Message.viå—ï¼Ÿ -->
 
-Æ´½ÓÆÕÍ¨×´Ì¬ÏûÏ¢×Ö·û´®£¬ÏûÏ¢¸ñÊ½ÈçÏÂ£º
+æ‹¼æ¥æ™®é€šçŠ¶æ€æ¶ˆæ¯å­—ç¬¦ä¸²ï¼Œæ¶ˆæ¯æ ¼å¼å¦‚ä¸‹ï¼š
 
       Status >> Arguments -><status>
-      //ÒÔÏÂ×Ö·û´®ÎªµÈĞ§²Ù×÷£¬½öÎªÁË¸üÈİÒ×¼üÈë¼ÇÒä£¬¶¨ÒåÁË¸ü¶àµÄ²Ù×÷×Ö·û
+      //ä»¥ä¸‹å­—ç¬¦ä¸²ä¸ºç­‰æ•ˆæ“ä½œï¼Œä»…ä¸ºäº†æ›´å®¹æ˜“é”®å…¥è®°å¿†ï¼Œå®šä¹‰äº†æ›´å¤šçš„æ“ä½œå­—ç¬¦ã€‚
       Status >> Arguments -><broadcast>
       Status >> Arguments -><all>
 
-> Ref: ÏûÏ¢Æ´½ÓAPI
+> Ref: æ¶ˆæ¯æ‹¼æ¥API
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>State with Arguments</b>£ºCSMÆÕÍ¨×´Ì¬ÏûÏ¢×Ö·û´®¡£
-- <b>Arguments ("")</b>: ²ÎÊıĞÅÏ¢¡£<b>State with Arguments</b>ÖĞ°üº¬µÄ²ÎÊı£¬»á±»Ìæ»»¡£
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>CSM Message String</b>£ºÆ´½ÓÉú³ÉµÄCSMÏûÏ¢×Ö·û´®
+- <b>State with Arguments</b>ï¼šCSMæ™®é€šçŠ¶æ€æ¶ˆæ¯å­—ç¬¦ä¸²ã€‚
+- <b>Arguments ("")</b>: å‚æ•°ä¿¡æ¯ã€‚<b>State with Arguments</b>ä¸­åŒ…å«çš„å‚æ•°ï¼Œä¼šè¢«æ›¿æ¢ã€‚
 
-#### Build Interrupt Broadcast Message.vi
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>CSM Message String</b>ï¼šæ‹¼æ¥ç”Ÿæˆçš„CSMæ¶ˆæ¯å­—ç¬¦ä¸²ã€‚
 
-Æ´½ÓÖĞ¶Ï×´Ì¬ÏûÏ¢£¬ÏûÏ¢¸ñÊ½ÈçÏÂ£º
+#### Build Interrupt Broadcast Message.vi<!-- è¿™æ˜¯åŸæ¥çš„Build Interrupt Status Message.viå—ï¼Ÿ -->
+
+æ‹¼æ¥ä¸­æ–­çŠ¶æ€æ¶ˆæ¯ï¼Œæ¶ˆæ¯æ ¼å¼å¦‚ä¸‹ï¼š
 
       Status >> Arguments -><interrupt>
 
-> Ref: ÏûÏ¢Æ´½ÓAPI
+> Ref: æ¶ˆæ¯æ‹¼æ¥API
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>State with Arguments</b>£ºCSMÖĞ¶Ï×´Ì¬ÏûÏ¢×Ö·û´®
-- <b>Arguments ("")</b>£º²ÎÊıĞÅÏ¢¡£<b>State with Arguments</b>ÖĞ°üº¬µÄ²ÎÊı»á±»Ìæ»»
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>State with Arguments</b>ï¼šCSMä¸­æ–­çŠ¶æ€æ¶ˆæ¯å­—ç¬¦ä¸²ã€‚
+- <b>Arguments ("")</b>ï¼šå‚æ•°ä¿¡æ¯ã€‚<b>State with Arguments</b>ä¸­åŒ…å«çš„å‚æ•°ä¼šè¢«æ›¿æ¢ã€‚
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>CSM Message String</b>£ºÆ´½ÓÉú³ÉµÄCSMÏûÏ¢×Ö·û´®
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>CSM Message String</b>ï¼šæ‹¼æ¥ç”Ÿæˆçš„CSMæ¶ˆæ¯å­—ç¬¦ä¸²ã€‚
 
-#### Build Register Message.vi
+#### Build Register Message.vi<!-- è¿™æ˜¯åŸæ¥çš„Build Register Status Message.viå—ï¼Ÿ -->
 
-Æ´½Ó×¢²á×´Ì¬²Ù×÷ÏûÏ¢×Ö·û´®£¬ÏûÏ¢¸ñÊ½ÈçÏÂ£º
+æ‹¼æ¥æ³¨å†ŒçŠ¶æ€æ“ä½œæ¶ˆæ¯å­—ç¬¦ä¸²ï¼Œæ¶ˆæ¯æ ¼å¼å¦‚ä¸‹ï¼š
 
       //[source-state]@[source-module] >> [response-message]@[response-module] -><register>
       status @ Source >> API @ Target -><register>
-
-      ¾ÙÀı£º½«ÏÂÔØÆ÷Ä£¿éµÄÏÂÔØÍê±ÏÏûÏ¢£¬°ó¶¨µ½²¥·ÅÆ÷Ä£¿éµÄ¿ªÊ¼²¥·ÅAPI
-
-            //ÏÂÔØÆ÷Ä£¿éµÄÏÂÔØÍê±ÏÏûÏ¢£¬°ó¶¨µ½²¥·ÅÆ÷Ä£¿éµÄ¿ªÊ¼²¥·ÅAPI
+    
+      ä¸¾ä¾‹ï¼šå°†ä¸‹è½½å™¨æ¨¡å—çš„ä¸‹è½½å®Œæ¯•æ¶ˆæ¯ï¼Œç»‘å®šåˆ°æ’­æ”¾å™¨æ¨¡å—çš„å¼€å§‹æ’­æ”¾API
+    
+            //ä¸‹è½½å™¨æ¨¡å—çš„ä¸‹è½½å®Œæ¯•æ¶ˆæ¯ï¼Œç»‘å®šåˆ°æ’­æ”¾å™¨æ¨¡å—çš„å¼€å§‹æ’­æ”¾API
             DownloadFinished@Downloader >> StartPlay@Player -><register>
-            //µ±²¥·ÅÆ÷Ä£¿éÖĞÖ´ĞĞÏûÏ¢Ê±£¬Player ¿ÉÈ±Ê¡
+            //å½“æ’­æ”¾å™¨æ¨¡å—ä¸­æ‰§è¡Œæ¶ˆæ¯æ—¶ï¼ŒPlayer å¯ç¼ºçœ
             DownloadFinished@Downloader >> StartPlay -><register>
-            //µ±¶à¸öÄ£¿é¶¼ÓĞÏÂÔØÍê±ÏÏûÏ¢Ê±£¬¿ÉÒÔÊ¹ÓÃ * ±íÊ¾½«ËùÓĞÄ£¿éµÄ¸ÃÏûÏ¢¶¼°ó¶¨µ½²¥·ÅÆ÷Ä£¿éµÄ¿ªÊ¼²¥·ÅAPI
+            //å½“å¤šä¸ªæ¨¡å—éƒ½æœ‰ä¸‹è½½å®Œæ¯•æ¶ˆæ¯æ—¶ï¼Œå¯ä»¥ä½¿ç”¨ * è¡¨ç¤ºå°†æ‰€æœ‰æ¨¡å—çš„è¯¥æ¶ˆæ¯éƒ½ç»‘å®šåˆ°æ’­æ”¾å™¨æ¨¡å—çš„å¼€å§‹æ’­æ”¾API
             DownloadFinished@* >> StartPlay@Player -><register>
 
-> Ref: ÏûÏ¢Æ´½ÓAPI
+> Ref: æ¶ˆæ¯æ‹¼æ¥API
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>Target CSM</b>£º¶©ÔÄ×´Ì¬µÄCSMÄ£¿éÃû³Æ
-- <b>Source CSM (* as Default)</b>£º·¢³ö×´Ì¬µÄCSMÄ£¿éÃû³Æ
-- <b>Status</b>£º×¢²áµÄ×´Ì¬
-- <b>API (If "", Same As "Status")</b>£º¶©ÔÄ×´Ì¬Ä£¿éÏìÓ¦µÄAPIÃû³Æ
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>Target CSM</b>ï¼šè®¢é˜…çŠ¶æ€çš„CSMæ¨¡å—åç§°ã€‚
+- <b>Source CSM (* as Default)</b>ï¼šå‘å‡ºçŠ¶æ€çš„CSMæ¨¡å—åç§°ã€‚
+- <b>Status</b>ï¼šæ³¨å†Œçš„çŠ¶æ€ã€‚
+- <b>API (If "", Same As "Status")</b>ï¼šè®¢é˜…çŠ¶æ€æ¨¡å—å“åº”çš„APIåç§°ã€‚
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>CSM Message String</b>£ºÆ´½ÓÉú³ÉµÄCSMÏûÏ¢×Ö·û´®
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>CSM Message String</b>ï¼šæ‹¼æ¥ç”Ÿæˆçš„CSMæ¶ˆæ¯å­—ç¬¦ä¸²ã€‚
 
-#### Build Unregister Message.vi
+#### Build Unregister Message.vi<!-- è¿™æ˜¯åŸæ¥çš„Build Unregister Status Message.viå—ï¼Ÿ -->
 
-Æ´½ÓÈ¡Ïû×¢²á×´Ì¬²Ù×÷ÏûÏ¢×Ö·û´®£¬ÏûÏ¢¸ñÊ½ÈçÏÂ£º
+æ‹¼æ¥å–æ¶ˆæ³¨å†ŒçŠ¶æ€æ“ä½œæ¶ˆæ¯å­—ç¬¦ä¸²ï¼Œæ¶ˆæ¯æ ¼å¼å¦‚ä¸‹ï¼š
 
       //[source-state]@[source-module] >> [response-message]@[response-module] -><unregister>
       status @ Source >> API @ Target -><unregister>
-
-      ¾ÙÀı£ºÈ¡ÏûÏÂÔØÆ÷Ä£¿éµÄÏÂÔØÍê±ÏÏûÏ¢£¬°ó¶¨µ½²¥·ÅÆ÷Ä£¿éµÄ¿ªÊ¼²¥·ÅAPI
-
-            //ÏÂÔØÆ÷Ä£¿éµÄÏÂÔØÍê±ÏÏûÏ¢£¬°ó¶¨µ½²¥·ÅÆ÷Ä£¿éµÄ¿ªÊ¼²¥·ÅAPI
+    
+      ä¸¾ä¾‹ï¼šå–æ¶ˆä¸‹è½½å™¨æ¨¡å—çš„ä¸‹è½½å®Œæ¯•æ¶ˆæ¯ï¼Œç»‘å®šåˆ°æ’­æ”¾å™¨æ¨¡å—çš„å¼€å§‹æ’­æ”¾API
+    
+            //ä¸‹è½½å™¨æ¨¡å—çš„ä¸‹è½½å®Œæ¯•æ¶ˆæ¯ï¼Œç»‘å®šåˆ°æ’­æ”¾å™¨æ¨¡å—çš„å¼€å§‹æ’­æ”¾API
             DownloadFinished@Downloader >> StartPlay@Player -><unregister>
-            //µ±²¥·ÅÆ÷Ä£¿éÖĞÖ´ĞĞÏûÏ¢Ê±£¬Player ¿ÉÈ±Ê¡
+            //å½“æ’­æ”¾å™¨æ¨¡å—ä¸­æ‰§è¡Œæ¶ˆæ¯æ—¶ï¼ŒPlayer å¯ç¼ºçœ
             DownloadFinished@Downloader >> StartPlay -><unregister>
 
-> Ref: ÏûÏ¢Æ´½ÓAPI
+> Ref: æ¶ˆæ¯æ‹¼æ¥API
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>Target CSM</b>£º¶©ÔÄ×´Ì¬µÄCSMÄ£¿éÃû³Æ
-- <b>Source CSM (* as Default)</b>£º·¢³ö×´Ì¬µÄCSMÄ£¿éÃû³Æ
-- <b>Status</b>£º×¢²áµÄ×´Ì¬
-- <b>API (If "", Same As "Status")</b>£ºÈ¡Ïû¶©ÔÄ×´Ì¬Ä£¿éÏìÓ¦µÄAPIÃû³Æ
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>Target CSM</b>ï¼šè®¢é˜…çŠ¶æ€çš„CSMæ¨¡å—åç§°ã€‚
+- <b>Source CSM (* as Default)</b>ï¼šå‘å‡ºçŠ¶æ€çš„CSMæ¨¡å—åç§°ã€‚
+- <b>Status</b>ï¼šæ³¨å†Œçš„çŠ¶æ€ã€‚
+- <b>API (If "", Same As "Status")</b>ï¼šå–æ¶ˆè®¢é˜…çŠ¶æ€æ¨¡å—å“åº”çš„APIåç§°ã€‚
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>CSM Message String</b>£ºÆ´½ÓÉú³ÉµÄCSMÏûÏ¢×Ö·û´®
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+
+- <b>CSM Message String</b>ï¼šæ‹¼æ¥ç”Ÿæˆçš„CSMæ¶ˆæ¯å­—ç¬¦ä¸²ã€‚
 
 #### CSM - Replace Substitution Marks in Messages.vi
 
-¸ÃVIÖ÷ÒªÎªÁËÄÜ¹»±ã½İµØ±à¼­¶àÌõCSMÏûÏ¢×Ö·û´®£¬Ìá¹©ÅúÁ¿Ìæ»»±ê¼ÇµÄ¹¦ÄÜ¡£ÓĞ4¸ö±ê¼Ç¿ÉÒÔÌæ»»£º
+è¯¥VIä¸»è¦ä¸ºäº†èƒ½å¤Ÿä¾¿æ·åœ°ç¼–è¾‘å¤šæ¡CSMæ¶ˆæ¯å­—ç¬¦ä¸²ï¼Œæä¾›æ‰¹é‡æ›¿æ¢æ ‡è®°çš„åŠŸèƒ½ã€‚æœ‰4ä¸ªæ ‡è®°å¯ä»¥æ›¿æ¢ï¼š
 
-- <param> ±ê¼Ç£ºÍ¨³£±íÊ¾ÏàÍ¬µÄ²ÎÊı
-- <target> ±ê¼Ç£ºÍ¨³£±íÊ¾ÏàÍ¬µÄÄ¿±ê
-- <1> ±ê¼Ç£º±íÊ¾×Ô¶¨Òå±ê¼Ç1
-- <2> ±ê¼Ç£º±íÊ¾×Ô¶¨Òå±ê¼Ç2
+- <param> æ ‡è®°ï¼šé€šå¸¸è¡¨ç¤ºç›¸åŒçš„å‚æ•°
+- <target> æ ‡è®°ï¼šé€šå¸¸è¡¨ç¤ºç›¸åŒçš„ç›®æ ‡
+- <1> æ ‡è®°ï¼šè¡¨ç¤ºè‡ªå®šä¹‰æ ‡è®°1
+- <2> æ ‡è®°ï¼šè¡¨ç¤ºè‡ªå®šä¹‰æ ‡è®°2
 
-      ÀıÈç£º½ÓÏß¶Ë <target> Á¬½ÓÁË×Ö·û´®Îª "DAQDevice"£¬<b>States with Replace Token</b> ×Ö·û´®Îª£º
-
+      ä¾‹å¦‚ï¼šæ¥çº¿ç«¯ <target> è¿æ¥äº†å­—ç¬¦ä¸²ä¸º "DAQDevice"ï¼Œ<b>States with Replace Token</b> å­—ç¬¦ä¸²ä¸ºï¼š
+      
             ``` text
             Initialize -@ <target>
             Configure -@ <target>
             Read -@ <target>
             Close -@ <target>
             ```
-
-      <b>States</b>Êä³öÎª£º
-
+      
+      <b>States</b>è¾“å‡ºä¸ºï¼š
+      
             ``` text
             Initialize -@ DAQDevice
             Configure -@ DAQDevice
@@ -270,69 +273,70 @@
             Close -@ DAQDevice
             ```
 
-> Ref: ÏûÏ¢Æ´½ÓAPI
+> Ref: æ¶ˆæ¯æ‹¼æ¥API
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>States with Replace Token</b>£º´øÓĞÌæ»»±ê¼ÇµÄCSM×´Ì¬×Ö·û´®
-- <b><param></b>£º<param> ±ê¼Ç£ºÍ¨³£±íÊ¾ÏàÍ¬µÄ²ÎÊı
-- <b><target></b>£º<target> ±ê¼Ç£ºÍ¨³£±íÊ¾ÏàÍ¬µÄÄ¿±ê
-- <b><1></b>£º×Ô¶¨Òå±ê¼Ç1
-- <b><2></b>£º×Ô¶¨Òå±ê¼Ç2
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>States with Replace Token</b>ï¼šå¸¦æœ‰æ›¿æ¢æ ‡è®°çš„CSMçŠ¶æ€å­—ç¬¦ä¸²ã€‚
+- <b><param></b>ï¼š<param> æ ‡è®°ï¼šé€šå¸¸è¡¨ç¤ºç›¸åŒçš„å‚æ•°ã€‚
+- <b><target></b>ï¼š<target> æ ‡è®°ï¼šé€šå¸¸è¡¨ç¤ºç›¸åŒçš„ç›®æ ‡ã€‚
+- <b><1></b>ï¼šè‡ªå®šä¹‰æ ‡è®°1ã€‚
+- <b><2></b>ï¼šè‡ªå®šä¹‰æ ‡è®°2ã€‚
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>States</b>£ºÌæ»»ºóµÄ×´Ì¬×Ö·û´®
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>States</b>ï¼šæ›¿æ¢åçš„çŠ¶æ€å­—ç¬¦ä¸²ã€‚
 
 
 ### CSM - Replace Mark with String Array.vi
 
-½«µ¥Ìõ×´Ì¬×Ö·û´®ÖĞµÄ±êÇ©Ìæ»»ÎªÊı×é×Ö·û´®£¬²¢ºÏ²¢³ÉÃèÊöÒ»×é×´Ì¬µÄ·û´®¡£
+å°†å•æ¡çŠ¶æ€å­—ç¬¦ä¸²ä¸­çš„æ ‡ç­¾æ›¿æ¢ä¸ºæ•°ç»„å­—ç¬¦ä¸²ï¼Œå¹¶åˆå¹¶æˆæè¿°ä¸€ç»„çŠ¶æ€çš„ç¬¦ä¸²ã€‚
 
-    ÀıÈç£º¶ÔÓÚ `Draw >> <1> -@ Painter`
+    ä¾‹å¦‚ï¼šå¯¹äº `Draw >> <1> -@ Painter`
     
-    <b>Tag</b> Ó¦¸ÃÑ¡Ôñ <1>
-
-    ÊäÈëÊı×é[Line,Circle,Rectangle]£¬¿ÉÒÔµÃµ½£º
+    <b>Tag</b> åº”è¯¥é€‰æ‹© <1>
+    
+    è¾“å…¥æ•°ç»„[Line,Circle,Rectangle]ï¼Œå¯ä»¥å¾—åˆ°ï¼š
         Draw >> Line -@ Painter
         Draw >> Circle -@ Painter
         Draw >> Rectangle -@ Painter
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>single-line text</b>:µ¥Ìõ×´Ì¬×Ö·û´®£¬°üº¬<1>,<2>,<3>,µÈ±êÇ©
-- <b>Substitution Mark</b>:ÒªÌæ»»µÄ±êÇ©£¬ÀıÈç<1>,<2>,<3>,µÈ
-- <b>replace string</b>:´ıÌæ»»µÄÊı×é×Ö·û´®
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>single-line text</b>:å•æ¡çŠ¶æ€å­—ç¬¦ä¸²ï¼ŒåŒ…å«<1>,<2>,<3>,ç­‰æ ‡ç­¾
+- <b>Substitution Mark</b>:è¦æ›¿æ¢çš„æ ‡ç­¾ï¼Œä¾‹å¦‚<1>,<2>,<3>,ç­‰
+- <b>replace string</b>:å¾…æ›¿æ¢çš„æ•°ç»„å­—ç¬¦ä¸²
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>States</b>:ºÏ²¢ºóµÄ×´Ì¬×Ö·û´®
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>States</b>:åˆå¹¶åçš„çŠ¶æ€å­—ç¬¦ä¸²
 
 ### CSM - Broadcast Status Change.vi
 
-ÏòÏµÍ³¹ã²¥×´Ì¬¸ü¸Ä£¬ÒÑ×¢²á×´Ì¬µÄCSMÄ£¿é½«½ÓÊÕ´Ë×´Ì¬¸ü¸Ä£¬ÀıÈç£º
+å‘ç³»ç»Ÿå¹¿æ’­çŠ¶æ€æ›´æ”¹ï¼Œå·²æ³¨å†ŒçŠ¶æ€çš„CSMæ¨¡å—å°†æ¥æ”¶æ­¤çŠ¶æ€æ›´æ”¹ï¼Œä¾‹å¦‚ï¼š
 
-      //¹ã²¥×´Ì¬¸ü¸Ä
+      //å¹¿æ’­çŠ¶æ€æ›´æ”¹
       Status >> Arguments -><broadcast>
 
 > [!NOTE] 
-> **CSM µÄ×´Ì¬¶ÓÁĞ²Ù×÷API**
+> **CSM çš„çŠ¶æ€é˜Ÿåˆ—æ“ä½œAPI**
 >
-> ¸ÃÀàĞÍAPI²»»áÖ±½Ó·¢ËÍÏûÏ¢£¬Ö»ÊÇÆ´½ÓÏûÏ¢×Ö·û´®¡£ÔÚParse State Queue++.viÖĞ·¢ËÍÏûÏ¢¡¢Ö´ĞĞ²Ù×÷¡£
-> ÓëÏûÏ¢Æ´½ÓAPI²»Í¬µÄÊÇ£¬´ËÀàAPI»á°üº¬CSMµÄ×´Ì¬¶ÓÁĞ×Ö·û´®ÊäÈë£¬Ïàµ±ÓÚÔÚ×´Ì¬¶ÓÁĞÖĞ²åÈëÏûÏ¢¡£
+> è¯¥ç±»å‹APIä¸ä¼šç›´æ¥å‘é€æ¶ˆæ¯ï¼Œåªæ˜¯æ‹¼æ¥æ¶ˆæ¯å­—ç¬¦ä¸²ã€‚åœ¨Parse State Queue++.viä¸­å‘é€æ¶ˆæ¯ã€æ‰§è¡Œæ“ä½œã€‚
+> ä¸æ¶ˆæ¯æ‹¼æ¥APIä¸åŒçš„æ˜¯ï¼Œæ­¤ç±»APIä¼šåŒ…å«CSMçš„çŠ¶æ€é˜Ÿåˆ—å­—ç¬¦ä¸²è¾“å…¥ï¼Œç›¸å½“äºåœ¨çŠ¶æ€é˜Ÿåˆ—ä¸­æ’å…¥æ¶ˆæ¯ã€‚
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>State Queue</b>£ºÕû¸ö×´Ì¬¶ÓÁĞ±»Á¬½Óµ½´ËÊäÈë
-- <b>Status with Arguments</b>£º½«±»¹ã²¥µÄ×´Ì¬¼°²ÎÊı£¬Ö§³Ö¶àĞĞ£¬Ã¿ĞĞ×´Ì¬¶¼½«±»Ìí¼Ó"-><broadcast>"
-- <b>Broadcast? (T)</b>£º¿ØÖÆÊÇ·ñ¹ã²¥µÄ¿ª¹ØÊäÈë
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>Status with Arguments</b>ï¼šå°†è¢«å¹¿æ’­çš„çŠ¶æ€åŠå‚æ•°ï¼Œæ”¯æŒå¤šè¡Œï¼Œæ¯è¡ŒçŠ¶æ€éƒ½å°†è¢«æ·»åŠ "-><broadcast>"ã€‚
+- <b>State Queue</b>ï¼šæ•´ä¸ªçŠ¶æ€é˜Ÿåˆ—è¢«è¿æ¥åˆ°æ­¤è¾“å…¥ã€‚
+- <b>Broadcast? (T)</b>ï¼šæ§åˆ¶æ˜¯å¦å¹¿æ’­çš„å¼€å…³è¾“å…¥ã€‚
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>Remaining States</b>£ºÆ´½ÓºóµÄËùÓĞ×´Ì¬¼°²ÎÊı
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+
+- <b>Remaining States</b>ï¼šæ‹¼æ¥åçš„æ‰€æœ‰çŠ¶æ€åŠå‚æ•°ã€‚
 
 ### Add State(s) to Queue By BOOL++.vi
 
-½«CSMÏûÏ¢×Ö·û´®²¢ÈëCSMÏûÏ¢¶ÓÁĞÖĞ¡£Ìá¹©ÁËTRUE/FALSEÁ½ÖÖ×´Ì¬µÄ×Ö·û´®Ñ¡Ïî£¬ÄÜ¹»±ÜÃâÊ¹ÓÃÌõ¼ş½á¹¹£¬Ìá¸ß´úÂë¿É¶ÁĞÔºÍ±à³ÌĞ§ÂÊ¡£
+å°†CSMæ¶ˆæ¯å­—ç¬¦ä¸²å¹¶å…¥CSMæ¶ˆæ¯é˜Ÿåˆ—ä¸­ã€‚æä¾›äº†TRUE/FALSEä¸¤ç§çŠ¶æ€çš„å­—ç¬¦ä¸²é€‰é¡¹ï¼Œèƒ½å¤Ÿé¿å…ä½¿ç”¨æ¡ä»¶ç»“æ„ï¼Œæé«˜ä»£ç å¯è¯»æ€§å’Œç¼–ç¨‹æ•ˆç‡ã€‚
 
-> Ref: CSM µÄ×´Ì¬¶ÓÁĞ²Ù×÷API
+> Ref: CSM çš„çŠ¶æ€é˜Ÿåˆ—æ“ä½œAPI
 
 > [!NOTE] 
-> **¶àÌ¬VI(Polymorphic VI)Ñ¡Ïî**
+> **å¤šæ€VI(Polymorphic VI)é€‰é¡¹**
 >
 > - Add State(s) to Queue By BOOL(Element).vi
 > - Add State(s) to Queue By BOOL(Array Left).vi
@@ -341,64 +345,64 @@
 
 #### Add State(s) to Queue By BOOL(Element).vi
 
-½«CSMÏûÏ¢×Ö·û´®²¢ÈëCSMÏûÏ¢¶ÓÁĞÖĞ¡£Ìá¹©ÁËTRUE/FALSEÁ½ÖÖ×´Ì¬µÄ×Ö·û´®Ñ¡Ïî£¬ÄÜ¹»±ÜÃâÊ¹ÓÃÌõ¼ş½á¹¹£¬Ìá¸ß´úÂë¿É¶ÁĞÔºÍ±à³ÌĞ§ÂÊ¡£
+å°†CSMæ¶ˆæ¯å­—ç¬¦ä¸²å¹¶å…¥CSMæ¶ˆæ¯é˜Ÿåˆ—ä¸­ã€‚æä¾›äº†TRUE/FALSEä¸¤ç§çŠ¶æ€çš„å­—ç¬¦ä¸²é€‰é¡¹ï¼Œèƒ½å¤Ÿé¿å…ä½¿ç”¨æ¡ä»¶ç»“æ„ï¼Œæé«˜ä»£ç å¯è¯»æ€§å’Œç¼–ç¨‹æ•ˆç‡ã€‚
 
-> Ref: CSM µÄ×´Ì¬¶ÓÁĞ²Ù×÷API
+> Ref: CSM çš„çŠ¶æ€é˜Ÿåˆ—æ“ä½œAPI
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>State Queue ("")</b>£ºÕû¸ö×´Ì¬¶ÓÁĞ±»Á¬½Óµ½´ËÊäÈë
-- <b>TRUE ("")</b>£º<b>Condition</b>ÎªTrueÊ±²åÈëµÄ×´Ì¬×Ö·û´®
-- <b>FALSE ("")</b>£º<b>Condition</b>ÎªFalseÊ±²åÈëµÄ×´Ì¬×Ö·û´®
-- <b>Condition</b>£ºÑ¡ÔñÁ¬½Óµ½TRUEÖÕ¶Ë»òFalseÖÕ¶ËµÄ×´Ì¬×Ö·û´®µÄ±êÖ¾
-- <b>High Priority? (F)</b>£ºÈç¹ûÎªTrue£¬×´Ì¬½«±»²åÈëµ½<b>State Queue ("")</b>µÄÇ°¶Ë£»Èç¹ûÎªFalse£¬Ëü±»¸½¼Óµ½Î²²¿
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>State Queue ("")</b>ï¼šæ•´ä¸ªçŠ¶æ€é˜Ÿåˆ—è¢«è¿æ¥åˆ°æ­¤è¾“å…¥ã€‚
+- <b>Condition</b>ï¼šé€‰æ‹©è¿æ¥åˆ°TRUEç»ˆç«¯æˆ–Falseç»ˆç«¯çš„çŠ¶æ€å­—ç¬¦ä¸²çš„æ ‡å¿—ã€‚
+- <b>High Priority? (F)</b>ï¼šå¦‚æœä¸ºTrueï¼ŒçŠ¶æ€å°†è¢«æ’å…¥åˆ°<b>State Queue ("")</b>çš„å‰ç«¯ï¼›å¦‚æœä¸ºFalseï¼Œå®ƒè¢«é™„åŠ åˆ°å°¾éƒ¨ã€‚
+- <b>TRUE ("")</b>ï¼š<b>Condition</b>ä¸ºTrueæ—¶æ’å…¥çš„çŠ¶æ€å­—ç¬¦ä¸²ã€‚
+- <b>FALSE ("")</b>ï¼š<b>Condition</b>ä¸ºFalseæ—¶æ’å…¥çš„çŠ¶æ€å­—ç¬¦ä¸²ã€‚
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>Remaining States</b>£ºÆ´½ÓºóµÄËùÓĞ×´Ì¬¼°²ÎÊı
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>Remaining States</b>ï¼šæ‹¼æ¥åçš„æ‰€æœ‰çŠ¶æ€åŠå‚æ•°ã€‚
 
 #### Add State(s) to Queue By BOOL(Array Left).vi
 
-½«CSMÏûÏ¢×Ö·û´®²¢ÈëCSMÏûÏ¢¶ÓÁĞÖĞ¡£Ìá¹©ÁËTRUE/FALSEÁ½ÖÖ×´Ì¬µÄ×Ö·û´®Ñ¡Ïî£¬ÄÜ¹»±ÜÃâÊ¹ÓÃÌõ¼ş½á¹¹£¬Ìá¸ß´úÂë¿É¶ÁĞÔºÍ±à³ÌĞ§ÂÊ¡£
+å°†CSMæ¶ˆæ¯å­—ç¬¦ä¸²å¹¶å…¥CSMæ¶ˆæ¯é˜Ÿåˆ—ä¸­ã€‚æä¾›äº†TRUE/FALSEä¸¤ç§çŠ¶æ€çš„å­—ç¬¦ä¸²é€‰é¡¹ï¼Œèƒ½å¤Ÿé¿å…ä½¿ç”¨æ¡ä»¶ç»“æ„ï¼Œæé«˜ä»£ç å¯è¯»æ€§å’Œç¼–ç¨‹æ•ˆç‡ã€‚
 
-> Ref: CSM µÄ×´Ì¬¶ÓÁĞ²Ù×÷API
+> Ref: CSM çš„çŠ¶æ€é˜Ÿåˆ—æ“ä½œAPI
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>State Queue ("")</b>£ºÕû¸ö×´Ì¬¶ÓÁĞ±»Á¬½Óµ½´ËÊäÈë
-- <b>TRUE ("")</b>£º<b>Condition</b>ÎªTrueÊ±²åÈëµÄ×´Ì¬×Ö·û´®
-- <b>FALSE ("")</b>£º<b>Condition</b>ÎªFalseÊ±²åÈëµÄ×´Ì¬×Ö·û´®
-- <b>Condition</b>£ºÑ¡ÔñÁ¬½Óµ½TRUEÖÕ¶Ë»òFalseÖÕ¶ËµÄ×´Ì¬×Ö·û´®µÄ±êÖ¾
-- <b>High Priority? (F)</b>£ºÈç¹ûÎªTrue£¬×´Ì¬½«±»²åÈëµ½<b>State Queue ("")</b>µÄÇ°¶Ë£»Èç¹ûÎªFalse£¬Ëü±»¸½¼Óµ½Î²²¿
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>State Queue ("")</b>ï¼šæ•´ä¸ªçŠ¶æ€é˜Ÿåˆ—è¢«è¿æ¥åˆ°æ­¤è¾“å…¥ã€‚
+- <b>Condition</b>ï¼šé€‰æ‹©è¿æ¥åˆ°TRUEç»ˆç«¯æˆ–Falseç»ˆç«¯çš„çŠ¶æ€å­—ç¬¦ä¸²çš„æ ‡å¿—ã€‚
+- <b>High Priority? (F)</b>ï¼šå¦‚æœä¸ºTrueï¼ŒçŠ¶æ€å°†è¢«æ’å…¥åˆ°<b>State Queue ("")</b>çš„å‰ç«¯ï¼›å¦‚æœä¸ºFalseï¼Œå®ƒè¢«é™„åŠ åˆ°å°¾éƒ¨ã€‚
+- <b>TRUE ("")</b>ï¼š<b>Condition</b>ä¸ºTrueæ—¶æ’å…¥çš„çŠ¶æ€å­—ç¬¦ä¸²ã€‚
+- <b>FALSE ("")</b>ï¼š<b>Condition</b>ä¸ºFalseæ—¶æ’å…¥çš„çŠ¶æ€å­—ç¬¦ä¸²ã€‚
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>Remaining States</b>£ºÆ´½ÓºóµÄËùÓĞ×´Ì¬¼°²ÎÊı
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>Remaining States</b>ï¼šæ‹¼æ¥åçš„æ‰€æœ‰çŠ¶æ€åŠå‚æ•°ã€‚
 
 #### Add State(s) to Queue By BOOL(Array Right).vi
 
-½«CSMÏûÏ¢×Ö·û´®²¢ÈëCSMÏûÏ¢¶ÓÁĞÖĞ¡£Ìá¹©ÁËTRUE/FALSEÁ½ÖÖ×´Ì¬µÄ×Ö·û´®Ñ¡Ïî£¬ÄÜ¹»±ÜÃâÊ¹ÓÃÌõ¼ş½á¹¹£¬Ìá¸ß´úÂë¿É¶ÁĞÔºÍ±à³ÌĞ§ÂÊ¡£
+å°†CSMæ¶ˆæ¯å­—ç¬¦ä¸²å¹¶å…¥CSMæ¶ˆæ¯é˜Ÿåˆ—ä¸­ã€‚æä¾›äº†TRUE/FALSEä¸¤ç§çŠ¶æ€çš„å­—ç¬¦ä¸²é€‰é¡¹ï¼Œèƒ½å¤Ÿé¿å…ä½¿ç”¨æ¡ä»¶ç»“æ„ï¼Œæé«˜ä»£ç å¯è¯»æ€§å’Œç¼–ç¨‹æ•ˆç‡ã€‚
 
-> Ref: CSM µÄ×´Ì¬¶ÓÁĞ²Ù×÷API
+> Ref: CSM çš„çŠ¶æ€é˜Ÿåˆ—æ“ä½œAPI
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>State Queue ("")</b>£ºÕû¸ö×´Ì¬¶ÓÁĞ±»Á¬½Óµ½´ËÊäÈë
-- <b>TRUE ("")</b>£º<b>Condition</b>ÎªTrueÊ±²åÈëµÄ×´Ì¬×Ö·û´®
-- <b>FALSE ("")</b>£º<b>Condition</b>ÎªFalseÊ±²åÈëµÄ×´Ì¬×Ö·û´®
-- <b>Condition</b>£ºÑ¡ÔñÁ¬½Óµ½TRUEÖÕ¶Ë»òFalseÖÕ¶ËµÄ×´Ì¬×Ö·û´®µÄ±êÖ¾
-- <b>High Priority? (F)</b>£ºÈç¹ûÎªTrue£¬×´Ì¬½«±»²åÈëµ½<b>State Queue ("")</b>µÄÇ°¶Ë£»Èç¹ûÎªFalse£¬Ëü±»¸½¼Óµ½Î²²¿
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>State Queue ("")</b>ï¼šæ•´ä¸ªçŠ¶æ€é˜Ÿåˆ—è¢«è¿æ¥åˆ°æ­¤è¾“å…¥ã€‚
+- <b>Condition</b>ï¼šé€‰æ‹©è¿æ¥åˆ°TRUEç»ˆç«¯æˆ–Falseç»ˆç«¯çš„çŠ¶æ€å­—ç¬¦ä¸²çš„æ ‡å¿—ã€‚
+- <b>High Priority? (F)</b>ï¼šå¦‚æœä¸ºTrueï¼ŒçŠ¶æ€å°†è¢«æ’å…¥åˆ°<b>State Queue ("")</b>çš„å‰ç«¯ï¼›å¦‚æœä¸ºFalseï¼Œå®ƒè¢«é™„åŠ åˆ°å°¾éƒ¨ã€‚
+- <b>TRUE ("")</b>ï¼š<b>Condition</b>ä¸ºTrueæ—¶æ’å…¥çš„çŠ¶æ€å­—ç¬¦ä¸²ã€‚
+- <b>FALSE ("")</b>ï¼š<b>Condition</b>ä¸ºFalseæ—¶æ’å…¥çš„çŠ¶æ€å­—ç¬¦ä¸²ã€‚
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>Remaining States</b>£ºÆ´½ÓºóµÄËùÓĞ×´Ì¬¼°²ÎÊı
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>Remaining States</b>ï¼šæ‹¼æ¥åçš„æ‰€æœ‰çŠ¶æ€åŠå‚æ•°ã€‚
 
 #### Add State(s) to Queue By BOOL(Array All).vi
 
-¸ù¾İ¸ßÓÅÏÈ¼¶ºÍBoolÊäÈë£¬¸ÃVIÉú³ÉTRUE/FalseÓëÊ£Óà×´Ì¬µÄÁ¬½Ó×´Ì¬¡£ÆäÖĞ£¬High PriorityÊäÈë¾ö¶¨ÊÇ·ñÔÚÊ£Óà×´Ì¬Ö®Ç°»òÖ®ºóÁ¬½ÓTRUE»òFalse×Ö·û´®£»BoolÊäÈë¾ö¶¨ÒªÁ¬½ÓµÄ×Ö·û´®ÊÇTRUE»¹ÊÇFalse¡£
+æ ¹æ®é«˜ä¼˜å…ˆçº§å’ŒBooleanè¾“å…¥ï¼Œè¯¥VIç”ŸæˆTRUE/Falseä¸å‰©ä½™çŠ¶æ€çš„è¿æ¥çŠ¶æ€ã€‚å…¶ä¸­ï¼Œ**High Priority**è¾“å…¥å†³å®šæ˜¯å¦åœ¨å‰©ä½™çŠ¶æ€ä¹‹å‰æˆ–ä¹‹åè¿æ¥TRUEæˆ–Falseå­—ç¬¦ä¸²ï¼›**TRUE**å’Œ**FALSE**è¾“å…¥å†³å®šè¦è¿æ¥çš„å­—ç¬¦ä¸²æ˜¯TRUEè¿˜æ˜¯Falseã€‚
 
-> Ref: CSM µÄ×´Ì¬¶ÓÁĞ²Ù×÷API
+> Ref: CSM çš„çŠ¶æ€é˜Ÿåˆ—æ“ä½œAPI
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>State Queue ("")</b>£ºÕû¸ö×´Ì¬¶ÓÁĞ±»Á¬½Óµ½´ËÊäÈë
-- <b>TRUE ("")</b>£º<b>Condition</b>ÎªTrueÊ±²åÈëµÄ×´Ì¬×Ö·û´®
-- <b>FALSE ("")</b>£º<b>Condition</b>ÎªFalseÊ±²åÈëµÄ×´Ì¬×Ö·û´®
-- <b>Condition</b>£ºÑ¡ÔñÁ¬½Óµ½TRUEÖÕ¶Ë»òFalseÖÕ¶ËµÄ×´Ì¬×Ö·û´®µÄ±êÖ¾
-- <b>High Priority? (F)</b>£ºÈç¹ûÎªTrue£¬×´Ì¬½«±»²åÈëµ½<b>State Queue ("")</b>µÄÇ°¶Ë£»Èç¹ûÎªFalse£¬Ëü±»¸½¼Óµ½Î²²¿
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>State Queue ("")</b>ï¼šæ•´ä¸ªçŠ¶æ€é˜Ÿåˆ—è¢«è¿æ¥åˆ°æ­¤è¾“å…¥ã€‚
+- <b>Condition</b>ï¼šé€‰æ‹©è¿æ¥åˆ°TRUEç»ˆç«¯æˆ–Falseç»ˆç«¯çš„çŠ¶æ€å­—ç¬¦ä¸²çš„æ ‡å¿—ã€‚
+- <b>High Priority? (F)</b>ï¼šå¦‚æœä¸ºTrueï¼ŒçŠ¶æ€å°†è¢«æ’å…¥åˆ°<b>State Queue ("")</b>çš„å‰ç«¯ï¼›å¦‚æœä¸ºFalseï¼Œå®ƒè¢«é™„åŠ åˆ°å°¾éƒ¨ã€‚
+- <b>TRUE ("")</b>ï¼š<b>Condition</b>ä¸ºTrueæ—¶æ’å…¥çš„çŠ¶æ€å­—ç¬¦ä¸²ã€‚
+- <b>FALSE ("")</b>ï¼š<b>Condition</b>ä¸ºFalseæ—¶æ’å…¥çš„çŠ¶æ€å­—ç¬¦ä¸²ã€‚
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>Remaining States</b>£ºÆ´½ÓºóµÄËùÓĞ×´Ì¬¼°²ÎÊı
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>Remaining States</b>ï¼šæ‹¼æ¥åçš„æ‰€æœ‰çŠ¶æ€åŠå‚æ•°ã€‚

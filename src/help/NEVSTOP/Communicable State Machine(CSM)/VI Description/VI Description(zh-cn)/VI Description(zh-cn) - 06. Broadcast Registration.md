@@ -1,109 +1,109 @@
-# �㲥���Ĺ���(Broadcast Registration)
+# 广播订阅管理(Broadcast Registration)
 
 ## CSM - Register Broadcast.vi
 
-ע���Խ�������CSMģ�鴥�����ĵ�֪ͨ�����δ���� ��API�� ������Ϊ�գ���ʹ����ͬ�Ĵ���������Ϊ��Ӧ��Ϣ���������ƿ�����Դģ��Ĺ㲥���ƣ� ����Դģ���״̬���ơ�
+注册以接收其他CSM模块触发更改的通知。如果未连接**API**或输入为空，则将使用相同的触发名称作为响应消息。触发名称可以是源模块的广播名称，或者源模块的状态名称。
 
-Э����ģʽ��������ģʽ�£�����ڵ�����ƣ��ᱻ�Զ�����Ϊģ������ƣ���ΪCSM����ģ��Ϊ��λʵ�ֶ��ĵġ�
+协作者模式和责任链模式下，输入节点的名称，会被自动解析为模块的名称，因为CSM是以模块为单位实现订阅的。
 
-�ο�������2. Caller is CSM Scenario\CSM Example - Caller is a CSM.vi
+参考范例：“2. Caller is CSM Scenario\CSM Example - Caller is a CSM.vi”。
 
-> Ref: CSM����
+> Ref: CSM订阅
 
--- <b>Controls(����ؼ�)</b> --
-- <b>CSM Name</b>: CSMģ������.
-- <b>Source CSM Name (* as Default)</b>: ����״̬��CSMģ�顣������ʹ�á�*������ʾ����������ͬ״̬��ģ�顣
-- <b>Trigger</b>: �����ַ���
-- <b>API (if "", same as Trigger)</b>: ע���������������仯�������յ�����Ϣ��
+-- <b>Controls(输入控件)</b> --
+- <b>CSM Name</b>：CSM模块名称。
+- <b>Source CSM Name (* as Default)</b>：生成状态的CSM模块。您可以使用“*”来表示所有生成相同状态的模块。
+- <b>Trigger</b>：触发字符串。
+- <b>API (if "", same as Trigger)</b>：注册后，如果触发发生变化，将接收到此消息。
 
--- <b>Indicators(����ؼ�)</b> --
-- <b>CSM Name (Dup)</b>: �����CSMģ�����Ƹ���
+-- <b>Indicators(输出控件)</b> --
+- <b>CSM Name (Dup)</b>：输入的CSM模块名称副本。
 
 ## CSM - Unregister Broadcast.vi
 
-ȡ��ע������ CSM ģ��״̬���ĵ�֪ͨ��
+取消注册其他CSM模块状态更改的通知。
 
-Э����ģʽ��������ģʽ�£�����ڵ�����ƣ��ᱻ�Զ�����Ϊģ������ƣ���ΪCSM����ģ��Ϊ��λʵ�ֶ��ĵġ�
+协作者模式和责任链模式下，输入节点的名称，会被自动解析为模块的名称，因为CSM是以模块为单位实现订阅的。
 
-�ο�������2. Caller is CSM Scenario\CSM Example - Caller is a CSM.vi
+参考范例：“2. Caller is CSM Scenario\CSM Example - Caller is a CSM.vi”。
 
-> Ref: CSM����
+> Ref: CSM订阅
 
--- <b>Controls(����ؼ�)</b> --
-- <b>CSM Name</b>: CSMģ������.
-- <b>Source CSM Name (* as Default)</b>: ����״̬��CSMģ�顣������ʹ�á�*������ʾ����������ͬ״̬��ģ�顣
-- <b>Trigger</b>: �����ַ���
-- <b>API ("*" as Default)</b>: ȡ��ע���API���ơ����Ϊ�գ���Ϊ����API
+-- <b>Controls(输入控件)</b> --
+- <b>CSM Name</b>：CSM模块名称。
+- <b>Source CSM Name (* as Default)</b>：生成状态的CSM模块。您可以使用“*”来表示所有生成相同状态的模块。
+- <b>Trigger</b>：触发字符串。
+- <b>API ("*" as Default)</b>：取消注册的API名称。如果为空，则为所有API。
 
--- <b>Indicators(����ؼ�)</b> --
-- <b>CSM Name (Dup)</b>: �����CSMģ�����Ƹ���
+-- <b>Indicators(输出控件)</b> --
+- <b>CSM Name (Dup)</b>：输入的CSM模块名称副本。
 
 ## CSM - List Rules in Broadcast Registry.vi
 
-�г�CSMע����еĵ����й���
+列出CSM注册表中的的所有规则。
 
-> Ref: CSM�㲥
-> Ref: CSM����
+> Ref: CSM广播
+> Ref: CSM订阅
 
--- <b>Indicators(����ؼ�)</b> --
-- <b>Rule Entries</b>: ���й�����Ŀ
+-- <b>Indicators(输出控件)</b> --
+- <b>Rule Entries</b>：所有规则条目。
 
 ## CSM - List Mapping Relationships in Broadcast Registry.vi
 
-�г���ǰCSMģ������й㲥���Ĺ�ϵ���͹����ã��㲥���Ĺ�ϵ�ǵ�ǰ��CSMģ���ڵ�ǰ�Ĺ��������еĹ㲥���Ĺ�ϵ��
+列出当前CSM模块的所有广播订阅关系。和规则不同，广播订阅关系是当前的CSM模块在当前的规则下所有的广播订阅关系。
 
 > [!NOTE]
-> CSM ʹ�ö��ġ�ȡ�����Ĳ��������ӵ���CSMģ��㲥���ĵĹ��򡣸��ݵ�ǰ�����ʵ�ʴ��ڵ�ģ�飬�����������ǰCSMģ������й㲥���Ĺ�ϵ��
-> CSM �ڲ�����л��浱ǰ�Ķ��Ĺ�ϵ����CSMģ��Ķ��Ĺ����CSM ģ����Ŀ�����仯ʱ�����Զ����¶��Ĺ�ϵ���档
+> CSM 使用订阅、取消订阅操作，添加的是CSM模块广播订阅的规则。根据当前规则和实际存在的模块，可以推算出当前CSM模块的所有广播订阅关系。
+> CSM内部会进行缓存当前的订阅关系，当CSM模块的订阅规则或CSM模块数目发生变化时，会自动更新订阅关系缓存。
 
-> Ref: CSM�㲥
-> Ref: CSM����
+> Ref: CSM广播
+> Ref: CSM订阅
 
--- <b>Indicators(����ؼ�)</b> --
-- <b>Mapping Relationships</b>:��ǰCSMģ������й㲥���Ĺ�ϵ
+-- <b>Indicators(输出控件)</b> --
+- <b>Mapping Relationships</b>：当前CSM模块的所有广播订阅关系。
 
 ## CSM - List Sources in Broadcast Registry.vi
 
-�г���ǰ���й㲥���Ĺ�ϵ�Ĺ㲥����.
+列出当前所有广播订阅关系的广播名称。
 
-> Ref: CSM�㲥
-> Ref: CSM����
+> Ref: CSM广播
+> Ref: CSM订阅
 
--- <b>Indicators(����ؼ�)</b> --
-- <b>Broadcast Names</b>: ��ǰ���й㲥���Ĺ�ϵ�Ĺ㲥����
+-- <b>Indicators(输出控件)</b> --
+- <b>Broadcast Names</b>：当前所有广播订阅关系的广播名称。
 
 
 ## CSM - Check Mapping Relationship in Broadcast Registry.vi
 
-���CSMģ���ĳ�㲥���ƶ�Ӧ���еĶ��Ĺ�ϵ
+检查CSM模块的某广播名称对应所有的订阅关系。
 
-> Ref: CSM�㲥
-> Ref: CSM����
+> Ref: CSM广播
+> Ref: CSM订阅
 
--- <b>Controls(����ؼ�)</b> --
-- <b>CSM Name</b>: CSMģ������.
-- <b>Broadcast Name</b>:�㲥������
+-- <b>Controls(输入控件)</b> --
+- <b>CSM Name</b>：CSM模块名称。
+- <b>Broadcast Name</b>：广播的名称。
 
--- <b>Indicators(����ؼ�)</b> --
-- <b>Mapping Relationships</b>: ��ǰCSMģ���ĳ�㲥���ƶ�Ӧ���еĶ��Ĺ�ϵ
+-- <b>Indicators(输出控件)</b> --
+- <b>Mapping Relationships</b>：当前CSM模块的某广播名称对应所有的订阅关系。
 
 
 ## CSM - Remove Module in Broadcast Registry.vi
 
-�ӹ㲥ע����ɾ��������ָ��CSMģ����صĶ��Ĺ�ϵ��
+从广播注册中删除所有与指定CSM模块相关的订阅关系。
 
-> Ref: CSM�㲥
-> Ref: CSM����
+> Ref: CSM广播
+> Ref: CSM订阅
 
--- <b>Controls(����ؼ�)</b> --
-- <b>CSM Name</b>: CSMģ������.
+-- <b>Controls(输入控件)</b> --
+- <b>CSM Name</b>：CSM模块名称。
 
--- <b>Indicators(����ؼ�)</b> --
-- <b>CSM Name (Dup)</b>: �����CSMģ�����Ƹ���
+-- <b>Indicators(输出控件)</b> --
+- <b>CSM Name (Dup)</b>：输入的CSM模块名称副本。
 
 ## CSM - Drop Broadcast Registry.vi
 
-���ú�̨�㲥ע���������Ϣ��Ӧ������ȫ���ö��Ĺ�ϵ�ĳ����С�
+重置后台广播注册的所有信息，应用在完全重置订阅关系的场景中。
 
-> Ref: CSM�㲥
-> Ref: CSM����
+> Ref: CSM广播
+> Ref: CSM订阅
