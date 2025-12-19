@@ -6,18 +6,18 @@
 
 协作者模式和责任链模式下，输入节点的名称，会被自动解析为模块的名称，因为CSM是以模块为单位实现订阅的。
 
-参考范例：“2. Caller is CSM Scenario\CSM Example - Caller is a CSM.vi”。
+<b>参考范例</b>:  “2. Caller is CSM Scenario\CSM Example - Caller is a CSM.vi”。
 
 > Ref: CSM订阅
 
 -- <b>输入控件(Controls)</b> --
-- <b>CSM Name</b>：CSM模块名称。
-- <b>Source CSM Name (* as Default)</b>：生成状态的CSM模块。您可以使用“*”来表示所有生成相同状态的模块。
-- <b>Trigger</b>：触发字符串。
-- <b>API (if "", same as Trigger)</b>：注册后，如果触发发生变化，将接收到此消息。
+- <b>CSM Name</b>: CSM模块名称。
+- <b>Source CSM Name (* as Default)</b>: 生成状态的CSM模块。您可以使用“*”来表示所有生成相同状态的模块。
+- <b>Trigger</b>: 触发字符串。
+- <b>API (if "", same as Trigger)</b>: 注册后，如果触发发生变化，将接收到此消息。
 
 -- <b>输出控件(Indicators)</b> --
-- <b>CSM Name (Dup)</b>：输入的CSM模块名称副本。
+- <b>CSM Name (Dup)</b>: 输入的CSM模块名称副本。
 
 ## CSM - Unregister Broadcast.vi
 
@@ -25,18 +25,18 @@
 
 协作者模式和责任链模式下，输入节点的名称，会被自动解析为模块的名称，因为CSM是以模块为单位实现订阅的。
 
-参考范例：“2. Caller is CSM Scenario\CSM Example - Caller is a CSM.vi”。
+<b>参考范例</b>:  “2. Caller is CSM Scenario\CSM Example - Caller is a CSM.vi”。
 
 > Ref: CSM订阅
 
 -- <b>输入控件(Controls)</b> --
-- <b>CSM Name</b>：CSM模块名称。
-- <b>Source CSM Name (* as Default)</b>：生成状态的CSM模块。您可以使用“*”来表示所有生成相同状态的模块。
-- <b>Trigger</b>：触发字符串。
-- <b>API ("*" as Default)</b>：取消注册的API名称。如果为空，则为所有API。
+- <b>CSM Name</b>: CSM模块名称。
+- <b>Source CSM Name (* as Default)</b>: 生成状态的CSM模块。您可以使用“*”来表示所有生成相同状态的模块。
+- <b>Trigger</b>: 触发字符串。
+- <b>API ("*" as Default)</b>: 取消注册的API名称。如果为空，则为所有API。
 
 -- <b>输出控件(Indicators)</b> --
-- <b>CSM Name (Dup)</b>：输入的CSM模块名称副本。
+- <b>CSM Name (Dup)</b>: 输入的CSM模块名称副本。
 
 ## CSM - List Rules in Broadcast Registry.vi
 
@@ -46,7 +46,7 @@
 > Ref: CSM订阅
 
 -- <b>输出控件(Indicators)</b> --
-- <b>Rule Entries</b>：所有规则条目。
+- <b>Rule Entries</b>: 所有规则条目。
 
 ## CSM - List Mapping Relationships in Broadcast Registry.vi
 
@@ -60,7 +60,7 @@
 > Ref: CSM订阅
 
 -- <b>输出控件(Indicators)</b> --
-- <b>Mapping Relationships</b>：当前CSM模块的所有广播订阅关系。
+- <b>Mapping Relationships</b>: 当前CSM模块的所有广播订阅关系。
 
 ## CSM - List Sources in Broadcast Registry.vi
 
@@ -70,7 +70,7 @@
 > Ref: CSM订阅
 
 -- <b>输出控件(Indicators)</b> --
-- <b>Broadcast Names</b>：当前所有广播订阅关系的广播名称。
+- <b>Broadcast Names</b>: 当前所有广播订阅关系的广播名称。
 
 
 ## CSM - Check Mapping Relationship in Broadcast Registry.vi
@@ -81,11 +81,11 @@
 > Ref: CSM订阅
 
 -- <b>输入控件(Controls)</b> --
-- <b>CSM Name</b>：CSM模块名称。
-- <b>Broadcast Name</b>：广播的名称。
+- <b>CSM Name</b>: CSM模块名称。
+- <b>Broadcast Name</b>: 广播的名称。
 
 -- <b>输出控件(Indicators)</b> --
-- <b>Mapping Relationships</b>：当前CSM模块的某广播名称对应所有的订阅关系。
+- <b>Mapping Relationships</b>: 当前CSM模块的某广播名称对应所有的订阅关系。
 
 
 ## CSM - Remove Module in Broadcast Registry.vi
@@ -96,10 +96,10 @@
 > Ref: CSM订阅
 
 -- <b>输入控件(Controls)</b> --
-- <b>CSM Name</b>：CSM模块名称。
+- <b>CSM Name</b>: CSM模块名称。
 
 -- <b>输出控件(Indicators)</b> --
-- <b>CSM Name (Dup)</b>：输入的CSM模块名称副本。
+- <b>CSM Name (Dup)</b>: 输入的CSM模块名称副本。
 
 ## CSM - Drop Broadcast Registry.vi
 

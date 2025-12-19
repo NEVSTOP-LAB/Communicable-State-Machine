@@ -7,10 +7,10 @@
 >
 > - CSM 模块名称必须唯一，否则将导致CSM进入“Critical Error”状态。
 > - 若输入为空字符串("")，系统将使用UUID作为模块名称。该模块会被标记为独立模式，不会包含在模块列表中。
-> - 协作者模式规则：若输入以'#'结尾，则会实例化一个协作者模式节点，多个节点可共同组成一个协作者模式模块。
-> - 责任链模式规则：若输入以"$" + 数字结尾，则会实例化一个责任链模式节点，多个节点可共同组成一个责任链模式模块。
-> - 系统级模块规则：若输入以"."开头，则该模块为系统级模块。在默认参数下，此类模块不会被CSM - List Modules VI列出，适用于实例化后台运行的模块。
-> - 子模块规则："."也允许出现在名称之中，将模块名称分为多个部分，每个部分之间用"."分隔。CSM中并没有严格意义上的子模块，仅通过模块名称中的"."来标记不同模块的逻辑关系，从实际运行角度来看认为是独立的模块。唯一区别在于可以通过CSM - List Submodules VI，获取逻辑上的子模块列表。
+> - 协作者模式规则: 若输入以'#'结尾，则会实例化一个协作者模式节点，多个节点可共同组成一个协作者模式模块。
+> - 责任链模式规则: 若输入以"$" + 数字结尾，则会实例化一个责任链模式节点，多个节点可共同组成一个责任链模式模块。
+> - 系统级模块规则: 若输入以"."开头，则该模块为系统级模块。在默认参数下，此类模块不会被CSM - List Modules VI列出，适用于实例化后台运行的模块。
+> - 子模块规则: "."也允许出现在名称之中，将模块名称分为多个部分，每个部分之间用"."分隔。CSM中并没有严格意义上的子模块，仅通过模块名称中的"."来标记不同模块的逻辑关系，从实际运行角度来看认为是独立的模块。唯一区别在于可以通过CSM - List Submodules VI，获取逻辑上的子模块列表。
 
 > [!NOTE] 
 > <b>CSM初始化状态("Macro: Initialize")</b>
@@ -33,7 +33,7 @@
 > Ref: CSM退出状态
 
 -- <b>输入控件(Controls)</b> --
-- <b>Name ("" to use UUID)</b>： CSM模块名称。请参考*CSM名称规则*。
+- <b>Name ("" to use UUID)</b>:  CSM模块名称。请参考*CSM名称规则*。
 
 ### CSM Module Template.vi
 
@@ -44,7 +44,7 @@
 > Ref: CSM退出状态
 
 -- <b>输入控件(Controls)</b> --
-- <b>Name ("" to use UUID)</b>：CSM模块名称。请参考*CSM名称规则*。
+- <b>Name ("" to use UUID)</b>: CSM模块名称。请参考*CSM名称规则*。
 
 ### CSM Module Template - Tiny.vi
 
@@ -55,7 +55,7 @@
 > Ref: CSM退出状态
 
 -- <b>输入控件(Controls)</b> --
-- <b>Name ("" to use UUID)</b>： CSM模块名称。请参考*CSM名称规则*。
+- <b>Name ("" to use UUID)</b>:  CSM模块名称。请参考*CSM名称规则*。
 
 ### CSM User Interface(UI) Module Template - Tiny.vi
 
@@ -66,18 +66,18 @@
 > Ref: CSM退出状态
 
 -- <b>输入控件(Controls)</b> --
-- <b>Name ("" to use UUID)</b>：CSM模块名称。请参考*CSM名称规则*。
+- <b>Name ("" to use UUID)</b>: CSM模块名称。请参考*CSM名称规则*。
 
 ### CSM DQMH-Style Template.vi
 
-用于创建一个DQMH风格的CSM模块模板，该结构将响应用户操作的用户事件结构外置在独立的循环中，主要用于处理一些复杂的用户操作场景。例如：
+用于创建一个DQMH风格的CSM模块模板，该结构将响应用户操作的用户事件结构外置在独立的循环中，主要用于处理一些复杂的用户操作场景。例如: 
 
 - 用户界面操作非常复杂，需要组合逻辑完成协同工作，例如鼠标按下拖动并释放后触发某事件。
 - 用户界面需要响应会快速产生的事件，如鼠标移动、窗口大小调整等。这些事件中如果生成消息，会迅速产生多条重复消息。
 
 用户操作的用户事件结构循环通过CSM - Flood of Events Handler Side Loop VI模板创建。用户也可以通过组合CSM - Flood of Events Handler Side Loop VI与CSM Module Template VI来创建完整的DQMH风格的CSM模块模板。
 
-参考范例："[CSM-Example]\4. Advance Examples\CSMLS - Continuous Loop in CSM Example.vi"。
+<b>参考范例</b>:  "[CSM-Example]\4. Advance Examples\CSMLS - Continuous Loop in CSM Example.vi"。
 
 > Ref: CSM名称规则
 > Ref: CSM初始化状态
@@ -92,31 +92,31 @@
 
 异步启动CSM模块的代码片段。拖至程序框图后，请将VI静态引用改为目标CSM模块。
 
-参考范例："[CSM-Example]\3. Caller is Other Framework Scenario\CSM Example - Caller is NOT a CSM.vi"。
+<b>参考范例</b>:  "[CSM-Example]\3. Caller is Other Framework Scenario\CSM Example - Caller is NOT a CSM.vi"。
 
 #### CSM - Synchronized Call.vi
 
 同步调用CSM模块的代码片段。实质上是把CSM模块当作子VI直接调用。
 
-参考范例："[CSM-Example]\2. Caller is CSM Scenario\CSM Example - Caller is a CSM.vi"。
+<b>参考范例</b>:  "[CSM-Example]\2. Caller is CSM Scenario\CSM Example - Caller is a CSM.vi"。
 
 #### CSM - Flood of Events Handler Side Loop.vi
 
 该模板是DQMH风格的CSM模块的用户事件结构循环模板，主要用于处理用户界面操作非常复杂，需要组合逻辑完成协同工作的场景。
 
-参考范例："[CSM-Example]\4. Advance Examples\CSMLS - Continuous Loop in CSM Example.vi"。
+<b>参考范例</b>:  "[CSM-Example]\4. Advance Examples\CSMLS - Continuous Loop in CSM Example.vi"。
 
 #### CSM - Global Log Queue Monitoring Loop.vi
 
 此模板用于创建一个全局日志队列监控循环，用于查询监控全局日志队列中的消息。
 
-参考范例："[CSM-Example]\4. Advance Examples\2. Chain of Responsibility Example\Chain of Responsibility Example.vi"。
+<b>参考范例</b>:  "[CSM-Example]\4. Advance Examples\2. Chain of Responsibility Example\Chain of Responsibility Example.vi"。
 
 #### CSM - Global Log Event Monitoring Loop.vi
 
 此模板用于创建一个全局日志事件监控循环，用于查询监控全局日志队列中的消息。
 
-参考范例："[CSM-Example]\4. Advance Examples\4. Global Log Filter Example\"中的任一范例。
+<b>参考范例</b>:  "[CSM-Example]\4. Advance Examples\4. Global Log Filter Example\"中的任一范例。
 
 ### 模板支持
 
@@ -171,7 +171,7 @@
 
 ##### CSM Unhandled State Error.vi
 
-生成 CSM 未处理状态的错误描述的错误簇。CSM 未处理状态的错误可能的情况包括：
+生成 CSM 未处理状态的错误描述的错误簇。CSM 未处理状态的错误可能的情况包括: 
 - 内部消息轮转中使用了本模块未定义的状态时(与 JKISM 行为一致)。
 - 收到外部发送至本模块的消息未定义时。
 

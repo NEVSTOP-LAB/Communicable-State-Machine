@@ -16,11 +16,11 @@
 
 #### Steps
 
-- Step1：使用高级VI将CSM模块标标记为worker模式(添加#作为后缀)，如果您熟悉CSM规则，也可以只键入正确的名称后缀，而不使用此VI。 然后异步调用4个工作者CSM模块，无需等待回复。或者，您也可以同步调用4个工作者CSM模块，甚至异步调用并带回复，请参阅禁用case中的代码。
-- Step2：此循环为主程序模块，模块名称是WorkerModeExample。
-- Step3：使用While循环来获取所有正在运行的CSM模块的状态信息，包括名称、模式、实例数和要处理的消息队列数。使用高级VI停止While循环，即一旦调用者/主CSM模块退出，While循环将停止。
-- Step4：
-    - Step4.1：UI事件处理，在用户单击以下六个用户按钮中的任何一个后，将向第一个空闲的工作者 CSM模块发送一条模块间消息。
+- Step1: 使用高级VI将CSM模块标标记为worker模式(添加#作为后缀)，如果您熟悉CSM规则，也可以只键入正确的名称后缀，而不使用此VI。 然后异步调用4个工作者CSM模块，无需等待回复。或者，您也可以同步调用4个工作者CSM模块，甚至异步调用并带回复，请参阅禁用case中的代码。
+- Step2: 此循环为主程序模块，模块名称是WorkerModeExample。
+- Step3: 使用While循环来获取所有正在运行的CSM模块的状态信息，包括名称、模式、实例数和要处理的消息队列数。使用高级VI停止While循环，即一旦调用者/主CSM模块退出，While循环将停止。
+- Step4: 
+    - Step4.1: UI事件处理，在用户单击以下六个用户按钮中的任何一个后，将向第一个空闲的工作者 CSM模块发送一条模块间消息。
       -  "DoSth: DoA -> Worker"
       - "DoSth: DoA -@ Worker"
       - "DoSth: Error -> Worker"
@@ -28,7 +28,7 @@
       - "Macro: Exit -@ Worker"
       - "Macro: Exit -> Worker" 
     - Step4.2 然后在 UI 中添加一个Response Source Manager指示器，以处理"Async Response"和 "Response" case
-- Step5：模块退出。在`Macro: Exit`消息中，使用CSM - Build Exit Messages of CSMs VI创建所有正在运行的 CSM 工作者模块发送`Macro:Exit`的同步消息(您也可以手动键入模块间消息，注意有多少个正在运行的工作者模块。每个正在运行的工作者模式都需要一条消息)，并向调用者/主CSM模块发送本地消息`Macro:Exit`。然后所有CSM模块将按顺序退出。
+- Step5: 模块退出。在`Macro: Exit`消息中，使用CSM - Build Exit Messages of CSMs VI创建所有正在运行的 CSM 工作者模块发送`Macro:Exit`的同步消息(您也可以手动键入模块间消息，注意有多少个正在运行的工作者模块。每个正在运行的工作者模式都需要一条消息)，并向调用者/主CSM模块发送本地消息`Macro:Exit`。然后所有CSM模块将按顺序退出。
 
 ### 工作者模式模块实现(Action Worker.vi)
 
@@ -38,18 +38,18 @@
 
 #### Introduction
 
-本示例为工作者模式中CSM模块节点的实现。提供以下两个方法：
+本示例为工作者模式中CSM模块节点的实现。提供以下两个方法: 
 
-- DoSth: DoA：无实际操作，仅用于演示。
-- DoSth: Error：无实际操作，会产生一个Code=12345的错误，仅用于演示。
+- DoSth: DoA: 无实际操作，仅用于演示。
+- DoSth: Error: 无实际操作，会产生一个Code=12345的错误，仅用于演示。
 
 为了工作者模式的node能够同时运行，VI执行属性设置为可重入。
 
 #### Steps
 
-- Step1：添加 "DoSth: DoA" 方法。
-- Step2：添加 "DoSth: Error" 方法。
-- Step3：设置VI执行属性为可重入。
+- Step1: 添加 "DoSth: DoA" 方法。
+- Step2: 添加 "DoSth: Error" 方法。
+- Step3: 设置VI执行属性为可重入。
 
 ## 责任链模式范例
 
@@ -69,18 +69,18 @@
 
 本示例演示CSM框架中的责任链模式。责任链CSM模块应始终以后缀“$”和整数标记，例如 "CSMName$1"、"CSMName$2"等。
 
-一组责任链CSM模块以允许的方式并按顺序处理消息：
+一组责任链CSM模块以允许的方式并按顺序处理消息: 
 
 - 每个单独的链模块只能处理特别允许的消息。
 - 如果一条消息被多个链模块允许，则顺序最低的链模块将处理该消息，并且该消息不会再被更高顺序的链模块处理。
 
 #### Steps
 
-- Step1：为每个将标记为链模式的CSM子模块添加特殊允许的消息，例如本示例中"Chain$1" CSM子模块的"Action: action 1"和"Action: action 2"。
-- Step2：此循环为主程序模块，模块名称是`ChainModeExample`。
-- Step3：在 UI 中创建布尔按钮，例如 "Action: action 1 -> Chain" 等，以模拟模块间消息传输。
-- Step4：使用While循环来获取所有正在运行的CSM模块的状态信息，包括名称、模式、实例数和要处理的消息队列数。使用高级 VI 停止While 循环，即一旦调用者/主 CSM 模块退出，While循环将停止。
-- Step5：使用全局日志API计算和监控实时日志记录能力，更多详情请参阅4. Advance Examples\6. Global Log Handling Capability。
+- Step1: 为每个将标记为链模式的CSM子模块添加特殊允许的消息，例如本示例中"Chain$1" CSM子模块的"Action: action 1"和"Action: action 2"。
+- Step2: 此循环为主程序模块，模块名称是`ChainModeExample`。
+- Step3: 在 UI 中创建布尔按钮，例如 "Action: action 1 -> Chain" 等，以模拟模块间消息传输。
+- Step4: 使用While循环来获取所有正在运行的CSM模块的状态信息，包括名称、模式、实例数和要处理的消息队列数。使用高级 VI 停止While 循环，即一旦调用者/主 CSM 模块退出，While循环将停止。
+- Step5: 使用全局日志API计算和监控实时日志记录能力，更多详情请参阅4. Advance Examples\6. Global Log Handling Capability。
 
 ### 责任链模式模块实现(ChainNode A.vi)
 
@@ -129,10 +129,10 @@
 
 #### Steps
 
-- Step1：主程序核心为一个名为`GlobalErrorHandlingExample`的CSM模块。
-- Step2：同步调用另外两个CSM模块，这两个子模块可以通过点击按钮产生一些预定的错误。
-- Step3：启动时就注册"Error Occurred"广播事件，"Error Occurred@* >> Error Handler -><register>". 该事件在任何CSM子模块抛出Error Occurred状态变化时，会触发 GlobalErrorHandlingExample的 "Error Handler", 处理捕获的事件。
-- Step4：(Optional)退出逻辑中，通过`CSM - Filter Messages to Non-Existing Modules.vi`过滤掉所有不存在的CSM模块的消息，以避免在退出时触发错误。
+- Step1: 主程序核心为一个名为`GlobalErrorHandlingExample`的CSM模块。
+- Step2: 同步调用另外两个CSM模块，这两个子模块可以通过点击按钮产生一些预定的错误。
+- Step3: 启动时就注册"Error Occurred"广播事件，"Error Occurred@* >> Error Handler -><register>". 该事件在任何CSM子模块抛出Error Occurred状态变化时，会触发 GlobalErrorHandlingExample的 "Error Handler", 处理捕获的事件。
+- Step4: (Optional)退出逻辑中，通过`CSM - Filter Messages to Non-Existing Modules.vi`过滤掉所有不存在的CSM模块的消息，以避免在退出时触发错误。
 
 ### 模拟错误生成模块(Error Module.vi)
 
@@ -146,9 +146,9 @@
 
 #### Steps
 
-- Step1：产生一个模拟的错误，通过错误线传递到模块中，这也是通常我们会遇到的错误场景。
-- Step2：这个错误信息会触发CSM模块轮转到Error Handler状态, 这个行为和JKISM一致。
-- Step3：在Error handler状态中，会将错误信息通过Error Occurred状态抛出。
+- Step1: 产生一个模拟的错误，通过错误线传递到模块中，这也是通常我们会遇到的错误场景。
+- Step2: 这个错误信息会触发CSM模块轮转到Error Handler状态, 这个行为和JKISM一致。
+- Step3: 在Error handler状态中，会将错误信息通过Error Occurred状态抛出。
 
 ## 全局日志过滤示例
 
@@ -165,16 +165,16 @@
 
 #### Steps
 
-- Step1：使用事件结构获取CSM全局日志，并显示在界面。
-    - Step1.1：获取CSM全局状态用户事件句柄，并注册它。
-    - Step1.2：设置源端全局过滤规则。第一个用于全局过滤，第二个用于特定的 CSM 模块。例如，过滤掉来自Module2的所有日志(全局)以及Module1的"State Change" LogType(特定模块日志)。
-    - Step1.3：在<CSM Global Log Event>中，处理CSM全局日志事件，将其打印到LabVIEW UI。
-    - Step1.4：程序退出过程中，注销CSM全局状态用户事件句柄。
-- Step2：同步调用`1. Create a reuse Module\CSM Reuse Module.vi`, 创建四个运行的CSM模块实例。
-    - Step2.1：创建四个运行的CSM模块实例。
-    - Step2.2：在全局日志处理准备好后，发送 "API:start" 消息，让所有的模块开始运行。
-    - Step2.3：观测运行中的Log信息，可以看到规则中下相关日志已经被过滤。
-    - Step2.4：程序开始退出后，发送“Macro: Exit"消息，以同步退出所有正在运行的CSM模块。
+- Step1: 使用事件结构获取CSM全局日志，并显示在界面。
+    - Step1.1: 获取CSM全局状态用户事件句柄，并注册它。
+    - Step1.2: 设置源端全局过滤规则。第一个用于全局过滤，第二个用于特定的 CSM 模块。例如，过滤掉来自Module2的所有日志(全局)以及Module1的"State Change" LogType(特定模块日志)。
+    - Step1.3: 在<CSM Global Log Event>中，处理CSM全局日志事件，将其打印到LabVIEW UI。
+    - Step1.4: 程序退出过程中，注销CSM全局状态用户事件句柄。
+- Step2: 同步调用`1. Create a reuse Module\CSM Reuse Module.vi`, 创建四个运行的CSM模块实例。
+    - Step2.1: 创建四个运行的CSM模块实例。
+    - Step2.2: 在全局日志处理准备好后，发送 "API:start" 消息，让所有的模块开始运行。
+    - Step2.3: 观测运行中的Log信息，可以看到规则中下相关日志已经被过滤。
+    - Step2.4: 程序开始退出后，发送“Macro: Exit"消息，以同步退出所有正在运行的CSM模块。
 
 ### 基于队列的源过滤示例(Filter From Source(Queue).vi)
 
@@ -188,17 +188,17 @@
 
 #### Steps
 
-- Step1：使用事件结构获取CSM全局日志，并显示在界面。
-    - Step1.1：获取CSM全局状态队列句柄，并注册它。
-    - Step1.2：设置源端全局过滤规则。第一个用于全局过滤，第二个用于特定的CSM模块。例如，过滤掉来自Module2的所有日志(全局)以及Module1的 "State Change" LogType(特定模块日志)。
-    - Step1.3：查询队列状态，并计算日志处理速度等指标。
-    - Step1.4：使用出队结构，处理CSM全局日志事件，将其打印到 LabVIEW UI。
-    - Step1.5：程序退出过程中，注销CSM全局状态队列句柄。
-- Step2：同步调用`1. Create a reuse Module\CSM Reuse Module.vi`, 创建四个运行的CSM模块实例。
-    - Step2.1：创建四个运行的CSM模块实例。
-    - Step2.2：在全局日志处理准备好后，发送"API:start"消息，让所有的模块开始运行。
-    - Step2.3：观测运行中的Log信息，可以看到规则中下相关日志已经被过滤。
-    - Step2.4：程序开始退出后，发送“Macro: Exit"消息，以同步退出所有正在运行的CSM模块。
+- Step1: 使用事件结构获取CSM全局日志，并显示在界面。
+    - Step1.1: 获取CSM全局状态队列句柄，并注册它。
+    - Step1.2: 设置源端全局过滤规则。第一个用于全局过滤，第二个用于特定的CSM模块。例如，过滤掉来自Module2的所有日志(全局)以及Module1的 "State Change" LogType(特定模块日志)。
+    - Step1.3: 查询队列状态，并计算日志处理速度等指标。
+    - Step1.4: 使用出队结构，处理CSM全局日志事件，将其打印到 LabVIEW UI。
+    - Step1.5: 程序退出过程中，注销CSM全局状态队列句柄。
+- Step2: 同步调用`1. Create a reuse Module\CSM Reuse Module.vi`, 创建四个运行的CSM模块实例。
+    - Step2.1: 创建四个运行的CSM模块实例。
+    - Step2.2: 在全局日志处理准备好后，发送"API:start"消息，让所有的模块开始运行。
+    - Step2.3: 观测运行中的Log信息，可以看到规则中下相关日志已经被过滤。
+    - Step2.4: 程序开始退出后，发送“Macro: Exit"消息，以同步退出所有正在运行的CSM模块。
 
 ### 基于事件的订阅端过滤示例(Filter From Subscriber(Event).vi)
 
@@ -212,16 +212,16 @@
 
 #### Steps
 
-- Step1：使用事件结构获取CSM全局日志，并显示在界面。
-    - Step1.1：获取CSM全局状态用户事件句柄，并注册它。
-    - Step1.2：设置订阅端全局过滤规则。第一个用于全局过滤，第二个用于特定的CSM 模块。例如，过滤掉来自Module2的所有日志(全局)以及Module1的"State Change" LogType(特定模块日志)。
-    - Step1.3：在<CSM Global Log Event>中，处理CSM全局日志事件，将其打印到LabVIEW UI。
-    - Step1.4：程序退出过程中，注销CSM全局状态用户事件句柄。
-- Step2：同步调用 `1. Create a reuse Module\CSM Reuse Module.vi`, 创建四个运行的CSM模块实例。
-    - Step2.1：创建四个运行的CSM模块实例。
-    - Step2.2：在全局日志处理准备好后，发送"API:start"消息，让所有的模块开始运行。
-    - Step2.3：观测运行中的Log信息，可以看到规则中下相关日志已经被过滤。
-    - Step2.4：程序开始退出后，发送“Macro: Exit"消息，以同步退出所有正在运行的CSM模块。
+- Step1: 使用事件结构获取CSM全局日志，并显示在界面。
+    - Step1.1: 获取CSM全局状态用户事件句柄，并注册它。
+    - Step1.2: 设置订阅端全局过滤规则。第一个用于全局过滤，第二个用于特定的CSM 模块。例如，过滤掉来自Module2的所有日志(全局)以及Module1的"State Change" LogType(特定模块日志)。
+    - Step1.3: 在<CSM Global Log Event>中，处理CSM全局日志事件，将其打印到LabVIEW UI。
+    - Step1.4: 程序退出过程中，注销CSM全局状态用户事件句柄。
+- Step2: 同步调用 `1. Create a reuse Module\CSM Reuse Module.vi`, 创建四个运行的CSM模块实例。
+    - Step2.1: 创建四个运行的CSM模块实例。
+    - Step2.2: 在全局日志处理准备好后，发送"API:start"消息，让所有的模块开始运行。
+    - Step2.3: 观测运行中的Log信息，可以看到规则中下相关日志已经被过滤。
+    - Step2.4: 程序开始退出后，发送“Macro: Exit"消息，以同步退出所有正在运行的CSM模块。
 
 ### 基于队列的订阅端过滤示例(Filter From Subscriber(Queue).vi)
 
@@ -235,17 +235,17 @@
 
 #### Steps
 
-- Step1：使用事件结构获取CSM全局日志，并显示在界面。
-    - Step1.1：获取CSM全局状态队列句柄，并注册它。
-    - Step1.2：设置订阅端全局过滤规则。第一个用于全局过滤，第二个用于特定的CSM模块。例如，过滤掉来自Module2的所有日志(全局)以及Module1的 "State Change" LogType(特定模块日志)。
-    - Step1.3：查询队列状态，并计算日志处理速度等指标。
-    - Step1.4：使用出队结构，处理CSM全局日志事件，将其打印到LabVIEW UI。
-    - Step1.5：程序退出过程中，注销CSM全局状态队列句柄。
-- Step2：同步调用 `1. Create a reuse Module\CSM Reuse Module.vi`, 创建四个运行的CSM模块实例。
-    - Step2.1：创建四个运行的CSM模块实例。
-    - Step2.2：在全局日志处理准备好后，发送"API:start"消息，让所有的模块开始运行。
-    - Step2.3：观测运行中的Log信息，可以看到规则中下相关日志已经被过滤。
-    - Step2.4：程序开始退出后，发送“Macro: Exit"消息，以同步退出所有正在运行的CSM模块。
+- Step1: 使用事件结构获取CSM全局日志，并显示在界面。
+    - Step1.1: 获取CSM全局状态队列句柄，并注册它。
+    - Step1.2: 设置订阅端全局过滤规则。第一个用于全局过滤，第二个用于特定的CSM模块。例如，过滤掉来自Module2的所有日志(全局)以及Module1的 "State Change" LogType(特定模块日志)。
+    - Step1.3: 查询队列状态，并计算日志处理速度等指标。
+    - Step1.4: 使用出队结构，处理CSM全局日志事件，将其打印到LabVIEW UI。
+    - Step1.5: 程序退出过程中，注销CSM全局状态队列句柄。
+- Step2: 同步调用 `1. Create a reuse Module\CSM Reuse Module.vi`, 创建四个运行的CSM模块实例。
+    - Step2.1: 创建四个运行的CSM模块实例。
+    - Step2.2: 在全局日志处理准备好后，发送"API:start"消息，让所有的模块开始运行。
+    - Step2.3: 观测运行中的Log信息，可以看到规则中下相关日志已经被过滤。
+    - Step2.4: 程序开始退出后，发送“Macro: Exit"消息，以同步退出所有正在运行的CSM模块。
 
 ## 多循环模块示例(Main - Call and Monitor TCP Traffic.vi)
 
@@ -272,20 +272,20 @@ CSM循环作为接口，允许您使用“TCP: Send”通过TCP发送消息，�
 
 #### Steps
 
-- step1：CSM循环作作为通讯接口。
-    - step1.1：创建TCP: Send接口，用于处理发送TCP数据包。
-    - step1.2：创建TCP: Receive接口，用于处理接收TCP数据包。
-    - step1.3：将接收到的TCP数据包通过“TCP Received”状态变化抛出。
-- step2：TCP旁路循环
-    - step2.1：TCP监听。硬编码端口号。
-    - step2.2：当TCP首次连接时广播“TCP Connected”状态。
-    - step2.3：监控TCP连接是否有消息传入。
-    - step2.4：清除错误56，因为它表示TCP空闲。
-    - step2.5：调用旁路循环API："CSM Module Turns Invalid.vi"使旁路循环随CSM循环一起退出。
-    - step2.6：停止内部循环。
-    - step2.7：关闭TCP引用句柄。
-    - step2.8：当TCP连接断开时广播"TCP Disconnected"状态。
-    - step2.9：停止外部循环。
+- step1: CSM循环作作为通讯接口。
+    - step1.1: 创建TCP: Send接口，用于处理发送TCP数据包。
+    - step1.2: 创建TCP: Receive接口，用于处理接收TCP数据包。
+    - step1.3: 将接收到的TCP数据包通过“TCP Received”状态变化抛出。
+- step2: TCP旁路循环
+    - step2.1: TCP监听。硬编码端口号。
+    - step2.2: 当TCP首次连接时广播“TCP Connected”状态。
+    - step2.3: 监控TCP连接是否有消息传入。
+    - step2.4: 清除错误56，因为它表示TCP空闲。
+    - step2.5: 调用旁路循环API: "CSM Module Turns Invalid.vi"使旁路循环随CSM循环一起退出。
+    - step2.6: 停止内部循环。
+    - step2.7: 关闭TCP引用句柄。
+    - step2.8: 当TCP连接断开时广播"TCP Disconnected"状态。
+    - step2.9: 停止外部循环。
 
 ### TCP 服务器程序(Main - Call and Monitor TCP Traffic.vi)
 
@@ -306,15 +306,15 @@ CSM循环作为接口，允许您使用“TCP: Send”通过TCP发送消息，�
 
 #### Steps
 
-- Step1：初始化UI。
-- Step2：异步调用 `TCP Server Module(Multi-Loop Support).vi`, 启动名称为 TCPServer的CSM模块。
-- step3：订阅TCPServer模块的状态变化事件。
-- step4：在客户端VI上修改字符串控件，观察通信日志。
-- Step5：运行`Simple TCP - Client.vi`，在这个VI上点击发送按钮，发送一条TCP消息到服务器。
-- step6：任何收到的TCP消息，会被TCPServer以“TCP Received”状态变化抛出，因此在状态处理事件中可以处理此状态，本程序将其显示在界面上。
-- step7：String控件修改内容并键入回车后，本程序将其作为TCP消息发送到Client。
-- step8：程序开始退出后，取消订阅TCPServer模块的状态变化事件。
-- step9：发送“Macro: Exit”消息，以同步退出TCPServer模块。
+- Step1: 初始化UI。
+- Step2: 异步调用 `TCP Server Module(Multi-Loop Support).vi`, 启动名称为 TCPServer的CSM模块。
+- step3: 订阅TCPServer模块的状态变化事件。
+- step4: 在客户端VI上修改字符串控件，观察通信日志。
+- Step5: 运行`Simple TCP - Client.vi`，在这个VI上点击发送按钮，发送一条TCP消息到服务器。
+- step6: 任何收到的TCP消息，会被TCPServer以“TCP Received”状态变化抛出，因此在状态处理事件中可以处理此状态，本程序将其显示在界面上。
+- step7: String控件修改内容并键入回车后，本程序将其作为TCP消息发送到Client。
+- step8: 程序开始退出后，取消订阅TCPServer模块的状态变化事件。
+- step9: 发送“Macro: Exit”消息，以同步退出TCPServer模块。
 
 ## Global Log Handling Capability(Global Log Handling Capability Example.vi)
 
@@ -332,10 +332,10 @@ CSM循环作为接口，允许您使用“TCP: Send”通过TCP发送消息，�
 
 ### Steps
 
-- Step1：异步调用30个CSM子模块，每个子模块随后将持续生成事件。
-- Step2：启动CSM看门狗 (Watchdog) 线程，以确保所有异步启动的CSM模块在主程序退出后都能正常退出。
-- Step3：使用CSM的内置全局日志API捕获和计算一些典型的日志记录能力数据。
-- Step4：退出调用者和所有其他正在运行的CSM模块。
+- Step1: 异步调用30个CSM子模块，每个子模块随后将持续生成事件。
+- Step2: 启动CSM看门狗 (Watchdog) 线程，以确保所有异步启动的CSM模块在主程序退出后都能正常退出。
+- Step3: 使用CSM的内置全局日志API捕获和计算一些典型的日志记录能力数据。
+- Step4: 退出调用者和所有其他正在运行的CSM模块。
 
 ## State订阅范例
 
@@ -353,7 +353,7 @@ CSM循环作为接口，允许您使用“TCP: Send”通过TCP发送消息，�
 
 #### Overview
 
-本范例主要演示了如何使用状态订阅功能。和信号广播(Status)相比，状态订阅的优势在于：
+本范例主要演示了如何使用状态订阅功能。和信号广播(Status)相比，状态订阅的优势在于: 
 
 - 不需要显示的发布信号广播(Status)，只要运行到某个状态，只要被订阅，就会自动触发，并将状态的Response作为参数传递给订阅者。
 - 可以很容易的不侵入原先代码，实现观察者模式。
@@ -365,7 +365,7 @@ CSM循环作为接口，允许您使用“TCP: Send”通过TCP发送消息，�
 
 状态订阅和信号广播(Status)的订阅语法上没有任何不同，区别在于信号广播(Status)需要通过API显示抛出，而状态变化可以订阅CSM任意一个状态。
 
-以本范例为例：
+以本范例为例: 
 
 ```
 //任意模块的Macro: Initialize状态执行完毕后，都会触发主程序CSM模块(缺省)的Echo: Echo1
@@ -385,13 +385,13 @@ Macro: Exit@submodule2 >> Echo: Echo1 -><register>
 其中，main模块Echo: Echo2执行后，触发SubModule1的API: API1状态; 根据零一条规则，API: API1 状态执行完毕后，会触发主程序CSM模块(缺省)的Echo: Echo1。这是一个链式订阅的场景。
 
 #### Steps
-- Step1：根据全局日志模板，创建一个监控循环，用于观测系统中所有模块的状态变化。
-- Step2：异步调用两个CSM子模块(在调用子模块前等待1秒，以获得更好的UI显示顺序)子模块可以通过点击界面按钮，触发其状态变化。
-- Step3：通过模板实现一个CSM主程序模块，名字叫做main.
-    - Step3.1：主程序界面按钮的点击，会触发其状态发生变化。逻辑上将按钮的名称作为状态，用于减少代码编写。
-    - Step3.2：主程序启动时，自动订阅预设的状态订阅规则。
-    - Step3.3："Echo: Echo1"状态中，会将参数等信息以弹窗的形式显示出来。这个状态的运行，同时会在全局日志中有记录。
-- Step4：可以点击主界面的按钮，或子模块界面的按钮，触发对应的逻辑，查看全局日志，验证状态订阅是否生效。
+- Step1: 根据全局日志模板，创建一个监控循环，用于观测系统中所有模块的状态变化。
+- Step2: 异步调用两个CSM子模块(在调用子模块前等待1秒，以获得更好的UI显示顺序)子模块可以通过点击界面按钮，触发其状态变化。
+- Step3: 通过模板实现一个CSM主程序模块，名字叫做main.
+    - Step3.1: 主程序界面按钮的点击，会触发其状态发生变化。逻辑上将按钮的名称作为状态，用于减少代码编写。
+    - Step3.2: 主程序启动时，自动订阅预设的状态订阅规则。
+    - Step3.3: "Echo: Echo1"状态中，会将参数等信息以弹窗的形式显示出来。这个状态的运行，同时会在全局日志中有记录。
+- Step4: 可以点击主界面的按钮，或子模块界面的按钮，触发对应的逻辑，查看全局日志，验证状态订阅是否生效。
 
 # Addons - Logger
 
@@ -409,13 +409,13 @@ Macro: Exit@submodule2 >> Echo: Echo1 -><register>
 
 ### Steps
 
-- Step1：这是一个简单的CSM模块，名称为`RunningLogExample`。
-- Setp2：任何的一个按钮，都会运行到"API: Button Click"状态, 并抛出同名的一个状态变化，他们的参数都是按钮的名称。
-- step3：在API: Button Click中，不需要做任何事情，因为我们要观察的是日志文件。
-- step4：程序启动后，会启动两个log文件的后台记录线程，他们会随着程序的退出而退出。
-- Step5：运行完程序后，在范例VI所在目录，检查是否存在两个日志文件。
-    - Step5.1：`CSM Application Running Log Example.csmlog`记录了所有的日志。
-    - Step5.2：`CSM Application Running Log Example.no-state.csmlog`所记录的日志，没有状态变化记录。
+- Step1: 这是一个简单的CSM模块，名称为`RunningLogExample`。
+- Setp2: 任何的一个按钮，都会运行到"API: Button Click"状态, 并抛出同名的一个状态变化，他们的参数都是按钮的名称。
+- step3: 在API: Button Click中，不需要做任何事情，因为我们要观察的是日志文件。
+- step4: 程序启动后，会启动两个log文件的后台记录线程，他们会随着程序的退出而退出。
+- Step5: 运行完程序后，在范例VI所在目录，检查是否存在两个日志文件。
+    - Step5.1: `CSM Application Running Log Example.csmlog`记录了所有的日志。
+    - Step5.2: `CSM Application Running Log Example.no-state.csmlog`所记录的日志，没有状态变化记录。
 
 # Addons - Loop Support
 
@@ -440,16 +440,16 @@ Macro: Exit@submodule2 >> Echo: Echo1 -><register>
 
 ### Steps
 
-- Step1：界面事件处理循环。
-    - Step1.1：如果UI事件变得非常复杂，建议使用CSM DQMH-Style Template，可以将UI逻辑与其他CSM相关逻辑分开处理。您可以在LabVIEW 选板 -> CSM -> More Templates下找到此模板。
-    - Step1.2：此外，已使用多循环支持API将状态从DQMH循环转发到CSM主循环。例如，在用户单击<b>Start</b>按钮后，"Macro:DAQ continuous"消息可以被转发到CSM主循环中进行进一步的逻辑处理。
-- Step2：使用`CSM-Addon Logger Start File Logger.vi`来快速实现CSM全局事件文件记录功能。
-- Step3：CSM循环，用于处理界面的操作，及外部的响应，并实现具体的操作逻辑。
-    - Step3.1：在DAQ分组中，实现对DAQ采集的具体操作逻辑。
-- Step4：使用CSM Loop-Support VIs来实现While循环。
-    - Step4.1：`Define Loop States(s).vi`：定义连续的状态，用"-><loop>"标记该循环检查状态，以便该消息字符串被连续处理。
-    - Step4.2：`Append Continuous States.vi`：添加下一轮的状态，并通过参数将状态检查循环继续添加到状态队列中。
-    - Step4.3：`Remove Loop Tag to Break.vi`：使用此VI移除<loop>标签，以便退出循环状态，本次循环相关的状态可以被正常处理。
-    - Step4.4：`Remove Loop Tag and Previous States to Break.vi`：移除 <loop>标签，以及之前的所有状态，以便退出循环状态，本次循环相关的状态被移除。
-    - Step4.5：需要添加延迟函数，控制循环的速率。
-- Step5：可以看出，可以使用相同的状态，实现普通的单次采集。
+- Step1: 界面事件处理循环。
+    - Step1.1: 如果UI事件变得非常复杂，建议使用CSM DQMH-Style Template，可以将UI逻辑与其他CSM相关逻辑分开处理。您可以在LabVIEW 选板 -> CSM -> More Templates下找到此模板。
+    - Step1.2: 此外，已使用多循环支持API将状态从DQMH循环转发到CSM主循环。例如，在用户单击<b>Start</b>按钮后，"Macro:DAQ continuous"消息可以被转发到CSM主循环中进行进一步的逻辑处理。
+- Step2: 使用`CSM-Addon Logger Start File Logger.vi`来快速实现CSM全局事件文件记录功能。
+- Step3: CSM循环，用于处理界面的操作，及外部的响应，并实现具体的操作逻辑。
+    - Step3.1: 在DAQ分组中，实现对DAQ采集的具体操作逻辑。
+- Step4: 使用CSM Loop-Support VIs来实现While循环。
+    - Step4.1: `Define Loop States(s).vi`: 定义连续的状态，用"-><loop>"标记该循环检查状态，以便该消息字符串被连续处理。
+    - Step4.2: `Append Continuous States.vi`: 添加下一轮的状态，并通过参数将状态检查循环继续添加到状态队列中。
+    - Step4.3: `Remove Loop Tag to Break.vi`: 使用此VI移除<loop>标签，以便退出循环状态，本次循环相关的状态可以被正常处理。
+    - Step4.4: `Remove Loop Tag and Previous States to Break.vi`: 移除 <loop>标签，以及之前的所有状态，以便退出循环状态，本次循环相关的状态被移除。
+    - Step4.5: 需要添加延迟函数，控制循环的速率。
+- Step5: 可以看出，可以使用相同的状态，实现普通的单次采集。
