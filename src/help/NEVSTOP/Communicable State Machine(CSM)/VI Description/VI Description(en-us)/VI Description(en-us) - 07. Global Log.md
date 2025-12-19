@@ -6,7 +6,6 @@
 > The CSM Global Log functionality is used to view global log change events, serving scenarios such as debugging and monitoring.
 >
 > The following is the information that can be logged:
->
 > - Module state modifications
 > - Inter-module message communication, including data returns
 > - Module status publishing
@@ -29,7 +28,7 @@
 
 Obtains the global log queue refnum. Global log events can be retrieved from this queue.
 
-> Ref: CSM Global Log Functionality Ref: CSM Global Log Acquisition Methods
+> - Ref: CSM Global Log Functionality Ref: CSM Global Log Acquisition Methods
 
 Reference Examples:
 
@@ -43,8 +42,8 @@ Reference Examples:
 
 Obtains the CSM global log user event refnum, used to retrieve global log user events from the global log queue.
 
-> Ref: CSM Global Log Functionality 
-> Ref: CSM Global Log Acquisition Methods
+> - Ref: CSM Global Log Functionality 
+> - Ref: CSM Global Log Acquisition Methods
 
 Reference Examples:
 
@@ -59,8 +58,8 @@ Reference Examples:
 
 Releases the global log queue refnum.
 
-> Ref: CSM Global Log Functionality 
-> Ref: CSM Global Log Acquisition Methods
+> - Ref: CSM Global Log Functionality 
+> - Ref: CSM Global Log Acquisition Methods
 
 Reference Examples:
 
@@ -74,8 +73,8 @@ Reference Examples:
 
 Releases the CSM global log user event refnum.
 
-> Ref: CSM Global Log Functionality 
-> Ref: CSM Global Log Acquisition Methods
+> - Ref: CSM Global Log Functionality 
+> - Ref: CSM Global Log Acquisition Methods
 
 Reference Examples:
 
@@ -124,7 +123,6 @@ Generates a custom user log for scenarios such as debugging. When the input para
 > Global log filter rules allow a category of logs to be filtered out so they do not appear in the global log.
 >
 > The following are the three types of log filter rules:
->
 > - <b>Global Rules:</b> Apply to all modules meeting the conditions. You can configure the following settings:
 >   - <b>Module Name:</b> All names of the module will be filtered.
 >   - <b>Log Type:</b> Such as state, message, broadcast, module Initialization, and so on.
@@ -146,8 +144,8 @@ Sets global source-side filtering rules. When a log satisfies the filtering rule
 > [!NOTE] 
 > This VI is a polymorphic VI. To ensure forward compatibility of the interface after modifications, it is recommended to select the instance with the newer version for this VI.
 
-> Ref: Global Log Filter Location 
-> Ref: Global Log Filter Rules
+> - Ref: Global Log Filter Location 
+> - Ref: Global Log Filter Rules
 
 Reference Examples:
 
@@ -158,7 +156,7 @@ Reference Examples:
 
 Lists global filter rules in string format, with each rule occupying one line for user viewing. This VI is primarily used for background log file saving, debugging interface viewing, and so on.
 
-> Ref: Global Log Filter Rules
+> - Ref: Global Log Filter Rules
 
 -- <b>Indicators</b> --
 - <b>Rule Strings</b>: Filter rule strings.
@@ -170,7 +168,7 @@ Converts a list of filter rule clusters into filter rule class instances. Provid
 > [!NOTE] 
 > This VI is designed as a polymorphic VI in order to ensure forward compatibility of the interface after modifications. It is recommended to select the instance with the newer version.
 
-> Ref: Global Log Filter Rules
+> - Ref: Global Log Filter Rules
 
 ### CSM - Filter Global Log.vi
 
@@ -178,7 +176,7 @@ This is a Subscriber-side filtering VI used to determine if a log satisfies the 
 
 > [!NOTE] This VI is a Polymorphic VI to ensure forward compatibility of the interface after modifications. It is recommended to select the instance with the newer version.
 
-> Ref: Global Log Filter Rules
+> - Ref: Global Log Filter Rules
 
 ### Utility VIs
 

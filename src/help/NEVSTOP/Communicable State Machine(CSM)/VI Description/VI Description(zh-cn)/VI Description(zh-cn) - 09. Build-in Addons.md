@@ -13,13 +13,13 @@
 
 应用场景: 用于保证在主程序退出后，所有的异步启动的CSM模块都能正常退出。
 
-> Ref: CSM WatchDog实现的原理
+> - Ref: CSM WatchDog实现的原理
 
 ### CSM Watchdog Thread.vi
 
 CSM Watchdog线程，用于保证在主程序退出后，所有的异步启动的CSM模块都能正常退出。
 
-> Ref: CSM WatchDog实现的原理
+> - Ref: CSM WatchDog实现的原理
 
 -- <b>输入控件(Controls)</b> --
 - <b>Watchdog Queue</b>: Watchdog队列资源。
@@ -44,9 +44,9 @@ CSM Watchdog线程，用于保证在主程序退出后，所有的异步启动�
 > - File Num为LOG文件最多个数，默认值为2。
 > 当记录文件大小超过File Size限制时，会创建一个新的文件记录；当记录文件个数超过 File Num 限制时，会删除最早的文件记录。
 
-> Ref: Global Log过滤规则 [TODO]
+> - Ref: Global Log过滤规则 [TODO]
 
-<b>参考范例</b>:  “Addons - Logger\CSM Application Running Log Example.vi”。
+<b>参考范例</b>:  `Addons - Logger\CSM Application Running Log Example.vi`。
 
 -- <b>输入控件(Controls)</b> --
 - <b>Log File Path</b>: 记录文件路径。
@@ -65,13 +65,13 @@ CSM Watchdog线程，用于保证在主程序退出后，所有的异步启动�
 
 CSM - Start File Logger VI中使用的线程VI。
 
-> Ref: CSM File Logger实现的原理
+> - Ref: CSM File Logger实现的原理
 
 ### CSM-Logger-Thread(Event).vi
 
 CSM - Start File Logger VI中原本使用的线程VI。已废弃，目前使用CSM-Logger-Thread VI。
 
-> Ref: CSM File Logger实现的原理
+> - Ref: CSM File Logger实现的原理
 
 ## CSM Loop Support Addon
 
@@ -105,9 +105,9 @@ CSM - Start File Logger VI中原本使用的线程VI。已废弃，目前使用C
 - CSMLS - Remove Loop Tag and previous State(s) to Break VI: 移除-><loop>标记所在行以及之前的所有状态，用于跳出循环。
 - CSMLS - Remove Loop Tag to Break VI: 移除-><loop>标记所在行，用于跳出循环。
 
-<b>参考范例</b>:  “Addons - Loop Support\CSMLS - Continuous Loop in CSM Example.vi”。
+<b>参考范例</b>:  `Addons - Loop Support\CSMLS - Continuous Loop in CSM Example.vi`。
 
-> Ref: CSM Loop Support设计的原因
+> - Ref: CSM Loop Support设计的原因
 
 > [!WARNING]
 > <b>Add to Front? (F)</b> 通常为FALSE，因为循环状态一旦开始，就不会立即结束，插入状态队列前，会被认为是当前状态的子状态，此时如果当前状态如果是以同步消息调用，就不会立即返回。
@@ -125,7 +125,7 @@ CSM - Start File Logger VI中原本使用的线程VI。已废弃，目前使用C
 
 添加循环状态，维持循环继续运行。
 
-<b>参考范例</b>:  “Addons - Loop Support\CSMLS - Continuous Loop in CSM Example.vi”。
+<b>参考范例</b>:  `Addons - Loop Support\CSMLS - Continuous Loop in CSM Example.vi`。
 
 -- <b>输入控件(Controls)</b> --
 - <b>States Queue</b>: 整个状态队列被连接到此输入。
@@ -197,10 +197,10 @@ CSM - Start File Logger VI中原本使用的线程VI。已废弃，目前使用C
 
 此API提供CSM - Set Module Attribute VI自动适应输入数据类型的版本。
 
-> Ref: CSM - Set Module Attribute.vi
+> - Ref: CSM - Set Module Attribute.vi
 
 ### CSM Get Module Attribute.vim
 
 此API提供CSM - Get Module Attribute VI自动适应输入数据类型的版本。
 
-> Ref: CSM - Get Module Attribute.vi
+> - Ref: CSM - Get Module Attribute.vi

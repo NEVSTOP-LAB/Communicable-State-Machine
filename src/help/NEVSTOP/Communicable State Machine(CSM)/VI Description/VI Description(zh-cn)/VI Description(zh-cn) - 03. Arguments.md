@@ -46,7 +46,7 @@
 
 从编码后的参数字符串中提取参数的编码类型标记。
 
-> Ref: CSM参数类型
+> - Ref: CSM参数类型
 
 -- <b>输入控件(Controls)</b> --
 - <b>Arguments</b>: 参数字符串。
@@ -60,7 +60,7 @@
 
 用于罗列CSM消息中的关键字及其%Hex格式。
 
-> Ref: CSM消息关键字
+> - Ref: CSM消息关键字
 
 -- <b>输出控件(Indicators)</b> --
 - <b>keywords</b>: CSM关键字列表。
@@ -70,8 +70,8 @@
 
 将参数字符串中的CSM关键字转换为%Hex格式，确保不影响CSM消息字符串解析。
 
-> Ref: CSM消息关键字
-> Ref: CSM安全字符串参数
+> - Ref: CSM消息关键字
+> - Ref: CSM安全字符串参数
 
 <b>参考范例</b>:  "[CSM-Example]\0. Base Concepts\4.3 Arguments - Safe Arguments if it contains key words of CSM.vi"。
 
@@ -85,8 +85,8 @@
 
 将安全的字符串参数中的%Hex格式的CSM关键字转换回普通格式。
 
-> Ref: CSM消息关键字
-> Ref: CSM安全字符串参数
+> - Ref: CSM消息关键字
+> - Ref: CSM安全字符串参数
 
 <b>参考范例</b>:  "[CSM-Example]\0. Base Concepts\4.3 Arguments - Safe Arguments if it contains key words of CSM.vi"。
 
@@ -100,8 +100,8 @@
 
 将LabVIEW任意数据类型转换为HEXSTR格式参数字符串。
 
-> Ref: CSM参数类型
-> Ref: CSM HEXSTR格式参数
+> - Ref: CSM参数类型
+> - Ref: CSM HEXSTR格式参数
 
 <b>参考范例</b>:  "[CSM-Example]\0. Base Concepts\4.1 Arguments - Complex Data As Arguments.vi"。
 
@@ -115,8 +115,8 @@
 
 将十六进制字符串参数转换回变体数据。
 
-> Ref: CSM参数类型
-> Ref: CSM HEXSTR格式参数
+> - Ref: CSM参数类型
+> - Ref: CSM HEXSTR格式参数
 
 <b>参考范例</b>:  "[CSM-Example]\0. Base Concepts\4.1 Arguments - Complex Data As Arguments.vi"。
 
@@ -130,8 +130,8 @@
 
 将 LabVIEW 错误簇转换为 CSM 错误参数格式。
 
-> Ref: CSM 参数类型
-> Ref: CSM ERRSTR 格式参数
+> - Ref: CSM 参数类型
+> - Ref: CSM ERRSTR 格式参数
 
 <b>参考范例</b>:  "[CSM-Example]\0. Base Concepts\4.2 Arguments - Error As Arguments.vi"
 
@@ -145,8 +145,8 @@
 
 将CSM错误参数格式转换为LabVIEW错误簇。
 
-> Ref: CSM参数类型
-> Ref: CSM ERRSTR格式参数
+> - Ref: CSM参数类型
+> - Ref: CSM ERRSTR格式参数
 
 <b>参考范例</b>:  "[CSM-Example]\0. Base Concepts\4.2 Arguments - Error As Arguments.vi"。
 

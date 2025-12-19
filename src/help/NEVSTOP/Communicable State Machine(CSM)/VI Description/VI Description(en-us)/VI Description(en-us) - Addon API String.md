@@ -4,7 +4,6 @@
 > <b>API String Parameter Support</b>
 >
 > API String parameter support is used to enhance the API parameter functionality of the Communicable State Machine (CSM). API String supports passing various data types in plain text format and is specifically optimized for manual input experiences. API String does not define an argument type. The result obtained via the CSM - Argument Type VI is empty, and it is typically handled in the default case. The following are supported data types:
->
 > - String
 > - Path
 > - Boolean
@@ -67,8 +66,8 @@
 
 Determines whether the data type is a conversion data type supported by API String.
 
-> Ref: API String Parameter Support 
-> Ref: CSM HEXSTR Format Argument
+> - Ref: API String Parameter Support 
+> - Ref: CSM HEXSTR Format Argument
 
 -- <b>Controls</b> --
 - <b>Data</b>: Input data.
@@ -81,7 +80,7 @@ Determines whether the data type is a conversion data type supported by API Stri
 
 Converts data to API String format.
 
-> Ref: API String Parameter Support
+> - Ref: API String Parameter Support
 
 -- <b>Controls</b> --
 - <b>Data</b>: Input data.
@@ -95,7 +94,7 @@ Converts data to API String format.
 
 Converts an API String to the corresponding data type.
 
-> Ref: API String Parameter Support
+> - Ref: API String Parameter Support
 
 -- <b>Controls</b> --
 - <b>API String</b>: Input string in API String format.
@@ -127,8 +126,8 @@ Queries a specified data item within cluster data and converts it to API String 
 
 Adds custom boolean strings to the API String boolean parsing list and returns the updated list.
 
-> Ref: Default Strings for TRUE Value 
-> Ref: Default Strings for FALSE Value
+> - Ref: Default Strings for TRUE Value 
+> - Ref: Default Strings for FALSE Value
 
 -- <b>Controls</b> --
 - <b>Custom False Boolean Strings</b>: List of custom FALSE strings.
@@ -142,8 +141,8 @@ Adds custom boolean strings to the API String boolean parsing list and returns t
 
 Removes custom boolean strings from the API String boolean parsing list and returns the updated list.
 
-> Ref: Default Strings for TRUE Value 
-> Ref: Default Strings for FALSE Value
+> - Ref: Default Strings for TRUE Value 
+> - Ref: Default Strings for FALSE Value
 
 -- <b>Controls</b> --
 - <b>Custom False Boolean Strings</b>: List of FALSE strings to remove.
@@ -157,8 +156,8 @@ Removes custom boolean strings from the API String boolean parsing list and retu
 
 Lists all currently available boolean value strings.
 
-> Ref: Default Strings for TRUE Value 
-> Ref: Default Strings for FALSE Value
+> - Ref: Default Strings for TRUE Value 
+> - Ref: Default Strings for FALSE Value
 
 -- <b>Indicators</b> --
 - <b>False Boolean Strings</b>: Current list of FALSE strings.
@@ -168,7 +167,7 @@ Lists all currently available boolean value strings.
 
 Sets the format string for floating-point numbers. Refer to LabVIEW format string syntax.
 
-> Ref: Default Floating-point Format
+> - Ref: Default Floating-point Format
 
 -- <b>Controls</b> --
 - <b>Float Format String Setting</b>: Floating-point format string setting.
@@ -180,7 +179,7 @@ Sets the format string for floating-point numbers. Refer to LabVIEW format strin
 
 Gets the current floating-point format string.
 
-> Ref: Default Floating-point Format
+> - Ref: Default Floating-point Format
 
 -- <b>Indicators</b> --
 - <b>Float Format String</b>: Current floating-point format string.
@@ -195,7 +194,7 @@ Note:
 - This VI is a simplified version of `API String - Set Float Format String.vi`, used only for setting the number of significant digits.
 ```
 
-> Ref: Default Floating-point Format
+> - Ref: Default Floating-point Format
 
 -- <b>Controls</b> --
 - <b>Precision</b>: Floating-point precision setting.
@@ -209,8 +208,8 @@ Note:
 
 Converts a string to a boolean value. Supports multiple representations for TRUE/FALSE. Custom TRUE/FALSE strings can be added via the API String - Add Boolean Strings VI.
 
-> Ref: Default Strings for TRUE Value 
-> Ref: Default Strings for FALSE Value
+> - Ref: Default Strings for TRUE Value 
+> - Ref: Default Strings for FALSE Value
 
 -- <b>Controls</b> --
 - <b>String</b>: Input string.
@@ -225,7 +224,7 @@ Converts a string to a floating-point number. Supports various floating-point fo
 
 > [!NOTE] Empty strings will be converted to the default data. Floating-point strings with units are also supported and parsed correctly. Special floating-point values like `e`, `-e`, `pi`, `-pi`, `inf`, `+inf`, `-inf`, and `NaN` do not support units.
 
-> Ref: Default Floating-point Format
+> - Ref: Default Floating-point Format
 
 -- <b>Controls</b> --
 - <b>String</b>: Input string.
@@ -249,7 +248,7 @@ Converts a string to a 64-bit integer. Supports multiple numeric formats, includ
 
 Converts a string to an indexed enum type.
 
-> Ref: Indexed Enum
+> - Ref: Indexed Enum
 
 ```
 _<b>Conversion Rule 1: No Index Number</b>_
@@ -283,7 +282,7 @@ Example Enum = {1- AAA, 5 - BBBB, 9 - CCCC}
 
 Converts an enum to a numeric value. Supports indexed enum types. When the enum value carries an index number, the index number is used directly as the numeric value.
 
-> Ref: Indexed Enum
+> - Ref: Indexed Enum
 
 -- <b>Controls</b> --
 - <b>Enum</b>: Input enum value.
@@ -300,7 +299,7 @@ Rule 1: If an index number is matched, use that index directly.
 
 Rule 2: If no index number is matched, use the numeric value as the enum index.
 
-> Ref: Indexed Enum
+> - Ref: Indexed Enum
 
 -- <b>Controls</b> --
 - <b>Numeric</b>: Input numeric value.

@@ -8,7 +8,7 @@
 
 <b>参考范例</b>:  “2. Caller is CSM Scenario\CSM Example - Caller is a CSM.vi”。
 
-> Ref: CSM订阅
+> - Ref: CSM订阅
 
 -- <b>输入控件(Controls)</b> --
 - <b>CSM Name</b>: CSM模块名称。
@@ -27,7 +27,7 @@
 
 <b>参考范例</b>:  “2. Caller is CSM Scenario\CSM Example - Caller is a CSM.vi”。
 
-> Ref: CSM订阅
+> - Ref: CSM订阅
 
 -- <b>输入控件(Controls)</b> --
 - <b>CSM Name</b>: CSM模块名称。
@@ -42,8 +42,8 @@
 
 列出CSM注册表中的的所有规则。
 
-> Ref: CSM广播
-> Ref: CSM订阅
+> - Ref: CSM广播
+> - Ref: CSM订阅
 
 -- <b>输出控件(Indicators)</b> --
 - <b>Rule Entries</b>: 所有规则条目。
@@ -56,8 +56,8 @@
 > CSM 使用订阅、取消订阅操作，添加的是CSM模块广播订阅的规则。根据当前规则和实际存在的模块，可以推算出当前CSM模块的所有广播订阅关系。
 > CSM内部会进行缓存当前的订阅关系，当CSM模块的订阅规则或CSM模块数目发生变化时，会自动更新订阅关系缓存。
 
-> Ref: CSM广播
-> Ref: CSM订阅
+> - Ref: CSM广播
+> - Ref: CSM订阅
 
 -- <b>输出控件(Indicators)</b> --
 - <b>Mapping Relationships</b>: 当前CSM模块的所有广播订阅关系。
@@ -66,8 +66,8 @@
 
 列出当前所有广播订阅关系的广播名称。
 
-> Ref: CSM广播
-> Ref: CSM订阅
+> - Ref: CSM广播
+> - Ref: CSM订阅
 
 -- <b>输出控件(Indicators)</b> --
 - <b>Broadcast Names</b>: 当前所有广播订阅关系的广播名称。
@@ -77,8 +77,8 @@
 
 检查CSM模块的某广播名称对应所有的订阅关系。
 
-> Ref: CSM广播
-> Ref: CSM订阅
+> - Ref: CSM广播
+> - Ref: CSM订阅
 
 -- <b>输入控件(Controls)</b> --
 - <b>CSM Name</b>: CSM模块名称。
@@ -92,8 +92,8 @@
 
 从广播注册中删除所有与指定CSM模块相关的订阅关系。
 
-> Ref: CSM广播
-> Ref: CSM订阅
+> - Ref: CSM广播
+> - Ref: CSM订阅
 
 -- <b>输入控件(Controls)</b> --
 - <b>CSM Name</b>: CSM模块名称。
@@ -105,5 +105,5 @@
 
 重置后台广播注册的所有信息，应用在完全重置订阅关系的场景中。
 
-> Ref: CSM广播
-> Ref: CSM订阅
+> - Ref: CSM广播
+> - Ref: CSM订阅

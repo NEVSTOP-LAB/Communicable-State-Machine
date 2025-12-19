@@ -28,7 +28,7 @@
 
 输入CSM模块名称，拼接生成退出消息("Macro: Exit")。
 
-> Ref: 消息拼接API
+> - Ref: 消息拼接API
 
 -- <b>输入控件(Controls)</b> --
 - <b>CSMs</b>: CSM模块名称数组。
@@ -41,7 +41,7 @@
 
 过滤重复的消息，只保留最新的消息。
 
-> Ref: 消息拼接API
+> - Ref: 消息拼接API
 
 -- <b>输入控件(Controls)</b> --
 - <b>States</b>: 输入的消息字符串。

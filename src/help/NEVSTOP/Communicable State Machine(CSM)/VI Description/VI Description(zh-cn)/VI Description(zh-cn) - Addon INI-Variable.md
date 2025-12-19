@@ -57,9 +57,9 @@
 
 <b>参考范例</b>: “1. Used as parameters parsed by CSM.vi”。
 
-> Ref: CSM INI-Variable Addon
-> Ref: CSM INI-Variable变量格式
-> Ref: CSM INI-Variable配置文件路径
+> - Ref: CSM INI-Variable Addon
+> - Ref: CSM INI-Variable变量格式
+> - Ref: CSM INI-Variable配置文件路径
 
 -- <b>输入控件(Controls)</b> --
 - <b>Section Name ("" as Default)</b>: 节名，空字符串表示使用默认节。
@@ -80,7 +80,7 @@
 
 <b>参考范例</b>: “2. Load the corresponding configuration by providing the prototype.vi”。
 
-> Ref: CSM INI-Variable配置文件路径
+> - Ref: CSM INI-Variable配置文件路径
 
 -- <b>输入控件(Controls)</b> --
 - <b>Configuration Prototype (Cluster Prefered)</b>: 配置原型(推荐使用簇)。
@@ -101,7 +101,7 @@
 
 <b>参考范例</b>: “2. Load the corresponding configuration by providing the prototype.vi”。
 
-> Ref: CSM INI-Variable配置文件路径
+> - Ref: CSM INI-Variable配置文件路径
 
 -- <b>输入控件(Controls)</b> --
 - <b>Cluster</b>: 簇原型。
@@ -118,7 +118,7 @@
 
 <b>参考范例</b>: “2. Load the corresponding configuration by providing the prototype.vi”
 
-> Ref: CSM INI-Variable配置文件路径
+> - Ref: CSM INI-Variable配置文件路径
 
 -- <b>输入控件(Controls)</b> --
 - <b>Cluster</b>: 簇原型。
@@ -138,8 +138,8 @@
 
 <b>参考范例</b>: “7. Write and Read Configuration.vi”
 
-> Ref: CSM INI-Variable配置文件路径
-> Ref: CSM INI-Variable缓存机制警告
+> - Ref: CSM INI-Variable配置文件路径
+> - Ref: CSM INI-Variable缓存机制警告
 
 -- <b>输入控件(Controls)</b> --
 - <b>Configuration</b>: 要写入的配置数据。
@@ -244,7 +244,7 @@
 
 <b>参考范例</b>: “6. Read Nested Variables.vi”。
 
-> Ref: CSM INI-Variable缓存机制警告
+> - Ref: CSM INI-Variable缓存机制警告
 
 -- <b>输入控件(Controls)</b> --
 - <b>Section Name ("" as Default)</b>: 节名，空字符串表示使用默认节。
@@ -262,7 +262,7 @@
 
 <b>参考范例</b>: “5. import Config.ini with __include section.vi”。
 
-> Ref: CSM INI-Variable配置文件路径
+> - Ref: CSM INI-Variable配置文件路径
 
 -- <b>输入控件(Controls)</b> --
 - <b>Include All Paths?(F)</b>: 是否包含所有配置文件路径。
@@ -279,7 +279,7 @@
 
 <b>参考范例</b>: “5. import Config.ini with __include section.vi”。
 
-> Ref: CSM INI-Variable配置文件路径
+> - Ref: CSM INI-Variable配置文件路径
 
 -- <b>输入控件(Controls)</b> --
 - <b>Configuration Path</b>: 配置文件路径。
@@ -289,7 +289,7 @@
 
 卸载配置变量文件。
 
-> Ref: CSM INI-Variable配置文件路径
+> - Ref: CSM INI-Variable配置文件路径
 
 -- <b>输入控件(Controls)</b> --
 - <b>Path</b>: 配置文件路径。
@@ -300,7 +300,7 @@
 
 <b>注意</b>: 虽然已经标记为永久变量，但是如果不使用CSM - Sync Configuration Variables to File VI，依然不会将变量同步到文件中。
 
-> Ref: CSM INI-Variable配置文件路径
+> - Ref: CSM INI-Variable配置文件路径
 
 -- <b>输入控件(Controls)</b> --
 - <b>Path ("" to Use Default File)</b>: 配置文件路径，空字符串表示使用默认INI文件。
@@ -311,7 +311,7 @@
 
 <b>注意</b>: 只有永久变量才会同步到文件中，如果想将临时变量写入文件，需要提前将临时变量标记为永久变量。
 
-> Ref: CSM INI-Variable配置文件路径
+> - Ref: CSM INI-Variable配置文件路径
 
 -- <b>输入控件(Controls)</b> --
 - <b>All Temp Variable to Default Ini(F)</b>: 是否将所有临时变量同步到默认INI文件。
@@ -321,13 +321,13 @@
 
 恢复变量值，将所有的永久变量刷新为首次载入的配置值，临时变量不会被修改。
 
-> Ref: CSM INI-Variable配置文件路径
+> - Ref: CSM INI-Variable配置文件路径
 
 ### CSM - Reset to Default.vi
 
 将配置重置为默认值。所有的变量将被清空，所有的配置会从现在加载的配置文件中重新加载。
 
-> Ref: CSM INI-Variable配置文件路径
+> - Ref: CSM INI-Variable配置文件路径
 
 ## 实用工具 VI
 

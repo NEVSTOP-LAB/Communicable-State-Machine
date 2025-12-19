@@ -47,7 +47,7 @@
 
 Extracts the parameter encoding type tag from the encoded argument string.
 
-> Ref: CSM Argument Type
+> - Ref: CSM Argument Type
 
 -- <b>Controls</b> --
 - <b>Arguments</b>: Argument string.
@@ -60,7 +60,7 @@ Extracts the parameter encoding type tag from the encoded argument string.
 
 Lists keywords in CSM messages and their %Hex format.
 
-> Ref: CSM Message Keywords
+> - Ref: CSM Message Keywords
 
 -- <b>Indicators</b> --
 - <b>keywords</b>: List of CSM keywords.
@@ -70,10 +70,10 @@ Lists keywords in CSM messages and their %Hex format.
 
 Converts CSM keywords in the argument string to %Hex format to ensure that CSM message string parsing is not affected.
 
-> Ref: CSM Message Keywords 
-> Ref: CSM Safe String Argument
+> - Ref: CSM Message Keywords 
+> - Ref: CSM Safe String Argument
 
-Reference Example: `[CSM-Example]\0. Base Concepts\4.3 Arguments - Safe Arguments if it contains key words of CSM.vi`.
+<b>Reference Example</b>: `[CSM-Example]\0. Base Concepts\4.3 Arguments - Safe Arguments if it contains key words of CSM.vi`.
 
 -- <b>Controls</b> --
 - <b>Argument String</b>: String argument.
@@ -85,10 +85,10 @@ Reference Example: `[CSM-Example]\0. Base Concepts\4.3 Arguments - Safe Argument
 
 Converts the %Hex format CSM keywords in the safe string argument back to the original format.
 
-> Ref: CSM Message Keywords 
-> Ref: CSM Safe String Argument
+> - Ref: CSM Message Keywords 
+> - Ref: CSM Safe String Argument
 
-Reference Example: `[CSM-Example]\0. Base Concepts\4.3 Arguments - Safe Arguments if it contains key words of CSM.vi`.
+<b>Reference Example</b>: `[CSM-Example]\0. Base Concepts\4.3 Arguments - Safe Arguments if it contains key words of CSM.vi`.
 
 -- <b>Controls</b> --
 - <b>Safe Argument String</b>: Safe string argument.
@@ -100,10 +100,10 @@ Reference Example: `[CSM-Example]\0. Base Concepts\4.3 Arguments - Safe Argument
 
 Converts any LabVIEW data type to a HEXSTR format argument string.
 
-> Ref: CSM Argument Type 
-> Ref: CSM HEXSTR Format Argument
+> - Ref: CSM Argument Type 
+> - Ref: CSM HEXSTR Format Argument
 
-Reference Example: `[CSM-Example]\0. Base Concepts\4.1 Arguments - Complex Data As Arguments.vi`.
+<b>Reference Example</b>: `[CSM-Example]\0. Base Concepts\4.1 Arguments - Complex Data As Arguments.vi`.
 
 -- <b>Controls</b> --
 - <b>Variant</b>: LabVIEW data. Supports any data type via Variant.
@@ -115,10 +115,10 @@ Reference Example: `[CSM-Example]\0. Base Concepts\4.1 Arguments - Complex Data 
 
 Converts the hexadecimal string argument back to Variant data.
 
-> Ref: CSM Argument Type 
-> Ref: CSM HEXSTR Format Argument
+> - Ref: CSM Argument Type 
+> - Ref: CSM HEXSTR Format Argument
 
-Reference Example: `[CSM-Example]\0. Base Concepts\4.1 Arguments - Complex Data As Arguments.vi`.
+<b>Reference Example</b>: `[CSM-Example]\0. Base Concepts\4.1 Arguments - Complex Data As Arguments.vi`.
 
 -- <b>Controls</b> --
 - <b>HEX String</b>: CSM HEXSTR format argument.
@@ -130,10 +130,10 @@ Reference Example: `[CSM-Example]\0. Base Concepts\4.1 Arguments - Complex Data 
 
 Converts a LabVIEW Error Cluster to the CSM error argument format.
 
-> Ref: CSM Argument Type 
-> Ref: CSM ERRSTR Format Argument
+> - Ref: CSM Argument Type 
+> - Ref: CSM ERRSTR Format Argument
 
-Reference Example: `[CSM-Example]\0. Base Concepts\4.2 Arguments - Error As Arguments.vi`.
+<b>Reference Example</b>: `[CSM-Example]\0. Base Concepts\4.2 Arguments - Error As Arguments.vi`.
 
 -- <b>Controls</b> --
 - <b>Error</b>: LabVIEW Error Cluster.
@@ -145,10 +145,10 @@ Reference Example: `[CSM-Example]\0. Base Concepts\4.2 Arguments - Error As Argu
 
 Converts the CSM error argument format to a LabVIEW Error Cluster.
 
-> Ref: CSM Argument Type 
-> Ref: CSM ERRSTR Format Argument
+> - Ref: CSM Argument Type 
+> - Ref: CSM ERRSTR Format Argument
 
-Reference Example: `[CSM-Example]\0. Base Concepts\4.2 Arguments - Error As Arguments.vi`.
+<b>Reference Example</b>: `[CSM-Example]\0. Base Concepts\4.2 Arguments - Error As Arguments.vi`.
 
 -- <b>Controls</b> --
 - <b>Argument</b>: CSM error argument format.

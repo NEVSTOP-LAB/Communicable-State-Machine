@@ -14,7 +14,6 @@
 > <b>CSM Priority Queue Design</b>
 >
 > In the background, CSM essentially uses LabVIEW queues to implement inter-module communication. However, CSM uses two separate queues to store messages of different priorities:
->
 > - <b>Normal Priority Queue:</b> Used for passing asynchronous messages and status broadcasts.
 > - <b>High Priority Message Queue:</b> Used for passing synchronous messages and interrupt broadcasts. Messages in the High Priority Queue are processed first. Messages in the Normal Priority Queue are processed only after the messages in the High Priority Queue have been processed.
 
@@ -36,7 +35,7 @@ Lists all active CSM modules. This VI has two sets of options:
 - <b>Scope Option:</b> Used to specify whether to list system-level modules. By default, system-level modules are not listed. Options: Normal/System Only/All.
 - <b>With Nodes Option:</b> Targeted at Worker Mode and Chain of Responsibility Mode. When including nodes, individual nodes are listed along with the modules. Otherwise, only the modules are listed. By default, nodes are not included.
 
-> Ref: CSM Operation Modes
+> - Ref: CSM Operation Modes
 
 -- <b>Controls</b> --
 - <b>Scope (Normal)</b>: Scope option. You can select from Normal, System Only, or All.
@@ -59,7 +58,7 @@ Example: The system contains the following five modules: Level1.Level2A, Level1.
 > [!NOTE] 
 > Submodules are only valid for normal CSM modules and are invalid for modules in Worker Mode or Chain of Responsibility Mode.
 
-> Ref: CSM Submodule
+> - Ref: CSM Submodule
 
 -- <b>Controls</b> --
 - <b>Parent Name</b>: Group or parent node name.
@@ -115,7 +114,7 @@ When calling a CSM Module/API, the default timeout is -2, in which case the glob
 
 Obtains the status of a CSM module, including operation mode, number of workers, and number of messages pending in the message queue.
 
-> Ref: CSM Operation Modes
+> - Ref: CSM Operation Modes
 
 -- <b>Controls</b> --
 - <b>CSM Name</b>: CSM module name.
@@ -129,9 +128,9 @@ Obtains the status of a CSM module, including operation mode, number of workers,
 
 ### CSM - Flush Queue.vi
 
-Clears the LabVIEW queue used in the background for inter-module communication of a CSM module.
+Clear the LabVIEW queue used in the background for inter-module communication of a CSM module.
 
-> Ref: CSM Priority Queue Design
+> - Ref: CSM Priority Queue Design
 
 > [!WARNING] 
 > Using this VI is generally not recommended for CSM modules. It is recommended to use code design to avoid message accumulation in modules. Therefore, it is recommended to avoid using this VI to clear background message queues in CSM modules.

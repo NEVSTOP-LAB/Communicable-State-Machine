@@ -11,7 +11,6 @@
 
 > [!NOTE] CSM Massdata参数格式
 > 典型的Massdata数据格式为: `<MassData>Start:8057;Size:4004;DataType:1D I32`。其中: 
->
 > - `Start`: 数据在内存中的起始地址
 > - `Size`: 数据的大小(字节数)
 > - `DataType(optional)`: 数据的类型，由CSM Data Type String VI定义
@@ -22,7 +21,7 @@
 
 建议配置适当的缓存大小: 不要太大(避免浪费内存)，也不要太小(防止频繁覆盖)。可以利用提供的调试工具监控缓存使用情况，确定最佳配置。
 
-> Ref: CSM Massdata参数支持
+> - Ref: CSM Massdata参数支持
 
 -- <b>输入控件(Controls)</b> --
 - <b>Size (1M)</b>: 缓存大小，单位为字节(Byte)。
@@ -31,7 +30,7 @@
 
 将Massdata参数转换为原始数据。
 
-> Ref: CSM Massdata参数格式
+> - Ref: CSM Massdata参数格式
 
 -- <b>输入控件(Controls)</b> --
 - <b>MassData Argument</b>: 输入的Massdata参数。
@@ -44,7 +43,7 @@
 
 将数据转换为Massdata参数，此转换得到的Massdata参数不包含数据类型信息。
 
-> Ref: CSM Massdata参数格式
+> - Ref: CSM Massdata参数格式
 
 -- <b>输入控件(Controls)</b> --
 - <b>Data</b>: 输入数据。
@@ -56,7 +55,7 @@
 
 将数据转换为Massdata参数，此转换得到的Massdata参数包含数据类型信息。
 
-> Ref: CSM Massdata参数格式
+> - Ref: CSM Massdata参数格式
 
 -- <b>输入控件(Controls)</b> --
 - <b>Data</b>: 输入数据。
@@ -68,7 +67,7 @@
 
 从Massdata参数中提取数据类型字符串。
 
-> Ref: CSM Massdata参数格式
+> - Ref: CSM Massdata参数格式
 
 -- <b>输入控件(Controls)</b> --
 - <b>MassData Argument</b>: 输入的Massdata参数。

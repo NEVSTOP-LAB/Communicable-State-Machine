@@ -6,7 +6,7 @@
 
 Parses the CSM state queue and returns the next current state to execute, along with arguments and other information.
 
-> Ref: CSM Inter-module Communication Types
+> - Ref: CSM Inter-module Communication Types
 
 -- <b>Controls</b> --
 - <b>Response Arguments</b>: Response arguments from the previous state. Connect this input to the CSM shift register to pass return values from external calls.
@@ -33,8 +33,8 @@ Parses the CSM state queue and returns the next current state to execute, along 
 
 Builds CSM message strings, containing information such as state, arguments, target module, message type, etc., for sending to other CSM modules.
 
-> Ref: CSM Message Types 
-> Ref: CSM Message Format Parsing
+> - Ref: CSM Message Types 
+> - Ref: CSM Message Format Parsing
 
 ```
   - <b>Example:</b>
@@ -88,14 +88,14 @@ Builds CSM message strings and operation strings.
 > - Build Unregister Status Message.vi: Concatenates and generates CSM unregister state operation strings.
 > - CSM - Replace Substitution Marks in Messages.vi: Replaces placeholders in message strings.
 
-> Ref: CSM Inter-module Communication Types
+> - Ref: CSM Inter-module Communication Types
 
 #### Build Message with Arguments(Auto Check).vi
 
 Concatenates and generates CSM message strings. The message type symbol is automatically detected based on the input <b>State with Arguments</b>.
 
-> Ref: Message Building API 
-> Ref: CSM Message Target Module Description
+> - Ref: Message Building API 
+> - Ref: CSM Message Target Module Description
 
 -- <b>Controls</b> --
 - <b>State with Arguments</b>: CSM state string, which can contain arguments and target module information.
@@ -112,9 +112,9 @@ Concatenates and generates CSM synchronous message strings. The message type sym
     Message >> Arguments -@ Target
 
 
-> Ref: Message Building API 
-> Ref: Synchronous Message 
-> Ref: CSM Message Target Module Description
+> - Ref: Message Building API 
+> - Ref: Synchronous Message 
+> - Ref: CSM Message Target Module Description
 
 -- <b>Controls</b> --
 - <b>State with Arguments</b>: CSM state string.
@@ -132,9 +132,9 @@ Concatenates and generates CSM asynchronous message strings. The message type sy
   Message >> Arguments -> Target
 ```
 
-> Ref: Message Building API 
-> Ref: Asynchronous Message 
-> Ref: CSM Message Target Module Description
+> - Ref: Message Building API 
+> - Ref: Asynchronous Message 
+> - Ref: CSM Message Target Module Description
 
 -- <b>Controls</b> --
 - <b>State with Arguments</b>: CSM state string.
@@ -152,9 +152,9 @@ Concatenates and generates CSM asynchronous message strings without reply. The m
   Message >> Arguments ->| Target
 ```
 
-> Ref: Message Building API 
-> Ref: Asynchronous Message 
-> Ref: CSM Message Target Module Description
+> - Ref: Message Building API 
+> - Ref: Asynchronous Message 
+> - Ref: CSM Message Target Module Description
 
 -- <b>Controls</b> --
 - <b>State with Arguments</b>: CSM state string.
@@ -175,7 +175,7 @@ Concatenates normal status message strings. The message format is as follows:
   Status >> Arguments -><all>
 ```
 
-> Ref: Message Building API
+> - Ref: Message Building API
 
 -- <b>Controls</b> --
 - <b>State with Arguments</b>: CSM normal status message string.
@@ -192,7 +192,7 @@ Concatenates interrupt status messages. The message format is as follows:
   Status >> Arguments -><interrupt>
 ```
 
-> Ref: Message Building API
+> - Ref: Message Building API
 
 -- <b>Controls</b> --
 - <b>State with Arguments</b>: CSM interrupt status message string.
@@ -219,7 +219,7 @@ Concatenates register state operation message strings. The message format is as 
         DownloadFinished@* >> StartPlay@Player -><register>
 ```
 
-> Ref: Message Building API
+> - Ref: Message Building API
 
 -- <b>Controls</b> --
 - <b>Target CSM</b>: Name of the CSM module subscribing to the status.
@@ -246,7 +246,7 @@ Concatenates unregister state operation message strings. The message format is a
         DownloadFinished@Downloader >> StartPlay -><unregister>
 ```
 
-> Ref: Message Building API
+> - Ref: Message Building API
 
 -- <b>Controls</b> --
 - <b>Target CSM</b>: Name of the CSM module subscribing to the status.
@@ -286,7 +286,7 @@ Facilitates editing multiple CSM message strings by providing a batch replacemen
         ```
   ```
 
-> Ref: Message Building API
+> - Ref: Message Building API
 
 -- <b>Controls</b> --
 - <b>States with Replace Token</b>: CSM state string with replacement marks.
@@ -347,7 +347,7 @@ Broadcasts a status change to the system. CSM modules with registered states wil
 
 Merges CSM message strings into the CSM message queue. This VI provides string options for both TRUE and FALSE states, avoiding the use of case structures and improving code readability and programming efficiency.
 
-> Ref: CSM State Queue Operation API
+> - Ref: CSM State Queue Operation API
 
 > [!NOTE] 
 > <b>Polymorphic VI Options</b>
@@ -361,7 +361,7 @@ Merges CSM message strings into the CSM message queue. This VI provides string o
 
 Merges CSM message strings into the CSM message queue. This VI provides string options for both TRUE and FALSE states, avoiding the use of Case Structures and improving code readability and programming efficiency.
 
-> Ref: CSM State Queue Operation API
+> - Ref: CSM State Queue Operation API
 
 -- <b>Controls</b> --
 - <b>State Queue ("")</b>: The entire state queue is connected to this input.
@@ -377,7 +377,7 @@ Merges CSM message strings into the CSM message queue. This VI provides string o
 
 Merges CSM message strings into the CSM message queue. This VI provides string options for both TRUE and FALSE states, avoiding the use of case structures and improving code readability and programming efficiency.
 
-> Ref: CSM State Queue Operation API
+> - Ref: CSM State Queue Operation API
 
 -- <b>Controls</b> --
 - <b>State Queue ("")</b>: The entire state queue is connected to this input.
@@ -393,7 +393,7 @@ Merges CSM message strings into the CSM message queue. This VI provides string o
 
 Merges CSM message strings into the CSM message queue. This VI provides string options for both TRUE and FALSE states, avoiding the use of case structures and improving code readability and programming efficiency.
 
-> Ref: CSM State Queue Operation API
+> - Ref: CSM State Queue Operation API
 
 -- <b>Controls</b> --
 - <b>State Queue ("")</b>: The entire state queue is connected to this input.
@@ -409,7 +409,7 @@ Merges CSM message strings into the CSM message queue. This VI provides string o
 
 Generates the concatenated state of TRUE/FALSE and the remaining states based on the <b>High Priority</b> and Boolean inputs. The <b>High Priority</b> input determines whether to concatenate the TRUE or FALSE string before or after the remaining states. The <b>TRUE</b> and <b>FALSE</b> inputs determine whether the string to be concatenated is TRUE or FALSE.
 
-> Ref: CSM State Queue Operation API
+> - Ref: CSM State Queue Operation API
 
 -- <b>Controls</b> --
 - <b>State Queue ("")</b>: The entire state queue is connected to this input.

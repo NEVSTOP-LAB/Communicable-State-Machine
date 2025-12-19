@@ -49,8 +49,8 @@
 
 判断数据类型是否为API String支持的转换数据类型。
 
-> Ref: API String参数支持
-> Ref: CSM HEXSTR格式
+> - Ref: API String参数支持
+> - Ref: CSM HEXSTR格式
 
 -- <b>输入控件(Controls)</b> --
 - <b>Data</b>: 输入数据。
@@ -63,7 +63,7 @@
 
 将数据转换为API String格式。
 
-> Ref: API String参数支持
+> - Ref: API String参数支持
 
 -- <b>输入控件(Controls)</b> --
 - <b>Data</b>: 输入数据。
@@ -77,7 +77,7 @@
 
 将API String转换为相应的数据类型。
 
-> Ref: API String参数支持
+> - Ref: API String参数支持
 
 -- <b>输入控件(Controls)</b> --
 - <b>API String</b>: API String格式的输入字符串。
@@ -109,8 +109,8 @@
 
 将自定义布尔字符串添加到API String布尔值解析列表中，并返回更新后的列表。
 
-> Ref: TRUE值的默认字符串
-> Ref: FALSE值的默认字符串
+> - Ref: TRUE值的默认字符串
+> - Ref: FALSE值的默认字符串
 
 -- <b>输入控件(Controls)</b> --
 - <b>Custom False Boolean Strings</b>: 自定义FALSE字符串列表。
@@ -124,8 +124,8 @@
 
 从API String布尔值解析列表中移除自定义布尔字符串，并返回更新后的列表。
 
-> Ref: TRUE值的默认字符串
-> Ref: FALSE值的默认字符串
+> - Ref: TRUE值的默认字符串
+> - Ref: FALSE值的默认字符串
 
 -- <b>输入控件(Controls)</b> --
 - <b>Custom False Boolean Strings</b>: 要移除的FALSE字符串列表。
@@ -139,8 +139,8 @@
 
 列出当前所有可用的布尔值字符串。
 
-> Ref: TRUE值的默认字符串
-> Ref: FALSE值的默认字符串
+> - Ref: TRUE值的默认字符串
+> - Ref: FALSE值的默认字符串
 
 -- <b>输出控件(Indicators)</b> --
 - <b>False Boolean Strings</b>: 当前的FALSE字符串列表。
@@ -150,7 +150,7 @@
 
 设置浮点数的格式字符串，可参考LabVIEW format string格式。
 
-> Ref: 浮点数默认格式
+> - Ref: 浮点数默认格式
 
 -- <b>输入控件(Controls)</b> --
 - <b>Float Format String Setting</b>: 浮点数格式字符串设置。
@@ -162,7 +162,7 @@
 
 获取当前的浮点数格式字符串。
 
-> Ref: 浮点数默认格式
+> - Ref: 浮点数默认格式
 
 -- <b>输出控件(Indicators)</b> --
 - <b>Float Format String</b>: 当前的浮点数格式字符串。
@@ -175,7 +175,7 @@
     - 默认精度为6位有效数字，格式为"%.6p"。
     - 此VI是API String - Set Float Format String.vi的简化版本，仅用于设置有效数字位数。
 
-> Ref: 浮点数默认格式
+> - Ref: 浮点数默认格式
 
 -- <b>输入控件(Controls)</b> --
 - <b>Precision</b>: 浮点数精度设置。
@@ -189,8 +189,8 @@
 
 将字符串转换为布尔值。支持多种TRUE/FALSE表示方式，可通过API String - Add Boolean Strings VI添加自定义的TRUE/FALSE字符串。
 
-> Ref: TRUE值的默认字符串
-> Ref: FALSE值的默认字符串
+> - Ref: TRUE值的默认字符串
+> - Ref: FALSE值的默认字符串
 
 -- <b>输入控件(Controls)</b> --
 - <b>String</b>: 输入字符串。
@@ -208,7 +208,7 @@
 > 带有单位的浮点数字符串也支持正确解析。
 > `e`、`-e`、`pi`、`-pi`、`inf`、`+inf`、`-inf`和`NaN`等特殊浮点数值不支持单位。
 
-> Ref: 浮点数默认格式
+> - Ref: 浮点数默认格式
 
 -- <b>输入控件(Controls)</b> --
 - <b>String</b>: 输入字符串。
@@ -232,7 +232,7 @@
 
 将字符串转换为带索引的枚举类型。
 
-> Ref: 带索引的枚举类型(Indexed Enum)
+> - Ref: 带索引的枚举类型(Indexed Enum)
 
     _<b>转换规则1: 无索引编号</b>_
     
@@ -264,7 +264,7 @@
 
 将枚举转换为数值，支持带索引的枚举类型，当枚举数值携带索引编号时，将直接使用索引编号作为数值。
 
-> Ref: 带索引的枚举类型 (Indexed Enum)
+> - Ref: 带索引的枚举类型 (Indexed Enum)
 
 -- <b>输入控件(Controls)</b> --
 - <b>Enum</b>: 输入枚举值。
@@ -280,7 +280,7 @@
 规则1: 当匹配到索引编号时，将直接使用该索引。
 规则2: 当没有匹配到索引编号时，将使用数字值作为枚举索引。
 
-> Ref: 带索引的枚举类型(Indexed Enum)
+> - Ref: 带索引的枚举类型(Indexed Enum)
 
 -- <b>输入控件(Controls)</b> --
 - <b>Numeric</b>: 输入数字值。

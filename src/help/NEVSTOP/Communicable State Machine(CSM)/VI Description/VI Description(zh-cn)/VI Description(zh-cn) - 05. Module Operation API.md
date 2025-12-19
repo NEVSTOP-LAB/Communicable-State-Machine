@@ -45,8 +45,8 @@
 > ![NOTE] 
 > 使用API发送的异步消息均为异步无返回消息，无法获取异步消息的返回参数。
 
-> Ref: 异步消息
-> Ref: CSM消息的目标模块说明
+> - Ref: 异步消息
+> - Ref: CSM消息的目标模块说明
 
 -- <b>输入控件(Controls)</b> --
 - <b>Current Module ("" to Generate an ID)</b>: 当前模块名称，当没有输入时，生成一个临时ID，便于调试判断位置。
@@ -58,8 +58,8 @@
 
 发送异步消息到指定的CSM模块，由于是异步发送，因此不会等待返回，消息发送后继续执行之后的代码。如果CSM模块不存在，将会等待指定的超时时间，仍然超时会返回超时错误。
 
-> Ref: 异步消息
-> Ref: CSM消息的目标模块说明
+> - Ref: 异步消息
+> - Ref: CSM消息的目标模块说明
 
 -- <b>输入控件(Controls)</b> --
 - <b>Current Module ("" to Generate an ID)</b>: 当前模块名称，当没有输入时，生成一个临时ID，便于调试判断位置。
@@ -77,9 +77,9 @@
 - 超时未获取到返回消息，将返回CSM Timeout Error。
 - 目标模块不存在，将返回Target Error。
 
-> Ref: 同步消息
-> Ref: 全局超时时间设置
-> Ref: CSM消息的目标模块说明
+> - Ref: 同步消息
+> - Ref: 全局超时时间设置
+> - Ref: CSM消息的目标模块说明
 
 -- <b>输入控件(Controls)</b> --
 - <b>Current Module ("" to Generate an ID)</b>: 当前模块名称，当没有输入时，生成一个临时ID，便于调试判断位置。
@@ -98,9 +98,9 @@
 - 如果模块发送时不存在，等待超时后返回超时错误。
 - 可以发送消息，但超时未获取到返回消息，将返回CSM Timeout Error。
 
-> Ref: 同步消息
-> Ref: 全局超时时间设置
-> Ref: CSM消息的目标模块说明
+> - Ref: 同步消息
+> - Ref: 全局超时时间设置
+> - Ref: CSM消息的目标模块说明
 
 -- <b>输入控件(Controls)</b> --
 - <b>Current Module ("" to Generate an ID)</b>: 当前模块名称，当没有输入时，生成一个临时ID，便于调试判断位置。
@@ -118,7 +118,7 @@
 
 一次性的执行多条CSM指令，支持同步消息、异步消息和订阅。
 
-> Ref: CSM消息的目标模块说明
+> - Ref: CSM消息的目标模块说明
 
 -- <b>输入控件(Controls)</b> --
 - <b>Current Module ("" to Generate an ID)</b>: 当前模块名称，当没有输入时，生成一个临时ID，便于调试判断位置。
@@ -166,9 +166,10 @@ CSM高级模式的模块(协作者模式、责任链模式)只有在最后一个
 
 ### 属性(Attribute)
 
-> ![NOTE] <b>CSM模块属性</b>
+> ![NOTE]
+> <b>CSM模块属性</b>
+> 
 > CSM模块属性是一块可以保存模块配置、状态的数据区域，通过名称来访问。它可以用作以下场景: 
->
 > - 提供一种无需消息即可访问修改的配置、状态信息。例如TCP模块中表示是否已经连接的属性"Connected"属性，直接访问会更加方便。
 > - 在高级模式(协作者模式、责任链模式)运行下的节点共享同一个数据区域，用于在模块之间共享数据。
 
@@ -176,7 +177,7 @@ CSM高级模式的模块(协作者模式、责任链模式)只有在最后一个
 
 设置指定模块的属性值。如果属性不存在，将创建一个新的属性，<b>Replaced</b>返回FALSE, 否则返回TRUE。如果CSM模块不存在，将会等待指定的超时时间，超时会返回超时错误。
 
-> Ref: CSM模块属性
+> - Ref: CSM模块属性
 
 <b>参考范例</b>:  "[CSM-Example]\0. Base Concepts\6. Module Attributes.vi"。
 
@@ -195,7 +196,7 @@ CSM高级模式的模块(协作者模式、责任链模式)只有在最后一个
 
 读取指定模块的属性值。如果属性不存在，将返回默认值，<b>Found</b>返回FALSE, 否则返回TRUE。如果CSM模块不存在，将会等待指定的超时时间，超时会返回超时错误。
 
-> Ref: CSM模块属性
+> - Ref: CSM模块属性
 
 <b>参考范例</b>:  "[CSM-Example]\0. Base Concepts\6. Module Attributes.vi"。
 
@@ -215,7 +216,7 @@ CSM高级模式的模块(协作者模式、责任链模式)只有在最后一个
 
 列出指定模块的所有属性名称。如果CSM模块不存在，将会等待指定的超时时间，超时会返回超时错误。
 
-> Ref: CSM模块属性
+> - Ref: CSM模块属性
 
 <b>参考范例</b>:  "[CSM-Example]\0. Base Concepts\6. Module Attributes.vi"。
 
@@ -234,7 +235,7 @@ CSM高级模式的模块(协作者模式、责任链模式)只有在最后一个
 
 删除指定模块的属性。如果属性不存在，将返回FALSE, 否则返回TRUE。如果CSM模块不存在，将会等待指定的超时时间，超时会返回超时错误。
 
-> Ref: CSM模块属性
+> - Ref: CSM模块属性
 
 <b>参考范例</b>:  "[CSM-Example]\0. Base Concepts\6. Module Attributes.vi"。
 

@@ -6,7 +6,7 @@
 
 解析CSM状态队列，返回将执行的下一个当前状态、参数等信息。
 
-> Ref: CSM 模块间通信类型
+> - Ref: CSM 模块间通信类型
 
 -- <b>输入控件(Controls)</b> --
 - <b>Response Arguments</b>: 来自上一个状态的响应参数。它应该连接到 CSM的移位寄存器，用于传递外部调用的返回值。
@@ -33,8 +33,8 @@
 
 该VI用于构建CSM消息字符串(包含状态、参数、目标模块、消息类型等信息)，以便发送到其他CSM模块。
 
-> Ref: CSM 消息类型
-> Ref: CSM 消息格式解析
+> - Ref: CSM 消息类型
+> - Ref: CSM 消息格式解析
 
       - <B>例如: </B>
     
@@ -87,14 +87,14 @@
 > - Build Unregister Status Message.vi: 拼接生成CSM注销状态操作字符串。
 > - CSM - Replace Substitution Marks in Messages.vi: 替换消息字符串中的占位符。
 
-> Ref: CSM 模块间通信类型
+> - Ref: CSM 模块间通信类型
 
 #### Build Message with Arguments(Auto Check).vi
 
 拼接生成CSM消息字符串，消息的类型符号会根据输入的<b>State with Arguments</b>自动检测。
 
-> Ref: 消息拼接API
-> Ref: CSM消息的目标模块说明
+> - Ref: 消息拼接API
+> - Ref: CSM消息的目标模块说明
 
 -- <b>输入控件(Controls)</b> --
 - <b>State with Arguments</b>: CSM状态字符串，可包含参数和目标模块信息。
@@ -110,9 +110,9 @@
 
       Message >> Arguments -@ Target
 
-> Ref: 消息拼接API
-> Ref: 同步消息
-> Ref: CSM消息的目标模块说明
+> - Ref: 消息拼接API
+> - Ref: 同步消息
+> - Ref: CSM消息的目标模块说明
 
 -- <b>输入控件(Controls)</b> --
 - <b>State with Arguments</b>: CSM状态字符串。
@@ -128,9 +128,9 @@
 
       Message >> Arguments -> Target
 
-> Ref: 消息拼接API
-> Ref: 异步消息
-> Ref: CSM消息的目标模块说明
+> - Ref: 消息拼接API
+> - Ref: 异步消息
+> - Ref: CSM消息的目标模块说明
 
 -- <b>输入控件(Controls)</b> --
 - <b>State with Arguments</b>: CSM状态字符串。
@@ -146,9 +146,9 @@
 
       Message >> Arguments ->| Target
 
-> Ref: 消息拼接API
-> Ref: 异步消息
-> Ref: CSM消息的目标模块说明
+> - Ref: 消息拼接API
+> - Ref: 异步消息
+> - Ref: CSM消息的目标模块说明
 
 -- <b>输入控件(Controls)</b> --
 - <b>State with Arguments</b>: CSM状态字符串。
@@ -167,7 +167,7 @@
       Status >> Arguments -><broadcast>
       Status >> Arguments -><all>
 
-> Ref: 消息拼接API
+> - Ref: 消息拼接API
 
 -- <b>输入控件(Controls)</b> --
 - <b>State with Arguments</b>: CSM普通状态消息字符串。
@@ -182,7 +182,7 @@
 
       Status >> Arguments -><interrupt>
 
-> Ref: 消息拼接API
+> - Ref: 消息拼接API
 
 -- <b>输入控件(Controls)</b> --
 - <b>State with Arguments</b>: CSM中断状态消息字符串。
@@ -207,7 +207,7 @@
             //当多个模块都有下载完毕消息时，可以使用 * 表示将所有模块的该消息都绑定到播放器模块的开始播放API
             DownloadFinished@* >> StartPlay@Player -><register>
 
-> Ref: 消息拼接API
+> - Ref: 消息拼接API
 
 -- <b>输入控件(Controls)</b> --
 - <b>Target CSM</b>: 订阅状态的CSM模块名称。
@@ -232,7 +232,7 @@
             //当播放器模块中执行消息时，Player 可缺省
             DownloadFinished@Downloader >> StartPlay -><unregister>
 
-> Ref: 消息拼接API
+> - Ref: 消息拼接API
 
 -- <b>输入控件(Controls)</b> --
 - <b>Target CSM</b>: 订阅状态的CSM模块名称。
@@ -270,7 +270,7 @@
             Close -@ DAQDevice
             ```
 
-> Ref: 消息拼接API
+> - Ref: 消息拼接API
 
 -- <b>输入控件(Controls)</b> --
 - <b>States with Replace Token</b>: 带有替换标记的CSM状态字符串。
@@ -329,7 +329,7 @@
 
 将CSM消息字符串并入CSM消息队列中。提供了TRUE/FALSE两种状态的字符串选项，能够避免使用条件结构，提高代码可读性和编程效率。
 
-> Ref: CSM 的状态队列操作API
+> - Ref: CSM 的状态队列操作API
 
 > [!NOTE] 
 > <b>多态VI(Polymorphic VI)选项</b>
@@ -343,7 +343,7 @@
 
 将CSM消息字符串并入CSM消息队列中。提供了TRUE/FALSE两种状态的字符串选项，能够避免使用条件结构，提高代码可读性和编程效率。
 
-> Ref: CSM 的状态队列操作API
+> - Ref: CSM 的状态队列操作API
 
 -- <b>输入控件(Controls)</b> --
 - <b>State Queue ("")</b>: 整个状态队列被连接到此输入。
@@ -359,7 +359,7 @@
 
 将CSM消息字符串并入CSM消息队列中。提供了TRUE/FALSE两种状态的字符串选项，能够避免使用条件结构，提高代码可读性和编程效率。
 
-> Ref: CSM 的状态队列操作API
+> - Ref: CSM 的状态队列操作API
 
 -- <b>输入控件(Controls)</b> --
 - <b>State Queue ("")</b>: 整个状态队列被连接到此输入。
@@ -375,7 +375,7 @@
 
 将CSM消息字符串并入CSM消息队列中。提供了TRUE/FALSE两种状态的字符串选项，能够避免使用条件结构，提高代码可读性和编程效率。
 
-> Ref: CSM 的状态队列操作API
+> - Ref: CSM 的状态队列操作API
 
 -- <b>输入控件(Controls)</b> --
 - <b>State Queue ("")</b>: 整个状态队列被连接到此输入。
@@ -391,7 +391,7 @@
 
 根据高优先级和Boolean输入，该VI生成TRUE/False与剩余状态的连接状态。其中，<b>High Priority</b>输入决定是否在剩余状态之前或之后连接TRUE或False字符串；<b>TRUE</b>和<b>FALSE</b>输入决定要连接的字符串是TRUE还是False。
 
-> Ref: CSM 的状态队列操作API
+> - Ref: CSM 的状态队列操作API
 
 -- <b>输入控件(Controls)</b> --
 - <b>State Queue ("")</b>: 整个状态队列被连接到此输入。

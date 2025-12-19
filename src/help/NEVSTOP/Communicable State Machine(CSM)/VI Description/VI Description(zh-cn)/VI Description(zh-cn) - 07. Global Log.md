@@ -30,8 +30,8 @@
 
 获取全局日志的队列句柄，可以从这个队列中获取全局日志事件。
 
-> Ref: CSM全局日志功能
-> Ref: CSM全局日志获取方法
+> - Ref: CSM全局日志功能
+> - Ref: CSM全局日志获取方法
 
 <b>参考范例</b>:  4. Advance Examples\Filter From Source(Queue).vi
 - 4. Advance Examples\Filter From Subscriber(Queue).vi
@@ -43,8 +43,8 @@
 
 获取CSM全局日志用户事件句柄，用于从全局日志队列中获取全局日志用户事件。
 
-> Ref: CSM全局日志功能
-> Ref: CSM全局日志获取方法
+> - Ref: CSM全局日志功能
+> - Ref: CSM全局日志获取方法
 
 <b>参考范例</b>:  4. Advance Examples\Filter From Source(Event).vi
 - 4. Advance Examples\Filter From Subscriber(Event).vi
@@ -57,8 +57,8 @@
 
 释放全局日志队列句柄。
 
-> Ref: CSM全局日志功能
-> Ref: CSM全局日志获取方法
+> - Ref: CSM全局日志功能
+> - Ref: CSM全局日志获取方法
 
 <b>参考范例</b>:  4. Advance Examples\Filter From Source(Queue).vi
 - 4. Advance Examples\Filter From Subscriber(Queue).vi
@@ -70,8 +70,8 @@
 
 释放CSM全局日志用户事件句柄。
 
-> Ref: CSM全局日志功能
-> Ref: CSM全局日志获取方法
+> - Ref: CSM全局日志功能
+> - Ref: CSM全局日志获取方法
 
 <b>参考范例</b>:  4. Advance Examples\Filter From Source(Event).vi
 - 4. Advance Examples\Filter From Subscriber(Event).vi
@@ -141,8 +141,8 @@ CSM错误处理函数。如果发生错误，错误信息将通过CSM Global Log
 > [!NOTE]
 > 这个VI是一个多态VI，用于保证修改后的接口向前兼容，建议选择版本更新的实例。
 
-> Ref: 全局日志过滤位置
-> Ref: 全局日志过滤规则
+> - Ref: 全局日志过滤位置
+> - Ref: 全局日志过滤规则
 
 <b>参考范例</b>:  4. Advance Examples\Filter From Source(Queue).vi
 - 4. Advance Examples\Filter From Source(Event).vi
@@ -151,7 +151,7 @@ CSM错误处理函数。如果发生错误，错误信息将通过CSM Global Log
 
 以字符串的格式将全局过滤规则列出来，每个规则占一行，可供用户查看。主要用于后台日志文件保存、调试界面查看等。
 
-> Ref: 全局日志过滤规则
+> - Ref: 全局日志过滤规则
 
 -- <b>输出控件(Indicators)</b> --
 - <b>Rule Strings</b>: 过滤规则字符串。
@@ -163,7 +163,7 @@ CSM错误处理函数。如果发生错误，错误信息将通过CSM Global Log
 > [!NOTE]
 > 这个VI是一个多态VI，用于保证修改后的接口向前兼容，建议选择版本更新的实例。
 
-> Ref: 全局日志过滤规则
+> - Ref: 全局日志过滤规则
 
 ### CSM - Filter Global Log.vi
 
@@ -172,7 +172,7 @@ CSM错误处理函数。如果发生错误，错误信息将通过CSM Global Log
 > [!NOTE]
 > 这个VI是一个多态VI，用于保证修改后的接口向前兼容，建议选择版本更新的实例。
 
-> Ref: 全局日志过滤规则
+> - Ref: 全局日志过滤规则
 
 ### Utility VIs
 

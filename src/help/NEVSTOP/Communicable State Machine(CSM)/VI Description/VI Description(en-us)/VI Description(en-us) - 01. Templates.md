@@ -28,9 +28,9 @@
 
 A template for creating a CSM module with a user interface. This template includes a user Event Structure for responding to user actions.
 
-> Ref: CSM Naming Rules 
-> Ref: CSM Initialize State 
-> Ref: CSM Exit State
+> - Ref: CSM Naming Rules 
+> - Ref: CSM Initialize State 
+> - Ref: CSM Exit State
 
 -- <b>Controls</b> --
 - <b>Name ("" to use UUID):</b> CSM module name. Refer to *CSM Naming Rules* for module naming rules.
@@ -39,9 +39,9 @@ A template for creating a CSM module with a user interface. This template includ
 
 A template for creating a CSM module without a user interface. This is the most commonly used CSM template. The template also includes an event response loop used for exiting the module during debugging. Remove this loop after debugging is complete.
 
-> Ref: CSM Naming Rules 
-> Ref: CSM Initialize State 
-> Ref: CSM Exit State
+> - Ref: CSM Naming Rules 
+> - Ref: CSM Initialize State 
+> - Ref: CSM Exit State
 
 -- <b>Controls</b> --
 - <b>Name ("" to use UUID)</b>: CSM module name. Refer to *CSM Naming Rules* for module naming rules.
@@ -50,9 +50,9 @@ A template for creating a CSM module without a user interface. This is the most 
 
 Compact code template for creating a CSM module without a user interface. The functionality of this template is identical to the CSM Module Template VI.
 
-> Ref: CSM Naming Rules 
-> Ref: CSM Initialize State 
-> Ref: CSM Exit State
+> - Ref: CSM Naming Rules 
+> - Ref: CSM Initialize State 
+> - Ref: CSM Exit State
 
 -- <b>Controls</b> --
 - <b>Name ("" to use UUID)</b>: CSM module name. Refer to *CSM Naming Rules* for module naming rules.
@@ -61,9 +61,9 @@ Compact code template for creating a CSM module without a user interface. The fu
 
 Compact code template used to create a CSM module with a user interface. This template includes a user Event Structure for responding to user actions. The functionality of this template is identical to the CSM User Interface(UI) Module Template VI.
 
-> Ref: CSM Naming Rules 
-> Ref: CSM Initialize State 
-> Ref: CSM Exit State
+> - Ref: CSM Naming Rules 
+> - Ref: CSM Initialize State 
+> - Ref: CSM Exit State
 
 -- <b>Controls</b> --
 - <b>Name ("" to use UUID)</b>: CSM module name. Refer to *CSM Naming Rules* for module naming rules.
@@ -79,9 +79,9 @@ The user Event Structure loop for user operations is created via the CSM - Flood
 
 Refer to the following example  `[CSM-Example]\4. Advance Examples\CSMLS - Continuous Loop in CSM Example.vi` for demonstration of using this VI.
 
-> Ref: CSM Naming Rules 
-> Ref: CSM Initialize State 
-> Ref: CSM Exit State
+> - Ref: CSM Naming Rules 
+> - Ref: CSM Initialize State 
+> - Ref: CSM Exit State
 
 -- <b>Controls</b> --
 - <b>Name ("" to use UUID)</b>: CSM module name. Refer to *CSM Naming Rules* for module naming rules.
@@ -92,31 +92,31 @@ Refer to the following example  `[CSM-Example]\4. Advance Examples\CSMLS - Conti
 
 Code snippet for starting a CSM module asynchronously. After dragging this VI to the block diagram, change the static VI reference to the target CSM module.
 
-Reference Example: `[CSM-Example]\3. Caller is Other Framework Scenario\CSM Example - Caller is NOT a CSM.vi`.
+<b>Reference Example</b>: `[CSM-Example]\3. Caller is Other Framework Scenario\CSM Example - Caller is NOT a CSM.vi`.
 
 #### CSM - Synchronized Call.vi
 
 Code snippet for calling a CSM module synchronously. This VI calls CSM module directly as a subVI.
 
-Reference Example: `[CSM-Example]\2. Caller is CSM Scenario\CSM Example - Caller is a CSM.vi`.
+<b>Reference Example</b>: `[CSM-Example]\2. Caller is CSM Scenario\CSM Example - Caller is a CSM.vi`.
 
 #### CSM - Flood of Events Handler Side Loop.vi
 
 User Event Structure loop template for DQMH-style CSM modules. This VI is primarily used for handling scenarios where user interface operations are very complex and require combined logic to complete collaborative work.
 
-Reference Example: `[CSM-Example]\4. Advance Examples\CSMLS - Continuous Loop in CSM Example.vi`.
+<b>Reference Example</b>: `[CSM-Example]\4. Advance Examples\CSMLS - Continuous Loop in CSM Example.vi`.
 
 #### CSM - Global Log Queue Monitoring Loop.vi
 
 Creates a global log queue monitoring loop, which is used for querying and monitoring messages in the global log queue.
 
-Reference Example: `[CSM-Example]\4. Advance Examples\2. Chain of Responsibility Example\Chain of Responsibility Example.vi`.
+<b>Reference Example</b>: `[CSM-Example]\4. Advance Examples\2. Chain of Responsibility Example\Chain of Responsibility Example.vi`.
 
 #### CSM - Global Log Event Monitoring Loop.vi
 
 Creates a global log event monitoring loop, which is used for querying and monitoring messages in the global log queue.
 
-Reference Example: Any examples in `[CSM-Example]\4. Advance Examples\4. Global Log Filter Example\`.
+<b>Reference Example</b>: Any examples in `[CSM-Example]\4. Advance Examples\4. Global Log Filter Example\`.
 
 ### Template Support
 

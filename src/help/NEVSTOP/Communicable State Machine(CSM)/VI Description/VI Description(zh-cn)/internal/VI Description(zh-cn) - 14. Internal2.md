@@ -39,18 +39,18 @@
 
 此VI将不在维护，请使用CSM - Replace Mark with String Array.vi
 
-> Ref: CSM - Replace Mark with String Array.vi
+> - Ref: CSM - Replace Mark with String Array.vi
 
 ### CSM - Forward States to CSM.vi
 
-> Ref: CSM - Forward UI Operations to CSM.vi
+> - Ref: CSM - Forward UI Operations to CSM.vi
 
 
 ## CSM - Check Status Registration.vi
 
-> Ref: CSM - Check Mapping Relationship in Broadcast Registry.vi
+> - Ref: CSM - Check Mapping Relationship in Broadcast Registry.vi
 
 
 ## CSM - List Status in Broadcast Registry.vi
 
-> Ref: CSM - List Sources in Broadcast Registry.vi
+> - Ref: CSM - List Sources in Broadcast Registry.vi

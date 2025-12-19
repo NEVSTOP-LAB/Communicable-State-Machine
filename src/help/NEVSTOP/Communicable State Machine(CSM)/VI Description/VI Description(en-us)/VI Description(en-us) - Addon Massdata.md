@@ -18,7 +18,6 @@
 > A typical Massdata data format is: `<MassData>Start:8057;Size:4004;DataType:1D I32`. 
 >
 > where:
->
 > - `Start`: The starting address of the data in memory.
 > - `Size`: The size of the data in bytes.
 > - `DataType(optional)`: The type of the data, defined by the CSM Data Type String VI.
@@ -29,7 +28,7 @@ Configures the Massdata background cache size. The default value is 1 MB.
 
 It is recommended to configure an appropriate cache size that is not too large to avoid wasting memory and not too small to prevent frequent overwrites. You can use the provided debugging tools to monitor cache usage and determine the optimal configuration.
 
-> Ref: CSM Massdata Argument Support
+> - Ref: CSM Massdata Argument Support
 
 -- <b>Controls</b> --
 - <b>Size (1M)</b>: Cache size in bytes. The default is 1 MB.
@@ -38,7 +37,7 @@ It is recommended to configure an appropriate cache size that is not too large t
 
 Converts a Massdata argument back to raw data.
 
-> Ref: CSM Massdata Argument Format
+> - Ref: CSM Massdata Argument Format
 
 -- <b>Controls</b> --
 - <b>MassData Argument</b>: Input Massdata argument.
@@ -51,7 +50,7 @@ Converts a Massdata argument back to raw data.
 
 Converts data into a Massdata argument. The Massdata argument obtained from this conversion does not contain data type information.
 
-> Ref: CSM Massdata Argument Format
+> - Ref: CSM Massdata Argument Format
 
 -- <b>Controls</b> --
 - <b>Data</b>: Input data.
@@ -63,7 +62,7 @@ Converts data into a Massdata argument. The Massdata argument obtained from this
 
 Converts data into a Massdata argument. The Massdata argument obtained from this conversion contains data type information.
 
-> Ref: CSM Massdata Argument Format
+> - Ref: CSM Massdata Argument Format
 
 -- <b>Controls</b> --
 - <b>Data</b>: Input data.
@@ -75,7 +74,7 @@ Converts data into a Massdata argument. The Massdata argument obtained from this
 
 Extracts the data type string from a Massdata argument.
 
-> Ref: CSM Massdata Argument Format
+> - Ref: CSM Massdata Argument Format
 
 -- <b>Controls</b> --
 - <b>MassData Argument</b>: Input Massdata argument.

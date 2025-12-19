@@ -28,7 +28,7 @@ Breaks down a string containing multiple lines of CSM state strings into an arra
 
 Concatenates and generates exit messages ("Macro: Exit") based on input CSM module names.
 
-> Ref: Message Building API
+> - Ref: Message Building API
 
 -- <b>Controls</b> --
 - <b>CSMs</b>: Array of CSM module names.
@@ -41,7 +41,7 @@ Concatenates and generates exit messages ("Macro: Exit") based on input CSM modu
 
 Filters duplicate messages, keeping only the latest message.
 
-> Ref: Message Building API
+> - Ref: Message Building API
 
 -- <b>Controls</b> --
 - <b>States</b>: Input message string.

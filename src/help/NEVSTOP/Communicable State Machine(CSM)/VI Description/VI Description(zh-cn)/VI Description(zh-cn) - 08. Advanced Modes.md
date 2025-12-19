@@ -23,8 +23,8 @@
 
 <b>参考范例</b>:  “0. Base Concepts\7. System-Level Module.vi”。
 
-> Ref: 名称拼接API
-> Ref: CSM系统级模块
+> - Ref: 名称拼接API
+> - Ref: CSM系统级模块
 
 -- <b>输入控件(Controls)</b> --
 - <b>CSM Name</b>: CSM模块名称。
@@ -93,8 +93,8 @@
 
 <b>参考范例</b>:  “4. Advance Examples\1. Action Workers Example”。
 
-> Ref: 名称拼接API
-> Ref: CSM工作者模式(Worker Mode)
+> - Ref: 名称拼接API
+> - Ref: CSM工作者模式(Worker Mode)
 
 -- <b>输入控件(Controls)</b> --
 - <b>CSM Name</b>: CSM模块名称。
@@ -141,8 +141,8 @@
 
 <b>参考范例</b>:  “4. Advance Examples\2. Chain of Responsibility Example”。
 
-> Ref: CSM责任链模式(Chain of Responsibility Mode)
-> Ref: 名称拼接API
+> - Ref: CSM责任链模式(Chain of Responsibility Mode)
+> - Ref: 名称拼接API
 
 -- <b>输入控件(Controls)</b> --
 - <b>CSM Name</b>:  CSM模块名称。
@@ -183,7 +183,7 @@
 
 <b>参考范例</b>:  4. Advance Examples\5. Multi-Loop Module Example\TCP Server Module(Multi-Loop Support).vi
 
-> Ref: CSM多循环模式(Multi-Loop Mode)
+> - Ref: CSM多循环模式(Multi-Loop Mode)
 
 -- <b>输入控件(Controls)</b> --
 - <b>Module Name</b>: 发送状态的CSM。
@@ -202,7 +202,7 @@
 
 <b>参考范例</b>:  4. Advance Examples\5. Multi-Loop Module Example\TCP Server Module(Multi-Loop Support).vi
 
-> Ref: CSM多循环模式(Multi-Loop Mode)
+> - Ref: CSM多循环模式(Multi-Loop Mode)
 
 -- <b>输入控件(Controls)</b> --
 - <b>Module Name</b>: 发送状态的CSM。
@@ -217,7 +217,7 @@
 
 <b>参考范例</b>:  “Addons - Loop Support\CSMLS - Continuous Loop in CSM Example.vi”。
 
-> Ref: CSM多循环模式(Multi-Loop Mode)
+> - Ref: CSM多循环模式(Multi-Loop Mode)
 
 -- <b>输入控件(Controls)</b> --
 - <b>State(s) In ("")</b>: 待处理的状态。

@@ -13,13 +13,13 @@ Starts the CSM Watchdog thread to monitor whether the main program has exited. I
 
 <b>Application Scenario:</b> Used to ensure that all asynchronously started CSM modules can exit normally after the main program exits.
 
-> Ref: CSM WatchDog Implementation Principle
+> - Ref: CSM WatchDog Implementation Principle
 
 ### CSM Watchdog Thread.vi
 
 The CSM Watchdog thread is used to ensure that all asynchronously started CSM modules can exit normally after the main program exits.
 
-> Ref: CSM WatchDog Implementation Principle
+> - Ref: CSM WatchDog Implementation Principle
 
 -- <b>Controls</b> --
 - <b>Watchdog Queue</b>: Watchdog queue resource.
@@ -38,16 +38,15 @@ Starts the CSM Global Log file recording background thread, which is used to sav
 > [!NOTE] 
 > <b>Log File Limits</b>
 >
-> To prevent log files from becoming too large due to long-running software, limits are set on log file size and the number of files.
->
+> To prevent log files from becoming too large due to long-running software, limits are set on log file size and the number of files:
 > - <b>File Size:</b> The maximum size of a single file in bytes. The default is 10 MB.
 > - <b>File Num:</b> The maximum number of LOG files. The default is 2.
 >
 > When the log file size exceeds the <b>File Size</b> limit, a new file record is created. When the number of log files exceeds the <b>File Num</b> limit, the oldest file record is deleted.
 
-> Ref: Global Log Filter Rules [TODO]
+> - Ref: Global Log Filter Rules [TODO]
 
-Reference Example: `Addons - Logger\CSM Application Running Log Example.vi`.
+<b>Reference Example</b>: `Addons - Logger\CSM Application Running Log Example.vi`.
 
 -- <b>Controls</b> --
 - <b>Log File Path</b>: Log file path.
@@ -66,13 +65,13 @@ Reference Example: `Addons - Logger\CSM Application Running Log Example.vi`.
 
 The thread VI used in the CSM - Start File Logger VI.
 
-> Ref: CSM File Logger Implementation Principle
+> - Ref: CSM File Logger Implementation Principle
 
 ### CSM-Logger-Thread(Event).vi
 
 The thread VI originally used in the CSM - Start File Logger VI. This VI is now deprecated. Use the CSM-Logger-Thread VI.
 
-> Ref: CSM File Logger Implementation Principle
+> - Ref: CSM File Logger Implementation Principle
 
 ## CSM Loop Support Addon
 
@@ -82,7 +81,6 @@ The thread VI originally used in the CSM - Start File Logger VI. This VI is now 
 > A loop is the basic unit of operation for a state machine, executing continuously while the state machine is running. Users can define loop conditions via logic or use the CSM-recommended Loop Support Addon to define loops.
 >
 > Typically loop schemes may have the following issues:
->
 > - Implementing a loop within a Case branch can cause the state machine to get stuck in that state, unable to switch normally or respond to external messages.
 > - Inserting the next loop state in the last state of a state loop can also result in poor response to external messages and is unintuitive.
 >
@@ -109,9 +107,9 @@ The loop can be ended by removing `-><loop>`. You can use the following VIs to r
 - CSMLS - Remove Loop Tag and previous State(s) to Break VI: Removes the line containing the `-><loop>` tag and all preceding states, used to break out of the loop.
 - CSMLS - Remove Loop Tag to Break VI: Removes the line containing the `-><loop>` tag, used to break out of the loop.
 
-Reference Example: `Addons - Loop Support\CSMLS - Continuous Loop in CSM Example.vi`.
+<b>Reference Example</b>: `Addons - Loop Support\CSMLS - Continuous Loop in CSM Example.vi`.
 
-> Ref: Reason for CSM LOOP Support Design
+> - Ref: Reason for CSM LOOP Support Design
 
 > [!WARNING] 
 > <b>Add to Front? (F)</b> is usually FALSE because once a loop state starts, it does not end immediately. Before insertion into the state queue, it is considered a sub-state of the current state. If the current state was called via a synchronous message, it would not return immediately. For example, if a set of continuous acquisition states is defined in "API: Start DAQ" and this message is sent synchronously from outside, the logic should be to start the loop and then return immediately. Only set <b>Add to Front? (F)</b> to TRUE if the logic is to wait for the loop to end before returning.
@@ -128,7 +126,7 @@ Reference Example: `Addons - Loop Support\CSMLS - Continuous Loop in CSM Example
 
 Appends loop states to maintain the loop running.
 
-Reference Example: `Addons - Loop Support\CSMLS - Continuous Loop in CSM Example.vi`.
+<b>Reference Example</b>: `Addons - Loop Support\CSMLS - Continuous Loop in CSM Example.vi`.
 
 -- <b>Controls</b> --
 - <b>States Queue</b>: Connect the entire state queue to this input.
@@ -204,10 +202,10 @@ Checks for loop tags upon exit. Since this VI is easily forgotten to be called, 
 
 Provides a version of the CSM - Set Module Attribute VI that automatically adapts to the input data type.
 
-> Ref: CSM - Set Module Attribute.vi
+> - Ref: CSM - Set Module Attribute.vi
 
 ### CSM Get Module Attribute.vim
 
 Provides a version of the CSM - Get Module Attribute VI that automatically adapts to the input data type.
 
-> Ref: CSM - Get Module Attribute.vi
+> - Ref: CSM - Get Module Attribute.vi
