@@ -68,7 +68,7 @@
 Determines whether the data type is a conversion data type supported by API String.
 
 > Ref: API String Parameter Support 
-> Ref: CSM HEXSTR Format
+> Ref: CSM HEXSTR Format Argument
 
 -- <b>Controls</b> --
 

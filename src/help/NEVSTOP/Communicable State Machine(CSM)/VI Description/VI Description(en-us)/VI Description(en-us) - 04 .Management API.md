@@ -63,7 +63,7 @@ Example: The system contains the following five modules: Level1.Level2A, Level1.
 > [!NOTE] 
 > Submodules are only valid for normal CSM modules and are invalid for modules in Worker Mode or Chain of Responsibility Mode.
 
-> Ref: CSM Submodules
+> Ref: CSM Submodule
 
 -- <b>Controls</b> --
 

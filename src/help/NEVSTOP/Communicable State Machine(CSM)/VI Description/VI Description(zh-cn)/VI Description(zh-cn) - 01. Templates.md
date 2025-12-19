@@ -61,9 +61,9 @@
 
 用于创建带用户界面的CSM模块的紧凑代码模板，该模板包含用于响应用户操作的用户事件结构。该模板功能与 CSM User Interface(UI) Module Template VI完全相同，区别仅在于代码更加紧凑.
 
-> Ref: CSM 名称规则
-> Ref: CSM 初始化状态
-> Ref: CSM 退出状态
+> Ref: CSM名称规则
+> Ref: CSM初始化状态
+> Ref: CSM退出状态
 
 -- <b>输入控件(Controls)</b> --
 - <b>Name ("" to use UUID)</b>：CSM模块名称。请参考*CSM名称规则*。
@@ -79,9 +79,9 @@
 
 参考范例："[CSM-Example]\4. Advance Examples\CSMLS - Continuous Loop in CSM Example.vi"。
 
-> Ref: CSM 名称规则
-> Ref: CSM 初始化状态
-> Ref: CSM 退出状态
+> Ref: CSM名称规则
+> Ref: CSM初始化状态
+> Ref: CSM退出状态
 
 -- <b>输入控件(Controls)</b> --
 - <b>Name ("" to use UUID)</b>: CSM模块名称。请参考*CSM名称规则*。

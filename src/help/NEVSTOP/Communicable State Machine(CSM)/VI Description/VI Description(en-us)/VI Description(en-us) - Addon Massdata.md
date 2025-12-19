@@ -29,7 +29,7 @@ Configures the Massdata background cache size. The default value is 1 MB.
 
 It is recommended to configure an appropriate cache size that is not too large to avoid wasting memory and not too small to prevent frequent overwrites. You can use the provided debugging tools to monitor cache usage and determine the optimal configuration.
 
-> Ref: CSM Massdata Parameter Support
+> Ref: CSM Massdata Argument Support
 
 -- <b>Controls</b> --
 
