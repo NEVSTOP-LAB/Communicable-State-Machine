@@ -26,10 +26,10 @@
 > Ref: 名称拼接API
 > Ref: CSM系统级模块
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>CSM Name</b>：CSM模块名称。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>CSM Name (Marked As Sysetem-Level Module)</b>：添加“.”标记的CSM模块名称。
 
 
@@ -53,19 +53,19 @@
 
 拼接生成子模块名。
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 
 - <b>CSM Name</b>：CSM模块名称。
 - <b>Name</b>：要拼接的名称。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 
 - <b>Submodule Name</b>：拼接生成的子模块名。
 
 ## 工作者模式 (Work Mode API)
 
 > [!NOTE] 
-> **CSM工作者模式（Worker Mode）**
+> **CSM工作者模式(Worker Mode)**
 >
 > 一个CSM模块，通过实例化多个实例，申请的名称后添加“#”，并共享相同的消息队列，实现工作者模式。
 > - 从外部调用上看，这些实例一起组成了一个复合的模块，命名为 Worker Agent。
@@ -96,20 +96,20 @@
 参考范例：“4. Advance Examples\1. Action Workers Example”。
 
 > Ref: 名称拼接API
-> Ref: CSM工作者模式（Worker Mode）
+> Ref: CSM工作者模式(Worker Mode)
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 
 - <b>CSM Name</b>：CSM模块名称。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 
 - <b>CSM Name (Marked As Worker)</b>：添加“#”标记的CSM模块名称。
 
 ## 责任链模式 (Chain of Responsibility API) - 待完善
 
 > [!NOTE] 
-> **CSM责任链模式（Chain of Responsibility Mode）**
+> **CSM责任链模式(Chain of Responsibility Mode)**
 >
 > 多个CSM模块，申请的名称后添加“$”，组成处理事务的一个链条，通过责任链模式形成一个完整的模块。
 >
@@ -145,14 +145,14 @@
 
 参考范例：“4. Advance Examples\2. Chain of Responsibility Example”。
 
-> Ref: CSM责任链模式（Chain of Responsibility Mode）
+> Ref: CSM责任链模式(Chain of Responsibility Mode)
 > Ref: 名称拼接API
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>CSM Name</b>:  CSM模块名称。
 - <b>Order</b>：责任链模式下的顺序，编号小的节点，将排列在责任链的前面。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>CSM Name (Marked As Chain)</b>：添加“$”标记的CSM模块名称。
 
 ### CSM - Resolve Node Module.vi
@@ -169,7 +169,7 @@
 ## 多循环模式支持(Multi-Loop Support)
 
 > [!NOTE]
-> **CSM多循环模式（Multi-Loop Mode）**
+> **CSM多循环模式(Multi-Loop Mode)**
 >
 > 在有些场景下，适合使用多个循环构成同一个CSM模块，例如：
 > - 一段已有的功能代码上改造为CSM模块，例如TCP连接循环、DAQmx数据采集循环，为了保证原本的逻辑清晰，可以在已有的代码包裹While循环，再附加CSM通讯循环，实现改造功能。
@@ -188,9 +188,9 @@
 参考范例：
 4. Advance Examples\5. Multi-Loop Module Example\TCP Server Module(Multi-Loop Support).vi
 
-> Ref: CSM多循环模式（Multi-Loop Mode）
+> Ref: CSM多循环模式(Multi-Loop Mode)
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>Module Name</b>：发送状态的CSM。
 - <b>State</b>：消息名称。
 - <b>Arguments ("")</b>：将被广播的状态参数。
@@ -208,9 +208,9 @@
 参考范例：
 4. Advance Examples\5. Multi-Loop Module Example\TCP Server Module(Multi-Loop Support).vi
 
-> Ref: CSM多循环模式（Multi-Loop Mode）
+> Ref: CSM多循环模式(Multi-Loop Mode)
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>Module Name</b>：发送状态的CSM。
 - <b>Status</b>：将被广播的状态。
 - <b>Arguments ("")</b>：将被广播的状态参数。
@@ -224,24 +224,24 @@
 参考范例：
 “Addons - Loop Support\CSMLS - Continuous Loop in CSM Example.vi”。
 
-> Ref: CSM多循环模式（Multi-Loop Mode）
+> Ref: CSM多循环模式(Multi-Loop Mode)
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>State(s) In ("")</b>：待处理的状态。
 - <b>Name ("" to Use UUID)</b>：模块的名称。
 - <b>High Priority? (T)</b>：立即执行选项。立即发送会让此消息在CSM循环中立即被处理，而不是等待CSM循环中现存的消息执行完毕。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>States Out</b>：输入始终为空，是为了在模板中保证连线一致性设置的输出端。
 
 ### CSM - Module Turns Invalid.vi
 
 检查CSM是否已经退出。通常用于和CSM并行的功能循环的跟随CSM循环退出。
 
-CSM高级模式的模块（协作者模式、责任链模式）只有在最后一个节点退出后，才会触发模块退出事件。
+CSM高级模式的模块(协作者模式、责任链模式)只有在最后一个节点退出后，才会触发模块退出事件。
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>CSM Name</b>：CSM模块名称。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>Turn Invalid (Exit)?</b>：CSM模块是否已经退出。

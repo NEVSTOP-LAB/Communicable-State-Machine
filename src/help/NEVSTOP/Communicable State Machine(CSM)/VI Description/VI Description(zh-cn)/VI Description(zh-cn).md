@@ -1,15 +1,15 @@
 # CSM API
 
-- [01. 模板（Templates）](./VI%20Description(zh-cn)%20-%2001.%20Templates.md)
-- [02. 核心功能（Core Functions）](./VI%20Description(zh-cn)%20-%2002.%20Core%20Functions.md)
-- [03. 参数（Arguments）](./VI%20Description(zh-cn)%20-%2003.%20Arguments.md)
-- [04. 管理接口（Management API）](./VI%20Description(zh-cn)%20-%2004.%20Management%20API.md)
-- [05. 模块操作接口（Module Operation API）](./VI%20Description(zh-cn)%20-%2005.%20Module%20Operation%20API.md)
-- [06. 状态订阅管理（Status Registration）](./VI%20Description(zh-cn)%20-%2006.%20Status%20Registration.md)
-- [07. 全局日志（Global Log）](./VI%20Description(zh-cn)%20-%2007.%20Global%20Log.md)
-- [08. 高级模式（Advanced Modes）](./VI%20Description(zh-cn)%20-%2008.%20Advanced%20Modes.md)
-- [09. 内置插件（Built-in Addons）](./VI%20Description(zh-cn)%20-%2009.%20Build-in%20Addons.md)
-- [10. 工具VI（Utility VIs）](./VI%20Description(zh-cn)%20-%2010.%20Utility%20VIs.md)
+- [01. 模板(Templates)](./VI%20Description(zh-cn)%20-%2001.%20Templates.md)
+- [02. 核心功能(Core Functions)](./VI%20Description(zh-cn)%20-%2002.%20Core%20Functions.md)
+- [03. 参数(Arguments)](./VI%20Description(zh-cn)%20-%2003.%20Arguments.md)
+- [04. 管理接口(Management API)](./VI%20Description(zh-cn)%20-%2004.%20Management%20API.md)
+- [05. 模块操作接口(Module Operation API)](./VI%20Description(zh-cn)%20-%2005.%20Module%20Operation%20API.md)
+- [06. 状态订阅管理(Status Registration)](./VI%20Description(zh-cn)%20-%2006.%20Status%20Registration.md)
+- [07. 全局日志(Global Log)](./VI%20Description(zh-cn)%20-%2007.%20Global%20Log.md)
+- [08. 高级模式(Advanced Modes)](./VI%20Description(zh-cn)%20-%2008.%20Advanced%20Modes.md)
+- [09. 内置插件(Built-in Addons)](./VI%20Description(zh-cn)%20-%2009.%20Build-in%20Addons.md)
+- [10. 工具VI(Utility VIs)](./VI%20Description(zh-cn)%20-%2010.%20Utility%20VIs.md)
 - [11. CSM-Helper API](./VI%20Description(zh-cn)%20-%2011.%20CSM-Helper%20API.md)
 - [12. Debug,Doc,Tools](./VI%20Description(zh-cn)%20-%2012.%20Debug,Doc,Tools.md)
 - [13. Internal](./VI%20Description(zh-cn)%20-%2013.%20Internal.md)
@@ -18,39 +18,39 @@
 > **CSM模块间通信类型**
 > 
 > CSM模块间的通信分为两类：消息和广播。
-> - 消息：模块间1:1的通信，根据消息处理的方式，又可分为同步调用（-@）、异步调用（->）、异步不等待返回（->|）等。
-> - 广播：模块间1:N的通信，广播模块会将广播推送给所有订阅了该广播的模块。根据广播处理的优先级，又可分为信号广播（status）和中断广播（interrupt）。
+> - 消息：模块间1:1的通信，根据消息处理的方式，又可分为同步调用(-@)、异步调用(->)、异步不等待返回(->|)等。
+> - 广播：模块间1:N的通信，广播模块会将广播推送给所有订阅了该广播的模块。根据广播处理的优先级，又可分为信号广播(status)和中断广播(interrupt)。
 
 
 > [!NOTE] 
 > **CSM模块外部接口**
 >
 > 基于CSM框架编写的模块，具有良好的复用性。使用者只需了解以下接口信息，即可在不了解具体实现的情况下，使用CSM模块。
-> - 消息接口（Message）：外部可调用的消息名称、参数信息和返回信息。
-> - 广播接口（Broadcast）：外部可调用的广播名称、参数信息。
-> - 属性接口（Attribute）：模块可使用的属性名称、属性数据类型（LabVIEW数据类型）。
+> - 消息接口(Message)：外部可调用的消息名称、参数信息和返回信息。
+> - 广播接口(Broadcast)：外部可调用的广播名称、参数信息。
+> - 属性接口(Attribute)：模块可使用的属性名称、属性数据类型(LabVIEW数据类型)。
 
 
 > [!NOTE]
 > **CSM消息类型**
 >
-> CSM消息分为三类：同步调用（-@）、异步调用（->）、异步不等待返回（->|）。
-> - 同步调用（-@）：模块会等待目标模块返回结果，才会继续执行后续代码。
-> - 异步调用（->）：模块会立即继续执行后续代码，而不会等待目标模块返回结果。
-> - 异步不等待返回（->|）：模块会立即继续执行后续代码，而不会等待目标模块返回结果。与异步调用（->）不同的是，异步不等待返回（->|）不会等待目标模块返回结果，也不会抛出错误。
+> CSM消息分为三类：同步调用(-@)、异步调用(->)、异步不等待返回(->|)。
+> - 同步调用(-@)：模块会等待目标模块返回结果，才会继续执行后续代码。
+> - 异步调用(->)：模块会立即继续执行后续代码，而不会等待目标模块返回结果。
+> - 异步不等待返回(->|)：模块会立即继续执行后续代码，而不会等待目标模块返回结果。与异步调用(->)不同的是，异步不等待返回(->|)不会等待目标模块返回结果，也不会抛出错误。
 
 
 > [!NOTE] 
 > **CSM消息格式解析**
 >
-> [CSM消息字符串（CSM Message）] >> [参数（Arguments）] [消息类型符号（Message Symbol） ->|,->,-@] [目标模块（Target Module）] // [注释（Comments）]
+> [CSM消息字符串(CSM Message)] >> [参数(Arguments)] [消息类型符号(Message Symbol) ->|,->,-@] [目标模块(Target Module)] // [注释(Comments)]
 >
-> - CSM 消息字符串（CSM Message）：CSM的消息，不可包含CSM关键字和换行符。
-> - ">>"：CSM消息字符串（CSM Message）和参数（Arguments）的分隔符。
-> - 参数（Arguments）：CSM消息的参数，不可包含CSM关键字和换行符。
-> - 消息类型符号（Message Symbol）：消息类型符号，用于标识消息类型，包括同步调用（-@）、异步调用（->）、异步不等待返回（->|）等。
-> - 目标模块（Target Module）：消息发送的目标模块，如为空，则表示消息会被本模块处理。为空时，消息类型符号也不能存在。
-> - 注释（Comments）：注释信息，不会被解析。
+> - CSM 消息字符串(CSM Message)：CSM的消息，不可包含CSM关键字和换行符。
+> - ">>"：CSM消息字符串(CSM Message)和参数(Arguments)的分隔符。
+> - 参数(Arguments)：CSM消息的参数，不可包含CSM关键字和换行符。
+> - 消息类型符号(Message Symbol)：消息类型符号，用于标识消息类型，包括同步调用(-@)、异步调用(->)、异步不等待返回(->|)等。
+> - 目标模块(Target Module)：消息发送的目标模块，如为空，则表示消息会被本模块处理。为空时，消息类型符号也不能存在。
+> - 注释(Comments)：注释信息，不会被解析。
 
 
 > [!NOTE] 
@@ -89,7 +89,7 @@
 > [!NOTE]
 > **异步消息**
 >
-> 异步消息是消息的一种。CSM发出异步消息后，将立即继续执行后续代码，而不会等待被调用方完成消息处理。异步消息分为异步调用（->）和异步不等待返回（->|），区别只在于异步无返回消息，当被调用方完成操作后，不会将结果返回给调用方。
+> 异步消息是消息的一种。CSM发出异步消息后，将立即继续执行后续代码，而不会等待被调用方完成消息处理。异步消息分为异步调用(->)和异步不等待返回(->|)，区别只在于异步无返回消息，当被调用方完成操作后，不会将结果返回给调用方。
 >
 > 调用方会发生的错误：
 > - 如果输入的目标模块为""，会产生NO Target Error。
@@ -111,7 +111,7 @@
 > 
 > CSM定义了系统所需的操作，例如发送广播，广播的订阅、取消订阅。可以基于此定义，扩展系统的功能。
 > 
-> //[CSM操作字符串（CSM Operation）] >> [参数（Arguments）] -> <[操作类型（Operation）]> // [注释（Comments）]
+> //[CSM操作字符串(CSM Operation)] >> [参数(Arguments)] -> <[操作类型(Operation)]> // [注释(Comments)]
 >
 >       例如：
 >       TCP Connected >> 192.168.1.100 -> <broadcast> // 发送信号广播"TCP Connected"，参数为"192.168.1.100"
@@ -121,40 +121,40 @@
 > [!NOTE] 
 > **CSM广播**
 >
-> CSM中的广播分为三种：信号广播（Status）、中断广播（Interrupt）和状态广播（State）， 模块会将信号广播推送给所有订阅了该信号广播的模块。
-> 其中信号广播（Status）和中断广播（Interrupt）是需要显式调用的广播，状态广播（State）是隐式的广播，在订阅关系存在的情况下，当CSM运行完成某个状态，就会自动触发状态广播（State）。
+> CSM中的广播分为三种：信号广播(Status)、中断广播(Interrupt)和状态广播(State)， 模块会将信号广播推送给所有订阅了该信号广播的模块。
+> 其中信号广播(Status)和中断广播(Interrupt)是需要显式调用的广播，状态广播(State)是隐式的广播，在订阅关系存在的情况下，当CSM运行完成某个状态，就会自动触发状态广播(State)。
 >
-> - 信号广播（Status）：普通优先级的广播，类似异步消息，会通过低优先级队列传递。当模块中存在其他未处理的异步消息或者信号广播时，会依次被处理。
-> - 中断广播（Interrupt）：高优先级的广播，类似同步消息，会通过高优先级队列传递。当模块中存在其他低优先级的异步消息或者信号广播时，会被优先处理，但是如果存在其他未处理的同步消息或中断广播时，会被依次处理。
-> - 状态广播（State）：状态广播是隐式的广播，在订阅关系存在的情况下，当CSM运行完成某个状态，就会自动触发状态广播（State）。状态广播的参数，为CSM状态的Response。
+> - 信号广播(Status)：普通优先级的广播，类似异步消息，会通过低优先级队列传递。当模块中存在其他未处理的异步消息或者信号广播时，会依次被处理。
+> - 中断广播(Interrupt)：高优先级的广播，类似同步消息，会通过高优先级队列传递。当模块中存在其他低优先级的异步消息或者信号广播时，会被优先处理，但是如果存在其他未处理的同步消息或中断广播时，会被依次处理。
+> - 状态广播(State)：状态广播是隐式的广播，在订阅关系存在的情况下，当CSM运行完成某个状态，就会自动触发状态广播(State)。状态广播的参数，为CSM状态的Response。
 
 > [!NOTE] 
 > **CSM广播格式解析**
 >
-> [CSM广播字符串（CSM Broadcast）] >> [参数（Arguments）] -> <broadcast> // [注释（Comments）]
-> [CSM信号广播字符串（CSM Broadcast）] >> [参数（Arguments）] -> <status> // [注释（Comments）]
-> [CSM中断广播字符串（CSM Broadcast）] >> [参数（Arguments）] -> <interrupt> // [注释（Comments）]
+> [CSM广播字符串(CSM Broadcast)] >> [参数(Arguments)] -> <broadcast> // [注释(Comments)]
+> [CSM信号广播字符串(CSM Broadcast)] >> [参数(Arguments)] -> <status> // [注释(Comments)]
+> [CSM中断广播字符串(CSM Broadcast)] >> [参数(Arguments)] -> <interrupt> // [注释(Comments)]
 >
-> - CSM广播字符串（CSM Broadcast）：CSM的广播，不可包含CSM关键字和换行符。
-> - ">>"：CSM广播字符串（CSM Broadcast）和参数（Arguments）的分隔符。
-> - 参数（Arguments）：CSM 广播的参数，不可包含CSM关键字和换行符。
-> - 广播类型（Broadcast Type）：<broadcast>,<status>为信号广播（Status），<interrupt>为中断广播（Interrupt）。
-> - 注释（Comments）：注释信息，不会被解析。
+> - CSM广播字符串(CSM Broadcast)：CSM的广播，不可包含CSM关键字和换行符。
+> - ">>"：CSM广播字符串(CSM Broadcast)和参数(Arguments)的分隔符。
+> - 参数(Arguments)：CSM 广播的参数，不可包含CSM关键字和换行符。
+> - 广播类型(Broadcast Type)：<broadcast>,<status>为信号广播(Status)，<interrupt>为中断广播(Interrupt)。
+> - 注释(Comments)：注释信息，不会被解析。
 > 
 
 > [!NOTE]
 > **CSM订阅**
 >
-> 订阅是将广播与绑定的接口（API）关联起来，当广播被触发时，会调用绑定的接口（API）。当然，也可以取消订阅。
+> 订阅是将广播与绑定的接口(API)关联起来，当广播被触发时，会调用绑定的接口(API)。当然，也可以取消订阅。
 > 在CSM中，有以下两种广播：
 >
-> 1. 广播（Broadcast）：广播由模块显示的调用广播消息发送，参数需要显示给入。
-> 2. 状态（State）：CSM模块的任意一个状态，也可以被订阅。被触发的API收到的参数，为CSM状态的Repsonse。
+> 1. 广播(Broadcast)：广播由模块显示的调用广播消息发送，参数需要显示给入。
+> 2. 状态(State)：CSM模块的任意一个状态，也可以被订阅。被触发的API收到的参数，为CSM状态的Repsonse。
 >
 >     // 注册
->    [广播消息名称]@[源模块（SourceModule）] >> [绑定的接口（API）]@[目标模块（TargetModule）] -><register> // [注释（Comments）]
+>    [广播消息名称]@[源模块(SourceModule)] >> [绑定的接口(API)]@[目标模块(TargetModule)] -><register> // [注释(Comments)]
 >     // 取消注册
->    [广播消息名称]@[源模块（SourceModule）] >> [绑定的接口（API）]@[目标模块（TargetModule）] -><unregister> // [注释（Comments）]
+>    [广播消息名称]@[源模块(SourceModule)] >> [绑定的接口(API)]@[目标模块(TargetModule)] -><unregister> // [注释(Comments)]
 >
 >
 > - 广播消息名称：由源模块定义，参考“CSM 广播格式解析”。
@@ -162,4 +162,4 @@
 > - 绑定的接口：由目标模块定义，为目标模块对外的接口。
 > - 目标模块：绑定的接口所在的模块。当在CSM模块中表示订阅到本模块，可忽略。同时省略前面的@分隔符。
 > - <register>/<unregister>：注册/取消订阅的操作类型定义。
-> - 注释（Comments）：注释信息，不会被解析。
+> - 注释(Comments)：注释信息，不会被解析。

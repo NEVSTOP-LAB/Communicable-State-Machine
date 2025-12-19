@@ -19,14 +19,14 @@
 >
 > 格式定义：${section.variable:defaultValue}
 > - `${}`：变量引用语法。
-> - `section`（可选）：配置文件中的节名。
+> - `section`(可选)：配置文件中的节名。
 > - `variable`：配置文件中的变量名。
-> - `defaultValue`（可选）：默认值，当变量不存在时使用。
+> - `defaultValue`(可选)：默认值，当变量不存在时使用。
 >
 > 说明：
 > - 支持嵌套的变量引用，例如`${section1.variable1:${section2.variable2:defaultValue2}}`。
 > - section参数为可选。省略时，使用默认配置段 `SectionName=LabVIEW`。
-> - 默认值为可选，未指定时默认为空字符串（""）。
+> - 默认值为可选，未指定时默认为空字符串("")。
 
 > [!NOTE] CSM INI-Variable配置文件路径
 >
@@ -83,7 +83,7 @@
 > Ref: CSM INI-Variable配置文件路径
 
 -- <b>输入控件 (Controls)</b> --
-- <b>Configuration Prototype (Cluster Prefered)</b>：配置原型（推荐使用簇）。
+- <b>Configuration Prototype (Cluster Prefered)</b>：配置原型(推荐使用簇)。
 - <b>Section Name ("" as Default)</b>：节名，空字符串表示使用默认节。
 - <b>Write If not found? (F)</b>：如果未找到，是否写入默认值。
 
@@ -92,10 +92,10 @@
 
 ### CSM - Read Cluster Elements From Session.vim
 
-读取配置中的簇数据，数据保存在指定的节（section）中，簇中的元素名称对应节（section）中的键（key）。
+读取配置中的簇数据，数据保存在指定的节(section)中，簇中的元素名称对应节(section)中的键(key)。
 
-- 如果指定的节（section）不存在，则使用默认节。
-- 如果簇中的元素对应的键（key）不存在，则使用输入原型中的值作为默认值。
+- 如果指定的节(section)不存在，则使用默认节。
+- 如果簇中的元素对应的键(key)不存在，则使用输入原型中的值作为默认值。
 
 **应用场景**：直接将INI配置文件中的配置读取成LabVIEW数据。
 
@@ -112,7 +112,7 @@
 
 ### CSM - Read Cluster Elements From Key.vim
 
-读取配置中的簇数据，数据保存在指定的节（section）中的指定键（key），数据以API String格式保存。
+读取配置中的簇数据，数据保存在指定的节(section)中的指定键(key)，数据以API String格式保存。
 
 **应用场景**：直接将INI配置文件中的配置读取成LabVIEW数据。
 
@@ -150,7 +150,7 @@
 
 ### Convert API String to Cluster(Default in Session).vim
 
-将API String字符串转换为簇，数据保存在指定的节（section）中，簇中的元素名称对应节（section）中的键（key）。具有明确的优先级层次：CSM API参数>配置文件参数>默认常量参数。例如，这使得将串口初始化参数固定在配置文件中变得非常简单。
+将API String字符串转换为簇，数据保存在指定的节(section)中，簇中的元素名称对应节(section)中的键(key)。具有明确的优先级层次：CSM API参数>配置文件参数>默认常量参数。例如，这使得将串口初始化参数固定在配置文件中变得非常简单。
 
 - 初始化时，显式发送的参数具有最高优先级。
 - 若未发送参数，则使用配置文件中的参数。
@@ -171,7 +171,7 @@
 
 ### Convert API String to Cluster(Default in Key).vim
 
-将API String字符串转换为簇，数据保存在指定的节（section）中的指定键（key）。具有明确的优先级层次：CSM API参数>配置文件参数>默认常量参数。例如，这使得将串口初始化参数固定在配置文件中变得非常简单。
+将API String字符串转换为簇，数据保存在指定的节(section)中的指定键(key)。具有明确的优先级层次：CSM API参数>配置文件参数>默认常量参数。例如，这使得将串口初始化参数固定在配置文件中变得非常简单。
 
 - 初始化时，显式发送的参数具有最高优先级。
 - 若未发送参数，则使用配置文件中的参数。
@@ -275,7 +275,7 @@
 
 从指定文件加载配置变量。如果节名后缀不为空，载入的节名称会加上该后缀。
 
-<b>Section Postfix ("")</b>主要用于载入多个配置文件但具有相同节的情况。例如：两个配置文件Hardware1.ini和Hardware2.ini，都有一个名为"Serial"的节且内部的Keys相同（表示串口配置），那么后载入的文件中的配置会覆盖先载入的文件中的配置。使用<b>Section Postfix ("")</b>可以避免节名冲突。
+<b>Section Postfix ("")</b>主要用于载入多个配置文件但具有相同节的情况。例如：两个配置文件Hardware1.ini和Hardware2.ini，都有一个名为"Serial"的节且内部的Keys相同(表示串口配置)，那么后载入的文件中的配置会覆盖先载入的文件中的配置。使用<b>Section Postfix ("")</b>可以避免节名冲突。
 
 **参考范例**：“5. import Config.ini with __include section.vi”。
 

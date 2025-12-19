@@ -1,22 +1,22 @@
 # CSM API String Addon
 
 > [!NOTE] API String参数支持
-> API String参数支持用于增强通信状态机（CSM）的API参数功能，支持以纯文本格式传递各种数据类型，并特别优化了手动输入体验。API String未定义参数类型（Argument Type），通过CSM - Argument Type VI获取的结果为空，通常在默认分支中处理。
+> API String参数支持用于增强通信状态机(CSM)的API参数功能，支持以纯文本格式传递各种数据类型，并特别优化了手动输入体验。API String未定义参数类型(Argument Type)，通过CSM - Argument Type VI获取的结果为空，通常在默认分支中处理。
 > 支持的数据类型包括：
 >
->   - 字符串（String）
->   - 路径（Path）
->   - 布尔值（Boolean）
->   - 标签（Tag）
->   - 引用号（Refnum，包括IVI/VISA/UserDefinedRefnumTag）
->   - 整数（I8, I16, I32, I64, U8, U16, U32, U64）
->   - 浮点数（DBL/SGL）
->   - 复数（DBL/SGL）
->   - 时间戳（Timestamp）
->   - 枚举（Enum）
->   - 数组（Array）
->   - 簇（Cluster）
->   - 其他类型（使用 CSM-Hexstr 表示）
+>   - 字符串(String)
+>   - 路径(Path)
+>   - 布尔值(Boolean)
+>   - 标签(Tag)
+>   - 引用号(Refnum，包括IVI/VISA/UserDefinedRefnumTag)
+>   - 整数(I8, I16, I32, I64, U8, U16, U32, U64)
+>   - 浮点数(DBL/SGL)
+>   - 复数(DBL/SGL)
+>   - 时间戳(Timestamp)
+>   - 枚举(Enum)
+>   - 数组(Array)
+>   - 簇(Cluster)
+>   - 其他类型(使用 CSM-Hexstr 表示)
 > 更多详细信息请访问：https://github.com/NEVSTOP-LAB/CSM-API-String-Arguments-Support
 > 或参考范例，所有数据类型均有详细说明和示例。
 
@@ -31,7 +31,7 @@
 > [!NOTE] 浮点数默认格式
 > 浮点数默认格式为"%.6p"。
 
-> [!NOTE] 带索引的枚举类型（Indexed Enum）
+> [!NOTE] 带索引的枚举类型(Indexed Enum)
 > 格式为[索引编号(index)][分隔符(separator)][枚举字符串]，索引编号支持多种数值表示方式
 > 
 > 索引编号使用 == 分隔符示例：
@@ -235,7 +235,7 @@
 
 将字符串转换为带索引的枚举类型。
 
-> Ref: 带索引的枚举类型（Indexed Enum）
+> Ref: 带索引的枚举类型(Indexed Enum)
 
     _**转换规则1: 无索引编号**_
     
@@ -284,7 +284,7 @@
 规则1: 当匹配到索引编号时，将直接使用该索引。
 规则2: 当没有匹配到索引编号时，将使用数字值作为枚举索引。
 
-> Ref: 带索引的枚举类型（Indexed Enum）
+> Ref: 带索引的枚举类型(Indexed Enum)
 
 -- <b>输入控件 (Controls)</b> --
 - <b>Numeric</b>：输入数字值。
@@ -335,8 +335,8 @@
 
 -- <b>输入控件 (Controls)</b> --
 - <b>Target Module</b>：CSM 目标模块。
-- <b>Current Module ("" to Generate an ID)</b>：当前模块（空字符串表示生成ID）。
-- <b>Wait (5000ms)</b>：等待时间（毫秒）。
+- <b>Current Module ("" to Generate an ID)</b>：当前模块(空字符串表示生成ID)。
+- <b>Wait (5000ms)</b>：等待时间(毫秒)。
 
 -- <b>输出控件 (Indicators)</b> --
 - <b>Configurations</b>：配置列表。

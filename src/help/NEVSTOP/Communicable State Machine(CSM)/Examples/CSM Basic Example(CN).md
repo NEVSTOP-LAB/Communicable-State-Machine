@@ -18,7 +18,7 @@ CSM是仿照JKISM逻辑设计的LabVIEW程序开发框架，两个框架都使�
 
 - Step1：CSM是一个程序框架因此它需要模块的名称。
 - Step2：重新设计了核心字符串解析引擎。
-    - Step2.1：JKISM使用Parse State Queue.vi，它只输出下一个状态队列及其对应的参数（位于 >> 之后），主要用作“出队元素”。
+    - Step2.1：JKISM使用Parse State Queue.vi，它只输出下一个状态队列及其对应的参数(位于 >> 之后)，主要用作“出队元素”。
     - Step2.2：CSM 使用Parse State Queue++.vi额外添加了以下主要功能：
         \- 基于状态队列输入自动创建/处理/销毁队列/用户事件机制，因此用户只需给出相应的高级字符串消息。
         \- 模块间/VI 间的消息可以被传输。
@@ -36,9 +36,9 @@ CSM是仿照JKISM逻辑设计的LabVIEW程序开发框架，两个框架都使�
     - STEP5.4："Async Response"用于处理异步消息的回复。
     - Step5.5：”Response"用于处理同步消息的回复。
     - Step5.6："Async Message Posted"用于处理异步消息发送后的操作。
-    - Step5.7：（Optional）"Events: Register"和"Events: Unregister"中使用的消息事件，用于触发带有Event Structure的CSM模块跳出。
-    - Step5.8：（Optional）"<New State Notifier Event>"配合Step5.7实现在外部消息到来后，跳出事件结构等待
-    - Step5.9：（Optional）CSM推荐使用API分组提供对外的接口，但是实际上所有的分支都可以使用消息调用。
+    - Step5.7：(Optional)"Events: Register"和"Events: Unregister"中使用的消息事件，用于触发带有Event Structure的CSM模块跳出。
+    - Step5.8：(Optional)"<New State Notifier Event>"配合Step5.7实现在外部消息到来后，跳出事件结构等待
+    - Step5.9：(Optional)CSM推荐使用API分组提供对外的接口，但是实际上所有的分支都可以使用消息调用。
 
 - Step6：CSM额外定义了"Msg/Rsp's CSM"用于定位外部消息、状态的来源模块
 - Step7：额外的消息信息，如Response的源消息名称、源参数等，可以由此获得。
@@ -132,7 +132,7 @@ CSM是仿照JKISM逻辑设计的LabVIEW程序开发框架，两个框架都使�
 
 CSM的参数表现形式只能为String类型。HEXSTR (0-9, A-F)格式是CSM框架内用于传递复杂数据类型的字符串表示形式。 它可以将任意数据类型作为参数使用，而不会干扰CSM消息字符串的解析。此外，CSM-Argument Type.vi获取参数标记，在本例中为`HEXSTR`。
 
-内部的转换逻辑为：将任意数据类型转换为变体（variant），然后将变体的内存内容转换为HEXSTR格式。
+内部的转换逻辑为：将任意数据类型转换为变体(variant)，然后将变体的内存内容转换为HEXSTR格式。
 
 应用场景：任意数据类型的无损传递，例如：簇、数组、结构体等。但是数据量较大时，会导致消息字符串过长，影响性能，因此不适用于传递大数组或波形数据等场景。
 
@@ -158,7 +158,7 @@ CSM的参数表现形式只能为String类型。HEXSTR (0-9, A-F)格式是CSM框
 #### Steps
 
 - Step1：展示将错误转换为 ErrStr 并还原。
-- Step2：（向前兼容）展示将之前的 ErrStr 转换为错误簇。
+- Step2：(向前兼容)展示将之前的 ErrStr 转换为错误簇。
 - Step3：展示将将之前的ErrStr转换为错误簇，并获取CSM-Argument Type。
 
 
@@ -230,7 +230,7 @@ CSM框架中，参数的只能以String类型的表现形式进行传递。为�
 
 #### Introduction
 
-系统级（SystemLevel）模块系统级模块的名称前会添加一个“.”作为前缀，标记为系统级模块。功能上与普通模块无异，可以进行消息通讯和状态订阅。他们之间的区别在于系统级的模块，不会自动被列出在活动模块列表中。这样在普通的逻辑调度中，系统级模块不会被直接调用，只能通过显式的消息发送，才能被触发。
+系统级(SystemLevel)模块系统级模块的名称前会添加一个“.”作为前缀，标记为系统级模块。功能上与普通模块无异，可以进行消息通讯和状态订阅。他们之间的区别在于系统级的模块，不会自动被列出在活动模块列表中。这样在普通的逻辑调度中，系统级模块不会被直接调用，只能通过显式的消息发送，才能被触发。
 
 因此系统级模块通常用于实现一些全局的后台功能，例如 TCP程序中的调度模块等。
 
@@ -238,9 +238,9 @@ CSM框架中，参数的只能以String类型的表现形式进行传递。为�
 
 #### Steps
 
-- Step1：使用高级API VI创建一个系统级模块名称（在CSM名称前添加“.”作为前缀，标记为系统级模块）。如果您熟悉规则，也可以直接输入相应的名称字符串和规则符号，而无需调用此API。
+- Step1：使用高级API VI创建一个系统级模块名称(在CSM名称前添加“.”作为前缀，标记为系统级模块)。如果您熟悉规则，也可以直接输入相应的名称字符串和规则符号，而无需调用此API。
 - Step2：同步调用几个“普通”/非系统级的CSM模块。
-- Step3：（Optional） 检查CSM模块名称是否有效，更多详情请参阅另一个名为Module Naming Rules.vi的示例代码。
+- Step3：(Optional) 检查CSM模块名称是否有效，更多详情请参阅另一个名为Module Naming Rules.vi的示例代码。
 - Step4：等待1s, 确保所有模块完成启动。
 - Step5：列出所有活动的CSM模块，默认情况下不会列出系统级模块。通过使用这种高级 VI，我们可以将系统级模块与其他常规模块分开，以便更好地进行代码开发、调试等。
 - Step6：使用统一的逻辑，发送“Macro:Exit”消息给所有活动的普通CSM模块，以停止所有这些模块。
@@ -306,7 +306,7 @@ CSM框架中，创建一个可重用模块通常不需要与其他模块进行�
 - Step2：同步调用CSM Reuse Module VI两次，并分别命名为SubModule0和SubModule1。有关如何创建此类可重用CSM模块的更多详细信息，请参阅另一个名为`1. Create a reuse Module`的CSM示例。
 - Step3：在"Macro:Initialize"case下的现有标准字符串队列中添加一行新的自定义消息字符串，即"Macro: Switch Active Module"，作为最后一行，以便在不同的子模块之间切换。
 - Step4：为内部数据初始化添加一个字符串常量SubModule0。对于更多自定义的内部数据初始化，您可以在此处添加更多代码。
-- Step5：在UI中添加一个字符串控件（Combo Box），用于切换和显示活动/目标模块。
+- Step5：在UI中添加一个字符串控件(Combo Box)，用于切换和显示活动/目标模块。
     - Step5.1：在" 'Target Module': Value Change" UI事件下，将字符串控件设置为活动模块内部数据。
     - Step5.2：同样使用“Macro: Switch Active Module”，更新活动模块。
 - Step6：在"Macro: Switch Active Module" case下，使用高级VI向活动子模块发送模块间同步消息"API: Get Level -@ modulename"。或者，如果您熟悉CSM字符串语法规则，也可以手动键入字符串常量。
@@ -344,15 +344,15 @@ CSM框架中，创建一个可重用模块通常不需要与其他模块进行�
 - Step1：在100ms-UI事件超时中，检查是否有任何CSM模块正在运行/存在。
 - Step2：启动和停止CSM子模块。
     - Step2.1：异步调用选定的CSM子模块。
-    - Step2.2：向选定的CSM 子模块发送异步消息（无回复）以停止/退出CSM子模块。该高级API可在LabVIEW选板 -> Communicable State Machine(CSM) -> API -> Non-CSM Caller Support下找到。
+    - Step2.2：向选定的CSM 子模块发送异步消息(无回复)以停止/退出CSM子模块。该高级API可在LabVIEW选板 -> Communicable State Machine(CSM) -> API -> Non-CSM Caller Support下找到。
 - Step3：注册和注销状态更改。
     - Step3.1：从所选子模块获取状态更改事件句柄并注册它。该高级API可在LabVIEW选板 -> Communicable State Machine(CSM) -> API -> Non-CSM Caller Support下找到。
     - Step3.2：注销用户事件，销毁并释放状态更改事件句柄。该高级API可在LabVIEW选板 -> Communicable State Machine(CSM) -> API -> Non-CSM Caller Support下找到。
 - Step4. API 调用。
-    - Step4.1：向所选子模块发送异步消息（无回复）："API:start"。该高级API可在LabVIEW 选板 -> Communicable State Machine(CSM) -> API -> Non-CSM Caller Support下找到。
-    - Step4.2：向所选子模块发送异步消息（无回复）："API:stop"。
-    - Step4.3：向所选子模块发送异步消息（无回复）："UI: Front Panel State >> Open"。该高级API可在LabVIEW选板 -> Communicable State Machine(CSM) -> API -> Non-CSM Caller Support下找到。
-    - Step4.4：向所选子模块发送异步消息（无回复）："UI: Front Panel State >> Close"。
+    - Step4.1：向所选子模块发送异步消息(无回复)："API:start"。该高级API可在LabVIEW 选板 -> Communicable State Machine(CSM) -> API -> Non-CSM Caller Support下找到。
+    - Step4.2：向所选子模块发送异步消息(无回复)："API:stop"。
+    - Step4.3：向所选子模块发送异步消息(无回复)："UI: Front Panel State >> Open"。该高级API可在LabVIEW选板 -> Communicable State Machine(CSM) -> API -> Non-CSM Caller Support下找到。
+    - Step4.4：向所选子模块发送异步消息(无回复)："UI: Front Panel State >> Close"。
     - Step4.5：发送同步消息并等待返回消息，在本例中为level值："API: Get Level"。该高级API可在LabVIEW选板 -> Communicable State Machine(CSM) -> API -> Non-CSM Caller Support下找到。
     - Step4.6：发送同步消息并等待返回消息："API: Set Level >> value"。该高级API可在LabVIEW选板 -> Communicable State Machine(CSM) -> API -> Non-CSM Caller Support下找到。
 - Step5：处理子模块的状态更改事件。

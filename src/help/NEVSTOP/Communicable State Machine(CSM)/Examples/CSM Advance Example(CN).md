@@ -6,17 +6,17 @@
 
 #### Overview
 
-本示例演示CSM框架中的工作者模式（Worker Mode）。在本示例中，四个worker在后台运行,共同组成了一个处于工作者模式的CSM模块。
+本示例演示CSM框架中的工作者模式(Worker Mode)。在本示例中，四个worker在后台运行,共同组成了一个处于工作者模式的CSM模块。
 
 #### Introduction
 
-本示例演示CSM框架中的工作者模式（Worker Mode）。在工作者模式中，多个可克隆的CSM实例作为node 运行。为避免命名冲突，使用附加“#”后缀的模块名称，告知CSM框架这是一个工作者模块。当消息发送给工作者时，将使用公平队列机制处理它，第一个空闲的模块将会处理这个消息。从外部看，系统表现得好像只有一个模块在运行，所有CSM 概念（例如同步、异步和广播）都保持不变。
+本示例演示CSM框架中的工作者模式(Worker Mode)。在工作者模式中，多个可克隆的CSM实例作为node 运行。为避免命名冲突，使用附加“#”后缀的模块名称，告知CSM框架这是一个工作者模块。当消息发送给工作者时，将使用公平队列机制处理它，第一个空闲的模块将会处理这个消息。从外部看，系统表现得好像只有一个模块在运行，所有CSM 概念(例如同步、异步和广播)都保持不变。
 
 在本示例中，四个worker在后台运行。
 
 #### Steps
 
-- Step1：使用高级VI将CSM模块标标记为worker模式（添加#作为后缀），如果您熟悉CSM规则，也可以只键入正确的名称后缀，而不使用此VI。 然后异步调用4个工作者CSM模块，无需等待回复。或者，您也可以同步调用4个工作者CSM模块，甚至异步调用并带回复，请参阅禁用case中的代码。
+- Step1：使用高级VI将CSM模块标标记为worker模式(添加#作为后缀)，如果您熟悉CSM规则，也可以只键入正确的名称后缀，而不使用此VI。 然后异步调用4个工作者CSM模块，无需等待回复。或者，您也可以同步调用4个工作者CSM模块，甚至异步调用并带回复，请参阅禁用case中的代码。
 - Step2：此循环为主程序模块，模块名称是WorkerModeExample。
 - Step3：使用While循环来获取所有正在运行的CSM模块的状态信息，包括名称、模式、实例数和要处理的消息队列数。使用高级VI停止While循环，即一旦调用者/主CSM模块退出，While循环将停止。
 - Step4：
@@ -28,7 +28,7 @@
       - "Macro: Exit -@ Worker"
       - "Macro: Exit -> Worker" 
     - Step4.2 然后在 UI 中添加一个Response Source Manager指示器，以处理"Async Response"和 "Response" case
-- Step5：模块退出。在`Macro: Exit`消息中，使用CSM - Build Exit Messages of CSMs VI创建所有正在运行的 CSM 工作者模块发送`Macro:Exit`的同步消息（您也可以手动键入模块间消息，注意有多少个正在运行的工作者模块。每个正在运行的工作者模式都需要一条消息），并向调用者/主CSM模块发送本地消息`Macro:Exit`。然后所有CSM模块将按顺序退出。
+- Step5：模块退出。在`Macro: Exit`消息中，使用CSM - Build Exit Messages of CSMs VI创建所有正在运行的 CSM 工作者模块发送`Macro:Exit`的同步消息(您也可以手动键入模块间消息，注意有多少个正在运行的工作者模块。每个正在运行的工作者模式都需要一条消息)，并向调用者/主CSM模块发送本地消息`Macro:Exit`。然后所有CSM模块将按顺序退出。
 
 ### 工作者模式模块实现(Action Worker.vi)
 
@@ -57,7 +57,7 @@
 
 #### Overview
 
-演示CSM框架中实现的责任链（responsibility chain）设计模式。通过单击前面板上的按钮，您可以观察责任链如何按定义的顺序处理允许的消息。每条消息都从最低顺序的模块传递到最高顺序的模块。当一个模块成功处理该消息时，处理停止，并且该消息不会转发到后续模块。如果链中没有模块可以处理该消息，本示例将返回一个错误。
+演示CSM框架中实现的责任链(responsibility chain)设计模式。通过单击前面板上的按钮，您可以观察责任链如何按定义的顺序处理允许的消息。每条消息都从最低顺序的模块传递到最高顺序的模块。当一个模块成功处理该消息时，处理停止，并且该消息不会转发到后续模块。如果链中没有模块可以处理该消息，本示例将返回一个错误。
 
 #### Instructions
 
@@ -132,7 +132,7 @@
 - Step1：主程序核心为一个名为`GlobalErrorHandlingExample`的CSM模块。
 - Step2：同步调用另外两个CSM模块，这两个子模块可以通过点击按钮产生一些预定的错误。
 - Step3：启动时就注册"Error Occurred"广播事件，"Error Occurred@* >> Error Handler -><register>". 该事件在任何CSM子模块抛出Error Occurred状态变化时，会触发 GlobalErrorHandlingExample的 "Error Handler", 处理捕获的事件。
-- Step4：（Optional）退出逻辑中，通过`CSM - Filter Messages to Non-Existing Modules.vi`过滤掉所有不存在的CSM模块的消息，以避免在退出时触发错误。
+- Step4：(Optional)退出逻辑中，通过`CSM - Filter Messages to Non-Existing Modules.vi`过滤掉所有不存在的CSM模块的消息，以避免在退出时触发错误。
 
 ### 模拟错误生成模块(Error Module.vi)
 
@@ -167,7 +167,7 @@
 
 - Step1：使用事件结构获取CSM全局日志，并显示在界面。
     - Step1.1：获取CSM全局状态用户事件句柄，并注册它。
-    - Step1.2：设置源端全局过滤规则。第一个用于全局过滤，第二个用于特定的 CSM 模块。例如，过滤掉来自Module2的所有日志（全局）以及Module1的"State Change" LogType（特定模块日志）。
+    - Step1.2：设置源端全局过滤规则。第一个用于全局过滤，第二个用于特定的 CSM 模块。例如，过滤掉来自Module2的所有日志(全局)以及Module1的"State Change" LogType(特定模块日志)。
     - Step1.3：在<CSM Global Log Event>中，处理CSM全局日志事件，将其打印到LabVIEW UI。
     - Step1.4：程序退出过程中，注销CSM全局状态用户事件句柄。
 - Step2：同步调用`1. Create a reuse Module\CSM Reuse Module.vi`, 创建四个运行的CSM模块实例。
@@ -184,13 +184,13 @@
 
 #### Introduction
 
-本示例演示使用CSM全局日志API记录状态更改事件以进行调试和监控。本示例基于基于队列（queue-based）的机制，并设置了源端过滤规则。
+本示例演示使用CSM全局日志API记录状态更改事件以进行调试和监控。本示例基于基于队列(queue-based)的机制，并设置了源端过滤规则。
 
 #### Steps
 
 - Step1：使用事件结构获取CSM全局日志，并显示在界面。
     - Step1.1：获取CSM全局状态队列句柄，并注册它。
-    - Step1.2：设置源端全局过滤规则。第一个用于全局过滤，第二个用于特定的CSM模块。例如，过滤掉来自Module2的所有日志（全局）以及Module1的 "State Change" LogType（特定模块日志）。
+    - Step1.2：设置源端全局过滤规则。第一个用于全局过滤，第二个用于特定的CSM模块。例如，过滤掉来自Module2的所有日志(全局)以及Module1的 "State Change" LogType(特定模块日志)。
     - Step1.3：查询队列状态，并计算日志处理速度等指标。
     - Step1.4：使用出队结构，处理CSM全局日志事件，将其打印到 LabVIEW UI。
     - Step1.5：程序退出过程中，注销CSM全局状态队列句柄。
@@ -214,7 +214,7 @@
 
 - Step1：使用事件结构获取CSM全局日志，并显示在界面。
     - Step1.1：获取CSM全局状态用户事件句柄，并注册它。
-    - Step1.2：设置订阅端全局过滤规则。第一个用于全局过滤，第二个用于特定的CSM 模块。例如，过滤掉来自Module2的所有日志（全局）以及Module1的"State Change" LogType（特定模块日志）。
+    - Step1.2：设置订阅端全局过滤规则。第一个用于全局过滤，第二个用于特定的CSM 模块。例如，过滤掉来自Module2的所有日志(全局)以及Module1的"State Change" LogType(特定模块日志)。
     - Step1.3：在<CSM Global Log Event>中，处理CSM全局日志事件，将其打印到LabVIEW UI。
     - Step1.4：程序退出过程中，注销CSM全局状态用户事件句柄。
 - Step2：同步调用 `1. Create a reuse Module\CSM Reuse Module.vi`, 创建四个运行的CSM模块实例。
@@ -231,13 +231,13 @@
 
 #### Introduction
 
-本示例演示使用CSM全局日志API记录状态更改事件以进行调试和监控。本示例基于基于队列（queue-based）的机制，并设置了订阅端过滤规则。订阅端规则的设置，只影响订阅端接收到的日志，不会影响其他订阅端或全局日志。
+本示例演示使用CSM全局日志API记录状态更改事件以进行调试和监控。本示例基于基于队列(queue-based)的机制，并设置了订阅端过滤规则。订阅端规则的设置，只影响订阅端接收到的日志，不会影响其他订阅端或全局日志。
 
 #### Steps
 
 - Step1：使用事件结构获取CSM全局日志，并显示在界面。
     - Step1.1：获取CSM全局状态队列句柄，并注册它。
-    - Step1.2：设置订阅端全局过滤规则。第一个用于全局过滤，第二个用于特定的CSM模块。例如，过滤掉来自Module2的所有日志（全局）以及Module1的 "State Change" LogType（特定模块日志）。
+    - Step1.2：设置订阅端全局过滤规则。第一个用于全局过滤，第二个用于特定的CSM模块。例如，过滤掉来自Module2的所有日志(全局)以及Module1的 "State Change" LogType(特定模块日志)。
     - Step1.3：查询队列状态，并计算日志处理速度等指标。
     - Step1.4：使用出队结构，处理CSM全局日志事件，将其打印到LabVIEW UI。
     - Step1.5：程序退出过程中，注销CSM全局状态队列句柄。
@@ -343,19 +343,19 @@ CSM循环作为接口，允许您使用“TCP: Send”通过TCP发送消息，�
 
 #### Overview
 
-本示例为状态订阅的子模块。它被State订阅范例主程序（`Register State as Status Example.vi`）调用。
+本示例为状态订阅的子模块。它被State订阅范例主程序(`Register State as Status Example.vi`)调用。
 
 #### Introduction
 
-本示例为状态订阅的子模块。它被State订阅范例主程序（`Register State as Status Example.vi`）调用。本程序界面按钮点击时，会运行按钮名称上的状态。
+本示例为状态订阅的子模块。它被State订阅范例主程序(`Register State as Status Example.vi`)调用。本程序界面按钮点击时，会运行按钮名称上的状态。
 
 ### State订阅范例主程序(Register State as Status Example.vi)
 
 #### Overview
 
-本范例主要演示了如何使用状态订阅功能。和信号广播（Status）相比，状态订阅的优势在于：
+本范例主要演示了如何使用状态订阅功能。和信号广播(Status)相比，状态订阅的优势在于：
 
-- 不需要显示的发布信号广播（Status），只要运行到某个状态，只要被订阅，就会自动触发，并将状态的Response作为参数传递给订阅者。
+- 不需要显示的发布信号广播(Status)，只要运行到某个状态，只要被订阅，就会自动触发，并将状态的Response作为参数传递给订阅者。
 - 可以很容易的不侵入原先代码，实现观察者模式。
 - 可以实现链式的订阅，但是要注意逻辑上不要形成循环订阅，否则会导致死循环。
 
@@ -363,22 +363,22 @@ CSM循环作为接口，允许您使用“TCP: Send”通过TCP发送消息，�
 
 本示例演示如何使用状态订阅功能。单击示例UI中的按钮，查看相应的响应。您还可以在示例 UI中更改注册字符串，以查看进一步的自定义响应。
 
-状态订阅和信号广播（Status）的订阅语法上没有任何不同，区别在于信号广播（Status）需要通过API显示抛出，而状态变化可以订阅CSM任意一个状态。
+状态订阅和信号广播(Status)的订阅语法上没有任何不同，区别在于信号广播(Status)需要通过API显示抛出，而状态变化可以订阅CSM任意一个状态。
 
 以本范例为例：
 
 ```
-//任意模块的Macro: Initialize状态执行完毕后，都会触发主程序CSM模块（缺省）的Echo: Echo1
+//任意模块的Macro: Initialize状态执行完毕后，都会触发主程序CSM模块(缺省)的Echo: Echo1
 Macro: Initialize@* >> Echo: Echo1 -><register> 
-//任意模块的API: API1状态执行完毕后，都会触发主程序CSM模块（缺省）的Echo: Echo1
+//任意模块的API: API1状态执行完毕后，都会触发主程序CSM模块(缺省)的Echo: Echo1
 API: API1@* >> Echo: Echo1-><register>
-//SubModule1的API: API2状态执行完毕后，都会触发主程序CSM模块（缺省）的Echo: Echo2
+//SubModule1的API: API2状态执行完毕后，都会触发主程序CSM模块(缺省)的Echo: Echo2
 API: API2@SubModule1 >> Echo: Echo2 -><register>
 //Main模块的Echo: Echo2状态执行完毕后，都会触发SubModule1的API: API1
 Echo: Echo2@main >> API: API1@submodule1 -><register>
-//SubModule1的Exit状态执行完毕后，都会触发主程序CSM模块（缺省）的Echo: Echo1
+//SubModule1的Exit状态执行完毕后，都会触发主程序CSM模块(缺省)的Echo: Echo1
 Exit@submodule1 >> Echo: Echo1 -><register>
-//SubModule2的Macro: Exit状态执行完毕后，都会触发主程序CSM模块（缺省）的Echo: Echo1
+//SubModule2的Macro: Exit状态执行完毕后，都会触发主程序CSM模块(缺省)的Echo: Echo1
 Macro: Exit@submodule2 >> Echo: Echo1 -><register>
 ```
 
@@ -386,7 +386,7 @@ Macro: Exit@submodule2 >> Echo: Echo1 -><register>
 
 #### Steps
 - Step1：根据全局日志模板，创建一个监控循环，用于观测系统中所有模块的状态变化。
-- Step2：异步调用两个CSM子模块（在调用子模块前等待1秒，以获得更好的UI显示顺序）子模块可以通过点击界面按钮，触发其状态变化。
+- Step2：异步调用两个CSM子模块(在调用子模块前等待1秒，以获得更好的UI显示顺序)子模块可以通过点击界面按钮，触发其状态变化。
 - Step3：通过模板实现一个CSM主程序模块，名字叫做main.
     - Step3.1：主程序界面按钮的点击，会触发其状态发生变化。逻辑上将按钮的名称作为状态，用于减少代码编写。
     - Step3.2：主程序启动时，自动订阅预设的状态订阅规则。
@@ -403,7 +403,7 @@ Macro: Exit@submodule2 >> Echo: Echo1 -><register>
 
 ### Introduction
 
-本示例演示如何使用CSM Logger VIs来实现全局CSM事件文件记录功能。使用CSM-Start File Logger VI（此VI可以在LabVIEW选板 -> CSM -> Addons -> Logger下找到）来快速实现全局CSM事件文件记录功能。
+本示例演示如何使用CSM Logger VIs来实现全局CSM事件文件记录功能。使用CSM-Start File Logger VI(此VI可以在LabVIEW选板 -> CSM -> Addons -> Logger下找到)来快速实现全局CSM事件文件记录功能。
 
 例如，我们按顺序放置两个这样的VI，手动设置日志记录的文件路径和名称，并分别启用全局规则过滤器。运行此示例后，您还可以找到并查看相应的日志文件，以加深理解。如果以后要添加/调用更多CSM模块，您无需更改此处的任何代码以实现日志记录功能。总之，您只需要这样一个高级CSM附加组件日志记录器 VI 即可快速实现全局日志记录功能。
 
@@ -425,7 +425,7 @@ Macro: Exit@submodule2 >> Echo: Echo1 -><register>
 
 循环是状态机运行的基本单位，它会在状态机运行时不断地执行。用户可以自己通过逻辑来定义循环的条件，也可以使用CSM推荐的循环支持API来定义循环。它的优势是可以在循环运行时，依然响应其他事件，而不会阻塞状态机的运行。这类似于 While循环的连续循环机制。您无需手动嵌入While 循环，而是可以使用CSM Loop-Support VI 来定义、附加和终止循环。这组API通过对状态队列的分析来完成此功能。
 
-本示例展示了CSM框架内的连续DAQ采集。单击**Start**开始连续采集，单击**Stop**（或触发高优先级错误）结束循环。作为比较，单击**DAQ: Once**运行单次采集。低优先级错误不会停止循环。
+本示例展示了CSM框架内的连续DAQ采集。单击**Start**开始连续采集，单击**Stop**(或触发高优先级错误)结束循环。作为比较，单击**DAQ: Once**运行单次采集。低优先级错误不会停止循环。
 
 ### Instructions
 
@@ -436,7 +436,7 @@ Macro: Exit@submodule2 >> Echo: Echo1 -><register>
 
 ### Introduction
 
-本示例演示如何使用CSM Loop-Support VIs来实现While循环的连续DAQ采集的功能。单击**Start**开始连续采集，单击**Stop**（或触发高优先级错误）结束循环。作为比较，单击**DAQ: Once**运行单次采集。
+本示例演示如何使用CSM Loop-Support VIs来实现While循环的连续DAQ采集的功能。单击**Start**开始连续采集，单击**Stop**(或触发高优先级错误)结束循环。作为比较，单击**DAQ: Once**运行单次采集。
 
 ### Steps
 

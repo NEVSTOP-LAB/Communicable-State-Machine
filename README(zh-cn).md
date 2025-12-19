@@ -6,7 +6,7 @@
 [![Image](https://www.vipm.io/package/nevstop_lib_communicable_state_machine/badge.svg?metric=stars)](https://www.vipm.io/package/nevstop_lib_communicable_state_machine/)
 [![GitHub all releases](https://img.shields.io/github/downloads/NEVSTOP-LAB/Communicable-State-Machine/total)](https://github.com/NEVSTOP-LAB/Communicable-State-Machine/releases)
 
-可通信状态机（CSM）是一个基于JKI状态机（JKISM）的LabVIEW应用框架。它遵循JKISM的设计模式，扩展了关键词以描述模块间的消息通信机制，包括同步消息、异步消息、状态订阅/取消订阅等关键概念——这些都是创建可重用代码模块不可或缺的要素。更多信息请访问CSM Wiki页面：<https://nevstop-lab.github.io/CSM-Wiki/>
+可通信状态机(CSM)是一个基于JKI状态机(JKISM)的LabVIEW应用框架。它遵循JKISM的设计模式，扩展了关键词以描述模块间的消息通信机制，包括同步消息、异步消息、状态订阅/取消订阅等关键概念——这些都是创建可重用代码模块不可或缺的要素。更多信息请访问CSM Wiki页面：<https://nevstop-lab.github.io/CSM-Wiki/>
 
 - 了解更多关于 JKI State Machine(JKISM) 的信息，请访问: <http://jki.net/state-machine/>
 - 了解更多关于 NEVSTOP-LAB 的信息，请访问: <https://github.com/NEVSTOP-LAB>

@@ -8,7 +8,7 @@
 
 > Ref: CSM 模块间通信类型
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>Response Arguments</b>：来自上一个状态的响应参数。它应该连接到 CSM的移位寄存器，用于传递外部调用的返回值。
 - <b>Name ("" to use UUID)</b>：CSM模块名称。请参考*CSM名称规则*。
 - <b>State Queue</b>：整个状态队列被连接到此输入。这应该来自CSM的移位寄存器。
@@ -17,7 +17,7 @@
 - <b>Response Timeout (-2 Use Global Settings)</b>：同步调用的超时时间，默认为-2，使用全局设置。您可以通过CSM - Set TMO of Sync-Reply VI设置全局超时时间。
 - <b>Allowed Messages (Empty for All)</b>：允许的消息名称列表，为空表示允许所有消息。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>Name Used</b>：分配给该CSM模块的实际名称。
 - <b>Remaining States</b>：拼接后的所有状态及参数。
 - <b>Current State</b>：将执行的下一个当前状态。
@@ -31,7 +31,7 @@
 > [!WARNING]
 > 该 VI 不能拼接"异步不等待返回"的异步消息，已在函数面板中隐藏，建议使用 Build Message with Arguments++ VI代替该 VI。
 
-该VI用于构建CSM消息字符串（包含状态、参数、目标模块、消息类型等信息），以便发送到其他CSM模块。
+该VI用于构建CSM消息字符串(包含状态、参数、目标模块、消息类型等信息)，以便发送到其他CSM模块。
 
 > Ref: CSM 消息类型
 > Ref: CSM 消息格式解析
@@ -45,23 +45,23 @@
     
       在发送给其他CSM的情况下，假设<b>Target Module ("")</b>的名称为"Target"。
     
-      - 同步调用（发送消息后等待返回）：
+      - 同步调用(发送消息后等待返回)：
     
             If State = A并且没有参数，那么<b>State with Arguments</b> = A -@target
             If State = A , Arguments = B那么 <b>State with Arguments</b> = A >> B -@target
     
-      - 异步调用（发送消息后将进入"Async Message Posted"状态，当外部模块处理完毕后，本地模块将收到"Async Response"消息）：
+      - 异步调用(发送消息后将进入"Async Message Posted"状态，当外部模块处理完毕后，本地模块将收到"Async Response"消息)：
     
             If State = A并且没有参数，那么<b>State with Arguments</b> = A ->target
             If State = A , Arguments = B那么<b>State with Arguments</b> = A >> B ->target
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>State</b>：状态或消息名称字符串。
 - <b>Arguments ("")</b>：<b>State</b>的参数。
 - <b>Target Module ("")</b>：该消息发送的目标CSM模块名称。
 - <b>Type</b>：消息类型，可选 Async, Async Without Reply, Sync。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 
 - <b>CSM Message String</b>：拼接生成的CSM消息字符串。
 
@@ -97,12 +97,12 @@
 > Ref: 消息拼接API
 > Ref: CSM消息的目标模块说明
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>State with Arguments</b>：CSM状态字符串，可包含参数和目标模块信息。
 - <b>Arguments ("")</b>：参数信息，<b>State with Arguments</b>中包含的参数将被替换。
 - <b>Target Module ("")</b>：目标模块，为空时将使用<b>State with Arguments</b>中的默认模块。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>CSM Message String</b>：拼接生成的CSM消息字符串。
 
 #### Build Synchronous Message with Arguments.vi
@@ -115,12 +115,12 @@
 > Ref: 同步消息
 > Ref: CSM消息的目标模块说明
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>State with Arguments</b>：CSM状态字符串。
 - <b>Arguments ("")</b>：参数信息。<b>State with Arguments</b>中包含的参数会被替换。
 - <b>Target Module ("")</b>：目标模块。为空时，将使用<b>State with Arguments</b>中的默认模块。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>CSM Message String</b>：拼接生成的CSM消息字符串。
 
 #### Build Asynchronous Message with Arguments.vi
@@ -133,12 +133,12 @@
 > Ref: 异步消息
 > Ref: CSM消息的目标模块说明
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>State with Arguments</b>：CSM状态字符串。
 - <b>Arguments ("")</b>：参数信息。<b>State with Arguments</b>中包含的参数会被替换。
 - <b>Target Module ("")</b>：目标模块。为空时，将使用<b>State with Arguments</b>中的默认模块。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>CSM Message String</b>：拼接生成的CSM消息字符串。
 
 #### Build No-Reply Asynchronous Message with Arguments.vi
@@ -151,12 +151,12 @@
 > Ref: 异步消息
 > Ref: CSM消息的目标模块说明
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>State with Arguments</b>：CSM状态字符串。
 - <b>Arguments ("")</b>：参数信息。<b>State with Arguments</b>中包含的参数会被替换。
 - <b>Target Module ("")</b>：目标模块。为空时，将使用<b>State with Arguments</b>中的默认模块。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>CSM Message String</b>：拼接生成的CSM消息字符串。
 
 #### Build Status Broadcast Message.vi<!-- 这是原来的Build Normal Status Message.vi吗？ -->
@@ -170,12 +170,12 @@
 
 > Ref: 消息拼接API
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 
 - <b>State with Arguments</b>：CSM普通状态消息字符串。
 - <b>Arguments ("")</b>: 参数信息。<b>State with Arguments</b>中包含的参数，会被替换。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>CSM Message String</b>：拼接生成的CSM消息字符串。
 
 #### Build Interrupt Broadcast Message.vi<!-- 这是原来的Build Interrupt Status Message.vi吗？ -->
@@ -186,11 +186,11 @@
 
 > Ref: 消息拼接API
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>State with Arguments</b>：CSM中断状态消息字符串。
 - <b>Arguments ("")</b>：参数信息。<b>State with Arguments</b>中包含的参数会被替换。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>CSM Message String</b>：拼接生成的CSM消息字符串。
 
 #### Build Register Message.vi<!-- 这是原来的Build Register Status Message.vi吗？ -->
@@ -211,13 +211,13 @@
 
 > Ref: 消息拼接API
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>Target CSM</b>：订阅状态的CSM模块名称。
 - <b>Source CSM (* as Default)</b>：发出状态的CSM模块名称。
 - <b>Status</b>：注册的状态。
 - <b>API (If "", Same As "Status")</b>：订阅状态模块响应的API名称。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>CSM Message String</b>：拼接生成的CSM消息字符串。
 
 #### Build Unregister Message.vi<!-- 这是原来的Build Unregister Status Message.vi吗？ -->
@@ -236,13 +236,13 @@
 
 > Ref: 消息拼接API
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>Target CSM</b>：订阅状态的CSM模块名称。
 - <b>Source CSM (* as Default)</b>：发出状态的CSM模块名称。
 - <b>Status</b>：注册的状态。
 - <b>API (If "", Same As "Status")</b>：取消订阅状态模块响应的API名称。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 
 - <b>CSM Message String</b>：拼接生成的CSM消息字符串。
 
@@ -275,14 +275,14 @@
 
 > Ref: 消息拼接API
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>States with Replace Token</b>：带有替换标记的CSM状态字符串。
 - <b><param></b>：<param> 标记：通常表示相同的参数。
 - <b><target></b>：<target> 标记：通常表示相同的目标。
 - <b><1></b>：自定义标记1。
 - <b><2></b>：自定义标记2。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>States</b>：替换后的状态字符串。
 
 
@@ -299,12 +299,12 @@
         Draw >> Circle -@ Painter
         Draw >> Rectangle -@ Painter
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>single-line text</b>:单条状态字符串，包含<1>,<2>,<3>,等标签
 - <b>Substitution Mark</b>:要替换的标签，例如<1>,<2>,<3>,等
 - <b>replace string</b>:待替换的数组字符串
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>States</b>:合并后的状态字符串
 
 ### CSM - Broadcast Status Change.vi
@@ -320,12 +320,12 @@
 > 该类型API不会直接发送消息，只是拼接消息字符串。在Parse State Queue++.vi中发送消息、执行操作。
 > 与消息拼接API不同的是，此类API会包含CSM的状态队列字符串输入，相当于在状态队列中插入消息。
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>Status with Arguments</b>：将被广播的状态及参数，支持多行，每行状态都将被添加"-><broadcast>"。
 - <b>State Queue</b>：整个状态队列被连接到此输入。
 - <b>Broadcast? (T)</b>：控制是否广播的开关输入。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 
 - <b>Remaining States</b>：拼接后的所有状态及参数。
 
@@ -349,14 +349,14 @@
 
 > Ref: CSM 的状态队列操作API
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>State Queue ("")</b>：整个状态队列被连接到此输入。
 - <b>Condition</b>：选择连接到TRUE终端或False终端的状态字符串的标志。
 - <b>High Priority? (F)</b>：如果为True，状态将被插入到<b>State Queue ("")</b>的前端；如果为False，它被附加到尾部。
 - <b>TRUE ("")</b>：<b>Condition</b>为True时插入的状态字符串。
 - <b>FALSE ("")</b>：<b>Condition</b>为False时插入的状态字符串。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>Remaining States</b>：拼接后的所有状态及参数。
 
 #### Add State(s) to Queue By BOOL(Array Left).vi
@@ -365,14 +365,14 @@
 
 > Ref: CSM 的状态队列操作API
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>State Queue ("")</b>：整个状态队列被连接到此输入。
 - <b>Condition</b>：选择连接到TRUE终端或False终端的状态字符串的标志。
 - <b>High Priority? (F)</b>：如果为True，状态将被插入到<b>State Queue ("")</b>的前端；如果为False，它被附加到尾部。
 - <b>TRUE ("")</b>：<b>Condition</b>为True时插入的状态字符串。
 - <b>FALSE ("")</b>：<b>Condition</b>为False时插入的状态字符串。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>Remaining States</b>：拼接后的所有状态及参数。
 
 #### Add State(s) to Queue By BOOL(Array Right).vi
@@ -381,14 +381,14 @@
 
 > Ref: CSM 的状态队列操作API
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>State Queue ("")</b>：整个状态队列被连接到此输入。
 - <b>Condition</b>：选择连接到TRUE终端或False终端的状态字符串的标志。
 - <b>High Priority? (F)</b>：如果为True，状态将被插入到<b>State Queue ("")</b>的前端；如果为False，它被附加到尾部。
 - <b>TRUE ("")</b>：<b>Condition</b>为True时插入的状态字符串。
 - <b>FALSE ("")</b>：<b>Condition</b>为False时插入的状态字符串。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>Remaining States</b>：拼接后的所有状态及参数。
 
 #### Add State(s) to Queue By BOOL(Array All).vi
@@ -397,12 +397,12 @@
 
 > Ref: CSM 的状态队列操作API
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>State Queue ("")</b>：整个状态队列被连接到此输入。
 - <b>Condition</b>：选择连接到TRUE终端或False终端的状态字符串的标志。
 - <b>High Priority? (F)</b>：如果为True，状态将被插入到<b>State Queue ("")</b>的前端；如果为False，它被附加到尾部。
 - <b>TRUE ("")</b>：<b>Condition</b>为True时插入的状态字符串。
 - <b>FALSE ("")</b>：<b>Condition</b>为False时插入的状态字符串。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>Remaining States</b>：拼接后的所有状态及参数。

@@ -13,19 +13,19 @@
 > 典型的Massdata数据格式为: `<MassData>Start:8057;Size:4004;DataType:1D I32`。其中：
 >
 > - `Start`：数据在内存中的起始地址
-> - `Size`：数据的大小（字节数）
+> - `Size`：数据的大小(字节数)
 > - `DataType(optional)`：数据的类型，由CSM Data Type String VI定义
 
 ## CSM - Config MassData Parameter Cache Size.vi
 
 配置Massdata后台缓存大小，默认值为1 MB。
 
-建议配置适当的缓存大小：不要太大（避免浪费内存），也不要太小（防止频繁覆盖）。可以利用提供的调试工具监控缓存使用情况，确定最佳配置。
+建议配置适当的缓存大小：不要太大(避免浪费内存)，也不要太小(防止频繁覆盖)。可以利用提供的调试工具监控缓存使用情况，确定最佳配置。
 
 > 参考: CSM Massdata参数支持
 
 -- <b>输入控件 (Controls)</b> --
-- <b>Size (1M)</b>：缓存大小，单位为字节（Byte）。
+- <b>Size (1M)</b>：缓存大小，单位为字节(Byte)。
 
 ## CSM - Convert Argument to MassData.vim
 
@@ -84,7 +84,7 @@
 -- <b>输出控件 (Indicators)</b> --
 - <b>Active Read Operation</b>：上次读操作的信息，包括起始地址与长度。
 - <b>Active Write Operation</b>：上次写操作的信息，包括起始地址与长度。
-- <b>Cache Size</b>：后台缓存大小，单位为字节（Byte）。
+- <b>Cache Size</b>：后台缓存大小，单位为字节(Byte)。
 
 ## CSM - MassData Update Status Indicator.vi
 

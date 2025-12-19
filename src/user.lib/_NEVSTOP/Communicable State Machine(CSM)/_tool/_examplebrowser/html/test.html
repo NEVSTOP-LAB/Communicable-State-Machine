@@ -108,7 +108,7 @@ console.log("Hello, World!");
             var markdownElement = document.getElementById('markdown');
             var originalMarkdown = markdownElement.textContent || markdownElement.innerText; // 兼容IE
             
-            // 2. 使用marked渲染Markdown内容（兼容不同版本的marked.js）
+            // 2. 使用marked渲染Markdown内容(兼容不同版本的marked.js)
             var renderedHtml;
             if (typeof marked.parse === 'function') {
                 renderedHtml = marked.parse(originalMarkdown);

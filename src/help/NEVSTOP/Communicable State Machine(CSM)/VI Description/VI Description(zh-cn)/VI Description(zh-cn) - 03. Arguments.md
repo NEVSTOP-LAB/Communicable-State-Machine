@@ -8,7 +8,7 @@
 > 包括：'->'、'->|'、'-@'、'-&'、'<-'、"\r"、"\n"、"//"、">>"、">>>"、">>>"、";"、","
 
 > [!NOTE] 
-> **CSM参数类型（Argument Type）**
+> **CSM参数类型(Argument Type)**
 >
 > 在CSM中，所有参数/返回均以字符串形式呈现，但其背后可承载任意数据类型。因此，发送端需先进行编码，接收端再进行解码。
 > 例如CSM内置HEXSTR编码方案，也可按需扩展自定义编解码器。
@@ -36,10 +36,10 @@
 > 3. 得到CSM ERRSTR格式参数，可安全嵌入状态字符串，不会破坏CSM消息解析。
 
 > [!NOTE] 
-> **CSM安全字符串参数（CSM Safe String Argument）**
+> **CSM安全字符串参数(CSM Safe String Argument)**
 >
 > 为了在CSM参数中传递任意字符串且不破坏消息解析，CSM内置了Safe-String编解码方案，其参数类型字符串为"SAFESTR"。转换过程如下：
-> 1. 扫描输入字符串，若出现CSM关键字（如`->`、`;`、`\r`等），则将其替换为`%Hex`转义序列；
+> 1. 扫描输入字符串，若出现CSM关键字(如`->`、`;`、`\r`等)，则将其替换为`%Hex`转义序列；
 > 2. 最终得到形如`<SAFESTR> 已转义字符串`的参数，可安全嵌入状态字符串，不会破坏CSM消息解析。
 
 ### CSM - Argument Type.vi
@@ -48,10 +48,10 @@
 
 > Ref: CSM参数类型
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>Arguments</b>：参数字符串。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>Arguments (Dup)</b>：输入的参数字符串副本。
 - <b>Argument Type</b>：参数字符串的编码类型标记。
 
@@ -62,7 +62,7 @@
 
 > Ref: CSM消息关键字
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 
 - <b>keywords</b>：CSM关键字列表。
 - <b>Keywords (%Hex Format)</b>：CSM关键字列表的%Hex格式。
@@ -76,10 +76,10 @@
 
 参考范例："[CSM-Example]\0. Base Concepts\4.3 Arguments - Safe Arguments if it contains key words of CSM.vi"。
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>Argument String</b>：字符串参数。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>Safe Argument String</b>：安全的字符串参数。
 
 ### CSM - Revert Arguments-Safe String.vi
@@ -91,10 +91,10 @@
 
 参考范例："[CSM-Example]\0. Base Concepts\4.3 Arguments - Safe Arguments if it contains key words of CSM.vi"。
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>Safe Argument String</b>:  安全的字符串参数。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 
 - <b>Origin Argument String</b>：字符串参数。
 
@@ -107,10 +107,10 @@
 
 参考范例："[CSM-Example]\0. Base Concepts\4.1 Arguments - Complex Data As Arguments.vi"。
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>Variant</b>：LabVIEW数据，通过变体支持任意数据类型。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>HEX String (0-9,A-F)</b>：CSM HEXSTR格式参数。
 
 ### CSM - Convert HexStr to Data.vi
@@ -122,10 +122,10 @@
 
 参考范例："[CSM-Example]\0. Base Concepts\4.1 Arguments - Complex Data As Arguments.vi"。
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>HEX String</b>：CSM HEXSTR格式参数。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>Variant</b>：LabVIEW数据，通过变体支持任意数据类型。
 
 ### CSM - Convert Error to Argument.vi
@@ -137,10 +137,10 @@
 
 参考范例："[CSM-Example]\0. Base Concepts\4.2 Arguments - Error As Arguments.vi"
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>Error</b>：LabVIEW错误簇。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>Argument</b>：CSM错误参数格式。
 
 ### CSM - Convert Argument to Error.vi
@@ -152,8 +152,8 @@
 
 参考范例："[CSM-Example]\0. Base Concepts\4.2 Arguments - Error As Arguments.vi"。
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>Argument</b>：CSM错误参数格式。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>Error</b>：LabVIEW错误簇。

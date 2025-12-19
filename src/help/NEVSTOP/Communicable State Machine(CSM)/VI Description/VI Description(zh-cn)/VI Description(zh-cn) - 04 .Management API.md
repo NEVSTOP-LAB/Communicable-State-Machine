@@ -22,10 +22,10 @@
 
 检查CSM模块是否存在。当CSM模块运行在协作者模式或责任链模式下，只有当组成模块的所有节点退出后，模块才会被标记为不存在。
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>CSM Name</b>：CSM模块名称。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 
 - <b>CSM Name (dup)</b>：输入的CSM模块名称副本。
 - <b>Exist?</b>：返回模块是否存在。
@@ -38,11 +38,11 @@
 
 > Ref: CSM工作模式
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>Scope (Normal)</b>：范围选项，可选择 普通/仅系统级模块/所有模块。
 - <!-- 软件里叫"With Instance? (F)" ?--><b>With Nodes? (F)</b>：是否包含节点，针对协作者模式和责任链模式，当包括节点时，将同时列出节点，否则仅列出模块，默认不包含节点。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 
 - <b>Module Names</b>：CSM模块名称列表。
 
@@ -60,11 +60,11 @@
 
 > Ref: CSM子模块
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <!-- 软件里面是"CSM Name"? --><b>Parent Name</b>：分组或父节点名称。
 - <b>Recursive? (T)</b>：是否递归列出所有层级的子模块，默认为 True。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 
 - <b>Parent Name (Dup)</b>：输入的分组或父节点名称副本。
 - <b>Submodules</b>：子模块名称列表。
@@ -81,13 +81,13 @@
 - 责任链模式：返回责任链模式的CSM模块的第一个节点的VI引用。
 - 系统级模块：与普通模式CSM相同，返回系统级模块的VI引用。
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>Current Module ("" to Generate an ID)</b>：查询CSM模块的标记，为空时将生成一个唯一的ID。
 - <b>CSM Name</b>：CSM模块名称。
 - <b>Force? (F)</b>：是否强制重新查询模块的VI引用，默认为 False。
 - <b>Response Timeout (-2 Using Global Settings)</b>：同步调用的超时时间，默认为-2，使用全局设置。您可以通过CSM - Set TMO of Sync-Reply VI设置全局超时时间。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 
 - <b>CSM Module VIRef</b>：CSM模块的VI引用。
 
@@ -104,11 +104,11 @@
 
 CSM模块/API调用时，默认的超时时间为-2，此时将使用全局设置的超时时间；如果设置为其他正值，则将使用该值作为超时时间。
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 
 - <b>TMO For Sync-Rep (ms) In</b>：全局超时时间输入，-2表示不修改全局超时时间，其他正值表示修改全局超时时间为该值。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 
 - <!-- 软件里的名字是"TMO For Sync-Rep (ms)" --><b>TMO For Sync-Rep (ms) Out</b>：当前全局超时时间。
 
@@ -118,11 +118,11 @@ CSM模块/API调用时，默认的超时时间为-2，此时将使用全局设�
 
 > Ref: CSM工作模式
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 
 - <b>CSM Name</b>：CSM模块名称。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 
 - <!-- 软件里的名字是"CSM Name (Dup)" --><b>CSM Name (dup)</b>：输入的CSM模块名称副本。
 - <b>Mode</b>：返回模块的工作模式。
@@ -139,11 +139,11 @@ CSM模块/API调用时，默认的超时时间为-2，此时将使用全局设�
 > [!WARNING] 
 > CSM模块通常不建议使用该VI。CSM建议通过设计避免消息在模块中的堆积，因此建议通过设计避免在CSM模块中使用该VI清空后台的消息队列
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>CSM Name</b>：CSM模块名称。
 - <b>Option (Low Priority As Default)</b>：清理的队列。可以选择All、Low Priority、High Priority。默认值为Low Priority。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>CSM Name (Dup)</b>：输入CSM模块名称的副本。
 - <b>#Flushed</b>：被清理的消息队列中的元素个数。
 
@@ -175,10 +175,10 @@ CSM模块/API调用时，默认的超时时间为-2，此时将使用全局设�
 
 该VI用于过滤CSM状态队列中的本地状态
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <!-- 软件里是"State (S) In ("")"。请确认。--><b>States In</b>：待过滤的整段状态描述字符串。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 
 - <b>States Out</b>：过滤后的状态描述字符串。
 
@@ -186,10 +186,10 @@ CSM模块/API调用时，默认的超时时间为-2，此时将使用全局设�
 
 该VI用于过滤CSM状态队列中的所有类型的消息。
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>States In</b>：待过滤的整段状态描述字符串。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 
 - <b>States Out</b>：过滤后的状态描述字符串。
 
@@ -197,81 +197,81 @@ CSM模块/API调用时，默认的超时时间为-2，此时将使用全局设�
 
 该VI用于过滤CSM状态队列中的同步消息。
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>States In</b>：待过滤的整段状态描述字符串。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>States Out</b>：过滤后的状态描述字符串。
 
 #### CSM - Filter Async Messages.vi
 
 该VI用于过滤CSM状态队列中的异步消息。
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>States In</b>：待过滤的整段状态描述字符串。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>States Out</b>：过滤后的状态描述字符串。
 
 #### CSM - Filter Async without Reply Messages.vi
 
 该VI用于过滤CSM状态队列中的异步无回复消息。
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>States In</b>：待过滤的整段状态描述字符串。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>States Out</b>：过滤后的状态描述字符串。
 
 #### CSM - Filter Messages to Non-Existing Modules.vi
 
 该VI用于过滤CSM状态队列中发送到不存在模块的消息。这个VI中会使用CSM - List Modules VI获取所有活动的CSM模块，然后过滤掉发送给不存在模块的消息。
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>States In</b>：待过滤的整段状态描述字符串。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>States Out</b>：过滤后的状态描述字符串。
 
 #### CSM - Filter Broadcasts.vi
 
 该VI用于过滤CSM状态队列中的广播消息。
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>States In</b>：待过滤的整段状态描述字符串。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>States Out</b>：过滤后的状态描述字符串。
 
 #### CSM - Filter Status Broadcasts.vi
 
 该VI用于过滤CSM状态队列中的状态广播消息。
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>States In</b>：待过滤的整段状态描述字符串。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>States Out</b>：过滤后的状态描述字符串。
 
 #### CSM - Filter Interrupt Broadcasts.vi
 
 该VI用于过滤CSM状态队列中的中断广播消息。
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 
 - <b>States In</b>：待过滤的整段状态描述字符串。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>States Out</b>：过滤后的状态描述字符串。
 
 #### CSM - Filter Duplicated Lines.vi
 
 该VI用于过滤CSM状态队列中的重复行。
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>Keep First Matched? (T)</b>：是否保留第一个匹配项，默认为True。
 - <b>States In</b>：待过滤的整段状态描述字符串。
 - <b>Option</b>：过滤选项。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>States Out</b>：过滤后的状态描述字符串。

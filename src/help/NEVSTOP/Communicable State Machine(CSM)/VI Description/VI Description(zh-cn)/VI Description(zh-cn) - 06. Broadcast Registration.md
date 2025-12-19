@@ -10,13 +10,13 @@
 
 > Ref: CSM订阅
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>CSM Name</b>：CSM模块名称。
 - <b>Source CSM Name (* as Default)</b>：生成状态的CSM模块。您可以使用“*”来表示所有生成相同状态的模块。
 - <b>Trigger</b>：触发字符串。
 - <b>API (if "", same as Trigger)</b>：注册后，如果触发发生变化，将接收到此消息。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>CSM Name (Dup)</b>：输入的CSM模块名称副本。
 
 ## CSM - Unregister Broadcast.vi
@@ -29,13 +29,13 @@
 
 > Ref: CSM订阅
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>CSM Name</b>：CSM模块名称。
 - <b>Source CSM Name (* as Default)</b>：生成状态的CSM模块。您可以使用“*”来表示所有生成相同状态的模块。
 - <b>Trigger</b>：触发字符串。
 - <b>API ("*" as Default)</b>：取消注册的API名称。如果为空，则为所有API。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>CSM Name (Dup)</b>：输入的CSM模块名称副本。
 
 ## CSM - List Rules in Broadcast Registry.vi
@@ -45,7 +45,7 @@
 > Ref: CSM广播
 > Ref: CSM订阅
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>Rule Entries</b>：所有规则条目。
 
 ## CSM - List Mapping Relationships in Broadcast Registry.vi
@@ -59,7 +59,7 @@
 > Ref: CSM广播
 > Ref: CSM订阅
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>Mapping Relationships</b>：当前CSM模块的所有广播订阅关系。
 
 ## CSM - List Sources in Broadcast Registry.vi
@@ -69,7 +69,7 @@
 > Ref: CSM广播
 > Ref: CSM订阅
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>Broadcast Names</b>：当前所有广播订阅关系的广播名称。
 
 
@@ -80,11 +80,11 @@
 > Ref: CSM广播
 > Ref: CSM订阅
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>CSM Name</b>：CSM模块名称。
 - <b>Broadcast Name</b>：广播的名称。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>Mapping Relationships</b>：当前CSM模块的某广播名称对应所有的订阅关系。
 
 
@@ -95,10 +95,10 @@
 > Ref: CSM广播
 > Ref: CSM订阅
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>CSM Name</b>：CSM模块名称。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>CSM Name (Dup)</b>：输入的CSM模块名称副本。
 
 ## CSM - Drop Broadcast Registry.vi

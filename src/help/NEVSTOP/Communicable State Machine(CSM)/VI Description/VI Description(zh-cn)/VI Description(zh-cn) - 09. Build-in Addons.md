@@ -21,7 +21,7 @@ CSM Watchdog线程，用于保证在主程序退出后，所有的异步启动�
 
 > Ref: CSM WatchDog实现的原理
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>Watchdog Queue</b>：Watchdog队列资源。
 
 ## CSM File Logger Addon
@@ -40,7 +40,7 @@ CSM Watchdog线程，用于保证在主程序退出后，所有的异步启动�
 > **记录文件限制**
 >
 > 为了防止长期运行的软件导致记录文件过大，我们设置了记录文件的大小限制和文件数量限制。
-> - File Size为单个文件的最大大小，单位为字节（byte），默认为10 MB；
+> - File Size为单个文件的最大大小，单位为字节(byte)，默认为10 MB；
 > - File Num为LOG文件最多个数，默认值为2。
 > 当记录文件大小超过File Size限制时，会创建一个新的文件记录；当记录文件个数超过 File Num 限制时，会删除最早的文件记录。
 
@@ -48,7 +48,7 @@ CSM Watchdog线程，用于保证在主程序退出后，所有的异步启动�
 
 参考范例：“Addons - Logger\CSM Application Running Log Example.vi”。
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>Log File Path</b>：记录文件路径。
 - <b>Timestamp format</b>：时间格式，默认为“%<%Y/%m/%d %H:%M:%S%3u>T”。
 - <b>Log Limit</b>：记录文件大小限制。File Size为单个文件的最大大小，单位为字节(byte)，默认为10MB；File Num为LOG文件最多个数，默认值为2。
@@ -57,7 +57,7 @@ CSM Watchdog线程，用于保证在主程序退出后，所有的异步启动�
 - <b>WatchDog? (T)</b>：是否启用 WatchDog功能，默认启用，当调用的VI退出后，分配的WatchDog资源会自动释放，触发记录线程也会自动退出；也可以手动释放WatchDog资源，触发记录线程也会自动退出。
 - <b>Exit When All Module Exist? (F)</b>：全部CSM模块退出后自动退出记录。默认不启用。如果启用该选项，在主程序不是CSM时，在运行中所有的CSM模块都退出，记录线程也会自动退出。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>Log File</b>：CSM lOG文件路径。
 - <b>Watchdog Queue</b>：WatchDog资源句柄。
 
@@ -113,12 +113,12 @@ CSM - Start File Logger VI中原本使用的线程VI。已废弃，目前使用C
 > <b>Add to Front? (F)</b> 通常为FALSE，因为循环状态一旦开始，就不会立即结束，插入状态队列前，会被认为是当前状态的子状态，此时如果当前状态如果是以同步消息调用，就不会立即返回。
 > 例如：假如API: Start DAQ中，定义了一组连续采集的状态，此时外部同步发送该消息，逻辑应为启动循环，然后立即返回。只有逻辑为等待循环结束后返回，才设置<b>Add to Front? (F)</b>为TRUE。
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>States Queue</b>：整个状态队列被连接到此输入。
 - <b>Loop States</b>：循环状态。
 - <b>Add to Front? (F)</b>：是否添加到所有状态前，通常为FALSE。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 
 - <b>Remaining States</b>：处理后的消息队列。
 
@@ -128,14 +128,14 @@ CSM - Start File Logger VI中原本使用的线程VI。已废弃，目前使用C
 
 参考范例：“Addons - Loop Support\CSMLS - Continuous Loop in CSM Example.vi”。
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>States Queue</b>：整个状态队列被连接到此输入。
 - <b>Loop State(s) and Arguments</b>：循环状态。
 - <b>Continuous State</b>：循环状态名称。
 - <b>Continuous Arguments ("")</b>：循环状态参数。
 - <b>Append(T)</b>：是否添加。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>Remaining States</b>：剩余的消息队列。
 
 ### CSMLS - Remove Loop Tag and previous State(s) to Break.vi
@@ -153,10 +153,10 @@ CSM - Start File Logger VI中原本使用的线程VI。已废弃，目前使用C
 
 相当于不会执行任何DAQ操作，立即直接进入停止和释放。
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>States Queue</b>：整个状态队列被连接到此输入。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>Remaining States</b>：剩余的消息队列。
 
 ### CSMLS - Remove Loop Tag to Break.vi
@@ -174,10 +174,10 @@ CSM - Start File Logger VI中原本使用的线程VI。已废弃，目前使用C
 
 相当于依然会执行当前的DAQ操作，然后进入停止和释放。
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>States Queue</b>：整个状态队列被连接到此输入。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 
 - <b>Remaining States</b>：剩余的消息队列。
 
@@ -185,11 +185,11 @@ CSM - Start File Logger VI中原本使用的线程VI。已废弃，目前使用C
 
 退出时检查循环标记。由于这个VI很容易忘记调用，因此已经在Parse State Queue++ VI中针对“Macro: Exit”状态添加了调用。因此已从函数选板移除。
 
--- <b>Controls(输入控件)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>States Queue</b>：整个状态队列被连接到此输入。
 - <b>Exiting States</b>：退出所需的状态。
 
--- <b>Indicators(输出控件)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>Remaining States</b>：处理后的消息队列。
 - <b><loop> Found</b>：找到 <loop>标记。
 
