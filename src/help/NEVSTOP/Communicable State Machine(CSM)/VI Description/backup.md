@@ -1,6 +1,6 @@
 #### Build Message with Arguments(Auto Check).vi
 
-- <B>For Example:</B>
+- <B>For Example</b>:
 
 If <b>State with Arguments</b> input is "API: DoSth"
 - <b>Arguments ("")</b> input is "Arguments"
@@ -29,7 +29,7 @@ Then result string is "API: DoSth >> NewArguments -@ Callee"
 
 #### Build Synchronous Message with Arguments.vi
 
-- <B>For Example:</B>
+- <B>For Example</b>:
 
 If <b>State with Arguments</b> input is "API: DoSth"
 - <b>Arguments ("")</b> input is "Arguments"
@@ -58,7 +58,7 @@ Then result string is "API: DoSth >> NewArguments -@ Callee".
 
 #### Build Asynchronous Message with Arguments.vi
 
-- <B>For Example:</B>
+- <B>For Example</b>:
 
 If <b>State with Arguments</b> input is "API: DoSth"
 - <b>Arguments ("")</b> input is "Arguments"
@@ -87,7 +87,7 @@ Then result string is "API: DoSth >> NewArguments -> Callee". Message Type Symbo
 
 #### Build No-Reply Asynchronous Message with Arguments.vi
 
-- <B>For Example:</B>
+- <B>For Example</b>:
 
 If <b>State with Arguments</b> input is "API: DoSth"
 - <b>Arguments ("")</b> input is "Arguments"
@@ -116,7 +116,7 @@ Then result string is "API: DoSth >> NewArguments ->| Callee". Message Type Symb
 
 #### Build Normal Status Message.vi
 
-- <B>For Example:</B>
+- <B>For Example</b>:
 If <b>State with Arguments</b> input is "API: DoSth"
 Then result string is "API: DoSth >> Arguments" as no message symbol is detected.
 If <b>State with Arguments</b> input is "API: DoSth >> Arguments -> Callee"

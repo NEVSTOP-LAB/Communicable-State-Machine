@@ -154,7 +154,7 @@ This example demonstrates how LabVIEW errors are passed as CSM arguments.
 
 This example converts a LabVIEW error cluster into a CSM-compatible error string. This allows the CSM core parsing engine to handle LabVIEW errors from the message queue and facilitates logging internal errors. The converted error string uses the following format: `<ErrStr>[Error: error-code] error-description-As-safe-argument-string`. Additionally, `CSM - Argument Type.vi` retrieves the argument tag, which in this case is `ErrStr`.
 
-<b>Application Scenario:</b> Passing LabVIEW errors.
+<b>Application Scenario</b>: Passing LabVIEW errors.
 
 #### Steps
 
@@ -174,7 +174,7 @@ Demonstrates how to pass strings containing special characters as arguments.
 
 Since CSM uses text descriptions as arguments, parsing errors occur if the argument contains reserved CSM keywords. To solve this, CSM provides APIs to convert special characters in unsafe strings into safe strings for use in arguments.
 
-<b>Application Scenario:</b> Passing strings containing special characters.
+<b>Application Scenario</b>: Passing strings containing special characters.
 
 #### Steps
 

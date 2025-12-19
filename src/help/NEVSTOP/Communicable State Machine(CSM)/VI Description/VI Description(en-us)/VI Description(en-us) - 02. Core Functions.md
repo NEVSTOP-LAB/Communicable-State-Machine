@@ -37,7 +37,7 @@ Builds CSM message strings, containing information such as state, arguments, tar
 > - Ref: CSM Message Format Parsing
 
 ```
-  - <b>Example:</b>
+  - <b>Example</b>:
 
   When sending to the local state machine, <b>Target Module ("")</b> must be set to empty.
 

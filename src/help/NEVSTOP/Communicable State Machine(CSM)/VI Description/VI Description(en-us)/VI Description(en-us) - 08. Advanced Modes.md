@@ -61,10 +61,10 @@ Constructs a submodule name.
 > - From an external call perspective, these instances collectively form a composite module named Worker Agent.
 > - Each instance is named a Worker.
 >
-> <b>Behavior:</b> External callers can consider the Worker Agent as a single CSM module capable of message communication, state registration, and so on. Internally, an idle Worker retrieves messages from the Worker Agent message queue and processes them. Therefore, Worker Mode enables concurrent message processing for a CSM module.
+> <b>Behavior</b>: External callers can consider the Worker Agent as a single CSM module capable of message communication, state registration, and so on. Internally, an idle Worker retrieves messages from the Worker Agent message queue and processes them. Therefore, Worker Mode enables concurrent message processing for a CSM module.
 >
 > ```
-> <b>Example:</b> 
+> <b>Example</b>: 
 > 
 > // Request module name as `module#`, where `module` is the Worker Agent name. Instantiate two instances. Their names might be: 
 > 
@@ -79,8 +79,7 @@ Constructs a submodule name.
 > `csm message >> arguments -> module` // Asynchronous message. An idle Worker will process this message.
 > ```
 >
-> <b>Application Scenarios:</b>
->
+> <b>Application Scenarios</b>:
 > - Call center operator scenarios
 > - Concurrent downloader scenarios
 > - Concurrent compiler scenarios
@@ -111,10 +110,10 @@ Marks a module as a Worker Mode module by adding "#" after the CSM name.
 > - From an external call perspective, these instances collectively form a composite module named Chain.
 > - Each instance is named a Chain Node.
 >
-> <b>Behavior:</b> External callers can consider the Chain as a single CSM module capable of message communication, state registration, and so on. Internally, nodes attempt to process the message sequentially according to their order. When a node has the capability to process the current message, the message is processed and is not passed further down the chain.
+> <b>Behavior</b>: External callers can consider the Chain as a single CSM module capable of message communication, state registration, and so on. Internally, nodes attempt to process the message sequentially according to their order. When a node has the capability to process the current message, the message is processed and is not passed further down the chain.
 >
 > ```
-> <b>Example:</b>
+> <b>Example</b>:
 > // Request module name as `module$`, where `module` is the chain name. Instantiate 4 instances. Their names might be:
 > // - `module$1`
 > // - `module$2`
@@ -126,8 +125,7 @@ Marks a module as a Worker Mode module by adding "#" after the CSM name.
 > // This message will be processed by `module$3`. `module$4` will not respond.
 > ```
 >
-> <b>Application Scenarios:</b>
->
+> <b>Application Scenarios</b>:
 > - Permission approval process. Based on job hierarchy, personnel with specific functional permissions can approve directly without passing it further.
 > - Function concatenation. Different modules implement different tasks, and different functional sets can be combined through concatenation.
 > - Function overriding. Implementing overloading in OOP through overriding.

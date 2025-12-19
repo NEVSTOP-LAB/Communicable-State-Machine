@@ -108,9 +108,9 @@ Converts an API String to the corresponding data type.
 
 Queries a specified data item within cluster data and converts it to API String format.
 
-<b>Application Scenario:</b> For example, in a new CSM module template included with the API String Addon, a `Data: Get Configuration` state is added. In this state, by sending the name of the desired data item, the corresponding data item value can be returned.
+<b>Application Scenario</b>: For example, in a new CSM module template included with the API String Addon, a `Data: Get Configuration` state is added. In this state, by sending the name of the desired data item, the corresponding data item value can be returned.
 
-<b>Special Case:</b> If <b>Name</b> is set to `<list>`, a list of all available settings is returned.
+<b>Special Case</b>: If <b>Name</b> is set to `<list>`, a list of all available settings is returned.
 
 -- <b>Controls</b> --
 - <b>Cluster Data</b>: Cluster data.

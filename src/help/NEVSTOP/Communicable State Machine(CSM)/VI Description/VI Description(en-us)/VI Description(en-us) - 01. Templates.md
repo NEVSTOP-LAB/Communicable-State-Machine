@@ -33,7 +33,7 @@ A template for creating a CSM module with a user interface. This template includ
 > - Ref: CSM Exit State
 
 -- <b>Controls</b> --
-- <b>Name ("" to use UUID):</b> CSM module name. Refer to *CSM Naming Rules* for module naming rules.
+- <b>Name ("" to use UUID)</b>: CSM module name. Refer to *CSM Naming Rules* for module naming rules.
 
 ### CSM Module Template.vi
 

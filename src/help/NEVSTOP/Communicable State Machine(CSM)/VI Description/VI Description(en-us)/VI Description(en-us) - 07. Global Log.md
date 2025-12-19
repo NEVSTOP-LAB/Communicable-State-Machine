@@ -112,8 +112,8 @@ Generates a custom user log for scenarios such as debugging. When the input para
 >
 > There are two types of global log filtering: source-side filtering and subscriber-side filtering.
 >
-> - <b>Source-side filtering:</b> The CSM framework has built-in filtering rules. Based on user settings, logs can be prevented from being sent at the source. 
-> - <b>Subscriber-side filtering:</b> Using the same rules, CSM provides helper VIs that can determine whether a log matches the filtering rules after it is received, allowing for different logic processing.
+> - <b>Source-side filtering</b>: The CSM framework has built-in filtering rules. Based on user settings, logs can be prevented from being sent at the source. 
+> - <b>Subscriber-side filtering</b>: Using the same rules, CSM provides helper VIs that can determine whether a log matches the filtering rules after it is received, allowing for different logic processing.
 >
 > Source-side processing completely prevents logs from being sent, reducing system load. Subscriber-side filtering only affects the logic of that specific subscriber and does not affect background log saving, offering higher flexibility.
 
@@ -123,19 +123,19 @@ Generates a custom user log for scenarios such as debugging. When the input para
 > Global log filter rules allow a category of logs to be filtered out so they do not appear in the global log.
 >
 > The following are the three types of log filter rules:
-> - <b>Global Rules:</b> Apply to all modules meeting the conditions. You can configure the following settings:
->   - <b>Module Name:</b> All names of the module will be filtered.
->   - <b>Log Type:</b> Such as state, message, broadcast, module Initialization, and so on.
->   - <b>State Name:</b> Any module with the state name will be filtered.
->   - <b>State Type:</b> Type of state, such as internal state, external message, and so on.
-> - <b>Module Rules:</b> Apply to specific modules. You can configure the following settings:
->   - <b>Module Log Type:</b> Modules with the specified log types of the module are filtered.
->   - <b>State Name:</b> Modules with the specified state name are filtered.
->   - <b>State Type:</b> Modules with the specified state type are filtered.
-> - <b>Periodic Filter Rules:</b> This rule is currently only effective at the registration point because it is difficult to count numbers at the publication location.
+> - <b>Global Rules</b>: Apply to all modules meeting the conditions. You can configure the following settings:
+>   - <b>Module Name</b>: All names of the module will be filtered.
+>   - <b>Log Type</b>: Such as state, message, broadcast, module Initialization, and so on.
+>   - <b>State Name</b>: Any module with the state name will be filtered.
+>   - <b>State Type</b>: Type of state, such as internal state, external message, and so on.
+> - <b>Module Rules</b>: Apply to specific modules. You can configure the following settings:
+>   - <b>Module Log Type</b>: Modules with the specified log types of the module are filtered.
+>   - <b>State Name</b>: Modules with the specified state name are filtered.
+>   - <b>State Type</b>: Modules with the specified state type are filtered.
+> - <b>Periodic Filter Rules</b>: This rule is currently only effective at the registration point because it is difficult to count numbers at the publication location.
 >   - Whether to enable periodic filtering.
->   - <b>Threshold (#/s):</b> Periodic filtering threshold.
->   - <b>CheckPeriod (s):</b> Check window time.
+>   - <b>Threshold (#/s)</b>: Periodic filtering threshold.
+>   - <b>CheckPeriod (s)</b>: Check window time.
 
 ### CSM - Set Log Filter Rules.vi
 

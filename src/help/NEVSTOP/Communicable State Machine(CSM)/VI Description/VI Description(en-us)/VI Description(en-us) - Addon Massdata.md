@@ -10,7 +10,7 @@
 > - The argument type defined by CSM Massdata is `<MassData>`, which can be obtained using the CSM - Argument Type VI.
 > - Data transmission of CSM Massdata is completely lossless. However, it is not suitable for storing data that requires indefinite persistence.
 >
-> <b>Note:</b> CSM Massdata internally uses a circular buffer mechanism. All CSM modules within the same application share the same Massdata buffer space. When the buffer is full, new data will overwrite old data starting from the beginning. Therefore, you need to set a reasonable buffer size to ensure that data is not overwritten before use, avoiding data loss.
+> <b>Note</b>: CSM Massdata internally uses a circular buffer mechanism. All CSM modules within the same application share the same Massdata buffer space. When the buffer is full, new data will overwrite old data starting from the beginning. Therefore, you need to set a reasonable buffer size to ensure that data is not overwritten before use, avoiding data loss.
 
 > [!NOTE] 
 > <b>CSM Massdata Argument Format</b> 

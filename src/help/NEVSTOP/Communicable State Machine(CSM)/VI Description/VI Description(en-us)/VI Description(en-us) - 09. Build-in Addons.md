@@ -11,7 +11,7 @@
 
 Starts the CSM Watchdog thread to monitor whether the main program has exited. It is typically executed immediately after the main program starts.
 
-<b>Application Scenario:</b> Used to ensure that all asynchronously started CSM modules can exit normally after the main program exits.
+<b>Application Scenario</b>: Used to ensure that all asynchronously started CSM modules can exit normally after the main program exits.
 
 > - Ref: CSM WatchDog Implementation Principle
 
@@ -39,8 +39,8 @@ Starts the CSM Global Log file recording background thread, which is used to sav
 > <b>Log File Limits</b>
 >
 > To prevent log files from becoming too large due to long-running software, limits are set on log file size and the number of files:
-> - <b>File Size:</b> The maximum size of a single file in bytes. The default is 10 MB.
-> - <b>File Num:</b> The maximum number of LOG files. The default is 2.
+> - <b>File Size</b>: The maximum size of a single file in bytes. The default is 10 MB.
+> - <b>File Num</b>: The maximum number of LOG files. The default is 2.
 >
 > When the log file size exceeds the <b>File Size</b> limit, a new file record is created. When the number of log files exceeds the <b>File Num</b> limit, the oldest file record is deleted.
 
@@ -142,7 +142,7 @@ Appends loop states to maintain the loop running.
 
 Stops the loop by removing the `<loop>` tag and all states before the `<loop>` tag.
 
-<b>Example:</b>
+<b>Example</b>:
 
 If the following messages exist in the CSM message queue, executing the current API operation will remove the messages where the comments are located.
 
@@ -165,7 +165,7 @@ This is equivalent to not executing any DAQ operations and immediately entering 
 
 Stops the loop by removing the `<loop>` tag.
 
-<b>Example:</b>
+<b>Example</b>:
 
 If the following messages exist in the CSM message queue, executing the current API operation will remove the messages where the comments are located.
 
