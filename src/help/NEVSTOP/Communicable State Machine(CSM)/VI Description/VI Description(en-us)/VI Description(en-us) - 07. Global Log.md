@@ -24,7 +24,9 @@
 >
 > CSM provides two methods for acquiring global logs: Queue and Event. The Queue processing method is recommended because the queue interface is more efficient and offers greater flexibility in selecting log processing schemes based on the number of accumulated logs in the queue.
 
-> [!NOTE] **Global Log Filter Rules**
+> [!NOTE] 
+> 
+> **Global Log Filter Rules**
 
 ## CSM - Global Log Queue.vi
 
@@ -115,7 +117,9 @@ Generates a custom user log for scenarios such as debugging. When the input para
 
 ## Filter Rules
 
-> [!NOTE] **Global Log Filter Location**
+> [!NOTE] 
+> 
+> **Global Log Filter Location**
 >
 > There are two types of global log filtering: source-side filtering and subscriber-side filtering.
 >

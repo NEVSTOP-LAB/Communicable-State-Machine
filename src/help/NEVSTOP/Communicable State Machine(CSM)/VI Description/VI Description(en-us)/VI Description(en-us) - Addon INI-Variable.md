@@ -1,6 +1,8 @@
 # CSM INI-Variable Addon
 
-> [!NOTE] **CSM INI-Variable Addon**
+> [!NOTE] 
+> 
+> **CSM INI-Variable Addon**
 >
 > Configuration files are an essential component of application development. The CSM INI-Variable Addon provides simple and easy-to-use configuration file support for CSM, allowing users to configure applications without explicitly reading or writing configuration files.
 >
@@ -16,7 +18,9 @@
 >
 > This library includes and utilizes a copy of [LabVIEW-Config](https://www.google.com/search?q=https://github.com/rcpacini/LabVIEW-Config) developed by [@rcpacini](https://github.com/rcpacini).
 
-> [!NOTE] **CSM INI-Variable Format**
+> [!NOTE] 
+> 
+> **CSM INI-Variable Format**
 >
 > Format Definition: `${section.variable:defaultValue}`
 >
@@ -31,7 +35,9 @@
 > - The `section` parameter is optional. If omitted, the default configuration section `SectionName=LabVIEW` is used.
 > - The default value is optional. If unspecified, it defaults to an empty string ("").
 
-> [!NOTE] **CSM INI-Variable Configuration File Path**
+> [!NOTE] 
+> 
+> **CSM INI-Variable Configuration File Path**
 >
 > - **Development State:** The first INI configuration file found in the Application Directory. If no configuration file exists, it defaults to `csm-app.ini`.
 > - **Post-Compilation:** An INI configuration file in the same directory as the executable file, with the same name as the executable. LabVIEW automatically generates this file after compilation.
@@ -42,7 +48,9 @@
 >   - The name of the configuration file in the `[__include]` section is not critical, as long as the path is correct.
 >   - To avoid circular references, the same configuration file will be automatically ignored if loaded a second time.
 
-> [!NOTE] **CSM INI-Variable Multi-File Configuration Scenario**
+> [!NOTE] 
+> 
+> **CSM INI-Variable Multi-File Configuration Scenario**
 >
 > - When loading multiple files, configuration items in files loaded later will overwrite identical items in previously loaded files.
 > - When saving cache changes to a file, modifications are saved to the configuration file loaded last.

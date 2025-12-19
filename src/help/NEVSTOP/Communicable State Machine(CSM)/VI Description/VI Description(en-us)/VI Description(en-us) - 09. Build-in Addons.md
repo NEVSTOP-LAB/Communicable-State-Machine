@@ -2,7 +2,9 @@
 
 ## CSM WatchDog Addon
 
-> [!NOTE] **CSM WatchDog Implementation Principle**
+> [!NOTE] 
+> 
+> **CSM WatchDog Implementation Principle**
 >
 > When a LabVIEW VI exits, it automatically releases all handle resources such as queues and events. Therefore, you can create a WatchDog thread that monitors a queue resource created by the main program VI. When this queue resource is released after the main VI exits, the WatchDog thread is triggered to send "Macro: Exit" to any CSM modules that have not yet exited, ensuring they exit normally.
 
@@ -30,11 +32,15 @@ The CSM Watchdog thread is used to ensure that all asynchronously started CSM mo
 
 Starts the CSM Global Log file recording background thread, which is used to save all execution records in the application to a specified text file.
 
-> [!NOTE] **CSM File Logger Implementation Principle**
+> [!NOTE] 
+> 
+> **CSM File Logger Implementation Principle**
 >
 > The CSM File Logger retrieves all execution records in the application via the CSM Global Log API and saves them to a specified text file for later analysis and error localization. The file format is a text file with the suffix `.csmlog`, which can be opened using text editing query tools such as Notepad.
 
-> [!NOTE] **Log File Limits**
+> [!NOTE] 
+> 
+> **Log File Limits**
 >
 > To prevent log files from becoming too large due to long-running software, limits are set on log file size and the number of files.
 >
@@ -76,7 +82,9 @@ The thread VI originally used in the CSM - Start File Logger VI. This VI is now 
 
 ## CSM Loop Support Addon
 
-> [!NOTE] **Reason for CSM LOOP Support Design**
+> [!NOTE] 
+> 
+> **Reason for CSM LOOP Support Design**
 >
 > A loop is the basic unit of operation for a state machine, executing continuously while the state machine is running. Users can define loop conditions via logic or use the CSM-recommended Loop Support Addon to define loops.
 >

@@ -1,56 +1,54 @@
 # CSM API String Addon
 
-> [!NOTE] **API String Parameter Support**
+> [!NOTE] 
+> 
+> **API String Parameter Support**
 >
 > API String parameter support is used to enhance the API parameter functionality of the Communicable State Machine (CSM). API String supports passing various data types in plain text format and is specifically optimized for manual input experiences. API String does not define an argument type. The result obtained via the CSM - Argument Type VI is empty, and it is typically handled in the default case. The following are supported data types:
 >
 > - String
->
 > - Path
->
 > - Boolean
->
 > - Tag
->
 > - Refnum (including IVI/VISA/UserDefinedRefnumTag)
->
 > - Integer (I8, I16, I32, I64, U8, U16, U32, U64)
->
 > - Floating-point (DBL/SGL)
->
 > - Complex (DBL/SGL)
->
 > - Timestamp
->
 > - Enum
->
 > - Array
->
 > - Cluster
->
 > - Other types (represented using CSM-Hexstr) 
 >
 >   For more details, visit: `https://github.com/NEVSTOP-LAB/CSM-API-String-Arguments-Support`.
 >
 >   You can also refer to the examples. All data types have detailed descriptions and examples.
 
-> [!NOTE] **Default Strings for TRUE Value**
+> [!NOTE] 
+> 
+> **Default Strings for TRUE Value**
 >
 > Supports `1`, `Active`, `Enable`, `Non-null`, `On`, `T`, `True`, `valid`, `yes` 
 >
 > Case insensitive.
 
-> [!NOTE] **Default Strings for FALSE Value**
+> [!NOTE] 
+> 
+> **Default Strings for FALSE Value**
 >
 > Supports `0`, `Disable`, `F`, `False`, `Inactive`, `Invalid`, `No`, `Off`, `Void`, `null` 
 >
 > Case insensitive.
 
-> [!NOTE] **Default Floating-point Format**
+> [!NOTE] 
+> 
+> **Default Floating-point Format**
 >
 > The default floating-point format is `%.6p`.
 
-> [!NOTE] **Indexed Enum**
+> [!NOTE] 
+> 
+> **Indexed Enum**
 >
 > Format: `[Index Number][Separator][Enum String]`. 
 >

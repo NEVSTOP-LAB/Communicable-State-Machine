@@ -21,17 +21,11 @@ Parses the CSM state queue and returns the next current state to execute, along 
 -- <b>Indicators</b> --
 
 - <b>Name Used</b>: Actual name assigned to the CSM module.
-
 - <b>Remaining States</b>: All concatenated states and arguments.
-
 - <b>Current State</b>: The next current state to execute.
-
 - <b>Arguments</b>: Returns any arguments that might be used in the current state string. These arguments are located after the ">>" characters. 
-
-  <b>Note:</b> Argument variables must not contain any non-printable characters, such as line feeds or carriage returns.
-
+    - Argument variables must not contain any non-printable characters, such as line feeds or carriage returns.
 - <b>Additional Information</b>: Supplemental information. For states triggered by a broadcast, this information contains the name and arguments of the broadcast.
-
 - <b>Source CSM</b>: If <b>Current State</b> is sent externally, this is the name of the source CSM module.
 
 ### Build State String with Arguments++.vi
@@ -291,11 +285,8 @@ Concatenates unregister state operation message strings. The message format is a
 Facilitates editing multiple CSM message strings by providing a batch replacement function for marks. There are four marks that can be replaced:
 
 - `<param>` mark: Usually represents the same argument.
-
 - `<target>` mark: Usually represents the same target.
-
 - `<1>` mark: Represents custom mark 1.
-
 - `<2>` mark: Represents custom mark 2.
 
   ```
@@ -366,7 +357,9 @@ Broadcasts a status change to the system. CSM modules with registered states wil
   Status >> Arguments -><broadcast>
 ```
 
-> [!NOTE] **CSM State Queue Operation API**
+> [!NOTE] 
+> 
+> **CSM State Queue Operation API**
 >
 > This type of API only concatenates message strings and does not send messages directly. The message is sent and the operation executed within the Parse State Queue++ VI. Unlike the Message Building API, this type of API includes a CSM state queue string input, which is equivalent to inserting a message into the state queue.
 
@@ -386,7 +379,9 @@ Merges CSM message strings into the CSM message queue. This VI provides string o
 
 > Ref: CSM State Queue Operation API
 
-> [!NOTE] **Polymorphic VI Options**
+> [!NOTE] 
+> 
+> **Polymorphic VI Options**
 >
 > - Add State(s) to Queue By BOOL(Element).vi
 > - Add State(s) to Queue By BOOL(Array Left).vi

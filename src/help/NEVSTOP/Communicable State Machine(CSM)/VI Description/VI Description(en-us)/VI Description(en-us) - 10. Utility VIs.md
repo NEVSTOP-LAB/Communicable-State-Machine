@@ -89,7 +89,9 @@ Obtains the data type description string corresponding to the input data. Typica
 
 Converts a data type description string into a LabVIEW-defined data type enum.
 
-> [!NOTE] **Polymorphic VI Options**
+> [!NOTE] 
+> 
+> **Polymorphic VI Options**
 >
 > - CSM Data Type String to Enum(String).vi
 > - CSM Data Type String to Enum(TypeEnum).vi

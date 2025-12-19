@@ -11,7 +11,9 @@
 > - **Action Worker:** Worker Mode. Append `#` to the module name to mark this module as a worker. This module shares the same message queue with other workers having the same name.
 > - **Chain Node:** Chain node. Append `$` to the module name to mark this module as a chain node. Messages on the same chain will be passed sequentially until a node processes the message.
 
-> [!NOTE] **CSM Priority Queue Design**
+> [!NOTE] 
+> 
+> **CSM Priority Queue Design**
 >
 > In the background, CSM essentially uses LabVIEW queues to implement inter-module communication. However, CSM uses two separate queues to store messages of different priorities:
 >
@@ -171,7 +173,9 @@ Filters specific states in the CSM state queue.
 >
 > Using this VI is generally not recommended. It is recommended to avoid message accumulation in modules through your code design. Therefore, it is recommended to avoid clearing the JKISM string queue through code design. However, if clearing the JKISM string queue is mandatory, it is recommended to use this VI to clear the JKISM string queue rather than using string operations.
 
-> [!NOTE] **Polymorphic VI Options**
+> [!NOTE] 
+> 
+> **Polymorphic VI Options**
 >
 > - CSM - Filter Local States.vi: Filters local states.
 > - CSM - Filter Messages.vi: Filters all types of messages.
