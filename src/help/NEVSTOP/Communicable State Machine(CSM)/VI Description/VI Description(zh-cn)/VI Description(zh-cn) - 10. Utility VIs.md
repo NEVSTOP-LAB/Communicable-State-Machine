@@ -79,7 +79,7 @@
 从数据类型描述字符串中LabVIEW定义的数据类型枚举。
 
 > [!NOTE] 
-> **多态VI(Polymorphic VI)选项**
+> <b>多态VI(Polymorphic VI)选项</b>
 >
 > - CSM Data Type String to Enum(String).vi
 > - CSM Data Type String to Enum(TypeEnum).vi

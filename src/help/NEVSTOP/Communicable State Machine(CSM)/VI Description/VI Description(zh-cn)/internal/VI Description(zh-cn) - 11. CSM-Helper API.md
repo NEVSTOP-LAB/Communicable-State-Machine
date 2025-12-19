@@ -4,10 +4,10 @@
 
 ### Is CSM Module.vi
 
-Ê¹ÓÃ×îÉÙµÄVIµ÷ÓÃ£¬ÅĞ¶ÏÊÇ·ñÊÇ CSM Ä£¿é£¬ÓÃÓÚ LabVIEW ²å¼şÔ¤ÏÈÅĞ¶Ï¡£
+ä½¿ç”¨æœ€å°‘çš„VIè°ƒç”¨ï¼Œåˆ¤æ–­æ˜¯å¦æ˜¯ CSM æ¨¡å—ï¼Œç”¨äº LabVIEW æ’ä»¶é¢„å…ˆåˆ¤æ–­ã€‚
 
 > [!NOTE] 
-> **¶àÌ¬VI(Polymorphic VI)Ñ¡Ïî**
+> <b>å¤šæ€VI(Polymorphic VI)é€‰é¡¹</b>
 >
 > - Is CSM Module - VIRef.vi
 > - Is CSM Module - WhileLoop.vi
@@ -18,99 +18,99 @@
 
 #### Is CSM Module - VIRef.vi
 
-Í¨¹ı VIRef ÅĞ¶ÏÊÇ·ñÊÇÊÇ CSM Ä£¿é
+é€šè¿‡ VIRef åˆ¤æ–­æ˜¯å¦æ˜¯æ˜¯ CSM æ¨¡å—
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>VIRef</b>: VIÒıÓÃ
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>VIRef</b>: VIå¼•ç”¨
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>Is CSM Module?</b>: ·ñÊÇÊÇ CSM Ä£¿é
-- <b>CSM Basic Refs</b>: Èç¹ûÊÇ CSMÄ£¿é£¬Õâ¸ö´Ø°üº¬ÁË¡¡CSM¡¡Ä£¿éµÄ»ù±¾ÔªËØµÄÒıÓÃ
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>Is CSM Module?</b>: å¦æ˜¯æ˜¯ CSM æ¨¡å—
+- <b>CSM Basic Refs</b>: å¦‚æœæ˜¯ CSMæ¨¡å—ï¼Œè¿™ä¸ªç°‡åŒ…å«äº†ã€€CSMã€€æ¨¡å—çš„åŸºæœ¬å…ƒç´ çš„å¼•ç”¨
 - <b>CSMType</b>:Indicators
 #### Is CSM Module - WhileLoop.vi
 
-Í¨¹ı While Loop ÒıÓÃÅĞ¶ÏÊÇ·ñÊÇ CSM Ä£¿é
+é€šè¿‡ While Loop å¼•ç”¨åˆ¤æ–­æ˜¯å¦æ˜¯ CSM æ¨¡å—
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>WhileLoop</b>: While Loop ÒıÓÃ
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>WhileLoop</b>: While Loop å¼•ç”¨
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>Is CSM Module?</b>: ·ñÊÇÊÇ CSM Ä£¿é
-- <b>CSM Basic Refs</b>: Èç¹ûÊÇ CSMÄ£¿é£¬Õâ¸ö´Ø°üº¬ÁË¡¡CSM¡¡Ä£¿éµÄ»ù±¾ÔªËØµÄÒıÓÃ
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>Is CSM Module?</b>: å¦æ˜¯æ˜¯ CSM æ¨¡å—
+- <b>CSM Basic Refs</b>: å¦‚æœæ˜¯ CSMæ¨¡å—ï¼Œè¿™ä¸ªç°‡åŒ…å«äº†ã€€CSMã€€æ¨¡å—çš„åŸºæœ¬å…ƒç´ çš„å¼•ç”¨
 - <b>CSMType</b>:Indicators
 - <b>WhileLoop in</b>:Controls
 #### Is CSM Module - Structure.vi
 
-Í¨¹ı Structure ÒıÓÃÅĞ¶ÏÊÇ·ñÊÇ CSM Ä£¿é
+é€šè¿‡ Structure å¼•ç”¨åˆ¤æ–­æ˜¯å¦æ˜¯ CSM æ¨¡å—
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>Structure</b>: Structure ÒıÓÃ
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>Structure</b>: Structure å¼•ç”¨
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>Is CSM Module?</b>: ·ñÊÇÊÇ CSM Ä£¿é
-- <b>CSM Basic Refs</b>: Èç¹ûÊÇ CSMÄ£¿é£¬Õâ¸ö´Ø°üº¬ÁË¡¡CSM¡¡Ä£¿éµÄ»ù±¾ÔªËØµÄÒıÓÃ
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>Is CSM Module?</b>: å¦æ˜¯æ˜¯ CSM æ¨¡å—
+- <b>CSM Basic Refs</b>: å¦‚æœæ˜¯ CSMæ¨¡å—ï¼Œè¿™ä¸ªç°‡åŒ…å«äº†ã€€CSMã€€æ¨¡å—çš„åŸºæœ¬å…ƒç´ çš„å¼•ç”¨
 
 #### Is CSM Module - CaseStructure.vi
 
-Í¨¹ı CaseStructure ÒıÓÃÅĞ¶ÏÊÇ·ñÊÇ CSM Ä£¿é
+é€šè¿‡ CaseStructure å¼•ç”¨åˆ¤æ–­æ˜¯å¦æ˜¯ CSM æ¨¡å—
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>CaseStructure</b>: CaseStructure ÒıÓÃ
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>CaseStructure</b>: CaseStructure å¼•ç”¨
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>Is CSM Module?</b>: ·ñÊÇÊÇ CSM Ä£¿é
-- <b>CSM Basic Refs</b>: Èç¹ûÊÇ CSMÄ£¿é£¬Õâ¸ö´Ø°üº¬ÁË¡¡CSM¡¡Ä£¿éµÄ»ù±¾ÔªËØµÄÒıÓÃ
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>Is CSM Module?</b>: å¦æ˜¯æ˜¯ CSM æ¨¡å—
+- <b>CSM Basic Refs</b>: å¦‚æœæ˜¯ CSMæ¨¡å—ï¼Œè¿™ä¸ªç°‡åŒ…å«äº†ã€€CSMã€€æ¨¡å—çš„åŸºæœ¬å…ƒç´ çš„å¼•ç”¨
 
 #### Is CSM Module - EventStructure.vi
 
-Í¨¹ı EventStructure ÒıÓÃÅĞ¶ÏÊÇ·ñÊÇ CSM Ä£¿é
+é€šè¿‡ EventStructure å¼•ç”¨åˆ¤æ–­æ˜¯å¦æ˜¯ CSM æ¨¡å—
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>EventStructure</b>: EventStructure ÒıÓÃ
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>EventStructure</b>: EventStructure å¼•ç”¨
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>Is CSM Module?</b>: ·ñÊÇÊÇ CSM Ä£¿é
-- <b>CSM Basic Refs</b>: Èç¹ûÊÇ CSMÄ£¿é£¬Õâ¸ö´Ø°üº¬ÁË¡¡CSM¡¡Ä£¿éµÄ»ù±¾ÔªËØµÄÒıÓÃ
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>Is CSM Module?</b>: å¦æ˜¯æ˜¯ CSM æ¨¡å—
+- <b>CSM Basic Refs</b>: å¦‚æœæ˜¯ CSMæ¨¡å—ï¼Œè¿™ä¸ªç°‡åŒ…å«äº†ã€€CSMã€€æ¨¡å—çš„åŸºæœ¬å…ƒç´ çš„å¼•ç”¨
 
 #### Is CSM Module - ParseStateVI.vi
 
-Í¨¹ı Parse State VI ÒıÓÃÅĞ¶ÏÊÇ·ñÊÇ CSM Ä£¿é
+é€šè¿‡ Parse State VI å¼•ç”¨åˆ¤æ–­æ˜¯å¦æ˜¯ CSM æ¨¡å—
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>Parse State VI Ref</b>: Parse State VI ÒıÓÃ
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>Parse State VI Ref</b>: Parse State VI å¼•ç”¨
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>Is CSM Module?</b>: ·ñÊÇÊÇ CSM Ä£¿é
-- <b>CSM Basic Refs</b>: Èç¹ûÊÇ CSMÄ£¿é£¬Õâ¸ö´Ø°üº¬ÁË¡¡CSM¡¡Ä£¿éµÄ»ù±¾ÔªËØµÄÒıÓÃ
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>Is CSM Module?</b>: å¦æ˜¯æ˜¯ CSM æ¨¡å—
+- <b>CSM Basic Refs</b>: å¦‚æœæ˜¯ CSMæ¨¡å—ï¼Œè¿™ä¸ªç°‡åŒ…å«äº†ã€€CSMã€€æ¨¡å—çš„åŸºæœ¬å…ƒç´ çš„å¼•ç”¨
 
 ### CSM-Helper API.vi
 
 ### CSM-Helper usecase Template.vit
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 
 ### _Add VI Reference Case.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 - <b>element</b>:
 - <b>Add Frame</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 - <b>element</b>:Controls
 ### Connect Information.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Case</b>:
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 - <b>Backend Connected Info</b>:
 - <b>FrontEnd Connected Info</b>:
 - <b>Backend Connected Info</b>:Indicators
@@ -118,12 +118,12 @@
 - <b>FrontEnd Connected Info</b>:Indicators
 ### Diagram Node Information.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>InnerTerminal in</b>:
 - <b>Array in</b>:
 - <b>Front Tunnels</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Array</b>:
 - <b>Array out</b>:
 - <b>Array in</b>:Controls
@@ -132,26 +132,26 @@
 - <b>InnerTerminal in</b>:Controls
 ### Get Argument Info From back Term.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Terminal in</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Array</b>:
 - <b>Array</b>:Indicators
 ### Get Argument Info From Front Term.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Terminal in</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Array</b>:
 - <b>Array</b>:Indicators
 ### GObject Terminals.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>GObject in</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>error in (no error) (dup)</b>:
 - <b>Class Name</b>:
 - <b>Terms[]</b>:
@@ -160,93 +160,93 @@
 
 ### Relative Pos to InterData Tunnel of CaseContent.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>element</b>:
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Position</b>:
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 - <b>Position</b>:Indicators
 - <b>element</b>:Controls
 ### Resize CaseStructure By Making Space.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Bounds</b>:
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>DiffBound</b>:
 - <b>MakeSpace.Rect</b>:
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 - <b>Bounds</b>:Controls
 - <b>MakeSpace.Rect</b>:Indicators
 ### Search With Pattern.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>regular expression</b>:
 - <b>Array</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Numeric</b>:
 - <b>Numeric</b>:Indicators
 - <b>Regular Expression</b>:Controls
 ### sub1.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Part References.Parse State Queue</b>:
 - <b>regular expression</b>:
 - <b>Array</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Tunnel out</b>:
 - <b>Part References.Parse State Queue</b>:Controls
 - <b>Tunnel out</b>:Indicators
 - <b>regular expression</b>:Controls
 ### sub2.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Part References.Parse State Queue</b>:
 - <b>regular expression</b>:
 - <b>Array</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Tunnel out</b>:
 - <b>Part References.Parse State Queue</b>:Controls
 - <b>Tunnel out</b>:Indicators
 - <b>regular expression</b>:Controls
 ### Refresh References.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 
 ### Get ParentRef Until Type Matched.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Class Name</b>:
 - <b>reference in</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Target Ref</b>:
 
 ### Is in JKISM or CSM.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>reference in</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>is in JKISM or CSM?</b>:
 - <b>Is In JKISM Or CSM?</b>:Indicators
 ### Relationship Check.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>TestRef</b>:
 - <b>reference in</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Is TestRef</b>:
 - <b>Is Child of TestRef</b>:
 - <b>Is Child of TestRef</b>:Indicators
@@ -254,81 +254,81 @@
 - <b>TestRef</b>:Controls
 ### Add State Frame.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>index(-1, use same group)</b>:
 - <b>element</b>:
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Add Frame</b>:
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 - <b>Add Frame</b>:Indicators
 - <b>element</b>:Controls
 - <b>index(-1, use same group)</b>:Controls
 ### Check NewStateNotify is Registered.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>NewStateNotify Registered</b>:
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 - <b>NewStateNotify Registed</b>:Indicators
 ### Connect Error Wire If not Connected.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>case</b>:
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 - <b>case</b>:Controls
 ### Connect EventReg Wire If not Connected.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>case</b>:
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 - <b>case</b>:Controls
 ### Connect Internal Data Wire If not Connected.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>case</b>:
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 - <b>case</b>:Controls
 ### Connect LastResp to Response in Error Case.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 
 ### Connect Paired Tunnels.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 
 ### Connect StateQ Wire If not Connected.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>case</b>:
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 - <b>case</b>:Controls
 ### Copy State.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Already Exist Action:
 Replace(T) / Skip(F)</b>:
 - <b>SourceCSM</b>:
@@ -336,7 +336,7 @@ Replace(T) / Skip(F)</b>:
 - <b>Case</b>:
 - <b>CSM-Helper.lvclass</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>CSM-Helper out 2</b>:
 - <b>Already Exist Action:
 Replace(T) / Skip(F)</b>:Controls
@@ -346,614 +346,614 @@ Replace(T) / Skip(F)</b>:Controls
 - <b>SourceCSM</b>:Controls
 ### Create From Basic Refs.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>CSM Basic Refs</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>CSM-Helper.lvclass</b>:
 - <b>CSM-Helper.lvclass</b>:Indicators
 ### Create From CaseStructure Reference.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>CaseStructure</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>CSM-Helper.lvclass</b>:
 - <b>CSM-Helper.lvclass</b>:Indicators
 ### Create From EventStructure Reference.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>CaseStructure</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>CSM-Helper.lvclass</b>:
 - <b>CSM-Helper.lvclass</b>:Indicators
 ### Create From VI Reference.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>VI</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>CSM-Helper.lvclass</b>:
 - <b>CSM-Helper.lvclass</b>:Indicators
 ### Create From WhileLoop Reference.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Structure</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>CSM-Helper.lvclass</b>:
 - <b>CSM-Helper.lvclass</b>:Indicators
 ### Destroy.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Save Instruments?(F)</b>:
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 - <b>Auto Save(T)</b>:Controls
 - <b>Save Instruments?(F)</b>:Controls
 ### Doc.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>String 2</b>:
 - <b>String</b>:
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>String 4</b>:
 - <b>String 3</b>:
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 - <b>String 2</b>:Controls
 - <b>String 3</b>:Indicators
 - <b>String 4</b>:Indicators
 - <b>String</b>:Controls
 ### Get All API Interface Info.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Array</b>:
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 - <b>Array</b>:Indicators
 ### Get All Status Interface Info.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Array 3</b>:
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 - <b>Array 3</b>:Indicators
 ### Get CaseFrame Index By CaseName.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>CASE</b>:
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>index</b>:
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 - <b>CASE</b>:Controls
 - <b>CaseStruRef</b>:Indicators
 - <b>index</b>:Indicators
 ### Get CaseFrame Reference By CaseName.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>CASE</b>:
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Frame Refs</b>:
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 - <b>CASE</b>:Controls
 - <b>Frame Refs</b>:Indicators
 ### Get Event Structure Num.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>EvtStrutNum</b>:
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 - <b>EvtStruNum</b>:Indicators
 ### Get Interface Info.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>CASE</b>:
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Response</b>:
 - <b>Array</b>:
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 - <b>Array</b>:Indicators
 - <b>CASE</b>:Controls
 - <b>Response</b>:Indicators
 ### Get Internal Data Info.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Array</b>:
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 - <b>Array</b>:Indicators
 ### Open Block Diagram.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 
 ### Open Front Panel.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 
 ### Remove State Frame.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>element</b>:
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 - <b>element</b>:Controls
 ### Save Instrument.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 
 ### Set Error Tunnel Use Default If not Connected.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Use Default if not wired</b>:
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 - <b>Use Default if Unwired</b>:Controls
 ### Set Visible Case Frame.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>element</b>:
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 - <b>element</b>:Controls
 ### Set Wire Label Visible.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Connected Wire.Label.Visible</b>:
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 - <b>Connected Wire.Label.Visible</b>:Controls
 ### Start Undo.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Name</b>:
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 - <b>Name</b>:Controls
 ### Stop Undo.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 
 ### Undo.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 
 ### Read APIs.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Value</b>:
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 - <b>Value</b>:Indicators
 ### Read Back Tunnel Internal TermRefs.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>element</b>:
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Back Tunnels</b>:
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 - <b>Back Tunnels</b>:Indicators
 - <b>element</b>:Controls
 ### Read Back Tunnels Refs.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Back Tunnels</b>:
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 - <b>Back Tunnels</b>:Indicators
 ### Read Block Diagram Ref.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Diagram</b>:
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 - <b>Diagram</b>:Indicators
 ### Read Case Structure Ref.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Case Structure</b>:
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 - <b>Case Structure</b>:Indicators
 ### Read Event Structure Ref.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Event Structure</b>:
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 - <b>Event Structure</b>:Indicators
 ### Read Front Tunnel Internal TermRefs.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>case</b>:
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Front Tunnels</b>:
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 - <b>Front Tunnels</b>:Indicators
 - <b>case</b>:Controls
 ### Read Front Tunnels Refs.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Front Tunnels</b>:
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 - <b>Front Tunnels</b>:Indicators
 ### Read New State Notifier Event State Ref.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>New State Notifier Event State Ref</b>:
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 - <b>New State Notifier Event State Ref</b>:Indicators
 ### Read Paired Tunnels of Case Structure.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Paired Tunnels</b>:
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 - <b>Paired Tunnels</b>:Indicators
 ### Read Parse State Queue Ref.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Parse State Queue</b>:
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 - <b>Parse State Queue</b>:Indicators
 ### Read States.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Value</b>:
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 - <b>Value</b>:Indicators
 ### Read Timeout Event State Ref.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>New State Notifier Event State Ref</b>:
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 - <b>New State Notifier Event State Ref</b>:Indicators
 ### Read Type.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Part References.Type</b>:
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 - <b>Part References.Type</b>:Indicators
 ### Read User-Defined States.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Array</b>:
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 - <b>Array</b>:Indicators
 ### Read VI Ref.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>VI</b>:
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 - <b>VI</b>:Indicators
 ### Read While Loop Ref.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>While Loop</b>:
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 - <b>While Loop</b>:Indicators
 ### Add VI Reference Case.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 
 ### Remove All CSM Bookmarks.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 
 ### standardize CSM Module.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
-- <b>CSM-Helper in</b>: CSMHelper ÊäÈë
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
+- <b>CSM-Helper in</b>: CSMHelper è¾“å…¥
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
-- <b>CSM-Helper out</b>: CSMHelper Êä³ö
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
+- <b>CSM-Helper out</b>: CSMHelper è¾“å‡º
 
 ### CSM Essential States.vi
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>CSM Essential States</b>:
 - <b>CSM Essential States</b>:Indicators
 ### CSM Module Type.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>CSM Basic Refs</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>CSM Basic Refs (dup)</b>:
 - <b>CSM Basic Refs (dup)</b>:Indicators
 - <b>CSMType</b>:Indicators
 ### CaseStructure - Add Frame.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Case Name</b>:
 - <b>Reference Frame Index</b>:
 - <b>CaseStructure in</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Add Frame</b>:
 - <b>CaseStructure out</b>:
 
 ### CaseStructure - Case Name to Group Name.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>element</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>String</b>:
 
 ### CaseStructure - Check If State Exist.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Group Name</b>:
 - <b>CaseStructure in</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Numeric</b>:
 - <b>CaseStructure out</b>:
 
 ### CaseStructure - Get Group Separator Case Index.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Group Name</b>:
 - <b>CaseStructure in</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Numeric</b>:
 - <b>CaseStructure out</b>:
 
 ### Diagram - Connect Tunnel with Wire 2.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Wire Index</b>:
 - <b>Front Tunnels</b>:
 - <b>Diagram in</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Array out</b>:
 - <b>Diagram out</b>:
 
 ### Diagram - Connect Tunnel with Wire.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>FrontEnd Connected Info</b>:
 - <b>Front Tunnels</b>:
 - <b>Diagram in</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Array out</b>:
 - <b>Diagram out</b>:
 
 ### Diagram - Get All Decoration Refs.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>TopLevelDiagram in</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>TextRefs</b>:
 - <b>TopLevelDiagram out</b>:
 
 ### Diagram - Get All Text Refs.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>TopLevelDiagram in</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>TextRefs</b>:
 - <b>TopLevelDiagram out</b>:
 
 ### PairedTunnels - Connect Wire.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>index(-1 for all)</b>:
 - <b>PairedTunnels</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>PairedTunnels</b>:
 
 ### Find Event Structure from Case Structure.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>CaseStructure</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>EvntStruct Refnum</b>:
 
 ### Find Parse State Queue from Case Structure.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>CaseStructure</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>CaseStructure</b>:
 - <b>Parse State Queue</b>:
 
 ### Find Parse State Queue from Event Structure.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>EvntStruct Refnum</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>CaseStructure</b>:
 - <b>Parse State Queue</b>:
 
 ### Find Parse State Queue from While Loop.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>WhileLoop in</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>CaseStructure</b>:
 - <b>Parse State Queue</b>:
 - <b>WhileLoop out</b>:
 
 ### Terminals - Filter Control Terms.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Terms[]</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Terms[] out</b>:
 
 ### Terminals - Filter Error Terms.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Terms[]</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Terms[] out</b>:
 
 ### Terminals - Filter Indicator Terms.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Terms[]</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Terms[] out</b>:
 
 ### Terminals - Filter Input Term.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>InnerTerminal in</b>:
 - <b>Wire.Terms[] in</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Wire.Terms[] out</b>:
 
 ### Terminals - Filter invalid Terms.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Terms[]</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Terms[] out</b>:
 
 ### Terminals - Filter Left-Top Term.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Terms[]</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Terms[] out</b>:
 
 ### Terminals - Left-Top Term.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Terms[]</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Terms[] out</b>:
 
 ### Terminals - Lower Term.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Terms[]</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Terms[] out</b>:
 
 ### Terminals - Upper Term.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Terms[]</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Terms[] out</b>:

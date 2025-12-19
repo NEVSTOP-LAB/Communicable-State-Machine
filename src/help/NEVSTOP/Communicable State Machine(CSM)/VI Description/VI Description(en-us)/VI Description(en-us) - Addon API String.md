@@ -2,7 +2,7 @@
 
 > [!NOTE] 
 > 
-> **API String Parameter Support**
+> <b>API String Parameter Support</b>
 >
 > API String parameter support is used to enhance the API parameter functionality of the Communicable State Machine (CSM). API String supports passing various data types in plain text format and is specifically optimized for manual input experiences. API String does not define an argument type. The result obtained via the CSM - Argument Type VI is empty, and it is typically handled in the default case. The following are supported data types:
 >
@@ -26,7 +26,7 @@
 
 > [!NOTE] 
 > 
-> **Default Strings for TRUE Value**
+> <b>Default Strings for TRUE Value</b>
 >
 > Supports `1`, `Active`, `Enable`, `Non-null`, `On`, `T`, `True`, `valid`, `yes` 
 >
@@ -34,7 +34,7 @@
 
 > [!NOTE] 
 > 
-> **Default Strings for FALSE Value**
+> <b>Default Strings for FALSE Value</b>
 >
 > Supports `0`, `Disable`, `F`, `False`, `Inactive`, `Invalid`, `No`, `Off`, `Void`, `null` 
 >
@@ -42,13 +42,13 @@
 
 > [!NOTE] 
 > 
-> **Default Floating-point Format**
+> <b>Default Floating-point Format</b>
 >
 > The default floating-point format is `%.6p`.
 
 > [!NOTE] 
 > 
-> **Indexed Enum**
+> <b>Indexed Enum</b>
 >
 > Format: `[Index Number][Separator][Enum String]`. 
 >
@@ -120,9 +120,9 @@ Converts an API String to the corresponding data type.
 
 Queries a specified data item within cluster data and converts it to API String format.
 
-**Application Scenario:** For example, in a new CSM module template included with the API String Addon, a `Data: Get Configuration` state is added. In this state, by sending the name of the desired data item, the corresponding data item value can be returned.
+<b>Application Scenario:</b> For example, in a new CSM module template included with the API String Addon, a `Data: Get Configuration` state is added. In this state, by sending the name of the desired data item, the corresponding data item value can be returned.
 
-**Special Case:** If **Name** is set to `<list>`, a list of all available settings is returned.
+<b>Special Case:</b> If <b>Name</b> is set to `<list>`, a list of all available settings is returned.
 
 -- <b>Controls</b> --
 
@@ -281,7 +281,7 @@ Converts a string to an indexed enum type.
 > Ref: Indexed Enum
 
 ```
-_**Conversion Rule 1: No Index Number**_
+_<b>Conversion Rule 1: No Index Number</b>_
 
 Convert by string matching.
 
@@ -290,7 +290,7 @@ Example Enum = {AAA, BBBB, CCCC}
 - String "AAA" converts to Enum(AAA), numeric value 0.
 - String "CCC" converts to Enum(CCC), numeric value 2.
 
-_**Conversion Rule 2: With Index Number**_
+_<b>Conversion Rule 2: With Index Number</b>_
 
 Convert by either string matching or index number matching.
 

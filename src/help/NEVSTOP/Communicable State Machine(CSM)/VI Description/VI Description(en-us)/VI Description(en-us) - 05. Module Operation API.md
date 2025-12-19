@@ -189,7 +189,7 @@ For modules in CSM advanced modes, such as Worker Mode and Chain of Responsibili
 
 > ![NOTE] 
 >
-> **CSM Module Attributes** 
+> <b>CSM Module Attributes</b> 
 >
 > CSM module attributes are a data area that can store module configuration and status, accessed by name. CSM module attributes can be used in the following scenarios:
 >
@@ -198,7 +198,7 @@ For modules in CSM advanced modes, such as Worker Mode and Chain of Responsibili
 
 #### CSM - Set Module Attribute.vi
 
-Sets the attribute value of the specified module. If the attribute does not exist, a new attribute is created, and **Replaced** returns FALSE. Otherwise, it returns TRUE. If the CSM module does not exist, this VI waits for the specified timeout duration. If the timeout is exceeded, this VI returns a timeout error.
+Sets the attribute value of the specified module. If the attribute does not exist, a new attribute is created, and <b>Replaced</b> returns FALSE. Otherwise, it returns TRUE. If the CSM module does not exist, this VI waits for the specified timeout duration. If the timeout is exceeded, this VI returns a timeout error.
 
 > Ref: CSM Module Attributes
 
@@ -219,7 +219,7 @@ Reference Example: `[CSM-Example]\0. Base Concepts\6. Module Attributes.vi`.
 
 #### CSM - Get Module Attribute.vi
 
-Reads the attribute value of the specified module. If the attribute does not exist, the default value is returned, and **Found** returns FALSE. Otherwise, it returns TRUE. If the CSM module does not exist, this VI waits for the specified timeout duration. If the timeout is exceeded, this VI returns a timeout error.
+Reads the attribute value of the specified module. If the attribute does not exist, the default value is returned, and <b>Found</b> returns FALSE. Otherwise, it returns TRUE. If the CSM module does not exist, this VI waits for the specified timeout duration. If the timeout is exceeded, this VI returns a timeout error.
 
 > Ref: CSM Module Attributes
 
@@ -262,7 +262,7 @@ Reference Example: `[CSM-Example]\0. Base Concepts\6. Module Attributes.vi`.
 
 #### CSM - Delete Module Attribute.vi
 
-Deletes the attribute of the specified module. If the attribute does not exist, the **Found** output returns FALSE. Otherwise, it returns TRUE. If the CSM module does not exist, this VI waits for the specified timeout duration. If the timeout is exceeded, this VI returns a timeout error.
+Deletes the attribute of the specified module. If the attribute does not exist, the <b>Found</b> output returns FALSE. Otherwise, it returns TRUE. If the CSM module does not exist, this VI waits for the specified timeout duration. If the timeout is exceeded, this VI returns a timeout error.
 
 > Ref: CSM Module Attributes
 

@@ -154,7 +154,7 @@ This example demonstrates how LabVIEW errors are passed as CSM arguments.
 
 This example converts a LabVIEW error cluster into a CSM-compatible error string. This allows the CSM core parsing engine to handle LabVIEW errors from the message queue and facilitates logging internal errors. The converted error string uses the following format: `<ErrStr>[Error: error-code] error-description-As-safe-argument-string`. Additionally, `CSM - Argument Type.vi` retrieves the argument tag, which in this case is `ErrStr`.
 
-**Application Scenario:** Passing LabVIEW errors.
+<b>Application Scenario:</b> Passing LabVIEW errors.
 
 #### Steps
 
@@ -174,7 +174,7 @@ Demonstrates how to pass strings containing special characters as arguments.
 
 Since CSM uses text descriptions as arguments, parsing errors occur if the argument contains reserved CSM keywords. To solve this, CSM provides APIs to convert special characters in unsafe strings into safe strings for use in arguments.
 
-**Application Scenario:** Passing strings containing special characters.
+<b>Application Scenario:</b> Passing strings containing special characters.
 
 #### Steps
 
@@ -265,11 +265,11 @@ This example demonstrates a CSM module whose function is to generate a random nu
 #### Steps
 
 - Step1: Drag and drop the CSM Template from the palette.
-- Step2: Add **Level** to Internal Data. The default value is 0.5.
+- Step2: Add <b>Level</b> to Internal Data. The default value is 0.5.
 - Step3: Create "DoSth: Check If Greater than 0.5" to implement the core functionality.
   - Step3.1: Compare random data and update the UI.
   - Step3.2: Publish the "Status Changed" status when random data exceeds the level.
-- Step4: Change the **Timeout** to a shift register. It will be used to start/stop timeout events. Wire **Timeout** in every case.
+- Step4: Change the <b>Timeout</b> to a shift register. It will be used to start/stop timeout events. Wire <b>Timeout</b> in every case.
 - Step5: In the Timeout Event, add "DoSth: Check If Greater than 0.5" to the State Queue.
 - Step6: Create APIs for this module.
   - Step6.1: Create "API: Start" to change the timeout to 0.5, which will trigger "DoSth: Check If Greater than 0.5" every second. In this case, broadcast the "Check Started" status.
@@ -277,9 +277,9 @@ This example demonstrates a CSM module whose function is to generate a random nu
   - Step6.3: Create "API: Set Level" to change the Level setting.
   - Step6.4: Create "API: Get Level" to retrieve the current Level from the outside.
 - Step7: Create local test buttons/controls.
-  - Step7.1: Create a **Level** control and call "API: Set Level" to change the level setting locally.
-  - Step7.2: Create a **Start** button and call "API: Start" to begin checking locally.
-  - Step7.3: Create a **Stop** button and call "API: Stop" to stop checking locally.
+  - Step7.1: Create a <b>Level</b> control and call "API: Set Level" to change the level setting locally.
+  - Step7.2: Create a <b>Start</b> button and call "API: Start" to begin checking locally.
+  - Step7.3: Create a <b>Stop</b> button and call "API: Stop" to stop checking locally.
 - Step8: Correctly update the UI where appropriate.
   - Step8.1: Initialize the UI at startup.
   - Step8.2: Comment out `UI: Front Panel State >> Open` in "Macro: Initialize". When working as a submodule, the UI will automatically hide instead of popping up.
@@ -312,15 +312,15 @@ This example synchronously calls two instances of the CSM Reuse Module VI, imple
 - Step6: Under the "Macro: Switch Active Module" case, use the Advanced VIs to send an inter-module synchronous message "API: Get Level -@ modulename" to the active submodule. Alternatively, if you are familiar with CSM string syntax rules, you can manually type the string constant.
 - Step7: Now the state queue is empty, and the CSM state machine is waiting in the Timeout UI event under ''", "Event Structure", "Idle". The next step depends on the user-provided UI interaction.
 - Step8: Create local test buttons/controls in the UI as follows:
-  - Step8.1: Create an **API:Start** button. When the user clicks this button, an asynchronous no-reply message "API: Start -> modulename" will be sent to start the active submodule.
-  - Step8.2: Create a **Register All Status Change** button. When the user clicks this button, this CSM module will register the following broadcast/interrupt message from the active submodule: "Status Changed@* >> Action: Status Change Handler ->\<register>".
-  - Step8.3: Create an **Unregister All Status Change** button. When the user clicks this button, this CSM module will unregister the following broadcast/interrupt message from the active submodule: "Status Changed@* >> Action: Status Change Handler ->\<unregister>".
+  - Step8.1: Create an <b>API:Start</b> button. When the user clicks this button, an asynchronous no-reply message "API: Start -> modulename" will be sent to start the active submodule.
+  - Step8.2: Create a <b>Register All Status Change</b> button. When the user clicks this button, this CSM module will register the following broadcast/interrupt message from the active submodule: "Status Changed@* >> Action: Status Change Handler ->\<register>".
+  - Step8.3: Create an <b>Unregister All Status Change</b> button. When the user clicks this button, this CSM module will unregister the following broadcast/interrupt message from the active submodule: "Status Changed@* >> Action: Status Change Handler ->\<unregister>".
   - Step8.4: This is used to break out of the event structure when a message is received to handle state changes.
-  - Step8.5: Create an **API:Stop** button. When the user clicks this button, an asynchronous no-reply message "API: Stop -> modulename" will be sent to stop the active submodule.
-  - Step8.6: Create a **Level** DBL control. When the user changes the value, an asynchronous message "API: Set Level >> 0.3 ->| modulename" will be sent to the active submodule.
-  - Step8.7: Create an **API: Get Level(Async)** button. When the user clicks this button, an asynchronous message "API: Get Level -> modulename" will be sent to the active submodule. The "Async Message Posted" and "Async Response" cases will be processed accordingly. In this example, the Level display will be updated.
-  - Step8.8: Create a **UI: create Front Panel State >> Open** button. When the user clicks this button, an asynchronous message with no reply "UI: Front Panel State >> Open ->| modulename" will be sent to the active submodule.
-  - Step8.9: Create a **UI: create Front Panel State >> Close** button. When the user clicks this button, an asynchronous message with no reply "UI: Front Panel State >> Close ->| modulename" will be sent to the active submodule.
+  - Step8.5: Create an <b>API:Stop</b> button. When the user clicks this button, an asynchronous no-reply message "API: Stop -> modulename" will be sent to stop the active submodule.
+  - Step8.6: Create a <b>Level</b> DBL control. When the user changes the value, an asynchronous message "API: Set Level >> 0.3 ->| modulename" will be sent to the active submodule.
+  - Step8.7: Create an <b>API: Get Level(Async)</b> button. When the user clicks this button, an asynchronous message "API: Get Level -> modulename" will be sent to the active submodule. The "Async Message Posted" and "Async Response" cases will be processed accordingly. In this example, the Level display will be updated.
+  - Step8.8: Create a <b>UI: create Front Panel State >> Open</b> button. When the user clicks this button, an asynchronous message with no reply "UI: Front Panel State >> Open ->| modulename" will be sent to the active submodule.
+  - Step8.9: Create a <b>UI: create Front Panel State >> Close</b> button. When the user clicks this button, an asynchronous message with no reply "UI: Front Panel State >> Close ->| modulename" will be sent to the active submodule.
 - Step9: Under the "Panel Close?" UI event, add two new string messages before "Macro:Exit": "Macro: Exit -@ SubModule0" and "Macro: Exit -@ SubModule1", so that you can safely close all CSM submodules before finally closing the CSM caller/main module.
 
 

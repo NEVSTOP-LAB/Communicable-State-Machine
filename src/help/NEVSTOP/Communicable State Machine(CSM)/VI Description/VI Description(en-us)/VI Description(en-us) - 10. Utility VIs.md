@@ -91,7 +91,7 @@ Converts a data type description string into a LabVIEW-defined data type enum.
 
 > [!NOTE] 
 > 
-> **Polymorphic VI Options**
+> <b>Polymorphic VI Options</b>
 >
 > - CSM Data Type String to Enum(String).vi
 > - CSM Data Type String to Enum(TypeEnum).vi
@@ -178,13 +178,13 @@ Generates a random numerical value to mark state changes. In CSM, to improve eff
 
 ### State Triggered Reason.vi
 
-Infers the reason for triggering the current state from the **Additional Information** and **Source CSM** outputs of the Parse State Queue++ VI.
+Infers the reason for triggering the current state from the <b>Additional Information</b> and <b>Source CSM</b> outputs of the Parse State Queue++ VI.
 
 The result can be:
 
-- **LocalCall**: Local call, not triggered externally.
-- **Message**: Triggered by an external message.
-- **Broadcast**: Triggered by a broadcast.
+- <b>LocalCall</b>: Local call, not triggered externally.
+- <b>Message</b>: Triggered by an external message.
+- <b>Broadcast</b>: Triggered by a broadcast.
 
 -- <b>Controls</b> --
 

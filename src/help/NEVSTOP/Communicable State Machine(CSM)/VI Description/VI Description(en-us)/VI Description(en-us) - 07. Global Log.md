@@ -2,7 +2,7 @@
 
 > [!NOTE] 
 >
-> **CSM Global Log Functionality**
+> <b>CSM Global Log Functionality</b>
 >
 > The CSM Global Log functionality is used to view global log change events, serving scenarios such as debugging and monitoring.
 >
@@ -20,13 +20,13 @@
 
 > [!NOTE] 
 >
-> **CSM Global Log Acquisition Methods**
+> <b>CSM Global Log Acquisition Methods</b>
 >
 > CSM provides two methods for acquiring global logs: Queue and Event. The Queue processing method is recommended because the queue interface is more efficient and offers greater flexibility in selecting log processing schemes based on the number of accumulated logs in the queue.
 
 > [!NOTE] 
 > 
-> **Global Log Filter Rules**
+> <b>Global Log Filter Rules</b>
 
 ## CSM - Global Log Queue.vi
 
@@ -119,36 +119,36 @@ Generates a custom user log for scenarios such as debugging. When the input para
 
 > [!NOTE] 
 > 
-> **Global Log Filter Location**
+> <b>Global Log Filter Location</b>
 >
 > There are two types of global log filtering: source-side filtering and subscriber-side filtering.
 >
-> - **Source-side filtering:** The CSM framework has built-in filtering rules. Based on user settings, logs can be prevented from being sent at the source. 
-> - **Subscriber-side filtering:** Using the same rules, CSM provides helper VIs that can determine whether a log matches the filtering rules after it is received, allowing for different logic processing.
+> - <b>Source-side filtering:</b> The CSM framework has built-in filtering rules. Based on user settings, logs can be prevented from being sent at the source. 
+> - <b>Subscriber-side filtering:</b> Using the same rules, CSM provides helper VIs that can determine whether a log matches the filtering rules after it is received, allowing for different logic processing.
 >
 > Source-side processing completely prevents logs from being sent, reducing system load. Subscriber-side filtering only affects the logic of that specific subscriber and does not affect background log saving, offering higher flexibility.
 
 > [!NOTE] 
 >
-> **Global Log Filter Rules**
+> <b>Global Log Filter Rules</b>
 >
 > Global log filter rules allow a category of logs to be filtered out so they do not appear in the global log.
 >
 > The following are the three types of log filter rules:
 >
-> - **Global Rules:** Apply to all modules meeting the conditions. You can configure the following settings:
->   - **Module Name:** All names of the module will be filtered.
->   - **Log Type:** Such as state, message, broadcast, module Initialization, and so on.
->   - **State Name:** Any module with the state name will be filtered.
->   - **State Type:** Type of state, such as internal state, external message, and so on.
-> - **Module Rules:** Apply to specific modules. You can configure the following settings:
->   - **Module Log Type:** Modules with the specified log types of the module are filtered.
->   - **State Name:** Modules with the specified state name are filtered.
->   - **State Type:** Modules with the specified state type are filtered.
-> - **Periodic Filter Rules:** This rule is currently only effective at the registration point because it is difficult to count numbers at the publication location.
+> - <b>Global Rules:</b> Apply to all modules meeting the conditions. You can configure the following settings:
+>   - <b>Module Name:</b> All names of the module will be filtered.
+>   - <b>Log Type:</b> Such as state, message, broadcast, module Initialization, and so on.
+>   - <b>State Name:</b> Any module with the state name will be filtered.
+>   - <b>State Type:</b> Type of state, such as internal state, external message, and so on.
+> - <b>Module Rules:</b> Apply to specific modules. You can configure the following settings:
+>   - <b>Module Log Type:</b> Modules with the specified log types of the module are filtered.
+>   - <b>State Name:</b> Modules with the specified state name are filtered.
+>   - <b>State Type:</b> Modules with the specified state type are filtered.
+> - <b>Periodic Filter Rules:</b> This rule is currently only effective at the registration point because it is difficult to count numbers at the publication location.
 >   - Whether to enable periodic filtering.
->   - **Threshold (#/s):** Periodic filtering threshold.
->   - **CheckPeriod (s):** Check window time.
+>   - <b>Threshold (#/s):</b> Periodic filtering threshold.
+>   - <b>CheckPeriod (s):</b> Check window time.
 
 ### CSM - Set Log Filter Rules.vi
 
@@ -229,7 +229,7 @@ Saves the current input string to the cache. When the cached history strings exc
 
 - <b>Global Log Data</b>: Received global log information packet.
 - <b>Length (10000)</b>: Maximum string length for cached history strings.
-- <b>Level (Normal)</b>: Processing level. The default is **Normal**, which indicates standard processing. Higher levels omit different information to increase processing speed.
+- <b>Level (Normal)</b>: Processing level. The default is <b>Normal</b>, which indicates standard processing. Higher levels omit different information to increase processing speed.
 - <b>Time Format String</b>: Timestamp format.
 - <b>With Periodic Info? (T)</b>: Whether to fold periodic logs.
 - <b>Remove Immediately? (F)</b>: Whether to immediately remove periodic folded information.
@@ -261,7 +261,7 @@ Dynamically calculates the recommended log processing level based on the current
 
 This VI is used for global log monitoring loops utilizing the global log queue, such as `template/CSM - Global Log Queue Monitoring Loop.vi` or the background thread of the CSM File Logger.
 
-Typically, the exit condition for these global log monitoring loops is met when the program exits. At this time, logs in the queue may not have been fully processed. Use this VI to allow a period of **Timeout (5s)** to process logs in the queue after the **Stop** signal arrives. The **Exit** signal is set to TRUE to exit the loop, only when the number of logs in the queue is empty or the timeout occurs.
+Typically, the exit condition for these global log monitoring loops is met when the program exits. At this time, logs in the queue may not have been fully processed. Use this VI to allow a period of <b>Timeout (5s)</b> to process logs in the queue after the <b>Stop</b> signal arrives. The <b>Exit</b> signal is set to TRUE to exit the loop, only when the number of logs in the queue is empty or the timeout occurs.
 
 -- <b>Controls</b> --
 
@@ -271,5 +271,5 @@ Typically, the exit condition for these global log monitoring loops is met when 
 -- <b>Controls</b> --
 
 - <b>Timeout (5s)</b>: Timeout duration. Default is 5 s.
-- <b>Exit</b>: Real exit signal. **Exit** returns TRUE when the queue is empty or timeout occurs.
+- <b>Exit</b>: Real exit signal. <b>Exit</b> returns TRUE when the queue is empty or timeout occurs.
 - <b>Since Exiting (s)</b>: Time elapsed since exiting started, in seconds.

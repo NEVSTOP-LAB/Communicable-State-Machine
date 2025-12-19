@@ -4,21 +4,21 @@
 
 > [!NOTE] 
 >
-> **CSM Operation Modes**
+> <b>CSM Operation Modes</b>
 >
-> - **Stand-alone:** Independent operation mode. If no module name is specified, a random ID is automatically generated to identify the module.
-> - **CSM:** Normal CSM module.
-> - **Action Worker:** Worker Mode. Append `#` to the module name to mark this module as a worker. This module shares the same message queue with other workers having the same name.
-> - **Chain Node:** Chain node. Append `$` to the module name to mark this module as a chain node. Messages on the same chain will be passed sequentially until a node processes the message.
+> - <b>Stand-alone:</b> Independent operation mode. If no module name is specified, a random ID is automatically generated to identify the module.
+> - <b>CSM:</b> Normal CSM module.
+> - <b>Action Worker:</b> Worker Mode. Append `#` to the module name to mark this module as a worker. This module shares the same message queue with other workers having the same name.
+> - <b>Chain Node:</b> Chain node. Append `$` to the module name to mark this module as a chain node. Messages on the same chain will be passed sequentially until a node processes the message.
 
 > [!NOTE] 
 > 
-> **CSM Priority Queue Design**
+> <b>CSM Priority Queue Design</b>
 >
 > In the background, CSM essentially uses LabVIEW queues to implement inter-module communication. However, CSM uses two separate queues to store messages of different priorities:
 >
-> - **Normal Priority Queue:** Used for passing asynchronous messages and status broadcasts.
-> - **High Priority Message Queue:** Used for passing synchronous messages and interrupt broadcasts. Messages in the High Priority Queue are processed first. Messages in the Normal Priority Queue are processed only after the messages in the High Priority Queue have been processed.
+> - <b>Normal Priority Queue:</b> Used for passing asynchronous messages and status broadcasts.
+> - <b>High Priority Message Queue:</b> Used for passing synchronous messages and interrupt broadcasts. Messages in the High Priority Queue are processed first. Messages in the Normal Priority Queue are processed only after the messages in the High Priority Queue have been processed.
 
 ### CSM - Check If Module Exists.vi
 
@@ -37,8 +37,8 @@ Checks if a CSM module exists. When a CSM module is running in Worker Mode or Ch
 
 Lists all active CSM modules. This VI has two sets of options:
 
-- **Scope Option:** Used to specify whether to list system-level modules. By default, system-level modules are not listed. Options: Normal/System Only/All.
-- **With Nodes Option:** Targeted at Worker Mode and Chain of Responsibility Mode. When including nodes, individual nodes are listed along with the modules. Otherwise, only the modules are listed. By default, nodes are not included.
+- <b>Scope Option:</b> Used to specify whether to list system-level modules. By default, system-level modules are not listed. Options: Normal/System Only/All.
+- <b>With Nodes Option:</b> Targeted at Worker Mode and Chain of Responsibility Mode. When including nodes, individual nodes are listed along with the modules. Otherwise, only the modules are listed. By default, nodes are not included.
 
 > Ref: CSM Operation Modes
 
@@ -88,9 +88,9 @@ Obtains the VI Reference of the input module. The following is the logic of this
 
 Behavior for CSM in special operation modes:
 
-- **Worker Mode:** Returns the VI reference of the worker node handling the "VI Reference" message.
-- **Chain of Responsibility Mode:** Returns the VI reference of the first node of the CSM module in Chain of Responsibility Mode.
-- **System-Level Module:** Same as normal mode CSM. Returns the VI reference of the system-level module.
+- <b>Worker Mode:</b> Returns the VI reference of the worker node handling the "VI Reference" message.
+- <b>Chain of Responsibility Mode:</b> Returns the VI reference of the first node of the CSM module in Chain of Responsibility Mode.
+- <b>System-Level Module:</b> Same as normal mode CSM. Returns the VI reference of the system-level module.
 
 -- <b>Controls</b> --
 
@@ -109,7 +109,7 @@ Sets the global synchronous call timeout for the CSM program, in milliseconds. W
 
 > [!NOTE] 
 >
-> **CSM Synchronous Message Global Timeout**
+> <b>CSM Synchronous Message Global Timeout</b>
 >
 > - When performing CSM inter-module communication or using the VI that sends synchronous messages, the default timeout is -2, which uses the globally configured timeout.
 > - The global timeout can be set to other positive values using the CSM - Set TMO of Sync-Reply VI to override the global setting.
@@ -175,7 +175,7 @@ Filters specific states in the CSM state queue.
 
 > [!NOTE] 
 > 
-> **Polymorphic VI Options**
+> <b>Polymorphic VI Options</b>
 >
 > - CSM - Filter Local States.vi: Filters local states.
 > - CSM - Filter Messages.vi: Filters all types of messages.

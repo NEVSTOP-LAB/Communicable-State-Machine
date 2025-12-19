@@ -62,8 +62,8 @@
 #### Instructions
 
 1. 运行此 VI。
-2. 单击前面板上的任何按钮，例如**Action: action 1 -> Chain**，然后您可以看到哪个链模块处理了哪条消息。
-3. 单击**Macro: Exit -> Chain**或**Macro: Exit -@ Chain**按钮，然后您可以看到链模块将按顺序启动。
+2. 单击前面板上的任何按钮，例如<b>Action: action 1 -> Chain</b>，然后您可以看到哪个链模块处理了哪条消息。
+3. 单击<b>Macro: Exit -> Chain</b>或<b>Macro: Exit -@ Chain</b>按钮，然后您可以看到链模块将按顺序启动。
 
 #### Introduction
 
@@ -425,24 +425,24 @@ Macro: Exit@submodule2 >> Echo: Echo1 -><register>
 
 循环是状态机运行的基本单位，它会在状态机运行时不断地执行。用户可以自己通过逻辑来定义循环的条件，也可以使用CSM推荐的循环支持API来定义循环。它的优势是可以在循环运行时，依然响应其他事件，而不会阻塞状态机的运行。这类似于 While循环的连续循环机制。您无需手动嵌入While 循环，而是可以使用CSM Loop-Support VI 来定义、附加和终止循环。这组API通过对状态队列的分析来完成此功能。
 
-本示例展示了CSM框架内的连续DAQ采集。单击**Start**开始连续采集，单击**Stop**(或触发高优先级错误)结束循环。作为比较，单击**DAQ: Once**运行单次采集。低优先级错误不会停止循环。
+本示例展示了CSM框架内的连续DAQ采集。单击<b>Start</b>开始连续采集，单击<b>Stop</b>(或触发高优先级错误)结束循环。作为比较，单击<b>DAQ: Once</b>运行单次采集。低优先级错误不会停止循环。
 
 ### Instructions
 
-1. 运行VI并单击**DAQ: Once**以执行单次DAQ采集。
-2. 单击**Start**开始连续采集。波形图和日志历史记录会实时更新。
-3. 单击**Stop**或**High-Priority Error**终止循环。
-4. 循环运行时，单击**Low-Priority Error**。错误被忽略，循环仍会运行。
+1. 运行VI并单击<b>DAQ: Once</b>以执行单次DAQ采集。
+2. 单击<b>Start</b>开始连续采集。波形图和日志历史记录会实时更新。
+3. 单击<b>Stop</b>或<b>High-Priority Error</b>终止循环。
+4. 循环运行时，单击<b>Low-Priority Error</b>。错误被忽略，循环仍会运行。
 
 ### Introduction
 
-本示例演示如何使用CSM Loop-Support VIs来实现While循环的连续DAQ采集的功能。单击**Start**开始连续采集，单击**Stop**(或触发高优先级错误)结束循环。作为比较，单击**DAQ: Once**运行单次采集。
+本示例演示如何使用CSM Loop-Support VIs来实现While循环的连续DAQ采集的功能。单击<b>Start</b>开始连续采集，单击<b>Stop</b>(或触发高优先级错误)结束循环。作为比较，单击<b>DAQ: Once</b>运行单次采集。
 
 ### Steps
 
 - Step1：界面事件处理循环。
     - Step1.1：如果UI事件变得非常复杂，建议使用CSM DQMH-Style Template，可以将UI逻辑与其他CSM相关逻辑分开处理。您可以在LabVIEW 选板 -> CSM -> More Templates下找到此模板。
-    - Step1.2：此外，已使用多循环支持API将状态从DQMH循环转发到CSM主循环。例如，在用户单击**Start**按钮后，"Macro:DAQ continuous"消息可以被转发到CSM主循环中进行进一步的逻辑处理。
+    - Step1.2：此外，已使用多循环支持API将状态从DQMH循环转发到CSM主循环。例如，在用户单击<b>Start</b>按钮后，"Macro:DAQ continuous"消息可以被转发到CSM主循环中进行进一步的逻辑处理。
 - Step2：使用`CSM-Addon Logger Start File Logger.vi`来快速实现CSM全局事件文件记录功能。
 - Step3：CSM循环，用于处理界面的操作，及外部的响应，并实现具体的操作逻辑。
     - Step3.1：在DAQ分组中，实现对DAQ采集的具体操作逻辑。

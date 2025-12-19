@@ -4,7 +4,7 @@
 
 > [!NOTE] 
 >
-> **CSM Naming Rules**
+> <b>CSM Naming Rules</b>
 >
 > - CSM module name must be unique. Otherwise, CSM enters a "Critical Error" state.
 > - If the input module name is an empty string (""), the system uses a UUID as the module name. Such a module is marked as standalone mode and does not appear in the module list.
@@ -15,14 +15,14 @@
 
 > [!NOTE] 
 >
-> **CSM Initialize State ("Macro: Initialize")**
+> <b>CSM Initialize State ("Macro: Initialize")</b>
 >
 > - The default value is "Macro: Initialize", which is consistent with the JKISM state machine.
 > - This state is used to initialize the state machine of a CSM module. A CSM module will process externally sent messages only after completing this macro state.
 
 > [!NOTE] 
 >
-> **CSM Exit State ("Macro: Exit")**
+> <b>CSM Exit State ("Macro: Exit")</b>
 >
 > - The default value is "Macro: Exit", which is consistent with the JKISM state machine.
 > - This state is used to exit the state machine of a CSM module. After entering this state, a CSM module no longer processes externally sent messages.
@@ -142,7 +142,7 @@ Obtains a user event refnum, which is suitable for CSM modules containing an Eve
 
 #### Timeout Selector.vi
 
-Suitable for templates containing a user Event Structure. If **Timeout Expected** is -1 but there are still **Remaining States** in the queue, the timeout value will be modified to 0. This ensures the execution immediately breaks out of the user Event Structure and continues to process the remaining states.
+Suitable for templates containing a user Event Structure. If <b>Timeout Expected</b> is -1 but there are still <b>Remaining States</b> in the queue, the timeout value will be modified to 0. This ensures the execution immediately breaks out of the user Event Structure and continues to process the remaining states.
 
 -- <b>Controls</b> --
 

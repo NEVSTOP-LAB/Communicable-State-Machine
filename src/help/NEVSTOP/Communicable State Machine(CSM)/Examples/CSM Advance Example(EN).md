@@ -66,8 +66,8 @@ This example demonstrates the responsibility chain design pattern implemented wi
 #### Instructions
 
 1. Run this VI.
-2. Click any button on the front panel, such as **Action: action 1 -> Chain**. You can then see which chain module processed which message.
-3. Click the **Macro: Exit -> Chain** or **Macro: Exit -@ Chain** button, and you will see the chain modules shut down in order.
+2. Click any button on the front panel, such as <b>Action: action 1 -> Chain</b>. You can then see which chain module processed which message.
+3. Click the <b>Macro: Exit -> Chain</b> or <b>Macro: Exit -@ Chain</b> button, and you will see the chain modules shut down in order.
 
 #### Introduction
 
@@ -155,7 +155,7 @@ A CSM example module used to generate predetermined errors when a button is clic
 
 #### Introduction
 
-This example is a submodule for the global error handling mechanism, used to generate predetermined errors when a button is clicked. This CSM module is set to Reentrant, allowing multiple instances to run simultaneously. The front panel opens automatically upon startup. Clicking the **Generate Error** button creates a simulated error. Through the state machine transition, this error runs into the "Error Handler" state and broadcasts the error via the `Error Occurred` status. Any module subscribed to this module's `Error Occurred` status can capture and handle this error.
+This example is a submodule for the global error handling mechanism, used to generate predetermined errors when a button is clicked. This CSM module is set to Reentrant, allowing multiple instances to run simultaneously. The front panel opens automatically upon startup. Clicking the <b>Generate Error</b> button creates a simulated error. Through the state machine transition, this error runs into the "Error Handler" state and broadcasts the error via the `Error Occurred` status. Any module subscribed to this module's `Error Occurred` status can capture and handle this error.
 
 #### Steps
 
@@ -462,24 +462,24 @@ In this example, two instances of the CSM-Start File Logger VI are placed in seq
 
 A loop is the basic unit of operation for a state machine, executing continuously while the state machine is running. Users can define loop conditions via logic or use the CSM Loop-Support VIs. The advantage of the Loop-Support VIs is that the loop can continue to respond to other events while running, without blocking the state machine's operation. This is similar to a continuous looping mechanism in a While Loop. You do not need to manually embed a While Loop. Instead, you can use the CSM Loop-Support VIs to define, append, and terminate loops. The CSM Loop-Support VIs accomplish this function by analyzing the state queue.
 
-This example demonstrates continuous DAQ acquisition within the CSM framework. Click **Start** to begin continuous acquisition, and click **Stop**, or trigger a high-priority error, to end the loop. For comparison, click **DAQ: Once** to run a single acquisition. A low-priority error does not stop the loop.
+This example demonstrates continuous DAQ acquisition within the CSM framework. Click <b>Start</b> to begin continuous acquisition, and click <b>Stop</b>, or trigger a high-priority error, to end the loop. For comparison, click <b>DAQ: Once</b> to run a single acquisition. A low-priority error does not stop the loop.
 
 ### Instructions
 
-1. Run the VI and click **DAQ: Once** to perform a single DAQ acquisition.
-2. Click **Start** to begin continuous acquisition. The waveform graph and log history update in real-time.
-3. Click **Stop** or **High-Priority Error** to terminate the loop.
-4. While the loop is running, click **Low-Priority Error**. The error is ignored, and the loop continues to run.
+1. Run the VI and click <b>DAQ: Once</b> to perform a single DAQ acquisition.
+2. Click <b>Start</b> to begin continuous acquisition. The waveform graph and log history update in real-time.
+3. Click <b>Stop</b> or <b>High-Priority Error</b> to terminate the loop.
+4. While the loop is running, click <b>Low-Priority Error</b>. The error is ignored, and the loop continues to run.
 
 ### Introduction
 
-This example demonstrates how to use CSM Loop-Support VIs to implement the functionality of a continuous DAQ acquisition While Loop. Click **Start** to begin continuous acquisition, and click **Stop**, or trigger a high-priority error, to end the loop. For comparison, click **DAQ: Once** to run a single acquisition.
+This example demonstrates how to use CSM Loop-Support VIs to implement the functionality of a continuous DAQ acquisition While Loop. Click <b>Start</b> to begin continuous acquisition, and click <b>Stop</b>, or trigger a high-priority error, to end the loop. For comparison, click <b>DAQ: Once</b> to run a single acquisition.
 
 ### Steps
 
 - Step1: UI Event Handling Loop.
   - Step1.1: If UI events become very complex, it is recommended to use the CSM DQMH-Style Template so that you can handle UI logic separately from other CSM-related logic. You can find this template under LabVIEW Palette -> CSM -> More Templates.
-  - Step1.2: Additionally, the Multi-Loop Module Support API is used to forward states from the DQMH loop to the CSM main loop. For example, after the user clicks the **Start** button, the "Macro:DAQ continuous" message can be forwarded to the CSM main loop for further logic processing.
+  - Step1.2: Additionally, the Multi-Loop Module Support API is used to forward states from the DQMH loop to the CSM main loop. For example, after the user clicks the <b>Start</b> button, the "Macro:DAQ continuous" message can be forwarded to the CSM main loop for further logic processing.
 - Step2: Use `CSM-Addon Logger Start File Logger.vi` to quickly implement CSM global event file logging.
 - Step3: CSM Loop that is used to handle interface operations and external responses, and implement specific operational logic.
   - Step3.1: In the DAQ group, perform the specific operational logic for DAQ acquisition.

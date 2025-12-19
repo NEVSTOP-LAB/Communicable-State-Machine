@@ -4,19 +4,19 @@
 
 > [!NOTE] 
 >
-> **CSM Message Keywords**
+> <b>CSM Message Keywords</b>
 >
 > The following are CSM message keywords: `->`, `->|`, `-@`, `-&`, `<-`, `\r`, `\n`, `//`, `>>`, `>>>`, `>>>`, `;`, `,`
 
 > [!NOTE] 
 >
-> **CSM Argument Type**
+> <b>CSM Argument Type</b>
 >
 > In CSM, all arguments and return values are presented in string format, but they can carry any data type underneath. Therefore, the sender must encode first, and the receiver must decode afterwards. For example, CSM has a built-in HEXSTR encoding scheme, and custom codecs can also be extended as needed. To facilitate the identification of the encoding method, it is recommended to write the encoded argument in the format `<Argument Type> STRING FORMAT ARGUMENT`. Use the CSM - Argument Type VI to extract the type tag and select the corresponding decoding function accordingly.
 
 > [!NOTE] 
 > 
-> **CSM HEXSTR Format Argument**
+> <b>CSM HEXSTR Format Argument</b>
 >
 > To pass arbitrary data types in CSM arguments, CSM has a built-in HEXSTR format argument encoding/decoding scheme. The argument type string is HEXSTR. The conversion process is as follows:
 >
@@ -26,7 +26,7 @@
 
 > [!NOTE] 
 > 
-> **CSM ERRSTR Format Argument**
+> <b>CSM ERRSTR Format Argument</b>
 >
 > The LabVIEW Error Cluster is a complex data type. The error information string usually contains carriage returns, which cannot be directly passed as a CSM argument. Although error cluster information can be converted to HEXSTR format, this method lacks readability, making it impossible to read information intuitively in logs. Therefore, to pass LabVIEW error information in CSM arguments, CSM has a built-in ERRSTR format argument encoding/decoding scheme. The argument type string is ERRSTR. The conversion process is as follows:
 >
@@ -41,7 +41,7 @@
 
 > [!NOTE] 
 >
-> **CSM Safe String Argument**
+> <b>CSM Safe String Argument</b>
 >
 > To pass arbitrary strings in CSM arguments without disrupting message parsing, CSM has a built-in Safe-String encoding/decoding scheme. The argument type string is SAFESTR. The conversion process is as follows:
 >

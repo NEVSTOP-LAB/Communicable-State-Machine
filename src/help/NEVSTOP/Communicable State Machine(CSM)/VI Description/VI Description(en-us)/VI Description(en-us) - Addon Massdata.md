@@ -4,18 +4,18 @@
 
 > [!NOTE] 
 > 
-> **CSM Massdata Argument Support** 
+> <b>CSM Massdata Argument Support</b> 
 >
 > CSM Massdata argument support provides an efficient argument passing mechanism for transferring large amounts of data within CSM. By using a memory-efficient reference mechanism instead of direct data transfer, CSM Massdata improves the efficiency and performance of argument passing.
 >
 > - The argument type defined by CSM Massdata is `<MassData>`, which can be obtained using the CSM - Argument Type VI.
 > - Data transmission of CSM Massdata is completely lossless. However, it is not suitable for storing data that requires indefinite persistence.
 >
-> **Note:** CSM Massdata internally uses a circular buffer mechanism. All CSM modules within the same application share the same Massdata buffer space. When the buffer is full, new data will overwrite old data starting from the beginning. Therefore, you need to set a reasonable buffer size to ensure that data is not overwritten before use, avoiding data loss.
+> <b>Note:</b> CSM Massdata internally uses a circular buffer mechanism. All CSM modules within the same application share the same Massdata buffer space. When the buffer is full, new data will overwrite old data starting from the beginning. Therefore, you need to set a reasonable buffer size to ensure that data is not overwritten before use, avoiding data loss.
 
 > [!NOTE] 
 > 
-> **CSM Massdata Argument Format** 
+> <b>CSM Massdata Argument Format</b> 
 >
 > A typical Massdata data format is: `<MassData>Start:8057;Size:4004;DataType:1D I32`. 
 >

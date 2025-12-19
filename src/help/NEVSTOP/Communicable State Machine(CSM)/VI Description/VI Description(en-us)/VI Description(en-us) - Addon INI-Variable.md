@@ -2,7 +2,7 @@
 
 > [!NOTE] 
 > 
-> **CSM INI-Variable Addon**
+> <b>CSM INI-Variable Addon</b>
 >
 > Configuration files are an essential component of application development. The CSM INI-Variable Addon provides simple and easy-to-use configuration file support for CSM, allowing users to configure applications without explicitly reading or writing configuration files.
 >
@@ -10,17 +10,17 @@
 >
 > The following are key features:
 >
-> 1. **Default Configuration Handling:** Automatically loads the default configuration file upon the first library function call, eliminating the need for explicit user loading.
-> 2. **Multi-File Support:** Supports loading multiple configuration files via specialized functions.
-> 3. **Memory Caching:** Maintains a cached copy in memory. Applications retrieve configuration information from this cache.
-> 4. **INI Format Compatibility:** Both configuration files and the memory copy use the standard INI format, supporting sections and key-value pairs.
-> 5. **Efficient Caching Mechanism:** Optimizes performance using a global modification flag, re-reading the memory copy only when the configuration has been modified.
+> 1. <b>Default Configuration Handling:</b> Automatically loads the default configuration file upon the first library function call, eliminating the need for explicit user loading.
+> 2. <b>Multi-File Support:</b> Supports loading multiple configuration files via specialized functions.
+> 3. <b>Memory Caching:</b> Maintains a cached copy in memory. Applications retrieve configuration information from this cache.
+> 4. <b>INI Format Compatibility:</b> Both configuration files and the memory copy use the standard INI format, supporting sections and key-value pairs.
+> 5. <b>Efficient Caching Mechanism:</b> Optimizes performance using a global modification flag, re-reading the memory copy only when the configuration has been modified.
 >
 > This library includes and utilizes a copy of [LabVIEW-Config](https://www.google.com/search?q=https://github.com/rcpacini/LabVIEW-Config) developed by [@rcpacini](https://github.com/rcpacini).
 
 > [!NOTE] 
 > 
-> **CSM INI-Variable Format**
+> <b>CSM INI-Variable Format</b>
 >
 > Format Definition: `${section.variable:defaultValue}`
 >
@@ -29,7 +29,7 @@
 > - `variable`: The variable name in the configuration file.
 > - `defaultValue` (Optional): The default value used when the variable does not exist.
 >
-> **Notes:**
+> <b>Notes:</b>
 >
 > - Supports nested variable references. For example, `${section1.variable1:${section2.variable2:defaultValue2}}`.
 > - The `section` parameter is optional. If omitted, the default configuration section `SectionName=LabVIEW` is used.
@@ -37,10 +37,10 @@
 
 > [!NOTE] 
 > 
-> **CSM INI-Variable Configuration File Path**
+> <b>CSM INI-Variable Configuration File Path</b>
 >
-> - **Development State:** The first INI configuration file found in the Application Directory. If no configuration file exists, it defaults to `csm-app.ini`.
-> - **Post-Compilation:** An INI configuration file in the same directory as the executable file, with the same name as the executable. LabVIEW automatically generates this file after compilation.
+> - <b>Development State:</b> The first INI configuration file found in the Application Directory. If no configuration file exists, it defaults to `csm-app.ini`.
+> - <b>Post-Compilation:</b> An INI configuration file in the same directory as the executable file, with the same name as the executable. LabVIEW automatically generates this file after compilation.
 > - Supports loading multiple configuration files. Configuration items in files loaded later will overwrite identical items in previously loaded files.
 > - Configuration files can use the `[__include]` section to reference other configuration files.
 >   - Supports both relative and absolute paths.
@@ -50,12 +50,12 @@
 
 > [!NOTE] 
 > 
-> **CSM INI-Variable Multi-File Configuration Scenario**
+> <b>CSM INI-Variable Multi-File Configuration Scenario</b>
 >
 > - When loading multiple files, configuration items in files loaded later will overwrite identical items in previously loaded files.
 > - When saving cache changes to a file, modifications are saved to the configuration file loaded last.
 
-> [!WARNING] **CSM INI-Variable Caching Mechanism Warning** 
+> [!WARNING] <b>CSM INI-Variable Caching Mechanism Warning</b> 
 >
 > Note that since this library uses a global cache modification flag, frequent configuration changes will reduce the effectiveness of the caching mechanism in reading VIs. Therefore, this library is not recommended for scenarios requiring frequent configuration modifications.
 
@@ -65,9 +65,9 @@
 
 Populates configuration variables within a string.
 
-**Application Scenario:** Using INI-Variable variables directly in CSM scripts or serving as arguments for CSM messages.
+<b>Application Scenario:</b> Using INI-Variable variables directly in CSM scripts or serving as arguments for CSM messages.
 
-**Reference Example:** `1. Used as parameters parsed by CSM.vi`.
+<b>Reference Example:</b> `1. Used as parameters parsed by CSM.vi`.
 
 > Ref: CSM INI-Variable Addon 
 > Ref: CSM INI-Variable Format 
@@ -88,11 +88,11 @@ Reads a variable value from the configuration based on a prototype.
 
 - It is recommended to use a cluster as the configuration prototype, where element names in the cluster correspond to variable names in the INI configuration file.
 - If using other data types, the corresponding variable name is "Config".
-- If the variable corresponding to the prototype does not exist in the configuration, the **Write If not found?** parameter determines whether to write the default value.
+- If the variable corresponding to the prototype does not exist in the configuration, the <b>Write If not found?</b> parameter determines whether to write the default value.
 
-**Application Scenario:** Reading configuration directly from an INI configuration file into LabVIEW data.
+<b>Application Scenario:</b> Reading configuration directly from an INI configuration file into LabVIEW data.
 
-**Reference Example:** `2. Load the corresponding configuration by providing the prototype.vi`.
+<b>Reference Example:</b> `2. Load the corresponding configuration by providing the prototype.vi`.
 
 > Ref: CSM INI-Variable Configuration File Path
 
@@ -113,9 +113,9 @@ Reads cluster data from the configuration. The data is stored in the specified s
 - If the specified section does not exist, the default section is used.
 - If a key corresponding to a cluster element does not exist, the value from the input prototype is used as the default value.
 
-**Application Scenario:** Reading configuration directly from an INI configuration file into LabVIEW data.
+<b>Application Scenario:</b> Reading configuration directly from an INI configuration file into LabVIEW data.
 
-**Reference Example:** `2. Load the corresponding configuration by providing the prototype.vi`.
+<b>Reference Example:</b> `2. Load the corresponding configuration by providing the prototype.vi`.
 
 > Ref: CSM INI-Variable Configuration File Path
 
@@ -132,9 +132,9 @@ Reads cluster data from the configuration. The data is stored in the specified s
 
 Reads cluster data from the configuration. The data is stored in a specified key within a specified section, and the data is saved in API String format.
 
-**Application Scenario:** Reading configuration directly from an INI configuration file into LabVIEW data.
+<b>Application Scenario:</b> Reading configuration directly from an INI configuration file into LabVIEW data.
 
-**Reference Example:** `2. Load the corresponding configuration by providing the prototype.vi`.
+<b>Reference Example:</b> `2. Load the corresponding configuration by providing the prototype.vi`.
 
 > Ref: CSM INI-Variable Configuration File Path
 
@@ -156,7 +156,7 @@ Writes a configuration variable.
 - It is recommended to use a cluster as the configuration prototype, where element names in the cluster correspond to variable names in the INI configuration file.
 - If using other data types, the corresponding variable name is "Config".
 
-**Reference Example:** `7. Write and Read Configuration.vi`.
+<b>Reference Example:</b> `7. Write and Read Configuration.vi`.
 
 > Ref: CSM INI-Variable Configuration File Path 
 > Ref: CSM INI-Variable Caching Mechanism Warning
@@ -178,9 +178,9 @@ Converts an API String to a cluster. The data is stored in the specified section
 - If no parameters are sent, parameters from the configuration file are used.
 - In the absence of configuration file parameters, default constant parameters are applied.
 
-**Application Scenario:** Used to save CSM parameters into a configuration file.
+<b>Application Scenario:</b> Used to save CSM parameters into a configuration file.
 
-**Reference Example:** `3. In CSM API parameters.vi`.
+<b>Reference Example:</b> `3. In CSM API parameters.vi`.
 
 -- <b>Controls</b> --
 
@@ -201,9 +201,9 @@ Converts an API String to a cluster. The data is stored in a specified key withi
 - If no parameters are sent, parameters from the configuration file are used.
 - In the absence of configuration file parameters, default constant parameters are applied.
 
-**Application Scenario:** Used to save CSM parameters into a configuration file.
+<b>Application Scenario:</b> Used to save CSM parameters into a configuration file.
 
-**Reference Example:** `3. In CSM API parameters.vi`.
+<b>Reference Example:</b> `3. In CSM API parameters.vi`.
 
 -- <b>Controls</b> --
 
@@ -255,9 +255,9 @@ Reads all key names in a specified section.
 
 Reads the configuration information string. This VI retrieves the raw string description without replacing INI variable references.
 
-**Application Scenario:** Need to read raw configuration information instead of configuration information after replacing internal variable references.
+<b>Application Scenario:</b> Need to read raw configuration information instead of configuration information after replacing internal variable references.
 
-**Reference Example:** `6. Read Nested Variables.vi`.
+<b>Reference Example:</b> `6. Read Nested Variables.vi`.
 
 -- <b>Controls</b> --
 
@@ -275,7 +275,7 @@ Reads the configuration information string. This VI retrieves the raw string des
 
 Writes configuration information string.
 
-**Reference Example:** `6. Read Nested Variables.vi`.
+<b>Reference Example:</b> `6. Read Nested Variables.vi`.
 
 > Ref: CSM INI-Variable Caching Mechanism Warning
 
@@ -295,7 +295,7 @@ Writes configuration information string.
 
 Returns the paths of all loaded configuration files.
 
-**Reference Example:** `5. import Config.ini with __include section.vi`.
+<b>Reference Example:</b> `5. import Config.ini with __include section.vi`.
 
 > Ref: CSM INI-Variable Configuration File Path
 
@@ -312,9 +312,9 @@ Returns the paths of all loaded configuration files.
 
 Loads configuration variables from a specified file. If the section name postfix is not empty, the loaded section names will have this postfix appended.
 
-**Section Postfix ("")** is primarily used when loading multiple configuration files that have identical sections. For example, two configuration files `Hardware1.ini` and `Hardware2.ini` both have a section named "Serial" with identical internal keys indicating serial port configuration. In this case, the configuration in the file loaded later would overwrite the configuration in the file loaded earlier. Using **Section Postfix ("")** prevents section name conflicts.
+<b>Section Postfix ("")</b> is primarily used when loading multiple configuration files that have identical sections. For example, two configuration files `Hardware1.ini` and `Hardware2.ini` both have a section named "Serial" with identical internal keys indicating serial port configuration. In this case, the configuration in the file loaded later would overwrite the configuration in the file loaded earlier. Using <b>Section Postfix ("")</b> prevents section name conflicts.
 
-**Reference Example:** `5. import Config.ini with __include section.vi`.
+<b>Reference Example:</b> `5. import Config.ini with __include section.vi`.
 
 > Ref: CSM INI-Variable Configuration File Path
 
@@ -337,7 +337,7 @@ Unloads a configuration variable file.
 
 Marks all temporary variables as permanent variables and stores the variables into the specified configuration file.
 
-**Note:** Although marked as permanent variables, these variables will still not be synchronized to the file if CSM - Sync Configuration Variables to File VI is not used.
+<b>Note:</b> Although marked as permanent variables, these variables will still not be synchronized to the file if CSM - Sync Configuration Variables to File VI is not used.
 
 > Ref: CSM INI-Variable Configuration File Path
 
@@ -349,7 +349,7 @@ Marks all temporary variables as permanent variables and stores the variables in
 
 Synchronizes variables in memory to the specified configuration file.
 
-**Note:** Only permanent variables are synchronized to the file. If you want to write temporary variables to the file, you need to mark the temporary variables as permanent in advance.
+<b>Note:</b> Only permanent variables are synchronized to the file. If you want to write temporary variables to the file, you need to mark the temporary variables as permanent in advance.
 
 > Ref: CSM INI-Variable Configuration File Path
 

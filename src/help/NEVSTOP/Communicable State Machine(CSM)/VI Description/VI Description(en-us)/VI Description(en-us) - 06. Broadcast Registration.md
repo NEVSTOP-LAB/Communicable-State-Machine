@@ -2,7 +2,7 @@
 
 ## CSM - Register Broadcast.vi
 
-Registers to receive notifications of changes triggered by other CSM modules. If **API** is not wired or the input is empty, the trigger name will be used as the response message. The trigger name can be the broadcast name of the source module or the state name of the source module.
+Registers to receive notifications of changes triggered by other CSM modules. If <b>API</b> is not wired or the input is empty, the trigger name will be used as the response message. The trigger name can be the broadcast name of the source module or the state name of the source module.
 
 In Worker Mode and Chain of Responsibility Mode, the input node name is automatically parsed as the module name because CSM implements registrations on a per-module basis.
 

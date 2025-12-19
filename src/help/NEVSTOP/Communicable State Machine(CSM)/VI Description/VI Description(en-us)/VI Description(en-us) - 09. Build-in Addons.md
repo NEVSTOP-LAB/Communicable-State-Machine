@@ -4,7 +4,7 @@
 
 > [!NOTE] 
 > 
-> **CSM WatchDog Implementation Principle**
+> <b>CSM WatchDog Implementation Principle</b>
 >
 > When a LabVIEW VI exits, it automatically releases all handle resources such as queues and events. Therefore, you can create a WatchDog thread that monitors a queue resource created by the main program VI. When this queue resource is released after the main VI exits, the WatchDog thread is triggered to send "Macro: Exit" to any CSM modules that have not yet exited, ensuring they exit normally.
 
@@ -12,7 +12,7 @@
 
 Starts the CSM Watchdog thread to monitor whether the main program has exited. It is typically executed immediately after the main program starts.
 
-**Application Scenario:** Used to ensure that all asynchronously started CSM modules can exit normally after the main program exits.
+<b>Application Scenario:</b> Used to ensure that all asynchronously started CSM modules can exit normally after the main program exits.
 
 > Ref: CSM WatchDog Implementation Principle
 
@@ -34,20 +34,20 @@ Starts the CSM Global Log file recording background thread, which is used to sav
 
 > [!NOTE] 
 > 
-> **CSM File Logger Implementation Principle**
+> <b>CSM File Logger Implementation Principle</b>
 >
 > The CSM File Logger retrieves all execution records in the application via the CSM Global Log API and saves them to a specified text file for later analysis and error localization. The file format is a text file with the suffix `.csmlog`, which can be opened using text editing query tools such as Notepad.
 
 > [!NOTE] 
 > 
-> **Log File Limits**
+> <b>Log File Limits</b>
 >
 > To prevent log files from becoming too large due to long-running software, limits are set on log file size and the number of files.
 >
-> - **File Size:** The maximum size of a single file in bytes. The default is 10 MB.
-> - **File Num:** The maximum number of LOG files. The default is 2.
+> - <b>File Size:</b> The maximum size of a single file in bytes. The default is 10 MB.
+> - <b>File Num:</b> The maximum number of LOG files. The default is 2.
 >
-> When the log file size exceeds the **File Size** limit, a new file record is created. When the number of log files exceeds the **File Num** limit, the oldest file record is deleted.
+> When the log file size exceeds the <b>File Size</b> limit, a new file record is created. When the number of log files exceeds the <b>File Num</b> limit, the oldest file record is deleted.
 
 > Ref: Global Log Filter Rules [TODO]
 
@@ -57,9 +57,9 @@ Reference Example: `Addons - Logger\CSM Application Running Log Example.vi`.
 
 - <b>Log File Path</b>: Log file path.
 - <b>Timestamp format</b>: Time format. The default is "%<%Y/%m/%d %H:%M:%S%3u>T".
-- <b>Log Limit</b>: Log file size limit. **File Size** is the maximum size of a single file in bytes. The default is 10 MB. **File Num** is the maximum number of LOG files. The default is 2.
+- <b>Log Limit</b>: Log file size limit. <b>File Size</b> is the maximum size of a single file in bytes. The default is 10 MB. <b>File Num</b> is the maximum number of LOG files. The default is 2.
 - <b>Filter Rules</b>: Filter rules, configured via the CSM - Convert Filter Rules VI.
-- <b>Enable? (T)</b>: Whether to enable the file recording function. The default is TRUE, which specifies to enable the file recording function. When **Enable?** is FALSE, the file recording function is disabled.
+- <b>Enable? (T)</b>: Whether to enable the file recording function. The default is TRUE, which specifies to enable the file recording function. When <b>Enable?</b> is FALSE, the file recording function is disabled.
 - <b>WatchDog? (T)</b>: Whether to enable the WatchDog function. The default is TRUE. When the calling VI exits, the allocated WatchDog resource is automatically released, triggering the recording thread to exit automatically; manually releasing the WatchDog resource will also trigger the recording thread to exit.
 - <b>Exit When All Module Exist? (F)</b>: Automatically exit recording after all CSM modules have exited. The default is FALSE. If TRUE, and the main program is not a CSM, the recording thread will also automatically exit when all running CSM modules exit.
 
@@ -84,7 +84,7 @@ The thread VI originally used in the CSM - Start File Logger VI. This VI is now 
 
 > [!NOTE] 
 > 
-> **Reason for CSM LOOP Support Design**
+> <b>Reason for CSM LOOP Support Design</b>
 >
 > A loop is the basic unit of operation for a state machine, executing continuously while the state machine is running. Users can define loop conditions via logic or use the CSM-recommended Loop Support Addon to define loops.
 >
@@ -122,7 +122,7 @@ Reference Example: `Addons - Loop Support\CSMLS - Continuous Loop in CSM Example
 
 > Ref: Reason for CSM LOOP Support Design
 
-> [!WARNING] <b>Add to Front? (F)</b> is usually FALSE because once a loop state starts, it does not end immediately. Before insertion into the state queue, it is considered a sub-state of the current state. If the current state was called via a synchronous message, it would not return immediately. For example, if a set of continuous acquisition states is defined in "API: Start DAQ" and this message is sent synchronously from outside, the logic should be to start the loop and then return immediately. Only set **Add to Front? (F)** to TRUE if the logic is to wait for the loop to end before returning.
+> [!WARNING] <b>Add to Front? (F)</b> is usually FALSE because once a loop state starts, it does not end immediately. Before insertion into the state queue, it is considered a sub-state of the current state. If the current state was called via a synchronous message, it would not return immediately. For example, if a set of continuous acquisition states is defined in "API: Start DAQ" and this message is sent synchronously from outside, the logic should be to start the loop and then return immediately. Only set <b>Add to Front? (F)</b> to TRUE if the logic is to wait for the loop to end before returning.
 
 -- <b>Controls</b> --
 
@@ -156,7 +156,7 @@ Reference Example: `Addons - Loop Support\CSMLS - Continuous Loop in CSM Example
 
 Stops the loop by removing the `<loop>` tag and all states before the `<loop>` tag.
 
-**Example:**
+<b>Example:</b>
 
 If the following messages exist in the CSM message queue, executing the current API operation will remove the messages where the comments are located.
 
@@ -181,7 +181,7 @@ This is equivalent to not executing any DAQ operations and immediately entering 
 
 Stops the loop by removing the `<loop>` tag.
 
-**Example:**
+<b>Example:</b>
 
 If the following messages exist in the CSM message queue, executing the current API operation will remove the messages where the comments are located.
 

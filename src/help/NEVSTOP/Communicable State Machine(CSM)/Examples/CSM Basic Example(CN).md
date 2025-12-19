@@ -265,21 +265,21 @@ CSM框架中，创建一个可重用模块通常不需要与其他模块进行�
 #### Steps
 
 - Step1：从选板拖放CSM模板。
-- Step2：将**Level**添加到Internal Data中。默认值为0.5。
+- Step2：将<b>Level</b>添加到Internal Data中。默认值为0.5。
 - Step3：创建"DoSth: Check If Greater than 0.5"。在此实现核心功能。
     - Step3.1：比较随机数据并更新UI。
     - Step3.2：当随机数据超过level时，发布 "Status Changed" 状态。
-- Step4：将**Timeout**更改为移位寄存器。它将用于启动/停止超时事件。在每种情况下连接**Timeout**的连线。
+- Step4：将<b>Timeout</b>更改为移位寄存器。它将用于启动/停止超时事件。在每种情况下连接<b>Timeout</b>的连线。
 - Step5：在Timeout Event中，将"DoSth: Check If Greater than 0.5"添加到 State Queue。
 - Step6：为此模块创建API。
-    - Step6.1：创建"API: Start"将**Timeout**更改为0.5 s，这将每秒触发一次"DoSth: Check If Greater than 0.5"。在这种情况下，将广播"Check Started"状态。
-    - Step6.2：创建"API: Stop"将**Timeout**更改为-1，这将停止检查。"Check Stopped"状态将被广播。
-    - Step6.3：创建"API: Set Level"以更改**Level**设置。
-    - Step6.4：创建"API: Get Level"以从外部获取当前**Level**。
+    - Step6.1：创建"API: Start"将<b>Timeout</b>更改为0.5 s，这将每秒触发一次"DoSth: Check If Greater than 0.5"。在这种情况下，将广播"Check Started"状态。
+    - Step6.2：创建"API: Stop"将<b>Timeout</b>更改为-1，这将停止检查。"Check Stopped"状态将被广播。
+    - Step6.3：创建"API: Set Level"以更改<b>Level</b>设置。
+    - Step6.4：创建"API: Get Level"以从外部获取当前<b>Level</b>。
 - Step7：创建本地测试按钮/控件
-    - Step7.1：创建**Level**控件，调用"API: Set Level"以在本地更改level设置。
-    - Step7.2：创建**Start**按钮，调用"API: Start"以在本地开始检查。
-    - Step7.3：创建**Stop**按钮，调用"API: Stop"以在本地开始检查。
+    - Step7.1：创建<b>Level</b>控件，调用"API: Set Level"以在本地更改level设置。
+    - Step7.2：创建<b>Start</b>按钮，调用"API: Start"以在本地开始检查。
+    - Step7.3：创建<b>Stop</b>按钮，调用"API: Stop"以在本地开始检查。
 - Step8：在适当的情况下正确更新UI。
     - Step8.1：启动时初始化UI。
     - Step8.2：注释掉"Macro: Initialize"中的`UI: Front Panel State >> Open`。当它作为子模块工作时，UI将自动隐藏而不是弹出。
@@ -312,15 +312,15 @@ CSM框架中，创建一个可重用模块通常不需要与其他模块进行�
 - Step6：在"Macro: Switch Active Module" case下，使用高级VI向活动子模块发送模块间同步消息"API: Get Level -@ modulename"。或者，如果您熟悉CSM字符串语法规则，也可以手动键入字符串常量。
 - Step7：现在状态队列为空，CSM 状态机正在' "", "Event Structure", "Idle" '下的超时UI事件中等待。下一步取决于用户提供的UI交互。
 - Step8：在UI中创建本地测试按钮/控件如下：
-    - Step8.1：创建**API:Start**按钮，当用户单击此按钮时，将发送一条异步无回复消息"API: Start -> modulename"以启动活动的子模块。
-    - Step8.2：创建**Register All Status Change**按钮，当用户单击此按钮时，此CSM模块将从活动子模块注册以下广播/中断消息"Status Changed@* >> Action: Status Change Handler ->\<register>"。
-    - Step8.3：创建**Unregister All Status Change**按钮，当用户单击此按钮时，此CSM模块将从活动子模块注销以下广播/中断消息"Status Changed@* >> Action: Status Change Handler ->\<unregister>"。
+    - Step8.1：创建<b>API:Start</b>按钮，当用户单击此按钮时，将发送一条异步无回复消息"API: Start -> modulename"以启动活动的子模块。
+    - Step8.2：创建<b>Register All Status Change</b>按钮，当用户单击此按钮时，此CSM模块将从活动子模块注册以下广播/中断消息"Status Changed@* >> Action: Status Change Handler ->\<register>"。
+    - Step8.3：创建<b>Unregister All Status Change</b>按钮，当用户单击此按钮时，此CSM模块将从活动子模块注销以下广播/中断消息"Status Changed@* >> Action: Status Change Handler ->\<unregister>"。
     - Step8.4：此处用于收到消息时跳出事件结构，以处理状态更改。
-    - Step8.5：创建**API:Stop**按钮，当用户单击此按钮时，将发送一条异步无回复消息"API: Stop -> modulename"以停止活动的子模块。
-    - Step8.6：创建**Level** DBL控件，当用户更改值时，将向活动子模块发送一条异步消息"API: Set Level >> 0.3 ->| modulename"。
-    - Step8.7：创建**API: Get Level(Async)**按钮，当用户单击此按钮时，将向活动子模块发送一条异步消息"API: Get Level -> modulename"。相应地处理"Async Message Posted"和"Async Response" case，在本示例中**Level**显示将被更新。
-    - Step8.8：创建**UI: create Front Panel State >> Open**按钮，当用户单击该按钮时，将向活动子模块发送一条带无回复的异步消息"UI: Front Panel State >> Open ->| modulename"。
-    - Step8.9：创建**UI: create Front Panel State >> Close**按钮，当用户单击该按钮时，将向活动子模块发送一条带无回复的异步消息"UI: Front Panel State >> Close ->| modulename"。
+    - Step8.5：创建<b>API:Stop</b>按钮，当用户单击此按钮时，将发送一条异步无回复消息"API: Stop -> modulename"以停止活动的子模块。
+    - Step8.6：创建<b>Level</b> DBL控件，当用户更改值时，将向活动子模块发送一条异步消息"API: Set Level >> 0.3 ->| modulename"。
+    - Step8.7：创建<b>API: Get Level(Async)</b>按钮，当用户单击此按钮时，将向活动子模块发送一条异步消息"API: Get Level -> modulename"。相应地处理"Async Message Posted"和"Async Response" case，在本示例中<b>Level</b>显示将被更新。
+    - Step8.8：创建<b>UI: create Front Panel State >> Open</b>按钮，当用户单击该按钮时，将向活动子模块发送一条带无回复的异步消息"UI: Front Panel State >> Open ->| modulename"。
+    - Step8.9：创建<b>UI: create Front Panel State >> Close</b>按钮，当用户单击该按钮时，将向活动子模块发送一条带无回复的异步消息"UI: Front Panel State >> Close ->| modulename"。
 - Step9：在"Panel Close?" UI事件下，在"Macro:Exit"之前添加两个新的字符串消息："Macro: Exit -@ SubModule0"和"Macro: Exit -@ SubModule1"，以便在最终关闭CSM 调用者/主模块之前安全地关闭所有CSM子模块。
 
 

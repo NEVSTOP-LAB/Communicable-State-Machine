@@ -3,7 +3,7 @@
 ## CSM WatchDog Addon
 
 > [!NOTE] 
-> **CSM WatchDog实现的原理**
+> <b>CSM WatchDog实现的原理</b>
 >
 > LabVIEW VI退出时，会自动释放所有队列、事件等句柄资源。因此，您可以通过创建一个WatchDog线程，监控一个由主程序VI申请创建的队列资源，当这个队列资源在主VI退出后被释放时，触发WatchDog线程给还未退出的CSM模块发送 "Macro: Exit"，保证他们正常的退出。
 
@@ -31,13 +31,13 @@ CSM Watchdog线程，用于保证在主程序退出后，所有的异步启动�
 启动CSM Global Log文件记录后台线程，用于将应用中的全部运行记录保存到指定的文本文件中。
 
 > [!NOTE] 
-> **CSM File Logger实现的原理**
+> <b>CSM File Logger实现的原理</b>
 >
 > 通过CSM 的 Global Log API，获取应用中的全部运行记录，并保存到指定的文本文件中，用于后期分析和错误定位。
 > 文件格式为文本文件，后缀名为.csmlog，可以通过记事本等文本编辑查询工具打开。
 
 > [!NOTE] 
-> **记录文件限制**
+> <b>记录文件限制</b>
 >
 > 为了防止长期运行的软件导致记录文件过大，我们设置了记录文件的大小限制和文件数量限制。
 > - File Size为单个文件的最大大小，单位为字节(byte)，默认为10 MB；
@@ -76,7 +76,7 @@ CSM - Start File Logger VI中原本使用的线程VI。已废弃，目前使用C
 ## CSM Loop Support Addon
 
 > [!NOTE] 
-> **CSM LOOP Support设计的原因**
+> <b>CSM LOOP Support设计的原因</b>
 >
 > 循环是状态机运行的基本单位，它会在状态机运行时不断地执行。用户可以自己通过逻辑来定义循环的条件，也可以使用CSM推荐的Loop Support Addon来定义循环。
 >

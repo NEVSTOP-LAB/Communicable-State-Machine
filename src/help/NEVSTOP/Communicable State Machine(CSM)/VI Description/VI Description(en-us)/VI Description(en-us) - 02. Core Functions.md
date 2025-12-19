@@ -13,7 +13,7 @@ Parses the CSM state queue and returns the next current state to execute, along 
 - <b>Response Arguments</b>: Response arguments from the previous state. Connect this input to the CSM shift register to pass return values from external calls.
 - <b>Name ("" to use UUID)</b>: CSM module name. Refer to *CSM Naming Rules* for module naming rules.
 - <b>State Queue</b>: The entire state queue is connected to this input. This must be wired from a CSM shift register.
-- <b>Previous Error</b>: Error cluster from the CSM. If an error occurs and is passed to this input, the **Current State** output returns the "Error Handler" state.
+- <b>Previous Error</b>: Error cluster from the CSM. If an error occurs and is passed to this input, the <b>Current State</b> output returns the "Error Handler" state.
 - <b>Dequeue (1 ms)</b>: Timeout setting for checking the CSM message queue. The default is 1 ms. The default is not set to 0 to avoid generating massive amounts of empty messages in certain error situations.
 - <b>Response Timeout (-2 Use Global Settings)</b>: Timeout for synchronous calls. The default is -2, which uses the global setting. You can set the global timeout using the CSM - Set TMO of Sync-Reply VI.
 - <b>Allowed Messages (Empty for All)</b>: A list of allowed message names. An empty list indicates that all messages are allowed.
@@ -77,13 +77,13 @@ Builds CSM message strings and operation strings.
 
 > [!NOTE] 
 >
-> **Message Building API**
+> <b>Message Building API</b>
 >
 > This type of API is only used to concatenate message strings and does not send messages directly. The strings need to be merged into the CSM state queue, and the messages will be sent and the operation executed within the Parse State Queue++ VI. If you are familiar with CSM rules, you do not need to use this type of API. You can type the corresponding message string or operation string directly into the string.
 
 > [!NOTE] 
 >
-> **Polymorphic VI Options**
+> <b>Polymorphic VI Options</b>
 >
 > - Build Message with Arguments(Auto Check).vi: Concatenates message strings based on the input message symbols.
 > - Build Asynchronous Message with Arguments.vi: Concatenates and generates CSM asynchronous message strings. The message type symbol is "->".
@@ -359,7 +359,7 @@ Broadcasts a status change to the system. CSM modules with registered states wil
 
 > [!NOTE] 
 > 
-> **CSM State Queue Operation API**
+> <b>CSM State Queue Operation API</b>
 >
 > This type of API only concatenates message strings and does not send messages directly. The message is sent and the operation executed within the Parse State Queue++ VI. Unlike the Message Building API, this type of API includes a CSM state queue string input, which is equivalent to inserting a message into the state queue.
 
@@ -381,7 +381,7 @@ Merges CSM message strings into the CSM message queue. This VI provides string o
 
 > [!NOTE] 
 > 
-> **Polymorphic VI Options**
+> <b>Polymorphic VI Options</b>
 >
 > - Add State(s) to Queue By BOOL(Element).vi
 > - Add State(s) to Queue By BOOL(Array Left).vi
@@ -444,7 +444,7 @@ Merges CSM message strings into the CSM message queue. This VI provides string o
 
 #### Add State(s) to Queue By BOOL(Array All).vi
 
-Generates the concatenated state of TRUE/FALSE and the remaining states based on the **High Priority** and Boolean inputs. The **High Priority** input determines whether to concatenate the TRUE or FALSE string before or after the remaining states. The **TRUE** and **FALSE** inputs determine whether the string to be concatenated is TRUE or FALSE.
+Generates the concatenated state of TRUE/FALSE and the remaining states based on the <b>High Priority</b> and Boolean inputs. The <b>High Priority</b> input determines whether to concatenate the TRUE or FALSE string before or after the remaining states. The <b>TRUE</b> and <b>FALSE</b> inputs determine whether the string to be concatenated is TRUE or FALSE.
 
 > Ref: CSM State Queue Operation API
 

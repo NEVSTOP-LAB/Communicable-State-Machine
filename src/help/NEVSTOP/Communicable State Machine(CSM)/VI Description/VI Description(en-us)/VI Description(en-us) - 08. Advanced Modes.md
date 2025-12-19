@@ -2,7 +2,7 @@
 
 > [!NOTE] 
 > 
-> **Name Concatenation API**
+> <b>Name Concatenation API</b>
 >
 > This VI only manipulates the module name string and has no actual functionality. Therefore, once you are familiar with the CSM rules, you can directly enter name string and rule symbols without calling this API.
 
@@ -10,7 +10,7 @@
 
 > [!NOTE] 
 > 
-> **CSM System-Level Module**
+> <b>CSM System-Level Module</b>
 >
 > CSM functions of a system-level module are almost identical to those of a normal module. The only difference is that the CSM - List Modules VI does not list system-level modules. Therefore, a system-level module is typically used to implement functional modules running in the background. When processing the operational logic of normal modules in a unified manner, interference with these background running logics can be avoided. CSM system-level modules usually start with ".", for example: `.MainApp` and `.BackgroundTask`. The "." is part of the name, so operations like message sending and subscription must include the "." in the name. For example, you can name the main program loop `.MainApp`. You can then use the CSM - List Modules VI to get a list of all normal modules without listing `.MainApp`. If the main program needs to exit all other modules, you can send "Macro: Exit" to the results of the CSM - List Modules VI. This allows you to exit all normal modules without affecting the operation of the system-level module.
 >
@@ -37,7 +37,7 @@ Reference Example: `0. Base Concepts\7. System-Level Module.vi`.
 
 > [!NOTE] 
 > 
-> **CSM Submodule**
+> <b>CSM Submodule</b>
 >
 > There are no strict submodules in CSM. The "." in the module name is only used to mark the logical relationship between different modules. From an actual execution perspective, each module is independent and has no hierarchical relationship. For example, modules "ModuleA" and "ModuleA.SubmoduleB" are two different modules. From the code logic perspective, they are completely independent and do not interfere with each other. However, the CSM - List Submodules VI can be used to retrieve all logical submodules of "ModuleA", including "ModuleA.SubmoduleB".
 >
@@ -62,17 +62,17 @@ Constructs a submodule name.
 
 > [!NOTE] 
 > 
-> **CSM Worker Mode**
+> <b>CSM Worker Mode</b>
 >
 > A CSM module implements Worker Mode by instantiating multiple instances, appending "#" to the requested name, and sharing the same message queue.
 >
 > - From an external call perspective, these instances collectively form a composite module named Worker Agent.
 > - Each instance is named a Worker.
 >
-> **Behavior:** External callers can consider the Worker Agent as a single CSM module capable of message communication, state registration, and so on. Internally, an idle Worker retrieves messages from the Worker Agent message queue and processes them. Therefore, Worker Mode enables concurrent message processing for a CSM module.
+> <b>Behavior:</b> External callers can consider the Worker Agent as a single CSM module capable of message communication, state registration, and so on. Internally, an idle Worker retrieves messages from the Worker Agent message queue and processes them. Therefore, Worker Mode enables concurrent message processing for a CSM module.
 >
 > ```
-> **Example:** 
+> <b>Example:</b> 
 > 
 > // Request module name as `module#`, where `module` is the Worker Agent name. Instantiate two instances. Their names might be: 
 > 
@@ -87,7 +87,7 @@ Constructs a submodule name.
 > `csm message >> arguments -> module` // Asynchronous message. An idle Worker will process this message.
 > ```
 >
-> **Application Scenarios:**
+> <b>Application Scenarios:</b>
 >
 > - Call center operator scenarios
 > - Concurrent downloader scenarios
@@ -115,17 +115,17 @@ Reference Example: "4. Advance Examples\1. Action Workers Example".
 
 > [!NOTE] 
 > 
-> **CSM Chain of Responsibility Mode**
+> <b>CSM Chain of Responsibility Mode</b>
 >
 > Multiple CSM modules form a complete module via Chain of Responsibility Mode by appending "$" to the requested name to form a chain for processing transactions.
 >
 > - From an external call perspective, these instances collectively form a composite module named Chain.
 > - Each instance is named a Chain Node.
 >
-> **Behavior:** External callers can consider the Chain as a single CSM module capable of message communication, state registration, and so on. Internally, nodes attempt to process the message sequentially according to their order. When a node has the capability to process the current message, the message is processed and is not passed further down the chain.
+> <b>Behavior:</b> External callers can consider the Chain as a single CSM module capable of message communication, state registration, and so on. Internally, nodes attempt to process the message sequentially according to their order. When a node has the capability to process the current message, the message is processed and is not passed further down the chain.
 >
 > ```
-> **Example:**
+> <b>Example:</b>
 > // Request module name as `module$`, where `module` is the chain name. Instantiate 4 instances. Their names might be:
 > // - `module$1`
 > // - `module$2`
@@ -137,7 +137,7 @@ Reference Example: "4. Advance Examples\1. Action Workers Example".
 > // This message will be processed by `module$3`. `module$4` will not respond.
 > ```
 >
-> **Application Scenarios:**
+> <b>Application Scenarios:</b>
 >
 > - Permission approval process. Based on job hierarchy, personnel with specific functional permissions can approve directly without passing it further.
 > - Function concatenation. Different modules implement different tasks, and different functional sets can be combined through concatenation.
@@ -181,7 +181,7 @@ For a Chain of Responsibility Mode node named `module$1`, the result is `module`
 
 > [!NOTE] 
 > 
-> **CSM Multi-Loop Mode**
+> <b>CSM Multi-Loop Mode</b>
 >
 > In some scenarios, it is suitable to use multiple loops to constitute the same CSM module. For example:
 >
