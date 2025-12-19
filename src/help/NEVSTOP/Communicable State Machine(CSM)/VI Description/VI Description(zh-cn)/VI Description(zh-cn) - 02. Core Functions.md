@@ -62,7 +62,6 @@
 - <b>Type</b>：消息类型，可选 Async, Async Without Reply, Sync。
 
 -- <b>输出控件(Indicators)</b> --
-
 - <b>CSM Message String</b>：拼接生成的CSM消息字符串。
 
 ### Build Message with Arguments++.vi
@@ -171,7 +170,6 @@
 > Ref: 消息拼接API
 
 -- <b>输入控件(Controls)</b> --
-
 - <b>State with Arguments</b>：CSM普通状态消息字符串。
 - <b>Arguments ("")</b>: 参数信息。<b>State with Arguments</b>中包含的参数，会被替换。
 
@@ -243,7 +241,6 @@
 - <b>API (If "", Same As "Status")</b>：取消订阅状态模块响应的API名称。
 
 -- <b>输出控件(Indicators)</b> --
-
 - <b>CSM Message String</b>：拼接生成的CSM消息字符串。
 
 #### CSM - Replace Substitution Marks in Messages.vi
@@ -326,7 +323,6 @@
 - <b>Broadcast? (T)</b>：控制是否广播的开关输入。
 
 -- <b>输出控件(Indicators)</b> --
-
 - <b>Remaining States</b>：拼接后的所有状态及参数。
 
 ### Add State(s) to Queue By BOOL++.vi

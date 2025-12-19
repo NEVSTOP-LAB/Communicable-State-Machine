@@ -31,7 +31,6 @@
 > Ref: 消息拼接API
 
 -- <b>输入控件(Controls)</b> --
-
 - <b>CSMs</b>：CSM模块名称数组。
 - <b>State with Arguments("Macro: Exit“)</b>：退出消息。
 
@@ -131,7 +130,6 @@
 - 9B781DB313AF
 
 -- <b>输出控件(Indicators)</b> --
-
 - <b>UUID</b>：生成的UUID。
 
 ### String History Cacher.vi

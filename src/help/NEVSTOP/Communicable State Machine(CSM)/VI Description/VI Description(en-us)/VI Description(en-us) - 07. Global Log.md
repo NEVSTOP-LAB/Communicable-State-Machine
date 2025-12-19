@@ -37,7 +37,6 @@ Reference Examples:
 - `4. Advance Examples\Filter From Subscriber(Queue).vi`
 
 -- <b>Indicators</b> --
-
 - <b>Global Log Queue</b>: Global log queue refnum.
 
 ## CSM - Global Log Event.vi
@@ -53,7 +52,6 @@ Reference Examples:
 - `4. Advance Examples\Filter From Subscriber(Event).vi`
 
 -- <b>Indicators</b> --
-
 - <b>CSM Global Log Event</b>: CSM global log user event refnum.
 - <b>Timeout In ms (5000ms)</b>: Timeout duration. The default is 5000 ms.
 
@@ -70,7 +68,6 @@ Reference Examples:
 - `4. Advance Examples\Filter From Subscriber(Queue).vi`
 
 -- <b>Controls</b> --
-
 - <b>Global Log Queue</b>: Global log queue refnum.
 
 ## CSM - Destroy Global Log Event.vi
@@ -86,7 +83,6 @@ Reference Examples:
 - `4. Advance Examples\Filter From Subscriber(Event).vi`
 
 -- <b>Controls</b> --
-
 - <b>CSM Global Log Event</b>: CSM global log user event refnum.
 - <b>Force Destroy? (F)</b>: Whether to force destruction. The default is FALSE, which specifies not to force.
 - <b>Timeout In ms (5000ms)</b>: Timeout duration. The default is 5000 ms.
@@ -96,7 +92,6 @@ Reference Examples:
 CSM error handling function. If an error occurs, the error information is published via the CSM Global Log. This allows error information occurring outside the CSM framework to be recorded in the global log.
 
 -- <b>Controls</b> --
-
 - <b>Place ("" to Use VI's Name)</b>: Marks the location where the error occurred, which by default uses the name of the calling VI.
 - <b>Clear Error? (T)</b>: Whether to clear the error. The default is TRUE, which specifies to clear the error. The error is cleared after passing through this VI.
 
@@ -105,7 +100,6 @@ CSM error handling function. If an error occurs, the error information is publis
 Generates a custom user log for scenarios such as debugging. When the input parameters of this VI contain error information, CSM - Global Log Error Handler VI is called to record the error information.
 
 -- <b>Controls</b> --
-
 - <b>Log</b>: Event name.
 - <b>Arguments</b>: Event arguments.
 - <b>From Who</b>: Source.
@@ -167,7 +161,6 @@ Lists global filter rules in string format, with each rule occupying one line fo
 > Ref: Global Log Filter Rules
 
 -- <b>Indicators</b> --
-
 - <b>Rule Strings</b>: Filter rule strings.
 
 ### CSM - Convert Filter Rules.vi
@@ -194,11 +187,9 @@ This is a Subscriber-side filtering VI used to determine if a log satisfies the 
 Converts global log data clusters to strings.
 
 -- <b>Controls</b> --
-
 - <b>Log</b>: Global log data cluster.
 
 -- <b>Indicators</b> --
-
 - <b>Log String</b>: Global log string.
 
 #### Global Log To String(Source Time).vi
@@ -206,12 +197,10 @@ Converts global log data clusters to strings.
 Converts global log data clusters to strings, using the send time as the timestamp.
 
 -- <b>Controls</b> --
-
 - <b>Log</b>: Global log data cluster.
 - <b>Format String</b>: Timestamp format.
 
 -- <b>Indicators</b> --
-
 - <b>Log String</b>: Global log string.
 
 #### Global Log History Cacher.vi
@@ -219,7 +208,6 @@ Converts global log data clusters to strings, using the send time as the timesta
 Saves the current input string to the cache. When the cached history strings exceed the maximum length limit, the oldest cached string will be overwritten. Use this VI for debugging CSM history states.
 
 -- <b>Controls</b> --
-
 - <b>Global Log Data</b>: Received global log information packet.
 - <b>Length (10000)</b>: Maximum string length for cached history strings.
 - <b>Level (Normal)</b>: Processing level. The default is <b>Normal</b>, which indicates standard processing. Higher levels omit different information to increase processing speed.
@@ -230,7 +218,6 @@ Saves the current input string to the cache. When the cached history strings exc
 - <b>Settings</b>: Periodic log configuration information. You can set detection period and periodic threshold to determine whether to fold.
 
 -- <b>Indicators</b> --
-
 - <b>String Cache</b>: Cached history strings.
 
 #### Auto Processing Level.vi
@@ -238,14 +225,12 @@ Saves the current input string to the cache. When the cached history strings exc
 Dynamically calculates the recommended log processing level based on the current number of logs in the global log queue.
 
 -- <b>Controls</b> --
-
 - <b>#Left In Q</b>: Number of remaining logs in the global log queue.
 - <b>Debounce Period (5s)</b>: Log processing upgrade time. If logs in the global log queue consistently increase within the specified time, the processing level will be upgraded.
 - <b>Period (0.1s)</b>: Detection period. The default is 100 ms.
 - <b>Reset? (F)</b>: Reset flag.
 
 -- <b>Controls</b> --
-
 - <b>Level</b>: Processing level. "Normal" indicates standard processing. Higher levels omit different information to increase processing speed.
 - <b>LogInQ Changing Speed (#/s)</b>: Current rate of log change in the global log queue.
 - <b>Since Upgraded (S)</b>: Time since the last processing level upgrade.
@@ -257,12 +242,10 @@ This VI is used for global log monitoring loops utilizing the global log queue, 
 Typically, the exit condition for these global log monitoring loops is met when the program exits. At this time, logs in the queue may not have been fully processed. Use this VI to allow a period of <b>Timeout (5s)</b> to process logs in the queue after the <b>Stop</b> signal arrives. The <b>Exit</b> signal is set to TRUE to exit the loop, only when the number of logs in the queue is empty or the timeout occurs.
 
 -- <b>Controls</b> --
-
 - <b>Queue</b>: Queue resource, such as the global log queue.
 - <b>Stop</b>: Input stop signal. When this signal is TRUE, it starts checking if the queue is empty.
 
 -- <b>Controls</b> --
-
 - <b>Timeout (5s)</b>: Timeout duration. Default is 5 s.
 - <b>Exit</b>: Real exit signal. <b>Exit</b> returns TRUE when the queue is empty or timeout occurs.
 - <b>Since Exiting (s)</b>: Time elapsed since exiting started, in seconds.

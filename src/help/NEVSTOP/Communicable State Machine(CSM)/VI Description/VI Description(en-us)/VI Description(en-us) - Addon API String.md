@@ -71,11 +71,9 @@ Determines whether the data type is a conversion data type supported by API Stri
 > Ref: CSM HEXSTR Format Argument
 
 -- <b>Controls</b> --
-
 - <b>Data</b>: Input data.
 
 -- <b>Indicators</b> --
-
 - <b>Data(Dup)</b>: A copy of the input data.
 - <b>Supported Datatype?</b>: Boolean indicating whether API String supports the input data.
 
@@ -86,13 +84,11 @@ Converts data to API String format.
 > Ref: API String Parameter Support
 
 -- <b>Controls</b> --
-
 - <b>Data</b>: Input data.
 - <b>Reference Cluster Data</b>: Reference cluster data. When converting cluster data, the elements in the input data and reference data are compared. If they match completely, the elements are ignored in the conversion result.
 - <b>No Tag Mode? (F)</b>: For cluster data, when TRUE, tag information is not included when converting to API String.
 
 -- <b>Indicators</b> --
-
 - <b>API String</b>: Converted API String format.
 
 ### Convert API String Arguments to Data.vim
@@ -102,13 +98,11 @@ Converts an API String to the corresponding data type.
 > Ref: API String Parameter Support
 
 -- <b>Controls</b> --
-
 - <b>API String</b>: Input string in API String format.
 - <b>Strict Label Check? (T)</b>: Strict label check. When TRUE, if the reference data does not contain the label, the conversion fails and reports an error.
 - <b>Reference Type</b>: Reference data.
 
 -- <b>Indicators</b> --
-
 - <b>Data</b>: Converted data.
 
 ### Query Data as API String Arguments.vim
@@ -120,12 +114,10 @@ Queries a specified data item within cluster data and converts it to API String 
 <b>Special Case:</b> If <b>Name</b> is set to `<list>`, a list of all available settings is returned.
 
 -- <b>Controls</b> --
-
 - <b>Cluster Data</b>: Cluster data.
 - <b>Name</b>: Data name.
 
 -- <b>Indicators</b> --
-
 - <b>Cluster Data(dup)</b>: A copy of the cluster data.
 - <b>API String</b>: Query result in API String format.
 
@@ -139,12 +131,10 @@ Adds custom boolean strings to the API String boolean parsing list and returns t
 > Ref: Default Strings for FALSE Value
 
 -- <b>Controls</b> --
-
 - <b>Custom False Boolean Strings</b>: List of custom FALSE strings.
 - <b>Custom True Boolean Strings</b>: List of custom TRUE strings.
 
 -- <b>Indicators</b> --
-
 - <b>False Boolean Strings</b>: Updated list of FALSE strings.
 - <b>True Boolean Strings</b>: Updated list of TRUE strings.
 
@@ -156,12 +146,10 @@ Removes custom boolean strings from the API String boolean parsing list and retu
 > Ref: Default Strings for FALSE Value
 
 -- <b>Controls</b> --
-
 - <b>Custom False Boolean Strings</b>: List of FALSE strings to remove.
 - <b>Custom True Boolean Strings</b>: List of TRUE strings to remove.
 
 -- <b>Indicators</b> --
-
 - <b>False Boolean Strings</b>: Updated list of FALSE strings.
 - <b>True Boolean Strings</b>: Updated list of TRUE strings.
 
@@ -173,7 +161,6 @@ Lists all currently available boolean value strings.
 > Ref: Default Strings for FALSE Value
 
 -- <b>Indicators</b> --
-
 - <b>False Boolean Strings</b>: Current list of FALSE strings.
 - <b>True Boolean Strings</b>: Current list of TRUE strings.
 
@@ -184,11 +171,9 @@ Sets the format string for floating-point numbers. Refer to LabVIEW format strin
 > Ref: Default Floating-point Format
 
 -- <b>Controls</b> --
-
 - <b>Float Format String Setting</b>: Floating-point format string setting.
 
 -- <b>Indicators</b> --
-
 - <b>Float Format String</b>: Current floating-point format string.
 
 ### API String - Float Format String.vi
@@ -198,7 +183,6 @@ Gets the current floating-point format string.
 > Ref: Default Floating-point Format
 
 -- <b>Indicators</b> --
-
 - <b>Float Format String</b>: Current floating-point format string.
 
 ### API String - Set Float Precision.vi
@@ -214,11 +198,9 @@ Note:
 > Ref: Default Floating-point Format
 
 -- <b>Controls</b> --
-
 - <b>Precision</b>: Floating-point precision setting.
 
 -- <b>Indicators</b> --
-
 - <b>Float Format String</b>: Updated floating-point format string.
 
 ## String Conversion
@@ -231,12 +213,10 @@ Converts a string to a boolean value. Supports multiple representations for TRUE
 > Ref: Default Strings for FALSE Value
 
 -- <b>Controls</b> --
-
 - <b>String</b>: Input string.
 - <b>Default (F)</b>: Default value if conversion fails.
 
 -- <b>Indicators</b> --
-
 - <b>Boolean</b>: Converted boolean value.
 
 ### String To Float_csm.vi
@@ -248,12 +228,10 @@ Converts a string to a floating-point number. Supports various floating-point fo
 > Ref: Default Floating-point Format
 
 -- <b>Controls</b> --
-
 - <b>String</b>: Input string.
 - <b>Default (0)</b>: Default value if conversion fails.
 
 -- <b>Indicators</b> --
-
 - <b>Float</b>: Converted floating-point number.
 - <b>Unit String</b>: Extracted unit string.
 
@@ -262,11 +240,9 @@ Converts a string to a floating-point number. Supports various floating-point fo
 Converts a string to a 64-bit integer. Supports multiple numeric formats, including standard integer, decimal, hexadecimal, binary, octal, and suffix notations. Returns 0 if conversion fails.
 
 -- <b>Controls</b> --
-
 - <b>String</b>: Input string.
 
 -- <b>Indicators</b> --
-
 - <b>Numeric</b>: Converted 64-bit integer.
 
 ### String To Indexed Enum_csm.vi
@@ -297,12 +273,10 @@ Example Enum = {1- AAA, 5 - BBBB, 9 - CCCC}
 ```
 
 -- <b>Controls</b> --
-
 - <b>String</b>: Input string.
 - <b>Enum Prototype</b>: Enum prototype.
 
 -- <b>Indicators</b> --
-
 - <b>Enum</b>: Converted enum value.
 
 ### Indexed Enum to Numeric_csm.vim
@@ -312,11 +286,9 @@ Converts an enum to a numeric value. Supports indexed enum types. When the enum 
 > Ref: Indexed Enum
 
 -- <b>Controls</b> --
-
 - <b>Enum</b>: Input enum value.
 
 -- <b>Indicators</b> --
-
 - <b>Numeric</b>: Numeric value of the enum.
 - <b>String</b>: String representation of the enum.
 
@@ -331,12 +303,10 @@ Rule 2: If no index number is matched, use the numeric value as the enum index.
 > Ref: Indexed Enum
 
 -- <b>Controls</b> --
-
 - <b>Numeric</b>: Input numeric value.
 - <b>Enum Prototype</b>: Enum prototype.
 
 -- <b>Indicators</b> --
-
 - <b>Enum</b>: Converted enum value.
 
 ### CSM - Timestamp to API String Arguments.vi
@@ -344,12 +314,10 @@ Rule 2: If no index number is matched, use the numeric value as the enum index.
 Converts a LabVIEW timestamp to an API String.
 
 -- <b>Controls</b> --
-
 - <b>Timestamp (now)</b>: Input timestamp. The default is the current time.
 - <b>Format(Empty to use UTC)</b>: Time format string. Uses UTC format if empty.
 
 -- <b>Indicators</b> --
-
 - <b>API String</b>: Converted API String format.
 
 ## Utility Functions
@@ -359,12 +327,10 @@ Converts a LabVIEW timestamp to an API String.
 Provides a version of the CSM - Convert HexStr to Data VI that adapts to data types.
 
 -- <b>Controls</b> --
-
 - <b>HEX String</b>: String in HEX format.
 - <b>Type</b>: Data type.
 
 -- <b>Indicators</b> --
-
 - <b>data</b>: Converted data.
 
 ### CSM - Broadcast Data As API String.vim
@@ -372,13 +338,11 @@ Provides a version of the CSM - Convert HexStr to Data VI that adapts to data ty
 Broadcasts data in API String format using the CSM - Generate User Global Log VI.
 
 -- <b>Controls</b> --
-
 - <b>Data</b>: Data to be broadcast.
 - <b>CSM</b>: CSM module reference.
 - <b>API/Condition</b>: API or condition string.
 
 -- <b>Indicators</b> --
-
 - <b>Data (dup)</b>: A copy of the input data.
 
 ### CSM - Query Internal Data Names By API String.vi
@@ -386,11 +350,9 @@ Broadcasts data in API String format using the CSM - Generate User Global Log VI
 Queries the internal data names of a CSM module. This VI sends a synchronous "Data: Get Internal Data" command with the argument `<list>` to retrieve the list of internal data names of the CSM module.
 
 -- <b>Controls</b> --
-
 - <b>Target Module</b>: Target CSM module.
 - <b>Current Module ("" to Generate an ID)</b>: Current module. Empty string generates an ID.
 - <b>Wait (5000ms)</b>: Wait time in milliseconds. The default is 5000 ms.
 
 -- <b>Indicators</b> --
-
 - <b>Configurations</b>: Configuration list.

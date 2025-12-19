@@ -38,7 +38,6 @@
 - 4. Advance Examples\Filter From Subscriber(Queue).vi
 
 -- <b>输出控件(Indicators)</b> --
-
 - <b>Global Log Queue</b>：全局日志队列句柄。
 
 ## CSM - Global Log Event.vi
@@ -53,7 +52,6 @@
 - 4. Advance Examples\Filter From Subscriber(Event).vi
 
 -- <b>输出控件(Indicators)</b> --
-
 - <b>CSM Global Log Event</b>：CSM全局日志用户事件句柄。
 - <b>Timeout In ms (5000ms)</b>：超时时间，默认5000 ms。
 
@@ -69,7 +67,6 @@
 - 4. Advance Examples\Filter From Subscriber(Queue).vi
 
 -- <b>输入控件(Controls)</b> --
-
 - <b>Global Log Queue</b>：全局日志队列句柄。
 
 ## CSM - Destroy Global Log Event.vi
@@ -84,7 +81,6 @@
 - 4. Advance Examples\Filter From Subscriber(Event).vi
 
 -- <b>输入控件(Controls)</b> --
-
 - <b>CSM Global Log Event</b>：CSM 全局日志用户事件句柄。
 - <b>Force Destroy? (F)</b>：是否强制销毁，默认不强制。
 - <b>Timeout In ms (5000ms)</b>：超时时间，默认5000 ms。
@@ -221,7 +217,6 @@ CSM错误处理函数。如果发生错误，错误信息将通过CSM Global Log
 - <b>Settings</b>：周期性的log配置信息，可以设置检测周期与周期性阈值，来判断是否折叠。
 
 -- <b>输出控件(Indicators)</b> --
-
 - <b>String Cache</b>：缓存的历史字符串。
 
 #### Auto Processing Level.vi

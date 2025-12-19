@@ -125,7 +125,7 @@
 获取用户事件句柄，适用于包含事件结构的CSM模块。包含事件结构的CSM模块通常会在事件结构处等待，此事件用于在收到新消息时中断事件结构中的等待，使模块继续执行。
 
 -- <b>输入控件(Controls)</b> --
-- <b>Name ("" to use UUID)</b>: CSM模块名称。请参考*CSM名称规则*。
+- <b>Name ("" to use UUID)</>: CSM模块名称。请参考*CSM名称规则*。
 
 -- <b>输出控件(Indicators)</b> --
 - <b>New State Notifier Event</b>: 用户事件句柄，用于在收到消息时中断CSM模块在事件结构中的等待
@@ -139,7 +139,6 @@
 - <b>Remaining States</b>: 若还有剩余状态，则输出为0；否则输出为预期值。
 
 -- <b>输出控件(Indicators)</b> --
-
 - <b>Timeout</b>: 仲裁后使用的超时设置。
 
 #### 模板错误处理
@@ -168,7 +167,6 @@
 生成CSM消息目标模块超时的错误描述的错误簇。目标模块超时错误发生在CSM尝试发送一个同步消息到一个目标模块，但在指定的超时时间内未收到回复时。
 
 -- <b>输入控件(Controls)</b> --
-
 - <b>Arguments (As CSM Name)</b>: 连接参数，传递目标模块名称。
 
 ##### CSM Unhandled State Error.vi

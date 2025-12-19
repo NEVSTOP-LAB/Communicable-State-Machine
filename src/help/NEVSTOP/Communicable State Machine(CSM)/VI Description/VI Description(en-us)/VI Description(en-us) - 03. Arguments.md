@@ -50,11 +50,9 @@ Extracts the parameter encoding type tag from the encoded argument string.
 > Ref: CSM Argument Type
 
 -- <b>Controls</b> --
-
 - <b>Arguments</b>: Argument string.
 
 -- <b>Indicators</b> --
-
 - <b>Argument Type</b>: Encoding type tag of the argument string.
 - <b>Arguments (Dup)</b>: A copy of the input argument string.
 
@@ -65,7 +63,6 @@ Lists keywords in CSM messages and their %Hex format.
 > Ref: CSM Message Keywords
 
 -- <b>Indicators</b> --
-
 - <b>keywords</b>: List of CSM keywords.
 - <b>Keywords (%Hex Format)</b>: The %Hex format of the CSM keyword list.
 
@@ -79,11 +76,9 @@ Converts CSM keywords in the argument string to %Hex format to ensure that CSM m
 Reference Example: `[CSM-Example]\0. Base Concepts\4.3 Arguments - Safe Arguments if it contains key words of CSM.vi`.
 
 -- <b>Controls</b> --
-
 - <b>Argument String</b>: String argument.
 
 -- <b>Indicators</b> --
-
 - <b>Safe Argument String</b>: Safe string argument.
 
 ### CSM - Revert Arguments-Safe String.vi
@@ -96,11 +91,9 @@ Converts the %Hex format CSM keywords in the safe string argument back to the or
 Reference Example: `[CSM-Example]\0. Base Concepts\4.3 Arguments - Safe Arguments if it contains key words of CSM.vi`.
 
 -- <b>Controls</b> --
-
 - <b>Safe Argument String</b>: Safe string argument.
 
 -- <b>Indicators</b> --
-
 - <b>Origin Argument String</b>: String argument.
 
 ### CSM - Convert Data to HexStr.vi
@@ -113,11 +106,9 @@ Converts any LabVIEW data type to a HEXSTR format argument string.
 Reference Example: `[CSM-Example]\0. Base Concepts\4.1 Arguments - Complex Data As Arguments.vi`.
 
 -- <b>Controls</b> --
-
 - <b>Variant</b>: LabVIEW data. Supports any data type via Variant.
 
 -- <b>Indicators</b> --
-
 - <b>HEX String (0-9,A-F)</b>: CSM HEXSTR format argument.
 
 ### CSM - Convert HexStr to Data.vi
@@ -130,11 +121,9 @@ Converts the hexadecimal string argument back to Variant data.
 Reference Example: `[CSM-Example]\0. Base Concepts\4.1 Arguments - Complex Data As Arguments.vi`.
 
 -- <b>Controls</b> --
-
 - <b>HEX String</b>: CSM HEXSTR format argument.
 
 -- <b>Indicators</b> --
-
 - <b>Variant</b>: LabVIEW data. Supports any data type via Variant.
 
 ### CSM - Convert Error to Argument.vi
@@ -147,11 +136,9 @@ Converts a LabVIEW Error Cluster to the CSM error argument format.
 Reference Example: `[CSM-Example]\0. Base Concepts\4.2 Arguments - Error As Arguments.vi`.
 
 -- <b>Controls</b> --
-
 - <b>Error</b>: LabVIEW Error Cluster.
 
 -- <b>Indicators</b> --
-
 - <b>Argument</b>: CSM error argument format.
 
 ### CSM - Convert Argument to Error.vi
@@ -164,9 +151,7 @@ Converts the CSM error argument format to a LabVIEW Error Cluster.
 Reference Example: `[CSM-Example]\0. Base Concepts\4.2 Arguments - Error As Arguments.vi`.
 
 -- <b>Controls</b> --
-
 - <b>Argument</b>: CSM error argument format.
 
 -- <b>Indicators</b> --
-
 - <b>Error</b>: LabVIEW Error Cluster.

@@ -119,7 +119,6 @@ CSM - Start File Logger VI中原本使用的线程VI。已废弃，目前使用C
 - <b>Add to Front? (F)</b>：是否添加到所有状态前，通常为FALSE。
 
 -- <b>输出控件(Indicators)</b> --
-
 - <b>Remaining States</b>：处理后的消息队列。
 
 ### CSMLS - Append Continuous State.vi
@@ -178,7 +177,6 @@ CSM - Start File Logger VI中原本使用的线程VI。已废弃，目前使用C
 - <b>States Queue</b>：整个状态队列被连接到此输入。
 
 -- <b>输出控件(Indicators)</b> --
-
 - <b>Remaining States</b>：剩余的消息队列。
 
 ### CSMLS - Add Exit State(s) with Loop Check.vi

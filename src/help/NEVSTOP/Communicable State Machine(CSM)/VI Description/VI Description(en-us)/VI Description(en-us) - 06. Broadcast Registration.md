@@ -11,14 +11,12 @@ Reference Example: "2. Caller is CSM Scenario\CSM Example - Caller is a CSM.vi".
 > Ref: CSM registration
 
 -- <b>Controls</b> --
-
 - <b>CSM Name</b>: CSM module name.
 - <b>Source CSM Name (* as Default)</b>: The CSM module generating the status. You can use "*" to represent all modules generating the same status.
 - <b>Trigger</b>: Trigger string.
 - <b>API (if "", same as Trigger)</b>: Upon registration, this message will be received if the trigger changes.
 
 -- <b>Indicators</b> --
-
 - <b>CSM Name (Dup)</b>: A copy of the input CSM module name.
 
 ## CSM - Unregister Broadcast.vi
@@ -32,14 +30,12 @@ Reference Example: "2. Caller is CSM Scenario\CSM Example - Caller is a CSM.vi".
 > Ref: CSM Registration
 
 -- <b>Controls</b> --
-
 - <b>CSM Name</b>: CSM module name.
 - <b>Source CSM Name (* as Default)</b>: The CSM module generating the status. You can use "*" to represent all modules generating the same status.
 - <b>Trigger</b>: Trigger string.
 - <b>API ("*" as Default)</b>: The API name to unregister. If empty, it applies to all APIs.
 
 -- <b>Indicators</b> --
-
 - <b>CSM Name (Dup)</b>: A copy of the input CSM module name.
 
 ## CSM - List Rules in Broadcast Registry.vi
@@ -50,7 +46,6 @@ Lists all rules in the CSM registry.
 > Ref: CSM Registration
 
 -- <b>Indicators</b> --
-
 - <b>Rule Entries</b>: All rule entries.
 
 ## CSM - List Mapping Relationships in Broadcast Registry.vi
@@ -64,7 +59,6 @@ Lists all broadcast registration relationships for the current CSM module. Unlik
 > Ref: CSM Registration
 
 -- <b>Indicators</b> --
-
 - <b>Mapping Relationships</b>: All broadcast registration relationships for the current CSM module.
 
 ## CSM - List Sources in Broadcast Registry.vi
@@ -75,7 +69,6 @@ Lists the broadcast names of all current broadcast registration relationships.
 > Ref: CSM Registration
 
 -- <b>Indicators</b> --
-
 - <b>Broadcast Names</b>: Broadcast names of all current broadcast registration relationships.
 
 ## CSM - Check Mapping Relationship in Broadcast Registry.vi
@@ -86,12 +79,10 @@ Checks all registration relationships corresponding to a specific broadcast name
 > Ref: CSM Registration
 
 -- <b>Controls</b> --
-
 - <b>CSM Name</b>: CSM module name.
 - <b>Broadcast Name</b>: Name of the broadcast.
 
 -- <b>Indicators</b> --
-
 - <b>Mapping Relationships</b>: All registration relationships corresponding to the specific broadcast name of the current CSM module.
 
 ## CSM - Remove Module in Broadcast Registry.vi
@@ -102,11 +93,9 @@ Removes all registration relationships associated with the specified CSM module 
 > Ref: CSM Registration
 
 -- <b>Controls</b> --
-
 - <b>CSM Name</b>: CSM module name.
 
 -- <b>Indicators</b> --
-
 - <b>CSM Name (Dup)</b>: A copy of the input CSM module name.
 
 ## CSM - Drop Broadcast Registry.vi

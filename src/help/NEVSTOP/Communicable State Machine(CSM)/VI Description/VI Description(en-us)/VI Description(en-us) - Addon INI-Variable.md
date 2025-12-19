@@ -70,12 +70,10 @@ Populates configuration variables within a string.
 > Ref: CSM INI-Variable Configuration File Path
 
 -- <b>Controls</b> --
-
 - <b>Section Name ("" as Default)</b>: Section name. An empty string indicates the default section.
 - <b>String with INI-Variable</b>: Input string containing variable references.
 
 -- <b>Indicators</b> --
-
 - <b>String</b>: Output string with populated variables.
 
 ### CSM - Read Configuration Variable.vim
@@ -93,13 +91,11 @@ Reads a variable value from the configuration based on a prototype.
 > Ref: CSM INI-Variable Configuration File Path
 
 -- <b>Controls</b> --
-
 - <b>Configuration Prototype (Cluster Preferred)</b>: Configuration prototype (Cluster is preferred).
 - <b>Section Name ("" as Default)</b>: Section name. An empty string indicates the default section.
 - <b>Write If not found? (F)</b>: Whether to write the default value if the variable is not found. The default is FALSE.
 
 -- <b>Indicators</b> --
-
 - <b>Configuration</b>: Output configuration value.
 
 ### CSM - Read Cluster Elements From Session.vim
@@ -116,12 +112,10 @@ Reads cluster data from the configuration. The data is stored in the specified s
 > Ref: CSM INI-Variable Configuration File Path
 
 -- <b>Controls</b> --
-
 - <b>Cluster</b>: Cluster prototype.
 - <b>Section Name ("" as Default)</b>: Section name. An empty string indicates the default section.
 
 -- <b>Indicators</b> --
-
 - <b>Cluster out</b>: Output cluster.
 
 ### CSM - Read Cluster Elements From Key.vim
@@ -135,13 +129,11 @@ Reads cluster data from the configuration. The data is stored in a specified key
 > Ref: CSM INI-Variable Configuration File Path
 
 -- <b>Controls</b> --
-
 - <b>Cluster</b>: Cluster prototype.
 - <b>Key</b>: Key name.
 - <b>Section Name ("" as Default)</b>: Section name. An empty string indicates the default section.
 
 -- <b>Indicators</b> --
-
 - <b>Cluster out</b>: Output cluster.
 - <b>Key Found?</b>: Whether the key exists.
 
@@ -158,12 +150,10 @@ Writes a configuration variable.
 > Ref: CSM INI-Variable Caching Mechanism Warning
 
 -- <b>Controls</b> --
-
 - <b>Configuration</b>: Configuration data to be written.
 - <b>Section Name ("" as Default)</b>: Section name. An empty string indicates the default section.
 
 -- <b>Indicators</b> --
-
 - <b>Configuration (dup)</b>: A copy of the written configuration data.
 
 ### Convert API String to Cluster(Default in Session).vim
@@ -179,13 +169,11 @@ Converts an API String to a cluster. The data is stored in the specified section
 <b>Reference Example:</b> `3. In CSM API parameters.vi`.
 
 -- <b>Controls</b> --
-
 - <b>API String</b>: Input API String.
 - <b>Section Name ("" as Default)</b>: Section name. An empty string indicates the default section.
 - <b>Type</b>: Data type.
 
 -- <b>Indicators</b> --
-
 - <b>Data</b>: Converted data.
 - <b>error</b>: Error information.
 
@@ -202,14 +190,12 @@ Converts an API String to a cluster. The data is stored in a specified key withi
 <b>Reference Example:</b> `3. In CSM API parameters.vi`.
 
 -- <b>Controls</b> --
-
 - <b>API String</b>: Input API String.
 - <b>Section Name ("" as Default)</b>: Section name. An empty string indicates the default section.
 - <b>Type</b>: Data type.
 - <b>Variable Name</b>: Variable name.
 
 -- <b>Indicators</b> --
-
 - <b>Data</b>: Converted data.
 - <b>error</b>: Error information.
 
@@ -220,11 +206,9 @@ Converts an API String to a cluster. The data is stored in a specified key withi
 Reads all variable names currently in memory.
 
 -- <b>Controls</b> --
-
 - <b>Permanent Variables Only? (F)</b>: Whether to read only permanent variables.
 
 -- <b>Indicators</b> --
-
 - <b>All Variable Names</b>: Array of variable names.
 
 ### CSM - Read Sections.vi
@@ -232,7 +216,6 @@ Reads all variable names currently in memory.
 Reads all section names currently in memory.
 
 -- <b>Indicators</b> --
-
 - <b>Sections</b>: Array of section names.
 
 ### CSM - Read Key Names.vi
@@ -240,11 +223,9 @@ Reads all section names currently in memory.
 Reads all key names in a specified section.
 
 -- <b>Controls</b> --
-
 - <b>Section Name ("" as Default)</b>: Section name. An empty string indicates the default section.
 
 -- <b>Indicators</b> --
-
 - <b>Keys</b>: Array of key names.
 
 ### CSM - Read INI String.vi
@@ -256,14 +237,12 @@ Reads the configuration information string. This VI retrieves the raw string des
 <b>Reference Example:</b> `6. Read Nested Variables.vi`.
 
 -- <b>Controls</b> --
-
 - <b>Section Name ("" as Default)</b>: Section name. An empty string indicates the default section.
 - <b>Key</b>: Input string containing variable references.
 - <b>Default Value</b>: Default value.
 - <b>Write If not found? (F)</b>: Whether to write the default value if not found.
 
 -- <b>Indicators</b> --
-
 - <b>Value</b>: Output string after replacing variables.
 - <b>Key Found?</b>: Whether the key exists.
 
@@ -276,13 +255,11 @@ Writes configuration information string.
 > Ref: CSM INI-Variable Caching Mechanism Warning
 
 -- <b>Controls</b> --
-
 - <b>Section Name ("" as Default)</b>: Section name. An empty string indicates the default section.
 - <b>Key</b>: Key name.
 - <b>Value</b>: Variable value string.
 
 -- <b>Indicators</b> --
-
 - <b>Key Replace?</b>: Whether the key was replaced.
 
 ## Multi-File Support and Configuration Management
@@ -296,11 +273,9 @@ Returns the paths of all loaded configuration files.
 > Ref: CSM INI-Variable Configuration File Path
 
 -- <b>Controls</b> --
-
 - <b>Include All Paths?(F)</b>: Whether to include all configuration file paths.
 
 -- <b>Indicators</b> --
-
 - <b>Default Config File Path</b>: Default configuration file path.
 - <b>All Config Files</b>: List of all configuration files.
 
@@ -315,7 +290,6 @@ Loads configuration variables from a specified file. If the section name postfix
 > Ref: CSM INI-Variable Configuration File Path
 
 -- <b>Controls</b> --
-
 - <b>Configuration Path</b>: Configuration file path.
 - <b>Section Postfix ("")</b>: Section name postfix.
 
@@ -326,7 +300,6 @@ Unloads a configuration variable file.
 > Ref: CSM INI-Variable Configuration File Path
 
 -- <b>Controls</b> --
-
 - <b>Path</b>: Configuration file path.
 
 ### CSM - Mark All Temp Variables as Permanent.vi
@@ -338,7 +311,6 @@ Marks all temporary variables as permanent variables and stores the variables in
 > Ref: CSM INI-Variable Configuration File Path
 
 -- <b>Controls</b> --
-
 - <b>Path ("" to Use Default File)</b>: Configuration file path. An empty string indicates the default INI file.
 
 ### CSM - Sync Configuration Variables to File.vi
@@ -350,7 +322,6 @@ Synchronizes variables in memory to the specified configuration file.
 > Ref: CSM INI-Variable Configuration File Path
 
 -- <b>Controls</b> --
-
 - <b>All Temp Variable to Default Ini(F)</b>: Whether to synchronize all temporary variables to the default INI file.
 - <b>Write UnSupported Datatype?(F)</b>: Whether to write unsupported data types.
 

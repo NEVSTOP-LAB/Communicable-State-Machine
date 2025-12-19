@@ -22,7 +22,6 @@ The CSM Watchdog thread is used to ensure that all asynchronously started CSM mo
 > Ref: CSM WatchDog Implementation Principle
 
 -- <b>Controls</b> --
-
 - <b>Watchdog Queue</b>: Watchdog queue resource.
 
 ## CSM File Logger Addon
@@ -51,7 +50,6 @@ Starts the CSM Global Log file recording background thread, which is used to sav
 Reference Example: `Addons - Logger\CSM Application Running Log Example.vi`.
 
 -- <b>Controls</b> --
-
 - <b>Log File Path</b>: Log file path.
 - <b>Timestamp format</b>: Time format. The default is "%<%Y/%m/%d %H:%M:%S%3u>T".
 - <b>Log Limit</b>: Log file size limit. <b>File Size</b> is the maximum size of a single file in bytes. The default is 10 MB. <b>File Num</b> is the maximum number of LOG files. The default is 2.
@@ -61,7 +59,6 @@ Reference Example: `Addons - Logger\CSM Application Running Log Example.vi`.
 - <b>Exit When All Module Exist? (F)</b>: Automatically exit recording after all CSM modules have exited. The default is FALSE. If TRUE, and the main program is not a CSM, the recording thread will also automatically exit when all running CSM modules exit.
 
 -- <b>Indicators</b> --
-
 - <b>Log File</b>: CSM LOG file path.
 - <b>Watchdog Queue</b>: WatchDog resource handle.
 
@@ -120,13 +117,11 @@ Reference Example: `Addons - Loop Support\CSMLS - Continuous Loop in CSM Example
 > <b>Add to Front? (F)</b> is usually FALSE because once a loop state starts, it does not end immediately. Before insertion into the state queue, it is considered a sub-state of the current state. If the current state was called via a synchronous message, it would not return immediately. For example, if a set of continuous acquisition states is defined in "API: Start DAQ" and this message is sent synchronously from outside, the logic should be to start the loop and then return immediately. Only set <b>Add to Front? (F)</b> to TRUE if the logic is to wait for the loop to end before returning.
 
 -- <b>Controls</b> --
-
 - <b>States Queue</b>: Connect the entire state queue to this input.
 - <b>Loop States</b>: Loop states.
 - <b>Add to Front? (F)</b>: Whether to add to the front of all states. The default is FALSE.
 
 -- <b>Indicators</b> --
-
 - <b>Remaining States</b>: The processed message queue.
 
 ### CSMLS - Append Continuous State.vi
@@ -136,7 +131,6 @@ Appends loop states to maintain the loop running.
 Reference Example: `Addons - Loop Support\CSMLS - Continuous Loop in CSM Example.vi`.
 
 -- <b>Controls</b> --
-
 - <b>States Queue</b>: Connect the entire state queue to this input.
 - <b>Loop State(s) and Arguments</b>: Loop states.
 - <b>Continuous State</b>: Loop state name.
@@ -144,7 +138,6 @@ Reference Example: `Addons - Loop Support\CSMLS - Continuous Loop in CSM Example
 - <b>Append(T)</b>: Whether to append. The default is TRUE.
 
 -- <b>Indicators</b> --
-
 - <b>Remaining States</b>: The remaining message queue.
 
 ### CSMLS - Remove Loop Tag and previous State(s) to Break.vi
@@ -165,11 +158,9 @@ DAQ: Close
 This is equivalent to not executing any DAQ operations and immediately entering stop and release.
 
 -- <b>Controls</b> --
-
 - <b>States Queue</b>: Connect the entire state queue to this input.
 
 -- <b>Indicators</b> --
-
 - <b>Remaining States</b>: The remaining message queue.
 
 ### CSMLS - Remove Loop Tag to Break.vi
@@ -190,11 +181,9 @@ DAQ: Close
 This is equivalent to still executing the current DAQ operation, and then entering stop and release.
 
 -- <b>Controls</b> --
-
 - <b>States Queue</b>: Connect the entire state queue to this input.
 
 -- <b>Indicators</b> --
-
 - <b>Remaining States</b>: The remaining message queue.
 
 ### CSMLS - Add Exit State(s) with Loop Check.vi
@@ -202,12 +191,10 @@ This is equivalent to still executing the current DAQ operation, and then enteri
 Checks for loop tags upon exit. Since this VI is easily forgotten to be called, a call has been added for the "Macro: Exit" state in the Parse State Queue++ VI. Therefore, this VI has been removed from the Functions palette.
 
 -- <b>Controls</b> --
-
 - <b>States Queue</b>: Connect the entire state queue to this input.
 - <b>Exiting States</b>: States required for exiting.
 
 -- <b>Indicators</b> --
-
 - <b>Remaining States</b>: Processed message queue.
 - <b><loop> Found</b>: `<loop>` tag found.
 

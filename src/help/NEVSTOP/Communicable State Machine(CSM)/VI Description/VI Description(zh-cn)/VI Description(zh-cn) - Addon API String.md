@@ -117,7 +117,6 @@
 - <b>Custom True Boolean Strings</b>：自定义TRUE字符串列表。
 
 -- <b>输出控件(Indicators)</b> --
-
 - <b>False Boolean Strings</b>：更新后的FALSE字符串列表。
 - <b>True Boolean Strings</b>：更新后的TRUE字符串列表。
 
@@ -133,7 +132,6 @@
 - <b>Custom True Boolean Strings</b>：要移除的TRUE字符串列表。
 
 -- <b>输出控件(Indicators)</b> --
-
 - <b>False Boolean Strings</b>：更新后的FALSE字符串列表。
 - <b>True Boolean Strings</b>：更新后的TRUE字符串列表。
 
@@ -158,7 +156,6 @@
 - <b>Float Format String Setting</b>：浮点数格式字符串设置。
 
 -- <b>输出控件(Indicators)</b> --
-
 - <b>Float Format String</b>：当前的浮点数格式字符串。
 
 ### API String - Float Format String.vi
@@ -273,7 +270,6 @@
 - <b>Enum</b>：输入枚举值。
 
 -- <b>输出控件(Indicators)</b> --
-
 - <b>Numeric</b>：枚举的数字值。
 - <b>String</b>：枚举的字符串表示。
 

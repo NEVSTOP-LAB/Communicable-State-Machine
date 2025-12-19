@@ -9,11 +9,9 @@
 Compacts multiple states into a single string for input usage.
 
 -- <b>Controls</b> --
-
 - <b>Multiple States</b>: Array of CSM state strings.
 
 -- <b>Indicators</b> --
-
 - <b>States</b>: String containing multiple lines of CSM state strings.
 
 ### CSM - Break Down Multiple States String.vi
@@ -21,11 +19,9 @@ Compacts multiple states into a single string for input usage.
 Breaks down a string containing multiple lines of CSM state strings into an array of CSM state strings.
 
 -- <b>Controls</b> --
-
 - <b>States</b>: String containing multiple lines of CSM state strings.
 
 -- <b>Indicators</b> --
-
 - <b>Multiple States</b>: Array of CSM state strings.
 
 ### CSM - Build Exit Messages of CSMs.vi
@@ -35,12 +31,10 @@ Concatenates and generates exit messages ("Macro: Exit") based on input CSM modu
 > Ref: Message Building API
 
 -- <b>Controls</b> --
-
 - <b>CSMs</b>: Array of CSM module names.
 - <b>State with Arguments("Macro: Exit")</b>: Exit message.
 
 -- <b>Indicators</b> --
-
 - <b>States</b>: The concatenated generated CSM message string.
 
 ### CSM - Filter Duplicate Messages By Name.vi
@@ -50,23 +44,19 @@ Filters duplicate messages, keeping only the latest message.
 > Ref: Message Building API
 
 -- <b>Controls</b> --
-
 - <b>States</b>: Input message string.
 - <b>Whole Messages in Check?(T)</b>: Whether to check the entire message string. If FALSE, only the message name is checked. The default is TRUE.
 
 -- <b>Indicators</b> --
-
 - <b>Filtered States</b>: Filtered message string.
 
 ### CSM - Remove Duplicated Following Messages.vi
 
 -- <b>Controls</b> --
-
 - <b>Current State</b>:
 - <b>Remaining States</b>:
 
 -- <b>Indicators</b> --
-
 - <b>Remaining States Left</b>:
 - <b>Current State</b>: Controls
 - <b>Remaining States Left</b>: Indicators
@@ -78,11 +68,9 @@ Filters duplicate messages, keeping only the latest message.
 Obtains the data type description string corresponding to the input data. Typically used in argument descriptions to determine the type of arguments carried.
 
 -- <b>Controls</b> --
-
 - <b>Data</b>: Input data.
 
 -- <b>Indicators</b> --
-
 - <b>Data Type String</b>: Data type description string.
 
 ### CSM Data Type String to Enum.vi
@@ -101,11 +89,9 @@ Converts a data type description string into a LabVIEW-defined data type enum.
 Converts a data type description string into a LabVIEW-defined data type enum, with the subtype described as a string.
 
 -- <b>Controls</b> --
-
 - <b>Data Type String</b>: Input data type description string.
 
 -- <b>Indicators</b> --
-
 - <b>Primary Type</b>: Data type enum.
 - <b>Secondary Type String</b>: If the input is a complex data type, returns the subtype string, such as the element type in an array data type.
 - <b>Array Dim</b>: If the input is an array data type, returns the array dimensions.
@@ -115,11 +101,9 @@ Converts a data type description string into a LabVIEW-defined data type enum, w
 Converts a data type description string into a LabVIEW-defined data type enum and returns the array subtype using an enum.
 
 -- <b>Controls</b> --
-
 - <b>Data Type String</b>: Input data type description string.
 
 -- <b>Indicators</b> --
-
 - <b>Primary Type</b>: Data type enum.
 - <b>Secondary Type String</b>: Array subtype enum.
 - <b>Array Dim</b>: If the input is an array data type, returns the array dimensions.
@@ -129,11 +113,9 @@ Converts a data type description string into a LabVIEW-defined data type enum an
 Converts a data type description string into a LabVIEW-defined data type enum and returns the refnum subtype using an enum.
 
 -- <b>Controls</b> --
-
 - <b>Data Type String</b>: Input data type description string.
 
 -- <b>Indicators</b> --
-
 - <b>Primary Type</b>: Data type enum.
 - <b>Secondary Type String</b>: Refnum subtype enum.
 - <b>Array Dim</b>: If the input is an array data type, returns the array dimensions.
@@ -149,7 +131,6 @@ Generates a standard Universally Unique Identifier (UUID). For example:
 - 9B781DB313AF
 
 -- <b>Indicators</b> --
-
 - <b>UUID</b>: Generated UUID.
 
 ### String History Cacher.vi
@@ -157,14 +138,12 @@ Generates a standard Universally Unique Identifier (UUID). For example:
 Saves the current input string to the cache. When the cached history strings exceed the maximum length limit, the oldest cached string is overwritten. Use this VI for debugging CSM history states.
 
 -- <b>Controls</b> --
-
 - <b>String</b>: String to be cached.
 - <b>length</b>: Maximum string length for cached history strings.
 - <b>Include Timestamp? (T)</b>: Whether to include a timestamp at the beginning of each line.
 - <b>Format String</b>: Timestamp format.
 
 -- <b>Indicators</b> --
-
 - <b>String Cache</b>: Cached history strings.
 
 ### Random Change Flag.vi
@@ -172,7 +151,6 @@ Saves the current input string to the cache. When the cached history strings exc
 Generates a random numerical value to mark state changes. In CSM, to improve efficiency, caches in some places use this flag to determine if an update is needed.
 
 -- <b>Indicators</b> --
-
 - <b>Random Change Flag</b>: Generated random numerical value.
 
 ### State Triggered Reason.vi
@@ -186,12 +164,10 @@ The result can be:
 - <b>Broadcast</b>: Triggered by a broadcast.
 
 -- <b>Controls</b> --
-
 - <b>Additional Information</b>: Additional information for this state.
 - <b>Source CSM</b>: Source module information.
 
 -- <b>Indicators</b> --
-
 - <b>Additional Information (dup)</b>: A copy of the input additional information.
 - <b>Source CSM (dup)</b>: A copy of the input source module information.
 - <b>Reason</b>: The reason for triggering the current state.
@@ -201,10 +177,8 @@ The result can be:
 Formats a timestamp into a specified string format. This VI is used in the CSM Global Log.
 
 -- <b>Controls</b> --
-
 - <b>Timestamp</b>: Timestamp in seconds.
 - <b>Format String</b>: Timestamp format string, for example: "%<%Y/%m/%d %H:%M:%S%3u>T".
 
 -- <b>Indicators</b> --
-
 - <b>String</b>: Formatted timestamp string.

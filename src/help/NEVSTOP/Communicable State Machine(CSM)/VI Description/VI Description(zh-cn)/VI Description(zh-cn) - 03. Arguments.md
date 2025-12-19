@@ -63,7 +63,6 @@
 > Ref: CSM消息关键字
 
 -- <b>输出控件(Indicators)</b> --
-
 - <b>keywords</b>：CSM关键字列表。
 - <b>Keywords (%Hex Format)</b>：CSM关键字列表的%Hex格式。
 
@@ -95,7 +94,6 @@
 - <b>Safe Argument String</b>:  安全的字符串参数。
 
 -- <b>输出控件(Indicators)</b> --
-
 - <b>Origin Argument String</b>：字符串参数。
 
 ### CSM - Convert Data to HexStr.vi

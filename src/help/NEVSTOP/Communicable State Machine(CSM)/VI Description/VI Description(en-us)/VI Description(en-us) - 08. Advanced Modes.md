@@ -24,11 +24,9 @@ Reference Example: `0. Base Concepts\7. System-Level Module.vi`.
 > Ref: CSM System-Level Module
 
 -- <b>Controls</b> --
-
 - <b>CSM Name</b>: CSM module name.
 
 -- <b>Indicators</b> --
-
 - <b>CSM Name (Marked As Sysetem-Level Module)</b>: CSM module name marked with ".".
 
 ## Submodule
@@ -47,12 +45,10 @@ Reference Example: `0. Base Concepts\7. System-Level Module.vi`.
 Constructs a submodule name.
 
 -- <b>Controls</b> --
-
 - <b>CSM Name</b>: CSM module name.
 - <b>Name</b>: Name to append to the CSM module name
 
 -- <b>Indicators</b> --
-
 - <b>Submodule Name</b>: Returns the concatenated submodule name.
 
 ## Work Mode API
@@ -100,11 +96,9 @@ Reference Example: "4. Advance Examples\1. Action Workers Example".
 > Ref: CSM Worker Mode
 
 -- <b>Controls</b> --
-
 - <b>CSM Name</b>: CSM module name.
 
 -- <b>Indicators</b> --
-
 - <b>CSM Name (Marked As Worker)</b>: CSM module name marked with "#".
 
 ## Chain of Responsibility API
@@ -151,12 +145,10 @@ Reference Example: `4. Advance Examples\2. Chain of Responsibility Example`.
 > Ref: Name Concatenation API
 
 -- <b>Controls</b> --
-
 - <b>CSM Name</b>: CSM module name.
 - <b>Order</b>: Sequence in Chain of Responsibility Mode. Nodes with smaller numbers are arranged at the front of the responsibility chain.
 
 -- <b>Indicators</b> --
-
 - <b>CSM Name (Marked As Chain)</b>: CSM module name marked with "$".
 
 ### CSM - Resolve Node Module.vi
@@ -196,7 +188,6 @@ Reference Example: `4. Advance Examples\5. Multi-Loop Module Example\TCP Server 
 > Ref: CSM Multi-Loop Mode
 
 -- <b>Controls</b> --
-
 - <b>Module Name</b>: The CSM sending the status.
 - <b>State</b>: Message name.
 - <b>Arguments ("")</b>: Status arguments to be broadcast.
@@ -215,7 +206,6 @@ Reference Example: `4. Advance Examples\5. Multi-Loop Module Example\TCP Server 
 > Ref: CSM Multi-Loop Mode
 
 -- <b>Controls</b> --
-
 - <b>Module Name</b>: The CSM sending the status.
 - <b>Status</b>: Status to be broadcast.
 - <b>Arguments ("")</b>: Status arguments to be broadcast.
@@ -231,13 +221,11 @@ Reference Example: `Addons - Loop Support\CSMLS - Continuous Loop in CSM Example
 > Ref: CSM Multi-Loop Mode
 
 -- <b>Controls</b> --
-
 - <b>State(s) In ("")</b>: States to be processed.
 - <b>Name ("" to Use UUID)</b>: Module name.
 - <b>High Priority? (T)</b>: Immediate execution option. Sending immediately causes this message to be processed instantly in the CSM loop, rather than waiting for existing messages in the CSM loop to finish execution.
 
 -- <b>Indicators</b> --
-
 - <b>States Out</b>: Input is always empty. This output is set to ensure wire consistency in the template.
 
 ### CSM - Module Turns Invalid.vi
@@ -247,9 +235,7 @@ Checks if a CSM module has already exited. Typically used for a functional loop 
 For modules in CSM Advanced Modes, such as Worker Mode and Chain of Responsibility Mode, the module exit event is triggered only after the last node has exited.
 
 -- <b>Controls</b> --
-
 - <b>CSM Name</b>: CSM module name.
 
 -- <b>Indicators</b> --
-
 - <b>Turn Invalid (Exit)?</b>: Whether the CSM module has already exited.

@@ -7,12 +7,10 @@
 Waits for a CSM module to come online within a specified timeout period and returns the wait time. This VI returns an error if the timeout is exceeded. Internally, this VI periodically checks if the CSM module is online using the CSM - Check If Module Exists VI at 1 ms intervals.
 
 -- <b>Controls</b> --
-
 - <b>CSM Name</b>: CSM module name.
 - <b>Wait (5000ms)</b>: Timeout duration for waiting. The default is 5000 ms.
 
 -- <b>Indicators</b> --
-
 - <b>CSM Name (Dup)</b>: CSM module name.
 - <b>Waited (ms)</b>: Time elapsed while waiting.
 
@@ -21,12 +19,10 @@ Waits for a CSM module to come online within a specified timeout period and retu
 Waits for a group of CSM modules to all come online within a specified timeout period, and returns the wait time. This VI returns an error and the names of modules that did not come online if the timeout is exceeded. Internally, this VI periodically checks if all modules are online using the CSM - List Module VI at 5 ms intervals.
 
 -- <b>Controls</b> --
-
 - <b>CSM Names</b>: CSM module names.
 - <b>Timeout (5000ms)</b>: Timeout duration for waiting. The default is 5000 ms.
 
 -- <b>Indicators</b> --
-
 - <b>CSMs Left</b>: CSM modules that have not come online after the timeout.
 - <b>Waited (ms)</b>: Time elapsed while waiting.
 
@@ -35,12 +31,10 @@ Waits for a group of CSM modules to all come online within a specified timeout p
 Waits for a group of CSM modules to all go offline within a specified timeout period, and returns the wait time. This VI returns an error and the names of modules that did not go offline if the timeout is exceeded. This VI is typically used during program exit.
 
 -- <b>Controls</b> --
-
 - <b>CSM Names</b>: CSM module names.
 - <b>Timeout (5000ms)</b>: Timeout duration for waiting. The default is 5000 ms.
 
 -- <b>Indicators</b> --
-
 - <b>CSMs Left</b>: CSM modules that have not gone offline after the timeout.
 - <b>Waited (ms)</b>: Time elapsed while waiting.
 
@@ -56,7 +50,6 @@ Sends an asynchronous message to the specified CSM module. Since the transmissio
 > Ref: CSM Message Target Module Description
 
 -- <b>Controls</b> --
-
 - <b>Current Module ("" to Generate an ID)</b>: Name of the current module. If empty, a temporary ID is generated for debugging purposes to identify the location.
 - <b>State</b>: Message string.
 - <b>Arguments ("")</b>: Message arguments.
@@ -70,7 +63,6 @@ Sends an asynchronous message to the specified CSM module. Since the transmissio
 > Ref: CSM Message Target Module Description
 
 -- <b>Controls</b> --
-
 - <b>Current Module ("" to Generate an ID)</b>: Name of the current module. If empty, a temporary ID is generated for debugging purposes to identify the location.
 - <b>State</b>: Message string.
 - <b>Arguments ("")</b>: Message arguments.
@@ -78,7 +70,6 @@ Sends an asynchronous message to the specified CSM module. Since the transmissio
 - <b>Wait (5000ms)</b>: Timeout duration for waiting. The default is 5000 ms.
 
 -- <b>Indicators</b> --
-
 - <b>Waited (ms)</b>: Time elapsed while waiting.
 
 ### CSM - Send Message and Wait for Reply.vi
@@ -91,7 +82,6 @@ Sends a synchronous message to the CSM and waits for a reply before continuing c
 > Ref: Synchronous Message Ref: Global Timeout Setting Ref: CSM Message Target Module Description
 
 -- <b>Controls</b> --
-
 - <b>Current Module ("" to Generate an ID)</b>: Name of the current module. If empty, a temporary ID is generated for debugging purposes to identify the location.
 - <b>State</b>: Message string.
 - <b>Arguments ("")</b>: Message arguments.
@@ -99,7 +89,6 @@ Sends a synchronous message to the CSM and waits for a reply before continuing c
 - <b>Response Timeout (-2 Using Global Settings)</b>: Timeout setting for waiting for a reply. The default is 5000 ms.
 
 -- <b>Indicators</b> --
-
 - <b>Response</b>: Returned response.
 - <b>Source CSM</b>: Name of the CSM module that sourced the returned response. In Worker Mode or Chain of Responsibility Mode, this output returns the name of the node.
 
@@ -115,7 +104,6 @@ Sends a synchronous message to the CSM and waits for a reply before continuing c
 > Ref: CSM Message Target Module Description
 
 -- <b>Controls</b> --
-
 - <b>Current Module ("" to Generate an ID)</b>: Name of the current module. If empty, a temporary ID is generated for debugging purposes to identify the location.
 - <b>State</b>: Message string.
 - <b>Arguments ("")</b>: Message arguments.
@@ -124,7 +112,6 @@ Sends a synchronous message to the CSM and waits for a reply before continuing c
 - <b>Response Timeout (-2 Using Global Settings)</b>: Timeout for synchronous calls. The default is -2, which uses the global setting. You can set the global timeout using the CSM - Set TMO of Sync-Reply VI.
 
 -- <b>Indicators</b> --
-
 - <b>Response</b>: Returned response.
 - <b>Source CSM</b>: Name of the CSM module that sourced the returned response. In Worker Mode or Chain of Responsibility Mode, this returns the name of the node.
 
@@ -135,7 +122,6 @@ Executes multiple CSM commands in a single batch, supporting synchronous message
 > Ref: CSM Message Target Module Description
 
 -- <b>Controls</b> --
-
 - <b>Current Module ("" to Generate an ID)</b>: Name of the current module. If empty, a temporary ID is generated for debugging purposes to identify the location.
 - <b>CSM Scripts</b>: CSM commands to execute.
 - <b>Continue If Error? (F)</b>: Whether to continue execution if an error occurs. The default is FALSE, which specifies to not continue.
@@ -143,7 +129,6 @@ Executes multiple CSM commands in a single batch, supporting synchronous message
 - <b>Response Timeout (-2 Using Global Settings)</b>: Timeout for synchronous calls. The default is -2, which uses the global setting. You can set the global timeout using the CSM - Set TMO of Sync-Reply VI.
 
 -- <b>Indicators</b> --
-
 - <b>Response</b>: Returned results from executing the script. Only synchronous messages carry returns. The corresponding column for other commands will be an empty string.
 - <b>Scripts Left</b>: Remaining unexecuted scripts.
 
@@ -152,12 +137,10 @@ Executes multiple CSM commands in a single batch, supporting synchronous message
 Obtains the CSM status change event refnum.
 
 -- <b>Controls</b> --
-
 - <b>CSM Module</b>: CSM module name.
 - <b>Wait (5000 ms)</b>: Timeout duration for waiting. The default is 5000 ms.
 
 -- <b>Indicators</b> --
-
 - <b>Status Change Event</b>: CSM status change event refnum.
 - <b>Waited (ms)</b>: Time elapsed while waiting.
 
@@ -166,7 +149,6 @@ Obtains the CSM status change event refnum.
 Releases the CSM status change event refnum.
 
 -- <b>Controls</b> --
-
 - <b>Status Change Event</b>: CSM status change event refnum.
 
 ### CSM - Module Exit Event.vi
@@ -176,12 +158,10 @@ Obtains the CSM module exit event refnum. If the module does not exist, this VI 
 For modules in CSM advanced modes, such as Worker Mode and Chain of Responsibility Mode, the module exit event is triggered only after the last node has exited.
 
 -- <b>Controls</b> --
-
 - <b>Name ("" to Use UUID) In</b>: CSM module name. Refer to *CSM Naming Rules* for module naming rules.
 - <b>Wait (5000 ms)</b>: Timeout duration for waiting. The default is 5000 ms.
 
 -- <b>Indicators</b> --
-
 - <b>CSM Exit Event</b>: CSM module exit event refnum.
 - <b>Waited (ms)</b>: Time elapsed while waiting.
 
@@ -205,14 +185,12 @@ Sets the attribute value of the specified module. If the attribute does not exis
 Reference Example: `[CSM-Example]\0. Base Concepts\6. Module Attributes.vi`.
 
 -- <b>Controls</b> --
-
 - <b>CSM Name</b>: CSM module name.
 - <b>Attribute</b>: Attribute name. Must not be an empty string.
 - <b>Value</b>: Attribute data.
 - <b>Wait (5000 ms)</b>: Timeout duration for waiting. The default is 5000 ms.
 
 -- <b>Indicators</b> --
-
 - <b>CSM Name (Dup)</b>: A copy of the input CSM module name.
 - <b>Replaced</b>: Whether the attribute was replaced.
 - <b>Waited (ms)</b>: Time elapsed while waiting.
@@ -226,14 +204,12 @@ Reads the attribute value of the specified module. If the attribute does not exi
 Reference Example: `[CSM-Example]\0. Base Concepts\6. Module Attributes.vi`.
 
 -- <b>Controls</b> --
-
 - <b>CSM Name</b>: CSM module name.
 - <b>Attribute</b>: Attribute name. Must not be an empty string.
 - <b>Default Value (Empty Variant)</b>: Default value returned when the attribute does not exist.
 - <b>Wait (5000 ms)</b>: Timeout duration for waiting. The default is 5000 ms.
 
 -- <b>Indicators</b> --
-
 - <b>CSM Name (Dup)</b>: A copy of the input CSM module name.
 - <b>Found</b>: Whether the attribute exists.
 - <b>Value</b>: Attribute value.
@@ -248,13 +224,11 @@ Lists all attribute names of the specified module. If the CSM module does not ex
 Reference Example: `[CSM-Example]\0. Base Concepts\6. Module Attributes.vi`.
 
 -- <b>Controls</b> --
-
 - <b>CSM Name</b>: CSM module name.
 - <b>Include Value? (F)</b>: Whether to include attribute values. The default is FALSE, which specifies to not include attribute values.
 - <b>Wait (5000 ms)</b>: Timeout duration for waiting. The default is 5000 ms.
 
 -- <b>Indicators</b> --
-
 - <b>CSM Name (Dup)</b>: A copy of the input CSM module name.
 - <b>Attributes</b>: List of attribute names.
 - <b>Values</b>: List of attribute values.
@@ -269,13 +243,11 @@ Deletes the attribute of the specified module. If the attribute does not exist, 
 Reference Example: `[CSM-Example]\0. Base Concepts\6. Module Attributes.vi`.
 
 -- <b>Controls</b> --
-
 - <b>CSM Name</b>: CSM module name.
 - <b>Attribute</b>: Attribute name. Must not be an empty string.
 - <b>Wait (5000 ms)</b>: Timeout duration for waiting. The default is 5000 ms.
 
 -- <b>Indicators</b> --
-
 - <b>CSM Name (Dup)</b>: A copy of the input CSM module name.
 - <b>Found</b>: Whether the attribute exists.
 - <b>Waited (ms)</b>: Time elapsed while waiting.

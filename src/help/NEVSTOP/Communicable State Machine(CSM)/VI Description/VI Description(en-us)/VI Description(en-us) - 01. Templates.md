@@ -33,7 +33,6 @@ A template for creating a CSM module with a user interface. This template includ
 > Ref: CSM Exit State
 
 -- <b>Controls</b> --
-
 - <b>Name ("" to use UUID):</b> CSM module name. Refer to *CSM Naming Rules* for module naming rules.
 
 ### CSM Module Template.vi
@@ -45,7 +44,6 @@ A template for creating a CSM module without a user interface. This is the most 
 > Ref: CSM Exit State
 
 -- <b>Controls</b> --
-
 - <b>Name ("" to use UUID)</b>: CSM module name. Refer to *CSM Naming Rules* for module naming rules.
 
 ### CSM Module Template - Tiny.vi
@@ -57,7 +55,6 @@ Compact code template for creating a CSM module without a user interface. The fu
 > Ref: CSM Exit State
 
 -- <b>Controls</b> --
-
 - <b>Name ("" to use UUID)</b>: CSM module name. Refer to *CSM Naming Rules* for module naming rules.
 
 ### CSM User Interface(UI) Module Template - Tiny.vi
@@ -69,7 +66,6 @@ Compact code template used to create a CSM module with a user interface. This te
 > Ref: CSM Exit State
 
 -- <b>Controls</b> --
-
 - <b>Name ("" to use UUID)</b>: CSM module name. Refer to *CSM Naming Rules* for module naming rules.
 
 ### CSM DQMH-Style Template.vi
@@ -88,7 +84,6 @@ Refer to the following example  `[CSM-Example]\4. Advance Examples\CSMLS - Conti
 > Ref: CSM Exit State
 
 -- <b>Controls</b> --
-
 - <b>Name ("" to use UUID)</b>: CSM module name. Refer to *CSM Naming Rules* for module naming rules.
 
 ### Other Code Snippets
@@ -130,11 +125,9 @@ Reference Example: Any examples in `[CSM-Example]\4. Advance Examples\4. Global 
 Obtains a user event refnum, which is suitable for CSM modules containing an Event Structure. CSM modules with an Event Structure typically wait at the Event Structure. The user event refnum this VI obtains is used to interrupt the wait in the Event Structure when a new message is received, allowing the module to continue execution.
 
 -- <b>Controls</b> --
-
 - <b>Name ("" to use UUID)</b>: CSM module name. Refer to *CSM Naming Rules* for module naming rules.
 
 -- <b>Indicators</b> --
-
 - <b>New State Notifier Event</b>: User event refnum, which is used to interrupt the CSM module's wait in the Event Structure when a message is received.
 
 #### Timeout Selector.vi
@@ -142,12 +135,10 @@ Obtains a user event refnum, which is suitable for CSM modules containing an Eve
 Suitable for templates containing a user Event Structure. If <b>Timeout Expected</b> is -1 but there are still <b>Remaining States</b> in the queue, the timeout value will be modified to 0. This ensures the execution immediately breaks out of the user Event Structure and continues to process the remaining states.
 
 -- <b>Controls</b> --
-
 - <b>Timeout Expected</b>: Expected timeout setting.
 - <b>Remaining States</b>: Returns 0 if there are remaining states. Otherwise, returns the expected value.
 
 -- <b>Indicators</b> --
-
 - <b>Timeout</b>: Timeout setting used after arbitration.
 
 #### Template Error Handling
@@ -157,7 +148,6 @@ Suitable for templates containing a user Event Structure. If <b>Timeout Expected
 Generates an error cluster describing a CSM Critical Error. A Critical Error is a severe error occurring within the CSM framework that cannot be handled or replied to by user code. A common cause is a duplicate module name.
 
 -- <b>Controls</b> --
-
 - <b>CSM Name</b>: CSM module name.
 - <b>Arguments (As Reason)</b>: Reason for the error.
 
@@ -170,7 +160,6 @@ Generates an error cluster describing a CSM "No Target Message" error. A "No Tar
 Generates an error cluster describing a CSM "Target Module Not Found" error. A "Target Module Not Found" error occurs when the CSM attempts to send a message to a non-existent target module.
 
 -- <b>Controls</b> --
-
 - <b>Arguments (As CSM Name)</b>: Wired argument, passing the target module name.
 
 ##### CSM Target Timeout Error.vi
@@ -178,7 +167,6 @@ Generates an error cluster describing a CSM "Target Module Not Found" error. A "
 Generates an error cluster describing a CSM "Target Module Timeout" error. A "Target Module Timeout" error occurs when the CSM attempts to send a synchronous message to a target module but does not receive a reply within the specified timeout period.
 
 -- <b>Controls</b> --
-
 - <b>Arguments (As CSM Name)</b>: Wired argument, passing the target module name.
 
 ##### CSM Unhandled State Error.vi
@@ -189,6 +177,5 @@ Generates an error cluster describing a CSM "Unhandled State" error. The followi
 - When a message sent externally to this module is not defined.
 
 -- <b>Controls</b> --
-
 - <b>Undefined State</b>: The undefined state.
 - <b>CSM Name</b>: CSM module name.

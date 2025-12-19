@@ -26,7 +26,6 @@
 - <b>CSM Name</b>：CSM模块名称。
 
 -- <b>输出控件(Indicators)</b> --
-
 - <b>CSM Name (dup)</b>：输入的CSM模块名称副本。
 - <b>Exist?</b>：返回模块是否存在。
 
@@ -43,7 +42,6 @@
 - <!-- 软件里叫"With Instance? (F)" ?--><b>With Nodes? (F)</b>：是否包含节点，针对协作者模式和责任链模式，当包括节点时，将同时列出节点，否则仅列出模块，默认不包含节点。
 
 -- <b>输出控件(Indicators)</b> --
-
 - <b>Module Names</b>：CSM模块名称列表。
 
 ### CSM - List Submodules.vi
@@ -65,7 +63,6 @@
 - <b>Recursive? (T)</b>：是否递归列出所有层级的子模块，默认为 True。
 
 -- <b>输出控件(Indicators)</b> --
-
 - <b>Parent Name (Dup)</b>：输入的分组或父节点名称副本。
 - <b>Submodules</b>：子模块名称列表。
 
@@ -88,7 +85,6 @@
 - <b>Response Timeout (-2 Using Global Settings)</b>：同步调用的超时时间，默认为-2，使用全局设置。您可以通过CSM - Set TMO of Sync-Reply VI设置全局超时时间。
 
 -- <b>输出控件(Indicators)</b> --
-
 - <b>CSM Module VIRef</b>：CSM模块的VI引用。
 
 ### CSM - Set TMO of Sync-Reply.vi
@@ -105,11 +101,9 @@
 CSM模块/API调用时，默认的超时时间为-2，此时将使用全局设置的超时时间；如果设置为其他正值，则将使用该值作为超时时间。
 
 -- <b>输入控件(Controls)</b> --
-
 - <b>TMO For Sync-Rep (ms) In</b>：全局超时时间输入，-2表示不修改全局超时时间，其他正值表示修改全局超时时间为该值。
 
 -- <b>输出控件(Indicators)</b> --
-
 - <!-- 软件里的名字是"TMO For Sync-Rep (ms)" --><b>TMO For Sync-Rep (ms) Out</b>：当前全局超时时间。
 
 ### CSM - Module Status.vi
@@ -119,11 +113,9 @@ CSM模块/API调用时，默认的超时时间为-2，此时将使用全局设�
 > Ref: CSM工作模式
 
 -- <b>输入控件(Controls)</b> --
-
 - <b>CSM Name</b>：CSM模块名称。
 
 -- <b>输出控件(Indicators)</b> --
-
 - <!-- 软件里的名字是"CSM Name (Dup)" --><b>CSM Name (dup)</b>：输入的CSM模块名称副本。
 - <b>Mode</b>：返回模块的工作模式。
 - <!-- 这是原来的"#Instance"吗？--><b>#Nodes</b>：协作者模式或责任链模式下的节点数量。
@@ -179,7 +171,6 @@ CSM模块/API调用时，默认的超时时间为-2，此时将使用全局设�
 - <!-- 软件里是"State (S) In ("")"。请确认。--><b>States In</b>：待过滤的整段状态描述字符串。
 
 -- <b>输出控件(Indicators)</b> --
-
 - <b>States Out</b>：过滤后的状态描述字符串。
 
 #### CSM - Filter Messages.vi
@@ -190,7 +181,6 @@ CSM模块/API调用时，默认的超时时间为-2，此时将使用全局设�
 - <b>States In</b>：待过滤的整段状态描述字符串。
 
 -- <b>输出控件(Indicators)</b> --
-
 - <b>States Out</b>：过滤后的状态描述字符串。
 
 #### CSM - Filter Sync Messages.vi
@@ -258,7 +248,6 @@ CSM模块/API调用时，默认的超时时间为-2，此时将使用全局设�
 该VI用于过滤CSM状态队列中的中断广播消息。
 
 -- <b>输入控件(Controls)</b> --
-
 - <b>States In</b>：待过滤的整段状态描述字符串。
 
 -- <b>输出控件(Indicators)</b> --

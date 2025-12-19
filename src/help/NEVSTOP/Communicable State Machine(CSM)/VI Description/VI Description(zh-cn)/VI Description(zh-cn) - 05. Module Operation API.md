@@ -35,7 +35,6 @@
 - <!-- 这里不是"Wait (5000 ms)"吗？--><b>Timeout (5000ms)</b>：等待超时时间，默认为5000 ms。
 
 -- <b>输出控件(Indicators)</b> --
-
 - <b>CSMs Left</b>：超时后还未下线的CSM模块。
 - <b>Waited (ms)</b>：已等待的时间。
 
@@ -112,7 +111,6 @@
 - <b>Response Timeout (-2 Using Global Settings)</b>：同步调用的超时时间，默认为-2，使用全局设置。你可以通过CSM - Set TMO of Sync-Reply VI设置全局超时时间。
 
 -- <b>输出控件(Indicators)</b> --
-
 - <b>Response</b>：返回的响应。
 - <b>Source CSM</b>：返回的响应的来源CSM模块名称，在协作者模式或责任链模式下返回节点的名称。
 
@@ -150,7 +148,6 @@
 释放CSM状态更改事件句柄。
 
 -- <b>输入控件(Controls)</b> --
-
 - <b>Status Change Event</b>：CSM状态更改事件句柄。
 
 ### CSM - Module Exit Event.vi
@@ -160,7 +157,6 @@
 CSM高级模式的模块(协作者模式、责任链模式)只有在最后一个节点退出后，才会触发模块退出事件。
 
 -- <b>输入控件(Controls)</b> --
-
 - <b>Name ("" to Use UUID) In</b>：CSM模块名称。请参考*CSM名称规则*。
 - <b>Wait (5000 ms)</b>：等待超时时间，默认为5000 ms。
 
@@ -210,7 +206,6 @@ CSM高级模式的模块(协作者模式、责任链模式)只有在最后一个
 - <b>Wait (5000 ms)</b>：等待超时时间，默认为 5000ms。
 
 -- <b>输出控件(Indicators)</b> --
-
 - <b>CSM Name (Dup)</b>：输入的CSM模块名称副本。
 - <b>Found</b>：属性是否存在。
 - <b>Value</b>：属性值。
@@ -249,7 +244,6 @@ CSM高级模式的模块(协作者模式、责任链模式)只有在最后一个
 - <b>Wait (5000 ms)</b>：等待超时时间，默认为5000 ms。
 
 -- <b>输出控件(Indicators)</b> --
-
 - <b>CSM Name (Dup)</b>：输入的CSM模块名称副本。
 - <b>Found</b>：属性是否存在。
 - <b>Waited (ms)</b>：已等待的时间。

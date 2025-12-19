@@ -32,7 +32,6 @@ It is recommended to configure an appropriate cache size that is not too large t
 > Ref: CSM Massdata Argument Support
 
 -- <b>Controls</b> --
-
 - <b>Size (1M)</b>: Cache size in bytes. The default is 1 MB.
 
 ## CSM - Convert Argument to MassData.vim
@@ -42,12 +41,10 @@ Converts a Massdata argument back to raw data.
 > Ref: CSM Massdata Argument Format
 
 -- <b>Controls</b> --
-
 - <b>MassData Argument</b>: Input Massdata argument.
 - <b>Type</b>: Data type.
 
 -- <b>Indicators</b> --
-
 - <b>Data</b>: The restored raw data.
 
 ## CSM - Convert MassData to Argument.vim
@@ -57,11 +54,9 @@ Converts data into a Massdata argument. The Massdata argument obtained from this
 > Ref: CSM Massdata Argument Format
 
 -- <b>Controls</b> --
-
 - <b>Data</b>: Input data.
 
 -- <b>Indicators</b> --
-
 - <b>MassData Argument</b>: The converted Massdata argument.
 
 ## CSM - Convert MassData to Argument With DataType.vim
@@ -71,11 +66,9 @@ Converts data into a Massdata argument. The Massdata argument obtained from this
 > Ref: CSM Massdata Argument Format
 
 -- <b>Controls</b> --
-
 - <b>Data</b>: Input data.
 
 -- <b>Indicators</b> --
-
 - <b>MassData Argument</b>: The converted Massdata argument.
 
 ## CSM - MassData Data Type String.vi
@@ -85,11 +78,9 @@ Extracts the data type string from a Massdata argument.
 > Ref: CSM Massdata Argument Format
 
 -- <b>Controls</b> --
-
 - <b>MassData Argument</b>: Input Massdata argument.
 
 -- <b>Indicators</b> --
-
 - <b>MassData Argument(dup)</b>: A copy of the input Massdata argument.
 - <b>Data Type String</b>: The parsed data type string.
 
@@ -98,7 +89,6 @@ Extracts the data type string from a Massdata argument.
 Reads the status information of the Massdata background cache.
 
 -- <b>Indicators</b> --
-
 - <b>Active Read Operation</b>: Information about the last read operation, including start address and length.
 - <b>Active Write Operation</b>: Information about the last write operation, including start address and length.
 - <b>Cache Size</b>: Background cache size in bytes.
@@ -108,5 +98,4 @@ Reads the status information of the Massdata background cache.
 Helper VI to update the specified Massdata cache display control on the UI based on the cache status, allowing for a more intuitive visualization of cache usage.
 
 -- <b>Controls</b> --
-
 - <b>MassData Status Indicator</b>: Reference to the Massdata cache display control.

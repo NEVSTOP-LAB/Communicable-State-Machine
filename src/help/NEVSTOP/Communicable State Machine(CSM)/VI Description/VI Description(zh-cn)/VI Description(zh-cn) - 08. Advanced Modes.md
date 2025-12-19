@@ -54,12 +54,10 @@
 拼接生成子模块名。
 
 -- <b>输入控件(Controls)</b> --
-
 - <b>CSM Name</b>：CSM模块名称。
 - <b>Name</b>：要拼接的名称。
 
 -- <b>输出控件(Indicators)</b> --
-
 - <b>Submodule Name</b>：拼接生成的子模块名。
 
 ## 工作者模式 (Work Mode API)
@@ -99,11 +97,9 @@
 > Ref: CSM工作者模式(Worker Mode)
 
 -- <b>输入控件(Controls)</b> --
-
 - <b>CSM Name</b>：CSM模块名称。
 
 -- <b>输出控件(Indicators)</b> --
-
 - <b>CSM Name (Marked As Worker)</b>：添加“#”标记的CSM模块名称。
 
 ## 责任链模式 (Chain of Responsibility API) - 待完善
