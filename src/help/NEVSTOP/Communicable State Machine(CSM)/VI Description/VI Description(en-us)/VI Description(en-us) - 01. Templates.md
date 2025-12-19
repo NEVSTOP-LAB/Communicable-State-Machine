@@ -32,9 +32,7 @@
 A template for creating a CSM module with a user interface. This template includes a user Event Structure for responding to user actions.
 
 > Ref: CSM Naming Rules 
->
 > Ref: CSM Initialize State 
->
 > Ref: CSM Exit State
 
 -- <b>Controls</b> --
@@ -46,9 +44,7 @@ A template for creating a CSM module with a user interface. This template includ
 A template for creating a CSM module without a user interface. This is the most commonly used CSM template. The template also includes an event response loop used for exiting the module during debugging. Remove this loop after debugging is complete.
 
 > Ref: CSM Naming Rules 
->
 > Ref: CSM Initialize State 
->
 > Ref: CSM Exit State
 
 -- <b>Controls</b> --
@@ -60,9 +56,7 @@ A template for creating a CSM module without a user interface. This is the most 
 Compact code template for creating a CSM module without a user interface. The functionality of this template is identical to the CSM Module Template VI.
 
 > Ref: CSM Naming Rules 
->
 > Ref: CSM Initialize State 
->
 > Ref: CSM Exit State
 
 -- <b>Controls</b> --
@@ -74,9 +68,7 @@ Compact code template for creating a CSM module without a user interface. The fu
 Compact code template used to create a CSM module with a user interface. This template includes a user Event Structure for responding to user actions. The functionality of this template is identical to the CSM User Interface(UI) Module Template VI.
 
 > Ref: CSM Naming Rules 
->
 > Ref: CSM Initialize State 
->
 > Ref: CSM Exit State
 
 -- <b>Controls</b> --
@@ -95,9 +87,7 @@ The user Event Structure loop for user operations is created via the CSM - Flood
 Refer to the following example  `[CSM-Example]\4. Advance Examples\CSMLS - Continuous Loop in CSM Example.vi` for demonstration of using this VI.
 
 > Ref: CSM Naming Rules 
->
 > Ref: CSM Initialize State 
->
 > Ref: CSM Exit State
 
 -- <b>Controls</b> --

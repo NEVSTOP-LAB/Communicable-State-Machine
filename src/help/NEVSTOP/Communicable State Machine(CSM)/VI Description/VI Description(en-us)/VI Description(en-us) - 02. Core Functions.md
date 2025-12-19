@@ -43,7 +43,6 @@ Parses the CSM state queue and returns the next current state to execute, along 
 Builds CSM message strings, containing information such as state, arguments, target module, message type, etc., for sending to other CSM modules.
 
 > Ref: CSM Message Types 
->
 > Ref: CSM Message Format Parsing
 
 ```
@@ -109,7 +108,6 @@ Builds CSM message strings and operation strings.
 Concatenates and generates CSM message strings. The message type symbol is automatically detected based on the input <b>State with Arguments</b>.
 
 > Ref: Message Building API 
->
 > Ref: CSM Message Target Module Description
 
 -- <b>Controls</b> --
@@ -126,14 +124,11 @@ Concatenates and generates CSM message strings. The message type symbol is autom
 
 Concatenates and generates CSM synchronous message strings. The message type symbol is "-@", for example:
 
-```
-  Message >> Arguments -@ Target
-```
+    Message >> Arguments -@ Target
+
 
 > Ref: Message Building API 
->
 > Ref: Synchronous Message 
->
 > Ref: CSM Message Target Module Description
 
 -- <b>Controls</b> --
@@ -155,9 +150,7 @@ Concatenates and generates CSM asynchronous message strings. The message type sy
 ```
 
 > Ref: Message Building API 
->
 > Ref: Asynchronous Message 
->
 > Ref: CSM Message Target Module Description
 
 -- <b>Controls</b> --
@@ -179,9 +172,7 @@ Concatenates and generates CSM asynchronous message strings without reply. The m
 ```
 
 > Ref: Message Building API 
->
 > Ref: Asynchronous Message 
->
 > Ref: CSM Message Target Module Description
 
 -- <b>Controls</b> --

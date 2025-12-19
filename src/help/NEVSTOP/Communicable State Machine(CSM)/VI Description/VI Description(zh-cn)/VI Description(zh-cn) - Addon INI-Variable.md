@@ -61,11 +61,11 @@
 > Ref: CSM INI-Variable变量格式
 > Ref: CSM INI-Variable配置文件路径
 
--- <b>输入控件 (Controls)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>Section Name ("" as Default)</b>：节名，空字符串表示使用默认节。
 - <b>String with INI-Variable</b>：包含变量引用的输入字符串。
 
--- <b>输出控件 (Indicators)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>String</b>：填充变量后的输出字符串。
 
 ### CSM - Read Configuration Variable.vim
@@ -82,12 +82,12 @@
 
 > Ref: CSM INI-Variable配置文件路径
 
--- <b>输入控件 (Controls)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>Configuration Prototype (Cluster Prefered)</b>：配置原型(推荐使用簇)。
 - <b>Section Name ("" as Default)</b>：节名，空字符串表示使用默认节。
 - <b>Write If not found? (F)</b>：如果未找到，是否写入默认值。
 
--- <b>输出控件 (Indicators)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>Configuration</b>：输出配置值。
 
 ### CSM - Read Cluster Elements From Session.vim
@@ -103,11 +103,11 @@
 
 > Ref: CSM INI-Variable配置文件路径
 
--- <b>输入控件 (Controls)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>Cluster</b>：簇原型。
 - <b>Section Name ("" as Default)</b>：节名，空字符串表示使用默认节。
 
--- <b>输出控件 (Indicators)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>Cluster out</b>：输出簇。
 
 ### CSM - Read Cluster Elements From Key.vim
@@ -120,12 +120,12 @@
 
 > Ref: CSM INI-Variable配置文件路径
 
--- <b>输入控件 (Controls)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>Cluster</b>：簇原型。
 - <b>Key</b>：键名。
 - <b>Section Name ("" as Default)</b>：节名，空字符串表示使用默认节。
 
--- <b>输出控件 (Indicators)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>Cluster out</b>：输出簇。
 - <b>Key Found?</b>：键是否存在。
 
@@ -141,11 +141,11 @@
 > Ref: CSM INI-Variable配置文件路径
 > Ref: CSM INI-Variable缓存机制警告
 
--- <b>输入控件 (Controls)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>Configuration</b>：要写入的配置数据。
 - <b>Section Name ("" as Default)</b>：节名，空字符串表示使用默认节。
 
--- <b>输出控件 (Indicators)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>Configuration (dup)</b>：写入的配置数据副本。
 
 ### Convert API String to Cluster(Default in Session).vim
@@ -160,12 +160,12 @@
 
 **参考范例**：“3. In CSM API parameters.vi”。
 
--- <b>输入控件 (Controls)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>API String</b>：API String字符串。
 - <b>Section Name ("" as Default)</b>：节名，空字符串表示使用默认节。
 - <b>Type</b>：数据类型。
 
--- <b>输出控件 (Indicators)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>Data</b>：转换后的数据。
 - <b>error</b>：错误信息。
 
@@ -181,13 +181,13 @@
 
 **参考范例**：“3. In CSM API parameters.vi”。
 
--- <b>输入控件 (Controls)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>API String</b>：API String字符串。
 - <b>Section Name ("" as Default)</b>：节名，空字符串表示使用默认节。
 - <b>Type</b>：数据类型。
 - <b>Variable Name</b>：变量名称。
 
--- <b>输出控件 (Indicators)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>Data</b>：转换后的数据。
 - <b>error</b>：错误信息。
 
@@ -197,27 +197,27 @@
 
 读取当前内存中所有变量名称。
 
--- <b>输入控件 (Controls)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>Permanent Variables Only? (F)</b>：是否仅读取永久变量。
 
--- <b>输出控件 (Indicators)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>All Variable Names</b>：变量名称数组。
 
 ### CSM - Read Sections.vi
 
 读取当前内存中所有节名称。
 
--- <b>输出控件 (Indicators)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>Sections</b>：节名称数组。
 
 ### CSM - Read Key Names.vi
 
 读取指定节中的所有键名。
 
--- <b>输入控件 (Controls)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>Section Name ("" as Default)</b>：节名，空字符串表示使用默认节。
 
--- <b>输出控件 (Indicators)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>Keys</b>：键名数组。
 
 ### CSM - Read INI String.vi
@@ -228,13 +228,13 @@
 
 **参考范例**：“6. Read Nested Variables.vi”。
 
--- <b>输入控件 (Controls)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>Section Name ("" as Default)</b>：节名，空字符串表示使用默认节。
 - <b>Key</b>：包含变量引用的输入字符串。
 - <b>Default Value</b>：默认值。
 - <b>Write If not found? (F)</b>：如果未找到，是否写入默认值。
 
--- <b>输出控件 (Indicators)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>Value</b>：替换变量后的输出字符串。
 - <b>Key Found?</b>：键是否存在。
 
@@ -246,12 +246,12 @@
 
 > Ref: CSM INI-Variable缓存机制警告
 
--- <b>输入控件 (Controls)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>Section Name ("" as Default)</b>：节名，空字符串表示使用默认节。
 - <b>Key</b>：键名。
 - <b>Value</b>：变量值字符串。
 
--- <b>输出控件 (Indicators)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>Key Replace?</b>：键是否被替换。
 
 ## 多文件支持与配置管理
@@ -264,10 +264,10 @@
 
 > Ref: CSM INI-Variable配置文件路径
 
--- <b>输入控件 (Controls)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>Include All Paths?(F)</b>：是否包含所有配置文件路径。
 
--- <b>输出控件 (Indicators)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>Default Config File Path</b>：默认配置文件路径。
 - <b>All Config Files</b>：所有配置文件列表。
 
@@ -281,7 +281,7 @@
 
 > Ref: CSM INI-Variable配置文件路径
 
--- <b>输入控件 (Controls)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>Configuration Path</b>：配置文件路径。
 - <b>Section Postfix ("")</b>：节名后缀。
 
@@ -291,7 +291,7 @@
 
 > Ref: CSM INI-Variable配置文件路径
 
--- <b>输入控件 (Controls)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>Path</b>：配置文件路径。
 
 ### CSM - Mark All Temp Variables as Permanent.vi
@@ -302,7 +302,7 @@
 
 > Ref: CSM INI-Variable配置文件路径
 
--- <b>输入控件 (Controls)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>Path ("" to Use Default File)</b>：配置文件路径，空字符串表示使用默认INI文件。
 
 ### CSM - Sync Configuration Variables to File.vi
@@ -313,7 +313,7 @@
 
 > Ref: CSM INI-Variable配置文件路径
 
--- <b>输入控件 (Controls)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>All Temp Variable to Default Ini(F)</b>：是否将所有临时变量同步到默认INI文件。
 - <b>Write UnSupported Datatype?(F)</b>：是否写入不支持的数据类型。
 

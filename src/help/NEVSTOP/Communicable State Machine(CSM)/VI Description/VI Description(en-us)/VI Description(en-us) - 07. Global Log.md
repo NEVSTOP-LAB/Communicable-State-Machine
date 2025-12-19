@@ -46,7 +46,6 @@ Reference Examples:
 Obtains the CSM global log user event refnum, used to retrieve global log user events from the global log queue.
 
 > Ref: CSM Global Log Functionality 
->
 > Ref: CSM Global Log Acquisition Methods
 
 Reference Examples:
@@ -64,7 +63,6 @@ Reference Examples:
 Releases the global log queue refnum.
 
 > Ref: CSM Global Log Functionality 
->
 > Ref: CSM Global Log Acquisition Methods
 
 Reference Examples:
@@ -81,7 +79,6 @@ Reference Examples:
 Releases the CSM global log user event refnum.
 
 > Ref: CSM Global Log Functionality 
->
 > Ref: CSM Global Log Acquisition Methods
 
 Reference Examples:
@@ -158,7 +155,6 @@ Sets global source-side filtering rules. When a log satisfies the filtering rule
 > This VI is a polymorphic VI. To ensure forward compatibility of the interface after modifications, it is recommended to select the instance with the newer version for this VI.
 
 > Ref: Global Log Filter Location 
->
 > Ref: Global Log Filter Rules
 
 Reference Examples:

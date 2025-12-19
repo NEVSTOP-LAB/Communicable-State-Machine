@@ -24,7 +24,7 @@
 
 > 参考: CSM Massdata参数支持
 
--- <b>输入控件 (Controls)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>Size (1M)</b>：缓存大小，单位为字节(Byte)。
 
 ## CSM - Convert Argument to MassData.vim
@@ -33,11 +33,11 @@
 
 > 参考: CSM Massdata参数格式
 
--- <b>输入控件 (Controls)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>MassData Argument</b>：输入的Massdata参数。
 - <b>Type</b>：数据类型。
 
--- <b>输出控件 (Indicators)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>Data</b>：恢复出的原始数据。
 
 ## CSM - Convert MassData to Argument.vim
@@ -46,10 +46,10 @@
 
 > 参考: CSM Massdata参数格式
 
--- <b>输入控件 (Controls)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>Data</b>：输入数据。
 
--- <b>输出控件 (Indicators)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>MassData Argument</b>：转换后的Massdata参数。
 
 ## CSM - Convert MassData to Argument With DataType.vim
@@ -58,10 +58,10 @@
 
 > 参考: CSM Massdata参数格式
 
--- <b>输入控件 (Controls)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>Data</b>：输入数据。
 
--- <b>输出控件 (Indicators)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>MassData Argument</b>：转换后的Massdata参数。
 
 ## CSM - MassData Data Type String.vi
@@ -70,10 +70,10 @@
 
 > 参考: CSM Massdata参数格式
 
--- <b>输入控件 (Controls)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>MassData Argument</b>：输入的Massdata参数。
 
--- <b>输出控件 (Indicators)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>MassData Argument(dup)</b>：输入的 massdata 参数副本。
 - <b>Data Type String</b>：解析出的数据类型字符串。
 
@@ -81,7 +81,7 @@
 
 读取Massdata后台缓存的状态信息。
 
--- <b>输出控件 (Indicators)</b> --
+-- <b>输出控件(Indicators)</b> --
 - <b>Active Read Operation</b>：上次读操作的信息，包括起始地址与长度。
 - <b>Active Write Operation</b>：上次写操作的信息，包括起始地址与长度。
 - <b>Cache Size</b>：后台缓存大小，单位为字节(Byte)。
@@ -90,5 +90,5 @@
 
 辅助VI，用于根据缓存状态更新界面指定的Massdata缓存显示控件，可更加直观地展示缓存的使用情况。
 
--- <b>输入控件 (Controls)</b> --
+-- <b>输入控件(Controls)</b> --
 - <b>MassData Status Indicator</b>：Massdata缓存显示控件引用。

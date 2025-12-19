@@ -47,7 +47,6 @@ Reference Example: "2. Caller is CSM Scenario\CSM Example - Caller is a CSM.vi".
 Lists all rules in the CSM registry.
 
 > Ref: CSM Broadcast 
->
 > Ref: CSM Registration
 
 -- <b>Indicators</b> --
@@ -63,7 +62,6 @@ Lists all broadcast registration relationships for the current CSM module. Unlik
 > CSM uses Register/Unregister operations to add CSM module broadcast registration rules. Based on the current rules and actually existing modules, all broadcast registration relationships for the current CSM module can be deduced. CSM internally caches the current registration relationships. The registration relationship cache is automatically updated when the registration rules or the number of CSM modules changes.
 
 > Ref: CSM Broadcast 
->
 > Ref: CSM Registration
 
 -- <b>Indicators</b> --
@@ -75,7 +73,6 @@ Lists all broadcast registration relationships for the current CSM module. Unlik
 Lists the broadcast names of all current broadcast registration relationships.
 
 > Ref: CSM Broadcast 
->
 > Ref: CSM Registration
 
 -- <b>Indicators</b> --
@@ -87,7 +84,6 @@ Lists the broadcast names of all current broadcast registration relationships.
 Checks all registration relationships corresponding to a specific broadcast name of a CSM module.
 
 > Ref: CSM Broadcast 
->
 > Ref: CSM Registration
 
 -- <b>Controls</b> --
@@ -104,7 +100,6 @@ Checks all registration relationships corresponding to a specific broadcast name
 Removes all registration relationships associated with the specified CSM module from the broadcast registry.
 
 > Ref: CSM Broadcast 
->
 > Ref: CSM Registration
 
 -- <b>Controls</b> --
@@ -120,5 +115,4 @@ Removes all registration relationships associated with the specified CSM module 
 Resets all information in the background broadcast registry, used in scenarios requiring a complete reset of registration relationships.
 
 > Ref: CSM Broadcast 
->
 > Ref: CSM Registration

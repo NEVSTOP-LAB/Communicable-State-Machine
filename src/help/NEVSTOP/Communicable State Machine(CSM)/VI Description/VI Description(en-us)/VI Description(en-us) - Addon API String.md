@@ -75,7 +75,6 @@
 Determines whether the data type is a conversion data type supported by API String.
 
 > Ref: API String Parameter Support 
->
 > Ref: CSM HEXSTR Format
 
 -- <b>Controls</b> --
@@ -144,7 +143,6 @@ Queries a specified data item within cluster data and converts it to API String 
 Adds custom boolean strings to the API String boolean parsing list and returns the updated list.
 
 > Ref: Default Strings for TRUE Value 
->
 > Ref: Default Strings for FALSE Value
 
 -- <b>Controls</b> --
@@ -162,7 +160,6 @@ Adds custom boolean strings to the API String boolean parsing list and returns t
 Removes custom boolean strings from the API String boolean parsing list and returns the updated list.
 
 > Ref: Default Strings for TRUE Value 
->
 > Ref: Default Strings for FALSE Value
 
 -- <b>Controls</b> --
@@ -180,7 +177,6 @@ Removes custom boolean strings from the API String boolean parsing list and retu
 Lists all currently available boolean value strings.
 
 > Ref: Default Strings for TRUE Value 
->
 > Ref: Default Strings for FALSE Value
 
 -- <b>Indicators</b> --
@@ -239,7 +235,6 @@ Note:
 Converts a string to a boolean value. Supports multiple representations for TRUE/FALSE. Custom TRUE/FALSE strings can be added via the API String - Add Boolean Strings VI.
 
 > Ref: Default Strings for TRUE Value 
->
 > Ref: Default Strings for FALSE Value
 
 -- <b>Controls</b> --

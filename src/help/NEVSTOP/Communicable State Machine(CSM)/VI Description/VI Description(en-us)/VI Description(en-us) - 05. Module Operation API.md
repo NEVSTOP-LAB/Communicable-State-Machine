@@ -53,7 +53,6 @@ Sends an asynchronous message to the specified CSM module. Since the transmissio
 > Asynchronous messages sent using this VI are strictly asynchronous without return. Return arguments from asynchronous messages cannot be retrieved.
 
 > Ref: Asynchronous Message 
->
 > Ref: CSM Message Target Module Description
 
 -- <b>Controls</b> --
@@ -68,7 +67,6 @@ Sends an asynchronous message to the specified CSM module. Since the transmissio
 Sends an asynchronous message to the specified CSM module. Since the transmission is asynchronous, this VI does not wait for a reply, and code execution continues immediately after the message is sent. If the CSM module does not exist, this VI waits for the specified timeout duration. If the timeout is exceeded, a timeout error is returned.
 
 > Ref: Asynchronous Message 
->
 > Ref: CSM Message Target Module Description
 
 -- <b>Controls</b> --
@@ -113,9 +111,7 @@ Sends a synchronous message to the CSM and waits for a reply before continuing c
 - If the message is sent but no reply message is received within the timeout, this VI returns a "CSM Timeout Error".
 
 > Ref: Synchronous Message 
->
 > Ref: Global Timeout Setting 
->
 > Ref: CSM Message Target Module Description
 
 -- <b>Controls</b> --

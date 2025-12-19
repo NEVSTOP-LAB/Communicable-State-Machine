@@ -62,9 +62,7 @@ Populates configuration variables within a string.
 **Reference Example:** `1. Used as parameters parsed by CSM.vi`.
 
 > Ref: CSM INI-Variable Addon 
->
 > Ref: CSM INI-Variable Format 
->
 > Ref: CSM INI-Variable Configuration File Path
 
 -- <b>Controls</b> --
@@ -153,7 +151,6 @@ Writes a configuration variable.
 **Reference Example:** `7. Write and Read Configuration.vi`.
 
 > Ref: CSM INI-Variable Configuration File Path 
->
 > Ref: CSM INI-Variable Caching Mechanism Warning
 
 -- <b>Controls</b> --

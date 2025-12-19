@@ -19,7 +19,6 @@ Marks a module as a system-level module by adding "." before the input string. F
 Reference Example: `0. Base Concepts\7. System-Level Module.vi`.
 
 > Ref: Name Concatenation API 
->
 > Ref: CSM System-Level Module
 
 -- <b>Controls</b> --
@@ -94,7 +93,6 @@ Marks a module as a Worker Mode module by adding "#" after the CSM name.
 Reference Example: "4. Advance Examples\1. Action Workers Example".
 
 > Ref: Name Concatenation API 
->
 > Ref: CSM Worker Mode
 
 -- <b>Controls</b> --
@@ -145,7 +143,6 @@ Concatenates the name of a Chain of Responsibility Mode module, using "$" as the
 Reference Example: `4. Advance Examples\2. Chain of Responsibility Example`.
 
 > Ref: CSM Chain of Responsibility Mode 
->
 > Ref: Name Concatenation API
 
 -- <b>Controls</b> --
