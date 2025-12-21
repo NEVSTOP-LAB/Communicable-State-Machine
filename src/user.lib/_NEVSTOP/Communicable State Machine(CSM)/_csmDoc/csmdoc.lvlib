@@ -33,6 +33,7 @@
 	<Item Name="api" Type="Folder">
 		<Item Name="BatchEditorAction" Type="Folder">
 			<Item Name="BEditor-PopoulateVIHelp.vi" Type="VI" URL="../BEditor-PopoulateVIHelp.vi"/>
+			<Item Name="BEditor-PopoulateExampleDesc.vi" Type="VI" URL="../BEditor-PopoulateExampleDesc.vi"/>
 		</Item>
 		<Item Name="Single" Type="Folder">
 			<Item Name="Populate Single Example Description.vi" Type="VI" URL="../Populate Single Example Description.vi"/>
