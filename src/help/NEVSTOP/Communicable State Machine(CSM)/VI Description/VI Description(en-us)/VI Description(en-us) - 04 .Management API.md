@@ -2,7 +2,7 @@
 
 ## Management API
 
-> [!NOTE] 
+> [!NOTE]
 > <b>CSM Operation Modes</b>
 >
 > - <b>Stand-alone</b>: Independent operation mode. If no module name is specified, a random ID is automatically generated to identify the module.
@@ -10,7 +10,7 @@
 > - <b>Action Worker</b>: Worker Mode. Append `#` to the module name to mark this module as a worker. This module shares the same message queue with other workers having the same name.
 > - <b>Chain Node</b>: Chain node. Append `$` to the module name to mark this module as a chain node. Messages on the same chain will be passed sequentially until a node processes the message.
 
-> [!NOTE] 
+> [!NOTE]
 > <b>CSM Priority Queue Design</b>
 >
 > In the background, CSM essentially uses LabVIEW queues to implement inter-module communication. However, CSM uses two separate queues to store messages of different priorities:
@@ -55,7 +55,7 @@ Example: The system contains the following five modules: Level1.Level2A, Level1.
     If <b>Recursive? (T)</b> is False, this VI only lists direct next-level submodules, which only includes Level1.Level2A. Note that Level1.Level2B is not a module instance, so it is not included in the results.
 ```
 
-> [!NOTE] 
+> [!NOTE]
 > Submodules are only valid for normal CSM modules and are invalid for modules in Worker Mode or Chain of Responsibility Mode.
 
 > - Ref: CSM Submodule
@@ -95,7 +95,7 @@ Behavior for CSM in special operation modes:
 
 Sets the global synchronous call timeout for the CSM program, in milliseconds. When the input is -2, the global timeout is not modified, and the return value is the current global timeout. When the input is any other positive value, the global timeout is modified to that value, and the new global timeout is returned.
 
-> [!NOTE] 
+> [!NOTE]
 > <b>CSM Synchronous Message Global Timeout</b>
 >
 > - When performing CSM inter-module communication or using the VI that sends synchronous messages, the default timeout is -2, which uses the globally configured timeout.
@@ -132,7 +132,7 @@ Clear the LabVIEW queue used in the background for inter-module communication of
 
 > - Ref: CSM Priority Queue Design
 
-> [!WARNING] 
+> [!WARNING]
 > Using this VI is generally not recommended for CSM modules. It is recommended to use code design to avoid message accumulation in modules. Therefore, it is recommended to avoid using this VI to clear background message queues in CSM modules.
 
 -- <b>Controls</b> --
@@ -149,10 +149,10 @@ Clear the LabVIEW queue used in the background for inter-module communication of
 
 Filters specific states in the CSM state queue.
 
-> [!WARNING] 
+> [!WARNING]
 > Using this VI is generally not recommended. It is recommended to avoid message accumulation in modules through your code design. Therefore, it is recommended to avoid clearing the JKISM string queue through code design. However, if clearing the JKISM string queue is mandatory, it is recommended to use this VI to clear the JKISM string queue rather than using string operations.
 
-> [!NOTE] 
+> [!NOTE]
 > <b>Polymorphic VI Options</b>
 >
 > - CSM - Filter Local States.vi: Filters local states.

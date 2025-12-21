@@ -10,7 +10,7 @@
 > - 注意: Massdata Support内部使用循环缓冲区机制，同一应用程序内的所有CSM模块共享相同的Massdata缓冲区空间。当缓冲区满时，新数据将从开始位置覆盖旧数据。因此需要设置合理的缓冲区大小，确保数据在使用完毕前未被覆盖，避免数据丢失。
 
 > [!NOTE] CSM Massdata参数格式
-> 典型的Massdata数据格式为: `<MassData>Start:8057;Size:4004;DataType:1D I32`。其中: 
+> 典型的Massdata数据格式为: `<MassData>Start:8057;Size:4004;DataType:1D I32`。其中:
 > - `Start`: 数据在内存中的起始地址
 > - `Size`: 数据的大小(字节数)
 > - `DataType(optional)`: 数据的类型，由CSM Data Type String VI定义

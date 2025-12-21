@@ -21,19 +21,19 @@ Parses the CSM state queue and returns the next current state to execute, along 
 - <b>Name Used</b>: Actual name assigned to the CSM module.
 - <b>Remaining States</b>: All concatenated states and arguments.
 - <b>Current State</b>: The next current state to execute.
-- <b>Arguments</b>: Returns any arguments that might be used in the current state string. These arguments are located after the ">>" characters. 
+- <b>Arguments</b>: Returns any arguments that might be used in the current state string. These arguments are located after the ">>" characters.
     - Argument variables must not contain any non-printable characters, such as line feeds or carriage returns.
 - <b>Additional Information</b>: Supplemental information. For states triggered by a broadcast, this information contains the name and arguments of the broadcast.
 - <b>Source CSM</b>: If <b>Current State</b> is sent externally, this is the name of the source CSM module.
 
 ### Build State String with Arguments++.vi
 
-> [!WARNING] 
+> [!WARNING]
 > This VI cannot concatenate "Asynchronous without Reply" messages. This VI is hidden from the Functions palette. It is recommended to use the Build Message with Arguments++ VI instead of this VI.
 
 Builds CSM message strings, containing information such as state, arguments, target module, message type, etc., for sending to other CSM modules.
 
-> - Ref: CSM Message Types 
+> - Ref: CSM Message Types
 > - Ref: CSM Message Format Parsing
 
 ```
@@ -70,12 +70,12 @@ Builds CSM message strings, containing information such as state, arguments, tar
 
 Builds CSM message strings and operation strings.
 
-> [!NOTE] 
+> [!NOTE]
 > <b>Message Building API</b>
 >
 > This type of API is only used to concatenate message strings and does not send messages directly. The strings need to be merged into the CSM state queue, and the messages will be sent and the operation executed within the Parse State Queue++ VI. If you are familiar with CSM rules, you do not need to use this type of API. You can type the corresponding message string or operation string directly into the string.
 
-> [!NOTE] 
+> [!NOTE]
 > <b>Polymorphic VI Options</b>
 >
 > - Build Message with Arguments(Auto Check).vi: Concatenates message strings based on the input message symbols.
@@ -94,7 +94,7 @@ Builds CSM message strings and operation strings.
 
 Concatenates and generates CSM message strings. The message type symbol is automatically detected based on the input <b>State with Arguments</b>.
 
-> - Ref: Message Building API 
+> - Ref: Message Building API
 > - Ref: CSM Message Target Module Description
 
 -- <b>Controls</b> --
@@ -112,8 +112,8 @@ Concatenates and generates CSM synchronous message strings. The message type sym
     Message >> Arguments -@ Target
 
 
-> - Ref: Message Building API 
-> - Ref: Synchronous Message 
+> - Ref: Message Building API
+> - Ref: Synchronous Message
 > - Ref: CSM Message Target Module Description
 
 -- <b>Controls</b> --
@@ -132,8 +132,8 @@ Concatenates and generates CSM asynchronous message strings. The message type sy
   Message >> Arguments -> Target
 ```
 
-> - Ref: Message Building API 
-> - Ref: Asynchronous Message 
+> - Ref: Message Building API
+> - Ref: Asynchronous Message
 > - Ref: CSM Message Target Module Description
 
 -- <b>Controls</b> --
@@ -152,8 +152,8 @@ Concatenates and generates CSM asynchronous message strings without reply. The m
   Message >> Arguments ->| Target
 ```
 
-> - Ref: Message Building API 
-> - Ref: Asynchronous Message 
+> - Ref: Message Building API
+> - Ref: Asynchronous Message
 > - Ref: CSM Message Target Module Description
 
 -- <b>Controls</b> --
@@ -268,16 +268,16 @@ Facilitates editing multiple CSM message strings by providing a batch replacemen
 
   ```
   Example: The terminal `<target>` is connected to the string "DAQDevice". The <b>States with Replace Token</b> string is:
-  
+
         ``` text
         Initialize -@ <target>
         Configure -@ <target>
         Read -@ <target>
         Close -@ <target>
         ```
-  
+
   The <b>States</b> output is:
-  
+
         ``` text
         Initialize -@ DAQDevice
         Configure -@ DAQDevice
@@ -330,7 +330,7 @@ Broadcasts a status change to the system. CSM modules with registered states wil
   Status >> Arguments -><broadcast>
 ```
 
-> [!NOTE] 
+> [!NOTE]
 > <b>CSM State Queue Operation API</b>
 >
 > This type of API only concatenates message strings and does not send messages directly. The message is sent and the operation executed within the Parse State Queue++ VI. Unlike the Message Building API, this type of API includes a CSM state queue string input, which is equivalent to inserting a message into the state queue.
@@ -349,7 +349,7 @@ Merges CSM message strings into the CSM message queue. This VI provides string o
 
 > - Ref: CSM State Queue Operation API
 
-> [!NOTE] 
+> [!NOTE]
 > <b>Polymorphic VI Options</b>
 >
 > - Add State(s) to Queue By BOOL(Element).vi

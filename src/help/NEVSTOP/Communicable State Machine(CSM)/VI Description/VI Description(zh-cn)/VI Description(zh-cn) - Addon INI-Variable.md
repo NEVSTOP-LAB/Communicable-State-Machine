@@ -6,13 +6,13 @@
 >
 > CSM INI-Variable配置文件数据的格式使用CSM API String格式。
 >
-> 主要特点包括: 
+> 主要特点包括:
 > 1. <b>默认配置处理</b>: 首次调用库函数时自动加载默认配置文件，无需用户显式加载。
 > 2. <b>多文件支持</b>: 通过专用函数支持加载多个配置文件。
 > 3. <b>内存缓存</b>: 在内存中维护一个缓存副本，应用程序从该缓存中获取配置信息。
 > 4. <b>INI格式兼容</b>: 配置文件和内存副本均采用标准INI格式，支持节和键值对。
 > 5. <b>高效缓存机制</b>: 使用全局修改标记优化性能，仅在配置发生修改时才重新读取内存副本。
-> 
+>
 > 本库包含并使用了由[@rcpacini](https://github.com/rcpacini)开发的[LabVIEW-Config](https://github.com/rcpacini/LabVIEW-Config)的副本。
 
 > [!NOTE] CSM INI-Variable变量格式
@@ -23,7 +23,7 @@
 > - `variable`: 配置文件中的变量名。
 > - `defaultValue`(可选): 默认值，当变量不存在时使用。
 >
-> 说明: 
+> 说明:
 > - 支持嵌套的变量引用，例如`${section1.variable1:${section2.variable2:defaultValue2}}`。
 > - section参数为可选。省略时，使用默认配置段 `SectionName=LabVIEW`。
 > - 默认值为可选，未指定时默认为空字符串("")。
@@ -333,14 +333,14 @@
 
 ### CSM - Read Log Filter Rules from INI Strings.vi
 
-从配置中读取日志过滤规则。此配置主要配合以下几个VI使用: 
+从配置中读取日志过滤规则。此配置主要配合以下几个VI使用:
 
 - CSM - Set Log Filter Rules.vi
 - addons\Logger\CSM - Start File Logger.vi
 
 ### CSM - Read File Logger Configuration from INI String.vi
 
-从配置中读取日志记录配置。此配置主要配合以下几个VI使用: 
+从配置中读取日志记录配置。此配置主要配合以下几个VI使用:
 
 - addons\Logger\CSM - Start File Logger.vi
 

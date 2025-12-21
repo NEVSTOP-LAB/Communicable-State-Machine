@@ -42,11 +42,10 @@ Waits for a group of CSM modules to all go offline within a specified timeout pe
 
 Sends an asynchronous message to the specified CSM module. Since the transmission is asynchronous, this VI does not wait for a reply, and code execution continues immediately after the message is sent. If the CSM module does not exist, a "Target Error" is returned.
 
-> ![NOTE] 
->
+> ![NOTE]
 > Asynchronous messages sent using this VI are strictly asynchronous without return. Return arguments from asynchronous messages cannot be retrieved.
 
-> - Ref: Asynchronous Message 
+> - Ref: Asynchronous Message
 > - Ref: CSM Message Target Module Description
 
 -- <b>Controls</b> --
@@ -59,7 +58,7 @@ Sends an asynchronous message to the specified CSM module. Since the transmissio
 
 Sends an asynchronous message to the specified CSM module. Since the transmission is asynchronous, this VI does not wait for a reply, and code execution continues immediately after the message is sent. If the CSM module does not exist, this VI waits for the specified timeout duration. If the timeout is exceeded, a timeout error is returned.
 
-> - Ref: Asynchronous Message 
+> - Ref: Asynchronous Message
 > - Ref: CSM Message Target Module Description
 
 -- <b>Controls</b> --
@@ -99,8 +98,8 @@ Sends a synchronous message to the CSM and waits for a reply before continuing c
 - If the module does not exist at the time of sending and the wait times out, this VI returns a timeout error.
 - If the message is sent but no reply message is received within the timeout, this VI returns a "CSM Timeout Error".
 
-> - Ref: Synchronous Message 
-> - Ref: Global Timeout Setting 
+> - Ref: Synchronous Message
+> - Ref: Global Timeout Setting
 > - Ref: CSM Message Target Module Description
 
 -- <b>Controls</b> --
@@ -167,9 +166,8 @@ For modules in CSM advanced modes, such as Worker Mode and Chain of Responsibili
 
 ### Attributes
 
-> ![NOTE] 
->
-> <b>CSM Module Attributes</b> 
+> ![NOTE]
+> <b>CSM Module Attributes</b>
 >
 > CSM module attributes are a data area that can store module configuration and status, accessed by name. CSM module attributes can be used in the following scenarios:
 > - Providing a way to access and modify configuration and status information without messages. For example, a "Connected" attribute in a TCP module indicating whether a connection is established is more convenient to access directly.

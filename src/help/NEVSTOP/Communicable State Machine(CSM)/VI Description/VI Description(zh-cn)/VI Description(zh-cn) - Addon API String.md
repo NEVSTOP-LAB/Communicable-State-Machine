@@ -2,7 +2,7 @@
 
 > [!NOTE] API String参数支持
 > API String参数支持用于增强通信状态机(CSM)的API参数功能，支持以纯文本格式传递各种数据类型，并特别优化了手动输入体验。API String未定义参数类型(Argument Type)，通过CSM - Argument Type VI获取的结果为空，通常在默认分支中处理。
-> 支持的数据类型包括: 
+> 支持的数据类型包括:
 >
 >   - 字符串(String)
 >   - 路径(Path)
@@ -33,14 +33,14 @@
 
 > [!NOTE] 带索引的枚举类型(Indexed Enum)
 > 格式为[索引编号(index)][分隔符(separator)][枚举字符串]，索引编号支持多种数值表示方式
-> 
-> 索引编号使用 == 分隔符示例: 
+>
+> 索引编号使用 == 分隔符示例:
 > 1 == boolean | 2 == string | 4 == dbl | 8 == number
 >
-> 索引编号使用 -- 分隔符示例: 
+> 索引编号使用 -- 分隔符示例:
 > 0x01 -- boolean | 0x02 -- string | 0x04 -- dbl | 0x08 -- number
 >
-> 索引编号使用 __ 分隔符示例: 
+> 索引编号使用 __ 分隔符示例:
 > 0b0001 __ boolean | 0b0100 __ dbl | 0b1000 __ number
 
 ## API String 核心功能
@@ -171,7 +171,7 @@
 
 设置浮点数的精度。
 
-    注意: 
+    注意:
     - 默认精度为6位有效数字，格式为"%.6p"。
     - 此VI是API String - Set Float Format String.vi的简化版本，仅用于设置有效数字位数。
 
@@ -235,20 +235,20 @@
 > - Ref: 带索引的枚举类型(Indexed Enum)
 
     _<b>转换规则1: 无索引编号</b>_
-    
+
     通过字符串匹配进行转换
-    
+
     例如Enum = {AAA, BBBB, CCCC}
-    
+
     - 字符串"AAA"将转换为Enum(AAA)，数字值为0
     - 字符串"CCC"将转换为Enum(CCC)，数字值为2
-    
+
     _<b>转换规则2: 有索引编号</b>_
-    
+
     既可以通过字符串匹配转换，也可以通过索引编号匹配转换
-    
+
     例如Enum = {1- AAA, 5 - BBBB, 9 - CCCC}
-    
+
     - 字符串"AAA"将转换为Enum(1- AAA)，数字值为0
     - 字符串"5"将转换为Enum(5 - BBBB)，数字值为1
     - 字符串"9 - CCCC"将转换为Enum(9 - CCCC)，数字值为2

@@ -1,6 +1,6 @@
 # CSM INI-Variable Addon
 
-> [!NOTE] 
+> [!NOTE]
 > <b>CSM INI-Variable Addon</b>
 >
 > Configuration files are an essential component of application development. The CSM INI-Variable Addon provides simple and easy-to-use configuration file support for CSM, allowing users to configure applications without explicitly reading or writing configuration files.
@@ -17,7 +17,7 @@
 >
 > This library includes and utilizes a copy of [LabVIEW-Config](https://www.google.com/search?q=https://github.com/rcpacini/LabVIEW-Config) developed by [@rcpacini](https://github.com/rcpacini).
 
-> [!NOTE] 
+> [!NOTE]
 > <b>CSM INI-Variable Format</b>
 >
 > Format Definition: `${section.variable:defaultValue}`
@@ -32,7 +32,7 @@
 > - The `section` parameter is optional. If omitted, the default configuration section `SectionName=LabVIEW` is used.
 > - The default value is optional. If unspecified, it defaults to an empty string ("").
 
-> [!NOTE] 
+> [!NOTE]
 > <b>CSM INI-Variable Configuration File Path</b>
 >
 > - <b>Development State</b>: The first INI configuration file found in the Application Directory. If no configuration file exists, it defaults to `csm-app.ini`.
@@ -44,13 +44,13 @@
 >   - The name of the configuration file in the `[__include]` section is not critical, as long as the path is correct.
 >   - To avoid circular references, the same configuration file will be automatically ignored if loaded a second time.
 
-> [!NOTE] 
+> [!NOTE]
 > <b>CSM INI-Variable Multi-File Configuration Scenario</b>
 >
 > - When loading multiple files, configuration items in files loaded later will overwrite identical items in previously loaded files.
 > - When saving cache changes to a file, modifications are saved to the configuration file loaded last.
 
-> [!WARNING] <b>CSM INI-Variable Caching Mechanism Warning</b> 
+> [!WARNING] <b>CSM INI-Variable Caching Mechanism Warning</b>
 >
 > Note that since this library uses a global cache modification flag, frequent configuration changes will reduce the effectiveness of the caching mechanism in reading VIs. Therefore, this library is not recommended for scenarios requiring frequent configuration modifications.
 
@@ -64,8 +64,8 @@ Populates configuration variables within a string.
 
 <b><b>Reference Example</b></b>: `1. Used as parameters parsed by CSM.vi`.
 
-> - Ref: CSM INI-Variable Addon 
-> - Ref: CSM INI-Variable Format 
+> - Ref: CSM INI-Variable Addon
+> - Ref: CSM INI-Variable Format
 > - Ref: CSM INI-Variable Configuration File Path
 
 -- <b>Controls</b> --
@@ -145,7 +145,7 @@ Writes a configuration variable.
 
 <b><b>Reference Example</b></b>: `7. Write and Read Configuration.vi`.
 
-> - Ref: CSM INI-Variable Configuration File Path 
+> - Ref: CSM INI-Variable Configuration File Path
 > - Ref: CSM INI-Variable Caching Mechanism Warning
 
 -- <b>Controls</b> --

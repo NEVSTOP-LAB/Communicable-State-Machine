@@ -53,11 +53,11 @@
 ### CSM - Remove Duplicated Following Messages.vi
 
 -- <b>输入控件(Controls)</b> --
-- <b>Current State</b>: 
-- <b>Remaining States</b>: 
+- <b>Current State</b>:
+- <b>Remaining States</b>:
 
 -- <b>输出控件(Indicators)</b> --
-- <b>Remaining States Left</b>: 
+- <b>Remaining States Left</b>:
 - <b>Current State</b>: Controls
 - <b>Remaining States Left</b>: Indicators
 
@@ -77,7 +77,7 @@
 
 从数据类型描述字符串中LabVIEW定义的数据类型枚举。
 
-> [!NOTE] 
+> [!NOTE]
 > <b>多态VI(Polymorphic VI)选项</b>
 >
 > - CSM Data Type String to Enum(String).vi
@@ -156,7 +156,7 @@
 
 从Parse State Queue++ VI的输出Additional Information和Source CSM推断出触发当前状态的原因。
 
-结果可能是: 
+结果可能是:
 - LocalCall: 本地调用，非外部触发
 - Message: 外部消息触发
 - Broadcast: 由广播触发

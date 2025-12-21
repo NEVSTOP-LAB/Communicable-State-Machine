@@ -2,7 +2,7 @@
 
 ## CSM WatchDog Addon
 
-> [!NOTE] 
+> [!NOTE]
 > <b>CSM WatchDog实现的原理</b>
 >
 > LabVIEW VI退出时，会自动释放所有队列、事件等句柄资源。因此，您可以通过创建一个WatchDog线程，监控一个由主程序VI申请创建的队列资源，当这个队列资源在主VI退出后被释放时，触发WatchDog线程给还未退出的CSM模块发送 "Macro: Exit"，保证他们正常的退出。
@@ -30,13 +30,13 @@ CSM Watchdog线程，用于保证在主程序退出后，所有的异步启动�
 
 启动CSM Global Log文件记录后台线程，用于将应用中的全部运行记录保存到指定的文本文件中。
 
-> [!NOTE] 
+> [!NOTE]
 > <b>CSM File Logger实现的原理</b>
 >
 > 通过CSM 的 Global Log API，获取应用中的全部运行记录，并保存到指定的文本文件中，用于后期分析和错误定位。
 > 文件格式为文本文件，后缀名为.csmlog，可以通过记事本等文本编辑查询工具打开。
 
-> [!NOTE] 
+> [!NOTE]
 > <b>记录文件限制</b>
 >
 > 为了防止长期运行的软件导致记录文件过大，我们设置了记录文件的大小限制和文件数量限制。
@@ -75,12 +75,12 @@ CSM - Start File Logger VI中原本使用的线程VI。已废弃，目前使用C
 
 ## CSM Loop Support Addon
 
-> [!NOTE] 
+> [!NOTE]
 > <b>CSM LOOP Support设计的原因</b>
 >
 > 循环是状态机运行的基本单位，它会在状态机运行时不断地执行。用户可以自己通过逻辑来定义循环的条件，也可以使用CSM推荐的Loop Support Addon来定义循环。
 >
-> 通常定义的循环方案，可能会有以下的问题: 
+> 通常定义的循环方案，可能会有以下的问题:
 > - 如果在一个Case分支中使用循环实现，会导致状态机的卡死在此状态中，无法正常切换，也不能响应外部的消息；
 > - 如果通过在状态循环的最后一个状态中，继续插入下一个循环的状态，也会导致不能很好的响应外部的消息，且很不直观。
 >
@@ -92,7 +92,7 @@ CSM - Start File Logger VI中原本使用的线程VI。已废弃，目前使用C
 
 定义循环操作，通过标记-><loop>来标识重复循环的状态。这个循环也会在最后添加-><end>标记循环的结束。
 
-例如可以定义以下循环: 
+例如可以定义以下循环:
     DAQ: Initialize
     DAQ: Start
     DAQ: Continue Check -><loop> //在此循环中调用CSMLS - Append Continuous State VI重复采集，并等待一段时间，用于循环间隔
@@ -101,7 +101,7 @@ CSM - Start File Logger VI中原本使用的线程VI。已废弃，目前使用C
 
 在循环过程中，同步消息由于优先级高，因此会打断循环，立即执行同步消息。异步消息优先级低，会被出队列后加入 -><end>标记之后，此时经过DAQ: Continue Check中的CSMLS - Append Continuous State VI，会将 -><end>标记之后的状态提到队列前端，这样就会在循环过程中响应异步消息了。
 
-可以通过移除 -><loop>来表示循环已结束，两个API可供选择: 
+可以通过移除 -><loop>来表示循环已结束，两个API可供选择:
 - CSMLS - Remove Loop Tag and previous State(s) to Break VI: 移除-><loop>标记所在行以及之前的所有状态，用于跳出循环。
 - CSMLS - Remove Loop Tag to Break VI: 移除-><loop>标记所在行，用于跳出循环。
 
@@ -141,7 +141,7 @@ CSM - Start File Logger VI中原本使用的线程VI。已废弃，目前使用C
 
 通过移除<loop>标记和<loop>标记前的所有状态，达到停止循环。
 
-举例: 
+举例:
 
 假如CSM的消息队列中，还存在以下消息，此时执行当前API操作，将移除注释所在的消息。
 
@@ -162,7 +162,7 @@ CSM - Start File Logger VI中原本使用的线程VI。已废弃，目前使用C
 
 通过移除<loop>标记，达到停止循环。
 
-举例: 
+举例:
 
 假如 CSM 的消息队列中，还存在以下消息，此时执行当前API操作，将移除注释所在的消息。
 

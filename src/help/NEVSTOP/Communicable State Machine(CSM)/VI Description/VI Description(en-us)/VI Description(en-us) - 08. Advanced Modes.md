@@ -1,13 +1,13 @@
 # CSM API
 
-> [!NOTE] 
+> [!NOTE]
 > <b>Name Concatenation API</b>
 >
 > This VI only manipulates the module name string and has no actual functionality. Therefore, once you are familiar with the CSM rules, you can directly enter name string and rule symbols without calling this API.
 
 ## System-Level Module API
 
-> [!NOTE] 
+> [!NOTE]
 > <b>CSM System-Level Module</b>
 >
 > CSM functions of a system-level module are almost identical to those of a normal module. The only difference is that the CSM - List Modules VI does not list system-level modules. Therefore, a system-level module is typically used to implement functional modules running in the background. When processing the operational logic of normal modules in a unified manner, interference with these background running logics can be avoided. CSM system-level modules usually start with ".", for example: `.MainApp` and `.BackgroundTask`. The "." is part of the name, so operations like message sending and subscription must include the "." in the name. For example, you can name the main program loop `.MainApp`. You can then use the CSM - List Modules VI to get a list of all normal modules without listing `.MainApp`. If the main program needs to exit all other modules, you can send "Macro: Exit" to the results of the CSM - List Modules VI. This allows you to exit all normal modules without affecting the operation of the system-level module.
@@ -20,7 +20,7 @@ Marks a module as a system-level module by adding "." before the input string. F
 
 <b>Reference Example</b>: `0. Base Concepts\7. System-Level Module.vi`.
 
-> - Ref: Name Concatenation API 
+> - Ref: Name Concatenation API
 > - Ref: CSM System-Level Module
 
 -- <b>Controls</b> --
@@ -31,7 +31,7 @@ Marks a module as a system-level module by adding "." before the input string. F
 
 ## Submodule
 
-> [!NOTE] 
+> [!NOTE]
 > <b>CSM Submodule</b>
 >
 > There are no strict submodules in CSM. The "." in the module name is only used to mark the logical relationship between different modules. From an actual execution perspective, each module is independent and has no hierarchical relationship. For example, modules "ModuleA" and "ModuleA.SubmoduleB" are two different modules. From the code logic perspective, they are completely independent and do not interfere with each other. However, the CSM - List Submodules VI can be used to retrieve all logical submodules of "ModuleA", including "ModuleA.SubmoduleB".
@@ -53,7 +53,7 @@ Constructs a submodule name.
 
 ## Work Mode API
 
-> [!NOTE] 
+> [!NOTE]
 > <b>CSM Worker Mode</b>
 >
 > A CSM module implements Worker Mode by instantiating multiple instances, appending "#" to the requested name, and sharing the same message queue.
@@ -64,18 +64,18 @@ Constructs a submodule name.
 > <b>Behavior</b>: External callers can consider the Worker Agent as a single CSM module capable of message communication, state registration, and so on. Internally, an idle Worker retrieves messages from the Worker Agent message queue and processes them. Therefore, Worker Mode enables concurrent message processing for a CSM module.
 >
 > ```
-> <b>Example</b>: 
-> 
-> // Request module name as `module#`, where `module` is the Worker Agent name. Instantiate two instances. Their names might be: 
-> 
-> // - `module#59703F3AD837` 
-> 
-> // - `module#106A470BA5EC` 
-> 
-> // You cannot communicate directly with a Worker. You must communicate with the Worker Agent. For example: 
-> 
-> `csm message >> arguments -@ module` // Synchronous message. An idle Worker will process this message. 
-> 
+> <b>Example</b>:
+>
+> // Request module name as `module#`, where `module` is the Worker Agent name. Instantiate two instances. Their names might be:
+>
+> // - `module#59703F3AD837`
+>
+> // - `module#106A470BA5EC`
+>
+> // You cannot communicate directly with a Worker. You must communicate with the Worker Agent. For example:
+>
+> `csm message >> arguments -@ module` // Synchronous message. An idle Worker will process this message.
+>
 > `csm message >> arguments -> module` // Asynchronous message. An idle Worker will process this message.
 > ```
 >
@@ -91,7 +91,7 @@ Marks a module as a Worker Mode module by adding "#" after the CSM name.
 
 <b>Reference Example</b>: "4. Advance Examples\1. Action Workers Example".
 
-> - Ref: Name Concatenation API 
+> - Ref: Name Concatenation API
 > - Ref: CSM Worker Mode
 
 -- <b>Controls</b> --
@@ -102,7 +102,7 @@ Marks a module as a Worker Mode module by adding "#" after the CSM name.
 
 ## Chain of Responsibility API
 
-> [!NOTE] 
+> [!NOTE]
 > <b>CSM Chain of Responsibility Mode</b>
 >
 > Multiple CSM modules form a complete module via Chain of Responsibility Mode by appending "$" to the requested name to form a chain for processing transactions.
@@ -139,7 +139,7 @@ Concatenates the name of a Chain of Responsibility Mode module, using "$" as the
 
 <b>Reference Example</b>: `4. Advance Examples\2. Chain of Responsibility Example`.
 
-> - Ref: CSM Chain of Responsibility Mode 
+> - Ref: CSM Chain of Responsibility Mode
 > - Ref: Name Concatenation API
 
 -- <b>Controls</b> --
@@ -164,7 +164,7 @@ For a Chain of Responsibility Mode node named `module$1`, the result is `module`
 
 ## Multi-Loop Support
 
-> [!NOTE] 
+> [!NOTE]
 > <b>CSM Multi-Loop Mode</b>
 >
 > In some scenarios, it is suitable to use multiple loops to constitute the same CSM module. For example:

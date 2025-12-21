@@ -1,6 +1,6 @@
 # CSM API String Addon
 
-> [!NOTE] 
+> [!NOTE]
 > <b>API String Parameter Support</b>
 >
 > API String parameter support is used to enhance the API parameter functionality of the Communicable State Machine (CSM). API String supports passing various data types in plain text format and is specifically optimized for manual input experiences. API String does not define an argument type. The result obtained via the CSM - Argument Type VI is empty, and it is typically handled in the default case. The following are supported data types:
@@ -16,35 +16,35 @@
 > - Enum
 > - Array
 > - Cluster
-> - Other types (represented using CSM-Hexstr) 
+> - Other types (represented using CSM-Hexstr)
 >
 >   For more details, visit: `https://github.com/NEVSTOP-LAB/CSM-API-String-Arguments-Support`.
 >
 >   You can also refer to the examples. All data types have detailed descriptions and examples.
 
-> [!NOTE] 
+> [!NOTE]
 > <b>Default Strings for TRUE Value</b>
 >
-> Supports `1`, `Active`, `Enable`, `Non-null`, `On`, `T`, `True`, `valid`, `yes` 
+> Supports `1`, `Active`, `Enable`, `Non-null`, `On`, `T`, `True`, `valid`, `yes`
 >
 > Case insensitive.
 
-> [!NOTE] 
+> [!NOTE]
 > <b>Default Strings for FALSE Value</b>
 >
-> Supports `0`, `Disable`, `F`, `False`, `Inactive`, `Invalid`, `No`, `Off`, `Void`, `null` 
+> Supports `0`, `Disable`, `F`, `False`, `Inactive`, `Invalid`, `No`, `Off`, `Void`, `null`
 >
 > Case insensitive.
 
-> [!NOTE] 
+> [!NOTE]
 > <b>Default Floating-point Format</b>
 >
 > The default floating-point format is `%.6p`.
 
-> [!NOTE] 
+> [!NOTE]
 > <b>Indexed Enum</b>
 >
-> Format: `[Index Number][Separator][Enum String]`. 
+> Format: `[Index Number][Separator][Enum String]`.
 >
 > The index number supports multiple numeric representations.
 >
@@ -56,7 +56,7 @@
 >
 >  `0x01 -- boolean | 0x02 -- string | 0x04 -- dbl | 0x08 -- number`
 >
-> Example of Index Number using `__` separator: 
+> Example of Index Number using `__` separator:
 >
 > `0b0001 __ boolean | 0b0100 __ dbl | 0b1000 __ number`
 
@@ -66,7 +66,7 @@
 
 Determines whether the data type is a conversion data type supported by API String.
 
-> - Ref: API String Parameter Support 
+> - Ref: API String Parameter Support
 > - Ref: CSM HEXSTR Format Argument
 
 -- <b>Controls</b> --
@@ -126,7 +126,7 @@ Queries a specified data item within cluster data and converts it to API String 
 
 Adds custom boolean strings to the API String boolean parsing list and returns the updated list.
 
-> - Ref: Default Strings for TRUE Value 
+> - Ref: Default Strings for TRUE Value
 > - Ref: Default Strings for FALSE Value
 
 -- <b>Controls</b> --
@@ -141,7 +141,7 @@ Adds custom boolean strings to the API String boolean parsing list and returns t
 
 Removes custom boolean strings from the API String boolean parsing list and returns the updated list.
 
-> - Ref: Default Strings for TRUE Value 
+> - Ref: Default Strings for TRUE Value
 > - Ref: Default Strings for FALSE Value
 
 -- <b>Controls</b> --
@@ -156,7 +156,7 @@ Removes custom boolean strings from the API String boolean parsing list and retu
 
 Lists all currently available boolean value strings.
 
-> - Ref: Default Strings for TRUE Value 
+> - Ref: Default Strings for TRUE Value
 > - Ref: Default Strings for FALSE Value
 
 -- <b>Indicators</b> --
@@ -208,7 +208,7 @@ Note:
 
 Converts a string to a boolean value. Supports multiple representations for TRUE/FALSE. Custom TRUE/FALSE strings can be added via the API String - Add Boolean Strings VI.
 
-> - Ref: Default Strings for TRUE Value 
+> - Ref: Default Strings for TRUE Value
 > - Ref: Default Strings for FALSE Value
 
 -- <b>Controls</b> --
@@ -295,7 +295,7 @@ Converts an enum to a numeric value. Supports indexed enum types. When the enum 
 
 Converts a numeric value to an indexed enum.
 
-Rule 1: If an index number is matched, use that index directly. 
+Rule 1: If an index number is matched, use that index directly.
 
 Rule 2: If no index number is matched, use the numeric value as the enum index.
 

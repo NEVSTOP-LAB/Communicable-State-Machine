@@ -2,7 +2,7 @@
 
 ## 管理接口(Management API)
 
-> [!NOTE] 
+> [!NOTE]
 > <b>CSM工作模式</b>
 >
 > - Stand-alone: 独立工作模式。不输入模块名称，将自动生成一个随机ID，用于标识模块。
@@ -10,10 +10,10 @@
 > - Action Worker: 协作者模式。在模块名称后添加“#”，以标记此模块为工作者，该模块与具有相同名称的其他工作者共享相同的消息队列。
 > - Chain Node: 链式节点。在模块名称后添加“$”，以标记此模块为链式节点，同一个链上的消息将依次传递，直到某个节点处理消息。
 
-> [!NOTE] 
+> [!NOTE]
 > <b>CSM优先级队列设计</b>
 >
-> CSM后台实质上依然使用LabVIEW队列来实现模块间通讯，但它使用了两个队列来分别存储不同优先级的消息: 
+> CSM后台实质上依然使用LabVIEW队列来实现模块间通讯，但它使用了两个队列来分别存储不同优先级的消息:
 > - 普通优先级队列: 用于传递异步消息和信号广播
 > - 高优先级消息队列: 用于传递同步消息和中断广播
 > 高优先级队列中的消息会被优先处理，普通优先级队列中的消息则会在高优先级队列中的消息处理完成后才会被处理。
@@ -31,7 +31,7 @@
 
 ### CSM - List Modules.vi
 
-列出所有活动的CSM模块。该VI具有两组选项: 
+列出所有活动的CSM模块。该VI具有两组选项:
 - 范围选项用于标记是否罗列系统级模块，默认不列出，可选择 普通/仅系统级模块/所有模块。
 - 是否包含节点选项针对协作者模式和责任链模式，当包括节点时，将同时列出节点，否则仅列出模块，默认不包含节点。
 
@@ -39,7 +39,7 @@
 
 -- <b>输入控件(Controls)</b> --
 - <b>Scope (Normal)</b>: 范围选项，可选择 普通/仅系统级模块/所有模块。
-- <!-- 软件里叫"With Instance? (F)" ?--><b>With Nodes? (F)</b>: 是否包含节点，针对协作者模式和责任链模式，当包括节点时，将同时列出节点，否则仅列出模块，默认不包含节点。
+- <b>With Nodes? (F)</b>: 是否包含节点，针对协作者模式和责任链模式，当包括节点时，将同时列出节点，否则仅列出模块，默认不包含节点。
 
 -- <b>输出控件(Indicators)</b> --
 - <b>Module Names</b>: CSM模块名称列表。
@@ -49,17 +49,17 @@
 列出当前分组或模块的所有子模块。<b>Recursive? (T)</b>为True时，将递归列出所有层级的子模块，否则仅列出直接下一级子模块。
 
     举例: 系统存在Level1.Level2A、Level1.Level2A.Node1、Level1.Level2A.Node2、Level1.Level2B.Node1、Level1.Level2B.Node2这5个模块，
-     - 当<b>Parent Name</b>为"Level1"时: 
+     - 当<b>Parent Name</b>为"Level1"时:
         <b>Recursive? (T)</b>为True时，将递归列出所有层级的子模块，包括Level1.Level2A、Level1.Level2A.Node1、Level1.Level2A.Node2、Level1.Level2B.Node1、Level1.Level2B.Node2
         <b>Recursive? (T)</b>为False时，仅列出直接下一级子模块，仅包括Level1.Level2A，注意Level1.Level2B不是一个模块实例，因此并不会被包含在结果中
 
-> [!NOTE] 
+> [!NOTE]
 > 子模块只对普通CSM模块有效，对协作者模式或责任链模式的模块无效。
 
 > - Ref: CSM子模块
 
 -- <b>输入控件(Controls)</b> --
-- <!-- 软件里面是"CSM Name"? --><b>Parent Name</b>: 分组或父节点名称。
+- <b>Parent Name</b>: 分组或父节点名称。
 - <b>Recursive? (T)</b>: 是否递归列出所有层级的子模块，默认为 True。
 
 -- <b>输出控件(Indicators)</b> --
@@ -68,12 +68,12 @@
 
 ### CSM - Module VI Reference.vi
 
-获取输入模块的VI引用。VI逻辑: 
+获取输入模块的VI引用。VI逻辑:
 - 该VI通过发送"VI Reference"同步消息，查询获取CSM模块的VI引用，因此它具有与发送同步消息VI相类似的输入参数。
 - 该VI在后台缓存了本次主程序运行查询过的CSM模块的VI引用，当再次查询相同的模块且查询到的VI引用依然有效时，将直接返回缓存的VI引用，而不是重新发送同步消息查询。
 - 如果需要强制重新查询模块的VI引用，可设置<b>Force? (F)</b>为True。
 
-对于特殊运行模式的CSM的行为: 
+对于特殊运行模式的CSM的行为:
 - 协作者模式: 返回处理"VI Reference"消息的工作者节点的VI引用。
 - 责任链模式: 返回责任链模式的CSM模块的第一个节点的VI引用。
 - 系统级模块: 与普通模式CSM相同，返回系统级模块的VI引用。
@@ -91,7 +91,7 @@
 
 设置CSM程序全局的同步调用超时时间，单位为毫秒。当输入为-2时，将不会修改全局超时时间，返回值为当前全局超时时间；当输入为其他正值时，将修改全局超时时间为该值，返回新的全局超时时间
 
-> [!NOTE] 
+> [!NOTE]
 > <b>CSM同步消息全局超时</b>
 >
 > - CSM 模块间通信，或使用同步消息发送VI时，默认的超时时间为-2，此时将使用全局设置的超时时间
@@ -104,7 +104,7 @@ CSM模块/API调用时，默认的超时时间为-2，此时将使用全局设�
 - <b>TMO For Sync-Rep (ms) In</b>: 全局超时时间输入，-2表示不修改全局超时时间，其他正值表示修改全局超时时间为该值。
 
 -- <b>输出控件(Indicators)</b> --
-- <!-- 软件里的名字是"TMO For Sync-Rep (ms)" --><b>TMO For Sync-Rep (ms) Out</b>: 当前全局超时时间。
+- <b>TMO For Sync-Rep (ms) Out</b>: 当前全局超时时间。
 
 ### CSM - Module Status.vi
 
@@ -116,11 +116,10 @@ CSM模块/API调用时，默认的超时时间为-2，此时将使用全局设�
 - <b>CSM Name</b>: CSM模块名称。
 
 -- <b>输出控件(Indicators)</b> --
-- <!-- 软件里的名字是"CSM Name (Dup)" --><b>CSM Name (dup)</b>: 输入的CSM模块名称副本。
+- <b>CSM Name (Dup)</b>: 输入的CSM模块名称副本。
 - <b>Mode</b>: 返回模块的工作模式。
-- <!-- 这是原来的"#Instance"吗？--><b>#Nodes</b>: 协作者模式或责任链模式下的节点数量。
-- <!-- 软件里没看到这个输出。--><b>#msg to be processed</b>: CSM消息队列中的待处理消息个数。
-- <b>#Elements In Queue</b>: CSM消息队列中的元素个数。
+- <b>#Nodes</b>: 协作者模式或责任链模式下的节点数量。
+- <b>#Elements In Queue</b>:  CSM消息队列中的待处理消息个数。
 
 ### CSM - Flush Queue.vi
 
@@ -128,7 +127,7 @@ CSM模块/API调用时，默认的超时时间为-2，此时将使用全局设�
 
 > - Ref: CSM优先级队列设计
 
-> [!WARNING] 
+> [!WARNING]
 > CSM模块通常不建议使用该VI。CSM建议通过设计避免消息在模块中的堆积，因此建议通过设计避免在CSM模块中使用该VI清空后台的消息队列
 
 -- <b>输入控件(Controls)</b> --
@@ -145,15 +144,15 @@ CSM模块/API调用时，默认的超时时间为-2，此时将使用全局设�
 
 该VI用于过滤CSM状态队列中的特定状态
 
-> [!WARNING] 
+> [!WARNING]
 > CSM模块通常不建议使用该VI。CSM建议通过设计避免消息在模块中的堆积，因此建议通过设计避免清空JKISM字符串队列。
 > 但如果必须清空JKISM字符串队列，建议通过调用该组VI清空JKISM字符串队列，而非使用字符串操作
 
-> [!NOTE] 
+> [!NOTE]
 > <b>多态VI(Polymorphic VI)选项</b>
 >
 > - CSM - Filter Local States.vi: 过滤本地状态
-> - CSM - Filter Messges.vi: 过滤所有类型的消息
+> - CSM - Filter Messages.vi: 过滤所有类型的消息
 > - CSM - Filter Sync Messages.vi: 过滤同步消息
 > - CSM - Filter Async Messages.vi: 过滤异步消息
 > - CSM - Filter Async without Reply Messages.vi: 过滤异步无回复消息
@@ -168,7 +167,7 @@ CSM模块/API调用时，默认的超时时间为-2，此时将使用全局设�
 该VI用于过滤CSM状态队列中的本地状态
 
 -- <b>输入控件(Controls)</b> --
-- <!-- 软件里是"State (S) In ("")"。请确认。--><b>States In</b>: 待过滤的整段状态描述字符串。
+- <b>States In</b>: 待过滤的整段状态描述字符串。
 
 -- <b>输出控件(Indicators)</b> --
 - <b>States Out</b>: 过滤后的状态描述字符串。

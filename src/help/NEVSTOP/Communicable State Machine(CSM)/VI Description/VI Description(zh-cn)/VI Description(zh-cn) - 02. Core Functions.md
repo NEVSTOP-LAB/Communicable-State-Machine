@@ -22,7 +22,7 @@
 - <b>Remaining States</b>: 拼接后的所有状态及参数。
 - <b>Current State</b>: 将执行的下一个当前状态。
 - <b>Arguments</b>: 返回可能在当前状态字符串中使用的任何参数，这些参数位于“>>”字符之后。<b>注意: </b>参数变量不得包含任何不可打印的字符，如换行符或回车符。
-- <b>Additional Information</b>: 额外的补充信息。广播触发的状态中，该信息包含广播的名称、参数。<!-- 软件里名字是Response Source Message -->
+- <b>Additional Information</b>: 额外的补充信息。广播触发的状态中，该信息包含广播的名称、参数。
 - <b>Source CSM</b>: 如果<b>Current State</b>由外部发送，则这是源CSM模块名称。
 
 
@@ -37,21 +37,21 @@
 > - Ref: CSM 消息格式解析
 
       - <B>例如: </B>
-    
+
       发送给本地状态机时，<b>Target Module ("")</b>应设为空
-    
+
             If State = A并且没有参数，那么<b>State with Arguments</b> = A
             If State = A , Arguments = B那么 <b>State with Arguments</b> = A >> B
-    
+
       在发送给其他CSM的情况下，假设<b>Target Module ("")</b>的名称为"Target"。
-    
-      - 同步调用(发送消息后等待返回): 
-    
+
+      - 同步调用(发送消息后等待返回):
+
             If State = A并且没有参数，那么<b>State with Arguments</b> = A -@target
             If State = A , Arguments = B那么 <b>State with Arguments</b> = A >> B -@target
-    
-      - 异步调用(发送消息后将进入"Async Message Posted"状态，当外部模块处理完毕后，本地模块将收到"Async Response"消息): 
-    
+
+      - 异步调用(发送消息后将进入"Async Message Posted"状态，当外部模块处理完毕后，本地模块将收到"Async Response"消息):
+
             If State = A并且没有参数，那么<b>State with Arguments</b> = A ->target
             If State = A , Arguments = B那么<b>State with Arguments</b> = A >> B ->target
 
@@ -68,24 +68,25 @@
 
 该VI用于构建CSM消息字符串及操作字符串。
 
-> [!NOTE] 
+> [!NOTE]
 > <b>消息拼接API</b>
 >
 > 该类型API不会直接发送消息，仅用于拼接消息字符串。需将字符串并入CSM的状态队列后，在Parse State Queue++ VI中发送消息并执行操作。
 > 在熟悉CSM规则的情况下，可不必使用此类API，直接在字符串中键入对应的消息字符串或操作字符串。
 
-> [!NOTE] 
+> [!NOTE]
 > <b>多态VI(Polymorphic VI)选项</b>
 >
 > - Build Message with Arguments(Auto Check).vi: 根据输入的消息符号，自动拼接消息字符串。
 > - Build Asynchronous Message with Arguments.vi: 拼接生成CSM异步消息字符串，消息类型符号为"->"。
 > - Build No-Reply Asynchronous Message with Arguments.vi: 拼接生成CSM异步不等待返回消息字符串，消息类型符号为"->|"。
 > - Build Synchronous Message with Arguments.vi: 拼接生成CSM同步消息字符串，消息类型符号为"-@"。
-> - <!-- 以下4个VI的名字和后面的实际标题名字不一致。-->Build Interrupt Status Message.vi: 拼接生成CSM中断广播字符串。
-> - Build Normal Status Message.vi: 拼接生成CSM信号广播字符串。
-> - Build Register Status Message.vi: 拼接生成CSM注册状态操作字符串。
-> - Build Unregister Status Message.vi: 拼接生成CSM注销状态操作字符串。
+> - Build interrupt Broadcast Message: 拼接生成CSM中断广播字符串。
+> - Build Normal Broadcast Message.vi: 拼接生成CSM信号广播字符串。
+> - Build Register Message.vi: 拼接生成CSM注册状态操作字符串。
+> - Build Unregister Message.vi: 拼接生成CSM注销状态操作字符串。
 > - CSM - Replace Substitution Marks in Messages.vi: 替换消息字符串中的占位符。
+> - CSM - Replace Mark with String Array.vi: 将单条状态字符串中的标签替换为数组字符串，并合并成描述一组状态的符串。
 
 > - Ref: CSM 模块间通信类型
 
@@ -106,7 +107,7 @@
 
 #### Build Synchronous Message with Arguments.vi
 
-拼接生成CSM同步消息字符串，消息类型符号为"-@"，例如: 
+拼接生成CSM同步消息字符串，消息类型符号为"-@"，例如:
 
       Message >> Arguments -@ Target
 
@@ -124,7 +125,7 @@
 
 #### Build Asynchronous Message with Arguments.vi
 
-拼接生成CSM异步消息字符串，消息类型符号为"->"，例如: 
+拼接生成CSM异步消息字符串，消息类型符号为"->"，例如:
 
       Message >> Arguments -> Target
 
@@ -142,7 +143,7 @@
 
 #### Build No-Reply Asynchronous Message with Arguments.vi
 
-拼接生成CSM异步无返回消息字符串，消息类型符号为"->|"，例如: 
+拼接生成CSM异步无返回消息字符串，消息类型符号为"->|"，例如:
 
       Message >> Arguments ->| Target
 
@@ -158,9 +159,9 @@
 -- <b>输出控件(Indicators)</b> --
 - <b>CSM Message String</b>: 拼接生成的CSM消息字符串。
 
-#### Build Status Broadcast Message.vi<!-- 这是原来的Build Normal Status Message.vi吗？ -->
+#### Build Status Broadcast Message.vi
 
-拼接普通状态消息字符串，消息格式如下: 
+拼接普通状态消息字符串，消息格式如下:
 
       Status >> Arguments -><status>
       //以下字符串为等效操作，仅为了更容易键入记忆，定义了更多的操作字符。
@@ -176,9 +177,9 @@
 -- <b>输出控件(Indicators)</b> --
 - <b>CSM Message String</b>: 拼接生成的CSM消息字符串。
 
-#### Build Interrupt Broadcast Message.vi<!-- 这是原来的Build Interrupt Status Message.vi吗？ -->
+#### Build Interrupt Broadcast Message.vi
 
-拼接中断状态消息，消息格式如下: 
+拼接中断状态消息，消息格式如下:
 
       Status >> Arguments -><interrupt>
 
@@ -191,15 +192,15 @@
 -- <b>输出控件(Indicators)</b> --
 - <b>CSM Message String</b>: 拼接生成的CSM消息字符串。
 
-#### Build Register Message.vi<!-- 这是原来的Build Register Status Message.vi吗？ -->
+#### Build Register Message.vi
 
-拼接注册状态操作消息字符串，消息格式如下: 
+拼接注册状态操作消息字符串，消息格式如下:
 
       //[source-state]@[source-module] >> [response-message]@[response-module] -><register>
       status @ Source >> API @ Target -><register>
-    
+
       举例: 将下载器模块的下载完毕消息，绑定到播放器模块的开始播放API
-    
+
             //下载器模块的下载完毕消息，绑定到播放器模块的开始播放API
             DownloadFinished@Downloader >> StartPlay@Player -><register>
             //当播放器模块中执行消息时，Player 可缺省
@@ -218,15 +219,15 @@
 -- <b>输出控件(Indicators)</b> --
 - <b>CSM Message String</b>: 拼接生成的CSM消息字符串。
 
-#### Build Unregister Message.vi<!-- 这是原来的Build Unregister Status Message.vi吗？ -->
+#### Build Unregister Message.vi
 
-拼接取消注册状态操作消息字符串，消息格式如下: 
+拼接取消注册状态操作消息字符串，消息格式如下:
 
       //[source-state]@[source-module] >> [response-message]@[response-module] -><unregister>
       status @ Source >> API @ Target -><unregister>
-    
+
       举例: 取消下载器模块的下载完毕消息，绑定到播放器模块的开始播放API
-    
+
             //下载器模块的下载完毕消息，绑定到播放器模块的开始播放API
             DownloadFinished@Downloader >> StartPlay@Player -><unregister>
             //当播放器模块中执行消息时，Player 可缺省
@@ -245,24 +246,24 @@
 
 #### CSM - Replace Substitution Marks in Messages.vi
 
-该VI主要为了能够便捷地编辑多条CSM消息字符串，提供批量替换标记的功能。有4个标记可以替换: 
+该VI主要为了能够便捷地编辑多条CSM消息字符串，提供批量替换标记的功能。有4个标记可以替换:
 
 - <param> 标记: 通常表示相同的参数
 - <target> 标记: 通常表示相同的目标
 - <1> 标记: 表示自定义标记1
 - <2> 标记: 表示自定义标记2
 
-      例如: 接线端 <target> 连接了字符串为 "DAQDevice"，<b>States with Replace Token</b> 字符串为: 
-      
+      例如: 接线端 <target> 连接了字符串为 "DAQDevice"，<b>States with Replace Token</b> 字符串为:
+
             ``` text
             Initialize -@ <target>
             Configure -@ <target>
             Read -@ <target>
             Close -@ <target>
             ```
-      
-      <b>States</b>输出为: 
-      
+
+      <b>States</b>输出为:
+
             ``` text
             Initialize -@ DAQDevice
             Configure -@ DAQDevice
@@ -283,15 +284,15 @@
 - <b>States</b>: 替换后的状态字符串。
 
 
-### CSM - Replace Mark with String Array.vi
+#### CSM - Replace Mark with String Array.vi
 
 将单条状态字符串中的标签替换为数组字符串，并合并成描述一组状态的符串。
 
     例如: 对于 `Draw >> <1> -@ Painter`
-    
+
     <b>Tag</b> 应该选择 <1>
-    
-    输入数组[Line,Circle,Rectangle]，可以得到: 
+
+    输入数组[Line,Circle,Rectangle]，可以得到:
         Draw >> Line -@ Painter
         Draw >> Circle -@ Painter
         Draw >> Rectangle -@ Painter
@@ -304,14 +305,15 @@
 -- <b>输出控件(Indicators)</b> --
 - <b>States</b>:合并后的状态字符串
 
+
 ### CSM - Broadcast Status Change.vi
 
-向系统广播状态更改，已注册状态的CSM模块将接收此状态更改，例如: 
+向系统广播状态更改，已注册状态的CSM模块将接收此状态更改，例如:
 
       //广播状态更改
       Status >> Arguments -><broadcast>
 
-> [!NOTE] 
+> [!NOTE]
 > <b>CSM 的状态队列操作API</b>
 >
 > 该类型API不会直接发送消息，只是拼接消息字符串。在Parse State Queue++.vi中发送消息、执行操作。
@@ -325,19 +327,21 @@
 -- <b>输出控件(Indicators)</b> --
 - <b>Remaining States</b>: 拼接后的所有状态及参数。
 
+
 ### Add State(s) to Queue By BOOL++.vi
 
 将CSM消息字符串并入CSM消息队列中。提供了TRUE/FALSE两种状态的字符串选项，能够避免使用条件结构，提高代码可读性和编程效率。
 
 > - Ref: CSM 的状态队列操作API
 
-> [!NOTE] 
+> [!NOTE]
 > <b>多态VI(Polymorphic VI)选项</b>
 >
 > - Add State(s) to Queue By BOOL(Element).vi
 > - Add State(s) to Queue By BOOL(Array Left).vi
 > - Add State(s) to Queue By BOOL(Array Right).vi
 > - Add State(s) to Queue By BOOL(Array All).vi
+
 
 #### Add State(s) to Queue By BOOL(Element).vi
 

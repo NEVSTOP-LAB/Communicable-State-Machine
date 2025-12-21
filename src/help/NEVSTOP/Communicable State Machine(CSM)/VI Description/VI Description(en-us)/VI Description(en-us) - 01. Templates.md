@@ -2,7 +2,7 @@
 
 ## Templates
 
-> [!NOTE] 
+> [!NOTE]
 > <b>CSM Naming Rules</b>
 >
 > - CSM module name must be unique. Otherwise, CSM enters a "Critical Error" state.
@@ -12,13 +12,13 @@
 > - System-Level Module Rule: If the input module name starts with ".", the module is a system-level module. Under default settings, such modules are not listed by the CSM - List Modules VI and are  suitable for instantiating modules that run in the background.
 > - Submodule Rule: "." is also allowed in a module name to separate the module name into multiple parts. CSM does not have strict rules for submodules. The "." in the module name only marks the logical relationship between different modules. From an execution perspective, they are considered independent modules. The only difference is that you can obtain a list of logical submodules via the CSM - List Submodules VI.
 
-> [!NOTE] 
+> [!NOTE]
 > <b>CSM Initialize State ("Macro: Initialize")</b>
 >
 > - The default value is "Macro: Initialize", which is consistent with the JKISM state machine.
 > - This state is used to initialize the state machine of a CSM module. A CSM module will process externally sent messages only after completing this macro state.
 
-> [!NOTE] 
+> [!NOTE]
 > <b>CSM Exit State ("Macro: Exit")</b>
 >
 > - The default value is "Macro: Exit", which is consistent with the JKISM state machine.
@@ -28,8 +28,8 @@
 
 A template for creating a CSM module with a user interface. This template includes a user Event Structure for responding to user actions.
 
-> - Ref: CSM Naming Rules 
-> - Ref: CSM Initialize State 
+> - Ref: CSM Naming Rules
+> - Ref: CSM Initialize State
 > - Ref: CSM Exit State
 
 -- <b>Controls</b> --
@@ -39,8 +39,8 @@ A template for creating a CSM module with a user interface. This template includ
 
 A template for creating a CSM module without a user interface. This is the most commonly used CSM template. The template also includes an event response loop used for exiting the module during debugging. Remove this loop after debugging is complete.
 
-> - Ref: CSM Naming Rules 
-> - Ref: CSM Initialize State 
+> - Ref: CSM Naming Rules
+> - Ref: CSM Initialize State
 > - Ref: CSM Exit State
 
 -- <b>Controls</b> --
@@ -50,8 +50,8 @@ A template for creating a CSM module without a user interface. This is the most 
 
 Compact code template for creating a CSM module without a user interface. The functionality of this template is identical to the CSM Module Template VI.
 
-> - Ref: CSM Naming Rules 
-> - Ref: CSM Initialize State 
+> - Ref: CSM Naming Rules
+> - Ref: CSM Initialize State
 > - Ref: CSM Exit State
 
 -- <b>Controls</b> --
@@ -61,8 +61,8 @@ Compact code template for creating a CSM module without a user interface. The fu
 
 Compact code template used to create a CSM module with a user interface. This template includes a user Event Structure for responding to user actions. The functionality of this template is identical to the CSM User Interface(UI) Module Template VI.
 
-> - Ref: CSM Naming Rules 
-> - Ref: CSM Initialize State 
+> - Ref: CSM Naming Rules
+> - Ref: CSM Initialize State
 > - Ref: CSM Exit State
 
 -- <b>Controls</b> --
@@ -79,8 +79,8 @@ The user Event Structure loop for user operations is created via the CSM - Flood
 
 Refer to the following example  `[CSM-Example]\4. Advance Examples\CSMLS - Continuous Loop in CSM Example.vi` for demonstration of using this VI.
 
-> - Ref: CSM Naming Rules 
-> - Ref: CSM Initialize State 
+> - Ref: CSM Naming Rules
+> - Ref: CSM Initialize State
 > - Ref: CSM Exit State
 
 -- <b>Controls</b> --
