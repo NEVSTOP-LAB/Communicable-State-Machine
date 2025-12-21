@@ -31,6 +31,9 @@
 		<Item Name="DocNote.ctl" Type="VI" URL="../_Typedef/DocNote.ctl"/>
 	</Item>
 	<Item Name="api" Type="Folder">
+		<Item Name="BatchEditorAction" Type="Folder">
+			<Item Name="BEditor-PopoulateVIHelp.vi" Type="VI" URL="../BEditor-PopoulateVIHelp.vi"/>
+		</Item>
 		<Item Name="Single" Type="Folder">
 			<Item Name="Populate Single Example Description.vi" Type="VI" URL="../Populate Single Example Description.vi"/>
 			<Item Name="Populate Single VI Help.vi" Type="VI" URL="../Populate Single VI Help.vi"/>
