@@ -161,7 +161,7 @@
 >
 > 默认的优先级由发送方定义，通过广播格式中的广播类型(Broadcast Type)进行定义。
 >
->       // 发送方可以定义广播的优先级
+>        // 发送方可以定义广播的优先级
 >        ModuleInternalChange >> Aruguments -> <status> // 低优先级
 >       ModuleInternalChange >> Aruguments -> <interrupt> // 高优先级
 >
@@ -207,8 +207,8 @@
 > - 内部添加：CSM模块内部添加的规则，会随着CSM模块的退出而自动删除，无需手动取消订阅。
 >   - 只有使用语句 "-<register>" 添加的规则，且API未指明模块名称时，才为内部添加。
 >
-> ```
+>```
 > 例如：
 > status@sourceModule >> API@TargetModule -><register> // 外部添加
 > status@sourceModule >> API -><register> // 内部添加
->  ```
+>```
