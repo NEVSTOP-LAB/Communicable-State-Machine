@@ -218,6 +218,7 @@
 - <b>Source CSM (* as Default)</b>: 发出状态的CSM模块名称。
 - <b>Status</b>: 注册的状态。
 - <b>API (If "", Same As "Status")</b>: 订阅状态模块响应的API名称。
+- <b>Priority (No Change)</b>: 订阅后的广播优先级。
 
 -- <b>输出控件(Indicators)</b> --
 - <b>CSM Message String</b>: 拼接生成的CSM消息字符串。

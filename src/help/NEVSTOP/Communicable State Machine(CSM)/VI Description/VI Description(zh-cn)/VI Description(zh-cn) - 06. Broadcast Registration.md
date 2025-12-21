@@ -17,6 +17,7 @@
 - <b>Source CSM Name (* as Default)</b>: 生成状态的CSM模块。您可以使用“*”来表示所有生成相同状态的模块。
 - <b>Trigger</b>: 触发字符串。
 - <b>API (if "", same as Trigger)</b>: 注册后，如果触发发生变化，将接收到此消息。
+- <b>Priority (No Change)</b>: 订阅后的广播优先级。
 
 -- <b>输出控件(Indicators)</b> --
 - <b>CSM Name (Dup)</b>: 输入的CSM模块名称副本。
