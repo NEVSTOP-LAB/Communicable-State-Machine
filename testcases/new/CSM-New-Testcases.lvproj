@@ -23,6 +23,7 @@
 		<Item Name="testcase-CSMChainMode.lvclass" Type="LVClass" URL="../testcase-CSMChainMode/testcase-CSMChainMode.lvclass"/>
 		<Item Name="testcase-CSMManagementAPI.lvclass" Type="LVClass" URL="../testcase-CSMChainMode/testcase-CSMManagementAPI/testcase-CSMManagementAPI.lvclass"/>
 		<Item Name="testcase-CSMNonCSMCallerSupportAPI.lvclass" Type="LVClass" URL="../testcase-CSMNonCSMCallerSupportAPI/testcase-CSMNonCSMCallerSupportAPI.lvclass"/>
+		<Item Name="testcase-CSMAddonLoopSupport.lvclass" Type="LVClass" URL="../testcase-CSMAddonLoopSupport/testcase-CSMAddonLoopSupport.lvclass"/>
 		<Item Name="TestCSMSuite.lvclass" Type="LVClass" URL="../CSMTestSuite/TestCSMSuite.lvclass"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
@@ -360,6 +361,7 @@
 			<Item Name="CSM Attributes API(VIM).lvlib" Type="Library" URL="../../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/addons/AttributesVIM/CSM Attributes API(VIM).lvlib"/>
 			<Item Name="CSM Shared.lvlib" Type="Library" URL="../../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_Shared/CSM Shared.lvlib"/>
 			<Item Name="provcom_StringGlobals.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Common/provcom_StringGlobals.vi"/>
+			<Item Name="CSM Loop Support.lvlib" Type="Library" URL="../../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/addons/Loop-Support/CSM Loop Support.lvlib"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="CSM-Testcase.lvlibp" Type="Packed Library">
@@ -372,7 +374,7 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToProject</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{A89D9A51-BD9C-4565-8F45-AD1D68D344FD}</Property>
-				<Property Name="Bld_version.build" Type="Int">315</Property>
+				<Property Name="Bld_version.build" Type="Int">316</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">CSM-Testcase.lvlibp</Property>
 				<Property Name="Destination[0].path" Type="Path">../CSM/CSM-Testcase.lvlibp</Property>
@@ -413,7 +415,7 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToProject</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{DF3A8CD5-4937-4FE8-B30A-163F6FCA54B2}</Property>
-				<Property Name="Bld_version.build" Type="Int">280</Property>
+				<Property Name="Bld_version.build" Type="Int">281</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">CSM-Testcase2.lvlibp</Property>
 				<Property Name="Destination[0].path" Type="Path">../CSM/CSM-Testcase2.lvlibp</Property>
