@@ -10,6 +10,7 @@
 
 > - Ref: CSM订阅
 > - Ref: CSM订阅位置
+> - Ref: CSM广播优先级
 
 -- <b>输入控件(Controls)</b> --
 - <b>CSM Name</b>: CSM模块名称。

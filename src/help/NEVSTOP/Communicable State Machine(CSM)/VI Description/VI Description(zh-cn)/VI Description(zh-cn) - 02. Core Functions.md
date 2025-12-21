@@ -211,6 +211,7 @@
 > - Ref: 消息拼接API
 > - Ref: CSM订阅
 > - Ref: CSM订阅位置
+> - Ref: CSM广播优先级
 
 -- <b>输入控件(Controls)</b> --
 - <b>Target CSM</b>: 订阅状态的CSM模块名称。

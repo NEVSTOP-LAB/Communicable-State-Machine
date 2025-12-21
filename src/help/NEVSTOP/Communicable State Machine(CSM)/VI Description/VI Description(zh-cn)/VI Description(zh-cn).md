@@ -114,8 +114,10 @@
 > //[CSM操作字符串(CSM Operation)] >> [参数(Arguments)] -> <[操作类型(Operation)]> // [注释(Comments)]
 >
 >       例如:
->       TCP Connected >> 192.168.1.100 -> <broadcast> // 发送信号广播"TCP Connected"，参数为"192.168.1.100"
->       TCP Connected@TCPModule >> UpdateLED@UI -><register> // 将TCP模块TCP Connected信号注册到UI模块的UpdateLED接口
+>       // 发送信号广播"TCP Connected"，参数为"192.168.1.100"
+>       TCP Connected >> 192.168.1.100 -> <broadcast>
+>       // 发送中断广播"TCP Error"，参数为"Timeout"
+>       TCP Connected@TCPModule >> UpdateLED@UI -><register>
 
 
 > [!NOTE]
@@ -140,6 +142,33 @@
 > - 参数(Arguments): CSM 广播的参数，不可包含CSM关键字和换行符。
 > - 广播类型(Broadcast Type): <broadcast>,<status>为信号广播(Status)，<interrupt>为中断广播(Interrupt)。
 > - 注释(Comments): 注释信息，不会被解析。
+>
+
+> [!NOTE]
+> <b>CSM广播优先级</b>
+>
+> 从名称上就可以看出，广播是有优先级的。状态广播(State)是一种特殊的广播，默认它的优先级与信号广播(Status)相同。
+> 其中中断广播(Interrupt)为高优先级广播，与同步消息均使用高优先级队列进行传递；
+> 信号广播(Status)为低优先级广播，与异步消息均使用低优先级队列进行传递。
+>
+>       // 默认的广播为信号广播，例如：
+>       ModuleInternalChange >> Aruguments -> <broadcast> // 低优先级
+>       ModuleInternalChange >> Aruguments -> <broadcast> // 低优先级
+>
+> 默认的优先级由发送方定义，通过广播格式中的广播类型(Broadcast Type)进行定义。
+>
+>       // 发送方可以定义广播的优先级
+>        ModuleInternalChange >> Aruguments -> <status> // 低优先级
+>       ModuleInternalChange >> Aruguments -> <interrupt> // 高优先级
+>
+> 默认的订阅不会改变优先级，但可以通过特殊的订阅格式，改变订阅后的广播优先级。
+>
+>       // 默认的订阅不改变优先级
+>       ModuleInternalChange@SourceModule >> API@TargetModule -><register>
+>       // 将订阅的广播改为普通优先级，无论之前是何优先级
+>       ModuleInternalChange@SourceModule >> API@TargetModule -><register as status>
+>       // 将订阅的广播改为高优先级，无论之前是何优先级
+>       ModuleInternalChange@SourceModule >> API@TargetModule -><register as interrupt>
 >
 
 > [!NOTE]
