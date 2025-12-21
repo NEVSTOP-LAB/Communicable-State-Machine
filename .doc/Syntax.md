@@ -21,6 +21,12 @@
     // Register Source Module's status to Handler Module
     Status@Source Module >> API@Handler Module -><register>
 
+    // Register Source Module's interrupt as status and link to Handler Module’s API
+    Interrupt@Source Module >> API@Handler Module -><register as Status>
+
+    // Register Source Module's status as interrupt and link to Handler Module’s API
+    Status@Source Module >> API@Handler Module -><register as Interrupt>
+
     // Unregister Source Module's status
     Status@Source Module >> API@Handler Module -><unregister>
 
