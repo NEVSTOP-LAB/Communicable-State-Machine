@@ -85,7 +85,7 @@
 > - Build Normal Broadcast Message.vi: 拼接生成CSM信号广播字符串。
 > - Build Register Message.vi: 拼接生成CSM注册状态操作字符串。
 > - Build Unregister Message.vi: 拼接生成CSM注销状态操作字符串。
-> - CSM - Replace Substitution Marks in Messages.vi: 替换消息字符串中的占位符。
+> - CSM - Replace Marks in Messages.vi: 替换消息字符串中的占位符。
 > - CSM - Replace Mark with String Array.vi: 将单条状态字符串中的标签替换为数组字符串，并合并成描述一组状态的符串。
 
 > - Ref: CSM 模块间通信类型
@@ -244,7 +244,7 @@
 -- <b>输出控件(Indicators)</b> --
 - <b>CSM Message String</b>: 拼接生成的CSM消息字符串。
 
-#### CSM - Replace Substitution Marks in Messages.vi
+#### CSM - Replace Marks in Messages.vi
 
 该VI主要为了能够便捷地编辑多条CSM消息字符串，提供批量替换标记的功能。有4个标记可以替换:
 

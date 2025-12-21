@@ -86,7 +86,7 @@ Builds CSM message strings and operation strings.
 > - Build Normal Status Message.vi: Concatenates and generates CSM status broadcast strings.
 > - Build Register Status Message.vi: Concatenates and generates CSM register state operation strings.
 > - Build Unregister Status Message.vi: Concatenates and generates CSM unregister state operation strings.
-> - CSM - Replace Substitution Marks in Messages.vi: Replaces placeholders in message strings.
+> - CSM - Replace Marks in Messages.vi: Replaces placeholders in message strings.
 
 > - Ref: CSM Inter-module Communication Types
 
@@ -257,7 +257,7 @@ Concatenates unregister state operation message strings. The message format is a
 -- <b>Indicators</b> --
 - <b>CSM Message String</b>: Concatenated CSM message string.
 
-#### CSM - Replace Substitution Marks in Messages.vi
+#### CSM - Replace Marks in Messages.vi
 
 Facilitates editing multiple CSM message strings by providing a batch replacement function for marks. There are four marks that can be replaced:
 
@@ -266,32 +266,31 @@ Facilitates editing multiple CSM message strings by providing a batch replacemen
 - `<1>` mark: Represents custom mark 1.
 - `<2>` mark: Represents custom mark 2.
 
-  ```
-  Example: The terminal `<target>` is connected to the string "DAQDevice". The <b>States with Replace Token</b> string is:
 
-        ``` text
-        Initialize -@ <target>
-        Configure -@ <target>
-        Read -@ <target>
-        Close -@ <target>
-        ```
+    Example: The terminal `<target>` is connected to the string "DAQDevice". The <b>States with Replace Token</b> string is:
 
-  The <b>States</b> output is:
+          ``` text
+          Initialize -@ <target>
+          Configure -@ <target>
+          Read -@ <target>
+          Close -@ <target>
+          ```
 
-        ``` text
-        Initialize -@ DAQDevice
-        Configure -@ DAQDevice
-        Read -@ DAQDevice
-        Close -@ DAQDevice
-        ```
-  ```
+    The <b>States</b> output is:
+
+          ``` text
+          Initialize -@ DAQDevice
+          Configure -@ DAQDevice
+          Read -@ DAQDevice
+          Close -@ DAQDevice
+          ```
 
 > - Ref: Message Building API
 
 -- <b>Controls</b> --
 - <b>States with Replace Token</b>: CSM state string with replacement marks.
-- <b><\param></b>: `<param>` mark, which usually represents the same argument.
-- <b><\target></b>: `<target>` mark, which usually represents the same target.
+- <b><param></b>: `<param>` mark, which usually represents the same argument.
+- <b><target></b>: `<target>` mark, which usually represents the same target.
 - <b><1></b>: Custom mark 1.
 - <b><2></b>: Custom mark 2.
 
@@ -302,16 +301,14 @@ Facilitates editing multiple CSM message strings by providing a batch replacemen
 
 Replaces tags in a single state string with strings from an array and merges them into a string describing a group of states.
 
-```
-Example: For `Draw >> <1> -@ Painter`
+    Example: For `Draw >> <1> -@ Painter`
 
-<b>Tag</b> should be set to `<1>`
+    <b>Tag</b> should be set to `<1>`
 
-Input array `[Line, Circle, Rectangle]`. The result will be:
-    Draw >> Line -@ Painter
-    Draw >> Circle -@ Painter
-    Draw >> Rectangle -@ Painter
-```
+    Input array `[Line, Circle, Rectangle]`. The result will be:
+        Draw >> Line -@ Painter
+        Draw >> Circle -@ Painter
+        Draw >> Rectangle -@ Painter
 
 -- <b>Controls</b> --
 - <b>single-line text</b>: Single-line state string containing tags like `<1>`, `<2>`, `<3>`, etc.
@@ -325,10 +322,8 @@ Input array `[Line, Circle, Rectangle]`. The result will be:
 
 Broadcasts a status change to the system. CSM modules with registered states will receive this status change. For example:
 
-```
-  // Broadcast status change
-  Status >> Arguments -><broadcast>
-```
+    // Broadcast status change
+    Status >> Arguments -><broadcast>
 
 > [!NOTE]
 > <b>CSM State Queue Operation API</b>
