@@ -209,6 +209,8 @@
             DownloadFinished@* >> StartPlay@Player -><register>
 
 > - Ref: 消息拼接API
+> - Ref: CSM订阅
+> - Ref: CSM订阅位置
 
 -- <b>输入控件(Controls)</b> --
 - <b>Target CSM</b>: 订阅状态的CSM模块名称。
@@ -233,7 +235,12 @@
             //当播放器模块中执行消息时，Player 可缺省
             DownloadFinished@Downloader >> StartPlay -><unregister>
 
+- 协作者模式(Worker Mode)下：模块的内部订阅规则，只会在全部节点退出后才会自动取消订阅。
+- 责任链模式(Chain Mode)下：模块的内部订阅规则，节点的内部订阅规则，会随着节点的退出而自动取消订阅。
+
 > - Ref: 消息拼接API
+> - Ref: CSM订阅
+> - Ref: CSM订阅位置
 
 -- <b>输入控件(Controls)</b> --
 - <b>Target CSM</b>: 订阅状态的CSM模块名称。

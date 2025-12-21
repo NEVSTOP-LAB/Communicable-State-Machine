@@ -162,3 +162,20 @@
 > - 目标模块: 绑定的接口所在的模块。当在CSM模块中表示订阅到本模块，可忽略。同时省略前面的@分隔符。
 > - <register>/<unregister>: 注册/取消订阅的操作类型定义。
 > - 注释(Comments): 注释信息，不会被解析。
+>
+
+>> [!NOTE]
+> <b>CSM订阅位置</b>
+>
+> CSM订阅所添加的订阅规则，分为内部添加和外部添加两种。
+> - 外部添加：外部添加的规则为全局规则，不会随着CSM模块的退出而自动删除，需要手动取消订阅。
+>    - 使用 "-<register>" 语句添加的规则，如果指明了API所在的模块名称，则为外部添加。
+>    - 使用 API CSM - Register Broadcast.vi 添加的规则，均为外部添加。
+> - 内部添加：CSM模块内部添加的规则，会随着CSM模块的退出而自动删除，无需手动取消订阅。
+>   - 只有使用语句 "-<register>" 添加的规则，且API未指明模块名称时，才为内部添加。
+>
+> ```
+> 例如：
+> status@sourceModule >> API@TargetModule -><register> // 外部添加
+> status@sourceModule >> API -><register> // 内部添加
+>  ```

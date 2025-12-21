@@ -9,6 +9,7 @@
 <b>参考范例</b>:  “2. Caller is CSM Scenario\CSM Example - Caller is a CSM.vi”。
 
 > - Ref: CSM订阅
+> - Ref: CSM订阅位置
 
 -- <b>输入控件(Controls)</b> --
 - <b>CSM Name</b>: CSM模块名称。
@@ -28,6 +29,7 @@
 <b>参考范例</b>:  “2. Caller is CSM Scenario\CSM Example - Caller is a CSM.vi”。
 
 > - Ref: CSM订阅
+> - Ref: CSM订阅位置
 
 -- <b>输入控件(Controls)</b> --
 - <b>CSM Name</b>: CSM模块名称。
