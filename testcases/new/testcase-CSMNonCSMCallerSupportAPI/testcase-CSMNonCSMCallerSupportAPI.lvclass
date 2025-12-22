@@ -126,7 +126,7 @@
 		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 		<Property Name="NI.ClassItem.State" Type="Int">1342972433</Property>
 	</Item>
-	<Item Name="tes2-testModuleTurnsInvalidAPI.vi" Type="VI" URL="../tes2-testModuleTurnsInvalidAPI.vi">
+	<Item Name="test2-testModuleTurnsInvalidAPI.vi" Type="VI" URL="../test2-testModuleTurnsInvalidAPI.vi">
 		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;1!!!!#1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!%2!=!!?!!!M+H2F=X2D98.F,5.445ZP&lt;E.445.B&lt;'RF=F.V=("P=H2"5%EO&lt;(:D&lt;'&amp;T=Q!!$&amp;2F=X2$98.F)'^V&gt;!!!)%"1!!-!!!!"!!)4:8*S&lt;X)A;7YA+'ZP)'6S=G^S+1"#1(!!(A!!,#JU:8.U9W&amp;T:3V$5UV/&lt;WZ$5UV$97RM:8*4&gt;8"Q&lt;X*U16"*,GRW9WRB=X-!!!N5:8.U1W&amp;T:3"J&lt;A"B!0!!$!!$!!1!"!!&amp;!!1!"!!%!!1!"A!%!!1!"Q-!!(A!!!E!!!!!!!!!!!!!!!U,!!!!!!!!!!!!!!!!!!!!!!!!#A!!!!!!!!!!!!!!%A!!$1!!!!Q!!!!!!!!!!!!!!1!)!!!!!!</Property>
 		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 		<Property Name="NI.ClassItem.Flags" Type="Int">32</Property>
