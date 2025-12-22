@@ -374,7 +374,7 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToProject</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{A89D9A51-BD9C-4565-8F45-AD1D68D344FD}</Property>
-				<Property Name="Bld_version.build" Type="Int">316</Property>
+				<Property Name="Bld_version.build" Type="Int">317</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">CSM-Testcase.lvlibp</Property>
 				<Property Name="Destination[0].path" Type="Path">../CSM/CSM-Testcase.lvlibp</Property>
@@ -415,7 +415,7 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToProject</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{DF3A8CD5-4937-4FE8-B30A-163F6FCA54B2}</Property>
-				<Property Name="Bld_version.build" Type="Int">281</Property>
+				<Property Name="Bld_version.build" Type="Int">282</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">CSM-Testcase2.lvlibp</Property>
 				<Property Name="Destination[0].path" Type="Path">../CSM/CSM-Testcase2.lvlibp</Property>
