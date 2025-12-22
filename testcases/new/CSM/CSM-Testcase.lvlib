@@ -7,6 +7,9 @@
 	<Item Name="Chain1.vi" Type="VI" URL="../Chain1.vi"/>
 	<Item Name="Chain2.vi" Type="VI" URL="../Chain2.vi"/>
 	<Item Name="Chain3.vi" Type="VI" URL="../Chain3.vi"/>
+	<Item Name="Chain4.vi" Type="VI" URL="../Chain4.vi"/>
+	<Item Name="Chain5.vi" Type="VI" URL="../Chain5.vi"/>
+	<Item Name="Chain6.vi" Type="VI" URL="../Chain6.vi"/>
 	<Item Name="Global-TestcaseCSM.vi" Type="VI" URL="../Global-TestcaseCSM.vi"/>
 	<Item Name="Normal-CSM.vi" Type="VI" URL="../Normal-CSM.vi"/>
 	<Item Name="Strip CSM name.vi" Type="VI" URL="../Strip CSM name.vi"/>

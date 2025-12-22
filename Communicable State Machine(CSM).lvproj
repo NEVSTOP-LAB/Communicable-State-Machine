@@ -129,6 +129,13 @@
 				<Item Name="testcase-CSMResponse.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMResponse/testcase-CSMResponse.lvclass"/>
 				<Item Name="testcase-CSMGlobalLog.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMGlobalLog/testcase-CSMGlobalLog.lvclass"/>
 				<Item Name="testcase-CSMBroadcast.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMStatus/testcase-CSMBroadcast.lvclass"/>
+				<Item Name="testcase-CSMSystemLevelModule.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMSystemLevelModule/testcase-CSMSystemLevelModule.lvclass"/>
+				<Item Name="testcase-CSMSubModule.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMSubModule/testcase-CSMSubModule.lvclass"/>
+				<Item Name="testcase-CSMWorkerMode.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMWorkerMode/testcase-CSMWorkerMode.lvclass"/>
+				<Item Name="testcase-CSMChainMode.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMChainMode/testcase-CSMChainMode.lvclass"/>
+				<Item Name="testcase-CSMManagementAPI.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMChainMode/testcase-CSMManagementAPI/testcase-CSMManagementAPI.lvclass"/>
+				<Item Name="testcase-CSMNonCSMCallerSupportAPI.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMNonCSMCallerSupportAPI/testcase-CSMNonCSMCallerSupportAPI.lvclass"/>
+				<Item Name="testcase-CSMAddonLoopSupport.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMAddonLoopSupport/testcase-CSMAddonLoopSupport.lvclass"/>
 			</Item>
 			<Item Name="testcase-csmhelper.lvclass" Type="LVClass" URL="../testcases/testcase-csmhelper/testcase-csmhelper.lvclass"/>
 			<Item Name="testcase-csm-file-logger.lvclass" Type="LVClass" URL="../testcases/testcase-csm-file-logger/testcase-csm-file-logger.lvclass"/>
