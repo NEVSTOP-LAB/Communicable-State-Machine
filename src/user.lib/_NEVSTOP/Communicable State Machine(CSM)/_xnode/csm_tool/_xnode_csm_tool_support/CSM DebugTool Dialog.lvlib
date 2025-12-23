@@ -7,6 +7,7 @@
 	<Item Name="Support" Type="Folder">
 		<Item Name="_reorder tool entries.vi" Type="VI" URL="../_reorder tool entries.vi"/>
 		<Item Name="CSM DebugTool Dialog Ref(FGV).vi" Type="VI" URL="../CSM DebugTool Dialog Ref(FGV).vi"/>
+		<Item Name="CSM Tool Name from VI.vi" Type="VI" URL="../CSM Tool Name from VI.vi"/>
 	</Item>
 	<Item Name="CSM DebugTool Dialog.vi" Type="VI" URL="../CSM DebugTool Dialog.vi"/>
 	<Item Name="Start CSM DebugTool Dialog.vi" Type="VI" URL="../Start CSM DebugTool Dialog.vi"/>
