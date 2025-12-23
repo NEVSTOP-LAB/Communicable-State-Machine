@@ -133,9 +133,9 @@
 				<Item Name="testcase-CSMSubModule.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMSubModule/testcase-CSMSubModule.lvclass"/>
 				<Item Name="testcase-CSMWorkerMode.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMWorkerMode/testcase-CSMWorkerMode.lvclass"/>
 				<Item Name="testcase-CSMChainMode.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMChainMode/testcase-CSMChainMode.lvclass"/>
-				<Item Name="testcase-CSMManagementAPI.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMChainMode/testcase-CSMManagementAPI/testcase-CSMManagementAPI.lvclass"/>
 				<Item Name="testcase-CSMNonCSMCallerSupportAPI.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMNonCSMCallerSupportAPI/testcase-CSMNonCSMCallerSupportAPI.lvclass"/>
 				<Item Name="testcase-CSMAddonLoopSupport.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMAddonLoopSupport/testcase-CSMAddonLoopSupport.lvclass"/>
+				<Item Name="testcase-CSMManagementAPI.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMManagementAPI/testcase-CSMManagementAPI.lvclass"/>
 			</Item>
 			<Item Name="testcase-csmhelper.lvclass" Type="LVClass" URL="../testcases/testcase-csmhelper/testcase-csmhelper.lvclass"/>
 			<Item Name="testcase-csm-file-logger.lvclass" Type="LVClass" URL="../testcases/testcase-csm-file-logger/testcase-csm-file-logger.lvclass"/>
@@ -576,7 +576,6 @@
 			<Item Name="Global_Interface.ctl" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/API/Global_Interface.ctl"/>
 			<Item Name="Item_Interface.ctl" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/API/Item_Interface.ctl"/>
 			<Item Name="provcom_StringGlobals.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Common/provcom_StringGlobals.vi"/>
-			<Item Name="testcase-CSMManagementAPI.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMManagementAPI/testcase-CSMManagementAPI.lvclass"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Communicable State Machine.lvlibp" Type="Packed Library">
