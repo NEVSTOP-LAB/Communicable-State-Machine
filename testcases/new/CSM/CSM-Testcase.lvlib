@@ -4,6 +4,7 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">385908736</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">false</Property>
+	<Property Name="NI.SortType" Type="Int">3</Property>
 	<Item Name="Chain1.vi" Type="VI" URL="../Chain1.vi"/>
 	<Item Name="Chain2.vi" Type="VI" URL="../Chain2.vi"/>
 	<Item Name="Chain3.vi" Type="VI" URL="../Chain3.vi"/>
@@ -12,4 +13,6 @@
 	<Item Name="Chain6.vi" Type="VI" URL="../Chain6.vi"/>
 	<Item Name="Normal-CSM.vi" Type="VI" URL="../Normal-CSM.vi"/>
 	<Item Name="Strip CSM name.vi" Type="VI" URL="../Strip CSM name.vi"/>
+	<Item Name="Check CSM Modules Exist Or Not.vi" Type="VI" URL="../Check CSM Modules Exist Or Not.vi"/>
+	<Item Name="Remove Duplicates from 1D Array (String).vi" Type="VI" URL="../Remove Duplicates from 1D Array (String).vi"/>
 </Library>

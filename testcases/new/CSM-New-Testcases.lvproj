@@ -25,6 +25,7 @@
 		<Item Name="testcase-CSMNonCSMCallerSupportAPI.lvclass" Type="LVClass" URL="../testcase-CSMNonCSMCallerSupportAPI/testcase-CSMNonCSMCallerSupportAPI.lvclass"/>
 		<Item Name="testcase-CSMAddonLoopSupport.lvclass" Type="LVClass" URL="../testcase-CSMAddonLoopSupport/testcase-CSMAddonLoopSupport.lvclass"/>
 		<Item Name="TestCSMSuite.lvclass" Type="LVClass" URL="../CSMTestSuite/TestCSMSuite.lvclass"/>
+		<Item Name="CSM - Debug Console - DebugTool.vi" Type="VI" URL="../../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_tool/CSM - Debug Console - DebugTool.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="AB_Generate_Error_Cluster.vi" Type="VI" URL="/&lt;vilib&gt;/AppBuilder/AB_Generate_Error_Cluster.vi"/>
@@ -356,12 +357,44 @@
 				<Item Name="Set Cursor.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/cursorutil.llb/Set Cursor.vi"/>
 				<Item Name="Set Busy.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/cursorutil.llb/Set Busy.vi"/>
 				<Item Name="Unset Busy.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/cursorutil.llb/Unset Busy.vi"/>
+				<Item Name="Parse State Queue__JKI_lib_State_Machine.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/State Machine/_JKI_lib_State_Machine.llb/Parse State Queue__JKI_lib_State_Machine.vi"/>
+				<Item Name="Application Directory.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Application Directory.vi"/>
+				<Item Name="NI_FileType.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/lvfile.llb/NI_FileType.lvlib"/>
+				<Item Name="NI_LVConfig.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/config.llb/NI_LVConfig.lvlib"/>
+				<Item Name="Space Constant.vi" Type="VI" URL="/&lt;vilib&gt;/dlg_ctls.llb/Space Constant.vi"/>
+				<Item Name="Check if File or Folder Exists.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/Check if File or Folder Exists.vi"/>
+				<Item Name="NI_PackedLibraryUtility.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/LVLibp/NI_PackedLibraryUtility.lvlib"/>
+				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
+				<Item Name="TRef TravTarget.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/traverseref.llb/TRef TravTarget.ctl"/>
+				<Item Name="VI Scripting - Traverse.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/traverseref.llb/VI Scripting - Traverse.lvlib"/>
+				<Item Name="LVPositionTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVPositionTypeDef.ctl"/>
+				<Item Name="LVDeltaXY32Cluster.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVDeltaXY32Cluster.ctl"/>
+				<Item Name="LVPointTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVPointTypeDef.ctl"/>
+				<Item Name="Draw Flattened Pixmap.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Draw Flattened Pixmap.vi"/>
+				<Item Name="imagedata.ctl" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/imagedata.ctl"/>
+				<Item Name="FixBadRect.vi" Type="VI" URL="/&lt;vilib&gt;/picture/pictutil.llb/FixBadRect.vi"/>
+				<Item Name="RectSize.vi" Type="VI" URL="/&lt;vilib&gt;/picture/PictureSupport.llb/RectSize.vi"/>
+				<Item Name="Simple Error Handler.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Simple Error Handler.vi"/>
+				<Item Name="TRef Traverse.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/traverseref.llb/TRef Traverse.vi"/>
 			</Item>
 			<Item Name="Communicable State Machine.lvlib" Type="Library" URL="../../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/Communicable State Machine.lvlib"/>
 			<Item Name="CSM Attributes API(VIM).lvlib" Type="Library" URL="../../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/addons/AttributesVIM/CSM Attributes API(VIM).lvlib"/>
 			<Item Name="CSM Shared.lvlib" Type="Library" URL="../../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_Shared/CSM Shared.lvlib"/>
 			<Item Name="provcom_StringGlobals.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Common/provcom_StringGlobals.vi"/>
 			<Item Name="CSM Loop Support.lvlib" Type="Library" URL="../../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/addons/Loop-Support/CSM Loop Support.lvlib"/>
+			<Item Name="lvcsm File Support.lvlib" Type="Library" URL="../../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_csmHelper/lvcsmFile/lvcsm File Support.lvlib"/>
+			<Item Name="CSM-Helper.lvclass" Type="LVClass" URL="../../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_csmHelper/CSM-Helper.lvclass"/>
+			<Item Name="CSM-Helper Utility.lvlib" Type="Library" URL="../../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_csmHelper/Utility/CSM-Helper Utility.lvlib"/>
+			<Item Name="csmHelper-Relationship.lvlib" Type="Library" URL="../../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_csmHelper/Utility/_Support/Relationship.llb/csmHelper-Relationship.lvlib"/>
+			<Item Name="csmHelper-Terminals.lvlib" Type="Library" URL="../../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_csmHelper/Utility/_Support/Terminals.llb/csmHelper-Terminals.lvlib"/>
+			<Item Name="csmHelper-Diagram.lvlib" Type="Library" URL="../../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_csmHelper/Utility/_Support/Diagram.llb/csmHelper-Diagram.lvlib"/>
+			<Item Name="csmHelper-CaseStructure.lvlib" Type="Library" URL="../../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_csmHelper/Utility/_Support/CaseStructure.llb/csmHelper-CaseStructure.lvlib"/>
+			<Item Name="csmHelper-PairedTunnels.lvlib" Type="Library" URL="../../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_csmHelper/Utility/_Support/PairedTunnels.llb/csmHelper-PairedTunnels.lvlib"/>
+			<Item Name="csmHelper-Wire.lvlib" Type="Library" URL="../../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_csmHelper/Utility/_Support/Wire.llb/csmHelper-Wire.lvlib"/>
+			<Item Name="csmHelper-GObject.lvlib" Type="Library" URL="../../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_csmHelper/Utility/_Support/GObject.llb/csmHelper-GObject.lvlib"/>
+			<Item Name="csmHelper-SubVI.lvlib" Type="Library" URL="../../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_csmHelper/Utility/_Support/SubVI.llb/csmHelper-SubVI.lvlib"/>
+			<Item Name="CSM-Helper API with lvcsm Support.lvlib" Type="Library" URL="../../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_csmHelper/API with lvcsm Support/CSM-Helper API with lvcsm Support.lvlib"/>
+			<Item Name="csm-tool-support.lvlib" Type="Library" URL="../../../src/user.lib/_NEVSTOP/Communicable State Machine(CSM)/_tool/_Support/csm-tool-support.lvlib"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="CSM-Testcase.lvlibp" Type="Packed Library">
@@ -374,7 +407,7 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToProject</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{A89D9A51-BD9C-4565-8F45-AD1D68D344FD}</Property>
-				<Property Name="Bld_version.build" Type="Int">321</Property>
+				<Property Name="Bld_version.build" Type="Int">322</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">CSM-Testcase.lvlibp</Property>
 				<Property Name="Destination[0].path" Type="Path">../CSM/CSM-Testcase.lvlibp</Property>
@@ -415,7 +448,7 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToProject</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{DF3A8CD5-4937-4FE8-B30A-163F6FCA54B2}</Property>
-				<Property Name="Bld_version.build" Type="Int">286</Property>
+				<Property Name="Bld_version.build" Type="Int">287</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">CSM-Testcase2.lvlibp</Property>
 				<Property Name="Destination[0].path" Type="Path">../CSM/CSM-Testcase2.lvlibp</Property>
