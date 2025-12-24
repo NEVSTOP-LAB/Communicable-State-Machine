@@ -13,6 +13,7 @@
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Property Name="NI.SortType" Type="Int">3</Property>
 	<Item Name="FGV-JKISM Modules.vi" Type="VI" URL="../FGV-JKISM Modules.vi"/>
-	<Item Name="JKISM Pass Allowed Message.vi" Type="VI" URL="../JKISM Pass Allowed Message.vi"/>
+	<Item Name="Parse State Queue.vi" Type="VI" URL="../Parse State Queue.vi"/>
+	<Item Name="Pass Allowed Message.vi" Type="VI" URL="../Pass Allowed Message.vi"/>
 	<Item Name="_action.ctl" Type="VI" URL="../_action.ctl"/>
 </Library>
