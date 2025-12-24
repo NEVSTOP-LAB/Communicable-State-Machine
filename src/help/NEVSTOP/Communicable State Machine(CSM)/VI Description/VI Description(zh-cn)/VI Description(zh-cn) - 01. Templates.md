@@ -30,7 +30,7 @@
 > - Ref：CSM退出状态
 
 -- <b>输入控件(Controls)</b> --
-- <b>Name ("" to use UUID)</b>：CSM模块名称。请参考<i>CSM名称规则</i>。
+- <b>Name ("" to use UUID)</b>：CSM模块名称。请参考<b>CSM名称规则</b>。
 
 ### CSM Module Template.vi
 用于创建无用户界面的CSM模块的模板, 这个模板是最常使用的CSM模板，在模板中还包含了一个用于调试中退出模块的事件响应循环，请在模块调试完成后，将其删除。
@@ -40,7 +40,7 @@
 > - Ref：CSM退出状态
 
 -- <b>输入控件(Controls)</b> --
-- <b>Name ("" to use UUID)</b>：CSM模块名称。请参考<i>CSM名称规则</i>。
+- <b>Name ("" to use UUID)</b>：CSM模块名称。请参考<b>CSM名称规则</b>。
 
 ### CSM Module Template - Tiny.vi
 用于创建无用户界面的CSM模块的紧凑代码模板。该模板功能与CSM Module Template VI完全相同，区别仅在于代码更加紧凑。
@@ -50,7 +50,7 @@
 > - Ref：CSM退出状态
 
 -- <b>输入控件(Controls)</b> --
-- <b>Name ("" to use UUID)</b>：CSM模块名称。请参考<i>CSM名称规则</i>。
+- <b>Name ("" to use UUID)</b>：CSM模块名称。请参考<b>CSM名称规则</b>。
 
 ### CSM User Interface(UI) Module Template - Tiny.vi
 用于创建带用户界面的CSM模块的紧凑代码模板，该模板包含用于响应用户操作的用户事件结构。该模板功能与CSM User Interface(UI) Module Template VI完全相同，区别仅在于代码更加紧凑.
@@ -60,7 +60,7 @@
 > - Ref：CSM退出状态
 
 -- <b>输入控件(Controls)</b> --
-- <b>Name ("" to use UUID)</b>：CSM模块名称。请参考<i>CSM名称规则</i>。
+- <b>Name ("" to use UUID)</b>：CSM模块名称。请参考<b>CSM名称规则</b>。
 
 ### CSM DQMH-Style Template.vi
 用于创建一个DQMH风格的CSM模块模板，该结构将响应用户操作的用户事件结构外置在独立的循环中，主要用于处理一些复杂的用户操作场景。例如:
@@ -76,7 +76,7 @@
 > - Ref：CSM退出状态
 
 -- <b>输入控件(Controls)</b> --
-- <b>Name ("" to use UUID)</b>：CSM模块名称。请参考<i>CSM名称规则</i>。
+- <b>Name ("" to use UUID)</b>：CSM模块名称。请参考<b>CSM名称规则</b>。
 
 ### 其他代码片段
 
@@ -111,7 +111,7 @@
 获取用户事件句柄，适用于包含事件结构的CSM模块。包含事件结构的CSM模块通常会在事件结构处等待，此事件用于在收到新消息时中断事件结构中的等待，使模块继续执行。
 
 -- <b>输入控件(Controls)</b> --
-- <b>Name ("" to use UUID)</b>：CSM模块名称。请参考<i>CSM名称规则</i>。
+- <b>Name ("" to use UUID)</b>：CSM模块名称。请参考<b>CSM名称规则</b>。
 
 -- <b>输出控件(Indicators)</b> --
 - <b>New State Notifier Event</b>：用户事件句柄，用于在收到消息时中断CSM模块在事件结构中的等待。

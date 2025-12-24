@@ -38,10 +38,10 @@ CSM Watchdog线程，用于保证在主程序退出后，所有的异步启动�
 > 为了防止长期运行的软件导致记录文件过大，我们设置了记录文件的大小限制和文件数量限制。
 > - File Size为单个文件的最大大小，单位为字节(byte)，默认为10 MB；
 > - File Num为LOG文件最多个数，默认值为2。
-> 
+>
 > 当记录文件大小超过File Size限制时，会创建一个新的文件记录；当记录文件个数超过File Num限制时，会删除最早的文件记录。
 
-> - Ref: Global Log过滤规则 [TODO]
+> - Ref: 全局日志过滤规则
 
 <b>参考范例</b>:  `Addons - Logger\CSM Application Running Log Example.vi`。
 
@@ -105,7 +105,7 @@ CSM - Start File Logger VI中原本使用的线程VI。已废弃，目前使用C
 > - Ref: CSM Loop Support设计的原因
 
 > [!WARNING]
-> 
+>
 > <b>Add to Front? (F)</b> 通常为FALSE，因为循环状态一旦开始，就不会立即结束，插入状态队列前，会被认为是当前状态的子状态，此时如果当前状态如果是以同步消息调用，就不会立即返回。例如: 假如`API: Start DAQ`中，定义了一组连续采集的状态，此时外部同步发送该消息，逻辑应为启动循环，然后立即返回。只有逻辑为等待循环结束后返回，才设置<b>Add to Front? (F)</b>为TRUE。
 
 -- <b>输入控件(Controls)</b> --

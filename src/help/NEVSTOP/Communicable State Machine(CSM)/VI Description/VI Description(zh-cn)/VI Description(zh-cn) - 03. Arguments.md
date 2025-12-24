@@ -54,7 +54,6 @@
 - <b>Arguments (Dup)</b>: 输入的参数字符串副本。
 - <b>Argument Type</b>: 参数字符串的编码类型标记。
 
-
 ### CSM - Keywords.vi
 用于罗列CSM消息中的关键字及其%Hex格式。
 

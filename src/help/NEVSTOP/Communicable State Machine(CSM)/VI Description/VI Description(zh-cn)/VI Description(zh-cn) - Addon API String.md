@@ -1,47 +1,47 @@
 # CSM API String Addon
 
-> [!NOTE] 
+> [!NOTE]
 ><b>API String参数支持</b>
 >
 > API String参数支持用于增强通信状态机(CSM)的API参数功能，支持以纯文本格式传递各种数据类型，并特别优化了手动输入体验。API String未定义参数类型(Argument Type)，通过CSM - Argument Type VI获取的结果为空，通常在默认分支中处理。支持的数据类型包括:
->   - 字符串(String)
->   - 路径(Path)
->   - 布尔值(Boolean)
->   - 标签(Tag)
->   - 引用号(Refnum，包括IVI/VISA/UserDefinedRefnumTag)
->   - 整数(I8, I16, I32, I64, U8, U16, U32, U64)
->   - 浮点数(DBL/SGL)
->   - 复数(DBL/SGL)
->   - 时间戳(Timestamp)
->   - 枚举(Enum)
->   - 数组(Array)
->   - 簇(Cluster)
->   - 其他类型(使用 CSM-Hexstr 表示)
-> 
+> - 字符串(String)
+> - 路径(Path)
+> - 布尔值(Boolean)
+> - 标签(Tag)
+> - 引用号(Refnum，包括IVI/VISA/UserDefinedRefnumTag)
+> - 整数(I8, I16, I32, I64, U8, U16, U32, U64)
+> - 浮点数(DBL/SGL)
+> - 复数(DBL/SGL)
+> - 时间戳(Timestamp)
+> - 枚举(Enum)
+> - 数组(Array)
+> - 簇(Cluster)
+> - 其他类型(使用 CSM-Hexstr 表示)
+>
 > 更多详细信息请访问: https://github.com/NEVSTOP-LAB/CSM-API-String-Arguments-Support
-> 
+>
 > 或参考范例，所有数据类型均有详细说明和示例。
 
-> [!NOTE] 
+> [!NOTE]
 > <b>TRUE值的默认字符串</b>
-> 
+>
 > 支持`1`, `Active`, `Enable`, `Non-null`, `On`, `T`, `True`, `valid`, `yes`
 > 不区分大小写
 
-> [!NOTE] 
+> [!NOTE]
 > <b>FALSE值的默认字符串</b>
-> 
+>
 > 支持`0`, `Disable`, `F`, `False`, `Inactive`, `Invalid`, `No`, `Off`, `Void`, `null`
 > 不区分大小写
 
-> [!NOTE] 
+> [!NOTE]
 > <b>浮点数默认格式</b>
-> 
+>
 > 浮点数默认格式为`%.6p`。
 
-> [!NOTE] 
+> [!NOTE]
 > <b>带索引的枚举类型(Indexed Enum)</b>
-> 
+>
 > 格式为`[索引编号(index)][分隔符(separator)][枚举字符串]`，索引编号支持多种数值表示方式
 >
 > 索引编号使用`==`分隔符示例:
@@ -233,7 +233,7 @@
     _<b>转换规则1: 无索引编号</b>_
 
     通过字符串匹配进行转换
-    
+
     例如Enum = {AAA, BBBB, CCCC}
     - 字符串"AAA"将转换为Enum(AAA)，数字值为0
     - 字符串"CCC"将转换为Enum(CCC)，数字值为2

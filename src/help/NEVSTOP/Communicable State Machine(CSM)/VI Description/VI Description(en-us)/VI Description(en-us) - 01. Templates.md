@@ -29,7 +29,7 @@ A template for creating a CSM module with a user interface. This template includ
 > - Ref: CSM Exit State
 
 -- <b>Controls</b> --
-- <b>Name ("" to use UUID)</b>: CSM module name. Refer to <i>CSM Naming Rules</i> for module naming rules.
+- <b>Name ("" to use UUID)</b>: CSM module name. Refer to <b>CSM Naming Rules</b> for module naming rules.
 
 ### CSM Module Template.vi
 A template for creating a CSM module without a user interface. This is the most commonly used CSM template. The template also includes an event response loop used for exiting the module during debugging. Remove this loop after debugging is complete.
@@ -39,7 +39,7 @@ A template for creating a CSM module without a user interface. This is the most 
 > - Ref: CSM Exit State
 
 -- <b>Controls</b> --
-- <b>Name ("" to use UUID)</b>: CSM module name. Refer to <i>CSM Naming Rules</i> for module naming rules.
+- <b>Name ("" to use UUID)</b>: CSM module name. Refer to <b>CSM Naming Rules</b> for module naming rules.
 
 ### CSM Module Template - Tiny.vi
 Compact code template for creating a CSM module without a user interface. The functionality of this template is identical to the CSM Module Template VI.
@@ -49,7 +49,7 @@ Compact code template for creating a CSM module without a user interface. The fu
 > - Ref: CSM Exit State
 
 -- <b>Controls</b> --
-- <b>Name ("" to use UUID)</b>: CSM module name. Refer to <i>CSM Naming Rules</i> for module naming rules.
+- <b>Name ("" to use UUID)</b>: CSM module name. Refer to <b>CSM Naming Rules</b> for module naming rules.
 
 ### CSM User Interface(UI) Module Template - Tiny.vi
 Compact code template used to create a CSM module with a user interface. This template includes a user Event Structure for responding to user actions. The functionality of this template is identical to the CSM User Interface(UI) Module Template VI.
@@ -59,7 +59,7 @@ Compact code template used to create a CSM module with a user interface. This te
 > - Ref: CSM Exit State
 
 -- <b>Controls</b> --
-- <b>Name ("" to use UUID)</b>: CSM module name. Refer to <i>CSM Naming Rules</i> for module naming rules.
+- <b>Name ("" to use UUID)</b>: CSM module name. Refer to <b>CSM Naming Rules</b> for module naming rules.
 
 ### CSM DQMH-Style Template.vi
 Creates a DQMH-style CSM module template. This structure places the user Event Structure responsible for responding to user actions in a separate independent loop. This structure is primarily used to handle complex user operation scenarios. For example:
@@ -76,7 +76,7 @@ Refer to the following example `[CSM-Example]\4. Advance Examples\CSMLS - Contin
 > - Ref: CSM Exit State
 
 -- <b>Controls</b> --
-- <b>Name ("" to use UUID)</b>: CSM module name. Refer to <i>CSM Naming Rules</i> for module naming rules.
+- <b>Name ("" to use UUID)</b>: CSM module name. Refer to <b>CSM Naming Rules</b> for module naming rules.
 
 ### Other Code Snippets
 

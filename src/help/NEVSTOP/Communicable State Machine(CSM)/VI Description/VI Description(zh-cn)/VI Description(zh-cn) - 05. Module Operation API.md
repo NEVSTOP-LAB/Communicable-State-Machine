@@ -147,7 +147,7 @@
 CSM高级模式的模块(协作者模式、责任链模式)只有在最后一个节点退出后，才会触发模块退出事件。
 
 -- <b>输入控件(Controls)</b> --
-- <b>Name ("" to Use UUID) In</b>: CSM模块名称。请参考<i>CSM名称规则</i>。
+- <b>Name ("" to Use UUID) In</b>: CSM模块名称。请参考<b>CSM名称规则</b>。
 - <b>Wait (5000 ms)</b>: 等待超时时间，默认为5000 ms。
 
 -- <b>输出控件(Indicators)</b> --

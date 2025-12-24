@@ -22,7 +22,7 @@ In Worker Mode and Chain of Responsibility Mode, the input node name is automati
 - <b>CSM Name (Dup)</b>: A copy of the input CSM module name.
 
 ## CSM - Unregister Broadcast.vi
-Unregisters notifications of state changes from other CSM modules.
+Unregister notifications of state changes from other CSM modules.
 
 In Worker Mode and Chain of Responsibility Mode, the input node name is automatically parsed as the module name because CSM implements registrations on a per-module basis.
 

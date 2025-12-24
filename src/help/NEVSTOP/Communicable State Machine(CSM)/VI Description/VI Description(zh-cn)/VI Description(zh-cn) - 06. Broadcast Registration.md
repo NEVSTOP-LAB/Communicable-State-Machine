@@ -70,7 +70,6 @@
 -- <b>输出控件(Indicators)</b> --
 - <b>Broadcast Names</b>: 当前所有广播订阅关系的广播名称。
 
-
 ## CSM - Check Mapping Relationship in Broadcast Registry.vi
 检查CSM模块的某广播名称对应所有的订阅关系。
 
@@ -83,7 +82,6 @@
 
 -- <b>输出控件(Indicators)</b> --
 - <b>Mapping Relationships</b>: 当前CSM模块的某广播名称对应所有的订阅关系。
-
 
 ## CSM - Remove Module in Broadcast Registry.vi
 从广播注册中删除所有与指定CSM模块相关的订阅关系。

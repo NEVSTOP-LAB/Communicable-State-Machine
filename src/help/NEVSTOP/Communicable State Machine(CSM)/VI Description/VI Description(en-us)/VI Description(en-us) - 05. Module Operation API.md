@@ -146,7 +146,7 @@ Obtains the CSM module exit event refnum. If the module does not exist, this VI 
 For modules in CSM advanced modes, such as Worker Mode and Chain of Responsibility Mode, the module exit event is triggered only after the last node has exited.
 
 -- <b>Controls</b> --
-- <b>Name ("" to Use UUID) In</b>: CSM module name. Refer to <i>CSM Naming Rules</i> for module naming rules.
+- <b>Name ("" to Use UUID) In</b>: CSM module name. Refer to <b>CSM Naming Rules</b> for module naming rules.
 - <b>Wait (5000 ms)</b>: Timeout duration for waiting. The default is 5000 ms.
 
 -- <b>Indicators</b> --

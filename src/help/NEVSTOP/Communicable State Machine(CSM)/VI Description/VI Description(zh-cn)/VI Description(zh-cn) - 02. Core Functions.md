@@ -9,7 +9,7 @@
 
 -- <b>输入控件(Controls)</b> --
 - <b>Response Arguments</b>: 来自上一个状态的响应参数。它应该连接到 CSM的移位寄存器，用于传递外部调用的返回值。
-- <b>Name ("" to use UUID)</b>: CSM模块名称。请参考<i>CSM名称规则</i>。
+- <b>Name ("" to use UUID)</b>: CSM模块名称。请参考<b>CSM名称规则</b>。
 - <b>State Queue</b>: 整个状态队列被连接到此输入。这应该来自CSM的移位寄存器。
 - <b>Previous Error</b>: 来自CSM的错误簇被连接到此输入。如果发生错误并出现在此输入上，则当前状态输出将返回`Error Handler`状态。
 - <b>Dequeue (1 ms)</b>: 检查CSM消息队列的超时设置，默认为1 ms, 不设置为0是为了避免某些错误情况下产生海量的空消息。
@@ -23,7 +23,6 @@
 - <b>Arguments</b>: 返回可能在当前状态字符串中使用的任何参数，这些参数位于`>>`字符之后。<b>注意: </b>参数变量不得包含任何不可打印的字符，如换行符或回车符。
 - <b>Additional Information</b>: 额外的补充信息。广播触发的状态中，该信息包含广播的名称、参数。
 - <b>Source CSM</b>: 如果<b>Current State</b>由外部发送，则这是源CSM模块名称。
-
 
 ### Build State String with Arguments++.vi
 > [!WARNING]
@@ -272,7 +271,6 @@
 -- <b>输出控件(Indicators)</b> --
 - <b>States</b>: 替换后的状态字符串。
 
-
 #### CSM - Replace Mark with String Array.vi
 将单条状态字符串中的标签替换为数组字符串，并合并成描述一组状态的符串。
 
@@ -291,7 +289,6 @@
 
 -- <b>输出控件(Indicators)</b> --
 - <b>States</b>:合并后的状态字符串。
-
 
 ### CSM - Broadcast Status Change.vi
 向系统广播状态更改，已注册状态的CSM模块将接收此状态更改，例如:
@@ -312,7 +309,6 @@
 -- <b>输出控件(Indicators)</b> --
 - <b>Remaining States</b>: 拼接后的所有状态及参数。
 
-
 ### Add State(s) to Queue By BOOL++.vi
 将CSM消息字符串并入CSM消息队列中。提供了TRUE/FALSE两种状态的字符串选项，能够避免使用条件结构，提高代码可读性和编程效率。
 
@@ -324,7 +320,6 @@
 > - Add State(s) to Queue By BOOL(Array Left).vi
 > - Add State(s) to Queue By BOOL(Array Right).vi
 > - Add State(s) to Queue By BOOL(Array All).vi
-
 
 #### Add State(s) to Queue By BOOL(Element).vi
 将CSM消息字符串并入CSM消息队列中。提供了TRUE/FALSE两种状态的字符串选项，能够避免使用条件结构，提高代码可读性和编程效率。

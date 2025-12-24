@@ -30,8 +30,6 @@ In this example, four workers run in the background.
   - Step4.2: Add a Response Source Manager indicator to the UI to handle "Async Response" and "Response" cases.
 - Step5: Module Exit. In the `Macro: Exit` message, use the CSM - Build Exit Messages of CSMs VI to create synchronous `Macro: Exit` messages for all running CSM worker modules. You can also manually type the inter-module messages, but be aware of how many worker modules are running. One message is required for each running worker instance. Then, send the local message `Macro: Exit` to the caller/main CSM module. All CSM modules will then exit sequentially.
 
-
-
 ### Worker Mode Module Implementation (Action Worker.vi)
 
 #### Overview
@@ -52,8 +50,6 @@ To allow Worker Mode nodes to run simultaneously, the VI execution property is s
 - Step1: Add the "DoSth: DoA" method.
 - Step2: Add the "DoSth: Error" method.
 - Step3: Set the VI execution property to Reentrant.
-
-
 
 ## Chain of Responsibility Example
 
@@ -86,8 +82,6 @@ A group of responsibility chain CSM modules process messages sequentially based 
 - Step4: Use a While Loop to retrieve status information for all running CSM modules, including names, modes, instance counts, and the number of message queues to be processed. Use the Advanced VI to stop the While Loop. Once the caller/main CSM module exits, the While Loop will stop.
 - Step5: Use the Global Log API to calculate and monitor real-time logging capabilities. For more details, refer to *4. Advance Examples\6. Global Log Handling Capability*.
 
-
-
 ### Chain Mode Module Implementation (ChainNode A.vi)
 
 #### Overview
@@ -97,8 +91,6 @@ This example implements a CSM module node in the chain of responsibility mode. T
 #### Introduction
 
 This example implements a CSM module node for the chain of responsibility mode. The "Allowed Messages" parameter defines the message names that the node can process, such as "Action: action 1" and "Action: action 2" messages.
-
-
 
 ### Chain Mode Module Implementation (ChainNode B.vi)
 
@@ -110,8 +102,6 @@ This example implements a CSM module node in the chain of responsibility mode. T
 
 This example implements a CSM module node for the chain of responsibility mode. The "Allowed Messages" parameter defines the message names that this node can process, such as "Action: action 2", "Action: action 3", "Action: action 4", and "Action: action 5" messages.
 
-
-
 ### Chain Mode Module Implementation (ChainNode C.vi)
 
 #### Overview
@@ -121,8 +111,6 @@ This example implements a CSM module node in the chain of responsibility mode. T
 #### Introduction
 
 This example implements a CSM module node for the chain of responsibility mode. The "Allowed Messages" parameter defines the message names that this node can process, such as "Action: action 4", "Action: action 5", and "Action: action 6" messages.
-
-
 
 ## Global Error Handling Mechanism Example
 
@@ -145,8 +133,6 @@ If the caller VI is not a CSM module, you can use the Non-CSM Caller Support VI 
 - Step3: Register for the "Error Occurred" broadcast event at startup: `"Error Occurred@* >> Error Handler -><register>"`. This event triggers the "Error Handler" of `GlobalErrorHandlingExample` to process the captured event whenever any CSM submodule broadcasts an `Error Occurred` status change.
 - Step4: (Optional) In the exit logic, use `CSM - Filter Messages to Non-Existing Modules.vi` to filter out messages to non-existent CSM modules to avoid triggering errors during exit.
 
-
-
 ### Simulated Error Generation Module (Error Module.vi)
 
 #### Overview
@@ -162,8 +148,6 @@ This example is a submodule for the global error handling mechanism, used to gen
 - Step1: Generate a simulated error and pass it into the module via the error wire. This represents a typical error scenario.
 - Step2: This error information triggers the CSM module to transition to the `Error Handler` state. This behavior is consistent with the JKI State Machine (JKISM).
 - Step3: In the `Error Handler` state, the error information is broadcast via the `Error Occurred` status.
-
-
 
 ## Global Log Filtering Example
 
@@ -190,8 +174,6 @@ This example demonstrates using the CSM Global Log API to record state change ev
   - Step2.3: Observe the running log information. You can see that the relevant logs defined in the rules have been filtered.
   - Step2.4: Upon program exit, send the "Macro: Exit" message to synchronously exit all running CSM modules.
 
-
-
 ### Queue-Based Source Filtering (Filter From Source(Queue).vi)
 
 #### Overview
@@ -216,8 +198,6 @@ This example demonstrates using the CSM Global Log API to record state change ev
   - Step2.3: Observe the running Log information; you can see that the relevant logs defined in the rules have been filtered.
   - Step2.4: Upon program exit, send the "Macro: Exit" message to synchronously exit all running CSM modules.
 
-
-
 ### Event-Based Subscriber Filtering (Filter From Subscriber(Event).vi)
 
 #### Overview
@@ -240,8 +220,6 @@ This example demonstrates using the CSM Global Log API to record state change ev
   - Step2.2: Once global log handling is ready, send the "API:start" message to start all modules.
   - Step2.3: Observe the running Log information. You can see that the relevant logs defined in the rules have been filtered.
   - Step2.4: Upon program exit, send the "Macro: Exit" message to synchronously exit all running CSM modules.
-
-
 
 ### Queue-Based Subscriber Filtering (Filter From Subscriber(Queue).vi)
 
@@ -266,8 +244,6 @@ This example demonstrates using the CSM Global Log API to record state change ev
   - Step2.2: Once global log handling is ready, send the "API:start" message to start all modules.
   - Step2.3: Observe the running Log information; you can see that the relevant logs defined in the rules have been filtered.
   - Step2.4: Upon program exit, send the "Macro: Exit" message to synchronously exit all running CSM modules.
-
-
 
 ## Multi-Loop Module Example (Main - Call and Monitor TCP Traffic.vi)
 
@@ -309,8 +285,6 @@ This development approach makes it convenient to adapt existing code, using CSM 
   - Step2.8: Broadcast "TCP Disconnected" status when the TCP connection is broken.
   - Step2.9: Stop the outer loop.
 
-
-
 ### TCP Server Program (Main - Call and Monitor TCP Traffic.vi)
 
 #### Overview
@@ -340,8 +314,6 @@ Without using the CSM framework directly, this example implements a TCP server p
 - Step8: Upon program exit, unsubscribe from the TCPServer module's status change events.
 - Step9: Send the "Macro: Exit" message to synchronously exit the TCPServer module.
 
-
-
 ## Global Log Handling Capability (Global Log Handling Capability Example.vi)
 
 ### Overview
@@ -363,8 +335,6 @@ Use this example to benchmark CSM global log performance and as a reference for 
 - Step3: Use CSM's built-in Global Log API to capture and calculate typical logging capability data.
 - Step4: Exit the caller and all other running CSM modules.
 
-
-
 ## State Subscription Example
 
 ### State Subscription Example Submodule (State Register Example Submodule.vi)
@@ -376,8 +346,6 @@ This example is the submodule for the Register State as Status Example. It is ca
 #### Introduction
 
 This example is the submodule for the Register State as Status Example. It is called by `Register State as Status Example.vi`. When you click a button on the front panel of this example, the state corresponding to the button name is executed.
-
-
 
 ### State Subscription Main Program (Register State as Status Example.vi)
 
@@ -401,7 +369,7 @@ The following is what this example does:
 
 ```
 // After the "Macro: Initialize" state of any module completes, trigger "Echo: Echo1" in the main CSM module (default).
-Macro: Initialize@* >> Echo: Echo1 -><register> 
+Macro: Initialize@* >> Echo: Echo1 -><register>
 // After the "API: API1" state of any module completes, trigger "Echo: Echo1" in the main CSM module (default).
 API: API1@* >> Echo: Echo1-><register>
 // After the "API: API2" state of "SubModule1" completes, trigger "Echo: Echo2" in the Main CSM module (default).
@@ -426,8 +394,6 @@ After `Echo: Echo2` in the `main` module executes, it triggers the `API: API1` s
   - Step3.3: In the "Echo: Echo1" state, parameters and other information are displayed as a pop-up. The execution of this state is also recorded in the global log.
 - Step4: You can click buttons on the main interface or submodule interfaces to trigger the corresponding logic, view the global log, and verify that the state registration is effective.
 
-
-
 # Addons - Logger
 
 ## CSM Application Running Log Example.vi
@@ -451,8 +417,6 @@ In this example, two instances of the CSM-Start File Logger VI are placed in seq
 - Step5: After running the program, check the directory where the example VI is located for two log files.
   - Step5.1: `CSM Application Running Log Example.csmlog` records all logs.
   - Step5.2: `CSM Application Running Log Example.no-state.csmlog` records logs without state change records.
-
-
 
 # Addons - Loop Support
 

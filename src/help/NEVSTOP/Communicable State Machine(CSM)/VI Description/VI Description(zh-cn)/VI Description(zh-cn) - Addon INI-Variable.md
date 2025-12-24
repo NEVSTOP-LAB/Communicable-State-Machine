@@ -323,4 +323,3 @@
 从配置中读取日志记录配置。此配置主要配合以下几个VI使用:
 
 - `addons\Logger\CSM - Start File Logger.vi`
-

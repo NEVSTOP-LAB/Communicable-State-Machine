@@ -9,7 +9,7 @@ Parses the CSM state queue and returns the next current state to execute, along 
 
 -- <b>Controls</b> --
 - <b>Response Arguments</b>: Response arguments from the previous state. Connect this input to the CSM shift register to pass return values from external calls.
-- <b>Name ("" to use UUID)</b>: CSM module name. Refer to <i>CSM Naming Rules</i> for module naming rules.
+- <b>Name ("" to use UUID)</b>: CSM module name. Refer to <b>CSM Naming Rules</b> for module naming rules.
 - <b>State Queue</b>: The entire state queue is connected to this input. This must be wired from a CSM shift register.
 - <b>Previous Error</b>: Error cluster from the CSM. If an error occurs and is passed to this input, the <b>Current State</b> output returns the `Error Handler` state.
 - <b>Dequeue (1 ms)</b>: Timeout setting for checking the CSM message queue. The default is 1 ms. The default is not set to 0 to avoid generating massive amounts of empty messages in certain error situations.

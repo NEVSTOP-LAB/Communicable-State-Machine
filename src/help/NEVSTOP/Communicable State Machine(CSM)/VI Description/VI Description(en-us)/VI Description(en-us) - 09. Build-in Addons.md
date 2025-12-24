@@ -40,7 +40,7 @@ Starts the CSM Global Log file recording background thread, which is used to sav
 >
 > When the log file size exceeds the <b>File Size</b> limit, a new file record is created. When the number of log files exceeds the <b>File Num</b> limit, the oldest file record is deleted.
 
-> - Ref: Global Log Filter Rules [TODO]
+> - Ref: Global Log Filter Rules
 
 <b>Reference Example</b>: `Addons - Logger\CSM Application Running Log Example.vi`.
 
