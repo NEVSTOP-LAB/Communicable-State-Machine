@@ -46,4 +46,5 @@
 			<Item Name="Export VI Help.vi" Type="VI" URL="../Export VI Help.vi"/>
 		</Item>
 	</Item>
+	<Item Name="_Standardize Carriage Returns.vi" Type="VI" URL="../Support/_Standardize Carriage Returns.vi"/>
 </Library>
