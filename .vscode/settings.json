@@ -6,6 +6,7 @@
         "CSMLS",
         "CSMP",
         "CSMQ",
+        "ERRSTR",
         "Evnt",
         "Gevt",
         "HEXSTR",
@@ -13,6 +14,7 @@
         "Massdata",
         "ogtk",
         "Refnum",
+        "SAFESTR",
         "Splite",
         "Struct",
         "usecase"

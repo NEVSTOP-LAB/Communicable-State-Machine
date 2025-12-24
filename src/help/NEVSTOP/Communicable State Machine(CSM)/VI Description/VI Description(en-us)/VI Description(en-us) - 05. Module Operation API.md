@@ -3,7 +3,6 @@
 ## Module Operation API
 
 ### CSM - Wait for Module to Be Alive.vi
-
 Waits for a CSM module to come online within a specified timeout period and returns the wait time. This VI returns an error if the timeout is exceeded. Internally, this VI periodically checks if the CSM module is online using the CSM - Check If Module Exists VI at 1 ms intervals.
 
 -- <b>Controls</b> --
@@ -15,7 +14,6 @@ Waits for a CSM module to come online within a specified timeout period and retu
 - <b>Waited (ms)</b>: Time elapsed while waiting.
 
 ### CSM - Wait for All Modules to be Alive.vi
-
 Waits for a group of CSM modules to all come online within a specified timeout period, and returns the wait time. This VI returns an error and the names of modules that did not come online if the timeout is exceeded. Internally, this VI periodically checks if all modules are online using the CSM - List Module VI at 5 ms intervals.
 
 -- <b>Controls</b> --
@@ -27,7 +25,6 @@ Waits for a group of CSM modules to all come online within a specified timeout p
 - <b>Waited (ms)</b>: Time elapsed while waiting.
 
 ### CSM - Wait for All Modules to Exit.vi
-
 Waits for a group of CSM modules to all go offline within a specified timeout period, and returns the wait time. This VI returns an error and the names of modules that did not go offline if the timeout is exceeded. This VI is typically used during program exit.
 
 -- <b>Controls</b> --
@@ -39,7 +36,6 @@ Waits for a group of CSM modules to all go offline within a specified timeout pe
 - <b>Waited (ms)</b>: Time elapsed while waiting.
 
 ### CSM - Post Message.vi
-
 Sends an asynchronous message to the specified CSM module. Since the transmission is asynchronous, this VI does not wait for a reply, and code execution continues immediately after the message is sent. If the CSM module does not exist, a "Target Error" is returned.
 
 > ![NOTE]
@@ -55,7 +51,6 @@ Sends an asynchronous message to the specified CSM module. Since the transmissio
 - <b>Target Module</b>: Name of the target module.
 
 ### CSM - Wait and Post Message.vi
-
 Sends an asynchronous message to the specified CSM module. Since the transmission is asynchronous, this VI does not wait for a reply, and code execution continues immediately after the message is sent. If the CSM module does not exist, this VI waits for the specified timeout duration. If the timeout is exceeded, a timeout error is returned.
 
 > - Ref: Asynchronous Message
@@ -72,13 +67,13 @@ Sends an asynchronous message to the specified CSM module. Since the transmissio
 - <b>Waited (ms)</b>: Time elapsed while waiting.
 
 ### CSM - Send Message and Wait for Reply.vi
-
 Sends a synchronous message to the CSM and waits for a reply before continuing code execution.
-
 - If no reply message is received within the timeout, this VI returns a "CSM Timeout Error".
 - If the target module does not exist, this VI returns a "Target Error".
 
-> - Ref: Synchronous Message Ref: Global Timeout Setting Ref: CSM Message Target Module Description
+> - Ref: Synchronous Message 
+> - Ref: Global Timeout Setting 
+> - Ref: CSM Message Target Module Description
 
 -- <b>Controls</b> --
 - <b>Current Module ("" to Generate an ID)</b>: Name of the current module. If empty, a temporary ID is generated for debugging purposes to identify the location.
@@ -92,9 +87,7 @@ Sends a synchronous message to the CSM and waits for a reply before continuing c
 - <b>Source CSM</b>: Name of the CSM module that sourced the returned response. In Worker Mode or Chain of Responsibility Mode, this output returns the name of the node.
 
 ### CSM - Wait and Send Message for Reply.vi
-
 Sends a synchronous message to the CSM and waits for a reply before continuing code execution. If the CSM module does not exist, this VI waits for the specified timeout duration. The following errors may occur:
-
 - If the module does not exist at the time of sending and the wait times out, this VI returns a timeout error.
 - If the message is sent but no reply message is received within the timeout, this VI returns a "CSM Timeout Error".
 
@@ -115,8 +108,7 @@ Sends a synchronous message to the CSM and waits for a reply before continuing c
 - <b>Source CSM</b>: Name of the CSM module that sourced the returned response. In Worker Mode or Chain of Responsibility Mode, this returns the name of the node.
 
 ### CSM - Run Script.vi
-
-Executes multiple CSM commands in a single batch, supporting synchronous messages, asynchronous messages, and subscriptions.
+Executes multiple CSM commands in a single batch, supporting synchronous messages, asynchronous messages, and registrations.
 
 > - Ref: CSM Message Target Module Description
 
@@ -132,7 +124,6 @@ Executes multiple CSM commands in a single batch, supporting synchronous message
 - <b>Scripts Left</b>: Remaining unexecuted scripts.
 
 ### CSM - Status Change Event.vi
-
 Obtains the CSM status change event refnum.
 
 -- <b>Controls</b> --
@@ -144,20 +135,18 @@ Obtains the CSM status change event refnum.
 - <b>Waited (ms)</b>: Time elapsed while waiting.
 
 ### CSM - Destroy Status Change Event.vi
-
 Releases the CSM status change event refnum.
 
 -- <b>Controls</b> --
 - <b>Status Change Event</b>: CSM status change event refnum.
 
 ### CSM - Module Exit Event.vi
-
 Obtains the CSM module exit event refnum. If the module does not exist, this VI waits for the specified timeout duration. If the module still does not exist after the timeout, this VI returns a timeout error.
 
 For modules in CSM advanced modes, such as Worker Mode and Chain of Responsibility Mode, the module exit event is triggered only after the last node has exited.
 
 -- <b>Controls</b> --
-- <b>Name ("" to Use UUID) In</b>: CSM module name. Refer to *CSM Naming Rules* for module naming rules.
+- <b>Name ("" to Use UUID) In</b>: CSM module name. Refer to <i>CSM Naming Rules</i> for module naming rules.
 - <b>Wait (5000 ms)</b>: Timeout duration for waiting. The default is 5000 ms.
 
 -- <b>Indicators</b> --
@@ -174,7 +163,6 @@ For modules in CSM advanced modes, such as Worker Mode and Chain of Responsibili
 > - Nodes running in advanced modes, such as Worker Mode and Chain of Responsibility Mode, share the same data area, which is used for sharing data between modules.
 
 #### CSM - Set Module Attribute.vi
-
 Sets the attribute value of the specified module. If the attribute does not exist, a new attribute is created, and <b>Replaced</b> returns FALSE. Otherwise, it returns TRUE. If the CSM module does not exist, this VI waits for the specified timeout duration. If the timeout is exceeded, this VI returns a timeout error.
 
 > - Ref: CSM Module Attributes
@@ -193,7 +181,6 @@ Sets the attribute value of the specified module. If the attribute does not exis
 - <b>Waited (ms)</b>: Time elapsed while waiting.
 
 #### CSM - Get Module Attribute.vi
-
 Reads the attribute value of the specified module. If the attribute does not exist, the default value is returned, and <b>Found</b> returns FALSE. Otherwise, it returns TRUE. If the CSM module does not exist, this VI waits for the specified timeout duration. If the timeout is exceeded, this VI returns a timeout error.
 
 > - Ref: CSM Module Attributes
@@ -213,7 +200,6 @@ Reads the attribute value of the specified module. If the attribute does not exi
 - <b>Waited (ms)</b>: Time elapsed while waiting.
 
 #### CSM - List Module Attributes.vi
-
 Lists all attribute names of the specified module. If the CSM module does not exist, this VI waits for the specified timeout duration. If the timeout is exceeded, this VI returns a timeout error.
 
 > - Ref: CSM Module Attributes
@@ -232,7 +218,6 @@ Lists all attribute names of the specified module. If the CSM module does not ex
 - <b>Waited (ms)</b>: Time elapsed while waiting.
 
 #### CSM - Delete Module Attribute.vi
-
 Deletes the attribute of the specified module. If the attribute does not exist, the <b>Found</b> output returns FALSE. Otherwise, it returns TRUE. If the CSM module does not exist, this VI waits for the specified timeout duration. If the timeout is exceeded, this VI returns a timeout error.
 
 > - Ref: CSM Module Attributes

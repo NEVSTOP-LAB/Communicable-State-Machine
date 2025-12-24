@@ -18,7 +18,6 @@
 > - <b>High Priority Message Queue</b>: Used for passing synchronous messages and interrupt broadcasts. Messages in the High Priority Queue are processed first. Messages in the Normal Priority Queue are processed only after the messages in the High Priority Queue have been processed.
 
 ### CSM - Check If Module Exists.vi
-
 Checks if a CSM module exists. When a CSM module is running in Worker Mode or Chain of Responsibility Mode, the module is marked as non-existent only after all nodes composing the module have exited.
 
 -- <b>Controls</b> --
@@ -29,7 +28,6 @@ Checks if a CSM module exists. When a CSM module is running in Worker Mode or Ch
 - <b>Exist?</b>: Returns whether the module exists.
 
 ### CSM - List Modules.vi
-
 Lists all active CSM modules. This VI has two sets of options:
 
 - <b>Scope Option</b>: Used to specify whether to list system-level modules. By default, system-level modules are not listed. Options: Normal/System Only/All.
@@ -48,12 +46,10 @@ Lists all active CSM modules. This VI has two sets of options:
 
 Lists all submodules of the current group or module. When <b>Recursive? (T)</b> is TRUE, This VI recursively lists submodules at all levels. Otherwise, this VI only lists the direct next-level submodules.
 
-```
-Example: The system contains the following five modules: Level1.Level2A, Level1.Level2A.Node1, Level1.Level2A.Node2, Level1.Level2B.Node1, Level1.Level2B.Node2.
- - When <b>Parent Name</b> is "Level1":
-    If <b>Recursive? (T)</b> is True, this VI recursively lists submodules at all levels, including Level1.Level2A, Level1.Level2A.Node1, Level1.Level2A.Node2, Level1.Level2B.Node1, Level1.Level2B.Node2.
-    If <b>Recursive? (T)</b> is False, this VI only lists direct next-level submodules, which only includes Level1.Level2A. Note that Level1.Level2B is not a module instance, so it is not included in the results.
-```
+      Example: The system contains the following five modules: Level1.Level2A, Level1.Level2A.Node1, Level1.Level2A.Node2, Level1.Level2B.Node1, Level1.Level2B.Node2.
+      - When <b>Parent Name</b> is "Level1":
+      If <b>Recursive? (T)</b> is True, this VI recursively lists submodules at all levels, including Level1.Level2A, Level1.Level2A.Node1, Level1.Level2A.Node2, Level1.Level2B.Node1, Level1.Level2B.Node2.
+      If <b>Recursive? (T)</b> is False, this VI only lists direct next-level submodules, which only includes Level1.Level2A. Note that Level1.Level2B is not a module instance, so it is not included in the results.
 
 > [!NOTE]
 > Submodules are only valid for normal CSM modules and are invalid for modules in Worker Mode or Chain of Responsibility Mode.
@@ -69,16 +65,13 @@ Example: The system contains the following five modules: Level1.Level2A, Level1.
 - <b>Submodules</b>: List of submodule names.
 
 ### CSM - Module VI Reference.vi
-
 Obtains the VI Reference of the input module. The following is the logic of this VI:
-
-- This VI queries and retrieves the CSM module's VI reference by sending a "VI Reference" synchronous message, so it has input parameters similar to the VI that sends synchronous messages.
+- This VI queries and retrieves the CSM module's VI reference by sending a `VI Reference` synchronous message, so it has input parameters similar to the VI that sends synchronous messages.
 - This VI caches the VI reference of the CSM module queried during the current main program run in the background. When the same module is queried again and the retrieved VI reference is still valid, the cached VI reference is returned directly instead of sending another synchronous message query.
 - If you need to force a re-query of the module's VI reference, you can set <b>Force? (F)</b> to TRUE.
 
 Behavior for CSM in special operation modes:
-
-- <b>Worker Mode</b>: Returns the VI reference of the worker node handling the "VI Reference" message.
+- <b>Worker Mode</b>: Returns the VI reference of the worker node handling the `VI Reference` message.
 - <b>Chain of Responsibility Mode</b>: Returns the VI reference of the first node of the CSM module in Chain of Responsibility Mode.
 - <b>System-Level Module</b>: Same as normal mode CSM. Returns the VI reference of the system-level module.
 
@@ -92,7 +85,6 @@ Behavior for CSM in special operation modes:
 - <b>CSM Module VIRef</b>: VI reference of the CSM module.
 
 ### CSM - Set TMO of Sync-Reply.vi
-
 Sets the global synchronous call timeout for the CSM program, in milliseconds. When the input is -2, the global timeout is not modified, and the return value is the current global timeout. When the input is any other positive value, the global timeout is modified to that value, and the new global timeout is returned.
 
 > [!NOTE]
@@ -111,7 +103,6 @@ When calling a CSM Module/API, the default timeout is -2, in which case the glob
 - <b>TMO For Sync-Rep (ms) Out</b>: The current global timeout.
 
 ### CSM - Module Status.vi
-
 Obtains the status of a CSM module, including operation mode, number of workers, and number of messages pending in the message queue.
 
 > - Ref: CSM Operation Modes
@@ -123,11 +114,9 @@ Obtains the status of a CSM module, including operation mode, number of workers,
 - <b>CSM Name (dup)</b>: A copy of the input CSM module name.
 - <b>Mode</b>: Returns the operation mode of the module.
 - <b>#Nodes</b>: Number of nodes in Worker Mode or Chain of Responsibility Mode.
-- <b>#msg to be processed</b>: Number of messages pending processing in the CSM message queue.
-- <b>#Elements In Queue</b>: Number of elements in the CSM message queue.
+- <b>#Elements In Queue</b>: Number of messages pending processing in the CSM message queue.
 
 ### CSM - Flush Queue.vi
-
 Clear the LabVIEW queue used in the background for inter-module communication of a CSM module.
 
 > - Ref: CSM Priority Queue Design
@@ -146,7 +135,6 @@ Clear the LabVIEW queue used in the background for inter-module communication of
 ### Filter JKISM String Queue
 
 #### CSM - Filter JKISM String Queue.vi
-
 Filters specific states in the CSM state queue.
 
 > [!WARNING]
@@ -167,7 +155,6 @@ Filters specific states in the CSM state queue.
 > - CSM - Filter Duplicated Lines.vi: Filters duplicated lines.
 
 #### CSM - Filter Local States.vi
-
 Filters local states in the CSM state queue.
 
 -- <b>Controls</b> --
@@ -177,7 +164,6 @@ Filters local states in the CSM state queue.
 - <b>States Out</b>: The filtered state description string.
 
 #### CSM - Filter Messages.vi
-
 Filters all types of messages in the CSM state queue.
 
 -- <b>Controls</b> --
@@ -187,7 +173,6 @@ Filters all types of messages in the CSM state queue.
 - <b>States Out</b>: The filtered state description string.
 
 #### CSM - Filter Sync Messages.vi
-
 Filters synchronous messages in the CSM state queue.
 
 -- <b>Controls</b> --
@@ -197,7 +182,6 @@ Filters synchronous messages in the CSM state queue.
 - <b>States Out</b>: The filtered state description string.
 
 #### CSM - Filter Async Messages.vi
-
 Filters asynchronous messages in the CSM state queue.
 
 -- <b>Controls</b> --
@@ -207,7 +191,6 @@ Filters asynchronous messages in the CSM state queue.
 - <b>States Out</b>: The filtered state description string.
 
 #### CSM - Filter Async without Reply Messages.vi
-
 Filters asynchronous without reply messages in the CSM state queue.
 
 -- <b>Controls</b> --
@@ -217,7 +200,6 @@ Filters asynchronous without reply messages in the CSM state queue.
 - <b>States Out</b>: The filtered state description string.
 
 #### CSM - Filter Messages to Non-Existing Modules.vi
-
 Filters messages sent to non-existing modules in the CSM state queue. This VI uses the CSM - List Modules VI to obtain all active CSM modules and then filters out messages sent to modules that do not exist.
 
 -- <b>Controls</b> --
@@ -227,7 +209,6 @@ Filters messages sent to non-existing modules in the CSM state queue. This VI us
 - <b>States Out</b>: The filtered state description string.
 
 #### CSM - Filter Broadcasts.vi
-
 Filters broadcast messages in the CSM state queue.
 
 -- <b>Controls</b> --
@@ -237,7 +218,6 @@ Filters broadcast messages in the CSM state queue.
 - <b>States Out</b>: The filtered state description string.
 
 #### CSM - Filter Status Broadcasts.vi
-
 Filters status broadcast messages in the CSM state queue.
 
 -- <b>Controls</b> --
@@ -247,7 +227,6 @@ Filters status broadcast messages in the CSM state queue.
 - <b>States Out</b>: The filtered state description string.
 
 #### CSM - Filter Interrupt Broadcasts.vi
-
 Filters interrupt broadcast messages in the CSM state queue.
 
 -- <b>Controls</b> --
@@ -257,7 +236,6 @@ Filters interrupt broadcast messages in the CSM state queue.
 - <b>States Out</b>: The filtered state description string.
 
 #### CSM - Filter Duplicated Lines.vi
-
 Filters duplicated lines in the CSM state queue.
 
 -- <b>Controls</b> --
