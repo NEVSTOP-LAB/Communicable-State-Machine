@@ -123,7 +123,7 @@ Executes multiple CSM commands in a single batch, supporting synchronous message
 - <b>Response</b>: Returned results from executing the script. Only synchronous messages carry returns. The corresponding column for other commands will be an empty string.
 - <b>Scripts Left</b>: Remaining unexecuted scripts.
 
-### CSM - Status Change Event.vi
+### CSM - Broadcast Event.vi
 Obtains the CSM status change event refnum.
 
 -- <b>Controls</b> --
@@ -134,7 +134,7 @@ Obtains the CSM status change event refnum.
 - <b>Status Change Event</b>: CSM status change event refnum.
 - <b>Waited (ms)</b>: Time elapsed while waiting.
 
-### CSM - Destroy Status Change Event.vi
+### CSM - Destroy Broadcast Event.vi
 Releases the CSM status change event refnum.
 
 -- <b>Controls</b> --

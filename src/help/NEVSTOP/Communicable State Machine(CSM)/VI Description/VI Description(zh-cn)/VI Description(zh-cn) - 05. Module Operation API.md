@@ -124,7 +124,7 @@
 - <b>Response</b>: 执行脚本的返回结果。只有同步消息才会携带返回，其他的指令对应列为空字符串。
 - <b>Scripts Left</b>: 剩余未执行的脚本。
 
-### CSM - Status Change Event.vi
+### CSM - Broadcast Event.vi
 获取CSM状态更改事件句柄。
 
 -- <b>输入控件(Controls)</b> --
@@ -135,7 +135,7 @@
 - <b>Status Change Event</b>: CSM状态更改事件句柄。
 - <b>Waited (ms)</b>: 已等待的时间。
 
-### CSM - Destroy Status Change Event.vi
+### CSM - Destroy Broadcast Event.vi
 释放CSM状态更改事件句柄。
 
 -- <b>输入控件(Controls)</b> --
