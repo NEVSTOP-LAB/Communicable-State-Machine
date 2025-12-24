@@ -1,6 +1,6 @@
 # CSM INI-Variable Addon
 
-> [!NOTE] 
+> [!NOTE]
 > <b>CSM INI-Variable Addon</b>
 >
 > 配置文件是应用程序开发中不可或缺的组成部分。CSM INI-Variable Addon为CSM提供简单易用的配置文件支持功能，使用户能够配置应用程序而无需显式读写配置文件。
@@ -16,7 +16,7 @@
 >
 > 本库包含并使用了由[@rcpacini](https://github.com/rcpacini)开发的[LabVIEW-Config](https://github.com/rcpacini/LabVIEW-Config)的副本。
 
-> [!NOTE] 
+> [!NOTE]
 > <b>CSM INI-Variable变量格式</b>
 >
 > 格式定义: `${section.variable:defaultValue}`
@@ -30,7 +30,7 @@
 > - `section`参数为可选。省略时，使用默认配置段 `SectionName=LabVIEW`。
 > - 默认值为可选，未指定时默认为空字符串("")。
 
-> [!NOTE] 
+> [!NOTE]
 > <b>CSM INI-Variable配置文件路径</b>
 >
 > - <b>开发状态</b>: Application Directory中找到的第一个INI配置文件。若不存在配置文件，则默认为`csm-app.ini`。
@@ -42,13 +42,13 @@
 >   - `[__include]`节中的配置文件名称不重要，只需要确保路径正确即可。
 >   - 为了避免循环引用，同一个配置文件，第二次加载时会自动忽略。
 
-> [!NOTE] 
+> [!NOTE]
 > <b>CSM INI-Variable多文件配置场景</b>
-> 
+>
 > - 加载多个文件时，后加载的文件会覆盖先前加载文件中的相同配置项。
 > - 将缓存更改保存到文件时，修改会保存到最后加载的配置文件中。
 
-> [!WARNING] 
+> [!WARNING]
 > <b>CSM INI-Variable缓存机制警告</b>
 >
 > 请注意，由于本库使用全局缓存修改标志，频繁的配置更改会降低读取VI中缓存机制的有效性。因此，本库不建议用于需要频繁修改配置的场景。

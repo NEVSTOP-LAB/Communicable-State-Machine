@@ -232,7 +232,7 @@ Converts a string to an indexed enum type.
 > - Ref: Indexed Enum
 
       _<b>Conversion Rule 1: No Index Number</b>_
-      
+
       Convert by string matching.
 
       Example Enum = {AAA, BBBB, CCCC}

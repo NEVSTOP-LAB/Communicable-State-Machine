@@ -52,9 +52,9 @@
 > [!NOTE]
 > <b>CSM Message Target Module Description</b>
 >
-> In Normal Mode, the target module for a CSM message is the specified module name. 
+> In Normal Mode, the target module for a CSM message is the specified module name.
 > System-level modules start with a `.` in their name. The target module for a CSM message includes the `.` in the name. For example, if the requested module name is `.System`, the target module for the CSM message is `.System`.
-> In Worker Mode, the target module for a CSM message can only be the overall module name, not the node name. For example, if the requested module name is `Worker#`, the target module for the CSM message is `Worker`. 
+> In Worker Mode, the target module for a CSM message can only be the overall module name, not the node name. For example, if the requested module name is `Worker#`, the target module for the CSM message is `Worker`.
 > In Chain of Responsibility Mode, the target module for a CSM message can only be the overall module name, not the node name. For example, if the requested module name is `Chain$1`, the target module for the CSM message is `Chain`.
 
 > [!NOTE]
@@ -109,7 +109,7 @@
 >      // Send Status Broadcast "TCP Connected" with argument "192.168.1.100"
 >      TCP Connected >> 192.168.1.100 -> <broadcast>
 >      // Register the "TCP Connected" signal of the TCP module to the "UpdateLED" interface of the UI module
->      TCP Connected@TCPModule >> UpdateLED@UI -><register> 
+>      TCP Connected@TCPModule >> UpdateLED@UI -><register>
 
 > [!NOTE]
 > <b>CSM Broadcast</b>
@@ -118,7 +118,7 @@
 > - <b>Status Broadcast</b>: Normal priority broadcast. Similar to asynchronous messages, it is passed via the low-priority queue. It is processed sequentially when other unprocessed asynchronous messages or Status Broadcasts exist in the module.
 > - <b>Interrupt Broadcast</b>: High priority broadcast. Similar to synchronous messages, it is passed via the high-priority queue. It is processed first when other low-priority asynchronous messages or Status Broadcasts exist in the module. However, if other unprocessed synchronous messages or Interrupt Broadcasts exist, it is processed sequentially.
 > - <b>State Broadcast</b>: State Broadcast is an implicit broadcast. When a registration relationship exists, the State Broadcast is automatically triggered when the CSM completes a certain state. The argument for the State Broadcast is the Response of the CSM state.
-> <b>Note</b>: 
+> <b>Note</b>:
 > - Status broadcasts or interrupt broadcasts must be explicitly sent. Do not use names identical to CSM state names. Otherwise, multiple triggers may occur.
 > - For efficiency considerations, state broadcasts are only sent when registered to. This means you must register to receive state broadcasts in a module's broadcast events.
 
@@ -151,7 +151,7 @@
 >      ModuleInternalChange >> Arguments -> <interrupt> // High Priority
 >
 > Default registrations do not change the priority, but the priority of the registered broadcast can be changed via special registration formats.
-> 
+>
 >      // Default registration does not change priority
 >      ModuleInternalChange@SourceModule >> API@TargetModule -><register>
 >      // Change the registered broadcast to Normal priority, regardless of its original priority
@@ -189,6 +189,6 @@
 > - <b>Internal Addition</b>: Rules added internally within a CSM module will be automatically deleted when the CSM module exits, so there is no need to manually unregister.
 >   - Rules are considered internally added only when added using the `-<register>` statement and the API does not specify a module name.
 >
->         Example:
+>         // Example:
 >         status@sourceModule >> API@TargetModule -><register> // Externally added
 >         status@sourceModule >> API -><register> // Internally added

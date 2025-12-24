@@ -10,7 +10,7 @@
 > [!NOTE]
 > <b>CSM System-Level Module</b>
 >
-> CSM functions of a system-level module are almost identical to those of a normal module. The only difference is that the CSM - List Modules VI does not list system-level modules. Therefore, a system-level module is typically used to implement functional modules running in the background. When processing the operational logic of normal modules in a unified manner, interference with these background running logics can be avoided. 
+> CSM functions of a system-level module are almost identical to those of a normal module. The only difference is that the CSM - List Modules VI does not list system-level modules. Therefore, a system-level module is typically used to implement functional modules running in the background. When processing the operational logic of normal modules in a unified manner, interference with these background running logics can be avoided.
 >
 > CSM system-level modules usually start with `.`, for example: `.MainApp` and `.BackgroundTask`. The `.` is part of the name, so operations like message sending and registration must include the `.` in the name. For example, you can name the main program loop `.MainApp`. You can then use the CSM - List Modules VI to get a list of all normal modules without listing `.MainApp`. If the main program needs to exit all other modules, you can send "Macro: Exit" to the results of the CSM - List Modules VI. This allows you to exit all normal modules without affecting the operation of the system-level module.
 >
@@ -102,7 +102,7 @@ Marks a module as a Worker Mode module by adding `#` after the CSM name.
 > <b>Behavior</b>: External callers can consider the Chain as a single CSM module capable of message communication, state registration, and so on. Internally, nodes attempt to process the message sequentially according to their order. When a node has the capability to process the current message, the message is processed and is not passed further down the chain.
 >
 > <b>Example</b>:
-> 
+>
 >      // Request module name as `module$`, where `module` is the chain name. Instantiate 4 instances. Their names might be:
 >      // - `module$1`
 >      // - `module$2`

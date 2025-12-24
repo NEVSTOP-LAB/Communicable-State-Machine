@@ -25,6 +25,7 @@
 		<Item Name="_Generate ControlDocMap.vi" Type="VI" URL="../Support/_Generate ControlDocMap.vi"/>
 		<Item Name="_Overwrite Decoration Content.vi" Type="VI" URL="../Support/_Overwrite Decoration Content.vi"/>
 		<Item Name="_Load Markdown File.vi" Type="VI" URL="../Support/_Load Markdown File.vi"/>
+		<Item Name="_Standardize Carriage Returns.vi" Type="VI" URL="../Support/_Standardize Carriage Returns.vi"/>
 	</Item>
 	<Item Name="Typedef" Type="Folder">
 		<Item Name="DocElement.ctl" Type="VI" URL="../_Typedef/DocElement.ctl"/>
@@ -46,5 +47,4 @@
 			<Item Name="Export VI Help.vi" Type="VI" URL="../Export VI Help.vi"/>
 		</Item>
 	</Item>
-	<Item Name="_Standardize Carriage Returns.vi" Type="VI" URL="../Support/_Standardize Carriage Returns.vi"/>
 </Library>

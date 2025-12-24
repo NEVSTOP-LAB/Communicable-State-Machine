@@ -71,8 +71,8 @@ Sends a synchronous message to the CSM and waits for a reply before continuing c
 - If no reply message is received within the timeout, this VI returns a "CSM Timeout Error".
 - If the target module does not exist, this VI returns a "Target Error".
 
-> - Ref: Synchronous Message 
-> - Ref: Global Timeout Setting 
+> - Ref: Synchronous Message
+> - Ref: Global Timeout Setting
 > - Ref: CSM Message Target Module Description
 
 -- <b>Controls</b> --
@@ -155,13 +155,13 @@ For modules in CSM advanced modes, such as Worker Mode and Chain of Responsibili
 
 ### Attributes
 
-> ![NOTE]
+> [!NOTE]
 > <b>CSM Module Attributes</b>
 >
 > CSM module attributes are a data area that can store module configuration and status, accessed by name. CSM module attributes can be used in the following scenarios:
 > - Providing a way to access and modify configuration and status information without messages. For example, a "Connected" attribute in a TCP module indicating whether a connection is established is more convenient to access directly.
 > - Nodes running in advanced modes, such as Worker Mode and Chain of Responsibility Mode, share the same data area, which is used for sharing data between modules.
-
+>
 #### CSM - Set Module Attribute.vi
 Sets the attribute value of the specified module. If the attribute does not exist, a new attribute is created, and <b>Replaced</b> returns FALSE. Otherwise, it returns TRUE. If the CSM module does not exist, this VI waits for the specified timeout duration. If the timeout is exceeded, this VI returns a timeout error.
 
