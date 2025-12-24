@@ -17,6 +17,7 @@
 	<Item Name="Dashboard Cell Resize.vi" Type="VI" URL="../Dashboard Cell Resize.vi"/>
 	<Item Name="Dashboard Cell2 Array Resize.vi" Type="VI" URL="../Dashboard Cell2 Array Resize.vi"/>
 	<Item Name="Defer Panel Updates_csm.vi" Type="VI" URL="../Defer Panel Updates_csm.vi"/>
+	<Item Name="Fit Control to Tab.vi" Type="VI" URL="../Fit Control to Tab.vi"/>
 	<Item Name="Populate Tree with Delimited Strings_csm.vi" Type="VI" URL="../Populate Tree with Delimited Strings_csm.vi"/>
 	<Item Name="Relocate Splitter Posistion.vi" Type="VI" URL="../Relocate Splitter Posistion.vi"/>
 	<Item Name="Tree Rows from Delimited String Array_csm.vi" Type="VI" URL="../Tree Rows from Delimited String Array_csm.vi"/>

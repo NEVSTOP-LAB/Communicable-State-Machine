@@ -12,7 +12,7 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Property Name="NI.SortType" Type="Int">3</Property>
-	<Item Name="Obtain JKISM Message Event.vi" Type="VI" URL="../Obtain JKISM Message Event.vi"/>
-	<Item Name="Generate JKISM Message Event.vi" Type="VI" URL="../Generate JKISM Message Event.vi"/>
-	<Item Name="Destroy JKISM Message Event.vi" Type="VI" URL="../Destroy JKISM Message Event.vi"/>
+	<Item Name="FGV-JKISM Modules.vi" Type="VI" URL="../FGV-JKISM Modules.vi"/>
+	<Item Name="JKISM Pass Allowed Message.vi" Type="VI" URL="../JKISM Pass Allowed Message.vi"/>
+	<Item Name="_action.ctl" Type="VI" URL="../_action.ctl"/>
 </Library>
