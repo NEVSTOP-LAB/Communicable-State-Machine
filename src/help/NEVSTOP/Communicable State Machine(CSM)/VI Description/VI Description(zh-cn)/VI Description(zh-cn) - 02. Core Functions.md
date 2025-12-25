@@ -1,5 +1,15 @@
 # CSM API
 
+> [!NOTE]
+> <b>消息拼接API</b>
+>
+> 该类型API不会直接发送消息，仅用于拼接消息字符串。需将字符串并入CSM的状态队列后，在Parse State Queue++ VI中发送消息并执行操作。在熟悉CSM规则的情况下，可不必使用此类API，直接在字符串中键入对应的消息字符串或操作字符串。
+
+> [!NOTE]
+> <b>CSM 的状态队列操作API</b>
+>
+> 该类型API不会直接发送消息，只是拼接消息字符串。在Parse State Queue++.vi中发送消息、执行操作。与消息拼接API不同的是，此类API会包含CSM的状态队列字符串输入，相当于在状态队列中插入消息。
+
 ## 核心功能(Core Functions)
 
 ### Parse State Queue++.vi
@@ -60,10 +70,7 @@
 ### Build Message with Arguments++.vi
 该VI用于构建CSM消息字符串及操作字符串。
 
-> [!NOTE]
-> <b>消息拼接API</b>
->
-> 该类型API不会直接发送消息，仅用于拼接消息字符串。需将字符串并入CSM的状态队列后，在Parse State Queue++ VI中发送消息并执行操作。在熟悉CSM规则的情况下，可不必使用此类API，直接在字符串中键入对应的消息字符串或操作字符串。
+> - Ref: CSM 消息拼接API
 
 > [!NOTE]
 > <b>多态VI(Polymorphic VI)选项</b>
@@ -296,10 +303,7 @@
       //广播状态更改
       Status >> Arguments -><broadcast>
 
-> [!NOTE]
-> <b>CSM 的状态队列操作API</b>
->
-> 该类型API不会直接发送消息，只是拼接消息字符串。在Parse State Queue++.vi中发送消息、执行操作。与消息拼接API不同的是，此类API会包含CSM的状态队列字符串输入，相当于在状态队列中插入消息。
+> - Ref: CSM 的状态队列操作API
 
 -- <b>输入控件(Controls)</b> --
 - <b>Status with Arguments</b>: 将被广播的状态及参数，支持多行，每行状态都将被添加`-><broadcast>`。

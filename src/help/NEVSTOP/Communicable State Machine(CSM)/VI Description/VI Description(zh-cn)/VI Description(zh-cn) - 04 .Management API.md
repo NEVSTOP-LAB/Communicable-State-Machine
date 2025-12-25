@@ -87,12 +87,7 @@
 ### CSM - Set TMO of Sync-Reply.vi
 设置CSM程序全局的同步调用超时时间，单位为毫秒。当输入为-2时，将不会修改全局超时时间，返回值为当前全局超时时间；当输入为其他正值时，将修改全局超时时间为该值，返回新的全局超时时间。
 
-> [!NOTE]
-> <b>CSM同步消息全局超时</b>
->
-> - CSM模块间通信，或使用同步消息发送VI时，默认的超时时间为-2，此时将使用全局设置的超时时间
-> - 全局超时时间可以通过CSM - Set TMO of Sync-Reply VI设置为其他正值，以覆盖全局设置的超时时间
-> - 全局超时时间仅对同步调用生效，异步调用不受影响
+> - Ref: CSM同步消息全局超时
 
 CSM模块/API调用时，默认的超时时间为-2，此时将使用全局设置的超时时间；如果设置为其他正值，则将使用该值作为超时时间。
 
@@ -132,13 +127,15 @@ CSM模块/API调用时，默认的超时时间为-2，此时将使用全局设�
 - <b>CSM Name (Dup)</b>: 输入CSM模块名称的副本。
 - <b>#Flushed</b>: 被清理的消息队列中的元素个数。
 
-### Filter JKISM String Queue
+### Filter JKISM String Queue(CSM - Filter JKISM String Queue.vi)
 
-#### CSM - Filter JKISM String Queue.vi
 该VI用于过滤CSM状态队列中的特定状态
 
 > [!WARNING]
-> CSM模块通常不建议使用该VI。CSM建议通过设计避免消息在模块中的堆积，因此建议通过设计避免清空JKISM字符串队列。但如果必须清空JKISM字符串队列，建议通过调用该组VI清空JKISM字符串队列，而非使用字符串操作
+> CSM模块通常不建议使用该VI。CSM建议通过设计避免消息在模块中的堆积，因此建议通过设计避免清空JKISM字符串队列。
+> 但如果必须清空JKISM字符串队列，建议通过调用该组VI清空JKISM字符串队列，而非使用字符串操作。
+
+> - Ref: CSM 的状态队列操作API
 
 > [!NOTE]
 > <b>多态VI(Polymorphic VI)选项</b>
@@ -156,6 +153,8 @@ CSM模块/API调用时，默认的超时时间为-2，此时将使用全局设�
 #### CSM - Filter Local States.vi
 该VI用于过滤CSM状态队列中的本地状态。
 
+> - Ref: CSM 的状态队列操作API
+
 -- <b>输入控件(Controls)</b> --
 - <b>States In</b>: 待过滤的整段状态描述字符串。
 
@@ -164,6 +163,8 @@ CSM模块/API调用时，默认的超时时间为-2，此时将使用全局设�
 
 #### CSM - Filter Messages.vi
 该VI用于过滤CSM状态队列中的所有类型的消息。
+
+> - Ref: CSM 的状态队列操作API
 
 -- <b>输入控件(Controls)</b> --
 - <b>States In</b>: 待过滤的整段状态描述字符串。
@@ -174,6 +175,8 @@ CSM模块/API调用时，默认的超时时间为-2，此时将使用全局设�
 #### CSM - Filter Sync Messages.vi
 该VI用于过滤CSM状态队列中的同步消息。
 
+> - Ref: CSM 的状态队列操作API
+
 -- <b>输入控件(Controls)</b> --
 - <b>States In</b>: 待过滤的整段状态描述字符串。
 
@@ -182,6 +185,8 @@ CSM模块/API调用时，默认的超时时间为-2，此时将使用全局设�
 
 #### CSM - Filter Async Messages.vi
 该VI用于过滤CSM状态队列中的异步消息。
+
+> - Ref: CSM 的状态队列操作API
 
 -- <b>输入控件(Controls)</b> --
 - <b>States In</b>: 待过滤的整段状态描述字符串。
@@ -192,6 +197,8 @@ CSM模块/API调用时，默认的超时时间为-2，此时将使用全局设�
 #### CSM - Filter Async without Reply Messages.vi
 该VI用于过滤CSM状态队列中的异步无回复消息。
 
+> - Ref: CSM 的状态队列操作API
+
 -- <b>输入控件(Controls)</b> --
 - <b>States In</b>: 待过滤的整段状态描述字符串。
 
@@ -200,6 +207,8 @@ CSM模块/API调用时，默认的超时时间为-2，此时将使用全局设�
 
 #### CSM - Filter Messages to Non-Existing Modules.vi
 该VI用于过滤CSM状态队列中发送到不存在模块的消息。这个VI中会使用CSM - List Modules VI获取所有活动的CSM模块，然后过滤掉发送给不存在模块的消息。
+
+> - Ref: CSM 的状态队列操作API
 
 -- <b>输入控件(Controls)</b> --
 - <b>States In</b>: 待过滤的整段状态描述字符串。
@@ -210,6 +219,8 @@ CSM模块/API调用时，默认的超时时间为-2，此时将使用全局设�
 #### CSM - Filter Broadcasts.vi
 该VI用于过滤CSM状态队列中的广播消息。
 
+> - Ref: CSM 的状态队列操作API
+
 -- <b>输入控件(Controls)</b> --
 - <b>States In</b>: 待过滤的整段状态描述字符串。
 
@@ -218,6 +229,8 @@ CSM模块/API调用时，默认的超时时间为-2，此时将使用全局设�
 
 #### CSM - Filter Status Broadcasts.vi
 该VI用于过滤CSM状态队列中的状态广播消息。
+
+> - Ref: CSM 的状态队列操作API
 
 -- <b>输入控件(Controls)</b> --
 - <b>States In</b>: 待过滤的整段状态描述字符串。
@@ -228,6 +241,8 @@ CSM模块/API调用时，默认的超时时间为-2，此时将使用全局设�
 #### CSM - Filter Interrupt Broadcasts.vi
 该VI用于过滤CSM状态队列中的中断广播消息。
 
+> - Ref: CSM 的状态队列操作API
+
 -- <b>输入控件(Controls)</b> --
 - <b>States In</b>: 待过滤的整段状态描述字符串。
 
@@ -236,6 +251,8 @@ CSM模块/API调用时，默认的超时时间为-2，此时将使用全局设�
 
 #### CSM - Filter Duplicated Lines.vi
 该VI用于过滤CSM状态队列中的重复行。
+
+> - Ref: CSM 的状态队列操作API
 
 -- <b>输入控件(Controls)</b> --
 - <b>Keep First Matched? (T)</b>: 是否保留第一个匹配项，默认为TRUE。

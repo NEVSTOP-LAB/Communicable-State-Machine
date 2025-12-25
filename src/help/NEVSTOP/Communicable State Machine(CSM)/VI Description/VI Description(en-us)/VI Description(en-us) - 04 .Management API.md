@@ -87,12 +87,7 @@ Behavior for CSM in special operation modes:
 ### CSM - Set TMO of Sync-Reply.vi
 Sets the global synchronous call timeout for the CSM program, in milliseconds. When the input is -2, the global timeout is not modified, and the return value is the current global timeout. When the input is any other positive value, the global timeout is modified to that value, and the new global timeout is returned.
 
-> [!NOTE]
-> <b>CSM Synchronous Message Global Timeout</b>
->
-> - When performing CSM inter-module communication or using the VI that sends synchronous messages, the default timeout is -2, which uses the globally configured timeout.
-> - The global timeout can be set to other positive values using the CSM - Set TMO of Sync-Reply VI to override the global setting.
-> - The global timeout only applies to synchronous calls. Asynchronous calls are unaffected.
+> - Ref: CSM Synchronous Message Global Timeout
 
 When calling a CSM Module/API, the default timeout is -2, in which case the globally configured timeout is used. If set to another positive value, that value is used as the timeout.
 
@@ -132,13 +127,13 @@ Clear the LabVIEW queue used in the background for inter-module communication of
 - <b>CSM Name (Dup)</b>: A copy of the input CSM module name.
 - <b>#Flushed</b>: Number of elements in the flushed message queue.
 
-### Filter JKISM String Queue
-
-#### CSM - Filter JKISM String Queue.vi
+### Filter JKISM String Queue(CSM - Filter JKISM String Queue.vi)
 Filters specific states in the CSM state queue.
 
 > [!WARNING]
 > Using this VI is generally not recommended. It is recommended to avoid message accumulation in modules through your code design. Therefore, it is recommended to avoid clearing the JKISM string queue through code design. However, if clearing the JKISM string queue is mandatory, it is recommended to use this VI to clear the JKISM string queue rather than using string operations.
+
+> - Ref: CSM State Queue Operation API
 
 > [!NOTE]
 > <b>Polymorphic VI Options</b>
@@ -157,6 +152,8 @@ Filters specific states in the CSM state queue.
 #### CSM - Filter Local States.vi
 Filters local states in the CSM state queue.
 
+> - Ref: CSM State Queue Operation API
+
 -- <b>Controls</b> --
 - <b>States In</b>: The entire state description string to filter.
 
@@ -165,6 +162,8 @@ Filters local states in the CSM state queue.
 
 #### CSM - Filter Messages.vi
 Filters all types of messages in the CSM state queue.
+
+> - Ref: CSM State Queue Operation API
 
 -- <b>Controls</b> --
 - <b>States In</b>: The entire state description string to filter.
@@ -175,6 +174,8 @@ Filters all types of messages in the CSM state queue.
 #### CSM - Filter Sync Messages.vi
 Filters synchronous messages in the CSM state queue.
 
+> - Ref: CSM State Queue Operation API
+
 -- <b>Controls</b> --
 - <b>States In</b>: The entire state description string to filter.
 
@@ -183,6 +184,8 @@ Filters synchronous messages in the CSM state queue.
 
 #### CSM - Filter Async Messages.vi
 Filters asynchronous messages in the CSM state queue.
+
+> - Ref: CSM State Queue Operation API
 
 -- <b>Controls</b> --
 - <b>States In</b>: The entire state description string to filter.
@@ -193,6 +196,8 @@ Filters asynchronous messages in the CSM state queue.
 #### CSM - Filter Async without Reply Messages.vi
 Filters asynchronous without reply messages in the CSM state queue.
 
+> - Ref: CSM State Queue Operation API
+
 -- <b>Controls</b> --
 - <b>States In</b>: The entire state description string to filter.
 
@@ -201,6 +206,8 @@ Filters asynchronous without reply messages in the CSM state queue.
 
 #### CSM - Filter Messages to Non-Existing Modules.vi
 Filters messages sent to non-existing modules in the CSM state queue. This VI uses the CSM - List Modules VI to obtain all active CSM modules and then filters out messages sent to modules that do not exist.
+
+> - Ref: CSM State Queue Operation API
 
 -- <b>Controls</b> --
 - <b>States In</b>: The entire state description string to filter.
@@ -211,6 +218,8 @@ Filters messages sent to non-existing modules in the CSM state queue. This VI us
 #### CSM - Filter Broadcasts.vi
 Filters broadcast messages in the CSM state queue.
 
+> - Ref: CSM State Queue Operation API
+
 -- <b>Controls</b> --
 - <b>States In</b>: The entire state description string to filter.
 
@@ -219,6 +228,8 @@ Filters broadcast messages in the CSM state queue.
 
 #### CSM - Filter Status Broadcasts.vi
 Filters status broadcast messages in the CSM state queue.
+
+> - Ref: CSM State Queue Operation API
 
 -- <b>Controls</b> --
 - <b>States In</b>: The entire state description string to filter.
@@ -229,6 +240,8 @@ Filters status broadcast messages in the CSM state queue.
 #### CSM - Filter Interrupt Broadcasts.vi
 Filters interrupt broadcast messages in the CSM state queue.
 
+> - Ref: CSM State Queue Operation API
+
 -- <b>Controls</b> --
 - <b>States In</b>: The entire state description string to filter.
 
@@ -237,6 +250,8 @@ Filters interrupt broadcast messages in the CSM state queue.
 
 #### CSM - Filter Duplicated Lines.vi
 Filters duplicated lines in the CSM state queue.
+
+> - Ref: CSM State Queue Operation API
 
 -- <b>Controls</b> --
 - <b>Keep First Matched? (T)</b>: Whether to keep the first matched item. The default is TRUE.

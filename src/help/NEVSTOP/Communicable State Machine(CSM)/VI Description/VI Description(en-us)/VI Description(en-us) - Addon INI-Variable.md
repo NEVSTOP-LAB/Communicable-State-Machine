@@ -44,6 +44,7 @@
 
 > [!NOTE]
 > <b>CSM INI-Variable Multi-File Configuration Scenario</b>
+>
 > - When loading multiple files, configuration items in files loaded later will overwrite identical items in previously loaded files.
 > - When saving cache changes to a file, modifications are saved to the configuration file loaded last.
 

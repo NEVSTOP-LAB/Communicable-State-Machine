@@ -81,6 +81,13 @@
 >   - Errors occurring at both the caller and callee are merged into the error cluster output.
 
 > [!NOTE]
+> <b>CSM Synchronous Message Global Timeout</b>
+>
+> - When performing CSM inter-module communication or using the VI that sends synchronous messages, the default timeout is -2, which uses the globally configured timeout.
+> - The global timeout can be set to other positive values using the CSM - Set TMO of Sync-Reply VI to override the global setting.
+> - The global timeout only applies to synchronous calls. Asynchronous calls are unaffected.
+
+> [!NOTE]
 > <b>Asynchronous Message</b>
 >
 > An asynchronous message is a type of message. After a CSM sends an asynchronous message, it immediately continues to execute subsequent code without waiting for the callee to complete message processing. Asynchronous messages are divided into Asynchronous Call (`->`) and Asynchronous Call without Reply (`->|`). The only difference is that with an Asynchronous Call without Reply (`->|`), the callee will not return the result to the caller after completing the operation.

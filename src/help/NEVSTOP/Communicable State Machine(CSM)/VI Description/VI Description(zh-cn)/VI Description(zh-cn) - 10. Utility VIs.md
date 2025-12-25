@@ -7,6 +7,8 @@
 ### CSM - Compact Multiple States.vi
 将多个状态紧凑成单个字符串以供输入使用。
 
+> - Ref: CSM 消息拼接API
+
 -- <b>输入控件(Controls)</b> --
 - <b>Multiple States</b>: CSM状态字符串数组。
 
@@ -25,7 +27,7 @@
 ### CSM - Build Exit Messages of CSMs.vi
 输入CSM模块名称，拼接生成退出消息(`Macro: Exit`)。
 
-> - Ref: 消息拼接API
+> - Ref: CSM 消息拼接API
 
 -- <b>输入控件(Controls)</b> --
 - <b>CSMs</b>: CSM模块名称数组。
@@ -37,7 +39,7 @@
 ### CSM - Filter Duplicate Messages By Name.vi
 过滤重复的消息，只保留最新的消息。
 
-> - Ref: 消息拼接API
+> - Ref: CSM 的状态队列操作API
 
 -- <b>输入控件(Controls)</b> --
 - <b>States</b>: 输入的消息字符串。
@@ -47,6 +49,8 @@
 - <b>Filtered States</b>: 过滤后的消息字符串。
 
 ### CSM - Remove Duplicated Following Messages.vi
+
+> - Ref: CSM 的状态队列操作API
 
 -- <b>输入控件(Controls)</b> --
 - <b>Current State</b>:

@@ -1,5 +1,15 @@
 # CSM API
 
+> [!NOTE]
+> <b>Message Building API</b>
+>
+> This type of API is only used to concatenate message strings and does not send messages directly. The strings need to be merged into the CSM state queue, and the messages will be sent and the operation executed within the Parse State Queue++ VI. If you are familiar with CSM rules, you do not need to use this type of API. You can type the corresponding message string or operation string directly into the string.
+
+> [!NOTE]
+> <b>CSM State Queue Operation API</b>
+>
+> This type of API only concatenates message strings and does not send messages directly. The message is sent and the operation executed within the Parse State Queue++ VI. Unlike the Message Building API, this type of API includes a CSM state queue string input, which is equivalent to inserting a message into the state queue.
+
 ## Core Functions
 
 ### Parse State Queue++.vi
@@ -58,10 +68,7 @@ Builds CSM message strings, containing information such as state, arguments, tar
 ### Build Message with Arguments++.vi
 Builds CSM message strings and operation strings.
 
-> [!NOTE]
-> <b>Message Building API</b>
->
-> This type of API is only used to concatenate message strings and does not send messages directly. The strings need to be merged into the CSM state queue, and the messages will be sent and the operation executed within the Parse State Queue++ VI. If you are familiar with CSM rules, you do not need to use this type of API. You can type the corresponding message string or operation string directly into the string.
+> - Ref: Message Building API
 
 > [!NOTE]
 > <b>Polymorphic VI Options</b>
@@ -293,10 +300,7 @@ Broadcasts a status change to the system. CSM modules with registered states wil
       // Broadcast status change
       Status >> Arguments -><broadcast>
 
-> [!NOTE]
-> <b>CSM State Queue Operation API</b>
->
-> This type of API only concatenates message strings and does not send messages directly. The message is sent and the operation executed within the Parse State Queue++ VI. Unlike the Message Building API, this type of API includes a CSM state queue string input, which is equivalent to inserting a message into the state queue.
+> - Ref: CSM State Queue Operation API
 
 -- <b>Controls</b> --
 - <b>Status with Arguments</b>: The status and arguments to be broadcast. This input supports multiple lines and each state line will have `-><broadcast>` appended.

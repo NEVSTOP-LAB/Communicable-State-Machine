@@ -7,6 +7,8 @@
 ### CSM - Compact Multiple States.vi
 Compacts multiple states into a single string for input usage.
 
+> - Ref: Message Building API
+
 -- <b>Controls</b> --
 - <b>Multiple States</b>: Array of CSM state strings.
 
@@ -15,6 +17,8 @@ Compacts multiple states into a single string for input usage.
 
 ### CSM - Break Down Multiple States String.vi
 Breaks down a string containing multiple lines of CSM state strings into an array of CSM state strings.
+
+> - Ref: Message Building API
 
 -- <b>Controls</b> --
 - <b>States</b>: String containing multiple lines of CSM state strings.
@@ -37,7 +41,7 @@ Concatenates and generates exit messages (`Macro: Exit`) based on input CSM modu
 ### CSM - Filter Duplicate Messages By Name.vi
 Filters duplicate messages, keeping only the latest message.
 
-> - Ref: Message Building API
+> - Ref: CSM State Queue Operation API
 
 -- <b>Controls</b> --
 - <b>States</b>: Input message string.
@@ -47,6 +51,9 @@ Filters duplicate messages, keeping only the latest message.
 - <b>Filtered States</b>: Filtered message string.
 
 ### CSM - Remove Duplicated Following Messages.vi
+
+> - Ref: CSM State Queue Operation API
+
 -- <b>Controls</b> --
 - <b>Current State</b>:
 - <b>Remaining States</b>:

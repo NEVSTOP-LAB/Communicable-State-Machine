@@ -4,6 +4,7 @@
 
 > [!NOTE]
 > <b>CSM Naming Rules</b>
+>
 > - CSM module name must be unique. Otherwise, CSM enters a `Critical Error` state.
 > - If the input module name is an empty string (""), the system uses a UUID as the module name. Such a module is marked as standalone mode and does not appear in the module list.
 > - Worker Mode Rule: If the input module name ends with `#`, a worker mode node will be instantiated. Multiple worker mode nodes can form a worker mode module.
@@ -13,11 +14,13 @@
 
 > [!NOTE]
 > <b>CSM Initialize State ("Macro: Initialize")</b>
+>
 > - The default value is `Macro: Initialize`, which is consistent with the JKISM state machine.
 > - This state is used to initialize the state machine of a CSM module. A CSM module will process externally sent messages only after completing this macro state.
 
 > [!NOTE]
 > <b>CSM Exit State ("Macro: Exit")</b>
+>
 > - The default value is "Macro: Exit", which is consistent with the JKISM state machine.
 > - This state is used to exit the state machine of a CSM module. After entering this state, a CSM module no longer processes externally sent messages.
 
