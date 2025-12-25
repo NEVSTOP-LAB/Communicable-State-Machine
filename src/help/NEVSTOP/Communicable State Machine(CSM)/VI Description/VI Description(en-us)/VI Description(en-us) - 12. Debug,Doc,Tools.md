@@ -38,3 +38,7 @@ Create a CSM module palette at the root of the function palette.
 ## CSM - Example Browser.vi
 
 CSM example browser, which allows you to easily browse CSM example programs.
+
+## CSM - Interface Browser.vi
+
+Tools for browsing CSM module interfaces, allowing you to quickly view and search the API interfaces of CSM modules in the project.
