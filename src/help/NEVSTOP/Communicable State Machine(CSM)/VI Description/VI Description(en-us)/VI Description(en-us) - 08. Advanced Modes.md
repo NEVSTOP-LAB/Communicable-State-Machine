@@ -52,6 +52,7 @@ Constructs a submodule name.
 - <b>Submodule Name</b>: Returns the concatenated submodule name.
 
 ## Work Mode API
+
 > [!NOTE]
 > <b>CSM Worker Mode</b>
 >
@@ -120,7 +121,6 @@ Marks a module as a Worker Mode module by adding `#` after the CSM name.
 > - Worker Mode scenarios are usually not suitable for having UI operations.
 
 ### CSM - Mark As Chain Module.vi
-> [!WARNING] This group of functions has not been fully verified. Please use with caution.
 
 Concatenates the name of a Chain of Responsibility Mode module, using `$` as the separator. Note that the order does not need to be consecutive, but it must be unique. Nodes with smaller numbers are arranged at the front of the responsibility chain.
 

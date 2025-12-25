@@ -35,10 +35,11 @@
 - <b>Source CSM</b>: 如果<b>Current State</b>由外部发送，则这是源CSM模块名称。
 
 ### Build State String with Arguments++.vi
-> [!WARNING]
-> 该VI不能拼接"异步不等待返回"的异步消息，已在函数面板中隐藏，建议使用Build Message with Arguments++ VI代替该 VI。
 
 该VI用于构建CSM消息字符串(包含状态、参数、目标模块、消息类型等信息)，以便发送到其他CSM模块。
+
+> [!WARNING]
+> 该VI不能拼接"异步不等待返回"的异步消息，已在函数面板中隐藏，建议使用Build Message with Arguments++ VI代替该 VI。
 
 > - Ref: CSM 消息类型
 > - Ref: CSM 消息格式解析
@@ -74,6 +75,7 @@
 
 > [!NOTE]
 > <b>多态VI(Polymorphic VI)选项</b>
+>
 > - Build Message with Arguments(Auto Check).vi: 根据输入的消息符号，自动拼接消息字符串。
 > - Build Asynchronous Message with Arguments.vi: 拼接生成CSM异步消息字符串，消息类型符号为`->`。
 > - Build No-Reply Asynchronous Message with Arguments.vi: 拼接生成CSM异步不等待返回消息字符串，消息类型符号为`->|`。

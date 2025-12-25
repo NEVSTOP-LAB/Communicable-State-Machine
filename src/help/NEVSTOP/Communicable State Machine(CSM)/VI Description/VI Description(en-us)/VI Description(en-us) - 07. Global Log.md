@@ -155,7 +155,8 @@ Converts a list of filter rule clusters into filter rule class instances. Provid
 ### CSM - Filter Global Log.vi
 This is a registerer-side filtering VI used to determine if a log satisfies the filtering rules. The filtering judgment occurs at the registerer end, so it will not affect registrations of other tools.
 
-> [!NOTE] This VI is a Polymorphic VI to ensure forward compatibility of the interface after modifications. It is recommended to select the instance with the newer version.
+> [!NOTE]
+> This VI is a Polymorphic VI to ensure forward compatibility of the interface after modifications. It is recommended to select the instance with the newer version.
 
 > - Ref: Global Log Filter Rules
 

@@ -20,8 +20,10 @@
         "Refnum",
         "SAFESTR",
         "Splite",
+        "Stru",
         "Struct",
         "unregistration",
+        "Unwired",
         "usecase"
     ],
     "files.autoGuessEncoding": true

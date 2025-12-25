@@ -1,6 +1,7 @@
 # Build-in Addons
 
 ## CSM WatchDog Addon
+
 > [!NOTE]
 > <b>CSM WatchDog Implementation Principle</b>
 >
@@ -68,6 +69,7 @@ The thread VI originally used in the CSM - Start File Logger VI. This VI is now 
 > - Ref: CSM File Logger Implementation Principle
 
 ## CSM Loop Support Addon
+
 > [!NOTE]
 > <b>Reason for CSM LOOP Support Design</b>
 >

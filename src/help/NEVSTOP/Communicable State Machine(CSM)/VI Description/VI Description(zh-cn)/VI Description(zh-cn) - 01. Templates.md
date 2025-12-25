@@ -27,9 +27,9 @@
 ### CSM User Interface(UI) Module Template.vi
 用于创建带用户界面的CSM模块的模板，该模板包含用于响应用户操作的用户事件结构。
 
-> - Ref：CSM名称规则
-> - Ref：CSM初始化状态
-> - Ref：CSM退出状态
+> - Ref: CSM名称规则
+> - Ref: CSM初始化状态
+> - Ref: CSM退出状态
 
 -- <b>输入控件(Controls)</b> --
 - <b>Name ("" to use UUID)</b>：CSM模块名称。请参考<b>CSM名称规则</b>。
@@ -37,9 +37,9 @@
 ### CSM Module Template.vi
 用于创建无用户界面的CSM模块的模板, 这个模板是最常使用的CSM模板，在模板中还包含了一个用于调试中退出模块的事件响应循环，请在模块调试完成后，将其删除。
 
-> - Ref：CSM名称规则
-> - Ref：CSM初始化状态
-> - Ref：CSM退出状态
+> - Ref: CSM名称规则
+> - Ref: CSM初始化状态
+> - Ref: CSM退出状态
 
 -- <b>输入控件(Controls)</b> --
 - <b>Name ("" to use UUID)</b>：CSM模块名称。请参考<b>CSM名称规则</b>。
@@ -47,9 +47,9 @@
 ### CSM Module Template - Tiny.vi
 用于创建无用户界面的CSM模块的紧凑代码模板。该模板功能与CSM Module Template VI完全相同，区别仅在于代码更加紧凑。
 
-> - Ref：CSM名称规则
-> - Ref：CSM初始化状态
-> - Ref：CSM退出状态
+> - Ref: CSM名称规则
+> - Ref: CSM初始化状态
+> - Ref: CSM退出状态
 
 -- <b>输入控件(Controls)</b> --
 - <b>Name ("" to use UUID)</b>：CSM模块名称。请参考<b>CSM名称规则</b>。
@@ -57,9 +57,9 @@
 ### CSM User Interface(UI) Module Template - Tiny.vi
 用于创建带用户界面的CSM模块的紧凑代码模板，该模板包含用于响应用户操作的用户事件结构。该模板功能与CSM User Interface(UI) Module Template VI完全相同，区别仅在于代码更加紧凑.
 
-> - Ref：CSM名称规则
-> - Ref：CSM初始化状态
-> - Ref：CSM退出状态
+> - Ref: CSM名称规则
+> - Ref: CSM初始化状态
+> - Ref: CSM退出状态
 
 -- <b>输入控件(Controls)</b> --
 - <b>Name ("" to use UUID)</b>：CSM模块名称。请参考<b>CSM名称规则</b>。
@@ -73,9 +73,9 @@
 
 <b>参考范例</b>：`[CSM-Example]\4. Advance Examples\CSMLS - Continuous Loop in CSM Example.vi`。
 
-> - Ref：CSM名称规则
-> - Ref：CSM初始化状态
-> - Ref：CSM退出状态
+> - Ref: CSM名称规则
+> - Ref: CSM初始化状态
+> - Ref: CSM退出状态
 
 -- <b>输入控件(Controls)</b> --
 - <b>Name ("" to use UUID)</b>：CSM模块名称。请参考<b>CSM名称规则</b>。

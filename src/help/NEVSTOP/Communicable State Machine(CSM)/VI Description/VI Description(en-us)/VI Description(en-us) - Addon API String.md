@@ -205,7 +205,8 @@ Converts a string to a boolean value. Supports multiple representations for TRUE
 ### String To Float_csm.vi
 Converts a string to a floating-point number. Supports various floating-point formats and units. Format can be set using the API String - Set Float Format String VI.
 
-> [!NOTE] Empty strings will be converted to the default data. Floating-point strings with units are also supported and parsed correctly. Special floating-point values like `e`, `-e`, `pi`, `-pi`, `inf`, `+inf`, `-inf`, and `NaN` do not support units.
+> [!NOTE]
+> Empty strings will be converted to the default data. Floating-point strings with units are also supported and parsed correctly. Special floating-point values like `e`, `-e`, `pi`, `-pi`, `inf`, `+inf`, `-inf`, and `NaN` do not support units.
 
 > - Ref: Default Floating-point Format
 
