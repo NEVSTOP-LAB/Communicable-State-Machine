@@ -12,6 +12,7 @@
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="CSM-Testcase.lvlib" Type="Library" URL="../CSM/CSM-Testcase.lvlib"/>
+		<Item Name="testcase-CSMManagementAPI.lvclass" Type="LVClass" URL="../testcase-CSMManagementAPI/testcase-CSMManagementAPI.lvclass"/>
 		<Item Name="testcase-CSMArgument.lvclass" Type="LVClass" URL="../testcase-CSMArgument/testcase-CSMArgument.lvclass"/>
 		<Item Name="testcase-CSMMessage.lvclass" Type="LVClass" URL="../testcase-CSMMessage/testcase-CSMMessage.lvclass"/>
 		<Item Name="testcase-CSMResponse.lvclass" Type="LVClass" URL="../testcase-CSMResponse/testcase-CSMResponse.lvclass"/>
@@ -21,7 +22,6 @@
 		<Item Name="testcase-CSMSubModule.lvclass" Type="LVClass" URL="../testcase-CSMSubModule/testcase-CSMSubModule.lvclass"/>
 		<Item Name="testcase-CSMWorkerMode.lvclass" Type="LVClass" URL="../testcase-CSMWorkerMode/testcase-CSMWorkerMode.lvclass"/>
 		<Item Name="testcase-CSMChainMode.lvclass" Type="LVClass" URL="../testcase-CSMChainMode/testcase-CSMChainMode.lvclass"/>
-		<Item Name="testcase-CSMManagementAPI.lvclass" Type="LVClass" URL="../testcase-CSMManagementAPI/testcase-CSMManagementAPI.lvclass"/>
 		<Item Name="testcase-CSMNonCSMCallerSupportAPI.lvclass" Type="LVClass" URL="../testcase-CSMNonCSMCallerSupportAPI/testcase-CSMNonCSMCallerSupportAPI.lvclass"/>
 		<Item Name="testcase-CSMAddonLoopSupport.lvclass" Type="LVClass" URL="../testcase-CSMAddonLoopSupport/testcase-CSMAddonLoopSupport.lvclass"/>
 		<Item Name="TestCSMSuite.lvclass" Type="LVClass" URL="../CSMTestSuite/TestCSMSuite.lvclass"/>
@@ -408,7 +408,7 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToProject</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{A89D9A51-BD9C-4565-8F45-AD1D68D344FD}</Property>
-				<Property Name="Bld_version.build" Type="Int">324</Property>
+				<Property Name="Bld_version.build" Type="Int">326</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">CSM-Testcase.lvlibp</Property>
 				<Property Name="Destination[0].path" Type="Path">../CSM/CSM-Testcase.lvlibp</Property>
@@ -449,7 +449,7 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToProject</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{DF3A8CD5-4937-4FE8-B30A-163F6FCA54B2}</Property>
-				<Property Name="Bld_version.build" Type="Int">289</Property>
+				<Property Name="Bld_version.build" Type="Int">291</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">CSM-Testcase2.lvlibp</Property>
 				<Property Name="Destination[0].path" Type="Path">../CSM/CSM-Testcase2.lvlibp</Property>
