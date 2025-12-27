@@ -128,7 +128,7 @@
 				<Item Name="testcase-CSMArgument.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMArgument/testcase-CSMArgument.lvclass"/>
 				<Item Name="testcase-CSMResponse.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMResponse/testcase-CSMResponse.lvclass"/>
 				<Item Name="testcase-CSMGlobalLog.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMGlobalLog/testcase-CSMGlobalLog.lvclass"/>
-				<Item Name="testcase-CSMBroadcast.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMStatus/testcase-CSMBroadcast.lvclass"/>
+				<Item Name="testcase-CSMBroadcast.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMBroadcast/testcase-CSMBroadcast.lvclass"/>
 				<Item Name="testcase-CSMSystemLevelModule.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMSystemLevelModule/testcase-CSMSystemLevelModule.lvclass"/>
 				<Item Name="testcase-CSMSubModule.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMSubModule/testcase-CSMSubModule.lvclass"/>
 				<Item Name="testcase-CSMWorkerMode.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMWorkerMode/testcase-CSMWorkerMode.lvclass"/>
