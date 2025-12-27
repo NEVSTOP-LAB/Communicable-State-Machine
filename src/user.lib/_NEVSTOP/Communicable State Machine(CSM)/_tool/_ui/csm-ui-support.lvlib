@@ -13,6 +13,7 @@
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="Auto Resize All MultiListbox Columns (Uniform Text).vi" Type="VI" URL="../Auto Resize All MultiListbox Columns (Uniform Text).vi"/>
 	<Item Name="Center Callee in Window Bounds.vi" Type="VI" URL="../Center Callee in Window Bounds.vi"/>
+	<Item Name="Check if In LabVIEW Dir.vi" Type="VI" URL="../Check if In LabVIEW Dir.vi"/>
 	<Item Name="Close FP if in LabVIEW Dir.vi" Type="VI" URL="../Close FP if in LabVIEW Dir.vi"/>
 	<Item Name="Dashboard Cell Resize.vi" Type="VI" URL="../Dashboard Cell Resize.vi"/>
 	<Item Name="Dashboard Cell2 Array Resize.vi" Type="VI" URL="../Dashboard Cell2 Array Resize.vi"/>

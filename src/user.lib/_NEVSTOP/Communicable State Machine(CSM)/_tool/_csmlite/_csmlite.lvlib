@@ -12,8 +12,15 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Property Name="NI.SortType" Type="Int">3</Property>
-	<Item Name="FGV-JKISM Modules.vi" Type="VI" URL="../FGV-JKISM Modules.vi"/>
-	<Item Name="Parse State Queue.vi" Type="VI" URL="../Parse State Queue.vi"/>
-	<Item Name="Pass Allowed Message.vi" Type="VI" URL="../Pass Allowed Message.vi"/>
-	<Item Name="_action.ctl" Type="VI" URL="../_action.ctl"/>
+	<Item Name="Core" Type="Folder">
+		<Item Name="_Engine.vi" Type="VI" URL="../_Engine.vi"/>
+		<Item Name="_action.ctl" Type="VI" URL="../_action.ctl"/>
+		<Item Name="Parse State Queue_csmlite.vi" Type="VI" URL="../Parse State Queue_csmlite.vi"/>
+	</Item>
+	<Item Name="API" Type="Folder">
+		<Item Name="Pass Allowed Message.vi" Type="VI" URL="../Pass Allowed Message.vi"/>
+	</Item>
+	<Item Name="Template" Type="Folder">
+		<Item Name="CSMLite Template.vit" Type="VI" URL="../CSMLite Template.vit"/>
+	</Item>
 </Library>

@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-12-24 20:55:54" Creator="liyao" Comments="" ID="90ad0955c723357cada34640bdcf82be">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-12-27 11:50:59" Creator="liyao" Comments="" ID="03737776a7a0af80b3b76df799c36896">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2025.10.0.1</Library_Version>
@@ -85,7 +85,8 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
 [fix] #557 fix remove internal registry rules for chain/worker
 [add] #596 add message log type for csm global log.
 [update] #498 SafeString now start with &lt;SafeStr&gt; argument type.
-[update] #461 Logviewer use queue of global log event.</Release_Notes>
+[update] #461 Logviewer use queue of global log event.
+[add] #496 add script running function in debug console</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
