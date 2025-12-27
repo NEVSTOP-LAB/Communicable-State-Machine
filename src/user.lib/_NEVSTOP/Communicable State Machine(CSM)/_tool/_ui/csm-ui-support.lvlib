@@ -1,14 +1,24 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
 <Library LVVersion="17008000">
-	<Property Name="NI.Lib.Icon" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!(^!!!*Q(C=\&gt;8"&lt;2MR%!813:"$A*T51;!7JA7VI";G"6V^6!P4AFJ1#^/#7F!,TN/'-(++=IC2(-TVS+O`80+:3[QDNP9VYEO]0GP@@NM_LD_\`K4&amp;2`NI`\;^0.WE\\ZH0]8D2;2'N3K6]:DK&gt;?1D(`H)2T\SFL?]Z3VP?=N,8P+3F\TE*5^ZSF/?]J3H@$PE)1^ZS*('Z'/C-?A99(2'C@%R0--T0-0D;QT0]!T0]!S0,D%]QT-]QT-]&lt;IPB':\B':\B-&gt;1GG?W1]QS0Y;.ZGK&gt;ZGK&gt;Z4"H.UQ"NMD:Q'Q1DWM6WUDT.UTR/IXG;JXG;JXF=DO:JHO:JHO:RS\9KP7E?BZT(-&amp;%]R6-]R6-]BI\C+:\C+:\C-6U54`%52*GQ$)Y1Z;&lt;3I8QJHO,R+YKH?)KH?)L(J?U*V&lt;9S$]XDE0-E4`)E4`)EDS%C?:)H?:)H?1Q&lt;S:-]S:-]S7/K3*\E3:Y%3:/;0N*A[=&lt;5+18*YW@&lt;,&lt;E^J&gt;YEO2U2;`0'WJ3R.FOM422L=]2[[,%?:KS(&amp;'PR9SVKL-7+N1CR`LB9[&amp;C97*0%OPH2-?Y_&lt;_KK,OKM4OKI$GKP&gt;I^&lt;`X,(_`U?N^MNLN&gt;L8#[8/*`0=4K&gt;YHA]RO&amp;QC0V_(\P&gt;\OUV].XR^E,Y_6Z[=@YH^5\`3`_$&gt;W.]DF`(N59`!/&lt;!-PQ!!!!!</Property>
+	<Property Name="EndevoGOOP_ColorFrame" Type="UInt">0</Property>
+	<Property Name="EndevoGOOP_ColorHeader" Type="UInt">1351424</Property>
+	<Property Name="EndevoGOOP_ColorPrivate" Type="UInt">9868950</Property>
+	<Property Name="EndevoGOOP_ColorPublic" Type="UInt">12713864</Property>
+	<Property Name="EndevoGOOP_ColorTextBody" Type="UInt">0</Property>
+	<Property Name="EndevoGOOP_ColorTextHeader" Type="UInt">16777215</Property>
+	<Property Name="EndevoGOOP_FrameThickness" Type="UInt">1</Property>
+	<Property Name="NI.Lib.Icon" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!)`!!!*Q(C=\&gt;5R&lt;BJ"&amp;-&lt;R,V'+N.QAYALP#H3J;50XLI$E+C68_+Z!DE$N6/]++&amp;++.,;Y!*;=`Y[@41JE'DO+)O^[&amp;PBGZMW0X75ND?WD^%(XF\&lt;L:\@OF]:"V_.V/D[]\@\4ZWH)W@YOIN\0T(_M@+&lt;`9;J[G"Z,H@K@]6`9^,;^&lt;@`X^P8CD_$6@Q@P.$W);%5T,7GB;&gt;H\)C`S)C`S)C^SEZP=Z#9XO=G40-G40-G40-G$0-C$0-C$0-D(4CZSE9M=5L&amp;YM6"2N#B1$);CYF"Y#E`B+4R]6/%J0)7H]"1?BKDQ&amp;*\#5XA+$^.5?!J0Y3E]B9&gt;31V*D*]&gt;4?#APYT%?YT%?YW&amp;*'9]"G-6-96-%BESH?7-]RG-]P*8R')`R')`RU#XD-2\D-2\D9=IY+R[;;3@(1REFHM34?"*0YK'U%E`C34S**`'QH"*0YEE1S9**=1B+*C5$EA_**`(QIM34?"*0YEE]&gt;)ULF/0-4*JJ*]=4?!*0Y!E]A9=3#DS"*`!%HM"$717?Q".Y!E`A93E&amp;HM!4?!*)M#D,+SA74!Q'"5(AY7`=,4'OEI=ERC\VT;O_+&gt;5XG`IG5N]=[IOOPJDKC[1__?K4KDZ:[J/A`H*KN"KD8E1^?2KI!]=^&lt;5@&lt;UD;U.7V*7^$GN.EU^95((AY(\@&gt;\\89\&lt;&lt;&gt;&lt;&lt;49&lt;L&gt;&gt;L,:&gt;,,29,T?&gt;TT7;TJ]@!*`;H"],JO84X]W:V`0*Z&gt;@TV&lt;87]OFH&gt;@&lt;`^]:@_0`]$TU;^VZ^L=)Z_!W&amp;&amp;FP5!!!!!</Property>
 	<Property Name="NI.Lib.SourceVersion" Type="Int">385908736</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="Auto Resize All MultiListbox Columns (Uniform Text).vi" Type="VI" URL="../Auto Resize All MultiListbox Columns (Uniform Text).vi"/>
 	<Item Name="Center Callee in Window Bounds.vi" Type="VI" URL="../Center Callee in Window Bounds.vi"/>
+	<Item Name="Check if In LabVIEW Dir.vi" Type="VI" URL="../Check if In LabVIEW Dir.vi"/>
+	<Item Name="Close FP if in LabVIEW Dir.vi" Type="VI" URL="../Close FP if in LabVIEW Dir.vi"/>
 	<Item Name="Dashboard Cell Resize.vi" Type="VI" URL="../Dashboard Cell Resize.vi"/>
 	<Item Name="Dashboard Cell2 Array Resize.vi" Type="VI" URL="../Dashboard Cell2 Array Resize.vi"/>
 	<Item Name="Defer Panel Updates_csm.vi" Type="VI" URL="../Defer Panel Updates_csm.vi"/>
+	<Item Name="Fit Control to Tab.vi" Type="VI" URL="../Fit Control to Tab.vi"/>
 	<Item Name="Populate Tree with Delimited Strings_csm.vi" Type="VI" URL="../Populate Tree with Delimited Strings_csm.vi"/>
 	<Item Name="Relocate Splitter Posistion.vi" Type="VI" URL="../Relocate Splitter Posistion.vi"/>
 	<Item Name="Tree Rows from Delimited String Array_csm.vi" Type="VI" URL="../Tree Rows from Delimited String Array_csm.vi"/>

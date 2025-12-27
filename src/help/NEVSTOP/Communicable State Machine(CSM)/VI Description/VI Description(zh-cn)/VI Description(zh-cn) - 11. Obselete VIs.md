@@ -4,7 +4,7 @@
 
 ### Replace Tag with Array.vi
 
-此VI将不在维护，请使用 `CSM - Replace Mark with String Array.vi`
+此VI将不再维护，请使用 `CSM - Replace Mark with String Array.vi`
 
 > - Ref: CSM - Replace Mark with String Array.vi
 
@@ -16,7 +16,7 @@
 
 ### CSM - Check Status Registration.vi
 
-此 VI不再维护，请使用 `CSM - Check Mapping Relationship in Broadcast Registry.vi`
+此VI不再维护，请使用 `CSM - Check Mapping Relationship in Broadcast Registry.vi`
 
 > - Ref: CSM - Check Mapping Relationship in Broadcast Registry.vi
 

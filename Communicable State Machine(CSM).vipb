@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-12-22 22:59:44" Creator="liyao" Comments="" ID="a0a04ad963f1b4dfd4ba13be3f31e9c0">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-12-27 11:50:59" Creator="liyao" Comments="" ID="03737776a7a0af80b3b76df799c36896">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2025.10.0.1</Library_Version>
@@ -84,7 +84,9 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
 [fix] #548 fix CSM - Remove Module in Broadcast Registry.vi
 [fix] #557 fix remove internal registry rules for chain/worker
 [add] #596 add message log type for csm global log.
-[update] #498 SafeString now start with &lt;SafeStr&gt; argument type.</Release_Notes>
+[update] #498 SafeString now start with &lt;SafeStr&gt; argument type.
+[update] #461 Logviewer use queue of global log event.
+[add] #496 add script running function in debug console</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -156,12 +158,6 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
       <Destination_Overrides>
         <Path>templates</Path>
         <Destination>5</Destination>
-        <Additional_Destination>false</Additional_Destination>
-        <Additional_Destination_Index>0</Additional_Destination_Index>
-      </Destination_Overrides>
-      <Destination_Overrides>
-        <Path>examples</Path>
-        <Destination>1</Destination>
         <Additional_Destination>false</Additional_Destination>
         <Additional_Destination_Index>0</Additional_Destination_Index>
       </Destination_Overrides>

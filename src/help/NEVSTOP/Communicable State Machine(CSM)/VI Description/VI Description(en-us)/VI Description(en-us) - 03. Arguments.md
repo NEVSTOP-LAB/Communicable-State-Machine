@@ -5,7 +5,7 @@
 > [!NOTE]
 > <b>CSM Message Keywords</b>
 >
-> The following are CSM message keywords: `->`, `->|`, `-@`, `-&`, `<-`, `\r`, `\n`, `//`, `>>`, `>>>`, `>>>`, `;`, `,`
+> The following are CSM message keywords: `->`, `->|`, `-@`, `-&`, `<-`, `\r`, `\n`, `//`, `>>`, `>>>`, `>>>`, `;`, `,`.
 
 > [!NOTE]
 > <b>CSM Argument Type</b>
@@ -25,41 +25,32 @@
 > <b>CSM ERRSTR Format Argument</b>
 >
 > The LabVIEW Error Cluster is a complex data type. The error information string usually contains carriage returns, which cannot be directly passed as a CSM argument. Although error cluster information can be converted to HEXSTR format, this method lacks readability, making it impossible to read information intuitively in logs. Therefore, to pass LabVIEW error information in CSM arguments, CSM has a built-in ERRSTR format argument encoding/decoding scheme. The argument type string is ERRSTR. The conversion process is as follows:
->
 > 1. Format the code and source in the error cluster into a string with the following format:
->
->    Error: `<ERRSTR>[Error: error-code] error-description-As-safe-argument-string`
->    Warning: `<ERRSTR>[Warning: error-code] warning-description-As-safe-argument-string`
->
+>    - Error: `<ERRSTR>[Error: error-code] error-description-As-safe-argument-string`
+>    - Warning: `<ERRSTR>[Warning: error-code] warning-description-As-safe-argument-string`
 > 2. Replace special characters in this string with safe characters.
->
 > 3. Obtain the CSM ERRSTR format argument, which can be safely embedded in the state string without disrupting CSM message parsing.
 
 > [!NOTE]
 > <b>CSM Safe String Argument</b>
 >
 > To pass arbitrary strings in CSM arguments without disrupting message parsing, CSM has a built-in Safe-String encoding/decoding scheme. The argument type string is SAFESTR. The conversion process is as follows:
->
-> 1. Scan the input string. If any CSM keywords, such as `->`, `;`, `\r`, etc., appear, replace them with `%Hex` escape sequences.
+> 1. Scan the input string. If any CSM keywords, such as `->`, `;`, `\r` appear, replace them with `%Hex` escape sequences.
 > 2. Obtain the argument in the form `<SAFESTR> escaped string`, which can be safely embedded in the state string without disrupting CSM message parsing.
 
 ### CSM - Argument Type.vi
-
 Extracts the parameter encoding type tag from the encoded argument string.
-
 > - Ref: CSM Argument Type
 
 -- <b>Controls</b> --
 - <b>Arguments</b>: Argument string.
 
 -- <b>Indicators</b> --
-- <b>Argument Type</b>: Encoding type tag of the argument string.
 - <b>Arguments (Dup)</b>: A copy of the input argument string.
+- <b>Argument Type</b>: Encoding type tag of the argument string.
 
 ### CSM - Keywords.vi
-
 Lists keywords in CSM messages and their %Hex format.
-
 > - Ref: CSM Message Keywords
 
 -- <b>Indicators</b> --
@@ -67,7 +58,6 @@ Lists keywords in CSM messages and their %Hex format.
 - <b>Keywords (%Hex Format)</b>: The %Hex format of the CSM keyword list.
 
 ### CSM - Make String Arguments Safe.vi
-
 Converts CSM keywords in the argument string to %Hex format to ensure that CSM message string parsing is not affected.
 
 > - Ref: CSM Message Keywords
@@ -82,7 +72,6 @@ Converts CSM keywords in the argument string to %Hex format to ensure that CSM m
 - <b>Safe Argument String</b>: Safe string argument.
 
 ### CSM - Revert Arguments-Safe String.vi
-
 Converts the %Hex format CSM keywords in the safe string argument back to the original format.
 
 > - Ref: CSM Message Keywords
@@ -97,7 +86,6 @@ Converts the %Hex format CSM keywords in the safe string argument back to the or
 - <b>Origin Argument String</b>: String argument.
 
 ### CSM - Convert Data to HexStr.vi
-
 Converts any LabVIEW data type to a HEXSTR format argument string.
 
 > - Ref: CSM Argument Type
@@ -112,7 +100,6 @@ Converts any LabVIEW data type to a HEXSTR format argument string.
 - <b>HEX String (0-9,A-F)</b>: CSM HEXSTR format argument.
 
 ### CSM - Convert HexStr to Data.vi
-
 Converts the hexadecimal string argument back to Variant data.
 
 > - Ref: CSM Argument Type
@@ -127,7 +114,6 @@ Converts the hexadecimal string argument back to Variant data.
 - <b>Variant</b>: LabVIEW data. Supports any data type via Variant.
 
 ### CSM - Convert Error to Argument.vi
-
 Converts a LabVIEW Error Cluster to the CSM error argument format.
 
 > - Ref: CSM Argument Type
@@ -142,7 +128,6 @@ Converts a LabVIEW Error Cluster to the CSM error argument format.
 - <b>Argument</b>: CSM error argument format.
 
 ### CSM - Convert Argument to Error.vi
-
 Converts the CSM error argument format to a LabVIEW Error Cluster.
 
 > - Ref: CSM Argument Type

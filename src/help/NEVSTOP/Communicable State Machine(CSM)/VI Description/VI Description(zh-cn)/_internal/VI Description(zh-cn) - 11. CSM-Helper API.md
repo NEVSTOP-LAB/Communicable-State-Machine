@@ -6,7 +6,7 @@
 
 使用最少的VI调用，判断是否是 CSM 模块，用于 LabVIEW 插件预先判断。
 
-> [!NOTE] 
+> [!NOTE]
 > <b>多态VI(Polymorphic VI)选项</b>
 >
 > - Is CSM Module - VIRef.vi
@@ -273,7 +273,7 @@
 -- <b>Indicators(输出控件)</b> --
 - <b>NewStateNotify Registered</b>:
 - <b>CSM-Helper out</b>: CSMHelper 输出
-- <b>NewStateNotify Registed</b>:Indicators
+- <b>NewStateNotify Registered</b>:Indicators
 ### Connect Error Wire If not Connected.vi
 
 -- <b>Controls(输入控件)</b> --

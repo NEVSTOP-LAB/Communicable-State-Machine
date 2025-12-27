@@ -42,8 +42,6 @@ Based on JKISM, CSM includes the following major extended features:
 - Step 8: CSM has preset message returns.
 - Step 9: CSM extends debugging tools. For details, please refer to the palette CSM -> CSM Debug Tools.
 
-
-
 ### 2. Module Naming Rules.vi
 
 #### Overview
@@ -66,8 +64,6 @@ This example demonstrates what constitutes a valid CSM module name by analyzing 
 - Step8: Name beginning with a dot (`.`). In this case, the module name is valid, and the corresponding module operates in System-Level Mode.
 - Step9: Shows a case where a dot (`.`) serves as an internal separator. In this case, the module name is valid and can be logically viewed as a Submodule.
 - Step10: Shows a case containing a dollar sign (`$`) followed by a number. In this case, the module name is valid, and the corresponding module operates in Chain Mode.
-
-
 
 ### 3. Message Helper VI and Equivalent String.vi
 
@@ -121,8 +117,6 @@ This example explains the syntax format for inter-module message communication i
 - Step6: Register a state. When the state changes, the registered handler module message is automatically triggered.
 - Step7: Unregister a state. Cancels the message trigger upon state change.
 
-
-
 ### 4.1 Arguments - Complex Data As Arguments.vi
 
 #### Overview
@@ -142,8 +136,6 @@ Application scenarios include lossless transfer of any data type, such as cluste
 - Step1: Demonstrate converting a cluster to HEXSTR and restoring it.
 - Step2: Demonstrate converting a small data array to HEXSTR and restoring it.
 
-
-
 ### 4.2 Arguments - Error As Arguments.vi
 
 #### Overview
@@ -161,8 +153,6 @@ This example converts a LabVIEW error cluster into a CSM-compatible error string
 - Step1: Demonstrate converting an error to ErrStr and restoring it.
 - Step2: (Forward Compatibility) Demonstrate converting a previous ErrStr back to an error cluster.
 - Step3: Demonstrate converting a previous ErrStr back to an error cluster and obtaining the CSM-Argument Type.
-
-
 
 ### 4.3 Arguments - Safe Arguments if it contains key words of CSM.vi
 
@@ -182,8 +172,6 @@ Since CSM uses text descriptions as arguments, parsing errors occur if the argum
 - Step2: Demonstrate using a Windows file path as an argument.
 - Step3: Demonstrate using a URL as an argument.
 
-
-
 ### 5. CSM Data Type.vi
 
 #### Overview
@@ -195,8 +183,6 @@ Demonstrates the data type descriptions recommended by CSM.
 In the CSM framework, arguments can only be passed in the form of String types. To support various data types, data usually needs to go through a process of packing, transmission, and unpacking. For example, CSM internally provides support for the HEXSTR argument type, and users can also provide custom data type conversions via addons to suit their application scenarios.
 
 To support different data types, you sometimes need to pass data type descriptions to handle logic branches for different data types at the decoding stage. This example demonstrates the data type description method recommended by CSM and the corresponding APIs.
-
-
 
 ### 6. Module Attributes.vi
 
@@ -219,8 +205,6 @@ This example demonstrates how to dynamically interact with CSM module attributes
 - Step4: Set the module attribute from outside the CSM module: `abc` as the attribute and a random number as the value.
 - Step5: Read the module attribute from outside the CSM module: `abc` as the attribute.
 - Step6: Send a synchronous message from outside the CSM module to stop the CSM module.
-
-
 
 ### 7. System-Level Module.vi
 
@@ -245,8 +229,6 @@ This example demonstrates this distinction.
 - Step5: List all active CSM modules. By default, system-level modules are not listed. By using the Advanced VIs, you can separate system-level modules from other regular modules for more efficient code development, debugging, etc.
 - Step6: Use unified logic to send the "Macro:Exit" message to all active regular CSM modules to stop them.
 - Step7: You can still send messages to system-level modules, such as sending the "Macro:Exit" message, to stop the system-level module.
-
-
 
 ## Create a reuse Module
 
@@ -284,8 +266,6 @@ This example demonstrates a CSM module whose function is to generate a random nu
   - Step8.1: Initialize the UI at startup.
   - Step8.2: Comment out `UI: Front Panel State >> Open` in "Macro: Initialize". When working as a submodule, the UI will automatically hide instead of popping up.
 
-
-
 ## Caller is CSM Scenario
 
 ### CSM Example - Caller is a CSM.vi
@@ -322,8 +302,6 @@ This example synchronously calls two instances of the CSM Reuse Module VI, imple
   - Step8.8: Create a <b>UI: create Front Panel State >> Open</b> button. When the user clicks this button, an asynchronous message with no reply "UI: Front Panel State >> Open ->| modulename" will be sent to the active submodule.
   - Step8.9: Create a <b>UI: create Front Panel State >> Close</b> button. When the user clicks this button, an asynchronous message with no reply "UI: Front Panel State >> Close ->| modulename" will be sent to the active submodule.
 - Step9: Under the "Panel Close?" UI event, add two new string messages before "Macro:Exit": "Macro: Exit -@ SubModule0" and "Macro: Exit -@ SubModule1", so that you can safely close all CSM submodules before finally closing the CSM caller/main module.
-
-
 
 ## Caller is Other Framework Scenario
 
