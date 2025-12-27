@@ -23,4 +23,5 @@
 	<Item Name="lvcsm Write Cluster.vim" Type="VI" URL="../lvcsm Write Cluster.vim"/>
 	<Item Name="lvcsm List Sesctions.vi" Type="VI" URL="../lvcsm List Sesctions.vi"/>
 	<Item Name="lvcsm Read section As StringList.vi" Type="VI" URL="../lvcsm Read section As StringList.vi"/>
+	<Item Name="lvcsm Delete Section.vi" Type="VI" URL="../lvcsm Delete Section.vi"/>
 </Library>

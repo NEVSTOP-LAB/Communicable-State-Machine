@@ -11,6 +11,7 @@
 		<Item Name="LogViewer.vi" Type="VI" URL="../LogViewer.vi"/>
 		<Item Name="Registration Console.vi" Type="VI" URL="../Registration Console.vi"/>
 		<Item Name="Script-Window.vi" Type="VI" URL="../Script-Window.vi"/>
+		<Item Name="HistoryList.vi" Type="VI" URL="../HistoryList.vi"/>
 	</Item>
 	<Item Name="CSM - Debug Console 2.vi" Type="VI" URL="../CSM - Debug Console 2.vi"/>
 </Library>

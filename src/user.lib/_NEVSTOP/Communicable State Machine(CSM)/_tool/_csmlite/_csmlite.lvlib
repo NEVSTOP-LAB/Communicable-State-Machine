@@ -15,10 +15,12 @@
 	<Item Name="Core" Type="Folder">
 		<Item Name="_Engine.vi" Type="VI" URL="../_Engine.vi"/>
 		<Item Name="_action.ctl" Type="VI" URL="../_action.ctl"/>
-		<Item Name="Parse State Queue_csmlite.vi" Type="VI" URL="../Parse State Queue_csmlite.vi"/>
+		<Item Name="_PassAllowedMessage - MsgList.vi" Type="VI" URL="../_PassAllowedMessage - MsgList.vi"/>
+		<Item Name="_PassAllowedMessage - Mapping.vi" Type="VI" URL="../_PassAllowedMessage - Mapping.vi"/>
 	</Item>
 	<Item Name="API" Type="Folder">
 		<Item Name="Pass Allowed Message.vi" Type="VI" URL="../Pass Allowed Message.vi"/>
+		<Item Name="Parse State Queue_csmlite.vi" Type="VI" URL="../Parse State Queue_csmlite.vi"/>
 	</Item>
 	<Item Name="Template" Type="Folder">
 		<Item Name="CSMLite Template.vit" Type="VI" URL="../CSMLite Template.vit"/>
