@@ -21,6 +21,8 @@
 	<Item Name="API" Type="Folder">
 		<Item Name="Pass Allowed Message.vi" Type="VI" URL="../Pass Allowed Message.vi"/>
 		<Item Name="Parse State Queue_csmlite.vi" Type="VI" URL="../Parse State Queue_csmlite.vi"/>
+		<Item Name="Broadcast Message.vi" Type="VI" URL="../Broadcast Message.vi"/>
+		<Item Name="Post Message.vi" Type="VI" URL="../Post Message.vi"/>
 	</Item>
 	<Item Name="Template" Type="Folder">
 		<Item Name="CSMLite Template.vit" Type="VI" URL="../CSMLite Template.vit"/>
