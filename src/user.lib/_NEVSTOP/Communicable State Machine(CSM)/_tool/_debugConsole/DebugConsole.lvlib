@@ -6,12 +6,13 @@
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Property Name="NI.SortType" Type="Int">3</Property>
 	<Item Name="LEGO" Type="Folder">
+		<Property Name="NI.SortType" Type="Int">0</Property>
 		<Item Name="Broadcast Console.vi" Type="VI" URL="../Broadcast Console.vi"/>
-		<Item Name="Message Console.vi" Type="VI" URL="../Message Console.vi"/>
+		<Item Name="HistoryList.vi" Type="VI" URL="../HistoryList.vi"/>
 		<Item Name="LogViewer.vi" Type="VI" URL="../LogViewer.vi"/>
+		<Item Name="Message Console.vi" Type="VI" URL="../Message Console.vi"/>
 		<Item Name="Registration Console.vi" Type="VI" URL="../Registration Console.vi"/>
 		<Item Name="Script-Window.vi" Type="VI" URL="../Script-Window.vi"/>
-		<Item Name="HistoryList.vi" Type="VI" URL="../HistoryList.vi"/>
 	</Item>
 	<Item Name="CSM - Debug Console 2.vi" Type="VI" URL="../CSM - Debug Console 2.vi"/>
 </Library>

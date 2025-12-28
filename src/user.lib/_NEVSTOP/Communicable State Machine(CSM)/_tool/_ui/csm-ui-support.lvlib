@@ -15,6 +15,7 @@
 	<Item Name="Center Callee in Window Bounds.vi" Type="VI" URL="../Center Callee in Window Bounds.vi"/>
 	<Item Name="Check if In LabVIEW Dir.vi" Type="VI" URL="../Check if In LabVIEW Dir.vi"/>
 	<Item Name="Close FP if in LabVIEW Dir.vi" Type="VI" URL="../Close FP if in LabVIEW Dir.vi"/>
+	<Item Name="cmbBox Change List and Set Value.vi" Type="VI" URL="../cmbBox Change List and Set Value.vi"/>
 	<Item Name="Dashboard Cell Resize.vi" Type="VI" URL="../Dashboard Cell Resize.vi"/>
 	<Item Name="Dashboard Cell2 Array Resize.vi" Type="VI" URL="../Dashboard Cell2 Array Resize.vi"/>
 	<Item Name="Defer Panel Updates_csm.vi" Type="VI" URL="../Defer Panel Updates_csm.vi"/>

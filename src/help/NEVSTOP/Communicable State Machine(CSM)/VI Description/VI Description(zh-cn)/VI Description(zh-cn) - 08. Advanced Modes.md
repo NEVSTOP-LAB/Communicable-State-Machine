@@ -198,6 +198,7 @@
 - <b>Status</b>: 将被广播的状态。
 - <b>Arguments ("")</b>: 将被广播的状态参数。
 - <b>Broadcast? (T)</b>: 控制是否广播的开关输入。
+- <b>Priority ("Status")</b>: 广播的优先级, 默认为"信号广播(Status)"，或"中断广播(Interrupt)"。
 - <b>Immediately? (F)</b>: 立即执行选项。立即发送会让此消息在CSM循环中立即被处理，而不是等待CSM循环中现存的消息执行完毕。
 
 ### CSM - Forward UI Operations to CSM.vi

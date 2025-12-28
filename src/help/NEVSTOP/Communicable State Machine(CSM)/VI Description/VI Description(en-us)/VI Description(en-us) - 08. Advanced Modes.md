@@ -189,6 +189,7 @@ Requests the CSM to send a broadcast. This VI is primarily used in CSM Multi-Loo
 - <b>Status</b>: Status to be broadcast.
 - <b>Arguments ("")</b>: Status arguments to be broadcast.
 - <b>Broadcast? (T)</b>: Switch input to control whether to broadcast.
+- <b>Priority ("Status")</b>: Broadcast priority, default is "Status". It can also be "Interrupt".
 - <b>Immediately? (F)</b>: Immediate execution option. Sending immediately causes this message to be processed instantly in the CSM loop, rather than waiting for existing messages in the CSM loop to finish execution.
 
 ### CSM - Forward UI Operations to CSM.vi
