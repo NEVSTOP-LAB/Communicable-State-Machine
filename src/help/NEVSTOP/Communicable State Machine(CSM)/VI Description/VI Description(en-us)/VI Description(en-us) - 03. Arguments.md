@@ -67,12 +67,16 @@ Converts CSM keywords in the argument string to %Hex format to ensure that CSM m
 
 -- <b>Controls</b> --
 - <b>Argument String</b>: String argument.
+- <b>Ignore Argument Type(F)</b>: Do not append argument type `SAFESTR`。
 
 -- <b>Indicators</b> --
 - <b>Safe Argument String</b>: Safe string argument.
 
 ### CSM - Revert Arguments-Safe String.vi
 Converts the %Hex format CSM keywords in the safe string argument back to the original format.
+
+- When <b>Force Convert (F)</b> is FALSE, conversion is performed only if the argument type tag is `SAFESTR`.
+- When <b>Force Convert (F)</b> is TRUE, conversion is performed regardless of the argument type tag.
 
 > - Ref: CSM Message Keywords
 > - Ref: CSM Safe String Argument
@@ -81,6 +85,7 @@ Converts the %Hex format CSM keywords in the safe string argument back to the or
 
 -- <b>Controls</b> --
 - <b>Safe Argument String</b>: Safe string argument.
+- <b>Force Convert (F)</b>: Force conversion, even if the argument type tag is not `SAFESTR`.
 
 -- <b>Indicators</b> --
 - <b>Origin Argument String</b>: String argument.

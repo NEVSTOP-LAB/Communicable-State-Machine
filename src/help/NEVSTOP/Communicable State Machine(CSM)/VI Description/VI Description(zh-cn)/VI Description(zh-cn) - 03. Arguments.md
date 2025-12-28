@@ -73,12 +73,16 @@
 
 -- <b>输入控件(Controls)</b> --
 - <b>Argument String</b>: 字符串参数。
+- <b>Ignore Argument Type(F)</b>: 不添加参数类型标记`SAFESTR`。
 
 -- <b>输出控件(Indicators)</b> --
 - <b>Safe Argument String</b>: 安全的字符串参数。
 
 ### CSM - Revert Arguments-Safe String.vi
 将安全的字符串参数中的%Hex格式的CSM关键字转换回普通格式。
+
+- 当<b>Force Convert (F)</b>为FALSE时，仅当参数类型标记为`SAFESTR`时才进行转换。
+- 当<b>Force Convert (F)</b>为TRUE时，无论参数类型标记为何值均进行转换。
 
 > - Ref: CSM消息关键字
 > - Ref: CSM安全字符串参数
@@ -87,6 +91,7 @@
 
 -- <b>输入控件(Controls)</b> --
 - <b>Safe Argument String</b>:  安全的字符串参数。
+- <b>Force Convert (F)</b>: 强制转换，即使参数类型标记不是`SAFESTR`。
 
 -- <b>输出控件(Indicators)</b> --
 - <b>Origin Argument String</b>: 字符串参数。
