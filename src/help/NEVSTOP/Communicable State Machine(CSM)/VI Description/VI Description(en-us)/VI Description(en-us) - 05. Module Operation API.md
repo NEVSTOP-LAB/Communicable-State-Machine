@@ -116,7 +116,7 @@ Executes multiple CSM commands in a single batch, supporting synchronous message
 - <b>Current Module ("" to Generate an ID)</b>: Name of the current module. If empty, a temporary ID is generated for debugging purposes to identify the location.
 - <b>CSM Scripts</b>: CSM commands to execute.
 - <b>Continue If Error? (F)</b>: Whether to continue execution if an error occurs. The default is FALSE, which specifies to not continue.
-- <b>Wait (5000 ms)</b>: Timeout duration for waiting. The default is 5000 ms.
+- <b>Wait (5000 ms)</b>: Timeout duration for waiting module to be alive. The default is 5000 ms.
 - <b>Response Timeout (-2 Using Global Settings)</b>: Timeout for synchronous calls. The default is -2, which uses the global setting. You can set the global timeout using the CSM - Set TMO of Sync-Reply VI.
 
 -- <b>Indicators</b> --
@@ -128,7 +128,7 @@ Obtains the CSM status change event refnum.
 
 -- <b>Controls</b> --
 - <b>CSM Module</b>: CSM module name.
-- <b>Wait (5000 ms)</b>: Timeout duration for waiting. The default is 5000 ms.
+- <b>Wait (5000 ms)</b>: Timeout duration for waiting module to be alive. The default is 5000 ms.
 
 -- <b>Indicators</b> --
 - <b>Status Change Event</b>: CSM status change event refnum.
@@ -147,7 +147,7 @@ For modules in CSM advanced modes, such as Worker Mode and Chain of Responsibili
 
 -- <b>Controls</b> --
 - <b>Name ("" to Use UUID) In</b>: CSM module name. Refer to <b>CSM Naming Rules</b> for module naming rules.
-- <b>Wait (5000 ms)</b>: Timeout duration for waiting. The default is 5000 ms.
+- <b>Wait (5000 ms)</b>: Timeout duration for waiting module to be alive. The default is 5000 ms.
 
 -- <b>Indicators</b> --
 - <b>CSM Exit Event</b>: CSM module exit event refnum.
@@ -173,7 +173,7 @@ Sets the attribute value of the specified module. If the attribute does not exis
 - <b>CSM Name</b>: CSM module name.
 - <b>Attribute</b>: Attribute name. Must not be an empty string.
 - <b>Value</b>: Attribute data.
-- <b>Wait (5000 ms)</b>: Timeout duration for waiting. The default is 5000 ms.
+- <b>Wait (5000 ms)</b>: Timeout duration for waiting module to be alive. The default is 5000 ms.
 
 -- <b>Indicators</b> --
 - <b>CSM Name (Dup)</b>: A copy of the input CSM module name.
@@ -191,7 +191,7 @@ Reads the attribute value of the specified module. If the attribute does not exi
 - <b>CSM Name</b>: CSM module name.
 - <b>Attribute</b>: Attribute name. Must not be an empty string.
 - <b>Default Value (Empty Variant)</b>: Default value returned when the attribute does not exist.
-- <b>Wait (5000 ms)</b>: Timeout duration for waiting. The default is 5000 ms.
+- <b>Wait (5000 ms)</b>: Timeout duration for waiting module to be alive. The default is 5000 ms.
 
 -- <b>Indicators</b> --
 - <b>CSM Name (Dup)</b>: A copy of the input CSM module name.
@@ -209,7 +209,7 @@ Lists all attribute names of the specified module. If the CSM module does not ex
 -- <b>Controls</b> --
 - <b>CSM Name</b>: CSM module name.
 - <b>Include Value? (F)</b>: Whether to include attribute values. The default is FALSE, which specifies to not include attribute values.
-- <b>Wait (5000 ms)</b>: Timeout duration for waiting. The default is 5000 ms.
+- <b>Wait (5000 ms)</b>: Timeout duration for waiting module to be alive. The default is 5000 ms.
 
 -- <b>Indicators</b> --
 - <b>CSM Name (Dup)</b>: A copy of the input CSM module name.
@@ -227,7 +227,7 @@ Deletes the attribute of the specified module. If the attribute does not exist, 
 -- <b>Controls</b> --
 - <b>CSM Name</b>: CSM module name.
 - <b>Attribute</b>: Attribute name. Must not be an empty string.
-- <b>Wait (5000 ms)</b>: Timeout duration for waiting. The default is 5000 ms.
+- <b>Wait (5000 ms)</b>: Timeout duration for waiting module to be alive. The default is 5000 ms.
 
 -- <b>Indicators</b> --
 - <b>CSM Name (Dup)</b>: A copy of the input CSM module name.

@@ -65,7 +65,9 @@ Lists all submodules of the current group or module. When <b>Recursive? (T)</b> 
 - <b>Submodules</b>: List of submodule names.
 
 ### CSM - Module VI Reference.vi
-Obtains the VI Reference of the input module. The following is the logic of this VI:
+Obtains the VI Reference of the input module.
+
+The following is the logic of this VI:
 - This VI queries and retrieves the CSM module's VI reference by sending a `VI Reference` synchronous message, so it has input parameters similar to the VI that sends synchronous messages.
 - This VI caches the VI reference of the CSM module queried during the current main program run in the background. When the same module is queried again and the retrieved VI reference is still valid, the cached VI reference is returned directly instead of sending another synchronous message query.
 - If you need to force a re-query of the module's VI reference, you can set <b>Force? (F)</b> to TRUE.

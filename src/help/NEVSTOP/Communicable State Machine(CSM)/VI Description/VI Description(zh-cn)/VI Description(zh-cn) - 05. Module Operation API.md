@@ -7,7 +7,7 @@
 
 -- <b>输入控件(Controls)</b> --
 - <b>CSM Name</b>: CSM模块名称。
-- <b>Wait (5000ms)</b>: 等待超时时间，默认为5000 ms。
+- <b>Wait (5000ms)</b>: 等待模块上线的超时时间，默认为5000 ms。
 
 -- <b>输出控件(Indicators)</b> --
 - <b>CSM Name (Dup)</b>: CSM模块名称。
@@ -18,7 +18,7 @@
 
 -- <b>输入控件(Controls)</b> --
 - <b>CSM Names</b>: CSM模块名称。
-- <b>Wait (5000ms)</b>: 等待超时时间，默认为5000 ms。
+- <b>Wait (5000ms)</b>: 等待模块上线的超时时间，默认为5000 ms。
 
 -- <b>输出控件(Indicators)</b> --
 - <b>CSMs Left</b>: 超时后还未上线的CSM模块。
@@ -29,7 +29,7 @@
 
 -- <b>输入控件(Controls)</b> --
 - <b>CSM Names</b>: CSM 模块名称。
-- <b>Wait (5000ms)</b>: 等待超时时间，默认为5000 ms。
+- <b>Wait (5000ms)</b>: 等待模块上线的超时时间，默认为5000 ms。
 
 -- <b>输出控件(Indicators)</b> --
 - <b>CSMs Left</b>: 超时后还未下线的CSM模块。
@@ -61,7 +61,7 @@
 - <b>State</b>: 消息字符串。
 - <b>Arguments ("")</b>: 消息参数。
 - <b>Target Module</b>: 目标模块的名称。
-- <b>Wait (5000ms)</b>: 等待超时时间，默认为5000 ms。
+- <b>Wait (5000ms)</b>: 等待模块上线的超时时间，默认为5000 ms。
 
 -- <b>输出控件(Indicators)</b> --
 - <b>Waited (ms)</b>: 已等待的时间。
@@ -100,7 +100,7 @@
 - <b>State</b>: 消息字符串。
 - <b>Arguments ("")</b>: 消息参数。
 - <b>Target Module</b>: CSM模块名称。
-- <b>Wait (5000ms)</b>: 等待超时时间，默认为5000 ms。
+- <b>Wait (5000ms)</b>: 等待模块上线的超时时间，默认为5000 ms。
 - <b>Response Timeout (-2 Using Global Settings)</b>: 同步调用的超时时间，默认为-2，使用全局设置。你可以通过CSM - Set TMO of Sync-Reply VI设置全局超时时间。
 
 -- <b>输出控件(Indicators)</b> --
