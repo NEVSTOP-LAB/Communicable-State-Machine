@@ -137,12 +137,12 @@
 > [!NOTE]
 > <b>CSM广播格式解析</b>
 >
->       [CSM广播字符串(CSM Broadcast)] >> [参数(Arguments)] -> <broadcast> // [注释(Comments)]
->       [CSM信号广播字符串(CSM Broadcast)] >> [参数(Arguments)] -> <status> // [注释(Comments)]
->       [CSM中断广播字符串(CSM Broadcast)] >> [参数(Arguments)] -> <interrupt> // [注释(Comments)]
+>       [CSM广播(CSM Broadcast)] >> [参数(Arguments)] -> <broadcast> // [注释(Comments)]
+>       [CSM信号广播(CSM Broadcast)] >> [参数(Arguments)] -> <status> // [注释(Comments)]
+>       [CSM中断广播(CSM Broadcast)] >> [参数(Arguments)] -> <interrupt> // [注释(Comments)]
 >
-> - CSM广播字符串(CSM Broadcast): CSM的广播，不可包含CSM关键字和换行符。
-> - `>>`: CSM广播字符串(CSM Broadcast)和参数(Arguments)的分隔符。
+> - CSM广播(CSM Broadcast): CSM的广播，不可包含CSM关键字和换行符。
+> - `>>`: CSM广播(CSM Broadcast)和参数(Arguments)的分隔符。
 > - 参数(Arguments): CSM 广播的参数，不可包含CSM关键字和换行符。
 > - 广播类型(Broadcast Type): `<broadcast>`,`<status>`为信号广播(Status)，`<interrupt>`为中断广播(Interrupt)。
 > - 注释(Comments): 注释信息，不会被解析。
@@ -183,11 +183,11 @@
 > - 状态(State): CSM模块的任意一个状态，也可以被订阅。被触发的API收到的参数，为CSM状态的Response。
 >
 >       // 注册
->       [广播消息名称]@[源模块(SourceModule)] >> [绑定的接口(API)]@[目标模块(TargetModule)] -><register> // [注释(Comments)]
+>       [CSM广播(CSM Broadcast)]@[源模块(SourceModule)] >> [绑定的接口(API)]@[目标模块(TargetModule)] -><register> // [注释(Comments)]
 >       // 取消注册
->       [广播消息名称]@[源模块(SourceModule)] >> [绑定的接口(API)]@[目标模块(TargetModule)] -><unregister> // [注释(Comments)]
+>       [CSM广播(CSM Broadcast)]@[源模块(SourceModule)] >> [绑定的接口(API)]@[目标模块(TargetModule)] -><unregister> // [注释(Comments)]
 >
-> - 广播消息名称: 由源模块定义，参考“CSM 广播格式解析”。
+> - CSM广播: 由源模块定义，参考“CSM 广播格式解析”。
 > - 源模块: 广播的模块，如果订阅任意模块的广播，源模块可以用`*`表示。
 > - 绑定的接口: 由目标模块定义，为目标模块对外的接口。
 > - 目标模块: 绑定的接口所在的模块。当在CSM模块中表示订阅到本模块，可忽略。同时省略前面的@分隔符。

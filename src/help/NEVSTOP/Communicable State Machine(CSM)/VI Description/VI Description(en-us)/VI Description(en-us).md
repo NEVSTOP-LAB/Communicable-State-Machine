@@ -132,12 +132,12 @@
 > [!NOTE]
 > <b>CSM Broadcast Format Parsing</b>
 >
->      [CSM Broadcast String] >> [Arguments] -> <broadcast> // [Comments]
->      [CSM Status Broadcast String] >> [Arguments] -> <status> // [Comments]
->      [CSM Interrupt Broadcast String] >> [Arguments] -> <interrupt> // [Comments]
+>      [CSM Broadcast] >> [Arguments] -> <broadcast> // [Comments]
+>      [CSM Status Broadcast] >> [Arguments] -> <status> // [Comments]
+>      [CSM Interrupt Broadcast] >> [Arguments] -> <interrupt> // [Comments]
 >
-> - <b>CSM Broadcast String</b>: CSM broadcast. It cannot contain CSM keywords or line breaks.
-> - `>>`: Separator between the CSM Broadcast String and Arguments.
+> - <b>CSM Broadcast</b>: CSM broadcast. It cannot contain CSM keywords or line breaks.
+> - `>>`: Separator between the CSM Broadcast and Arguments.
 > - <b>Arguments</b>: Arguments for the CSM broadcast. It cannot contain CSM keywords or line breaks.
 > - <b>Broadcast Type</b>: `<broadcast>` and `<status>` are Status Broadcasts; `<interrupt>` is Interrupt Broadcast.
 > - <b>Comments</b>: Comment information, which will not be parsed.
@@ -175,11 +175,11 @@
 > - <b>State</b>: Any state of a CSM module can also be registered to. The argument received by the triggered API is the Response of the CSM state.
 >
 >       // Register
->       [Broadcast Message Name]@[SourceModule] >> [Bound API]@[TargetModule] -><register> // [Comments]
+>       [CSM Broadcast]@[SourceModule] >> [Bound API]@[TargetModule] -><register> // [Comments]
 >       // Unregister
->       [Broadcast Message Name]@[SourceModule] >> [Bound API]@[TargetModule] -><unregister> // [Comments]
+>       [CSM Broadcast]@[SourceModule] >> [Bound API]@[TargetModule] -><unregister> // [Comments]
 >
-> - <b>Broadcast Message Name</b>: Defined by the source module. Refer to "CSM Broadcast Format Parsing" for details.
+> - <b>CSM Broadcast</b>: Defined by the source module. Refer to "CSM Broadcast Format Parsing" for details.
 > - <b>Source Module</b>: The broadcasting module. If registering to broadcasts from any module, the source module can be represented by `*`.
 > - <b>Bound API</b>: Defined by the target module. It is the external interface of the target module.
 > - <b>Target Module</b>: The module where the bound API resides. When indicating registration to the current module within a CSM module, it can be ignored. The preceding `@` separator is also omitted.
