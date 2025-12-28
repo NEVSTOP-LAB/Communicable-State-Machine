@@ -207,7 +207,7 @@ Concatenates register state operation message strings. The message format is as 
 - <b>Source CSM (* as Default)</b>: Name of the CSM module publishing the status.
 - <b>Status</b>: Status to register.
 - <b>API (If "", Same As "Status")</b>: Name of the API in the registering module that responds to the status.
-- <b>Priority (No Change)</b>: Priority of the broadcast after registration。
+- <b>Priority (No Change)</b>: Priority of the broadcast after registration.
 
 -- <b>Indicators</b> --
 - <b>CSM Message String</b>: Concatenated CSM message string.
