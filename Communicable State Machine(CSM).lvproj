@@ -107,6 +107,9 @@
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
 		<Item Name="testcases" Type="Folder">
+			<Item Name="_support" Type="Folder">
+				<Item Name="Generate testcase Started User Log.vi" Type="VI" URL="../testcases/_support/Generate testcase Started User Log.vi"/>
+			</Item>
 			<Item Name="_CSMs" Type="Folder">
 				<Item Name="_support" Type="Folder">
 					<Item Name="Wrapper-CSM Queue++.vi" Type="VI" URL="../testcases/_CSMs/_support/Wrapper-CSM Queue++.vi"/>
