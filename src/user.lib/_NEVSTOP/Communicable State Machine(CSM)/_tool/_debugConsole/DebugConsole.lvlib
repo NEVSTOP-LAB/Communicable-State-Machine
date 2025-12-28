@@ -5,6 +5,10 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Property Name="NI.SortType" Type="Int">3</Property>
+	<Item Name="_Support" Type="Folder">
+		<Item Name="_BroadcastDef.ctl" Type="VI" URL="../_BroadcastDef.ctl"/>
+		<Item Name="_Broadcast Message.vi" Type="VI" URL="../_Broadcast Message.vi"/>
+	</Item>
 	<Item Name="LEGO" Type="Folder">
 		<Property Name="NI.SortType" Type="Int">0</Property>
 		<Item Name="Broadcast Console.vi" Type="VI" URL="../Broadcast Console.vi"/>

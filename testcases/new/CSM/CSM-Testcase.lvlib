@@ -15,4 +15,5 @@
 	<Item Name="Check CSM Modules Exist Or Not.vi" Type="VI" URL="../Check CSM Modules Exist Or Not.vi"/>
 	<Item Name="Remove Duplicates from 1D Array (String).vi" Type="VI" URL="../Remove Duplicates from 1D Array (String).vi"/>
 	<Item Name="Package Error Info.vi" Type="VI" URL="../Package Error Info.vi"/>
+	<Item Name="InitCSMs.vi" Type="VI" URL="../InitCSMs.vi"/>
 </Library>
