@@ -11,6 +11,7 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">385908736</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
+	<Item Name="Get VIs in Project.vi" Type="VI" URL="../Get VIs in Project.vi"/>
 	<Item Name="is UTF-8_CSM.vi" Type="VI" URL="../is UTF-8_CSM.vi"/>
 	<Item Name="Split String Array By Patterns_CSM.vi" Type="VI" URL="../Split String Array By Patterns_CSM.vi"/>
 	<Item Name="Text To Lines_CSM.vi" Type="VI" URL="../Text To Lines_CSM.vi"/>

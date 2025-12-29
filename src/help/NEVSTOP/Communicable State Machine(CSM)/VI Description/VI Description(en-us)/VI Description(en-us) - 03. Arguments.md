@@ -67,7 +67,7 @@ Converts CSM keywords in the argument string to %Hex format to ensure that CSM m
 
 -- <b>Controls</b> --
 - <b>Argument String</b>: String argument.
-- <b>Ignore Argument Type(F)</b>: Do not append argument type `SAFESTR`。
+- <b>Ignore Argument Type(F)</b>: Do not append argument type `SAFESTR`.
 
 -- <b>Indicators</b> --
 - <b>Safe Argument String</b>: Safe string argument.
