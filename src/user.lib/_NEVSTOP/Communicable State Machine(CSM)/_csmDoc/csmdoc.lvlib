@@ -26,6 +26,7 @@
 		<Item Name="_Overwrite Decoration Content.vi" Type="VI" URL="../Support/_Overwrite Decoration Content.vi"/>
 		<Item Name="_Load Markdown File.vi" Type="VI" URL="../Support/_Load Markdown File.vi"/>
 		<Item Name="_Standardize Carriage Returns.vi" Type="VI" URL="../Support/_Standardize Carriage Returns.vi"/>
+		<Item Name="_Recursively List Included Files.vi" Type="VI" URL="../Support/_Recursively List Included Files.vi"/>
 	</Item>
 	<Item Name="Typedef" Type="Folder">
 		<Item Name="DocElement.ctl" Type="VI" URL="../_Typedef/DocElement.ctl"/>
@@ -35,6 +36,7 @@
 		<Item Name="BatchEditorAction" Type="Folder">
 			<Item Name="BEditor-PopoulateVIHelp.vi" Type="VI" URL="../BEditor-PopoulateVIHelp.vi"/>
 			<Item Name="BEditor-PopoulateExampleDesc.vi" Type="VI" URL="../BEditor-PopoulateExampleDesc.vi"/>
+			<Item Name="BEditor-Localization.vi" Type="VI" URL="../BEditor-Localization.vi"/>
 		</Item>
 		<Item Name="Single" Type="Folder">
 			<Item Name="Populate Single Example Description.vi" Type="VI" URL="../Populate Single Example Description.vi"/>
@@ -45,6 +47,7 @@
 			<Item Name="Populate Example Description.vi" Type="VI" URL="../Populate Example Description.vi"/>
 			<Item Name="Populate VI Help.vi" Type="VI" URL="../Populate VI Help.vi"/>
 			<Item Name="Export VI Help.vi" Type="VI" URL="../Export VI Help.vi"/>
+			<Item Name="Localize CSM VIs.vi" Type="VI" URL="../Localize CSM VIs.vi"/>
 		</Item>
 	</Item>
 </Library>
