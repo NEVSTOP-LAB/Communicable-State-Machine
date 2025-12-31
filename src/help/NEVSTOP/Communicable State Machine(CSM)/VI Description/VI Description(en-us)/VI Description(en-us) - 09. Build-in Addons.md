@@ -81,6 +81,11 @@ The thread VI originally used in the CSM - Start File Logger VI. This VI is now 
 >
 > The advantage of the way Loop Support defines loops is that it can still respond to other events while the loop is running, without blocking the operation of the state machine. CSM Loop-Support VIs are used to define, append, and terminate loops, using special tags to identify the corresponding loop states and the end state. Therefore, this addon is primarily intended to provide a standard loop implementation method to solve the above problems.
 
+> [!WARNING]
+> <b>CSM LOOP Support Applicability</b>
+>
+> The CSM collaborator (worker) and chain modes are special module patterns composed of multiple running nodes. Messages sent in these modes cannot reliably target a specific node to execute. When a node operates in collaborator (worker) or chain modes, it cannot be clearly instructed by messages to stop a loop. Therefore, it is not recommended to use the CSM Loop Support addon in collaborator (worker) and chain modes.
+
 ### CSMLS - Define Loop State(s).vi
 Defines a loop operation, identifying the repeating loop state via the tag `-><loop>`. This loop also appends the `-><end>` tag at the end to mark the loop's conclusion.
 
@@ -101,6 +106,7 @@ The loop can be ended by removing `-><loop>`. You can use the following VIs to r
 <b>Reference Example</b>: `Addons - Loop Support\CSMLS - Continuous Loop in CSM Example.vi`.
 
 > - Ref: Reason for CSM LOOP Support Design
+> - Ref: CSM LOOP Support Applicability
 
 > [!WARNING]
 > <b>Add to Front? (F)</b> is usually FALSE because once a loop state starts, it does not end immediately. Before insertion into the state queue, it is considered a sub-state of the current state. If the current state was called via a synchronous message, it would not return immediately. For example, if a set of continuous acquisition states is defined in `API: Start DAQ` and this message is sent synchronously from outside, the logic should be to start the loop and then return immediately. Only set <b>Add to Front? (F)</b> to TRUE if the logic is to wait for the loop to end before returning.

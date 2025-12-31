@@ -68,7 +68,7 @@ CSM - Start File Logger VI中原本使用的线程VI。已废弃，目前使用C
 
 > - Ref: CSM File Logger实现的原理
 
-## CSM Loop Support Addon
+## CSM周期状态支持(CSM Loop Support Addon)
 
 > [!NOTE]
 > <b>CSM LOOP Support设计的原因</b>
@@ -82,6 +82,11 @@ CSM - Start File Logger VI中原本使用的线程VI。已废弃，目前使用C
 > Loop Support定义循环的方式，它的优势是可以在循环运行时，依然响应其他事件，而不会阻塞状态机的运行。
 > 使用CSM Loop-Support VIs来定义、附加和终止循环，通过定义特殊的标记，来标识循环对应的状态，和结束状态。
 > 因此，这个插件主要是为了提供一个标准的循环实现方式，解决以上的问题。
+
+> [!WARNING]
+> <b>CSM LOOP Support应用范围</b>
+>
+> CSM 的协作者模式(worker) 和 责任链(chain)模式，是由多个运行的节点组成特殊的模块，发送的消息，并不能明确的让某个节点执行。当某节点使用此模式时，就不能明确的使用消息通知它停止循环，因此，不建议在协作者模式(worker) 和 责任链(chain)模式中使用CSM LOOP Support。
 
 ### CSMLS - Define Loop State(s).vi
 定义循环操作，通过标记`-><loop>`来标识重复循环的状态。这个循环也会在最后添加`-><end>`标记循环的结束。
@@ -103,6 +108,7 @@ CSM - Start File Logger VI中原本使用的线程VI。已废弃，目前使用C
 <b>参考范例</b>:  `Addons - Loop Support\CSMLS - Continuous Loop in CSM Example.vi`。
 
 > - Ref: CSM Loop Support设计的原因
+> - Ref: CSM LOOP Support应用范围
 
 > [!WARNING]
 >
