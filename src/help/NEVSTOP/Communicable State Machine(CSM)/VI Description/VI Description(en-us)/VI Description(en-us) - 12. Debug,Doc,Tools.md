@@ -6,7 +6,7 @@ The CSM template must include the "VI Reference" branch for external access to V
 
 This tool scans all VIs in the lvproj directory; if a VI contains a CSM module, it will be listed, and then you can choose to batch add the "VI Reference" branch.
 
-## CSM - Debug Console - DebugTool.vi
+## CSM - Debug Console - previous.vi
 
 CSM Debug Console, you can use this tool:
 
@@ -15,7 +15,7 @@ CSM Debug Console, you can use this tool:
 3. Select an API interface, call synchronously or asynchronously, view the return value.
 4. View the overall program's running log.
 
-### CSM - Debug Console 2.vi
+### CSM - Debug Console - DebugTool.vi
 
 New version of the CSM Debug Console, you can use this tool:
 1. Select an existing CSM instance, open the front panel and block diagram.
