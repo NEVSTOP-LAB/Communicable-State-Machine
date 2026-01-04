@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Communicable State Machine &lpar;CSM&rpar; Unit Test</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <h1 id="communicable-state-machine-csm-unit-test">Communicable State Machine (CSM) Unit Test</h1>
+<h2 id="-1-project-introduction">📖 1 Project Introduction</h2>
+<h3 id="11-project-background">1.1 Project Background</h3>
+<p>This project utilizes the <strong>JKI VI Tester</strong> toolkit to develop a suite of unit tests for verifying the functional correctness of the <strong>Communicable State Machine (CSM) programming framework</strong>. This unit test suite provides reliable functional verification support for the long-term maintenance of CSM.
+The unit tests are integrated into the <strong>Git CI/CD platform</strong>, running tests and generating reports through an automated process, helping CSM framework developers quickly locate issues, maintain, and debug.</p>
+<h3 id="12-installation-environment">1.2 Installation Environment</h3>
+<ul>
+<li>Windows 10 OS</li>
+<li>NI LabVIEW 2017 (32-bit)</li>
+<li>JKI VI Tester (<a href="https://www.ni.com/zh-cn/support/downloads/tools-network/download.vi-tester-unit-test-framework.html#378053">JKI VI Tester Toolkit for LabVIEW - VIPM Download</a>)</li>
+</ul>
+<hr>
+<h2 id="️-2-function-description">⚙️ 2 Function Description</h2>
+<p>The following two images show the LabVIEW project structure and the JKI VI Tester interface respectively:</p>
+<div align="center">
+<img src="file:///c:\Users\qilli\OneDrive - Emerson\MeineProjekte\Laufende Projekte\CSM\CSM_LabVIEW_Architecture\CSM_Unittest_README\Pictures\LabVIEW_Project.png" alt="LabVIEW Project" width="400"/>
+<img src="file:///c:\Users\qilli\OneDrive - Emerson\MeineProjekte\Laufende Projekte\CSM\CSM_LabVIEW_Architecture\CSM_Unittest_README\Pictures\JKI_VI_Tester.png" alt="JKI VI Tester" width="400"/> </div>
+<p>The unit tests are categorized according to CSM framework functionalities and mainly include the following test classes:</p>
+<ol>
+<li><strong>Message</strong>
+Test messages between different CSM modes (Normal Mode, SubModule Mode, System Level Mode, Worker Mode, Chain Mode, lvlibp Mode). Synchronous messages, asynchronous messages with reply, and asynchronous messages without reply. Verify if messages are correctly passed, if arguments, response, and error information are also correctly carried.
+Specific test case description is explained in the table below and test code is in <code>testcase-CSMMessage.lvclass</code>.</li>
+</ol>
+<table>  
+  <tr align="left">
+      <td> Test Case No. </td>
+      <td> Test Case Description </td>
+      <td> Test Case VI </td>
+      <td> Normal Mode </td>
+      <td> Submodule Mode </td>
+      <td> System-Level Mode </td>
+      <td> Worker Mode </td>
+      <td> Chain Mode </td>
+      <td> lvlibp </td>
+  </tr>
+  <tr align="left">
+      <td>1</td>
+      <td>CSM1 sends a synchronous message to CSM2, CSM2 returns the correct reply, CSM1 enters Response Case to process the reply info</td>
+      <td>test1-SyncMessage.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+      <td>2</td>
+      <td>CSM1 sends a synchronous message to CSM2, CSM2 encounters an error, CSM1 enters Response Case carrying the Response and error information</td>
+      <td>test2-SycnMessageWithError.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+      <td>3</td>
+      <td>CSM1 uses API to send a synchronous message to CSM2, CSM2 returns the correct Response, CSM1 obtains the return via API</td>
+      <td>test3-SyncMessage_API.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+      <td>4</td>
+      <td>CSM1 uses API to send a synchronous message to CSM2, CSM2 encounters an error, CSM1 obtains the Response and error information via API</td>
+      <td>test4-SyncMessageWithError_API.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+      <td>5</td>
+      <td>CSM1 sends an asynchronous message with reply to CSM2, CSM2 returns the correct Response, CSM1 enters Async Response to process the reply</td>
+      <td>test5-AsyncMessageWithReply.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+      <td>6</td>
+      <td>CSM1 sends an asynchronous message with reply to CSM2, CSM2 encounters an error, CSM1 enters Async Response carrying the Response and error information</td>
+      <td>test6-AsyncMessageWithReplyWithError.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+      <td>7</td>
+      <td>CSM1 sends an asynchronous message without reply to CSM2, verifies that CSM2 executes, CSM1 does not process the reply</td>
+      <td>test7-AsyncMessageWithoutReply.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+      <td>8</td>
+      <td>CSM1 uses API to send an asynchronous message without reply to CSM, verifies that the caller executes asynchronously, does not process the reply</td>
+      <td>test8-AsyncMessageWithoutReply_API.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr>
+      <td colspan="9">
+          Note: CSM modes include Normal Mode, Submodule Mode, System-Level Mode, Worker Mode, Chain Mode, and lvlibp. All possible CSM mode relationships between CSM1 and CSM2 are covered.
+      </td>
+  </tr>
+</table>
+<ol start="2">
+<li><strong>Argument</strong>
+Based on message test class, further verify whether arguments/parameters carried by messages can be transmitted normally between different CSM modes (Normal Mode, SubModule Mode, System Level Mode, Worker Mode, Chain Mode, lilvbp Mode).
+Specific test case description is explained in the table below and test code is in  <code>testcase-CSMArgument.lvclass</code>.</li>
+</ol>
+<table>
+  <tr align="left">
+      <td> Test Case No. </td>
+      <td> Test Case Description </td>
+      <td> Test Case VI </td>
+      <td> Normal Mode </td>
+  </tr>
+  <tr align="left">
+      <td>1</td>
+      <td>Create preset information and verify HexString conversion works correctly: 1. Check a nested complex Cluster; 2. Check empty string parsing behavior.</td>
+      <td>test1-HexStr conversion.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+      <td>2</td>
+      <td>Create preset information and verify ErrorString conversion works correctly: 1. Conversion of Error; 2. Conversion of No Error; 3. Empty string behavior.</td>
+      <td>test2-ErrorStr conversion.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+      <td>3</td>
+      <td>Create preset information and verify SafeString conversion works correctly: 1. Empty string behavior (no conversion for empty string); 2. Behavior with special characters; 3. Behavior with carriage return.</td>
+      <td>test3-SafeStr conversion.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+      <td>4</td>
+      <td>CSM - Argument Type.vi can correctly identify HexString/ErrorString/SafeString types.</td>
+      <td>Integrated in test1,2,3</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+      <td>5</td>
+      <td>Parameters sent from CSM1 to CSM2 are correctly carried into the TargetCSM, i.e., into the CSM.</td>
+      <td>test4-ArgumentCanBeTakenToTargetModule.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr>
+      <td colspan="9">
+          Note: Only normal mode is tested between CSM1 and CSM2, other modes have been tested in the message test class.
+      </td>
+  </tr>
+</table>
+<ol start="3">
+<li><strong>Response</strong>
+Verify the correctness of message response/return values between different modes (Normal Mode, SubModule Mode, System Level Mode, Worker Mode, Chain Mode, lilvbp Mode), including the transmission of error information, and aslo test the behavior of response/return values during <strong>macro message</strong> execution meets expectations under different circumstances.
+Specific test case description is explained in the table below and test code is in  <code>testcase-CSMResponse.lvclass</code>.</li>
+</ol>
+<table>  
+    <tr align="left">
+            <td> Test Case No. </td>
+            <td> Test Case Description </td>
+            <td> Test Case VI </td>
+            <td> Normal Mode </td>
+            <td> Submodule Mode </td>
+            <td> System-Level Mode </td>
+            <td> Worker Mode </td>
+            <td> Chain Mode </td>
+            <td> lvlibp </td>
+    </tr>
+  <tr align="left">
+    <td>1</td>
+    <td>Basic message response function, already tested in message test class, including Sync/Async/AsyncNoRep</td>
+    <td>Tested</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>2</td>
+    <td>CSM1 sends a message to CSM2, single message response. When an error occurs, it first enters the Error Handler, but still returns the Response of the message execution case.</td>
+    <td>test1-ResponseWithError.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>3</td>
+    <td>Macro message execution returns the response of the last SubMessage</td>
+    <td>test2-MacroWithSubMessages.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>4</td>
+    <td>Macro message execution with PostStep messages returns the response of the last SubMessage</td>
+    <td>test3-MacroWithSubAndPostMessages.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>5¹</td>
+    <td>Macro message execution: if the last SubMessage sends a message to another module (sync/async with response/async no response), the final return value is empty</td>
+    <td>test4-MacroWithNonLocalSubMessages.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>6</td>
+    <td>Message response: Sync message API carries the name of the executing module, already tested in test3-SyncMessage_API.vi of the message test class</td>
+    <td>Tested</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>7</td>
+    <td>In Response/Async Response, the source module name, message name, and message parameters can be obtained, already tested in Sync/Async/AsyncNoRep message test cases.</td>
+    <td>Tested</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>8</td>
+    <td>Message response with Error, already tested in Sync/Async/AsyncNoRep message test cases</td>
+    <td>Tested</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr>
+      <td colspan="9">
+       ¹ Related issue tracking:  
+          <a href="https://github.com/NEVSTOP-LAB/Communicable-State-Machine/issues/547">
+          https://github.com/NEVSTOP-LAB/Communicable-State-Machine/issues/547
+          </a>
+          <br><br>
+          Note: CSM modes include Normal Mode, Submodule Mode, System-Level Mode, Worker Mode, Chain Mode, and lvlibp. All possible CSM mode relationships between CSM1 and CSM2 are included.
+      </td>
+  </tr>
+</table>
+<ol start="4">
+<li><strong>Broadcast</strong>
+Test status, interrupt (high priority), and state change broadcast (state change is a unique broadcast mechanism provided by CSM) across different modes (Normal Mode, SubModule Mode, System Level Mode, Worker Mode, Chain Mode, Packed Project Library Mode), including registration, unregistration, and selective registration (both senders and receivers can flexibly decide priority). Additionally test scenarios where broadcast functionality is called outside the CSM framework, extending cross-framework compatibility.
+Specific test case description is explained in the table below and test code is in  <code>testcase-CSMBroadcast.lvclass</code>.</li>
+</ol>
+<table>  
+  <tr align="left">
+      <td> Test Case No. </td>
+      <td> Test Case Description </td>
+      <td> Test Case VI </td>
+      <td> Normal Mode </td>
+      <td> Submodule Mode </td>
+      <td> System-Level Mode </td>
+      <td> Worker Mode </td>
+      <td> Chain Mode </td>
+      <td> lvlibp </td>
+  </tr>
+  <tr align="left">
+    <td>1</td>
+    <td>CSM1 throws Status, can use Register/Unregister internally or externally to control Status triggering the State bound to CSM2</td>
+    <td>test1-LocalExternalStatusRegistration.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>      
+  </tr>
+  <tr align="left">
+    <td>2</td>
+    <td>CSM1 throws Status, can use API internally or externally to control Status triggering the State bound to CSM2</td>
+    <td>test2-LocalExternalStatusRegistrationViaAPI.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>3</td>
+    <td>CSM1 throws Status, can use API internally or externally to control Status triggering the State bound to CSM2</td>
+    <td>test24-MappingRelationshipByExternalRegistration_API.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>4</td>
+    <td>CSM1 throws Status, when subscribing externally with string syntax, the subscription does not disappear after CSM exits</td>
+    <td>test25-MappingRelationshipByExternalRegistration.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>5</td>
+    <td>CSM1 throws Status, when subscribing internally to its own State: if the subscriber name is explicitly written as CSM1, the subscription does not disappear after exit; if the subscriber name is omitted, the subscription is automatically removed after exit.</td>
+    <td>test26-MappingRelationshipByLocalRegistration_WithSubcriberName.vi
+       <br><br>
+test27-MappingRelationshipByLocalRegistration_WithoutSubcriberName.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>6</td>
+    <td>CSM1 throws Status, can be subscribed to multiple States in multiple modules, all will be triggered automatically after throwing</td>
+    <td>test3-1ToNBroadcastStatus.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>7</td>
+    <td>CSM1 throws Status, can be subscribed in non-CSM using UserEvent</td>
+    <td>test4-RegisterStatusFromNonCSM.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>8</td>
+    <td>CSM1/CSM3 throw different Statuses, can be subscribed to CSM2's State, both can trigger CSM2 to execute State</td>
+    <td>test5-RegisterMultipleStatusesToOneState.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+    <tr align="left">
+    <td>9</td>
+    <td>When subscribing, Source Module Name can use * as a wildcard to subscribe to the same Status from multiple modules at once; unsubscribing from one module's Status does not affect others</td>
+    <td>test6-AsteriskWildcardStatusRegistration.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>10</td>
+    <td>After successful subscription, CSM1 throws Status multiple times, the subscriber receives all State triggers without loss</td>
+    <td>test15-LosslessRegisterStatusMultipleTimes.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>11</td>
+    <td>After successful subscription, CSM1 throws Status multiple times, the subscriber receives all State triggers without loss (subscribed in non-CSM using UserEvent)</td>
+    <td>test16-LosslessRegisterStatusMultipleTimesNonCSM.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>12</td>
+    <td>The Argument of Status is the Argument of the triggered State</td>
+    <td>Tested, see test1-LocalExternalStatusRegistration.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>13</td>
+    <td>The triggered Status can obtain Source State Name/Source module from Argument Info</td>
+    <td>test7-TestArgumentInfoOfTriggeredState_Status.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>14</td>
+    <td>CSM1 throws Interrupt, can be subscribed to multiple States in multiple modules, all will be triggered automatically after throwing</td>
+    <td>test19-1ToNInterruptStatus.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>15</td>
+    <td>CSM1 throws Interrupt, can be subscribed in non-CSM using Interrupt User Event; Status User Event will not trigger</td>
+    <td>test21-RegisterInterruptFromNonCSM.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>16</td>
+    <td>CSM1 throws Status, subscribed as interrupt, can be subscribed in non-CSM using Interrupt User Event; Status User Event will not trigger</td>
+    <td>test20-RegisterStatusAsInterruptFromNonCSM.vi
+    </td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+    <tr align="left">
+    <td>17</td>
+    <td>CSM1 throws Interrupt, subscribed as Status, can be subscribed in non-CSM using Status User Event; Interrupt User Event will not trigger</td>
+    <td>test22-RegisterInterruptAsStatusFromNonCSM.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>18</td>
+    <td>CSM1 does not throw Status, its State can use Register/Unregister internally or externally to control Status triggering the State bound to CSM2</td>
+    <td>test8-LocalExternalStateRegistration.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>19</td>
+    <td>CSM1 does not throw Status, its State can use API internally or externally to control Status triggering the State bound to CSM2</td>
+    <td>test9-LocalExternalStateRegistrationViaAPI.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>20</td>
+    <td>CSM1 does not throw Status, when subscribing externally to its State with string syntax, the subscription does not disappear after exit</td>
+    <td>test29-MappingRelationshipByExternalRegistration_State.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>21</td>
+    <td>CSM1 does not throw Status, when subscribing externally to its State via API, the subscription does not disappear after exit</td>
+    <td>test28-MappingRelationshipByExternalRegistration_API_State.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+            <td>22</td>
+            <td>CSM1 does not throw Status, when subscribing internally to its own State: if the subscriber name is explicitly written as CSM1, the subscription does not disappear after exit; if the subscriber name is omitted, the subscription is automatically removed after exit.</td>
+            <td>test30-MappingRelationshipByLocalRegistration_WIthSubscriberName_State.vi
+        <br><br>
+test31-MappingRelationshipByLocalRegistration_WIthoutSubscriberName_State.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>23</td>
+    <td>CSM1 does not throw Status, its State can be subscribed to multiple States in multiple modules, all will be triggered automatically after throwing</td>
+    <td>test10-1ToNBroadcastState.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>24</td>
+    <td>CSM1 does not throw Status, its State can be subscribed in non-CSM using UserEvent</td>
+    <td>test11-RegisterStatesFromNonCSM_State.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>25</td>
+    <td>CSM1/CSM3 have different States, can be subscribed to CSM2's State, both can trigger CSM2 to execute State</td>
+    <td>test12-RegisterMultipleStatesToOneState.vi/td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>26</td>
+    <td>When subscribing, Source Module Name can use * as a wildcard to subscribe to the same State from multiple modules at once; unsubscribing from one module's State does not affect others</td>
+    <td>test13-AsteriskWildcardStateRegistration.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>27</td>
+    <td>After successful subscription, CSM1 throws State multiple times, the subscriber receives all State triggers without loss</td>
+    <td>test17-LosslessRegisterStateMultipleTimes.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>28</td>
+    <td>After successful subscription, CSM1 throws State multiple times, the subscriber receives all State triggers without loss (subscribed in non-CSM using UserEvent)</td>
+    <td>test16-LosslessRegisterStateMultipleTimesNonCSM.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>29</td>
+    <td>The Response of State is the Argument of the triggered State</td>
+    <td>Tested, see test8-LocalExternalStateRegistration.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>30</td>
+    <td>The triggered State can obtain Source State Name/Source module from Argument Info</td>
+    <td>test14-TestArgumentInfoOfTriggeredState_State.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>31</td>
+    <td>Subscribe State as interrupt, in Non-CSM mode, events can only be obtained in interrupt User Event, not in Status User Event</td>
+    <td>test23-RegisterStatusAsInterruptFromNonCSM_State.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr>
+    <td colspan="9">
+¹: The unit test VIs of this class are not sorted from top to bottom according to this table, but are sorted according to the actual test machine, especially the performance of the actual running machine for Git CI/CD.
+<br><br>
+        Note: CSM modes include Normal Mode, Submodule Mode, System-Level Mode, Worker Mode, Chain Mode, and lvlibp. All possible CSM mode relationships between CSM1 and CSM2 are included.
+    </td>
+  </tr>
+</table>
+<ol start="5">
+<li><strong>Global Log</strong>
+Test global logging functionality across different modes (Normal Mode, SubModule Mode, System Level Mode, Worker Mode, Chain Mode, lilvbp), including module creation and destruction, state change, registration and unregistration, syn messages, async messages with reply, async messages without reply, broadcast, and user-defined log.
+The CSM programming framework provides two implementation methods: Global Log Queue and Global Log User Event. This unit test class covers all possible scenarios for both implementations.
+Specific test case description is explained in the table below and test code is in  <code>testcase-CSMGlobalLog.lvclass</code>.</li>
+</ol>
+<table>  
+  <tr align="left">
+      <td> Test Case No. </td>
+      <td> Test Case Description </td>
+      <td> Test Case VI </td>
+      <td> Normal Mode </td>
+      <td> Submodule Mode </td>
+      <td> System-Level Mode </td>
+      <td> Worker Mode </td>
+      <td> Chain Mode </td>
+      <td> lvlibp </td>
+  </tr>
+  <tr align="left">
+    <td>1</td>
+    <td>Module creation and destruction logs (module created/module destroyed) can be obtained through the global log queue, and the number of logs can be checked for correctness</td>
+    <td>test1-ModuleCreatedDestroyed_Queue.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>2</td>
+    <td>Module state change logs (state change) can be obtained through the global log queue: sending a message via external API triggers an internal state change in the CSM module. Both the triggering message and the resulting state change can be seen in the global log.</td>
+    <td>test2-StateChange_Queue.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>3</td>
+    <td>Subscription and unsubscription logs can be obtained through the global log queue. CSM module names in Worker and Chain modes must not have suffixes.</td>
+    <td>test3-RegisterUnregister_Queue.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>4</td>
+    <td>Module message communication logs (message) can be obtained through the global log queue: sending a synchronous message via external API triggers an internal state in CSM1, which then sends a synchronous message to CSM2. Both messages should be strictly logged in the correct format.</td>
+    <td>test4-Message_Queue.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>5</td>
+    <td>Module broadcast logs (broadcast) can be obtained through the global log queue</td>
+    <td>test5-Broadcast_Queue.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>6</td>
+    <td>Module high-priority broadcast logs (interrupt) can be obtained through the global log queue</td>
+    <td>test6-Interrupt_Queue.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>7</td>
+    <td>Module state broadcast logs (state) can be obtained through the global log queue</td>
+    <td>test7-StateBroadcast_Queue.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>8</td>
+    <td>Module custom user message logs can be obtained through the global log queue</td>
+    <td>test8-UserLog_Queue.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+    <tr align="left">
+    <td>9</td>
+    <td>Module Sync/Async/NoRep-Async message logs can be obtained through the global log queue</td>
+    <td>Tested, see test4-Message_Queue.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>10</td>
+    <td>Module creation and destruction logs (module created/module destroyed) can be obtained through global log custom events, and the number of logs can be checked for correctness</td>
+    <td>test9-ModuleCreatedDestroyed_Event.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>11</td>
+    <td>Module state change logs (state change) can be obtained through global log custom events: sending a message via external API triggers an internal state change in the CSM module. Both the triggering message and the resulting state change can be seen in the global log.</td>
+    <td>test10-StateChange_Event.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>12</td>
+    <td>Subscription and unsubscription logs can be obtained through global log custom events. CSM module names in Worker and Chain modes must not have suffixes.</td>
+    <td>test11-RegisterUnregister_Event.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>13</td>
+    <td>Module message communication logs (message) can be obtained through global log custom events</td>
+    <td>test12-Message_Event.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>14</td>
+    <td>Module broadcast logs (broadcast) can be obtained through global log custom events</td>
+    <td>test13-Broadcast_Event.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>15</td>
+    <td>Module high-priority broadcast logs (interrupt) can be obtained through global log custom events</td>
+    <td>test14-Interrupt_Event.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>16</td>
+    <td>Module state broadcast logs (state) can be obtained through global log custom events</td>
+    <td>test15-StateBroadcast_Event.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+    <tr align="left">
+    <td>17</td>
+    <td>Module custom user message logs can be obtained through global log custom events</td>
+    <td>test16-UserLog_Event.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>18</td>
+    <td>Module Sync/Async/NoRep-Async message logs can be obtained through global log custom events</td>
+    <td>Tested, see test12-Message_Event.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr>
+    <td colspan="9">
+<p>Note: CSM modes include Normal Mode, Submodule Mode, System-Level Mode, Worker Mode, Chain Mode, and lvlibp. All possible CSM mode relationships between CSM1 and CSM2 are included.
+</td></p>
+  </tr>
+</table>
+<ol start="6">
+<li><strong>System Level Module</strong>
+Test the <code>CSM List Module.vi</code> API functionality by modifying the input Scope parameter to identify scenarios that include or exclude system-level modules. Other related system-level module functionalities have been covered in the Message class tests.
+Specific test case description is explained in the table below and test code is in  <code>testcase-CSMSystemLevelModule.lvclass</code>.</li>
+</ol>
+<table>  
+  <tr align="left">
+      <td> Test Case No. </td>
+      <td> Test Case Description </td>
+      <td> Test Case VI </td>
+      <td> Normal Mode </td>
+      <td> Submodule Mode </td>
+      <td> System-Level Mode </td>
+      <td> Worker Mode </td>
+      <td> Chain Mode </td>
+      <td> lvlibp </td>
+  </tr>
+  <tr align="left">
+    <td>1</td>
+    <td>CSM List Module.vi by default cannot list system-level modules, but after changing the scope to 'all', they can be recognized</td>
+    <td>test1-SystemLevelModuleInListModuleAPI.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+    <td>2</td>
+    <td>The message function of System-Level has already been tested in the Sync/Async/AsyncNoRep message test cases</td>
+    <td>Tested, see message class tests</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+</table>
+<ol start="7">
+<li><strong>SubModule</strong>
+Test the <code>CSM List SubModules.vi</code> API functionality to correctly find corresponding first-level or multi-level submodules(resursive) based on the input module/submodule names.
+Specific test case description is explained in the table below and test code is in  <code>testcase-CSMSubModule.lvclass</code>.</li>
+</ol>
+<table>  
+    <tr align="left">
+      <td> Test Case No. </td>
+      <td> Test Case Description </td>
+      <td> Test Case VI </td>
+      <td> Submodule Mode </td>
+    </tr>
+  <tr align="left">
+      <td>1</td>
+      <td>CSM List SubModules.vi: When UI, UI.a1 (not existing), UI.a2, UI.a1.b1, and UI.a2.b2 exist, it can correctly list the required submodules according to the input parameters</td>
+      <td>test1-ListSubModulesInDifferentSenarios.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+</table>
+<ol start="8">
+<li><strong>Worker Mode</strong>
+Test data sharing among multiple worker nodes, ensuring data written externally can be read by all nodes via <code>CSM Attribute</code>. Other related functionalities have been covered in the Message class tests.
+Specific test case description is explained in the table below and test code is in  <code>testcase-CSMWorkerMode.lvclass</code>.</li>
+</ol>
+<table>  
+    <tr align="left">
+      <td> Test Case No. </td>
+      <td> Test Case Description </td>
+      <td> Test Case VI </td>
+      <td> Worker Mode </td>
+    </tr>
+  <tr align="left">
+      <td>1</td>
+      <td>All nodes share the same CSM Attribute data space; data written externally is read identically by all internal modules</td>
+      <td>test1-AllWorkerNodesShareTheSameData.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+</table>
+<ol start="9">
+<li><strong>Chain Mode</strong>
+Test data sharing and message processing among multiple nodes, verify whether Allowed Messages defined by different nodes can be processed and report errors correctly, and test the sequence of node exit. Other related functionalities have been covered in the Message class tests.
+Specific test case description is explained in the table below and test code is in  <code>testcase-CSMChainMode.lvclass</code>.</li>
+</ol>
+<table>  
+  <tr align="left">
+      <td> Test Case No. </td>
+      <td> Test Case Description </td>
+      <td> Test Case VI </td>
+      <td> Chain Mode </td>
+  </tr>
+  <tr align="left">
+      <td>1</td>
+      <td>All nodes share the same CSM Attribute data space. Data written externally is read identically by all internal modules.</td>
+      <td>test1-AllChainNodesShareTheSameData.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+      <td>2</td>
+      <td>Three nodes (A->B->C), each with different Allowed Messages. Messages are sent to the corresponding allowed module; using the API to send synchronous messages returns the correct parameters.</td>
+      <td>test2-DifferentChainNodesProcessDifferentAllowedMessages.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+      <td>3</td>
+      <td>Three nodes (A->B->C), with Allowed Messages combinations of AB, BC, AC, and ABC. Messages should be executed by the first node in the chain. Using the API to send synchronous messages returns the correct parameters.</td>
+      <td>test3-FirstChainNodeProcessesAllowedMessages.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+      <td>4</td>
+      <td>Three nodes (A->B->C), with Allowed Messages defined. If no module can execute the message, the sender reports an error.</td>
+      <td>test4-EndNodeHandlesErrorForNotAllowedMessages.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+      <td>5</td>
+      <td>Three nodes (A->B->C), each node broadcasts a message. After subscribing, the corresponding module's API is triggered; after unsubscribing, none can be triggered.</td>
+      <td>test5-ChainNodeBroadcast.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+      <td>6</td>
+      <td>Three nodes (A->B->C). If the "Macro: Exit" command does not specify a node (i.e., uses the core name without the $ suffix), nodes should exit in order from the end to the head of the chain. If the command specifies a node, only that node exits and others are unaffected.</td>
+      <td>test6-ChainNodeExitSequenceCheck.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  </tr>
+</table>
+<ol start="10">
+<li><strong>Management API</strong>
+Test CSM built-in management APIs, such as <code>Module Status.vi</code>, verifying if they can correctly read module information (name, node count, etc.), and test the polymorphic VI with various filtering functions. Other related functionalities have been covered in the Message class tests.
+Specific test case description is explained in the table below and test code is in  <code>testcase-CSMManagementAPI.lvclass</code>.</li>
+</ol>
+<table>  
+  <tr align="left">
+      <td> Test Case No. </td>
+      <td> Test Case Description </td>
+      <td> Test Case VI </td>
+      <td> Normal Mode </td>
+      <td> Submodule Mode </td>
+      <td> System-Level Mode </td>
+      <td> Worker Mode </td>
+      <td> Chain Mode </td>
+      <td> lvlibp </td>
+  </tr>
+  <tr align="left">
+      <td>1</td>
+      <td>After module instantiation, this interface can be used to read module information. Test whether all different Modes can be read and whether the number of nodes is correct. The number of items in the message queue does not need to be tested.</td>
+      <td>test1-TestModuleStatusVI.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+      <td>2</td>
+      <td>Create a complex message list and test that the filter function only filters the corresponding messages. Test the filter function of each VI in the polymorphic VI. Actual sending is not required.</td>
+      <td>test2-TestFilterJKISMStringQueueVI.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+</table>
+<ol start="11">
+<li><strong>Non-CSM Caller Support API</strong>
+Test APIs that take effect when a module exits, such as <code>Module Exit Event.vi</code> and <code>Module Turns Invalid.vi</code>. Other related functionalities have been covered in the Message class tests.
+Specific test case description is explained in the table below and test code is in  <code>testcase-CSMNonCSMCallerSupportAPI.lvclass</code>.</li>
+</ol>
+<table>  
+  <tr align="left">
+      <td> Test Case No. </td>
+      <td> Test Case Description </td>
+      <td> Test Case VI </td>
+      <td> Normal Mode </td>
+      <td> Submodule Mode </td>
+      <td> System-Level Mode </td>
+      <td> Worker Mode </td>
+      <td> Chain Mode </td>
+      <td> lvlibp </td>
+  </tr>
+  <tr align="left">
+      <td>1</td>
+      <td>Module exit can trigger the Exit Module event. In Worker and Chain modes, this event is triggered only when all modules have exited.</td>
+      <td>test1-testModuleExitEventAPI.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+      <td>2</td>
+      <td>Module exit can trigger this status change. In Worker and Chain modes, this event is triggered only when all modules have exited.</td>
+      <td>test2-testModuleTurnsInvalidAPI.vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+</table>
+<ol start="12">
+<li><strong>CSM Loop Support</strong>
+Test the loop mode supported by the CSM framework, verifying that a module can both receive and process external messages while running in a loop, and send messages to other modules without blocking the running loop.
+Specific test case description is explained in the table below and test code is in <code>testcase-CSMAddonLoopSupport.lvclass</code>.</li>
+</ol>
+<table>  
+  <tr align="left">
+      <td> Test Case No. </td>
+      <td> Test Case Description </td>
+      <td> Test Case VI </td>
+      <td> Normal Mode </td>
+      <td> Submodule Mode </td>
+      <td> System-Level Mode </td>
+      <td> lvlibp </td>
+  </tr>
+  <tr align="left">
+      <td>1</td>
+      <td>While running in Loop mode: 1. Can receive and process synchronous messages sent from outside; 2. Can also send synchronous messages to other modules.</td>
+      <td>test1-ProcessSyncMessageInCSMLoop(SendAndReceive).vi</td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+      <td>2</td>
+      <td>While running in Loop mode: 1. Can receive and process asynchronous messages with reply sent from outside; 2. Can also send asynchronous messages with reply to other modules.</td>
+      <td>test2-ProcessAsyncMessageWithReplyInCSMLoop(SendAndReceive).vi
+      </td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr align="left">
+      <td>3</td>
+      <td>While running in Loop mode: 1. Can receive and process asynchronous messages without reply sent from outside; 2. Can also send asynchronous messages without reply to other modules.</td>
+      <td>test3-ProcessAsyncMessageWithoutReplyInCSMLoop(SendAndReceive).vi
+      </td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+      <td><span style="color: lightgreen;">✔</span></td>
+  </tr>
+  <tr>
+      <td colspan="7">
+          Note: The CSM (=worker and chain modes are special module patterns composed of multiple running nodes. Messages sent in these modes cannot reliably target a specific node to execute. When a node operates in worker or chain modes, it cannot be clearly instructed by messages to stop a loop. Therefore, it is not recommended to use the CSM Loop Support addon in worker and chain modes. Therefore, this testclass does not cover worker and chain modes.
+      </td>
+  </tr>
+</table>
+<hr>
+<h2 id="️-3-maintenance-notes">🛡️ 3 Maintenance Notes</h2>
+<p>To ensure the long-term maintenance and stable operation of this unit test suite, please read the following:</p>
+<ol>
+<li>
+<p><strong>Broadcast Test Order</strong>
+It is recommended to place the Broadcast test class as the last class of the test suite to execute because it consumes many hardware resources. Improper testing may affect subsequent tests.</p>
+</li>
+<li>
+<p><strong>Add New Test Case</strong>
+If you need to add new test case, please first check the tail code of the current last test case in the corresponding test class. If restarting the CSM modules has been disabled, please enable it first. Then add the new test case as the last case and decide whether to restart the CSM modules or not in the tail code of this newly added test case.</p>
+</li>
+<li>
+<p><strong>Recommended Debugging Tool</strong>
+It is recommended to use the CSM's built-in debugging tool <code>Debug Console – DebugTool.vi</code>. We can use this tool to manually send messages between different modules, view return values, and perform advanced debugging by monitoring log performance parameters (such as logging handling speed, logging queue count).</p>
+</li>
+</ol>
+<hr>
+<h2 id="-4-license">📜 4 License</h2>
+<p>This project follows the MIT License.</p>
+<hr>
+<h2 id="-5-related-resources">🔗 5 Related Resources</h2>
+<ul>
+<li><a href="https://www.ni.com/labview">NI LabVIEW Official Documentation</a></li>
+<li><a href="https://github.com/NEVSTOP-LAB/Communicable-State-Machine">CSM Framework Wiki</a></li>
+<li><a href="https://www.ni.com/zh-cn/support/downloads/tools-network/download.vi-tester-unit-test-framework.html#378053">JKI VI Tester Toolkit</a></li>
+</ul>
+
+            <script async src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+            
+        </body>
+        </html>
