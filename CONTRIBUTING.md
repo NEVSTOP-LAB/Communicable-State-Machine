@@ -62,3 +62,5 @@ Thanks to the following contributors for their contributions to CSM, in chronolo
 - @基友湖渔夫([Zhihu](https://www.zhihu.com/people/heng-yi-56-31)) Proposed CSM Attributes requirements that were adopted.
 
 - @小橙子([Zhihu](https://www.zhihu.com/people/45-59-95-79)) Reported issues with CSM INI Variable Addon examples that were adopted.
+
+- @SiebenerRepublikII([GitHub](https://github.com/SiebenerRepublikII)) Updated and improved CSM test cases.
