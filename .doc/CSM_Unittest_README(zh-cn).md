@@ -3,29 +3,29 @@
 ## 📖 1 项目简介
 
 ### 1.1 项目背景
-本项目利用 **JKI VI Tester** 工具包开发了一套单元测试，用于测试并验证 **可通信状态机 (CSM) 编程框架** 的功能正确性。该单元测试为 CSM 的长期维护提供了可靠的功能验证保障。  
+本项目利用 **JKI VI Tester** 工具包开发了一套单元测试，用于测试并验证 **可通信状态机 (CSM) 编程框架** 的功能正确性。该单元测试为 CSM 的长期维护提供了可靠的功能验证保障。
 单元测试已集成至 **Git CI/CD 平台**，通过自动化测试流程完成测试并生成报告，帮助 CSM 框架开发人员快速定位问题、维护和调试。
 
 ### 1.2 安装环境
-- Windows 10 OS  
-- NI LabVIEW 2017 (32-bit)  
+- Windows 10 OS
+- NI LabVIEW 2017 (32-bit)
 - JKI VI Tester （[JKI VI Tester Toolkit for LabVIEW - VIPM 下载](https://www.ni.com/zh-cn/support/downloads/tools-network/download.vi-tester-unit-test-framework.html#378053）)）
 
 ---
 
 ## ⚙️ 2 功能描述
 
-以下两张图片分别展示了LabVIEW项目结构与JKI VI Tester测试工具界面：  
-<div align="left"> 
-<img src="./Pictures/LabVIEW_Project.png" alt="LabVIEW Project" width="400"/> 
+以下两张图片分别展示了LabVIEW项目结构与JKI VI Tester测试工具界面：
+<div align="left">
+<img src="./Pictures/LabVIEW_Project.png" alt="LabVIEW Project" width="400"/>
 <img src="./Pictures/JKI_VI_Tester.png" alt="JKI VI Tester" width="400"/> </div>
 
 单元测试按照 CSM 框架功能分类，主要包括以下测试类：
 
-1. **消息 (Message)**  
-   测试不同 CSM 模式间（普通模式、子模块模式、系统级模式、协作者模式、责任链模式、打包项目库模式）的消息传递。包括同步消息、异步有返回消息、异步无返回消息三类，验证消息是否能正确传达,消息携带参数，返回值以及错误信息是否能被正确携带。  
+1. **消息 (Message)**
+   测试不同 CSM 模式间（普通模式、子模块模式、系统级模式、协作者模式、责任链模式、打包项目库模式）的消息传递。包括同步消息、异步有返回消息、异步无返回消息三类，验证消息是否能正确传达,消息携带参数，返回值以及错误信息是否能被正确携带。
    具体测试项请见下方表格，代码详见 `testcase-CSMMessage.lvclass`。
-<table>  
+<table>
   <tr align="left">
       <td> 测试项序号 </td>
       <td> 测试项内容 </td>
@@ -133,10 +133,10 @@
 </table>
 
 
-2. **参数 (Argument)**  
-   在消息测试的基础上，进一步验证不同CSM模式间（普通模式、子模块模式、系统级模式、协作者模式、责任链模式、打包项目库模式）消息所携带的参数是否能正常传递。  
+2. **参数 (Argument)**
+   在消息测试的基础上，进一步验证不同CSM模式间（普通模式、子模块模式、系统级模式、协作者模式、责任链模式、打包项目库模式）消息所携带的参数是否能正常传递。
    具体测试项请见下方表格，代码详见 `testcase-CSMArgument.lvclass`。
-<table>  
+<table>
   <tr align="left">
       <td> 测试项序号 </td>
       <td> 测试项内容 </td>
@@ -182,10 +182,10 @@
 </table>
 
 
-3. **返回 (Response)**  
-   验证不同模式间（普通模式、子模块模式、系统级模式、协作者模式、责任链模式、打包项目库模式）消息返回值的正确性，包括错误信息的传递，以及**宏消息**执行时的返回值在不同情况下的表现是否符合预期。  
+3. **返回 (Response)**
+   验证不同模式间（普通模式、子模块模式、系统级模式、协作者模式、责任链模式、打包项目库模式）消息返回值的正确性，包括错误信息的传递，以及**宏消息**执行时的返回值在不同情况下的表现是否符合预期。
    具体测试项请见下方表格，代码详见`testcase-CSMResponse.lvclass`。
-<table>  
+<table>
   <tr align="left">
       <td> 测试项序号 </td>
       <td> 测试项内容 </td>
@@ -288,7 +288,7 @@
   </tr>
   <tr>
       <td colspan="9">
-       ¹ 相关问题跟踪：  
+       ¹ 相关问题跟踪：
           <a href="https://github.com/NEVSTOP-LAB/Communicable-State-Machine/issues/547">
           https://github.com/NEVSTOP-LAB/Communicable-State-Machine/issues/547
           </a>
@@ -299,10 +299,10 @@
 </table>
 
 
-4. **广播 (Broadcast)**  
-   测试不同模式间（普通模式、子模块模式、系统级模式、协作者模式、责任链模式、打包项目库模式）的信号广播（status）、中断广播（interrupt，高优先级，触发后优先处理）、状态变化广播（state change，CSM 独特的广播机制，支持更灵活的广播注册功能）的注册、反注册、选择性注册（发送方与接收方均可灵活决定优先级）。此外，还测试了非 CSM 框架调用广播功能的场景，扩展了跨框架的兼容性。  
+4. **广播 (Broadcast)**
+   测试不同模式间（普通模式、子模块模式、系统级模式、协作者模式、责任链模式、打包项目库模式）的信号广播（status）、中断广播（interrupt，高优先级，触发后优先处理）、状态变化广播（state change，CSM 独特的广播机制，支持更灵活的广播注册功能）的注册、反注册、选择性注册（发送方与接收方均可灵活决定优先级）。此外，还测试了非 CSM 框架调用广播功能的场景，扩展了跨框架的兼容性。
    具体测试项请见下方表格，代码详见 `testcase-CSMBroadcast.lvclass`。
-<table>  
+<table>
   <tr align="left">
       <td> 测试项序号 </td>
       <td> 测试项内容 </td>
@@ -323,7 +323,7 @@
       <td><span style="color: lightgreen;">✔</span></td>
       <td><span style="color: lightgreen;">✔</span></td>
       <td><span style="color: lightgreen;">✔</span></td>
-      <td><span style="color: lightgreen;">✔</span></td>      
+      <td><span style="color: lightgreen;">✔</span></td>
   </tr>
   <tr align="left">
       <td>2</td>
@@ -670,11 +670,11 @@ test31-MappingRelationshipByLocalRegistration_WIthoutSubscriberName_State.vi</td
 </table>
 
 
-5. **全局日志 (Global Log)**  
-   测试不同模式下（普通模式、子模块模式、系统级模式、协作者模式、责任链模式、打包项目库模式）的全局日志功能，包括模块创建与销毁、状态轮转、注册与反注册、同步与异步消息、广播及用户自定义事件。  
-   CSM编程框架提供两种实现方式：全局日志队列 (Global Log Queue) 与用户事件 (Global Log User Event)，该类单元测试覆盖了以上两种实现方式的所有可能场景。  
+5. **全局日志 (Global Log)**
+   测试不同模式下（普通模式、子模块模式、系统级模式、协作者模式、责任链模式、打包项目库模式）的全局日志功能，包括模块创建与销毁、状态轮转、注册与反注册、同步与异步消息、广播及用户自定义事件。
+   CSM编程框架提供两种实现方式：全局日志队列 (Global Log Queue) 与用户事件 (Global Log User Event)，该类单元测试覆盖了以上两种实现方式的所有可能场景。
    具体测试项请见下方表格，代码详见 `testcase-CSMGlobalLog.lvclass`。
-<table>  
+<table>
   <tr align="left">
       <td> 测试项序号 </td>
       <td> 测试项内容 </td>
@@ -892,10 +892,10 @@ test31-MappingRelationshipByLocalRegistration_WIthoutSubscriberName_State.vi</td
   </tr>
 </table>
 
-6. **系统级模块 (System Level Module)**  
-   测试 `CSM List Module.vi`API 功能，通过修改输入 Scope参数，识别包含或不包含系统级模块的场景。其它相关系统级模块功能已包含在消息（Message）类测试过。  
+6. **系统级模块 (System Level Module)**
+   测试 `CSM List Module.vi`API 功能，通过修改输入 Scope参数，识别包含或不包含系统级模块的场景。其它相关系统级模块功能已包含在消息（Message）类测试过。
    具体测试项请见下方表格，代码详见 `testcase-CSMSystemLevelModule.lvclass`。
-<table>  
+<table>
   <tr align="left">
       <td> 测试项序号 </td>
       <td> 测试项内容 </td>
@@ -932,10 +932,10 @@ test31-MappingRelationshipByLocalRegistration_WIthoutSubscriberName_State.vi</td
 </table>
 
 
-7. **子模块 (SubModule)**  
-   测试 `CSM List SubModules.vi` API 功能，根据输入的模块/子模块名称，正确找出对应的一级或多级子模块（recursive）。  
+7. **子模块 (SubModule)**
+   测试 `CSM List SubModules.vi` API 功能，根据输入的模块/子模块名称，正确找出对应的一级或多级子模块（recursive）。
    具体测试项请见下方表格，代码详见 `testcase-CSMSubModule.lvclass`。
-<table>  
+<table>
   <tr align="left">
       <td> 测试项序号 </td>
       <td> 测试项内容 </td>
@@ -950,10 +950,10 @@ test31-MappingRelationshipByLocalRegistration_WIthoutSubscriberName_State.vi</td
   </tr>
 </table>
 
-8. **协作者模式 (Worker Mode)**  
-   测试多个协作者节点间的数据共享，确保外部写入的数据能被所有节点/模块通过 `CSM Attribute` 读取。其它相关功能已包含在消息（Message）类测试过。  
+8. **协作者模式 (Worker Mode)**
+   测试多个协作者节点间的数据共享，确保外部写入的数据能被所有节点/模块通过 `CSM Attribute` 读取。其它相关功能已包含在消息（Message）类测试过。
    具体测试项请见下方表格，代码详见 `testcase-CSMWorkerMode.lvclass`。
-<table>  
+<table>
   <tr align="left">
       <td> 测试项序号 </td>
       <td> 测试项内容 </td>
@@ -969,10 +969,10 @@ test31-MappingRelationshipByLocalRegistration_WIthoutSubscriberName_State.vi</td
 </table>
 
 
-9. **责任链模式 (Chain Mode)**  
-   测试多个节点间的数据共享与消息处理，验证不同节点定义的允许消息 (Allowed Messages) 是否能正确处理与报错，并测试节点退出时的顺序。其它相关功能已包含在消息（Message）类测试过。  
+9. **责任链模式 (Chain Mode)**
+   测试多个节点间的数据共享与消息处理，验证不同节点定义的允许消息 (Allowed Messages) 是否能正确处理与报错，并测试节点退出时的顺序。其它相关功能已包含在消息（Message）类测试过。
    具体测试项请见下方表格，代码详见 `testcase-CSMChainMode.lvclass`。
-<table>  
+<table>
   <tr align="left">
       <td> 测试项序号 </td>
       <td> 测试项内容 </td>
@@ -1019,10 +1019,10 @@ test31-MappingRelationshipByLocalRegistration_WIthoutSubscriberName_State.vi</td
 
 </table>
 
-10.  **管理接口 (Management API)**  
-    测试 CSM 内置管理接口，如 `Module Status.vi`，验证其是否能正确读取模块信息（名称、节点数量等），并测试带有多种过滤功能的多态 VI。其它相关功能已包含在消息（Message）类测试过。  
+10.  **管理接口 (Management API)**
+    测试 CSM 内置管理接口，如 `Module Status.vi`，验证其是否能正确读取模块信息（名称、节点数量等），并测试带有多种过滤功能的多态 VI。其它相关功能已包含在消息（Message）类测试过。
     具体测试项请见下方表格，代码详见 `testcase-CSMManagementAPI.lvclass`。
-<table>  
+<table>
   <tr align="left">
       <td> 测试项序号 </td>
       <td> 测试项内容 </td>
@@ -1059,10 +1059,10 @@ test31-MappingRelationshipByLocalRegistration_WIthoutSubscriberName_State.vi</td
 </table>
 
 
-11. **非 CSM 调用支持接口 (Non-CSM Caller Support API)**  
-    测试模块退出时生效的接口 API，如 `Module Exit Event.vi` 和 `Module Turns Invalid.vi`。其它相关功能已包含在消息（Message）类测试过。  
+11. **非 CSM 调用支持接口 (Non-CSM Caller Support API)**
+    测试模块退出时生效的接口 API，如 `Module Exit Event.vi` 和 `Module Turns Invalid.vi`。其它相关功能已包含在消息（Message）类测试过。
     具体测试项请见下方表格，代码详见 `testcase-CSMNonCSMCallerSupportAPI.lvclass`。
-<table>  
+<table>
   <tr align="left">
       <td> 测试项序号 </td>
       <td> 测试项内容 </td>
@@ -1099,10 +1099,10 @@ test31-MappingRelationshipByLocalRegistration_WIthoutSubscriberName_State.vi</td
 </table>
 
 
-12. **CSM 循环支持 (CSM Loop Support)**  
-    测试 CSM 框架支持的循环模式，验证模块在循环运行中既能接收外部消息并处理，又能向其他模块发送消息而不发生阻塞。  
+12. **CSM 循环支持 (CSM Loop Support)**
+    测试 CSM 框架支持的循环模式，验证模块在循环运行中既能接收外部消息并处理，又能向其他模块发送消息而不发生阻塞。
     具体测试项请见下方表格，代码详见 `testcase-CSMAddonLoopSupport.lvclass`。
-<table>  
+<table>
   <tr align="left">
       <td> 测试项序号 </td>
       <td> 测试项内容 </td>
@@ -1156,13 +1156,13 @@ test31-MappingRelationshipByLocalRegistration_WIthoutSubscriberName_State.vi</td
 
 为确保该单元测试的长期维护与稳定运行，请注意以下事项：
 
-1. **广播测试顺序**  
+1. **广播测试顺序**
    广播 (Broadcast) 测试类建议放置为最后一个类执行，因为其占用硬件资源较多，若测试不当可能影响后续测试。
 
-2. **新增测试项规范**  
+2. **新增测试项规范**
    如需添加新的测试项，请先检查对应测试类的最后一个测试项的尾部代码，如已禁用重新启动 CSM 模块，请先启用，再在最后添加新的测试项，并酌情决定是否在新增测试项结尾代码处重新启动模块。
 
-3. **调试工具推荐**  
+3. **调试工具推荐**
    建议使用 CSM 自带的调试工具 `Debug Console – DebugTool.vi`。调试人员可使用该工具在不同模块间手动发送消息、查看返回值，并通过监测日志性能参数（如日志处理速度、队列数量）进行高级调试。
 
 ---
@@ -1173,8 +1173,8 @@ test31-MappingRelationshipByLocalRegistration_WIthoutSubscriberName_State.vi</td
 ---
 
 ## 🔗 5 相关资源
-- [NI LabVIEW 官方文档](https://www.ni.com/labview)  
-- [CSM 框架 Wiki](https://github.com/NEVSTOP-LAB/Communicable-State-Machine)  
-- [JKI VI Tester Toolkit](https://www.ni.com/zh-cn/support/downloads/tools-network/download.vi-tester-unit-test-framework.html#378053)  
+- [NI LabVIEW 官方文档](https://www.ni.com/labview)
+- [CSM 框架 Wiki](https://github.com/NEVSTOP-LAB/Communicable-State-Machine)
+- [JKI VI Tester Toolkit](https://www.ni.com/zh-cn/support/downloads/tools-network/download.vi-tester-unit-test-framework.html#378053)
 
 
