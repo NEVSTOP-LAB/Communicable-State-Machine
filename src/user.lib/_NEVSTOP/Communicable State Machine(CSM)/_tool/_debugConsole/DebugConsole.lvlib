@@ -8,6 +8,7 @@
 	<Item Name="_Support" Type="Folder">
 		<Item Name="_BroadcastDef.ctl" Type="VI" URL="../_BroadcastDef.ctl"/>
 		<Item Name="_Broadcast Message.vi" Type="VI" URL="../_Broadcast Message.vi"/>
+		<Item Name="_ui.vi" Type="VI" URL="../_ui.vi"/>
 	</Item>
 	<Item Name="LEGO" Type="Folder">
 		<Property Name="NI.SortType" Type="Int">3</Property>
