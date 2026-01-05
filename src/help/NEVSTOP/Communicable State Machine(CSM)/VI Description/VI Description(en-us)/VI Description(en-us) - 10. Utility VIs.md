@@ -1,6 +1,4 @@
-# CSM API
-
-## Utility VIs
+# Utility VIs
 
 ## State String Operations
 

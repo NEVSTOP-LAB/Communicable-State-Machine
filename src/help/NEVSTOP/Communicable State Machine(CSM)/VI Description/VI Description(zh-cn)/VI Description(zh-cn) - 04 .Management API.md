@@ -1,6 +1,4 @@
-# CSM API
-
-## 管理接口(Management API)
+# 管理接口(Management API)
 
 > [!NOTE]
 > <b>CSM工作模式</b>
@@ -19,7 +17,7 @@
 >
 > 高优先级队列中的消息会被优先处理，普通优先级队列中的消息则会在高优先级队列中的消息处理完成后才会被处理。
 
-### CSM - Check If Module Exists.vi
+## CSM - Check If Module Exists.vi
 检查CSM模块是否存在。当CSM模块运行在协作者模式或责任链模式下，只有当组成模块的所有节点退出后，模块才会被标记为不存在。
 
 -- <b>输入控件(Controls)</b> --
@@ -29,7 +27,7 @@
 - <b>CSM Name (dup)</b>: 输入的CSM模块名称副本。
 - <b>Exist?</b>: 返回模块是否存在。
 
-### CSM - List Modules.vi
+## CSM - List Modules.vi
 列出所有活动的CSM模块。该VI具有两组选项:
 - <b>范围选项</b>：用于标记是否罗列系统级模块，默认不列出，可选择普通/仅系统级模块/所有模块。
 - <b>是否包含节点选项</b>：针对协作者模式和责任链模式，当包括节点时，将同时列出节点，否则仅列出模块，默认不包含节点。
@@ -43,7 +41,7 @@
 -- <b>输出控件(Indicators)</b> --
 - <b>Module Names</b>: CSM模块名称列表。
 
-### CSM - List Submodules.vi
+## CSM - List Submodules.vi
 列出当前分组或模块的所有子模块。<b>Recursive? (T)</b>为TRUE时，将递归列出所有层级的子模块，否则仅列出直接下一级子模块。
 
     举例: 系统存在Level1.Level2A、Level1.Level2A.Node1、Level1.Level2A.Node2、Level1.Level2B.Node1、Level1.Level2B.Node2这5个模块，
@@ -64,7 +62,7 @@
 - <b>Parent Name (Dup)</b>: 输入的分组或父节点名称副本。
 - <b>Submodules</b>: 子模块名称列表。
 
-### CSM - Module VI Reference.vi
+## CSM - Module VI Reference.vi
 获取输入模块的VI引用。
 
 VI逻辑:
@@ -86,7 +84,7 @@ VI逻辑:
 -- <b>输出控件(Indicators)</b> --
 - <b>CSM Module VIRef</b>: CSM模块的VI引用。
 
-### CSM - Set TMO of Sync-Reply.vi
+## CSM - Set TMO of Sync-Reply.vi
 设置CSM程序全局的同步调用超时时间，单位为毫秒。当输入为-2时，将不会修改全局超时时间，返回值为当前全局超时时间；当输入为其他正值时，将修改全局超时时间为该值，返回新的全局超时时间。
 
 > - Ref: CSM同步消息全局超时
@@ -99,7 +97,7 @@ CSM模块/API调用时，默认的超时时间为-2，此时将使用全局设�
 -- <b>输出控件(Indicators)</b> --
 - <b>TMO For Sync-Rep (ms) Out</b>: 当前全局超时时间。
 
-### CSM - Module Status.vi
+## CSM - Module Status.vi
 获取CSM模块的状态，包括: 工作模式、工作者数量、消息队列中的待处理消息个数。
 
 > - Ref: CSM工作模式
@@ -113,7 +111,7 @@ CSM模块/API调用时，默认的超时时间为-2，此时将使用全局设�
 - <b>#Nodes</b>: 协作者模式或责任链模式下的节点数量。
 - <b>#Elements In Queue</b>:  CSM消息队列中的待处理消息个数。
 
-### CSM - Flush Queue.vi
+## CSM - Flush Queue.vi
 清空CSM模块后台用于模块间通信的LabVIEW队列。
 
 > - Ref: CSM优先级队列设计
@@ -129,7 +127,7 @@ CSM模块/API调用时，默认的超时时间为-2，此时将使用全局设�
 - <b>CSM Name (Dup)</b>: 输入CSM模块名称的副本。
 - <b>#Flushed</b>: 被清理的消息队列中的元素个数。
 
-### Filter JKISM String Queue(CSM - Filter JKISM String Queue.vi)
+## Filter JKISM String Queue(CSM - Filter JKISM String Queue.vi)
 
 该VI用于过滤CSM状态队列中的特定状态
 
@@ -152,7 +150,7 @@ CSM模块/API调用时，默认的超时时间为-2，此时将使用全局设�
 > - CSM - Filter Interrupt Broadcasts.vi: 过滤中断广播消息
 > - CSM - Filter Duplicated Lines.vi: 过滤重复行
 
-#### CSM - Filter Local States.vi
+### CSM - Filter Local States.vi
 该VI用于过滤CSM状态队列中的本地状态。
 
 > - Ref: CSM 的状态队列操作API
@@ -163,7 +161,7 @@ CSM模块/API调用时，默认的超时时间为-2，此时将使用全局设�
 -- <b>输出控件(Indicators)</b> --
 - <b>States Out</b>: 过滤后的状态描述字符串。
 
-#### CSM - Filter Messages.vi
+### CSM - Filter Messages.vi
 该VI用于过滤CSM状态队列中的所有类型的消息。
 
 > - Ref: CSM 的状态队列操作API
@@ -174,7 +172,7 @@ CSM模块/API调用时，默认的超时时间为-2，此时将使用全局设�
 -- <b>输出控件(Indicators)</b> --
 - <b>States Out</b>: 过滤后的状态描述字符串。
 
-#### CSM - Filter Sync Messages.vi
+### CSM - Filter Sync Messages.vi
 该VI用于过滤CSM状态队列中的同步消息。
 
 > - Ref: CSM 的状态队列操作API
@@ -185,7 +183,7 @@ CSM模块/API调用时，默认的超时时间为-2，此时将使用全局设�
 -- <b>输出控件(Indicators)</b> --
 - <b>States Out</b>: 过滤后的状态描述字符串。
 
-#### CSM - Filter Async Messages.vi
+### CSM - Filter Async Messages.vi
 该VI用于过滤CSM状态队列中的异步消息。
 
 > - Ref: CSM 的状态队列操作API
@@ -196,7 +194,7 @@ CSM模块/API调用时，默认的超时时间为-2，此时将使用全局设�
 -- <b>输出控件(Indicators)</b> --
 - <b>States Out</b>: 过滤后的状态描述字符串。
 
-#### CSM - Filter Async without Reply Messages.vi
+### CSM - Filter Async without Reply Messages.vi
 该VI用于过滤CSM状态队列中的异步无回复消息。
 
 > - Ref: CSM 的状态队列操作API
@@ -207,7 +205,7 @@ CSM模块/API调用时，默认的超时时间为-2，此时将使用全局设�
 -- <b>输出控件(Indicators)</b> --
 - <b>States Out</b>: 过滤后的状态描述字符串。
 
-#### CSM - Filter Messages to Non-Existing Modules.vi
+### CSM - Filter Messages to Non-Existing Modules.vi
 该VI用于过滤CSM状态队列中发送到不存在模块的消息。这个VI中会使用CSM - List Modules VI获取所有活动的CSM模块，然后过滤掉发送给不存在模块的消息。
 
 > - Ref: CSM 的状态队列操作API
@@ -218,7 +216,7 @@ CSM模块/API调用时，默认的超时时间为-2，此时将使用全局设�
 -- <b>输出控件(Indicators)</b> --
 - <b>States Out</b>: 过滤后的状态描述字符串。
 
-#### CSM - Filter Broadcasts.vi
+### CSM - Filter Broadcasts.vi
 该VI用于过滤CSM状态队列中的广播消息。
 
 > - Ref: CSM 的状态队列操作API
@@ -229,7 +227,7 @@ CSM模块/API调用时，默认的超时时间为-2，此时将使用全局设�
 -- <b>输出控件(Indicators)</b> --
 - <b>States Out</b>: 过滤后的状态描述字符串。
 
-#### CSM - Filter Status Broadcasts.vi
+### CSM - Filter Status Broadcasts.vi
 该VI用于过滤CSM状态队列中的状态广播消息。
 
 > - Ref: CSM 的状态队列操作API
@@ -240,7 +238,7 @@ CSM模块/API调用时，默认的超时时间为-2，此时将使用全局设�
 -- <b>输出控件(Indicators)</b> --
 - <b>States Out</b>: 过滤后的状态描述字符串。
 
-#### CSM - Filter Interrupt Broadcasts.vi
+### CSM - Filter Interrupt Broadcasts.vi
 该VI用于过滤CSM状态队列中的中断广播消息。
 
 > - Ref: CSM 的状态队列操作API
@@ -251,7 +249,7 @@ CSM模块/API调用时，默认的超时时间为-2，此时将使用全局设�
 -- <b>输出控件(Indicators)</b> --
 - <b>States Out</b>: 过滤后的状态描述字符串。
 
-#### CSM - Filter Duplicated Lines.vi
+### CSM - Filter Duplicated Lines.vi
 该VI用于过滤CSM状态队列中的重复行。
 
 > - Ref: CSM 的状态队列操作API

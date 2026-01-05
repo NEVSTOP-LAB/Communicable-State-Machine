@@ -1,4 +1,4 @@
-# CSM API
+# Advance Modes
 
 > [!NOTE]
 > <b>Name Concatenation API</b>

@@ -1,6 +1,4 @@
-# CSM API
-
-## Arguments
+# Arguments
 
 > [!NOTE]
 > <b>CSM Message Keywords</b>
@@ -38,7 +36,7 @@
 > 1. Scan the input string. If any CSM keywords, such as `->`, `;`, `\r` appear, replace them with `%Hex` escape sequences.
 > 2. Obtain the argument in the form `<SAFESTR> escaped string`, which can be safely embedded in the state string without disrupting CSM message parsing.
 
-### CSM - Argument Type.vi
+## CSM - Argument Type.vi
 Extracts the parameter encoding type tag from the encoded argument string.
 > - Ref: CSM Argument Type
 
@@ -49,7 +47,7 @@ Extracts the parameter encoding type tag from the encoded argument string.
 - <b>Arguments (Dup)</b>: A copy of the input argument string.
 - <b>Argument Type</b>: Encoding type tag of the argument string.
 
-### CSM - Keywords.vi
+## CSM - Keywords.vi
 Lists keywords in CSM messages and their %Hex format.
 > - Ref: CSM Message Keywords
 
@@ -57,7 +55,7 @@ Lists keywords in CSM messages and their %Hex format.
 - <b>keywords</b>: List of CSM keywords.
 - <b>Keywords (%Hex Format)</b>: The %Hex format of the CSM keyword list.
 
-### CSM - Make String Arguments Safe.vi
+## CSM - Make String Arguments Safe.vi
 Converts CSM keywords in the argument string to %Hex format to ensure that CSM message string parsing is not affected.
 
 > - Ref: CSM Message Keywords
@@ -72,7 +70,7 @@ Converts CSM keywords in the argument string to %Hex format to ensure that CSM m
 -- <b>Indicators</b> --
 - <b>Safe Argument String</b>: Safe string argument.
 
-### CSM - Revert Arguments-Safe String.vi
+## CSM - Revert Arguments-Safe String.vi
 Converts the %Hex format CSM keywords in the safe string argument back to the original format.
 
 - When <b>Force Convert (F)</b> is FALSE, conversion is performed only if the argument type tag is `SAFESTR`.
@@ -90,7 +88,7 @@ Converts the %Hex format CSM keywords in the safe string argument back to the or
 -- <b>Indicators</b> --
 - <b>Origin Argument String</b>: String argument.
 
-### CSM - Convert Data to HexStr.vi
+## CSM - Convert Data to HexStr.vi
 Converts any LabVIEW data type to a HEXSTR format argument string.
 
 > - Ref: CSM Argument Type
@@ -104,7 +102,7 @@ Converts any LabVIEW data type to a HEXSTR format argument string.
 -- <b>Indicators</b> --
 - <b>HEX String (0-9,A-F)</b>: CSM HEXSTR format argument.
 
-### CSM - Convert HexStr to Data.vi
+## CSM - Convert HexStr to Data.vi
 Converts the hexadecimal string argument back to Variant data.
 
 > - Ref: CSM Argument Type
@@ -118,7 +116,7 @@ Converts the hexadecimal string argument back to Variant data.
 -- <b>Indicators</b> --
 - <b>Variant</b>: LabVIEW data. Supports any data type via Variant.
 
-### CSM - Convert Error to Argument.vi
+## CSM - Convert Error to Argument.vi
 Converts a LabVIEW Error Cluster to the CSM error argument format.
 
 > - Ref: CSM Argument Type
@@ -132,7 +130,7 @@ Converts a LabVIEW Error Cluster to the CSM error argument format.
 -- <b>Indicators</b> --
 - <b>Argument</b>: CSM error argument format.
 
-### CSM - Convert Argument to Error.vi
+## CSM - Convert Argument to Error.vi
 Converts the CSM error argument format to a LabVIEW Error Cluster.
 
 > - Ref: CSM Argument Type

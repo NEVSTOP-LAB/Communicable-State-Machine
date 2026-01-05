@@ -1,6 +1,4 @@
-# CSM API
-
-## Management API
+# Management API
 
 > [!NOTE]
 > <b>CSM Operation Modes</b>
@@ -17,7 +15,7 @@
 > - <b>Normal Priority Queue</b>: Used for passing asynchronous messages and status broadcasts.
 > - <b>High Priority Message Queue</b>: Used for passing synchronous messages and interrupt broadcasts. Messages in the High Priority Queue are processed first. Messages in the Normal Priority Queue are processed only after the messages in the High Priority Queue have been processed.
 
-### CSM - Check If Module Exists.vi
+## CSM - Check If Module Exists.vi
 Checks if a CSM module exists. When a CSM module is running in Worker Mode or Chain of Responsibility Mode, the module is marked as non-existent only after all nodes composing the module have exited.
 
 -- <b>Controls</b> --
@@ -27,7 +25,7 @@ Checks if a CSM module exists. When a CSM module is running in Worker Mode or Ch
 - <b>CSM Name (dup)</b>: A copy of the input CSM module name.
 - <b>Exist?</b>: Returns whether the module exists.
 
-### CSM - List Modules.vi
+## CSM - List Modules.vi
 Lists all active CSM modules. This VI has two sets of options:
 
 - <b>Scope Option</b>: Used to specify whether to list system-level modules. By default, system-level modules are not listed. Options: Normal/System Only/All.
@@ -42,7 +40,7 @@ Lists all active CSM modules. This VI has two sets of options:
 -- <b>Indicators</b> --
 - <b>Module Names</b>: List of CSM module names.
 
-### CSM - List Submodules.vi
+## CSM - List Submodules.vi
 
 Lists all submodules of the current group or module. When <b>Recursive? (T)</b> is TRUE, This VI recursively lists submodules at all levels. Otherwise, this VI only lists the direct next-level submodules.
 
@@ -64,7 +62,7 @@ Lists all submodules of the current group or module. When <b>Recursive? (T)</b> 
 - <b>Parent Name (Dup)</b>: A copy of the input group or parent node name.
 - <b>Submodules</b>: List of submodule names.
 
-### CSM - Module VI Reference.vi
+## CSM - Module VI Reference.vi
 Obtains the VI Reference of the input module.
 
 The following is the logic of this VI:
@@ -86,7 +84,7 @@ Behavior for CSM in special operation modes:
 -- <b>Indicators</b> --
 - <b>CSM Module VIRef</b>: VI reference of the CSM module.
 
-### CSM - Set TMO of Sync-Reply.vi
+## CSM - Set TMO of Sync-Reply.vi
 Sets the global synchronous call timeout for the CSM program, in milliseconds. When the input is -2, the global timeout is not modified, and the return value is the current global timeout. When the input is any other positive value, the global timeout is modified to that value, and the new global timeout is returned.
 
 > - Ref: CSM Synchronous Message Global Timeout
@@ -99,7 +97,7 @@ When calling a CSM Module/API, the default timeout is -2, in which case the glob
 -- <b>Indicators</b> --
 - <b>TMO For Sync-Rep (ms) Out</b>: The current global timeout.
 
-### CSM - Module Status.vi
+## CSM - Module Status.vi
 Obtains the status of a CSM module, including operation mode, number of workers, and number of messages pending in the message queue.
 
 > - Ref: CSM Operation Modes
@@ -113,7 +111,7 @@ Obtains the status of a CSM module, including operation mode, number of workers,
 - <b>#Nodes</b>: Number of nodes in Worker Mode or Chain of Responsibility Mode.
 - <b>#Elements In Queue</b>: Number of messages pending processing in the CSM message queue.
 
-### CSM - Flush Queue.vi
+## CSM - Flush Queue.vi
 Clear the LabVIEW queue used in the background for inter-module communication of a CSM module.
 
 > - Ref: CSM Priority Queue Design
@@ -129,7 +127,7 @@ Clear the LabVIEW queue used in the background for inter-module communication of
 - <b>CSM Name (Dup)</b>: A copy of the input CSM module name.
 - <b>#Flushed</b>: Number of elements in the flushed message queue.
 
-### Filter JKISM String Queue(CSM - Filter JKISM String Queue.vi)
+## Filter JKISM String Queue(CSM - Filter JKISM String Queue.vi)
 Filters specific states in the CSM state queue.
 
 > [!WARNING]
@@ -151,7 +149,7 @@ Filters specific states in the CSM state queue.
 > - CSM - Filter Interrupt Broadcasts.vi: Filters interrupt broadcast messages.
 > - CSM - Filter Duplicated Lines.vi: Filters duplicated lines.
 
-#### CSM - Filter Local States.vi
+### CSM - Filter Local States.vi
 Filters local states in the CSM state queue.
 
 > - Ref: CSM State Queue Operation API
@@ -162,7 +160,7 @@ Filters local states in the CSM state queue.
 -- <b>Indicators</b> --
 - <b>States Out</b>: The filtered state description string.
 
-#### CSM - Filter Messages.vi
+### CSM - Filter Messages.vi
 Filters all types of messages in the CSM state queue.
 
 > - Ref: CSM State Queue Operation API
@@ -173,7 +171,7 @@ Filters all types of messages in the CSM state queue.
 -- <b>Indicators</b> --
 - <b>States Out</b>: The filtered state description string.
 
-#### CSM - Filter Sync Messages.vi
+### CSM - Filter Sync Messages.vi
 Filters synchronous messages in the CSM state queue.
 
 > - Ref: CSM State Queue Operation API
@@ -184,7 +182,7 @@ Filters synchronous messages in the CSM state queue.
 -- <b>Indicators</b> --
 - <b>States Out</b>: The filtered state description string.
 
-#### CSM - Filter Async Messages.vi
+### CSM - Filter Async Messages.vi
 Filters asynchronous messages in the CSM state queue.
 
 > - Ref: CSM State Queue Operation API
@@ -195,7 +193,7 @@ Filters asynchronous messages in the CSM state queue.
 -- <b>Indicators</b> --
 - <b>States Out</b>: The filtered state description string.
 
-#### CSM - Filter Async without Reply Messages.vi
+### CSM - Filter Async without Reply Messages.vi
 Filters asynchronous without reply messages in the CSM state queue.
 
 > - Ref: CSM State Queue Operation API
@@ -206,7 +204,7 @@ Filters asynchronous without reply messages in the CSM state queue.
 -- <b>Indicators</b> --
 - <b>States Out</b>: The filtered state description string.
 
-#### CSM - Filter Messages to Non-Existing Modules.vi
+### CSM - Filter Messages to Non-Existing Modules.vi
 Filters messages sent to non-existing modules in the CSM state queue. This VI uses the CSM - List Modules VI to obtain all active CSM modules and then filters out messages sent to modules that do not exist.
 
 > - Ref: CSM State Queue Operation API
@@ -217,7 +215,7 @@ Filters messages sent to non-existing modules in the CSM state queue. This VI us
 -- <b>Indicators</b> --
 - <b>States Out</b>: The filtered state description string.
 
-#### CSM - Filter Broadcasts.vi
+### CSM - Filter Broadcasts.vi
 Filters broadcast messages in the CSM state queue.
 
 > - Ref: CSM State Queue Operation API
@@ -228,7 +226,7 @@ Filters broadcast messages in the CSM state queue.
 -- <b>Indicators</b> --
 - <b>States Out</b>: The filtered state description string.
 
-#### CSM - Filter Status Broadcasts.vi
+### CSM - Filter Status Broadcasts.vi
 Filters status broadcast messages in the CSM state queue.
 
 > - Ref: CSM State Queue Operation API
@@ -239,7 +237,7 @@ Filters status broadcast messages in the CSM state queue.
 -- <b>Indicators</b> --
 - <b>States Out</b>: The filtered state description string.
 
-#### CSM - Filter Interrupt Broadcasts.vi
+### CSM - Filter Interrupt Broadcasts.vi
 Filters interrupt broadcast messages in the CSM state queue.
 
 > - Ref: CSM State Queue Operation API
@@ -250,7 +248,7 @@ Filters interrupt broadcast messages in the CSM state queue.
 -- <b>Indicators</b> --
 - <b>States Out</b>: The filtered state description string.
 
-#### CSM - Filter Duplicated Lines.vi
+### CSM - Filter Duplicated Lines.vi
 Filters duplicated lines in the CSM state queue.
 
 > - Ref: CSM State Queue Operation API

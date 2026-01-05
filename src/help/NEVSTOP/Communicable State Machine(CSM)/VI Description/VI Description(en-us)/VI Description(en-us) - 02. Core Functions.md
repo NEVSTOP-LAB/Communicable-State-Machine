@@ -1,4 +1,4 @@
-# CSM API
+# Core Functions
 
 > [!NOTE]
 > <b>Message Building API</b>
@@ -10,9 +10,7 @@
 >
 > This type of API only concatenates message strings and does not send messages directly. The message is sent and the operation executed within the Parse State Queue++ VI. Unlike the Message Building API, this type of API includes a CSM state queue string input, which is equivalent to inserting a message into the state queue.
 
-## Core Functions
-
-### Parse State Queue++.vi
+## Parse State Queue++.vi
 Parses the CSM state queue and returns the next current state to execute, along with arguments and other information.
 
 > - Ref: CSM Inter-module Communication Types
@@ -35,7 +33,7 @@ Parses the CSM state queue and returns the next current state to execute, along 
 - <b>Additional Information</b>: Supplemental information. For states triggered by a broadcast, this information contains the name and arguments of the broadcast.
 - <b>Source CSM</b>: If <b>Current State</b> is sent externally, this is the name of the source CSM module.
 
-### Build State String with Arguments++.vi
+## Build State String with Arguments++.vi
 > [!WARNING]
 > This VI cannot concatenate "Asynchronous without Reply" messages. This VI is hidden from the Functions palette. It is recommended to use the Build Message with Arguments++ VI instead of this VI.
 
@@ -65,7 +63,7 @@ Builds CSM message strings, containing information such as state, arguments, tar
 -- <b>Indicators</b> --
 - <b>CSM Message String</b>: Concatenated CSM message string.
 
-### Build Message with Arguments++.vi
+## Build Message with Arguments++.vi
 Builds CSM message strings and operation strings.
 
 > - Ref: Message Building API
@@ -85,7 +83,7 @@ Builds CSM message strings and operation strings.
 
 > - Ref: CSM Inter-module Communication Types
 
-#### Build Message with Arguments(Auto Check).vi
+### Build Message with Arguments(Auto Check).vi
 Concatenates and generates CSM message strings. The message type symbol is automatically detected based on the input <b>State with Arguments</b>.
 
 > - Ref: Message Building API
@@ -99,7 +97,7 @@ Concatenates and generates CSM message strings. The message type symbol is autom
 -- <b>Indicators</b> --
 - <b>CSM Message String</b>: Concatenated CSM message string.
 
-#### Build Synchronous Message with Arguments.vi
+### Build Synchronous Message with Arguments.vi
 Concatenates and generates CSM synchronous message strings. The message type symbol is `-@`, for example:
 
       Message >> Arguments -@ Target
@@ -116,7 +114,7 @@ Concatenates and generates CSM synchronous message strings. The message type sym
 -- <b>Indicators</b> --
 - <b>CSM Message String</b>: Concatenated CSM message string.
 
-#### Build Asynchronous Message with Arguments.vi
+### Build Asynchronous Message with Arguments.vi
 Concatenates and generates CSM asynchronous message strings. The message type symbol is `->`, for example:
 
       Message >> Arguments -> Target
@@ -133,7 +131,7 @@ Concatenates and generates CSM asynchronous message strings. The message type sy
 -- <b>Indicators</b> --
 - <b>CSM Message String</b>: Concatenated CSM message string.
 
-#### Build No-Reply Asynchronous Message with Arguments.vi
+### Build No-Reply Asynchronous Message with Arguments.vi
 Concatenates and generates CSM asynchronous message strings without reply. The message type symbol is `->|`, for example:
 
       Message >> Arguments ->| Target
@@ -150,7 +148,7 @@ Concatenates and generates CSM asynchronous message strings without reply. The m
 -- <b>Indicators</b> --
 - <b>CSM Message String</b>: Concatenated CSM message string.
 
-#### Build Status Broadcast Message.vi
+### Build Status Broadcast Message.vi
 Concatenates normal status message strings. The message format is as follows:
 
       Status >> Arguments -><status>
@@ -168,7 +166,7 @@ Concatenates normal status message strings. The message format is as follows:
 -- <b>Indicators</b> --
 - <b>CSM Message String</b>: Concatenated CSM message string.
 
-#### Build Interrupt Broadcast Message.vi
+### Build Interrupt Broadcast Message.vi
 Concatenates interrupt status messages. The message format is as follows:
 
       Status >> Arguments -><interrupt>
@@ -182,7 +180,7 @@ Concatenates interrupt status messages. The message format is as follows:
 -- <b>Indicators</b> --
 - <b>CSM Message String</b>: Concatenated CSM message string.
 
-#### Build Register Message.vi
+### Build Register Message.vi
 Concatenates register state operation message strings. The message format is as follows:
 
       //[source-state]@[source-module] >> [response-message]@[response-module] -><register>
@@ -212,7 +210,7 @@ Concatenates register state operation message strings. The message format is as 
 -- <b>Indicators</b> --
 - <b>CSM Message String</b>: Concatenated CSM message string.
 
-#### Build Unregister Message.vi
+### Build Unregister Message.vi
 Concatenates unregister state operation message strings. The message format is as follows:
 
       //[source-state]@[source-module] >> [response-message]@[response-module] -><unregister>
@@ -240,7 +238,7 @@ Concatenates unregister state operation message strings. The message format is a
 -- <b>Indicators</b> --
 - <b>CSM Message String</b>: Concatenated CSM message string.
 
-#### CSM - Replace Marks in Messages.vi
+### CSM - Replace Marks in Messages.vi
 Facilitates editing multiple CSM message strings by providing a batch replacement function for marks. There are four marks that can be replaced:
 - `<param>` mark: Usually represents the same argument.
 - `<target>` mark: Usually represents the same target.
@@ -275,7 +273,7 @@ The <b>States</b> output is:
 -- <b>Indicators</b> --
 - <b>States</b>: State string after replacement.
 
-#### CSM - Replace Mark with String Array.vi
+### CSM - Replace Mark with String Array.vi
 Replaces tags in a single state string with strings from an array and merges them into a string describing a group of states.
 
 <b>Example</b>: For `Draw >> <1> -@ Painter`, <b>Tag</b> should be set to `<1>`
@@ -294,7 +292,7 @@ Input array `[Line, Circle, Rectangle]`. The result will be:
 -- <b>Indicators</b> --
 - <b>States</b>: The merged state string.
 
-### CSM - Broadcast Status Change.vi
+## CSM - Broadcast Status Change.vi
 Broadcasts a status change to the system. CSM modules with registered states will receive this status change. For example:
 
       // Broadcast status change
@@ -310,7 +308,7 @@ Broadcasts a status change to the system. CSM modules with registered states wil
 -- <b>Indicators</b> --
 - <b>Remaining States</b>: Returns all concatenated states and arguments.
 
-### Add State(s) to Queue By BOOL++.vi
+## Add State(s) to Queue By BOOL++.vi
 Merges CSM message strings into the CSM message queue. This VI provides string options for both TRUE and FALSE states, avoiding the use of case structures and improving code readability and programming efficiency.
 
 > - Ref: CSM State Queue Operation API
@@ -322,7 +320,7 @@ Merges CSM message strings into the CSM message queue. This VI provides string o
 > - Add State(s) to Queue By BOOL(Array Right).vi
 > - Add State(s) to Queue By BOOL(Array All).vi
 
-#### Add State(s) to Queue By BOOL(Element).vi
+### Add State(s) to Queue By BOOL(Element).vi
 Merges CSM message strings into the CSM message queue. This VI provides string options for both TRUE and FALSE states, avoiding the use of Case Structures and improving code readability and programming efficiency.
 
 > - Ref: CSM State Queue Operation API
@@ -337,7 +335,7 @@ Merges CSM message strings into the CSM message queue. This VI provides string o
 -- <b>Indicators</b> --
 - <b>Remaining States</b>: Returns all concatenated states and arguments.
 
-#### Add State(s) to Queue By BOOL(Array Left).vi
+### Add State(s) to Queue By BOOL(Array Left).vi
 Merges CSM message strings into the CSM message queue. This VI provides string options for both TRUE and FALSE states, avoiding the use of case structures and improving code readability and programming efficiency.
 
 > - Ref: CSM State Queue Operation API
@@ -352,7 +350,7 @@ Merges CSM message strings into the CSM message queue. This VI provides string o
 -- <b>Indicators</b> --
 - <b>Remaining States</b>: Returns all concatenated states and arguments.
 
-#### Add State(s) to Queue By BOOL(Array Right).vi
+### Add State(s) to Queue By BOOL(Array Right).vi
 Merges CSM message strings into the CSM message queue. This VI provides string options for both TRUE and FALSE states, avoiding the use of case structures and improving code readability and programming efficiency.
 
 > - Ref: CSM State Queue Operation API
@@ -367,7 +365,7 @@ Merges CSM message strings into the CSM message queue. This VI provides string o
 -- <b>Indicators</b> --
 - <b>Remaining States</b>: Returns all concatenated states and arguments.
 
-#### Add State(s) to Queue By BOOL(Array All).vi
+### Add State(s) to Queue By BOOL(Array All).vi
 Generates the concatenated state of TRUE/FALSE and the remaining states based on the <b>High Priority</b> and Boolean inputs. The <b>High Priority</b> input determines whether to concatenate the TRUE or FALSE string before or after the remaining states. The <b>TRUE</b> and <b>FALSE</b> inputs determine whether the string to be concatenated is TRUE or FALSE.
 
 > - Ref: CSM State Queue Operation API

@@ -1,4 +1,4 @@
-# CSM API
+# 核心功能(Core Functions)
 
 > [!NOTE]
 > <b>消息拼接API</b>
@@ -10,9 +10,7 @@
 >
 > 该类型API不会直接发送消息，只是拼接消息字符串。在Parse State Queue++.vi中发送消息、执行操作。与消息拼接API不同的是，此类API会包含CSM的状态队列字符串输入，相当于在状态队列中插入消息。
 
-## 核心功能(Core Functions)
-
-### Parse State Queue++.vi
+## Parse State Queue++.vi
 解析CSM状态队列，返回将执行的下一个当前状态、参数等信息。
 
 > - Ref: CSM 模块间通信类型
@@ -34,7 +32,7 @@
 - <b>Additional Information</b>: 额外的补充信息。广播触发的状态中，该信息包含广播的名称、参数。
 - <b>Source CSM</b>: 如果<b>Current State</b>由外部发送，则这是源CSM模块名称。
 
-### Build State String with Arguments++.vi
+## Build State String with Arguments++.vi
 
 该VI用于构建CSM消息字符串(包含状态、参数、目标模块、消息类型等信息)，以便发送到其他CSM模块。
 
@@ -68,7 +66,7 @@
 -- <b>输出控件(Indicators)</b> --
 - <b>CSM Message String</b>: 拼接生成的CSM消息字符串。
 
-### Build Message with Arguments++.vi
+## Build Message with Arguments++.vi
 该VI用于构建CSM消息字符串及操作字符串。
 
 > - Ref: CSM 消息拼接API
@@ -89,7 +87,7 @@
 
 > - Ref: CSM 模块间通信类型
 
-#### Build Message with Arguments(Auto Check).vi
+### Build Message with Arguments(Auto Check).vi
 拼接生成CSM消息字符串，消息的类型符号会根据输入的<b>State with Arguments</b>自动检测。
 
 > - Ref: 消息拼接API
@@ -103,7 +101,7 @@
 -- <b>输出控件(Indicators)</b> --
 - <b>CSM Message String</b>: 拼接生成的CSM消息字符串。
 
-#### Build Synchronous Message with Arguments.vi
+### Build Synchronous Message with Arguments.vi
 拼接生成CSM同步消息字符串，消息类型符号为`-@`，例如:
 
       Message >> Arguments -@ Target
@@ -120,7 +118,7 @@
 -- <b>输出控件(Indicators)</b> --
 - <b>CSM Message String</b>: 拼接生成的CSM消息字符串。
 
-#### Build Asynchronous Message with Arguments.vi
+### Build Asynchronous Message with Arguments.vi
 拼接生成CSM异步消息字符串，消息类型符号为`->`，例如:
 
       Message >> Arguments -> Target
@@ -137,7 +135,7 @@
 -- <b>输出控件(Indicators)</b> --
 - <b>CSM Message String</b>: 拼接生成的CSM消息字符串。
 
-#### Build No-Reply Asynchronous Message with Arguments.vi
+### Build No-Reply Asynchronous Message with Arguments.vi
 拼接生成CSM异步无返回消息字符串，消息类型符号为`->|`，例如:
 
       Message >> Arguments ->| Target
@@ -154,7 +152,7 @@
 -- <b>输出控件(Indicators)</b> --
 - <b>CSM Message String</b>: 拼接生成的CSM消息字符串。
 
-#### Build Status Broadcast Message.vi
+### Build Status Broadcast Message.vi
 拼接普通状态消息字符串，消息格式如下:
 
       Status >> Arguments -><status>
@@ -171,7 +169,7 @@
 -- <b>输出控件(Indicators)</b> --
 - <b>CSM Message String</b>: 拼接生成的CSM消息字符串。
 
-#### Build Interrupt Broadcast Message.vi
+### Build Interrupt Broadcast Message.vi
 拼接中断状态消息，消息格式如下:
 
       Status >> Arguments -><interrupt>
@@ -185,7 +183,7 @@
 -- <b>输出控件(Indicators)</b> --
 - <b>CSM Message String</b>: 拼接生成的CSM消息字符串。
 
-#### Build Register Message.vi
+### Build Register Message.vi
 拼接注册状态操作消息字符串，消息格式如下:
 
       //[source-state]@[source-module] >> [response-message]@[response-module] -><register>
@@ -215,7 +213,7 @@
 -- <b>输出控件(Indicators)</b> --
 - <b>CSM Message String</b>: 拼接生成的CSM消息字符串。
 
-#### Build Unregister Message.vi
+### Build Unregister Message.vi
 拼接取消注册状态操作消息字符串，消息格式如下:
 
       //[source-state]@[source-module] >> [response-message]@[response-module] -><unregister>
@@ -244,7 +242,7 @@
 -- <b>输出控件(Indicators)</b> --
 - <b>CSM Message String</b>: 拼接生成的CSM消息字符串。
 
-#### CSM - Replace Marks in Messages.vi
+### CSM - Replace Marks in Messages.vi
 该VI主要为了能够便捷地编辑多条CSM消息字符串，提供批量替换标记的功能。有4个标记可以替换:
 
 - <param> 标记: 通常表示相同的参数
@@ -280,7 +278,7 @@
 -- <b>输出控件(Indicators)</b> --
 - <b>States</b>: 替换后的状态字符串。
 
-#### CSM - Replace Mark with String Array.vi
+### CSM - Replace Mark with String Array.vi
 将单条状态字符串中的标签替换为数组字符串，并合并成描述一组状态的符串。
 
 <b>例如</b>: 对于`Draw >> <1> -@ Painter`，<b>Tag</b>应该选择`<1>`
@@ -299,7 +297,7 @@
 -- <b>输出控件(Indicators)</b> --
 - <b>States</b>:合并后的状态字符串。
 
-### CSM - Broadcast Status Change.vi
+## CSM - Broadcast Status Change.vi
 向系统广播状态更改，已注册状态的CSM模块将接收此状态更改，例如:
 
       //广播状态更改
@@ -315,7 +313,7 @@
 -- <b>输出控件(Indicators)</b> --
 - <b>Remaining States</b>: 拼接后的所有状态及参数。
 
-### Add State(s) to Queue By BOOL++.vi
+## Add State(s) to Queue By BOOL++.vi
 将CSM消息字符串并入CSM消息队列中。提供了TRUE/FALSE两种状态的字符串选项，能够避免使用条件结构，提高代码可读性和编程效率。
 
 > - Ref: CSM 的状态队列操作API
@@ -327,7 +325,7 @@
 > - Add State(s) to Queue By BOOL(Array Right).vi
 > - Add State(s) to Queue By BOOL(Array All).vi
 
-#### Add State(s) to Queue By BOOL(Element).vi
+### Add State(s) to Queue By BOOL(Element).vi
 将CSM消息字符串并入CSM消息队列中。提供了TRUE/FALSE两种状态的字符串选项，能够避免使用条件结构，提高代码可读性和编程效率。
 
 > - Ref: CSM的状态队列操作API
@@ -342,7 +340,7 @@
 -- <b>输出控件(Indicators)</b> --
 - <b>Remaining States</b>: 拼接后的所有状态及参数。
 
-#### Add State(s) to Queue By BOOL(Array Left).vi
+### Add State(s) to Queue By BOOL(Array Left).vi
 将CSM消息字符串并入CSM消息队列中。提供了TRUE/FALSE两种状态的字符串选项，能够避免使用条件结构，提高代码可读性和编程效率。
 
 > - Ref: CSM的状态队列操作API
@@ -357,7 +355,7 @@
 -- <b>输出控件(Indicators)</b> --
 - <b>Remaining States</b>: 拼接后的所有状态及参数。
 
-#### Add State(s) to Queue By BOOL(Array Right).vi
+### Add State(s) to Queue By BOOL(Array Right).vi
 将CSM消息字符串并入CSM消息队列中。提供了TRUE/FALSE两种状态的字符串选项，能够避免使用条件结构，提高代码可读性和编程效率。
 
 > - Ref: CSM 的状态队列操作API
@@ -372,7 +370,7 @@
 -- <b>输出控件(Indicators)</b> --
 - <b>Remaining States</b>: 拼接后的所有状态及参数。
 
-#### Add State(s) to Queue By BOOL(Array All).vi
+### Add State(s) to Queue By BOOL(Array All).vi
 根据高优先级和Boolean输入，该VI生成TRUE/FALSE与剩余状态的连接状态。其中，<b>High Priority</b>输入决定是否在剩余状态之前或之后连接TRUE或FALSE字符串；<b>TRUE</b>和<b>FALSE</b>输入决定要连接的字符串是TRUE还是FALSE。
 
 > - Ref: CSM 的状态队列操作API
