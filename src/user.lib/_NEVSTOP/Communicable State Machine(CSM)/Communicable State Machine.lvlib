@@ -58,6 +58,9 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="CSM - Filter Duplicate Messages By Name.vi" Type="VI" URL="../AdvanceAPI/CSM - Filter Duplicate Messages By Name.vi"/>
 			<Item Name="CSM - Remove Duplicated Following Messages.vi" Type="VI" URL="../AdvanceAPI/CSM - Remove Duplicated Following Messages.vi"/>
 			<Item Name="ResMgr-RequestDef.ctl" Type="VI" URL="../_Support/ResMgr/ResMgr-RequestDef.ctl"/>
+			<Item Name="Splite Single-line Message.vi" Type="VI" URL="../_Support/Common/Splite Single-line Message.vi"/>
+			<Item Name="Remove Comments from Line.vi" Type="VI" URL="../_Support/Common/Remove Comments from Line.vi"/>
+			<Item Name="Splite Reason String Part.vi" Type="VI" URL="../_Support/Common/Splite Reason String Part.vi"/>
 		</Item>
 		<Item Name="2025Q4" Type="Folder">
 			<Item Name="CSM - Replace Substitution Marks in Messages.vi" Type="VI" URL="../AdvanceAPI/CSM - Replace Substitution Marks in Messages.vi"/>
