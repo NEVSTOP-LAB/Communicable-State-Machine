@@ -108,47 +108,49 @@
 		</Item>
 		<Item Name="testcases" Type="Folder">
 			<Item Name="_support" Type="Folder">
-				<Item Name="Generate testcase Started User Log.vi" Type="VI" URL="../testcases/_support/Generate testcase Started User Log.vi"/>
+				<Item Name="Generate testcase Started User Log.vi" Type="VI" URL="../testcases/_previous/_support/Generate testcase Started User Log.vi"/>
 			</Item>
-			<Item Name="_CSMs" Type="Folder">
-				<Item Name="_support" Type="Folder">
-					<Item Name="Wrapper-CSM Queue++.vi" Type="VI" URL="../testcases/_CSMs/_support/Wrapper-CSM Queue++.vi"/>
+			<Item Name="_previous" Type="Folder">
+				<Item Name="_CSMs" Type="Folder">
+					<Item Name="_support" Type="Folder">
+						<Item Name="Wrapper-CSM Queue++.vi" Type="VI" URL="../testcases/_previous/_CSMs/_support/Wrapper-CSM Queue++.vi"/>
+					</Item>
+					<Item Name="Source CSM.vi" Type="VI" URL="../testcases/_previous/_CSMs/Source CSM.vi"/>
+					<Item Name="Target CSM.vi" Type="VI" URL="../testcases/_previous/_CSMs/Target CSM.vi"/>
+					<Item Name="UI CSM.vi" Type="VI" URL="../testcases/_previous/_CSMs/UI CSM.vi"/>
+					<Item Name="Wrapper CSM.vi" Type="VI" URL="../testcases/_previous/_CSMs/Wrapper CSM.vi"/>
+					<Item Name="NOT a CSM.vi" Type="VI" URL="../testcases/_previous/_CSMs/NOT a CSM.vi"/>
+					<Item Name="JKISM.vi" Type="VI" URL="../testcases/_previous/_CSMs/JKISM.vi"/>
+					<Item Name="TestCSM.vi" Type="VI" URL="../testcases/_previous/_CSMs/TestCSM.vi"/>
+					<Item Name="CSM Status Module.vi" Type="VI" URL="../testcases/_previous/_CSMs/CSM Status Module.vi"/>
+					<Item Name="CSM Module.vi" Type="VI" URL="../testcases/_previous/_CSMs/CSM Module.vi"/>
 				</Item>
-				<Item Name="Source CSM.vi" Type="VI" URL="../testcases/_CSMs/Source CSM.vi"/>
-				<Item Name="Target CSM.vi" Type="VI" URL="../testcases/_CSMs/Target CSM.vi"/>
-				<Item Name="UI CSM.vi" Type="VI" URL="../testcases/_CSMs/UI CSM.vi"/>
-				<Item Name="Wrapper CSM.vi" Type="VI" URL="../testcases/_CSMs/Wrapper CSM.vi"/>
-				<Item Name="NOT a CSM.vi" Type="VI" URL="../testcases/_CSMs/NOT a CSM.vi"/>
-				<Item Name="JKISM.vi" Type="VI" URL="../testcases/_CSMs/JKISM.vi"/>
-				<Item Name="TestCSM.vi" Type="VI" URL="../testcases/_CSMs/TestCSM.vi"/>
-				<Item Name="CSM Status Module.vi" Type="VI" URL="../testcases/_CSMs/CSM Status Module.vi"/>
-				<Item Name="CSM Module.vi" Type="VI" URL="../testcases/_CSMs/CSM Module.vi"/>
+				<Item Name="testcase-csmhelper.lvclass" Type="LVClass" URL="../testcases/_previous/testcase-csmhelper/testcase-csmhelper.lvclass"/>
+				<Item Name="testcase-csm-file-logger.lvclass" Type="LVClass" URL="../testcases/_previous/testcase-csm-file-logger/testcase-csm-file-logger.lvclass"/>
+				<Item Name="testcase-Broadcast Registry.lvclass" Type="LVClass" URL="../testcases/_previous/testcase-Broadcast Registry/testcase-Broadcast Registry.lvclass"/>
+				<Item Name="testcase-Basic-Function.lvclass" Type="LVClass" URL="../testcases/_previous/testcase-Basic-Function/testcase-Basic-Function.lvclass"/>
+				<Item Name="testcase-documentation.lvclass" Type="LVClass" URL="../testcases/_previous/testcase-documentation/testcase-documentation.lvclass"/>
+				<Item Name="testcase-globalLog.lvclass" Type="LVClass" URL="../testcases/_previous/testcase-globalLog/testcase-globalLog.lvclass"/>
+				<Item Name="testcase-csm loop support.lvclass" Type="LVClass" URL="../testcases/_previous/testcase-csm loop support/testcase-csm loop support.lvclass"/>
+				<Item Name="testcase-CSMAttributes.lvclass" Type="LVClass" URL="../testcases/_previous/testcase-CSMAttributes/testcase-CSMAttributes.lvclass"/>
+				<Item Name="testcase-miscellaneous.lvclass" Type="LVClass" URL="../testcases/_previous/testcase-miscellaneous/testcase-miscellaneous.lvclass"/>
 			</Item>
 			<Item Name="NEW" Type="Folder">
-				<Item Name="CSM-Testcase.lvlib" Type="Library" URL="../testcases/new/CSM/CSM-Testcase.lvlib"/>
-				<Item Name="TestCSMSuite.lvclass" Type="LVClass" URL="../testcases/new/CSMTestSuite/TestCSMSuite.lvclass"/>
-				<Item Name="testcase-CSMMessage.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMMessage/testcase-CSMMessage.lvclass"/>
-				<Item Name="testcase-CSMArgument.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMArgument/testcase-CSMArgument.lvclass"/>
-				<Item Name="testcase-CSMResponse.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMResponse/testcase-CSMResponse.lvclass"/>
-				<Item Name="testcase-CSMGlobalLog.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMGlobalLog/testcase-CSMGlobalLog.lvclass"/>
-				<Item Name="testcase-CSMBroadcast.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMBroadcast/testcase-CSMBroadcast.lvclass"/>
-				<Item Name="testcase-CSMSystemLevelModule.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMSystemLevelModule/testcase-CSMSystemLevelModule.lvclass"/>
-				<Item Name="testcase-CSMSubModule.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMSubModule/testcase-CSMSubModule.lvclass"/>
-				<Item Name="testcase-CSMWorkerMode.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMWorkerMode/testcase-CSMWorkerMode.lvclass"/>
-				<Item Name="testcase-CSMChainMode.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMChainMode/testcase-CSMChainMode.lvclass"/>
-				<Item Name="testcase-CSMNonCSMCallerSupportAPI.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMNonCSMCallerSupportAPI/testcase-CSMNonCSMCallerSupportAPI.lvclass"/>
-				<Item Name="testcase-CSMAddonLoopSupport.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMAddonLoopSupport/testcase-CSMAddonLoopSupport.lvclass"/>
-				<Item Name="testcase-CSMManagementAPI.lvclass" Type="LVClass" URL="../testcases/new/testcase-CSMManagementAPI/testcase-CSMManagementAPI.lvclass"/>
+				<Item Name="CSM-Testcase.lvlib" Type="Library" URL="../testcases/CSM/CSM-Testcase.lvlib"/>
+				<Item Name="TestCSMSuite.lvclass" Type="LVClass" URL="../testcases/CSMTestSuite/TestCSMSuite.lvclass"/>
+				<Item Name="testcase-CSMMessage.lvclass" Type="LVClass" URL="../testcases/testcase-CSMMessage/testcase-CSMMessage.lvclass"/>
+				<Item Name="testcase-CSMArgument.lvclass" Type="LVClass" URL="../testcases/testcase-CSMArgument/testcase-CSMArgument.lvclass"/>
+				<Item Name="testcase-CSMResponse.lvclass" Type="LVClass" URL="../testcases/testcase-CSMResponse/testcase-CSMResponse.lvclass"/>
+				<Item Name="testcase-CSMGlobalLog.lvclass" Type="LVClass" URL="../testcases/testcase-CSMGlobalLog/testcase-CSMGlobalLog.lvclass"/>
+				<Item Name="testcase-CSMBroadcast.lvclass" Type="LVClass" URL="../testcases/testcase-CSMBroadcast/testcase-CSMBroadcast.lvclass"/>
+				<Item Name="testcase-CSMSystemLevelModule.lvclass" Type="LVClass" URL="../testcases/testcase-CSMSystemLevelModule/testcase-CSMSystemLevelModule.lvclass"/>
+				<Item Name="testcase-CSMSubModule.lvclass" Type="LVClass" URL="../testcases/testcase-CSMSubModule/testcase-CSMSubModule.lvclass"/>
+				<Item Name="testcase-CSMWorkerMode.lvclass" Type="LVClass" URL="../testcases/testcase-CSMWorkerMode/testcase-CSMWorkerMode.lvclass"/>
+				<Item Name="testcase-CSMChainMode.lvclass" Type="LVClass" URL="../testcases/testcase-CSMChainMode/testcase-CSMChainMode.lvclass"/>
+				<Item Name="testcase-CSMNonCSMCallerSupportAPI.lvclass" Type="LVClass" URL="../testcases/testcase-CSMNonCSMCallerSupportAPI/testcase-CSMNonCSMCallerSupportAPI.lvclass"/>
+				<Item Name="testcase-CSMAddonLoopSupport.lvclass" Type="LVClass" URL="../testcases/testcase-CSMAddonLoopSupport/testcase-CSMAddonLoopSupport.lvclass"/>
+				<Item Name="testcase-CSMManagementAPI.lvclass" Type="LVClass" URL="../testcases/testcase-CSMManagementAPI/testcase-CSMManagementAPI.lvclass"/>
 			</Item>
-			<Item Name="testcase-csmhelper.lvclass" Type="LVClass" URL="../testcases/testcase-csmhelper/testcase-csmhelper.lvclass"/>
-			<Item Name="testcase-csm-file-logger.lvclass" Type="LVClass" URL="../testcases/testcase-csm-file-logger/testcase-csm-file-logger.lvclass"/>
-			<Item Name="testcase-Broadcast Registry.lvclass" Type="LVClass" URL="../testcases/testcase-Broadcast Registry/testcase-Broadcast Registry.lvclass"/>
-			<Item Name="testcase-Basic-Function.lvclass" Type="LVClass" URL="../testcases/testcase-Basic-Function/testcase-Basic-Function.lvclass"/>
-			<Item Name="testcase-documentation.lvclass" Type="LVClass" URL="../testcases/testcase-documentation/testcase-documentation.lvclass"/>
-			<Item Name="testcase-globalLog.lvclass" Type="LVClass" URL="../testcases/testcase-globalLog/testcase-globalLog.lvclass"/>
-			<Item Name="testcase-csm loop support.lvclass" Type="LVClass" URL="../testcases/testcase-csm loop support/testcase-csm loop support.lvclass"/>
-			<Item Name="testcase-CSMAttributes.lvclass" Type="LVClass" URL="../testcases/testcase-CSMAttributes/testcase-CSMAttributes.lvclass"/>
-			<Item Name="testcase-miscellaneous.lvclass" Type="LVClass" URL="../testcases/testcase-miscellaneous/testcase-miscellaneous.lvclass"/>
 		</Item>
 		<Item Name="_TEST" Type="Folder" URL="../src/_TEST">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
@@ -269,17 +271,30 @@
 				<Item Name="Internecine Avoider.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/tcp.llb/Internecine Avoider.vi"/>
 				<Item Name="TCP Listen List Operations.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/tcp.llb/TCP Listen List Operations.ctl"/>
 				<Item Name="TCP Listen Internal List.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/tcp.llb/TCP Listen Internal List.vi"/>
-				<Item Name="TestCase.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/VI Tester/TestCase.llb/TestCase.lvclass"/>
+				<Item Name="CenterRectInBnds.vi" Type="VI" URL="/&lt;vilib&gt;/picture/PictureSupport.llb/CenterRectInBnds.vi"/>
+				<Item Name="RectCentroid.vi" Type="VI" URL="/&lt;vilib&gt;/picture/PictureSupport.llb/RectCentroid.vi"/>
+				<Item Name="POffsetRect.vi" Type="VI" URL="/&lt;vilib&gt;/picture/PictureSupport.llb/POffsetRect.vi"/>
+				<Item Name="NI_App_Builder_API.lvlib" Type="Library" URL="/&lt;vilib&gt;/AppBuilder/AB_API_Simple/NI_App_Builder_API.lvlib"/>
+				<Item Name="Invoke BuildTarget.vi" Type="VI" URL="/&lt;vilib&gt;/AppBuilder/Invoke BuildTarget.vi"/>
+				<Item Name="GetTargetBuildSpecs.vi" Type="VI" URL="/&lt;vilib&gt;/AppBuilder/GetTargetBuildSpecs.vi"/>
+				<Item Name="GetTargetBuildSpecs (project reference).vi" Type="VI" URL="/&lt;vilib&gt;/AppBuilder/GetTargetBuildSpecs (project reference).vi"/>
+				<Item Name="AB_Generate_Error_Cluster.vi" Type="VI" URL="/&lt;vilib&gt;/AppBuilder/AB_Generate_Error_Cluster.vi"/>
+				<Item Name="TestSuite.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/VI Tester/TestSuite.llb/TestSuite.lvclass"/>
 				<Item Name="VITesterUtilities.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/VI Tester/_support/VITesterUtilities.lvlib"/>
 				<Item Name="Filter Error Codes__jki_lib_error_handling -- VI Tester__jki_vi_tester.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/VI Tester/_support/Support.llb/Filter Error Codes__jki_lib_error_handling -- VI Tester__jki_vi_tester.vi"/>
 				<Item Name="Filter Error Codes (Array)__jki_lib_error_handling -- VI Tester__jki_vi_tester.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/VI Tester/_support/Support.llb/Filter Error Codes (Array)__jki_lib_error_handling -- VI Tester__jki_vi_tester.vi"/>
 				<Item Name="Filtered Error Details - Cluster__jki_lib_error_handling -- VI Tester__jki_vi_tester.ctl" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/VI Tester/_support/Support.llb/Filtered Error Details - Cluster__jki_lib_error_handling -- VI Tester__jki_vi_tester.ctl"/>
 				<Item Name="Clear All Errors__jki_lib_error_handling -- VI Tester__jki_vi_tester.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/VI Tester/_support/Support.llb/Clear All Errors__jki_lib_error_handling -- VI Tester__jki_vi_tester.vi"/>
 				<Item Name="Filter Error Codes (Scalar)__jki_lib_error_handling -- VI Tester__jki_vi_tester.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/VI Tester/_support/Support.llb/Filter Error Codes (Scalar)__jki_lib_error_handling -- VI Tester__jki_vi_tester.vi"/>
+				<Item Name="Get Header from TD__ogtk__jki_vi_tester.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/VI Tester/_support/Support.llb/Get Header from TD__ogtk__jki_vi_tester.vi"/>
+				<Item Name="Type Descriptor__ogtk__jki_vi_tester.ctl" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/VI Tester/_support/Support.llb/Type Descriptor__ogtk__jki_vi_tester.ctl"/>
+				<Item Name="Type Descriptor Header__ogtk__jki_vi_tester.ctl" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/VI Tester/_support/Support.llb/Type Descriptor Header__ogtk__jki_vi_tester.ctl"/>
+				<Item Name="Type Descriptor Enumeration__ogtk__jki_vi_tester.ctl" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/VI Tester/_support/Support.llb/Type Descriptor Enumeration__ogtk__jki_vi_tester.ctl"/>
 				<Item Name="Is an Error__jki_lib_error_handling -- VI Tester__jki_vi_tester.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/VI Tester/_support/Support.llb/Is an Error__jki_lib_error_handling -- VI Tester__jki_vi_tester.vi"/>
 				<Item Name="Is an Error (error cluster)__jki_lib_error_handling -- VI Tester__jki_vi_tester.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/VI Tester/_support/Support.llb/Is an Error (error cluster)__jki_lib_error_handling -- VI Tester__jki_vi_tester.vi"/>
 				<Item Name="Is an Error (error array)__jki_lib_error_handling -- VI Tester__jki_vi_tester.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/VI Tester/_support/Support.llb/Is an Error (error array)__jki_lib_error_handling -- VI Tester__jki_vi_tester.vi"/>
 				<Item Name="Is an Error (any error array element)__jki_lib_error_handling VI Tester__jki_vi_tester.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/VI Tester/_support/Support.llb/Is an Error (any error array element)__jki_lib_error_handling VI Tester__jki_vi_tester.vi"/>
+				<Item Name="TestCase.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/VI Tester/TestCase.llb/TestCase.lvclass"/>
 				<Item Name="Search or Split String__ogtk__jki_vi_tester.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/VI Tester/_support/Support.llb/Search or Split String__ogtk__jki_vi_tester.vi"/>
 				<Item Name="Close Generic Object Refnum__ogtk__jki_vi_tester.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/VI Tester/_support/Support.llb/Close Generic Object Refnum__ogtk__jki_vi_tester.vi"/>
 				<Item Name="Close Generic Object Refnum (Array)__ogtk__jki_vi_tester.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/VI Tester/_support/Support.llb/Close Generic Object Refnum (Array)__ogtk__jki_vi_tester.vi"/>
@@ -288,11 +303,6 @@
 				<Item Name="Close Generic Object Refnum (Array VI)__ogtk__jki_vi_tester.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/VI Tester/_support/Support.llb/Close Generic Object Refnum (Array VI)__ogtk__jki_vi_tester.vi"/>
 				<Item Name="Random Number - Within Range__ogtk__jki_vi_tester.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/VI Tester/_support/Support.llb/Random Number - Within Range__ogtk__jki_vi_tester.vi"/>
 				<Item Name="TestResult.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/VI Tester/TestResult.llb/TestResult.lvclass"/>
-				<Item Name="TestSuite.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/VI Tester/TestSuite.llb/TestSuite.lvclass"/>
-				<Item Name="Get Header from TD__ogtk__jki_vi_tester.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/VI Tester/_support/Support.llb/Get Header from TD__ogtk__jki_vi_tester.vi"/>
-				<Item Name="Type Descriptor__ogtk__jki_vi_tester.ctl" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/VI Tester/_support/Support.llb/Type Descriptor__ogtk__jki_vi_tester.ctl"/>
-				<Item Name="Type Descriptor Header__ogtk__jki_vi_tester.ctl" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/VI Tester/_support/Support.llb/Type Descriptor Header__ogtk__jki_vi_tester.ctl"/>
-				<Item Name="Type Descriptor Enumeration__ogtk__jki_vi_tester.ctl" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/VI Tester/_support/Support.llb/Type Descriptor Enumeration__ogtk__jki_vi_tester.ctl"/>
 				<Item Name="Multi-line String to Array__ogtk__jki_vi_tester.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/VI Tester/_support/Support.llb/Multi-line String to Array__ogtk__jki_vi_tester.vi"/>
 				<Item Name="Convert EOLs__ogtk__jki_vi_tester.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/VI Tester/_support/Support.llb/Convert EOLs__ogtk__jki_vi_tester.vi"/>
 				<Item Name="Convert EOLs (String)__ogtk__jki_vi_tester.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/VI Tester/_support/Support.llb/Convert EOLs (String)__ogtk__jki_vi_tester.vi"/>
@@ -552,14 +562,6 @@
 				<Item Name="Build Path - File Names Array - path__ogtk__jki_vi_tester.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/VI Tester/_support/Support.llb/Build Path - File Names Array - path__ogtk__jki_vi_tester.vi"/>
 				<Item Name="Build Path - File Names and Paths Arrays - path__ogtk__jki_vi_tester.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/VI Tester/_support/Support.llb/Build Path - File Names and Paths Arrays - path__ogtk__jki_vi_tester.vi"/>
 				<Item Name="Get LV Class Path.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/LVClass/Get LV Class Path.vi"/>
-				<Item Name="NI_App_Builder_API.lvlib" Type="Library" URL="/&lt;vilib&gt;/AppBuilder/AB_API_Simple/NI_App_Builder_API.lvlib"/>
-				<Item Name="Invoke BuildTarget.vi" Type="VI" URL="/&lt;vilib&gt;/AppBuilder/Invoke BuildTarget.vi"/>
-				<Item Name="GetTargetBuildSpecs.vi" Type="VI" URL="/&lt;vilib&gt;/AppBuilder/GetTargetBuildSpecs.vi"/>
-				<Item Name="GetTargetBuildSpecs (project reference).vi" Type="VI" URL="/&lt;vilib&gt;/AppBuilder/GetTargetBuildSpecs (project reference).vi"/>
-				<Item Name="AB_Generate_Error_Cluster.vi" Type="VI" URL="/&lt;vilib&gt;/AppBuilder/AB_Generate_Error_Cluster.vi"/>
-				<Item Name="CenterRectInBnds.vi" Type="VI" URL="/&lt;vilib&gt;/picture/PictureSupport.llb/CenterRectInBnds.vi"/>
-				<Item Name="RectCentroid.vi" Type="VI" URL="/&lt;vilib&gt;/picture/PictureSupport.llb/RectCentroid.vi"/>
-				<Item Name="POffsetRect.vi" Type="VI" URL="/&lt;vilib&gt;/picture/PictureSupport.llb/POffsetRect.vi"/>
 			</Item>
 			<Item Name="Shortcut Menu Item Definition.ctl" Type="VI" URL="/&lt;resource&gt;/plugins/PopupMenus/support/Shortcut Menu Item Definition.ctl"/>
 			<Item Name="Transaction Control.ctl" Type="VI" URL="/&lt;resource&gt;/plugins/PopupMenus/support/Transaction Control.ctl"/>
