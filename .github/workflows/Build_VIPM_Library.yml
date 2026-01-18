@@ -16,7 +16,7 @@ on:
       - '**.svg'
       - '**.json'
       - '**.yml'
-      - 'src/testcases/**'
+      - 'testcases/**'
       - 'src/_TEST/**'
 
   pull_request:
@@ -31,7 +31,7 @@ on:
       - '**.svg'
       - '**.json'
       - '**.yml'
-      - 'src/testcases/**'
+      - 'testcases/**'
       - 'src/_TEST/**'
 
   # Allows you to run this workflow manually from the Actions tab
