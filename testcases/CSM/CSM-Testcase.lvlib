@@ -12,9 +12,5 @@
 	<Item Name="Chain5.vi" Type="VI" URL="../Chain5.vi"/>
 	<Item Name="Chain6.vi" Type="VI" URL="../Chain6.vi"/>
 	<Item Name="Normal-CSM.vi" Type="VI" URL="../Normal-CSM.vi"/>
-	<Item Name="Check CSM Modules Exist Or Not.vi" Type="VI" URL="../Check CSM Modules Exist Or Not.vi"/>
-	<Item Name="Remove Duplicates from 1D Array (String).vi" Type="VI" URL="../Remove Duplicates from 1D Array (String).vi"/>
-	<Item Name="Package Error Info.vi" Type="VI" URL="../Package Error Info.vi"/>
 	<Item Name="InitCSMs.vi" Type="VI" URL="../InitCSMs.vi"/>
-	<Item Name="Ensure All Modules Exit.vi" Type="VI" URL="../Ensure All Modules Exit.vi"/>
 </Library>

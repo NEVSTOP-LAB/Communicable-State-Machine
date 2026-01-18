@@ -108,7 +108,10 @@
 		</Item>
 		<Item Name="testcases" Type="Folder">
 			<Item Name="_support" Type="Folder">
-				<Item Name="Generate testcase Started User Log.vi" Type="VI" URL="../testcases/_previous/_support/Generate testcase Started User Log.vi"/>
+				<Item Name="Generate testcase Started User Log.vi" Type="VI" URL="../testcases/_support/Generate testcase Started User Log.vi"/>
+				<Item Name="Check CSM Modules Exist Or Not.vi" Type="VI" URL="../testcases/_support/Check CSM Modules Exist Or Not.vi"/>
+				<Item Name="Package Error Info.vi" Type="VI" URL="../testcases/_support/Package Error Info.vi"/>
+				<Item Name="Ensure All Modules Exit.vi" Type="VI" URL="../testcases/_support/Ensure All Modules Exit.vi"/>
 			</Item>
 			<Item Name="_previous" Type="Folder">
 				<Item Name="_CSMs" Type="Folder">
@@ -135,22 +138,20 @@
 				<Item Name="testcase-CSMAttributes.lvclass" Type="LVClass" URL="../testcases/_previous/testcase-CSMAttributes/testcase-CSMAttributes.lvclass"/>
 				<Item Name="testcase-miscellaneous.lvclass" Type="LVClass" URL="../testcases/_previous/testcase-miscellaneous/testcase-miscellaneous.lvclass"/>
 			</Item>
-			<Item Name="NEW" Type="Folder">
-				<Item Name="CSM-Testcase.lvlib" Type="Library" URL="../testcases/CSM/CSM-Testcase.lvlib"/>
-				<Item Name="TestCSMSuite.lvclass" Type="LVClass" URL="../testcases/CSMTestSuite/TestCSMSuite.lvclass"/>
-				<Item Name="testcase-CSMMessage.lvclass" Type="LVClass" URL="../testcases/testcase-CSMMessage/testcase-CSMMessage.lvclass"/>
-				<Item Name="testcase-CSMArgument.lvclass" Type="LVClass" URL="../testcases/testcase-CSMArgument/testcase-CSMArgument.lvclass"/>
-				<Item Name="testcase-CSMResponse.lvclass" Type="LVClass" URL="../testcases/testcase-CSMResponse/testcase-CSMResponse.lvclass"/>
-				<Item Name="testcase-CSMGlobalLog.lvclass" Type="LVClass" URL="../testcases/testcase-CSMGlobalLog/testcase-CSMGlobalLog.lvclass"/>
-				<Item Name="testcase-CSMBroadcast.lvclass" Type="LVClass" URL="../testcases/testcase-CSMBroadcast/testcase-CSMBroadcast.lvclass"/>
-				<Item Name="testcase-CSMSystemLevelModule.lvclass" Type="LVClass" URL="../testcases/testcase-CSMSystemLevelModule/testcase-CSMSystemLevelModule.lvclass"/>
-				<Item Name="testcase-CSMSubModule.lvclass" Type="LVClass" URL="../testcases/testcase-CSMSubModule/testcase-CSMSubModule.lvclass"/>
-				<Item Name="testcase-CSMWorkerMode.lvclass" Type="LVClass" URL="../testcases/testcase-CSMWorkerMode/testcase-CSMWorkerMode.lvclass"/>
-				<Item Name="testcase-CSMChainMode.lvclass" Type="LVClass" URL="../testcases/testcase-CSMChainMode/testcase-CSMChainMode.lvclass"/>
-				<Item Name="testcase-CSMNonCSMCallerSupportAPI.lvclass" Type="LVClass" URL="../testcases/testcase-CSMNonCSMCallerSupportAPI/testcase-CSMNonCSMCallerSupportAPI.lvclass"/>
-				<Item Name="testcase-CSMAddonLoopSupport.lvclass" Type="LVClass" URL="../testcases/testcase-CSMAddonLoopSupport/testcase-CSMAddonLoopSupport.lvclass"/>
-				<Item Name="testcase-CSMManagementAPI.lvclass" Type="LVClass" URL="../testcases/testcase-CSMManagementAPI/testcase-CSMManagementAPI.lvclass"/>
-			</Item>
+			<Item Name="CSM-Testcase.lvlib" Type="Library" URL="../testcases/CSM/CSM-Testcase.lvlib"/>
+			<Item Name="TestCSMSuite.lvclass" Type="LVClass" URL="../testcases/CSMTestSuite/TestCSMSuite.lvclass"/>
+			<Item Name="testcase-CSMMessage.lvclass" Type="LVClass" URL="../testcases/testcase-CSMMessage/testcase-CSMMessage.lvclass"/>
+			<Item Name="testcase-CSMArgument.lvclass" Type="LVClass" URL="../testcases/testcase-CSMArgument/testcase-CSMArgument.lvclass"/>
+			<Item Name="testcase-CSMResponse.lvclass" Type="LVClass" URL="../testcases/testcase-CSMResponse/testcase-CSMResponse.lvclass"/>
+			<Item Name="testcase-CSMGlobalLog.lvclass" Type="LVClass" URL="../testcases/testcase-CSMGlobalLog/testcase-CSMGlobalLog.lvclass"/>
+			<Item Name="testcase-CSMBroadcast.lvclass" Type="LVClass" URL="../testcases/testcase-CSMBroadcast/testcase-CSMBroadcast.lvclass"/>
+			<Item Name="testcase-CSMSystemLevelModule.lvclass" Type="LVClass" URL="../testcases/testcase-CSMSystemLevelModule/testcase-CSMSystemLevelModule.lvclass"/>
+			<Item Name="testcase-CSMSubModule.lvclass" Type="LVClass" URL="../testcases/testcase-CSMSubModule/testcase-CSMSubModule.lvclass"/>
+			<Item Name="testcase-CSMWorkerMode.lvclass" Type="LVClass" URL="../testcases/testcase-CSMWorkerMode/testcase-CSMWorkerMode.lvclass"/>
+			<Item Name="testcase-CSMChainMode.lvclass" Type="LVClass" URL="../testcases/testcase-CSMChainMode/testcase-CSMChainMode.lvclass"/>
+			<Item Name="testcase-CSMNonCSMCallerSupportAPI.lvclass" Type="LVClass" URL="../testcases/testcase-CSMNonCSMCallerSupportAPI/testcase-CSMNonCSMCallerSupportAPI.lvclass"/>
+			<Item Name="testcase-CSMAddonLoopSupport.lvclass" Type="LVClass" URL="../testcases/testcase-CSMAddonLoopSupport/testcase-CSMAddonLoopSupport.lvclass"/>
+			<Item Name="testcase-CSMManagementAPI.lvclass" Type="LVClass" URL="../testcases/testcase-CSMManagementAPI/testcase-CSMManagementAPI.lvclass"/>
 		</Item>
 		<Item Name="_TEST" Type="Folder" URL="../src/_TEST">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
