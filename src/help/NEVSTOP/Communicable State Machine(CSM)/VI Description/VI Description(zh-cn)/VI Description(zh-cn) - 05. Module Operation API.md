@@ -109,6 +109,21 @@
 ## CSM - Run Script.vi
 一次性的执行多条CSM指令，支持同步消息、异步消息和订阅。
 
+CSM - Run Script.vi 支持一个额外的补充语法，将返回值保存到指定的临时变量中，供后续指令使用。使用 `=>` 符号将返回值保存到变量中，变量名不区分大小写。在之后的指令中，可以通过 `${变量名}` 的语法引用该变量。
+
+示例如下：
+
+```
+API: Random -@ csm => var1
+API: Random -@ csm => var2
+API: echo >> ${var1} -@ csm
+API: echo >> ${var2} -@ csm
+API: echo >> ${var1},${var2} -@ csm
+```
+
+> [!WARNING]
+> 临时变量的保存语法不是CSM指令本身的一部分，而是由CSM - Run Script.vi进行解析和处理的。因此，临时变量只能在同一次脚本执行中使用，无法跨脚本保存和传递。且它不是CSM指令的一部分，无法在其他地方使用该语法。
+
 > - Ref: CSM消息的目标模块说明
 
 -- <b>输入控件(Controls)</b> --
