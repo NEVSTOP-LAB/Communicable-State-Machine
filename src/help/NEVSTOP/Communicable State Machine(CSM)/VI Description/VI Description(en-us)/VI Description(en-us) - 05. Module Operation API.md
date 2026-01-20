@@ -108,7 +108,9 @@ Sends a synchronous message to the CSM and waits for a reply before continuing c
 ## CSM - Run Script.vi
 Executes multiple CSM commands in a single batch, supporting synchronous messages, asynchronous messages, and registrations.
 
-CSM - Run Script.vi supports an additional supplementary syntax for saving return values to specified temporary variables for use in subsequent instructions. Use the `=>` symbol to save the return value to a variable, where variable names are case-insensitive. In subsequent instructions, you can reference the variable using the syntax `${variable name}`.
+<b>Temporary Variable Support</b>
+
+CSM - Run Script.vi supports an additional supplementary syntax to save return values to specified temporary variables for use in subsequent instructions. Use the `=>` symbol to save the return value to a variable, and variable names are case-insensitive. In subsequent instructions, you can reference the variable using the syntax `${variable name}`.
 
 Example:
 
@@ -120,8 +122,18 @@ API: echo >> ${var2} -@ csm
 API: echo >> ${var1},${var2} -@ csm
 ```
 
+<b>Additional Command</b>
+
+- Wait: Wait for the specified number of milliseconds, for example `Wait: 1000` means wait 1000 milliseconds.
+
+```
+API: Do Something -@ csm
+Wait: 1000 // Wait 1000 milliseconds, then continue to the next instruction
+API: Do Something Else -@ csm
+```
+
 > [!WARNING]
-> The syntax for saving temporary variables is not part of the CSM instructions themselves, but is parsed and processed by CSM - Run Script.vi. Therefore, temporary variables can only be used within the same script execution and cannot be saved or passed across scripts. Additionally, it is not part of CSM instructions and cannot be used elsewhere with this syntax.
+> <b>Temporary Variable Support</b> and <b>Additional Command</b> are not natively supported by CSM, but are parsed and processed by CSM - Run Script.vi. Therefore, temporary variables can only be used within the same script execution and cannot be saved or passed across scripts. Wait is also not part of the CSM instructions and cannot use this syntax elsewhere.
 
 > - Ref: CSM Message Target Module Description
 

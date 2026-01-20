@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-12-31 20:21:38" Creator="liyao" Comments="" ID="12921bd511acd5c4ff87cb8e9e3ab3bd">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2026-01-20 20:24:43" Creator="liyao" Comments="" ID="15f46b630790197cf539d19d999839b1">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2025.10.0.1</Library_Version>
@@ -87,7 +87,9 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
 [update] #498 SafeString now start with &lt;SafeStr&gt; argument type.
 [update] #461 Logviewer use queue of global log event.
 [add] #496 add script running function in debug console
-[update] #584 add more detailed information in CSM error</Release_Notes>
+[update] #584 add more detailed information in CSM error
+[add] support ¡°=&gt; VariableName" in CSM - Run Script.vi
+[add] additional command ¡°wait" in CSM - Run Script.vi</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
