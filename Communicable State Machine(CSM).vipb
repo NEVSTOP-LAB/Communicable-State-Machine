@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2026-01-20 20:24:43" Creator="liyao" Comments="" ID="15f46b630790197cf539d19d999839b1">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2026-01-20 22:41:59" Creator="liyao" Comments="" ID="ef6321e6682d34c348baf4889c3dc0ee">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2025.10.0.1</Library_Version>
@@ -89,7 +89,8 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
 [add] #496 add script running function in debug console
 [update] #584 add more detailed information in CSM error
 [add] support ¡°=&gt; VariableName" in CSM - Run Script.vi
-[add] additional command ¡°wait" in CSM - Run Script.vi</Release_Notes>
+[add] additional command ¡°wait" in CSM - Run Script.vi
+[add] #588 add "Current State" and "Remaining States" in CSM Data Core, which is helpful to debugging.</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>

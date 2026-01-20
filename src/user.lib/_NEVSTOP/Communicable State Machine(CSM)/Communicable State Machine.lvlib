@@ -192,6 +192,7 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 				<Item Name="_CSMObj-Is Group Alive.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Is Group Alive.vi"/>
 				<Item Name="_CSMObj-Message Check.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Message Check.vi"/>
 				<Item Name="_CSMObj-Update CSMList.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Update CSMList.vi"/>
+				<Item Name="_CSMObj-Update Remaing States.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Update Remaing States.vi"/>
 				<Item Name="_CSMObj-Update ChainData.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Update ChainData.vi"/>
 				<Item Name="_CSMObj-Mark as Initialized.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Mark as Initialized.vi"/>
 				<Item Name="_CSMObj-Mark as Exiting.vi" Type="VI" URL="../_Support/CSMQ/_CSMObj-Mark as Exiting.vi"/>
