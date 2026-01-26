@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2026-01-20 22:41:59" Creator="liyao" Comments="" ID="ef6321e6682d34c348baf4889c3dc0ee">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2026-01-26 11:22:23" Creator="liyao" Comments="" ID="3659db9934fe70cb6d05bf2f565caf74">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
-    <Library_Version>2025.10.0.1</Library_Version>
+    <Library_Version>2025.12.0.1</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>src</Library_Source_Folder>
     <Library_Output_Folder>vip</Library_Output_Folder>
@@ -65,32 +65,49 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
       <Copyright/>
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
-      <Release_Notes>[feature] #502 support module in lvlibp
-[fix] #499 fix critical Error Occurred when csm module is built into lvlibp and ran asyncly.
-[update] #504 do not use global variable as changing flag.
-[update] #501 Use ErrString for Critical Error
-[update] #545 ErrStr now support warning, which will be ignored and converted to empty string.
-[update] Improve palette/doc
-[fix] #533 CSM Attribute should be case insensitive.
-[fix] #535 Fix CSM Attribute TagDVR cache error
-[fix] #540 Fix "VI Reference" is not  allowed in Chain Mode by default.
-[add] #543 add ¡°CSM - Resolve Module Name.vi¡± to get module name from worker/chain node name
-[fix] #549 reset CSM - Module VI Reference.vi cache after topmost VI is restarted.
+      <Release_Notes>## Core
+[feature] #502 Support modules in lvlibp
+[add] #588 Add "Current State" and "Remaining States" to CSM Data Core for better debugging
+[update] #504 Do not use global variable as changing flag
+[update] #555 When CSM starts processing the Macro: Exit state, it no longer processes any messages
+[update] #584 Add more detailed information to CSM errors
+[fix] #499 Fix critical error that occurs when CSM module is built into lvlibp and run asynchronously
+
+## Argument
+[update] #545 ErrStr now supports warnings, which are ignored and converted to empty strings
+[update] #501 Use ErrString for critical errors
+[update] #498 SafeString now starts with &lt;SafeStr&gt; argument type
+
+## Global Log
+[add] #596 Add message log type for CSM global log
+[add] #561 Add &lt;Logger Thread Exit&gt; log and show the number of remaining logs
+[add] #520 Show call-chain of CSM module in "module created" log
+
+## API
+[add] Support ¡°=&gt; VariableName" in CSM - Run Script.vi
+[add] Add additional ¡°wait" command in CSM - Run Script.vi
+[add] #543 Add ¡°CSM - Resolve Module Name.vi¡± to get module name from worker/chain node name
 [add] #552 Add "CSM - Drop Broadcast Registry.vi" to clear all registration relationships
-[fix] #560 #556 management API should work for worker mode and chain mode
-[update] #555 When CSM start to process Macro: Exit state, it will not process any message anymore.
-[add] #561 Add &lt;Logger Thread Exit&gt; log and show the number of logs left. 
-[add] #520 Show call-chain of CSM module in "module created " log
-[fix] #548 fix CSM - Remove Module in Broadcast Registry.vi
-[fix] #557 fix remove internal registry rules for chain/worker
-[add] #596 add message log type for csm global log.
-[update] #498 SafeString now start with &lt;SafeStr&gt; argument type.
-[update] #461 Logviewer use queue of global log event.
-[add] #496 add script running function in debug console
-[update] #584 add more detailed information in CSM error
-[add] support ¡°=&gt; VariableName" in CSM - Run Script.vi
-[add] additional command ¡°wait" in CSM - Run Script.vi
-[add] #588 add "Current State" and "Remaining States" in CSM Data Core, which is helpful to debugging.</Release_Notes>
+[fix] #549 Reset CSM - Module VI Reference.vi cache after topmost VI restarts
+[fix] #548 Fix CSM - Remove Module in Broadcast Registry.vi
+
+## Attribute
+[fix] #535 Fix CSM Attribute TagDVR cache error
+[fix] #533 CSM Attribute should be case insensitive
+
+## Advance Modes
+[fix] #540 Fix "VI Reference" not allowed in Chain Mode by default
+[fix] #560 #556 Management API should work for worker mode and chain mode
+[fix] #557 Fix removal of internal registry rules for chain/worker
+
+## Debug Tools
+[add] New Example Browser Tool
+[add] #496 Add script running function in debug console
+[update] #461 Logviewer uses queue of global log events
+
+## Doc/Palette
+[update] Improve palette and documentation
+</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
