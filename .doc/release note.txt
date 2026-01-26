@@ -42,4 +42,5 @@ v2025Q4
 [update] #461 Logviewer uses queue of global log events
 
 ## Doc/Palette
+[feature] More testcases to cover all features of csm
 [update] Improve palette and documentation

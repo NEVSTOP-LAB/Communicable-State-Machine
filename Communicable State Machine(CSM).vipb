@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2026-01-26 11:22:23" Creator="liyao" Comments="" ID="3659db9934fe70cb6d05bf2f565caf74">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2026-01-26 11:27:24" Creator="liyao" Comments="" ID="e3fca4490153f2d7f37c36f99c77633d">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2025.12.0.1</Library_Version>
@@ -106,6 +106,7 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
 [update] #461 Logviewer uses queue of global log events
 
 ## Doc/Palette
+[feature] More testcases to cover all features of csm
 [update] Improve palette and documentation
 </Release_Notes>
     </Description>
