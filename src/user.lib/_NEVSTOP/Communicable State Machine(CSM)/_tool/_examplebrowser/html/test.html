@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown渲染示例</title>
+    <!-- 引入Polyfill以支持IE浏览器 -->
+    <script src="https://cdn.jsdelivr.net/npm/core-js@3.6.5/client/core.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/regenerator-runtime@0.13.7/runtime.min.js"></script>
+    <!-- 引入支持IE11的marked.js版本 -->
+    <script src="https://cdn.jsdelivr.net/npm/marked@4.0.18/marked.min.js"></script>
+    <style>
+        /* CSS样式 */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        #content {
+            min-height: 200px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fafafa;
+        }
+        
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+        }
+        
+        /* Markdown渲染后的样式 */
+        #content h1 {
+            color: #2c3e50;
+        }
+        
+        #content h2 {
+            color: #34495e;
+        }
+        
+        #content code {
+            background-color: #eee;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        
+        #content pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        
+        #content ul {
+            padding-left: 20px;
+        }
+        
+        /* 隐藏markdown div */
+        #markdown {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+        
+        <div id="markdown">
+# 我是标题
+这是一个段落
+
+## 二级标题
+这是另一个段落，包含**加粗**和*斜体*文本。
+
+- 列表项1
+- 列表项2
+- 列表项3
+
+```javascript
+// 代码示例
+console.log("Hello, World!");
+```
+        </div>
+
+        <!-- content元素，用于显示渲染后的Markdown内容 -->
+        <div id="content"></div>
+    
+    <script>
+        // 渲染函数: 从markdown div中读取原始Markdown内容，然后使用marked渲染到content div中
+        function renderMarkdown() {
+            // 1. 读取markdown元素中的原始Markdown内容
+            var markdownElement = document.getElementById('markdown');
+            var originalMarkdown = markdownElement.textContent || markdownElement.innerText; // 兼容IE
+            
+            // 2. 使用marked渲染Markdown内容(兼容不同版本的marked.js)
+            var renderedHtml;
+            if (typeof marked.parse === 'function') {
+                renderedHtml = marked.parse(originalMarkdown);
+            } else {
+                renderedHtml = marked(originalMarkdown);
+            }
+            
+            // 3. 将渲染后的HTML结果放到content元素中
+            var contentElement = document.getElementById('content');
+            contentElement.innerHTML = renderedHtml;
+            
+            console.log('Markdown渲染完成！');
+            console.log('原始Markdown内容:', originalMarkdown);
+            console.log('渲染后的HTML内容:', renderedHtml);
+        }
+        
+        // 页面加载完成后自动渲染
+        if (document.addEventListener) {
+            document.addEventListener('DOMContentLoaded', function() {
+                console.log('页面加载完成，等待渲染Markdown...');
+                renderMarkdown();
+            });
+        } else if (document.attachEvent) {
+            // IE8及以下版本的兼容
+            document.attachEvent('onreadystatechange', function() {
+                if (document.readyState === 'complete') {
+                    console.log('页面加载完成，等待渲染Markdown...');
+                    renderMarkdown();
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2025-09-15 21:12:36" Creator="liyao" Comments="" ID="c3f8383a14d7f72add86fadf03b3b1ac">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2026-01-26 11:27:24" Creator="liyao" Comments="" ID="e3fca4490153f2d7f37c36f99c77633d">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
-    <Library_Version>2025.9.0.1</Library_Version>
+    <Library_Version>2025.12.0.1</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>src</Library_Source_Folder>
     <Library_Output_Folder>vip</Library_Output_Folder>
@@ -65,11 +65,50 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
       <Copyright/>
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
-      <Release_Notes>[feature] #502 support module in lvlibp
-[fix] #499 fix critical Error Occurred when csm module is built into lvlibp and ran asyncly.
-[update] #504 do not use global variable as changing flag.
-[update] #501 Use ErrString for Critical Error
-[update] Improve palette/doc</Release_Notes>
+      <Release_Notes>## Core
+[feature] #502 Support modules in lvlibp
+[add] #588 Add "Current State" and "Remaining States" to CSM Data Core for better debugging
+[update] #504 Do not use global variable as changing flag
+[update] #555 When CSM starts processing the Macro: Exit state, it no longer processes any messages
+[update] #584 Add more detailed information to CSM errors
+[fix] #499 Fix critical error that occurs when CSM module is built into lvlibp and run asynchronously
+
+## Argument
+[update] #545 ErrStr now supports warnings, which are ignored and converted to empty strings
+[update] #501 Use ErrString for critical errors
+[update] #498 SafeString now starts with &lt;SafeStr&gt; argument type
+
+## Global Log
+[add] #596 Add message log type for CSM global log
+[add] #561 Add &lt;Logger Thread Exit&gt; log and show the number of remaining logs
+[add] #520 Show call-chain of CSM module in "module created" log
+
+## API
+[add] Support ¡°=&gt; VariableName" in CSM - Run Script.vi
+[add] Add additional ¡°wait" command in CSM - Run Script.vi
+[add] #543 Add ¡°CSM - Resolve Module Name.vi¡± to get module name from worker/chain node name
+[add] #552 Add "CSM - Drop Broadcast Registry.vi" to clear all registration relationships
+[fix] #549 Reset CSM - Module VI Reference.vi cache after topmost VI restarts
+[fix] #548 Fix CSM - Remove Module in Broadcast Registry.vi
+
+## Attribute
+[fix] #535 Fix CSM Attribute TagDVR cache error
+[fix] #533 CSM Attribute should be case insensitive
+
+## Advance Modes
+[fix] #540 Fix "VI Reference" not allowed in Chain Mode by default
+[fix] #560 #556 Management API should work for worker mode and chain mode
+[fix] #557 Fix removal of internal registry rules for chain/worker
+
+## Debug Tools
+[add] New Example Browser Tool
+[add] #496 Add script running function in debug console
+[update] #461 Logviewer uses queue of global log events
+
+## Doc/Palette
+[feature] More testcases to cover all features of csm
+[update] Improve palette and documentation
+</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -80,7 +119,7 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
       <Examples>
         <LLB>false</LLB>
         <Preserve_Hierarchy>true</Preserve_Hierarchy>
-        <Path/>
+        <Path>&lt;application&gt;\examples</Path>
       </Examples>
       <Custom_Probes>
         <LLB>false</LLB>
@@ -135,12 +174,6 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
       <Destination_Overrides>
         <Path>.</Path>
         <Destination>0</Destination>
-        <Additional_Destination>false</Additional_Destination>
-        <Additional_Destination_Index>0</Additional_Destination_Index>
-      </Destination_Overrides>
-      <Destination_Overrides>
-        <Path>Example</Path>
-        <Destination>1</Destination>
         <Additional_Destination>false</Additional_Destination>
         <Additional_Destination_Index>0</Additional_Destination_Index>
       </Destination_Overrides>
@@ -243,6 +276,7 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
       <close_labview_before_install>true</close_labview_before_install>
       <restart_labview_after_install>true</restart_labview_after_install>
       <skip_mass_compile_after_install>false</skip_mass_compile_after_install>
+      <install_into_global_environment>false</install_into_global_environment>
     </LabVIEW>
     <VI_Docs>
       <Edit_VI_Description>true</Edit_VI_Description>

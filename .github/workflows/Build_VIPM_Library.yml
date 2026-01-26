@@ -6,6 +6,8 @@ name: Build_VIPM_Library
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
+    branches-ignore:
+      - '**testcase**'
     paths-ignore:
       - '**.md'
       - '**.txt'
@@ -14,12 +16,12 @@ on:
       - '**.svg'
       - '**.json'
       - '**.yml'
-      - 'src/testcases/**'
+      - 'testcases/**'
       - 'src/_TEST/**'
 
   pull_request:
-    branches:
-      - main
+    branches-ignore:
+      - '**testcase**'
     types: [closed]
     paths-ignore:
       - '**.md'
@@ -29,7 +31,7 @@ on:
       - '**.svg'
       - '**.json'
       - '**.yml'
-      - 'src/testcases/**'
+      - 'testcases/**'
       - 'src/_TEST/**'
 
   # Allows you to run this workflow manually from the Actions tab
@@ -59,23 +61,24 @@ jobs:
         with:
           LabVIEW_Version: 2017
           VipbPath: ${{ github.workspace }}
-        timeout-minutes: 20
+        timeout-minutes: 30
         continue-on-error: true
 
       - name: Retry BuildDailyVIP if failed
+        id: retry-build-vip
         if: ${{ steps.build-vip.outcome == 'failure' }}
         uses: NEVSTOP-LAB/vipm-BuildViPackage@main
         with:
           LabVIEW_Version: 2017
           VipbPath: ${{ github.workspace }}
-        timeout-minutes: 20
+        timeout-minutes: 30
 
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4.3.2
         with:
           # Artifact name
-          name: ${{ steps.build-vip.outputs.vipName }}
-          path: ${{ steps.build-vip.outputs.vipPathName }}
+          name: ${{ steps.retry-build-vip.outputs.vipName || steps.build-vip.outputs.vipName }}
+          path: ${{ steps.retry-build-vip.outputs.vipPathName || steps.build-vip.outputs.vipPathName }}
           # The desired behavior if no files are found using the provided path.
           if-no-files-found: warn
           retention-days: 90

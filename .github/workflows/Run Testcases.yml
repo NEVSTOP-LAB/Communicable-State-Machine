@@ -49,4 +49,4 @@ jobs:
           LabVIEW_Version: 2017
           Operation: StartVITester
           Parameter1: ${{ github.workspace }}\Communicable State Machine(CSM).lvproj
-        timeout-minutes: 10
+        timeout-minutes: 60

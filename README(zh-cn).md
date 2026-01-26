@@ -6,7 +6,7 @@
 [![Image](https://www.vipm.io/package/nevstop_lib_communicable_state_machine/badge.svg?metric=stars)](https://www.vipm.io/package/nevstop_lib_communicable_state_machine/)
 [![GitHub all releases](https://img.shields.io/github/downloads/NEVSTOP-LAB/Communicable-State-Machine/total)](https://github.com/NEVSTOP-LAB/Communicable-State-Machine/releases)
 
-可通信状态机（CSM）是一个基于JKI状态机（JKISM）的LabVIEW应用框架。它遵循JKISM的设计模式，扩展了关键词以描述模块间的消息通信机制，包括同步消息、异步消息、状态订阅/取消订阅等关键概念——这些都是创建可重用代码模块不可或缺的要素。更多信息请访问CSM Wiki页面：<https://nevstop-lab.github.io/CSM-Wiki/>
+可通信状态机(CSM)是一个基于JKI状态机(JKISM)的LabVIEW应用框架。它遵循JKISM的设计模式，扩展了关键词以描述模块间的消息通信机制，包括同步消息、异步消息、状态订阅/取消订阅等关键概念——这些都是创建可重用代码模块不可或缺的要素。更多信息请访问CSM Wiki页面: <https://nevstop-lab.github.io/CSM-Wiki/>
 
 - 了解更多关于 JKI State Machine(JKISM) 的信息，请访问: <http://jki.net/state-machine/>
 - 了解更多关于 NEVSTOP-LAB 的信息，请访问: <https://github.com/NEVSTOP-LAB>
@@ -17,10 +17,10 @@ _**CSM 函数面板**_
 
 ![image](.doc/_img/CSM%20Palette.png)
 
-CSM 代码模板介绍：
+CSM 代码模板介绍: 
 [English](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/Template%20Description(EN).md) | [中文](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/Template%20Description(zh-cn).md)
 
-CSM API 介绍：
+CSM API 介绍: 
 [English](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/VI%20Description(EN).md) | [中文](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/VI%20Description(zh-cn).md)
 
 ## 创建基于 CSM 的可重用模块
@@ -49,10 +49,10 @@ CSM API 介绍：
     // 无应答异步调用示例
     API: xxxx >> 参数 ->| TargetModule
 
-    // 广播正常状态：
+    // 广播正常状态: 
     Status >> StatusArguments -><status>
 
-    // 广播中断状态：
+    // 广播中断状态: 
     Interrupt >> StatusArguments -><interrupt>
 
     // 将源模块的状态注册到处理程序模块
@@ -67,7 +67,7 @@ CSM API 介绍：
     // Another comment line
 ```
 
-更多语法信息请访问：[Syntax.md](https://github.com/NEVSTOP-LAB/Communicable-State-Machine/tree/main/.doc/Syntax.md)
+更多语法信息请访问: [Syntax.md](https://github.com/NEVSTOP-LAB/Communicable-State-Machine/tree/main/.doc/Syntax.md)
 
 可参考示例 _**/Example/2. Caller is CSM Scenario**_。
 

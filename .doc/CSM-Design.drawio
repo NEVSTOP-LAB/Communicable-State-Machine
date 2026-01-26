@@ -40,13 +40,13 @@
         <mxCell id="ue9UCVWdfoVIrYJgDfaV-11" value="Allowed Messages&lt;br&gt;(StringArray)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="100" y="375" width="100" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ue9UCVWdfoVIrYJgDfaV-1" value="Module Name&lt;br&gt;（String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-1" value="Module Name&lt;br&gt;(String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="100" y="95" width="100" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ue9UCVWdfoVIrYJgDfaV-2" value="Requested Name（String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-2" value="Requested Name(String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="100" y="165" width="100" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ue9UCVWdfoVIrYJgDfaV-3" value="Group Name&lt;br&gt;（String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-3" value="Group Name&lt;br&gt;(String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="100" y="235" width="100" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ue9UCVWdfoVIrYJgDfaV-4" value="Mode&lt;br&gt;(ENUM)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
@@ -73,13 +73,13 @@
         <mxCell id="ue9UCVWdfoVIrYJgDfaV-23" value="Allowed Messages&lt;br&gt;(StringArray)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="100" y="815" width="100" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ue9UCVWdfoVIrYJgDfaV-24" value="Module Name&lt;br&gt;（String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-24" value="Module Name&lt;br&gt;(String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="100" y="535" width="100" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ue9UCVWdfoVIrYJgDfaV-25" value="Requested Name（String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-25" value="Requested Name(String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="100" y="605" width="100" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ue9UCVWdfoVIrYJgDfaV-26" value="Group Name&lt;br&gt;（String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-26" value="Group Name&lt;br&gt;(String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="100" y="675" width="100" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ue9UCVWdfoVIrYJgDfaV-27" value="Mode&lt;br&gt;(ENUM)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
@@ -94,13 +94,13 @@
         <mxCell id="ue9UCVWdfoVIrYJgDfaV-35" value="Allowed Messages&lt;br&gt;(StringArray)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="570" y="815" width="100" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ue9UCVWdfoVIrYJgDfaV-36" value="Module Name&lt;br&gt;（String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-36" value="Module Name&lt;br&gt;(String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="570" y="535" width="100" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ue9UCVWdfoVIrYJgDfaV-37" value="Requested Name（String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-37" value="Requested Name(String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="570" y="605" width="100" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ue9UCVWdfoVIrYJgDfaV-38" value="Group Name&lt;br&gt;（String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-38" value="Group Name&lt;br&gt;(String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="570" y="675" width="100" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ue9UCVWdfoVIrYJgDfaV-39" value="Mode&lt;br&gt;(ENUM)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
@@ -127,13 +127,13 @@
         <mxCell id="ue9UCVWdfoVIrYJgDfaV-47" value="Allowed Messages&lt;br&gt;(StringArray)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="100" y="1295" width="100" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ue9UCVWdfoVIrYJgDfaV-48" value="Module Name&lt;br&gt;（String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-48" value="Module Name&lt;br&gt;(String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="100" y="1015" width="100" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ue9UCVWdfoVIrYJgDfaV-49" value="Requested Name（String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-49" value="Requested Name(String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="100" y="1085" width="100" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ue9UCVWdfoVIrYJgDfaV-50" value="Group Name&lt;br&gt;（String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-50" value="Group Name&lt;br&gt;(String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="100" y="1155" width="100" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ue9UCVWdfoVIrYJgDfaV-51" value="Mode&lt;br&gt;(ENUM)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
@@ -148,13 +148,13 @@
         <mxCell id="ue9UCVWdfoVIrYJgDfaV-55" value="Allowed Messages&lt;br&gt;(StringArray)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="570" y="1295" width="100" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ue9UCVWdfoVIrYJgDfaV-56" value="Module Name&lt;br&gt;（String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-56" value="Module Name&lt;br&gt;(String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="570" y="1015" width="100" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ue9UCVWdfoVIrYJgDfaV-57" value="Requested Name（String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-57" value="Requested Name(String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="570" y="1085" width="100" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ue9UCVWdfoVIrYJgDfaV-58" value="Group Name&lt;br&gt;（String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+        <mxCell id="ue9UCVWdfoVIrYJgDfaV-58" value="Group Name&lt;br&gt;(String)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="570" y="1155" width="100" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ue9UCVWdfoVIrYJgDfaV-59" value="Mode&lt;br&gt;(ENUM)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">

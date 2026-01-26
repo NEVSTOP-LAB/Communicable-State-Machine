@@ -5,9 +5,9 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Property Name="NI.SortType" Type="Int">3</Property>
-	<Item Name="CSMLS - Add Exit State(s) with Loop Check.vi" Type="VI" URL="../CSMLS - Add Exit State(s) with Loop Check.vi"/>
-	<Item Name="CSMLS - Append Continuous State.vi" Type="VI" URL="../CSMLS - Append Continuous State.vi"/>
 	<Item Name="CSMLS - Define Loop State(s).vi" Type="VI" URL="../CSMLS - Define Loop State(s).vi"/>
+	<Item Name="CSMLS - Append Continuous State.vi" Type="VI" URL="../CSMLS - Append Continuous State.vi"/>
 	<Item Name="CSMLS - Remove Loop Tag to Break.vi" Type="VI" URL="../CSMLS - Remove Loop Tag to Break.vi"/>
 	<Item Name="CSMLS - Remove Loop Tag and previous State(s) to Break.vi" Type="VI" URL="../CSMLS - Remove Loop Tag and previous State(s) to Break.vi"/>
+	<Item Name="CSMLS - Add Exit State(s) with Loop Check.vi" Type="VI" URL="../CSMLS - Add Exit State(s) with Loop Check.vi"/>
 </Library>

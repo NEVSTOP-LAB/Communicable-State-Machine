@@ -1,0 +1,46 @@
+v2025Q4
+---------------------------------------------------------
+
+## Core
+[feature] #502 Support modules in lvlibp
+[add] #588 Add "Current State" and "Remaining States" to CSM Data Core for better debugging
+[update] #504 Do not use global variable as changing flag
+[update] #555 When CSM starts processing the Macro: Exit state, it no longer processes any messages
+[update] #584 Add more detailed information to CSM errors
+[fix] #499 Fix critical error that occurs when CSM module is built into lvlibp and run asynchronously
+
+## Argument
+[update] #545 ErrStr now supports warnings, which are ignored and converted to empty strings
+[update] #501 Use ErrString for critical errors
+[update] #498 SafeString now starts with <SafeStr> argument type
+
+## Global Log
+[add] #596 Add message log type for CSM global log
+[add] #561 Add <Logger Thread Exit> log and show the number of remaining logs
+[add] #520 Show call-chain of CSM module in "module created" log
+
+## API
+[add] Support “=> VariableName" in CSM - Run Script.vi
+[add] Add additional “wait" command in CSM - Run Script.vi
+[add] #543 Add “CSM - Resolve Module Name.vi” to get module name from worker/chain node name
+[add] #552 Add "CSM - Drop Broadcast Registry.vi" to clear all registration relationships
+[fix] #549 Reset CSM - Module VI Reference.vi cache after topmost VI restarts
+[fix] #548 Fix CSM - Remove Module in Broadcast Registry.vi
+
+## Attribute
+[fix] #535 Fix CSM Attribute TagDVR cache error
+[fix] #533 CSM Attribute should be case insensitive
+
+## Advance Modes
+[fix] #540 Fix "VI Reference" not allowed in Chain Mode by default
+[fix] #560 #556 Management API should work for worker mode and chain mode
+[fix] #557 Fix removal of internal registry rules for chain/worker
+
+## Debug Tools
+[add] New Example Browser Tool
+[add] #496 Add script running function in debug console
+[update] #461 Logviewer uses queue of global log events
+
+## Doc/Palette
+[feature] More testcases to cover all features of csm
+[update] Improve palette and documentation

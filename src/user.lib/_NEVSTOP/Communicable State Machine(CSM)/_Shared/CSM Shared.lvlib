@@ -3,13 +3,9 @@
 	<Property Name="NI.Lib.Icon" Type="Bin">&amp;Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!(]!!!*Q(C=\&gt;7R=2MR%!81N=?"5X&lt;A91P&lt;!FNA#^M#5Y6M96NA"R[WM#WQ"&lt;9A0ZYR'E?G!WPM1$AN&gt;@S(!ZZQG&amp;0%VLZ'@)H8:_X\&lt;^P(^7@8H\4Y;"`NX\;8JZPUX@@MJXC]C.3I6K5S(F/^DHTE)R`ZS%@?]J;XP/5N&lt;XH*3V\SEJ?]Z#F0?=J4HP+5&lt;Y=]Z#%0/&gt;+9@%QU"BU$D-YI-4[':XC':XB]D?%:HO%:HO(2*9:H?):H?)&lt;(&lt;4%]QT-]QT-]BNIEMRVSHO%R@$20]T20]T30+;.Z'K".VA:OAW"%O^B/GK&gt;ZGM&gt;J.%`T.%`T.)`,U4T.UTT.UTROW6;F.]XDE0-9*IKH?)KH?)L(U&amp;%]R6-]R6-]JIPC+:[#+"/7Q2'CX&amp;1[F#`&amp;5TR_2@%54`%54`'YN$WBWF&lt;GI8E==J\E3:\E3:\E-51E4`)E4`)EDW%D?:)H?:)H?5Q6S:-]S:-A;6,42RIMX:A[J3"Z`'S\*&lt;?HV*MENS.C&lt;&gt;Z9GT,7:IOVC7*NDFA00&gt;&lt;$D0719CV_L%7.N6CR&amp;C(7(R=,(1M4;Z*9.T][RNXH46X62:X632X61?X6\H(L8_ZYP^`D&gt;LP&amp;^8K.S_53Z`-Z4K&gt;4()`(/"Q/M&gt;`P9\@&lt;P&lt;U'PDH?8AA`XUMPTP_EXOF`[8`Q&lt;IT0]?OYVOA(5/(_Z!!!!!!</Property>
 	<Property Name="NI.Lib.SourceVersion" Type="Int">385908736</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
+	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Property Name="NI.SortType" Type="Int">3</Property>
-	<Item Name="Typedef" Type="Folder">
-		<Item Name="CSM Part Property.ctl" Type="VI" URL="../CSM Part Property.ctl"/>
-		<Item Name="Single-Line Type.ctl" Type="VI" URL="../Single-Line Type.ctl"/>
-		<Item Name="Single-Line Selection Type.ctl" Type="VI" URL="../Single-Line Selection Type.ctl"/>
-	</Item>
-	<Item Name="Single-line State Operation" Type="Folder">
+	<Item Name="Single-line String" Type="Folder">
 		<Item Name="Add State(s) to Queue__jkism.vi" Type="VI" URL="../Add State(s) to Queue__jkism.vi"/>
 		<Item Name="Concatenate State with Comments.vi" Type="VI" URL="../Concatenate State with Comments.vi"/>
 		<Item Name="Concatenate State with Arguments.vi" Type="VI" URL="../Concatenate State with Arguments.vi"/>
@@ -17,7 +13,6 @@
 		<Item Name="Split Single-line Message.vi" Type="VI" URL="../Split Single-line Message.vi"/>
 		<Item Name="Split Single-line Reason Parts.vi" Type="VI" URL="../Split Single-line Reason Parts.vi"/>
 		<Item Name="Trim Single-line Text.vi" Type="VI" URL="../Trim Single-line Text.vi"/>
-		<Item Name="Single-Line To CSM Parts.vi" Type="VI" URL="../Single-Line To CSM Parts.vi"/>
 		<Item Name="Parse Next Single-line.vi" Type="VI" URL="../Parse Next Single-line.vi"/>
 		<Item Name="Concatenate PostPostMsg Message.vi" Type="VI" URL="../Concatenate PostPostMsg Message.vi"/>
 		<Item Name="Replace LastResp Token.vi" Type="VI" URL="../Replace LastResp Token.vi"/>
@@ -40,6 +35,7 @@
 		<Item Name="Is Asynchronous Call.vi" Type="VI" URL="../Is Asynchronous Call.vi"/>
 		<Item Name="Concatenate Non-Empty Strings.vi" Type="VI" URL="../Concatenate Non-Empty Strings.vi"/>
 		<Item Name="Pick Lines by Section Pattern.vi" Type="VI" URL="../Pick Lines by Section Pattern.vi"/>
+		<Item Name="Parse Contained Variables.vi" Type="VI" URL="../Parse Contained Variables.vi"/>
 	</Item>
 	<Item Name="Semaphore" Type="Folder">
 		<Item Name="Semaphore Lock.vi" Type="VI" URL="../Semaphore Lock.vi"/>

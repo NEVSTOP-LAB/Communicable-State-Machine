@@ -12,7 +12,7 @@
 
 ### :two: 代码开发
 
-请通过 PR 的方式，提交对于 CSM 框架的代码修改。请注意以下几点：
+请通过 PR 的方式，提交对于 CSM 框架的代码修改。请注意以下几点:
 
 1. PR 需要关联某个 ISSUE，或者清晰描述 PR 的目的及修改内容。
 2. 若修改内容与已有 ISSUE 无关，请先创建 ISSUE，再提交 PR。
@@ -29,7 +29,7 @@ CSM 的 Wiki 是一个开放的知识库，欢迎大家参与维护。你可以�
 
 ## 鸣谢(Acknowledgement)
 
-感谢以下贡献者对 CSM 的贡献，排名按时间顺序：
+感谢以下贡献者对 CSM 的贡献，排名按时间顺序:
 
 - @Leo452379([GitHub](https://github.com/Leo452379)) 参与CSM原型的设计和开发。
 
@@ -62,3 +62,5 @@ CSM 的 Wiki 是一个开放的知识库，欢迎大家参与维护。你可以�
 - @基友湖渔夫([知乎](https://www.zhihu.com/people/heng-yi-56-31)) 反馈CSM Attributes需求并被采纳。
 
 - @小橙子([知乎](https://www.zhihu.com/people/45-59-95-79)) 反馈CSM INI Variable Addon范例问题并被采纳。
+
+- @SiebenerRepublikII([GitHub](https://github.com/SiebenerRepublikII)) 更新完善CSM的测试用例
