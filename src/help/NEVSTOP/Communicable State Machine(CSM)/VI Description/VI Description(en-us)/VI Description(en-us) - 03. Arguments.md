@@ -3,7 +3,7 @@
 > [!NOTE]
 > <b>CSM Message Keywords</b>
 >
-> The following are CSM message keywords: `->`, `->|`, `-@`, `-&`, `<-`, `\r`, `\n`, `//`, `>>`, `>>>`, `>>>`, `;`, `,`.
+> The following are CSM message keywords: `->`, `->|`, `-@`, `-&`, `<-`, `\r`, `\n`, `//`, `>>`, `>>>`, `>>>>`, `;`, `,`.
 
 > [!NOTE]
 > <b>CSM Argument Type</b>
