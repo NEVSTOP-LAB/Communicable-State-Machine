@@ -155,6 +155,7 @@ API: Do Something Else -@ csm
 -- <b>输入控件(Controls)</b> --
 - <b>CSM Module</b>: CSM模块名称。
 - <b>Wait (5000 ms)</b>: 等待超时时间，默认为5000 ms。
+- <b>Auto Register? (T)</b>: 是否自动注册全部的状态更改事件句柄，默认注册。
 
 -- <b>输出控件(Indicators)</b> --
 - <b>Status Change Event</b>: CSM状态更改事件句柄。

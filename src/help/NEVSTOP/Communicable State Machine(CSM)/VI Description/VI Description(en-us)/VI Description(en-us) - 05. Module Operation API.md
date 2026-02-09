@@ -154,6 +154,7 @@ Obtains the CSM status change event refnum.
 -- <b>Controls</b> --
 - <b>CSM Module</b>: CSM module name.
 - <b>Wait (5000 ms)</b>: Timeout duration for waiting module to be alive. The default is 5000 ms.
+- <b>Auto Register? (T)</b>: Whether to automatically register all status change event handlers. The default is TRUE, which specifies to register.
 
 -- <b>Indicators</b> --
 - <b>Status Change Event</b>: CSM status change event refnum.
