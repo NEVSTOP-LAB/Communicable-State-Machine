@@ -190,8 +190,8 @@ Saves the current input string to the cache. When the cached history strings exc
 > The global log processing level is used to control the processing speed of global logs. Higher levels omit different information to improve processing speed.
 >
 > - Normal: Standard processing, collects rate and count statistics, and updates the latest filtered parameters;
-> - Level1: Filters periodic logs, but only updates the filtered list
-> - Level2: Filters periodic logs, but does not update the filtered list
+> - Level1: Filters periodic logs, but only updates the filtered list;
+> - Level2: Filters periodic logs, but does not update the filtered list;
 > - Level3/Level4 (currently handled as default): Automatically sets source-side filtering rules. Periodic logs will not be sent from the source, so no tools will be able to detect these log records.
 
 -- <b>Controls</b> --
