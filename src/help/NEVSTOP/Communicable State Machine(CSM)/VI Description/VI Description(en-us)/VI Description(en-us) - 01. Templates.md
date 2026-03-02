@@ -22,7 +22,7 @@
 > - The default value is "Macro: Exit", which is consistent with the JKISM state machine.
 > - This state is used to exit the state machine of a CSM module. After entering this state, a CSM module no longer processes externally sent messages.
 
-> [!NOTE]
+> [!WARNING]
 > <b>Multiple CSMs in a Single VI</b>
 >
 > - It is not recommended to place multiple (≥2) CSMs in a flat layout within a single VI. While this will not cause logical issues in the program, it will prevent the CSM Debug Console from loading all the inner and outer interfaces of the flat CSMs in that VI — only one will be loaded.
