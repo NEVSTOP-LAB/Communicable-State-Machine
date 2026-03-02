@@ -22,12 +22,18 @@
 > - The default value is "Macro: Exit", which is consistent with the JKISM state machine.
 > - This state is used to exit the state machine of a CSM module. After entering this state, a CSM module no longer processes externally sent messages.
 
+> [!WARNING]
+> <b>Multiple CSMs in a Single VI</b>
+>
+> - It is not recommended to place multiple (≥2) CSMs in a flat layout within a single VI. While this will not cause logical issues in the program, it will prevent the CSM Debug Console from loading all the inner and outer interfaces of the flat CSMs in that VI — only one will be loaded.
+
 ## CSM User Interface(UI) Module Template.vi
 A template for creating a CSM module with a user interface. This template includes a user Event Structure for responding to user actions.
 
 > - Ref: CSM Naming Rules
 > - Ref: CSM Initialize State
 > - Ref: CSM Exit State
+> - Ref: Multiple CSMs in a Single VI
 
 -- <b>Controls</b> --
 - <b>Name ("" to use UUID)</b>: CSM module name. Refer to <b>CSM Naming Rules</b> for module naming rules.
@@ -38,6 +44,7 @@ A template for creating a CSM module without a user interface. This is the most 
 > - Ref: CSM Naming Rules
 > - Ref: CSM Initialize State
 > - Ref: CSM Exit State
+> - Ref: Multiple CSMs in a Single VI
 
 -- <b>Controls</b> --
 - <b>Name ("" to use UUID)</b>: CSM module name. Refer to <b>CSM Naming Rules</b> for module naming rules.
@@ -48,6 +55,7 @@ Compact code template for creating a CSM module without a user interface. The fu
 > - Ref: CSM Naming Rules
 > - Ref: CSM Initialize State
 > - Ref: CSM Exit State
+> - Ref: Multiple CSMs in a Single VI
 
 -- <b>Controls</b> --
 - <b>Name ("" to use UUID)</b>: CSM module name. Refer to <b>CSM Naming Rules</b> for module naming rules.
@@ -58,6 +66,7 @@ Compact code template used to create a CSM module with a user interface. This te
 > - Ref: CSM Naming Rules
 > - Ref: CSM Initialize State
 > - Ref: CSM Exit State
+> - Ref: Multiple CSMs in a Single VI
 
 -- <b>Controls</b> --
 - <b>Name ("" to use UUID)</b>: CSM module name. Refer to <b>CSM Naming Rules</b> for module naming rules.
@@ -75,6 +84,7 @@ Refer to the following example `[CSM-Example]\4. Advance Examples\CSMLS - Contin
 > - Ref: CSM Naming Rules
 > - Ref: CSM Initialize State
 > - Ref: CSM Exit State
+> - Ref: Multiple CSMs in a Single VI
 
 -- <b>Controls</b> --
 - <b>Name ("" to use UUID)</b>: CSM module name. Refer to <b>CSM Naming Rules</b> for module naming rules.
