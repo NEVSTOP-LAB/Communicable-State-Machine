@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2026-03-06 15:01:54" Creator="liyao" Comments="" ID="1c3ca38b657c6651306d0513fefa7892">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2026-03-06 16:02:14" Creator="liyao" Comments="" ID="5eeda33f358a8d443a7d4bae44003db6">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2026.1.0.1</Library_Version>
@@ -69,6 +69,7 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
 [update] #590 Show nodes left number in module destroy log for worker/chain mode.
 [update] Doc Update
 [fix] #591 Exiting issue for chain mode when some node is timout for "macro: exit"
+[fix] fix "CSM - Interface Browser.vi" launcher entry
 [remove] Remove "fCSM - Add VI Reference Case to CSMs.vi" tool</Release_Notes>
     </Description>
     <Destinations>
