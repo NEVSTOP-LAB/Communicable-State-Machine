@@ -4,8 +4,5 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">385908736</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
-	<Item Name="Support" Type="Folder">
-		<Item Name="Close Caller FP if In LabVIEW folder.vi" Type="VI" URL="../_csm_tool_menu/Close Caller FP if In LabVIEW folder.vi"/>
-	</Item>
 	<Item Name="Open CSM_Tool_Launcher.vi" Type="VI" URL="../Open CSM_Tool_Launcher.vi"/>
 </Library>
