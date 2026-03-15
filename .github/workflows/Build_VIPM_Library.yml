@@ -52,7 +52,7 @@ jobs:
       - uses: FranzDiebold/github-env-vars-action@v2
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4.2.2
 
       # Runs a set of commands using the runners shell
       - name: BuildDailyVIP
