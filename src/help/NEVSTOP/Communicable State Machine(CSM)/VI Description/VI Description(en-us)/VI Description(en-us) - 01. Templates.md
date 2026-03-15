@@ -25,7 +25,7 @@
 > [!WARNING]
 > <b>Multiple CSMs in a Single VI</b>
 >
-> - It is not recommended to place multiple (≥2) CSMs in a flat layout within a single VI. While this will not cause logical issues in the program, it will prevent the CSM Debug Console from loading all the inner and outer interfaces of the flat CSMs in that VI — only one will be loaded.
+> - It is not recommended to place multiple (>=2) CSMs in a flat layout within a single VI. While this will not cause logical issues in the program, it will prevent the CSM Debug Console from loading all the inner and outer interfaces of the flat CSMs in that VI - only one will be loaded.
 
 ## CSM User Interface(UI) Module Template.vi
 A template for creating a CSM module with a user interface. This template includes a user Event Structure for responding to user actions.

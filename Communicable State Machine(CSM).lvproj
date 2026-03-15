@@ -112,6 +112,7 @@
 				<Item Name="Check CSM Modules Exist Or Not.vi" Type="VI" URL="../testcases/_support/Check CSM Modules Exist Or Not.vi"/>
 				<Item Name="Package Error Info.vi" Type="VI" URL="../testcases/_support/Package Error Info.vi"/>
 				<Item Name="Ensure All Modules Exit.vi" Type="VI" URL="../testcases/_support/Ensure All Modules Exit.vi"/>
+				<Item Name="passifeqal - StringArray.vi" Type="VI" URL="../testcases/_support/passifeqal - StringArray.vi"/>
 			</Item>
 			<Item Name="_previous" Type="Folder">
 				<Item Name="_CSMs" Type="Folder">
