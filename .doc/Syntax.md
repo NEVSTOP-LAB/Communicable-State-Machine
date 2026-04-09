@@ -97,6 +97,25 @@ StateName >> Arguments
 
 **中文：** 将状态加入本地模块的状态队列。`>>` 分隔状态名与参数。若无参数可省略 `>>`。
 
+> [!NOTE]
+> **Reserved Built-in States — 预置保留状态**
+>
+> **English:** Every CSM module should handle the following built-in states. They are triggered automatically by the framework.
+>
+> **中文：** 每个 CSM 模块都应处理以下内置状态，它们由框架自动触发。
+>
+> | State / 状态 | Trigger / 触发时机 |
+> | --- | --- |
+> | `Macro: Initialize` | Module startup / 模块启动时 |
+> | `Macro: Exit` | Exit request received / 收到退出请求时 |
+> | `Error Handler` | LabVIEW error passed to `Parse State Queue++.vi` / LabVIEW 错误传入 `Parse State Queue++.vi` 时 |
+> | `Response` | Reply received from a synchronous call / 收到同步调用的回复时 |
+> | `Async Response` | Reply received from an async call with reply (<code>-></code>) / 收到有返回异步调用的回复时 |
+> | `Async Message Posted` | After sending any async message (<code>-></code> or <code>->&#124;</code>) / 发送任意异步消息（<code>-></code> 或 <code>->&#124;</code>）> 后 |
+> | `Target Timeout Error` | Sync call timed out / 同步调用超时未响应 |
+> | `Target Error` | Target module does not exist / 目标模块不存在 |
+> | `Critical Error` | Framework-level fatal error (e.g. duplicate module name) / 框架级严重错误（如模块名重复） |
+
 ---
 
 ### 1.2 Synchronous Call — 同步调用
@@ -114,6 +133,26 @@ StateName >> Arguments -@ TargetModule
 
 - 可能的错误：`Target Error`（模块不存在）、`Target Timeout Error`（超时未回复）。
 - 超时通过 `CSM - Set TMO of Sync-Reply.vi` 全局配置。值：`-2` = 使用全局设置，`-1` = 永久等待，`> 0` = 毫秒数。
+
+> [!NOTE]
+> **Module Naming Rules — 模块命名规则**
+>
+> **English:** A valid CSM module name must **not** contain any of the following reserved characters:
+> `~ ! @ % ^ & * ( ) [ ] { } + = | \ / ? ' " < > ,`
+> and must not contain whitespace characters (tab `\t`, carriage return `\r`, newline `\n`).
+>
+> **中文：** 合法的 CSM 模块名称**不得**包含以下保留字符：
+> `~ ! @ % ^ & * ( ) [ ] { } + = | \ / ? ' " < > ,`
+> 以及不得包含空白字符（制表符 `\t`、回车符 `\r`、换行符 `\n`）。
+>
+> | Pattern / 模式 | Meaning / 含义 |
+> | --- | --- |
+> | `ModuleName` | Regular module / 普通模块 |
+> | `.ModuleName` | System-level module (not listed by default) / 系统级模块（默认不被列出） |
+> | `ModuleName.SubName` | Logical sub-module grouping / 逻辑子模块分组 |
+> | `ModuleName#` | Worker Mode node request name / 工作者模式节点申请名 |
+> | `ModuleName$Order` | Chain of Responsibility Mode node (e.g. `Handler$1`) / 责任链模式节点（如 `Handler$1`） |
+> | `""` (empty string) | Auto-assigned UUID; independent, not listed / 自动分配 UUID，独立运行，不出现在模块列表 |
 
 ---
 
@@ -244,68 +283,14 @@ StateName >> Arguments  // inline comment
 
 ---
 
-## 5. Module Naming Rules — 模块命名规则
-
-> [!NOTE]
-> **English:** A valid CSM module name must **not** contain any of the following reserved characters:
-> `~ ! @ % ^ & * ( ) [ ] { } + = | \ / ? ' " < > ,`
-> and must not contain whitespace characters (tab `\t`, carriage return `\r`, newline `\n`).
->
-> **中文：** 合法的 CSM 模块名称**不得**包含以下保留字符：
-> `~ ! @ % ^ & * ( ) [ ] { } + = | \ / ? ' " < > ,`
-> 以及不得包含空白字符（制表符 `\t`、回车符 `\r`、换行符 `\n`）。
-
-| Pattern / 模式 | Meaning / 含义 |
-| --- | --- |
-| `ModuleName` | Regular module / 普通模块 |
-| `.ModuleName` | System-level module (not listed by default) / 系统级模块（默认不被列出） |
-| `ModuleName.SubName` | Logical sub-module grouping / 逻辑子模块分组 |
-| `ModuleName#` | Worker Mode node request name / 工作者模式节点申请名 |
-| `ModuleName$Order` | Chain of Responsibility Mode node (e.g. `Handler$1`) / 责任链模式节点（如 `Handler$1`） |
-| `""` (empty string) | Auto-assigned UUID; independent, not listed / 自动分配 UUID，独立运行，不出现在模块列表 |
-
----
-
-## 6. Reserved Built-in States — 预置保留状态
-
-> [!NOTE]
-> **English:** Every CSM module should handle the following built-in states. They are triggered automatically by the framework.
->
-> **中文：** 每个 CSM 模块都应处理以下内置状态，它们由框架自动触发。
-
-| State / 状态 | Trigger / 触发时机 |
-| --- | --- |
-| `Macro: Initialize` | Module startup / 模块启动时 |
-| `Macro: Exit` | Exit request received / 收到退出请求时 |
-| `Error Handler` | LabVIEW error passed to `Parse State Queue++.vi` / LabVIEW 错误传入 `Parse State Queue++.vi` 时 |
-| `Response` | Reply received from a synchronous call / 收到同步调用的回复时 |
-| `Async Response` | Reply received from an async call with reply (<code>-></code>) / 收到有返回异步调用的回复时 |
-| `Async Message Posted` | After sending any async message (<code>-></code> or <code>->&#124;</code>) / 发送任意异步消息（<code>-></code> 或 <code>->&#124;</code>）后 |
-| `Target Timeout Error` | Sync call timed out / 同步调用超时未响应 |
-| `Target Error` | Target module does not exist / 目标模块不存在 |
-| `Critical Error` | Framework-level fatal error (e.g. duplicate module name) / 框架级严重错误（如模块名重复） |
-
----
-
-## 7. CSM Keywords (Reserved Characters in Arguments) — CSM 关键字（参数中的保留字符）
-
-> [!WARNING]
-> **English:** The following strings are CSM keywords and **must not** appear unescaped inside an argument string. Use `CSM - Make String Arguments Safe.vi` (encodes as `<SAFESTR>`) or one of the other encoding schemes to pass arguments containing these characters safely.
->
-> **中文：** 以下字符串是 CSM 关键字，**不得**在参数字符串中直接使用。若参数中包含这些字符，请使用 `CSM - Make String Arguments Safe.vi`（编码为 `<SAFESTR>`）或其他编码方案安全传递。
-
-`->` `->|` `-@` `-&` `<-` `\r` `\n` `//` `>>` `>>>` `>>>>` `;` `,`
-
----
-
-## 8. CSM Script Syntax (Run Script VI only) — CSM 脚本语法（仅用于 Run Script VI）
+## 5. CSM Script Syntax (Run Script VI only) — CSM 脚本语法（仅用于 Run Script VI）
 
 > [!IMPORTANT]
 > **Note / 注意：** The following syntax extensions are **only** parsed by `CSM - Run Script.vi` and cannot be used in the regular state queue.
 >
 > 以下语法扩展**仅**由 `CSM - Run Script.vi` 解析，不能用于普通状态队列。
 
-### 8.1 Save Return Value to Variable — 将返回值保存到变量
+### 5.1 Save Return Value to Variable — 将返回值保存到变量
 
 ```
 StateName >> Arguments -@ TargetModule => variableName
@@ -315,7 +300,7 @@ StateName >> Arguments -@ TargetModule => variableName
 
 **中文：** 同步调用完成后，将响应存储到 `variableName`。变量名大小写不敏感。
 
-### 8.2 Reference a Variable — 引用变量
+### 5.2 Reference a Variable — 引用变量
 
 ```
 StateName >> ${variableName} -@ TargetModule
@@ -325,7 +310,7 @@ StateName >> ${variableName} -@ TargetModule
 
 **中文：** 将 `variableName` 的值替换到参数中。
 
-### 8.3 Wait Command — 等待命令
+### 5.3 Wait Command — 等待命令
 
 ```
 Wait: milliseconds
