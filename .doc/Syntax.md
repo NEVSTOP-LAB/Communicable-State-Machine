@@ -97,13 +97,6 @@ StateName >> Arguments
 
 **中文：** 将状态加入本地模块的状态队列。`>>` 分隔状态名与参数。若无参数可省略 `>>`。
 
-```
-// Examples / 示例
-Macro: Initialize
-DoSth: DoA >> SomeArguments
-UI: Update >> <HEXSTR>0A1B2C3D
-```
-
 ---
 
 ### 1.2 Synchronous Call — 同步调用
@@ -122,12 +115,6 @@ StateName >> Arguments -@ TargetModule
 - 可能的错误：`Target Error`（模块不存在）、`Target Timeout Error`（超时未回复）。
 - 超时通过 `CSM - Set TMO of Sync-Reply.vi` 全局配置。值：`-2` = 使用全局设置，`-1` = 永久等待，`> 0` = 毫秒数。
 
-```
-// Examples / 示例
-API: GetData >> request -@ DatabaseModule
-API: Initialize -@ SubModule
-```
-
 ---
 
 ### 1.3 Asynchronous Call (with Reply) — 异步调用（有返回）
@@ -144,12 +131,6 @@ StateName >> Arguments -> TargetModule
 
 - 可能的错误：`Target Error`（目标模块不存在）。
 
-```
-// Examples / 示例
-API: StartTask >> config -> WorkerModule
-API: EchoArguments >> xyz -> SubModule
-```
-
 ---
 
 ### 1.4 Asynchronous Call (No Reply) — 异步调用（无返回）
@@ -161,12 +142,6 @@ StateName >> Arguments ->| TargetModule
 **English:** Sends a fire-and-forget asynchronous message. The sending module immediately enters the `Async Message Posted` state. No reply is ever sent back; `Async Response` is **not** triggered.
 
 **中文：** 发送"发完即忘"的异步消息。发送方立即进入 `Async Message Posted` 状态。目标模块处理完毕后**不回复**，`Async Response` 状态**不**被触发。
-
-```
-// Examples / 示例
-API: Stop ->| SubModule
-UI: Front Panel State >> Open ->| UIModule
-```
 
 ---
 
@@ -184,12 +159,6 @@ StatusName >> Arguments -><all>
 
 **中文：** 向所有已注册的订阅者广播普通优先级的状态变化。消息通过**低优先级队列**传递（与异步消息相同）。三种写法等价。
 
-```
-// Examples / 示例
-Download Finished >> filePath -><status>
-Data Ready >> <HEXSTR>0A1B2C -><broadcast>
-```
-
 ---
 
 ### 2.2 Interrupt Broadcast (High Priority) — 中断广播（高优先级）
@@ -201,12 +170,6 @@ StatusName >> Arguments -><interrupt>
 **English:** Broadcasts a high-priority interrupt to all registered subscribers. The message is delivered via the **high-priority queue** (same as sync messages) and is processed before any pending low-priority messages.
 
 **中文：** 向所有已注册的订阅者广播高优先级中断。消息通过**高优先级队列**传递（与同步消息相同），在所有低优先级消息前被处理。
-
-```
-// Examples / 示例
-Emergency Stop >> reason -><interrupt>
-Critical Alert >> errorCode -><interrupt>
-```
 
 ---
 
@@ -232,22 +195,6 @@ SourceStatus@SourceModule >> HandlerAPI@TargetModule -><register>
 - 指定 `@TargetModule` 为**外部/全局规则**，目标模块退出后仍然保留。
 - 接收到的消息优先级默认跟随广播类型（信号或中断）。
 
-```
-// Examples / 示例
-
-// Full form: source and target module both specified
-// 完整写法：同时指定来源模块和目标模块
-Download Finished@Downloader >> Start Play@Player -><register>
-
-// Omit target module name when registering within the same module
-// 在相同模块内注册时可省略目标模块名
-Download Finished@Downloader >> Start Play -><register>
-
-// Subscribe to a status from any source module using wildcard *
-// 使用通配符 * 订阅任意来源模块的同名状态
-Error Occurred@* >> Error Handler@MainApp -><register>
-```
-
 ---
 
 ### 3.2 Register with Priority Override — 注册时覆盖优先级
@@ -270,17 +217,6 @@ SourceStatus@SourceModule >> HandlerAPI@TargetModule -><register as interrupt>
 `<register as status>` 始终以普通优先级接收。
 `<register as interrupt>` 始终以高优先级（中断）接收。
 
-```
-// Examples / 示例
-// Treat an interrupt broadcast as normal priority in this module
-// 在本模块中将中断广播降级为普通优先级处理
-UrgentEvent@SensorModule >> Handle Event@UI -><register as status>
-
-// Treat a status broadcast as interrupt in this module
-// 在本模块中将信号广播升级为中断优先级处理
-Data Ready@DAQModule >> Process Data -><register as interrupt>
-```
-
 ---
 
 ### 3.3 Unregister — 取消订阅
@@ -292,12 +228,6 @@ SourceStatus@SourceModule >> HandlerAPI@TargetModule -><unregister>
 **English:** Removes a previously registered subscription rule.
 
 **中文：** 删除之前注册的订阅规则。
-
-```
-// Examples / 示例
-Download Finished@Downloader >> Start Play@Player -><unregister>
-Error Occurred@* >> Error Handler@MainApp -><unregister>
-```
 
 ---
 
@@ -311,13 +241,6 @@ StateName >> Arguments  // inline comment
 **English:** Use `//` to add comments. All text to the right of `//` on the same line is ignored by the parser.
 
 **中文：** 使用 `//` 添加注释。`//` 右侧的所有文本将被解析器忽略。
-
-```
-// Examples / 示例
-UI: Initialize   // This initializes the UI / 初始化 UI
-// Another comment line / 另一行注释
-Macro: Initialize
-```
 
 ---
 
@@ -340,15 +263,6 @@ Macro: Initialize
 | `ModuleName#` | Worker Mode node request name / 工作者模式节点申请名 |
 | `ModuleName$Order` | Chain of Responsibility Mode node (e.g. `Handler$1`) / 责任链模式节点（如 `Handler$1`） |
 | `""` (empty string) | Auto-assigned UUID; independent, not listed / 自动分配 UUID，独立运行，不出现在模块列表 |
-
-```
-// Examples / 示例
-MainApp               // Regular module / 普通模块
-.BackgroundLogger     // System-level module / 系统级模块
-System.Config         // Logical submodule of "System" / "System" 的逻辑子模块
-Downloader#           // Worker Mode request name / 工作者模式申请名
-Approver$1            // Chain node with order 1 / 责任链节点，顺序为 1
-```
 
 ---
 
@@ -420,14 +334,3 @@ Wait: milliseconds
 **English:** Pauses script execution for the specified number of milliseconds before proceeding to the next instruction.
 
 **中文：** 在执行下一条指令前等待指定的毫秒数。
-
-```
-// Script Example / 脚本示例
-API: Random -@ csm => var1
-API: Random -@ csm => var2
-API: echo >> ${var1} -@ csm
-API: echo >> ${var2} -@ csm
-API: echo >> ${var1},${var2} -@ csm
-Wait: 1000    // Wait 1000 ms / 等待 1000 毫秒
-API: Do Something Else -@ csm
-```
