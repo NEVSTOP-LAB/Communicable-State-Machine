@@ -323,13 +323,14 @@ Macro: Initialize
 
 ## 5. Module Naming Rules — 模块命名规则
 
-**English:** A valid CSM module name must **not** contain any of the following reserved characters:
-`~ ! @ % ^ & * ( ) [ ] { } + = | \ / ? ' " < > ,`
-and must not contain whitespace characters (tab `\t`, carriage return `\r`, newline `\n`).
-
-**中文：** 合法的 CSM 模块名称**不得**包含以下保留字符：
-`~ ! @ % ^ & * ( ) [ ] { } + = | \ / ? ' " < > ,`
-以及不得包含空白字符（制表符 `\t`、回车符 `\r`、换行符 `\n`）。
+> [!NOTE]
+> **English:** A valid CSM module name must **not** contain any of the following reserved characters:
+> `~ ! @ % ^ & * ( ) [ ] { } + = | \ / ? ' " < > ,`
+> and must not contain whitespace characters (tab `\t`, carriage return `\r`, newline `\n`).
+>
+> **中文：** 合法的 CSM 模块名称**不得**包含以下保留字符：
+> `~ ! @ % ^ & * ( ) [ ] { } + = | \ / ? ' " < > ,`
+> 以及不得包含空白字符（制表符 `\t`、回车符 `\r`、换行符 `\n`）。
 
 | Pattern / 模式 | Meaning / 含义 |
 | --- | --- |
@@ -353,9 +354,10 @@ Approver$1            // Chain node with order 1 / 责任链节点，顺序为 1
 
 ## 6. Reserved Built-in States — 预置保留状态
 
-**English:** Every CSM module should handle the following built-in states. They are triggered automatically by the framework.
-
-**中文：** 每个 CSM 模块都应处理以下内置状态，它们由框架自动触发。
+> [!NOTE]
+> **English:** Every CSM module should handle the following built-in states. They are triggered automatically by the framework.
+>
+> **中文：** 每个 CSM 模块都应处理以下内置状态，它们由框架自动触发。
 
 | State / 状态 | Trigger / 触发时机 |
 | --- | --- |
@@ -373,36 +375,23 @@ Approver$1            // Chain node with order 1 / 责任链节点，顺序为 1
 
 ## 7. CSM Keywords (Reserved Characters in Arguments) — CSM 关键字（参数中的保留字符）
 
-**English:** The following strings are CSM keywords and **must not** appear unescaped inside an argument string. Use `CSM - Make String Arguments Safe.vi` (encodes as `<SAFESTR>`) or one of the other encoding schemes to pass arguments containing these characters safely.
-
-**中文：** 以下字符串是 CSM 关键字，**不得**在参数字符串中直接使用。若参数中包含这些字符，请使用 `CSM - Make String Arguments Safe.vi`（编码为 `<SAFESTR>`）或其他编码方案安全传递。
+> [!WARNING]
+> **English:** The following strings are CSM keywords and **must not** appear unescaped inside an argument string. Use `CSM - Make String Arguments Safe.vi` (encodes as `<SAFESTR>`) or one of the other encoding schemes to pass arguments containing these characters safely.
+>
+> **中文：** 以下字符串是 CSM 关键字，**不得**在参数字符串中直接使用。若参数中包含这些字符，请使用 `CSM - Make String Arguments Safe.vi`（编码为 `<SAFESTR>`）或其他编码方案安全传递。
 
 `->` `->|` `-@` `-&` `<-` `\r` `\n` `//` `>>` `>>>` `>>>>` `;` `,`
 
 ---
 
-## 8. Argument Encoding Schemes — 参数编码方案
+## 8. CSM Script Syntax (Run Script VI only) — CSM 脚本语法（仅用于 Run Script VI）
 
-**English:** All CSM arguments are plain strings. For complex data types, use one of the built-in encoding schemes below.
-
-**中文：** 所有 CSM 参数均为普通字符串。对于复杂数据类型，请使用以下内置编码方案。
-
-| Scheme / 方案 | Format / 格式 | Use Case / 使用场景 |
-| --- | --- | --- |
-| **Plain string** | `argument text` | Safe plain text with no CSM keywords / 不含 CSM 关键字的安全文本 |
-| **SAFESTR** | `<SAFESTR>escaped%2Dstring` | Any string, keywords escaped as `%Hex` / 任意字符串，关键字转义为 `%Hex` |
-| **HEXSTR** | `<HEXSTR>0A1B2C3D...` | Any LabVIEW data type serialized to hex / 任意 LabVIEW 数据类型序列化为十六进制 |
-| **ERRSTR** | `<ERRSTR>[Error: 1234] description` | LabVIEW Error Cluster / LabVIEW 错误簇 |
-
----
-
-## 9. CSM Script Syntax (Run Script VI only) — CSM 脚本语法（仅用于 Run Script VI）
-
+> [!IMPORTANT]
 > **Note / 注意：** The following syntax extensions are **only** parsed by `CSM - Run Script.vi` and cannot be used in the regular state queue.
 >
 > 以下语法扩展**仅**由 `CSM - Run Script.vi` 解析，不能用于普通状态队列。
 
-### 9.1 Save Return Value to Variable — 将返回值保存到变量
+### 8.1 Save Return Value to Variable — 将返回值保存到变量
 
 ```
 StateName >> Arguments -@ TargetModule => variableName
@@ -412,7 +401,7 @@ StateName >> Arguments -@ TargetModule => variableName
 
 **中文：** 同步调用完成后，将响应存储到 `variableName`。变量名大小写不敏感。
 
-### 9.2 Reference a Variable — 引用变量
+### 8.2 Reference a Variable — 引用变量
 
 ```
 StateName >> ${variableName} -@ TargetModule
@@ -422,7 +411,7 @@ StateName >> ${variableName} -@ TargetModule
 
 **中文：** 将 `variableName` 的值替换到参数中。
 
-### 9.3 Wait Command — 等待命令
+### 8.3 Wait Command — 等待命令
 
 ```
 Wait: milliseconds
