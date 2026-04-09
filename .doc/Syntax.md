@@ -245,10 +245,12 @@ Macro: Initialize
 ## 5. Module Naming Rules — 模块命名规则
 
 **English:** A valid CSM module name must **not** contain any of the following reserved characters:
-`~ ! @ % ^ & * ( ) [ ] { } + = | \ / ? ' " < > , . \t \r \n`
+`~ ! @ % ^ & * ( ) [ ] { } + = | \ / ? ' " < > , .`
+and must not contain whitespace characters (tab `\t`, carriage return `\r`, newline `\n`).
 
 **中文：** 合法的 CSM 模块名称**不得**包含以下保留字符：
-`~ ! @ % ^ & * ( ) [ ] { } + = | \ / ? ' " < > , . \t \r \n`
+`~ ! @ % ^ & * ( ) [ ] { } + = | \ / ? ' " < > , .`
+以及不得包含空白字符（制表符 `\t`、回车符 `\r`、换行符 `\n`）。
 
 | Pattern / 模式 | Meaning / 含义 |
 | --- | --- |
