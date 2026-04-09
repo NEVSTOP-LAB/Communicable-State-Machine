@@ -284,8 +284,8 @@ Approver$1            // Chain node with order 1 / 责任链节点，顺序为 1
 | `Macro: Exit` | Exit request received / 收到退出请求时 |
 | `Error Handler` | LabVIEW error passed to `Parse State Queue++.vi` / LabVIEW 错误传入 `Parse State Queue++.vi` 时 |
 | `Response` | Reply received from a synchronous call / 收到同步调用的回复时 |
-| `Async Response` | Reply received from an async call with reply (`->`) / 收到有返回异步调用的回复时 |
-| `Async Message Posted` | After sending any async message (`->` or `->&#124;`) / 发送任意异步消息（`->` 或 `->&#124;`）后 |
+| `Async Response` | Reply received from an async call with reply (<code>-></code>) / 收到有返回异步调用的回复时 |
+| `Async Message Posted` | After sending any async message (<code>-></code> or <code>->&#124;</code>) / 发送任意异步消息（<code>-></code> 或 <code>->&#124;</code>）后 |
 | `Target Timeout Error` | Sync call timed out / 同步调用超时未响应 |
 | `Target Error` | Target module does not exist / 目标模块不存在 |
 | `Critical Error` | Framework-level fatal error (e.g. duplicate module name) / 框架级严重错误（如模块名重复） |
