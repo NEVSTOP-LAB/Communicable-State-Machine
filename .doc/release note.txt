@@ -1,3 +1,28 @@
+v2026Q1
+---------------------------------------------------------
+
+## Core
+[update] #587 Convert VIs in _shared/ directory to inline for performance improvement
+
+## Advance Modes
+[fix] #591 Exiting issue for chain mode when some node is timout for "macro: exit"
+[fix] Close front panel in exe/lvlibp scenario
+
+## Global Log
+[update] #586 Update Complete log for Sync/Async Message
+[update] #590 Show nodes left number in module destroy log for worker/chain mode.
+
+## Debug Tools
+[add] Add common UI utility VIs
+[fix] fix "CSM - Interface Browser.vi" launcher entry
+[remove] #326 #321 Remove VI Analyzer support
+[remove] Remove "fCSM - Add VI Reference Case to CSMs.vi" tool
+[update] CSM tool Update: fix CSM - Switch Language Tool.vi
+
+## Doc/Palette
+[doc] #602 Rewrite Syntax.md as comprehensive bilingual CSM syntax reference
+[update] Improve palette and documentation
+
 v2025Q4
 ---------------------------------------------------------
 
