@@ -65,13 +65,18 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
       <Copyright/>
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
-      <Release_Notes>[update] #586 Update Complete log for Sync/Async Message
+      <Release_Notes>[update] #587 Convert VIs in _shared/ directory to inline for performance improvement
+[update] #586 Update Complete log for Sync/Async Message
 [update] #590 Show nodes left number in module destroy log for worker/chain mode.
-[update] Doc Update
-[update] CSM tool Update
 [fix] #591 Exiting issue for chain mode when some node is timout for "macro: exit"
+[fix] Close front panel in exe/lvlibp scenario
 [fix] fix "CSM - Interface Browser.vi" launcher entry
-[remove] Remove "fCSM - Add VI Reference Case to CSMs.vi" tool</Release_Notes>
+[add] Add common UI utility VIs
+[remove] #326 #321 Remove VI Analyzer support
+[remove] Remove "fCSM - Add VI Reference Case to CSMs.vi" tool
+[doc] #602 Rewrite Syntax.md as comprehensive bilingual CSM syntax reference
+[update] CSM tool Update: fix CSM - Switch Language Tool.vi
+[update] Improve palette and documentation</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
