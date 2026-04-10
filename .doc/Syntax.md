@@ -8,28 +8,35 @@
 
 ## Quick Reference — 速查表
 
-```c++
+```c
 // =========================================================
 // CSM State / Message Syntax — CSM 状态/消息语法
 // =========================================================
 
 // --- Local State (no target) / 本地状态（无目标）---
+
 StateName >> Arguments
 StateName                   // arguments omitted / 省略参数
 
 // --- Synchronous Call / 同步调用 ---
+//
 // Sending module BLOCKS until reply or timeout
 // 发送方阻塞直到收到回复或超时
+
 API: xxxx >> Arguments -@ TargetModule
 
 // --- Asynchronous Call (with reply) / 异步调用（有返回）---
+//
 // Sending module continues; reply handled in "Async Response"
 // 发送方继续执行；回复在 "Async Response" 状态处理
+
 API: xxxx >> Arguments -> TargetModule
 
 // --- Asynchronous Call (no reply) / 异步调用（无返回）---
+//
 // Sending module continues; NO reply is ever sent back
 // 发送方继续执行；目标模块处理完毕后不回复
+
 API: xxxx >> Arguments ->| TargetModule
 
 // =========================================================
@@ -37,11 +44,13 @@ API: xxxx >> Arguments ->| TargetModule
 // =========================================================
 
 // --- Normal-priority broadcast / 普通优先级广播（三种等价写法）---
+
 Status >> StatusArguments -><status>
 Status >> StatusArguments -><broadcast>
 Status >> StatusArguments -><all>
 
 // --- High-priority interrupt broadcast / 高优先级中断广播 ---
+
 Interrupt >> StatusArguments -><interrupt>
 
 // =========================================================
@@ -49,28 +58,35 @@ Interrupt >> StatusArguments -><interrupt>
 // =========================================================
 
 // --- Register / 注册订阅 ---
+//
 // When SourceModule broadcasts Status, send API to TargetModule
 // 当 SourceModule 广播 Status 时，向 TargetModule 发送 API
+
 Status@SourceModule >> API@TargetModule -><register>
 
 // Internal rule (auto-removed on module exit, TargetModule omitted)
 // 内部规则（模块退出时自动删除，省略 TargetModule）
+
 Status@SourceModule >> API -><register>
 
 // Wildcard: subscribe to Status from ALL modules
 // 通配符：订阅所有模块的 Status
+
 Status@* >> API@TargetModule -><register>
 
 // --- Register with priority override / 注册时覆盖优先级 ---
 // Always receive as normal priority (status)
 // 始终以普通优先级接收
+
 Status@SourceModule >> API@TargetModule -><register as status>
 
 // Always receive as high priority (interrupt)
 // 始终以高优先级（中断）接收
+
 Status@SourceModule >> API@TargetModule -><register as interrupt>
 
 // --- Unregister / 取消订阅 ---
+
 Status@SourceModule >> API@TargetModule -><unregister>
 
 // =========================================================
@@ -79,6 +95,7 @@ Status@SourceModule >> API@TargetModule -><unregister>
 
 // Use "//" to add a comment — everything to the right is ignored
 // 使用 "//" 添加注释，右侧内容全部被忽略
+
 UI: Initialize  // This initializes the UI / 初始化 UI
 // Another comment line / 另一行注释
 ```
