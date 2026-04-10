@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2026-01-26 11:27:24" Creator="liyao" Comments="" ID="e3fca4490153f2d7f37c36f99c77633d">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2026-04-10 10:17:59" Creator="liyao" Comments="" ID="6235427a6f04dd98d0a31e7b10e6d85e">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
-    <Library_Version>2025.12.0.1</Library_Version>
+    <Library_Version>2026.1.0.1</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>src</Library_Source_Folder>
     <Library_Output_Folder>vip</Library_Output_Folder>
@@ -66,49 +66,26 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
       <Release_Notes>## Core
-[feature] #502 Support modules in lvlibp
-[add] #588 Add "Current State" and "Remaining States" to CSM Data Core for better debugging
-[update] #504 Do not use global variable as changing flag
-[update] #555 When CSM starts processing the Macro: Exit state, it no longer processes any messages
-[update] #584 Add more detailed information to CSM errors
-[fix] #499 Fix critical error that occurs when CSM module is built into lvlibp and run asynchronously
-
-## Argument
-[update] #545 ErrStr now supports warnings, which are ignored and converted to empty strings
-[update] #501 Use ErrString for critical errors
-[update] #498 SafeString now starts with &lt;SafeStr&gt; argument type
-
-## Global Log
-[add] #596 Add message log type for CSM global log
-[add] #561 Add &lt;Logger Thread Exit&gt; log and show the number of remaining logs
-[add] #520 Show call-chain of CSM module in "module created" log
-
-## API
-[add] Support ¡°=&gt; VariableName" in CSM - Run Script.vi
-[add] Add additional ¡°wait" command in CSM - Run Script.vi
-[add] #543 Add ¡°CSM - Resolve Module Name.vi¡± to get module name from worker/chain node name
-[add] #552 Add "CSM - Drop Broadcast Registry.vi" to clear all registration relationships
-[fix] #549 Reset CSM - Module VI Reference.vi cache after topmost VI restarts
-[fix] #548 Fix CSM - Remove Module in Broadcast Registry.vi
-
-## Attribute
-[fix] #535 Fix CSM Attribute TagDVR cache error
-[fix] #533 CSM Attribute should be case insensitive
+[update] #587 Convert VIs in _shared/ directory to inline for performance improvement
 
 ## Advance Modes
-[fix] #540 Fix "VI Reference" not allowed in Chain Mode by default
-[fix] #560 #556 Management API should work for worker mode and chain mode
-[fix] #557 Fix removal of internal registry rules for chain/worker
+[fix] #591 Exiting issue for chain mode when some node is timout for "macro: exit"
+[fix] Close front panel in exe/lvlibp scenario
+
+## Global Log
+[update] #586 Update Complete log for Sync/Async Message
+[update] #590 Show nodes left number in module destroy log for worker/chain mode.
 
 ## Debug Tools
-[add] New Example Browser Tool
-[add] #496 Add script running function in debug console
-[update] #461 Logviewer uses queue of global log events
+[add] Add common UI utility VIs
+[fix] fix "CSM - Interface Browser.vi" launcher entry
+[remove] #326 #321 Remove VI Analyzer support
+[remove] Remove "fCSM - Add VI Reference Case to CSMs.vi" tool
+[update] CSM tool Update: fix CSM - Switch Language Tool.vi
 
 ## Doc/Palette
-[feature] More testcases to cover all features of csm
-[update] Improve palette and documentation
-</Release_Notes>
+[doc] #602 Rewrite Syntax.md as comprehensive bilingual CSM syntax reference
+[update] Improve palette and documentation</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>

@@ -75,6 +75,8 @@ Behavior for CSM in special operation modes:
 - <b>Chain of Responsibility Mode</b>: Returns the VI reference of the first node of the CSM module in Chain of Responsibility Mode.
 - <b>System-Level Module</b>: Same as normal mode CSM. Returns the VI reference of the system-level module.
 
+> - Ref: Multiple CSMs in a Single VI
+
 -- <b>Controls</b> --
 - <b>Current Module ("" to Generate an ID)</b>: Tag for the querying CSM module. If empty, a unique ID is generated.
 - <b>CSM Name</b>: CSM module name.

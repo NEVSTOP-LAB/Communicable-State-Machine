@@ -11,7 +11,20 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">385908736</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
-	<Item Name="Auto Resize All MultiListbox Columns (Uniform Text).vi" Type="VI" URL="../Auto Resize All MultiListbox Columns (Uniform Text).vi"/>
+	<Item Name="Auto Resize Columns" Type="Folder">
+		<Item Name="Auto Resize All MultiListbox Columns (Uniform Text).vi" Type="VI" URL="../Auto Resize All MultiListbox Columns (Uniform Text).vi"/>
+		<Item Name="Auto Resize All Table Columns (Uniform Text).vi" Type="VI" URL="../Auto Resize All Table Columns (Uniform Text).vi"/>
+		<Item Name="Auto Resize All Tree Columns (Uniform Text).vi" Type="VI" URL="../Auto Resize All Tree Columns (Uniform Text).vi"/>
+	</Item>
+	<Item Name="Fit VI Window" Type="Folder">
+		<Item Name="Fit VI window to Caller Center.vi" Type="VI" URL="../Fit VI window to Caller Center.vi"/>
+		<Item Name="Fit VI window to Content.vi" Type="VI" URL="../Fit VI window to Content.vi"/>
+		<Item Name="Fit VI window to Largest Dec.vi" Type="VI" URL="../Fit VI window to Largest Dec.vi"/>
+		<Item Name="Fit VI window to Pane Center.vi" Type="VI" URL="../Fit VI window to Pane Center.vi"/>
+		<Item Name="Fit VI window to Panel Center.vi" Type="VI" URL="../Fit VI window to Panel Center.vi"/>
+		<Item Name="Fit VI window to Rect.vi" Type="VI" URL="../Fit VI window to Rect.vi"/>
+		<Item Name="Fit VI window to Visible Content.vi" Type="VI" URL="../Fit VI window to Visible Content.vi"/>
+	</Item>
 	<Item Name="Center Callee in Window Bounds.vi" Type="VI" URL="../Center Callee in Window Bounds.vi"/>
 	<Item Name="Check if In LabVIEW Dir.vi" Type="VI" URL="../Check if In LabVIEW Dir.vi"/>
 	<Item Name="Close FP if in LabVIEW Dir.vi" Type="VI" URL="../Close FP if in LabVIEW Dir.vi"/>
