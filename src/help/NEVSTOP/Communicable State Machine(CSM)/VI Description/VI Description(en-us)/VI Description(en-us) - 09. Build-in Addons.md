@@ -14,6 +14,9 @@ Starts the CSM Watchdog thread to monitor whether the main program has exited. I
 
 > - Ref: CSM WatchDog Implementation Principle
 
+-- <b>Controls</b> --
+- <b>Wait(5000ms)</b>: The time the Watchdog thread waits for modules to process `Macro: Exit` and exit, in milliseconds (ms). The default value is 5000 ms.
+
 ### CSM Watchdog Thread.vi
 The CSM Watchdog thread is used to ensure that all asynchronously started CSM modules can exit normally after the main program exits.
 
@@ -21,6 +24,7 @@ The CSM Watchdog thread is used to ensure that all asynchronously started CSM mo
 
 -- <b>Controls</b> --
 - <b>Watchdog Queue</b>: Watchdog queue resource.
+- <b>Wait(5000ms)</b>: The time the Watchdog thread waits for modules to process `Macro: Exit` and exit, in milliseconds (ms). The default value is 5000 ms.
 
 ## CSM File Logger Addon
 

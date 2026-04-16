@@ -14,6 +14,9 @@
 
 > - Ref: CSM WatchDog实现的原理
 
+-- <b>输入控件(Controls)</b> --
+- <b>Wait(5000ms)</b>: Watchdog线程等待模块处理"Macro: Exit"退出的时间，单位为毫秒(ms)，默认值为5000ms。
+
 ### CSM Watchdog Thread.vi
 CSM Watchdog线程，用于保证在主程序退出后，所有的异步启动的CSM模块都能正常退出。
 
@@ -21,6 +24,7 @@ CSM Watchdog线程，用于保证在主程序退出后，所有的异步启动�
 
 -- <b>输入控件(Controls)</b> --
 - <b>Watchdog Queue</b>: Watchdog队列资源。
+- <b>Wait(5000ms)</b>: Watchdog线程等待模块处理"Macro: Exit"退出的时间，单位为毫秒(ms)，默认值为5000ms。
 
 ## CSM File Logger Addon
 
