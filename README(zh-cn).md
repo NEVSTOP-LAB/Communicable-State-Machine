@@ -1,4 +1,4 @@
-# 可通信状态机 (Communicable State Machine, CSM)
+# 可通信状态机（Communicable State Machine, CSM）
 
 [English](./README.md) | [中文](./README(zh-cn).md)
 
@@ -6,85 +6,57 @@
 [![Image](https://www.vipm.io/package/nevstop_lib_communicable_state_machine/badge.svg?metric=stars)](https://www.vipm.io/package/nevstop_lib_communicable_state_machine/)
 [![GitHub all releases](https://img.shields.io/github/downloads/NEVSTOP-LAB/Communicable-State-Machine/total)](https://github.com/NEVSTOP-LAB/Communicable-State-Machine/releases)
 
-可通信状态机（CSM）是基于 JKI 状态机（JKISM）构建的 LabVIEW 应用框架。它扩展了 JKISM 的关键词，支持模块间通信功能，包括同步消息、异步消息、状态订阅/取消订阅等，这些都是构建可重用代码模块的核心特性。更多信息请访问 CSM Wiki: <https://nevstop-lab.github.io/CSM-Wiki/>
+CSM 是建立在 JKI State Machine 之上的 LabVIEW 框架，目标是构建**可通信、可复用**的模块体系。  
+它将模块协作抽象为消息与广播契约，在中大型系统中更易维护与扩展。
 
-- 了解更多 JKI State Machine (JKISM): <http://jki.net/state-machine/>
-- 了解更多 NEVSTOP-LAB: <https://github.com/NEVSTOP-LAB>
+- CSM Wiki：<https://nevstop-lab.github.io/CSM-Wiki/>
+- JKI State Machine：<http://jki.net/state-machine/>
 
 ![image](.doc/_img/csm-intro.png)
 
-_**CSM 函数面板**_
+## CSM 的优势
 
-![image](.doc/_img/CSM%20Palette.png)
+相较于项目内自行约定字符串通信，CSM 提供：
 
-**代码模板介绍：**  
-[English](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/Template%20Description(EN).md) | [中文](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/Template%20Description(zh-cn).md)
+- **统一协作语法**：同步（`-@`）、异步（`->`）、异步无返回（`->|`）、注册/取消注册（`-><register>`、`-><unregister>`）。
+- **稳定模块契约**：API、广播、属性接口可独立定义与评审。
+- **更强复用能力**：模块既可在 CSM 内协作，也可被非 CSM 调用方集成。
+- **可组合架构模式**：协作者模式、责任链模式、全局日志与状态路由等。
 
-**API 介绍：**  
-[English](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/VI%20Description(EN).md) | [中文](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/VI%20Description(zh-cn).md)
+## 本仓库的设计内容
 
-## 创建可重用模块
+本仓库聚焦三层能力：
 
-可重用模块通常不需要与其他模块通信，只需提供外部接口并发布状态变化。只要明确定义这两个方面，即可在不了解内部实现的情况下调用该模块。
+1. **核心运行时与 API**：消息解析、分发、路由、生命周期控制。
+2. **模板与辅助资源**：快速创建 CSM 兼容模块所需模板与工具。
+3. **示例与测试资源**：用于落地验证的示例工程与 testcase 资产。
 
-在 CSM 模块中，所有 case 分支都可作为消息调用，但建议使用 API 类别作为外部接口。要发送状态更新，可使用 Status 或 Interrupt Status 通知外部实体状态变化。
+## 模块间关系与接入路径
 
-参考示例 _**/Example/1. Create a reusable module**_。
+CSM 采用“基于契约”的模块协作关系：
 
-## 将 CSM 用作应用框架
+- **CSM 调用方 → CSM 模块**：通过 CSM 消息与广播直接协作。
+- **非 CSM 调用方 → CSM 模块**：通过 Post/Send Message API 与状态事件集成。
 
-在此场景下，模块间通信依赖消息字符串队列操作。你可以使用 **Build Message with Arguments++.vi** 函数生成消息字符串，或者如果熟悉语法，可以直接编写。
+这让旧项目可以渐进式引入 CSM。
 
-``` c++
-#CSM 状态语法
-    // 本地消息
-    DoSth: DoA >> 参数
+## UI 模板差异
 
-    // 同步调用
-    API: xxxx >> 参数 -@ TargetModule
+常见两类 UI 相关模板：
 
-    // 异步调用
-    API: xxxx >> 参数 -> TargetModule
+- **带 Event Structure**：适合 UI 事件驱动明显的模块。
+- **不带 Event Structure**：适合服务型/无界面模块，或严格消息循环驱动的模块。
 
-    // 无应答异步调用
-    API: xxxx >> 参数 ->| TargetModule
+应按模块职责选择模板，而不是按个人习惯选择。
 
-    // 广播正常状态
-    Status >> StatusArguments -><status>
+## 接口文档
 
-    // 广播中断状态
-    Interrupt >> StatusArguments -><interrupt>
+README 不再展开接口细节，统一引用模块文档：
 
-    // 注册源模块状态到处理模块
-    Status@Source Module >> API@Handler Module -><register>
+- 模块接口文档（中文）：[docs/CSM-Module-Interface(zh-cn).md](./docs/CSM-Module-Interface(zh-cn).md)
+- Module interface doc (EN): [docs/CSM-Module-Interface.md](./docs/CSM-Module-Interface.md)
 
-    // 取消注册源模块状态
-    Status@Source Module >> API@Handler Module -><unregister>
+完整 API 索引：
 
-#CSM 注释
-    // 使用 "//" 添加注释，右侧所有文本将被忽略
-    UI: Initialize // 初始化 UI
-    // Another comment line
-```
-
-更多语法信息请访问: [Syntax.md](https://github.com/NEVSTOP-LAB/Communicable-State-Machine/tree/main/.doc/Syntax.md)
-
-参考示例 _**/Example/2. Caller is CSM Scenario**_。
-
-## 在其他框架中重用 CSM 模块
-
-在此场景下，模块间通信依赖 Post/Send Message API 和模块状态变化用户事件。
-
-参考示例 _**/Example/3. Caller is Other Framework Scenario**_。
-
-## CSM 参数支持
-
-JKISM 仅支持 STRING 类型参数，但应用需要传输各种数据类型。下表列出了当前参数支持选项，部分为内置功能，其他需要安装插件。
-
-| 参数 | 类型 | 描述 |
-|---|---|---|
-| SafeStr | 内置 | 特殊字符（"->\| -> -@ & <- , ; []{}`"）将被替换为 %[HEXCODE] |
-| HexStr | 内置 | 数据转换为 variant 并编码为十六进制字符串 |
-| [MassData](https://github.com/NEVSTOP-LAB/CSM-MassData-Parameter-Support) | 插件 | 数据存储在循环缓冲区中，传递起始位置和长度作为参数 |
-| [API String Arguments](https://github.com/NEVSTOP-LAB/CSM-API-String-Arugments-Support) | 插件 | 支持纯字符串作为 CSM API 参数 |
-| [INI Static Variable](https://github.com/NEVSTOP-LAB/CSM-INI-Static-Variable-Support) | 插件 | 为 CSM 提供 ${variable} 变量支持 |
+- 中文 API 索引：[VI Description(zh-cn)](./src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/VI%20Description/VI%20Description(zh-cn)/VI%20Description(zh-cn).md)
+- English API index: [VI Description(en-us)](./src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/VI%20Description/VI%20Description(en-us)/VI%20Description(en-us).md)

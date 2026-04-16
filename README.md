@@ -6,85 +6,57 @@
 [![Image](https://www.vipm.io/package/nevstop_lib_communicable_state_machine/badge.svg?metric=stars)](https://www.vipm.io/package/nevstop_lib_communicable_state_machine/)
 [![GitHub all releases](https://img.shields.io/github/downloads/NEVSTOP-LAB/Communicable-State-Machine/total)](https://github.com/NEVSTOP-LAB/Communicable-State-Machine/releases)
 
-Communicable State Machine (CSM) is a LabVIEW application framework built on JKI State Machine (JKISM). It extends JKISM with keywords for inter-module communication, including Sync-Message, Async-Message, and Status Subscription/Unsubscription—essential features for building reusable code modules. For more information, visit the CSM Wiki: <https://nevstop-lab.github.io/CSM-Wiki/>
+CSM is a LabVIEW framework built on JKI State Machine for **communicable, reusable modules**.  
+It formalizes module collaboration into message and broadcast contracts, which improves maintainability and scalability in medium/large systems.
 
-- Learn more about JKI State Machine (JKISM): <http://jki.net/state-machine/>
-- Learn more about NEVSTOP-LAB: <https://github.com/NEVSTOP-LAB>
+- CSM Wiki: <https://nevstop-lab.github.io/CSM-Wiki/>
+- JKI State Machine: <http://jki.net/state-machine/>
 
 ![image](.doc/_img/csm-intro.png)
 
-_**CSM API Palette**_
+## Why CSM
 
-![image](.doc/_img/CSM%20Palette.png)
+Compared with ad-hoc message conventions, CSM provides:
 
-**Template Description:**  
-[English](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/Template%20Description(EN).md) | [中文](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/Template%20Description(zh-cn).md)
+- **Unified collaboration syntax**: sync (`-@`), async (`->`), fire-and-forget (`->|`), register/unregister (`-><register>`, `-><unregister>`).
+- **Stable module contracts**: API, broadcast, and attribute interfaces can be documented and reviewed independently.
+- **Higher module reusability**: modules can run in CSM orchestration and still be consumed by non-CSM callers.
+- **Composability**: worker mode, chain mode, global log handling, and status routing patterns.
 
-**API Description:**  
-[English](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/VI%20Description(EN).md) | [中文](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/VI%20Description(zh-cn).md)
+## Repository Design
 
-## Create Reusable Modules
+This repository focuses on three layers:
 
-A reusable module typically doesn't need to communicate with other modules—it only needs to provide an external interface and publish status changes. As long as these two aspects are clearly defined, the module can be called without understanding its internal implementation.
+1. **Core runtime and APIs** for message parsing, dispatching, routing, and lifecycle control.
+2. **Templates and helper assets** for rapidly building CSM-compatible modules.
+3. **Examples and testcase assets** for practical integration patterns.
 
-In CSM modules, all cases can be invoked as messages, but it's recommended to use API categories as the external interface. To send status updates, use Status or Interrupt Status to notify external entities of changes.
+## Module Relationship and Integration Paths
 
-See _**/Example/1. Create a reusable module**_ to learn how to create a CSM module.
+CSM emphasizes contract-based collaboration between modules:
 
-## Use CSM as an Application Framework
+- **CSM caller → CSM module**: direct collaboration via CSM messages and broadcasts.
+- **Non-CSM caller → CSM module**: integration via Post/Send Message APIs and status events.
 
-In this scenario, inter-module communication relies on message string queue operations. You can generate message strings using the **Build Message with Arguments++.vi** function, or write them directly if you're familiar with the syntax.
+This allows incremental adoption in existing projects.
 
-``` c++
-#CSM State Syntax
-    // Local Message
-    DoSth: DoA >> Arguments
+## UI Template Differences
 
-    // Sync Call
-    API: xxxx >> Arguments -@ TargetModule
+Two common UI-related template styles:
 
-    // Async Call
-    API: xxxx >> Arguments -> TargetModule
+- **With Event Structure**: suitable for UI-centric modules with front-panel event handling.
+- **Without Event Structure**: suitable for service/headless modules or strict message-loop-driven logic.
 
-    // Async Call without Reply
-    API: xxxx >> Arguments ->| TargetModule
+Choose based on module responsibilities, not personal coding preference.
 
-    // Broadcast Normal Status
-    Status >> StatusArguments -><status>
+## Interface Documentation
 
-    // Broadcast Interrupt Status
-    Interrupt >> StatusArguments -><interrupt>
+Detailed interface descriptions are moved out of README:
 
-    // Register Source Module's Status to Handler Module
-    Status@Source Module >> API@Handler Module -><register>
+- Module interface doc (EN): [docs/CSM-Module-Interface.md](./docs/CSM-Module-Interface.md)
+- 模块接口文档 (ZH): [docs/CSM-Module-Interface(zh-cn).md](./docs/CSM-Module-Interface(zh-cn).md)
 
-    // Unregister Source Module's Status
-    Status@Source Module >> API@Handler Module -><unregister>
+Full API indexes:
 
-#CSM Comments
-    // Use "//" to add comments - all text to the right will be ignored
-    UI: Initialize // This initializes the UI
-    // Another comment line
-```
-
-For more syntax information, visit: [Syntax.md](https://github.com/NEVSTOP-LAB/Communicable-State-Machine/tree/main/.doc/Syntax.md)
-
-See _**/Example/2. Caller is CSM Scenario**_ for an example.
-
-## Reuse CSM Modules in Other Frameworks
-
-In this scenario, inter-module communication relies on Post/Send Message APIs and module status change user events.
-
-See _**/Example/3. Caller is Other Framework Scenario**_ for an example.
-
-## CSM Parameter Support
-
-JKISM only supports STRING parameters, but applications need to transmit various data types. The table below lists current parameter support options—some built-in, others requiring addon installation.
-
-| Parameter | Type | Description |
-|---|---|---|
-| SafeStr | Built-in | Special characters ("->\| -> -@ & <- , ; []{}`") are replaced with %[HEXCODE] |
-| HexStr | Built-in | Data is converted to variant and encoded as hex string |
-| [MassData](https://github.com/NEVSTOP-LAB/CSM-MassData-Parameter-Support) | Addon | Data is stored in a circular buffer; StartPos with length is passed as parameter |
-| [API String Arguments](https://github.com/NEVSTOP-LAB/CSM-API-String-Arugments-Support) | Addon | Supports plain string as CSM API parameter |
-| [INI Static Variable](https://github.com/NEVSTOP-LAB/CSM-INI-Static-Variable-Support) | Addon | Provides ${variable} support for CSM |
+- English API index: [VI Description(en-us)](./src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/VI%20Description/VI%20Description(en-us)/VI%20Description(en-us).md)
+- 中文 API 索引: [VI Description(zh-cn)](./src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/VI%20Description/VI%20Description(zh-cn)/VI%20Description(zh-cn).md)
