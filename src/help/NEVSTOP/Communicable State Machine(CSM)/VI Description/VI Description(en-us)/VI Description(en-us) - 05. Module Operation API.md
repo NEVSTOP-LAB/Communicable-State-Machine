@@ -140,12 +140,13 @@ API: Do Something Else -@ csm
 -- <b>Controls</b> --
 - <b>Current Module ("" to Generate an ID)</b>: Name of the current module. If empty, a temporary ID is generated for debugging purposes to identify the location.
 - <b>CSM Scripts</b>: CSM commands to execute.
+- <b>Sync Response Only (F)</b>: Whether <b>Response</b> should include only responses from synchronous messages. Disabled by default.
 - <b>Continue If Error? (F)</b>: Whether to continue execution if an error occurs. The default is FALSE, which specifies to not continue.
 - <b>Wait (5000 ms)</b>: Timeout duration for waiting module to be alive. The default is 5000 ms.
 - <b>Response Timeout (-2 Using Global Settings)</b>: Timeout for synchronous calls. The default is -2, which uses the global setting. You can set the global timeout using the CSM - Set TMO of Sync-Reply VI.
 
 -- <b>Indicators</b> --
-- <b>Response</b>: Returned results from executing the script. Only synchronous messages carry returns. The corresponding column for other commands will be an empty string.
+- <b>Response</b>: Results returned by the script. When <b>Sync Response Only (F)</b> is enabled, this output includes only responses from synchronous messages. Otherwise, each script line, including blank lines and comments, produces one result in order. Non-synchronous commands return an empty string.
 - <b>Scripts Left</b>: Remaining unexecuted scripts.
 
 ## CSM - Broadcast Event.vi

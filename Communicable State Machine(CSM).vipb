@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2026-04-16 23:27:44" Creator="liyao" Comments="" ID="589c1c27f023146d4a088c8c60afd5cd">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2026-04-17 23:14:09" Creator="liyao" Comments="" ID="63d5fdb515ef51f7f991c3570569414f">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2026.4.0.1</Library_Version>
@@ -31,7 +31,7 @@
     <VI_Package_Configuration_File>Communicable State Machine(CSM).vipc</VI_Package_Configuration_File>
     <Description>
       <One_Line_Description_Summary>LabVIEW Application Framework extended from JKI State Machine(JKISM)</One_Line_Description_Summary>
-      <Description>Communicable State Machine(CSM) is a LabVIEW application framework that builds upon JKI State Machine(JKISM). It follows the pattern of JKISM and extends the keywords to describe message communication between modules, including concepts such as Sync-Message, Async-Message, Subscription/Unsubscription of status - essential elements for creating reusable code modules. 
+      <Description>Communicable State Machine(CSM) is a LabVIEW application framework that builds upon JKI State Machine(JKISM). It follows the pattern of JKISM and extends the keywords to describe message communication between modules, including concepts such as Sync-Message, Async-Message, Subscription/Unsubscription of status - essential elements for creating reusable code modules.
 
 &lt;b&gt;CSM Syntax&lt;/b&gt;
 
@@ -44,7 +44,7 @@
     &lt;color=gray&gt;// Async Call without Reply Example&lt;/color&gt;
     API: xxxx &gt;&gt; &lt;i&gt;Arguments&lt;/i&gt; &lt;color=red&gt;-&gt;|&lt;/color&gt; TargetModule
 
-Please visit this link for more syntax information: 
+Please visit this link for more syntax information:
 &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https://github.com/NEVSTOP-LAB/Communicable-State-Machine/tree/main/.doc/Syntax.md&lt;/i&gt;&lt;/u&gt;&lt;/color&gt;
 
 &lt;b&gt;CSM Hightlights&lt;/b&gt;
@@ -59,13 +59,14 @@ Please visit this link for more syntax information:
     - Detailed global log interface with multiple debugging tools built on it.
     - Compatible with JKISM Editor.
 
-For more information, please visit the CSM wiki: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https://nevstop-lab.github.io/CSM-Wiki/&lt;/i&gt;&lt;/u&gt;&lt;/color&gt;
+
+For more information, please visit the CSM wiki: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https://nevstop-lab.github.io/CSM-Wiki/&lt;/i&gt;&lt;/u&gt;&lt;/color&gt;
 For instructions on JKI State Machine(JKISM), visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;http://jki.net/state-machine&lt;/i&gt;&lt;/u&gt;&lt;/color&gt;
 For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https://github.com/NEVSTOP-LAB&lt;/i&gt;&lt;/u&gt;&lt;/color&gt;</Description>
       <Copyright/>
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
-      <Release_Notes>[update] #607 expose "Wait(5000ms)" input for changing wait time in CSM watchdog thread</Release_Notes>
+      <Release_Notes>[update] #606 add "Sync Response Only(F)" optional input for CSM - Run Script.vi</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
