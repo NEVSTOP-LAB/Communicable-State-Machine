@@ -52,4 +52,3 @@ jobs:
           Parameter2: NOPASSWORD
           Parameter3: YES
           Parameter4: -placeContent
-        timeout-minutes: 5
