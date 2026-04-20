@@ -11,7 +11,15 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
-		<Item Name="CSM-Testcase.lvlib" Type="Library" URL="../CSM/CSM-Testcase.lvlib"/>
+		<Item Name="CSM" Type="Folder">
+			<Item Name="CSM-Testcase.lvlib" Type="Library" URL="../CSM/CSM-Testcase.lvlib"/>
+			<Item Name="Build CSM to PPL.vi" Type="VI" URL="../CSM/Build CSM to PPL.vi"/>
+			<Item Name="InitCSMs.vi" Type="VI" URL="../CSM/InitCSMs.vi"/>
+			<Item Name="Prototypes.vi" Type="VI" URL="../CSM/Prototypes.vi"/>
+			<Item Name="StartCSMs.vi" Type="VI" URL="../CSM/StartCSMs.vi"/>
+			<Item Name="GetPathByPrototypeName.vi" Type="VI" URL="../CSM/GetPathByPrototypeName.vi"/>
+			<Item Name="InitCSMs(backup).vi" Type="VI" URL="../CSM/InitCSMs(backup).vi"/>
+		</Item>
 		<Item Name="testcase-CSMSystemLevelModule.lvclass" Type="LVClass" URL="../testcase-CSMSystemLevelModule/testcase-CSMSystemLevelModule.lvclass"/>
 		<Item Name="testcase-CSMNonCSMCallerSupportAPI.lvclass" Type="LVClass" URL="../testcase-CSMNonCSMCallerSupportAPI/testcase-CSMNonCSMCallerSupportAPI.lvclass"/>
 		<Item Name="testcase-CSMManagementAPI.lvclass" Type="LVClass" URL="../testcase-CSMManagementAPI/testcase-CSMManagementAPI.lvclass"/>
@@ -434,7 +442,7 @@
 				<Property Name="Source[0].itemID" Type="Str">{8ACD2EE0-7F2A-4DDF-9C13-67BB3F9ECC94}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[1].itemID" Type="Ref">/My Computer/CSM-Testcase.lvlib</Property>
+				<Property Name="Source[1].itemID" Type="Ref">/My Computer/CSM/CSM-Testcase.lvlib</Property>
 				<Property Name="Source[1].Library.allowMissingMembers" Type="Bool">true</Property>
 				<Property Name="Source[1].Library.atomicCopy" Type="Bool">true</Property>
 				<Property Name="Source[1].Library.LVLIBPtopLevel" Type="Bool">true</Property>
@@ -475,7 +483,7 @@
 				<Property Name="Source[0].itemID" Type="Str">{91CC6082-CCFF-40D6-836F-F2075D5067B7}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[1].itemID" Type="Ref">/My Computer/CSM-Testcase.lvlib</Property>
+				<Property Name="Source[1].itemID" Type="Ref">/My Computer/CSM/CSM-Testcase.lvlib</Property>
 				<Property Name="Source[1].Library.allowMissingMembers" Type="Bool">true</Property>
 				<Property Name="Source[1].Library.atomicCopy" Type="Bool">true</Property>
 				<Property Name="Source[1].Library.LVLIBPtopLevel" Type="Bool">true</Property>
