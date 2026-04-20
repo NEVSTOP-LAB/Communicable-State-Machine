@@ -589,6 +589,11 @@
 			<Item Name="Global_Interface.ctl" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/API/Global_Interface.ctl"/>
 			<Item Name="Item_Interface.ctl" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/API/Item_Interface.ctl"/>
 			<Item Name="provcom_StringGlobals.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Common/provcom_StringGlobals.vi"/>
+			<Item Name="InitCSMs.vi" Type="VI" URL="../testcases/CSM/InitCSMs.vi"/>
+			<Item Name="StartCSMs.vi" Type="VI" URL="../testcases/CSM/StartCSMs.vi"/>
+			<Item Name="GetPathByPrototypeName.vi" Type="VI" URL="../testcases/CSM/GetPathByPrototypeName.vi"/>
+			<Item Name="Prototypes.vi" Type="VI" URL="../testcases/CSM/Prototypes.vi"/>
+			<Item Name="Build CSM to PPL.vi" Type="VI" URL="../testcases/CSM/Build CSM to PPL.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Communicable State Machine.lvlibp" Type="Packed Library">
