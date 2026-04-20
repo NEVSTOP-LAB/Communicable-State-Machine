@@ -12,5 +12,10 @@
 	<Item Name="Chain5.vi" Type="VI" URL="../Chain5.vi"/>
 	<Item Name="Chain6.vi" Type="VI" URL="../Chain6.vi"/>
 	<Item Name="Normal-CSM.vi" Type="VI" URL="../Normal-CSM.vi"/>
+	<Item Name="Build CSM to PPL.vi" Type="VI" URL="../Build CSM to PPL.vi"/>
 	<Item Name="InitCSMs.vi" Type="VI" URL="../InitCSMs.vi"/>
+	<Item Name="Prototypes.vi" Type="VI" URL="../Prototypes.vi"/>
+	<Item Name="StartCSMs.vi" Type="VI" URL="../StartCSMs.vi"/>
+	<Item Name="GetPathByPrototypeName.vi" Type="VI" URL="../GetPathByPrototypeName.vi"/>
+	<Item Name="InitCSMs(backup).vi" Type="VI" URL="../InitCSMs(backup).vi"/>
 </Library>
