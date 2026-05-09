@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2026-05-07 10:20:27" Creator="liyao" Comments="" ID="c3d59a8b2491147491f966d8ccf29691">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2026-05-09 20:22:53" Creator="liyao" Comments="" ID="498501612625391318d0a983d6a7058f">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2026.4.0.1</Library_Version>
@@ -66,8 +66,10 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
       <Copyright/>
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
-      <Release_Notes>[update] #606 add "Sync Response Only(F)" optional input for CSM - Run Script.vi
-[update] #611 Set Menu Entry VIs as "Run When Opened"</Release_Notes>
+      <Release_Notes>[update] #606 Added an optional "Sync Response Only (F)" input to the CSM - Run Script.vi
+[update] #611 Set Menu Entry VIs to "Run When Opened"
+[update] #612 Added the CSM version to the csmlog file
+[update] #613 Updated the icon of "CSMLS - Define Loop State(s).vi" to indicate the wires</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
