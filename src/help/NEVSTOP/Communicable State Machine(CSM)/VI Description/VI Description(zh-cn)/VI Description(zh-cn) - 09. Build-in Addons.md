@@ -118,6 +118,9 @@ CSM - Start File Logger VI中原本使用的线程VI。已废弃，目前使用C
 >
 > <b>Add to Front? (F)</b> 通常为FALSE，因为循环状态一旦开始，就不会立即结束，插入状态队列前，会被认为是当前状态的子状态，此时如果当前状态如果是以同步消息调用，就不会立即返回。例如: 假如`API: Start DAQ`中，定义了一组连续采集的状态，此时外部同步发送该消息，逻辑应为启动循环，然后立即返回。只有逻辑为等待循环结束后返回，才设置<b>Add to Front? (F)</b>为TRUE。
 
+> [!WARNING]
+> 注意<b>State Queue</b> 和 <b>Loop States</b> 的连线不要连反了，如果连反了，可能会造成外部发送的同步消息无法返回，并无法再处理外部消息的情况。
+
 -- <b>输入控件(Controls)</b> --
 - <b>States Queue</b>: 整个状态队列被连接到此输入。
 - <b>Loop States</b>: 循环状态。

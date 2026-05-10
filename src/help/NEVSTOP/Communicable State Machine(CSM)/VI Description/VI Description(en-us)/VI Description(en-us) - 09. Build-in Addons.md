@@ -115,6 +115,9 @@ The loop can be ended by removing `-><loop>`. You can use the following VIs to r
 > [!WARNING]
 > <b>Add to Front? (F)</b> is usually FALSE because once a loop state starts, it does not end immediately. Before insertion into the state queue, it is considered a sub-state of the current state. If the current state was called via a synchronous message, it would not return immediately. For example, if a set of continuous acquisition states is defined in `API: Start DAQ` and this message is sent synchronously from outside, the logic should be to start the loop and then return immediately. Only set <b>Add to Front? (F)</b> to TRUE if the logic is to wait for the loop to end before returning.
 
+> [!WARNING]
+> Be careful not to connect <b>State Queue</b> and <b>Loop States</b> in reverse. If reversed, it may cause synchronous messages sent externally to fail to return, and external messages can no longer be processed.
+
 -- <b>Controls</b> --
 - <b>States Queue</b>: Connect the entire state queue to this input.
 - <b>Loop States</b>: Loop states.
