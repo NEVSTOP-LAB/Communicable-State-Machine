@@ -96,17 +96,20 @@
 -- <b>输出控件(Indicators)</b> --
 - <b>CSM Name (Marked As Worker)</b>: 添加`#`标记的CSM模块名称。
 
-## 责任链模式 (Chain of Responsibility API) - 待完善
+## 责任链模式 (Chain of Responsibility API)
 
 > [!NOTE]
 > <b>CSM责任链模式(Chain of Responsibility Mode)</b>
 >
-> 多个CSM模块，申请的名称后添加`$`，组成处理事务的一个链条，通过责任链模式形成一个完整的模块。
+> 多个CSM模块，申请的名称后添加`$`和数字，组成责任链模式模块。
 > - 从外部调用上看，这些实例一起组成了一个复合的模块，命名为Chain。
 > - 每一个实例，命名为Chain Node。
 >
 > <b>行为</b>:
-> 外部调用者可以认为Chain就是一个CSM模块，可以进行消息通讯、状态注册等操作。从内部看，nodes会根据排列顺序依次尝试处理消息，当node具有当前消息处理的能力时，消息被处理，不再向后传递。
+> 外部调用者可以认为Chain就是一个CSM模块，可以进行消息通讯、状态注册等操作。从内部看，框架会根据Chain注册表，直接把消息路由给“能处理该消息且优先级最高”的节点（数字越小优先级越高）。消息只会由一个节点处理，不会在节点之间依次传递或降级。
+>
+> <b>通讯限制</b>:
+> 必须向Chain模块名发送消息，不能直接向单个`ChainName$N`节点发送消息。
 >
 > <b>举例</b>:
 >
@@ -115,20 +118,17 @@
 >     // - module$2
 >     // - module$3
 >     // - module$4
->     // 组成的Chain顺序为module$1(head) >> module$2 >> module$3 >> module$4(tail)
->     // 假设module$3 module$4能够处理"csm message"
+>     // 假设module$3和module$4都能够处理"csm message"
 >     csm message >> arguments -@ module
->     // 这个消息将被module$3处理, module$4不会响应
+>     // 框架会直接把消息路由到优先级更高的module$3，module$4不会响应
 >
 > <b>应用场景</b>:
-> - 权限审批过程，按照职位层级，具有某职能权限的人员，就可以直接审批，无需继续传递。
-> - 功能拼接，不同模块实现不同的任务，通过拼接可以完成不同功能合集的组合。
-> - 功能覆盖，通过覆盖实现OOP中的重载。
-> - 工作者模式的场景，通常不适合具有界面操作。
+> - 功能拼接：不同节点处理不同消息类型，对外统一为一个Chain模块。
+> - 功能覆盖：多个节点实现相同消息类型时，由更高优先级节点生效。
 
 ### CSM - Mark As Chain Module.vi
 
-拼接责任链模式模块的名称，使用`$`作为分隔符。注意Order不必连续，但是必须唯一，编号小的节点，将排列在责任链的前面。
+拼接责任链模式模块的名称，使用`$`作为分隔符。Order不必连续，但必须唯一；数字越小优先级越高。路由时，框架会选择能处理消息的最高优先级节点。
 
 <b>参考范例</b>:  `4. Advance Examples\2. Chain of Responsibility Example`。
 
@@ -137,7 +137,7 @@
 
 -- <b>输入控件(Controls)</b> --
 - <b>CSM Name</b>:  CSM模块名称。
-- <b>Order</b>: 责任链模式下的顺序，编号小的节点，将排列在责任链的前面。
+- <b>Order</b>: 责任链模式下的优先级编号。数字越小优先级越高，且同一Chain内必须唯一。
 
 -- <b>输出控件(Indicators)</b> --
 - <b>CSM Name (Marked As Chain)</b>: 添加`$`标记的CSM模块名称。
