@@ -6,7 +6,7 @@
 > - CSM module name must be unique. Otherwise, CSM enters a `Critical Error` state.
 > - If the input module name is an empty string (""), the system uses a UUID as the module name. Such a module is marked as standalone mode and does not appear in the module list.
 > - Worker Mode Rule: If the input module name ends with `#`, a worker mode node will be instantiated. Multiple worker mode nodes can form a worker mode module.
-> - Chain of Responsibility Mode Rule: If the input module name ends with `$` followed by a number, a chain of responsibility mode node will be instantiated. Multiple chain of responsibility mode nodes can form a chain of responsibility mode module.
+> - Chain of Responsibility Mode Rule: If the input module name ends with `$` followed by a number, a chain of responsibility mode node will be instantiated. Multiple chain of responsibility mode nodes can form a chain of responsibility mode module. Smaller numbers mean higher priority, and messages are routed directly to the highest-priority node that can handle them.
 > - System-Level Module Rule: If the input module name starts with `.`, the module is a system-level module. Under default settings, such modules are not listed by the CSM - List Modules VI and are  suitable for instantiating modules that run in the background.
 > - Submodule Rule: `.` is also allowed in a module name to separate the module name into multiple parts. CSM does not have strict rules for submodules. The `.` in the module name only marks the logical relationship between different modules. From an execution perspective, they are considered independent modules. The only difference is that you can obtain a list of logical submodules via the CSM - List Submodules VI.
 
