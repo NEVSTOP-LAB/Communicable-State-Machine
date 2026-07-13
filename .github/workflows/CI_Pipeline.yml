@@ -52,7 +52,7 @@ jobs:
   #   source        = any OTHER file changed (not .vipb, testcases/, or _TEST/)
   #---------------------------------------------------------------------------
   detect-changes:
-    runs-on: [self-hosted, lv2017]
+    runs-on: ubuntu-latest
     outputs:
       vipb: ${{ steps.detect.outputs.vipb }}
       testcases: ${{ steps.detect.outputs.testcases }}
@@ -221,7 +221,7 @@ jobs:
   notify:
     if: always()
     needs: [build-vipm, run-testcases]
-    runs-on: [self-hosted, lv2017]
+    runs-on: ubuntu-latest
     steps:
       - name: Check overall status
         shell: bash
