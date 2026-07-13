@@ -43,36 +43,66 @@ jobs:
   # Job: Detect what files changed → enables per-job path filtering
   # The on.paths-ignore above covers common trivial files (.md, .txt, etc.).
   # For differences between the original three workflows (.vipb vs testcases/
-  # vs src/_TEST/), we use this detection job and if: conditions below.
+  # vs src/_TEST/), we use a PowerShell script to classify changes.
+  #
+  # Outputs:
+  #   vipb          = any .vipb file changed
+  #   testcases     = any file under testcases/ changed
+  #   internal_test = any file under src/_TEST/ changed
+  #   source        = any OTHER file changed (not .vipb, testcases/, or _TEST/)
   #---------------------------------------------------------------------------
   detect-changes:
     runs-on: [self-hosted, lv2017]
     outputs:
-      vipb: ${{ steps.filter.outputs.vipb }}
-      testcases: ${{ steps.filter.outputs.testcases }}
-      internal_test: ${{ steps.filter.outputs.internal_test }}
-      source_or_other: ${{ steps.filter.outputs.source_or_other }}
+      vipb: ${{ steps.detect.outputs.vipb }}
+      testcases: ${{ steps.detect.outputs.testcases }}
+      internal_test: ${{ steps.detect.outputs.internal_test }}
+      source: ${{ steps.detect.outputs.source }}
     steps:
       - uses: actions/checkout@v4.2.2
         with:
-          # Fetch at least 2 commits so paths-filter can compare
-          fetch-depth: 2
+          # Fetch enough history so git diff can compare against the pre-push commit
+          fetch-depth: 0
 
-      - uses: dorny/paths-filter@v3
-        id: filter
-        with:
-          filters: |
-            vipb:
-              - '**.vipb'
-            testcases:
-              - 'testcases/**'
-            internal_test:
-              - 'src/_TEST/**'
-            source_or_other:
-              - '**'
-              - '!testcases/**'
-              - '!src/_TEST/**'
-              - '!**.vipb'
+      - name: Classify changed files
+        id: detect
+        shell: pwsh
+        run: |
+          $base = "${{ github.event.before }}"
+          if (($base.Length -eq 0) -or ($base -eq '0000000000000000000000000000000000000000')) {
+            # workflow_dispatch (no before SHA) or first push to branch
+            # Run both build and test as a full pipeline baseline
+            Write-Host "No valid before SHA — running full pipeline"
+            $source = 'true'
+            $changedLines = @()
+          } else {
+            Write-Host "Comparing $base..HEAD"
+            $changedLines = git diff --name-only "$base" HEAD
+          }
+
+          $vipb = 'false'
+          $testcases = 'false'
+          $internal_test = 'false'
+          $source = 'false'
+
+          foreach ($file in $changedLines) {
+            $f = $file.Trim()
+            if ($f.Length -eq 0) { continue }
+            if ($f -match '\.vipb$')           { $vipb = 'true' }
+            elseif ($f -match '^testcases/')    { $testcases = 'true' }
+            elseif ($f -match '^src/_TEST/')    { $internal_test = 'true' }
+            else                                { $source = 'true' }
+          }
+
+          Write-Host "vipb=$vipb"
+          Write-Host "testcases=$testcases"
+          Write-Host "internal_test=$internal_test"
+          Write-Host "source=$source"
+
+          "vipb=$vipb"          | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          "testcases=$testcases" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          "internal_test=$internal_test" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          "source=$source"      | Out-File -FilePath $env:GITHUB_OUTPUT -Append
 
   #---------------------------------------------------------------------------
   # Job: Check for broken VIs — acts as the quality gate
@@ -100,14 +130,14 @@ jobs:
   # Only runs when:
   #   1. check-broken-vis succeeded (implicit via needs)
   #   2. Branch does NOT match **testcase** (Build's original branch filter)
-  #   3. Either .vipb or source/other files changed (not ONLY testcases/_TEST)
+  #   3. Either .vipb or source files changed (not ONLY testcases/_TEST)
   #---------------------------------------------------------------------------
   build-vipm:
     needs: check-broken-vis
     if: |
       !contains(github.ref_name, 'testcase') && (
         needs.detect-changes.outputs.vipb == 'true' ||
-        needs.detect-changes.outputs.source_or_other == 'true'
+        needs.detect-changes.outputs.source == 'true'
       )
     runs-on: [self-hosted, lv2017]
     steps:
@@ -170,7 +200,7 @@ jobs:
     if: |
       needs.detect-changes.outputs.testcases == 'true' ||
       needs.detect-changes.outputs.internal_test == 'true' ||
-      needs.detect-changes.outputs.source_or_other == 'true'
+      needs.detect-changes.outputs.source == 'true'
     runs-on: [self-hosted, lv2017]
     steps:
       - uses: actions/checkout@v4.2.2
@@ -201,7 +231,7 @@ jobs:
           if [ "${{ needs.build-vipm.result }}" = "success" ] && [ "${{ needs.run-testcases.result }}" = "success" ]; then
             echo "✅ All jobs completed successfully"
           elif [ "${{ needs.build-vipm.result }}" = "skipped" ] && [ "${{ needs.run-testcases.result }}" = "skipped" ]; then
-            echo "⏭️  All jobs were skipped (no relevant changes detected)"
+            echo "⏭️  All jobs skipped (only non-relevant files changed)"
           else
             echo "⚠️  Some jobs did not succeed — review the logs above"
           fi
