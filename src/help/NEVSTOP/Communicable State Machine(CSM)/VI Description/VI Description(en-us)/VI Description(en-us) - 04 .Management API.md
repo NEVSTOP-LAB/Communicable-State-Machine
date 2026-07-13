@@ -6,7 +6,7 @@
 > - <b>Stand-alone</b>: Independent operation mode. If no module name is specified, a random ID is automatically generated to identify the module.
 > - <b>CSM</b>: Normal CSM module.
 > - <b>Action Worker</b>: Worker Mode. Append `#` to the module name to mark this module as a worker. This module shares the same message queue with other workers having the same name.
-> - <b>Chain Node</b>: Chain node. Append `$` to the module name to mark this module as a chain node. Messages on the same chain will be passed sequentially until a node processes the message.
+> - <b>Chain Node</b>: Chain node. Append `$` and a number to the module name to mark this module as a chain node. Within the same Chain, a smaller number means higher priority. Messages sent to the Chain module name are routed directly to the highest-priority node that can handle them.
 
 > [!NOTE]
 > <b>CSM Priority Queue Design</b>

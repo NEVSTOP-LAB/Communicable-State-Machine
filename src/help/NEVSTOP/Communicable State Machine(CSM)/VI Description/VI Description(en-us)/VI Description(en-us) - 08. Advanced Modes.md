@@ -96,11 +96,13 @@ Marks a module as a Worker Mode module by adding `#` after the CSM name.
 > [!NOTE]
 > <b>CSM Chain of Responsibility Mode</b>
 >
-> Multiple CSM modules form a complete module via Chain of Responsibility Mode by appending `$` to the requested name to form a chain for processing transactions.
+> Multiple CSM modules form a Chain module by appending `$` and a number to the requested name.
 > - From an external call perspective, these instances collectively form a composite module named Chain.
 > - Each instance is named a Chain Node.
 >
-> <b>Behavior</b>: External callers can consider the Chain as a single CSM module capable of message communication, state registration, and so on. Internally, nodes attempt to process the message sequentially according to their order. When a node has the capability to process the current message, the message is processed and is not passed further down the chain.
+> <b>Behavior</b>: External callers can consider the Chain as a single CSM module capable of message communication, state registration, and so on. Internally, CSM uses the Chain registry to route a message directly to the highest-priority node that can handle it (smaller number = higher priority). A message is handled by only one node; it is not passed sequentially or downgraded across nodes.
+>
+> <b>Communication Restriction</b>: Messages must be sent to the Chain module name, not to a specific `ChainName$N` node.
 >
 > <b>Example</b>:
 >
@@ -109,20 +111,17 @@ Marks a module as a Worker Mode module by adding `#` after the CSM name.
 >      // - `module$2`
 >      // - `module$3`
 >      // - `module$4`
->      // The sequence of the composed Chain is `module$1(head) >> module$2 >> module$3 >> module$4(tail)`
 >      // Assume `module$3` and `module$4` can process "csm message"
 >      `csm message >> arguments -@ module`
->      // This message will be processed by `module$3`. `module$4` will not respond.
+>      // CSM routes the message directly to the higher-priority `module$3`; `module$4` will not respond.
 >
 > <b>Application Scenarios</b>:
-> - Permission approval process. Based on job hierarchy, personnel with specific functional permissions can approve directly without passing it further.
-> - Function concatenation. Different modules implement different tasks, and different functional sets can be combined through concatenation.
-> - Function overriding. Implementing overloading in OOP through overriding.
-> - Worker Mode scenarios are usually not suitable for having UI operations.
+> - Function composition: Different nodes handle different message types while exposing one Chain module externally.
+> - Function overriding: When multiple nodes implement the same message type, the higher-priority node takes effect.
 
 ### CSM - Mark As Chain Module.vi
 
-Concatenates the name of a Chain of Responsibility Mode module, using `$` as the separator. Note that the order does not need to be consecutive, but it must be unique. Nodes with smaller numbers are arranged at the front of the responsibility chain.
+Concatenates a Chain of Responsibility Mode module name using `$` as the separator. The order does not need to be consecutive, but it must be unique. Smaller numbers mean higher priority. During routing, CSM chooses the highest-priority node that can handle the message.
 
 <b>Reference Example</b>: `4. Advance Examples\2. Chain of Responsibility Example`.
 
@@ -131,7 +130,7 @@ Concatenates the name of a Chain of Responsibility Mode module, using `$` as the
 
 -- <b>Controls</b> --
 - <b>CSM Name</b>: CSM module name.
-- <b>Order</b>: Sequence in Chain of Responsibility Mode. Nodes with smaller numbers are arranged at the front of the responsibility chain.
+- <b>Order</b>: Priority number in Chain of Responsibility Mode. Smaller numbers mean higher priority, and the value must be unique within the same Chain.
 
 -- <b>Indicators</b> --
 - <b>CSM Name (Marked As Chain)</b>: CSM module name marked with `$`.

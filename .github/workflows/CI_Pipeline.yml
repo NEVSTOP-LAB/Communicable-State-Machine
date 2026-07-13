@@ -1,0 +1,232 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI_Pipeline
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    paths-ignore:
+      - '**.md'
+      - '**.txt'
+      - '**.drawio'
+      - '**.png'
+      - '**.svg'
+      - '**.json'
+      - '**.yml'
+
+  pull_request:
+    branches:
+      - main
+    types: [closed]
+    paths-ignore:
+      - '**.md'
+      - '**.txt'
+      - '**.drawio'
+      - '**.png'
+      - '**.svg'
+      - '**.json'
+      - '**.yml'
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+
+  #---------------------------------------------------------------------------
+  # Job: Detect what files changed → enables per-job path filtering
+  # The on.paths-ignore above covers common trivial files (.md, .txt, etc.).
+  # For differences between the original three workflows (.vipb vs testcases/
+  # vs src/_TEST/), we use a PowerShell script to classify changes.
+  #
+  # Outputs:
+  #   vipb          = any .vipb file changed
+  #   testcases     = any file under testcases/ changed
+  #   internal_test = any file under src/_TEST/ changed
+  #   source        = any OTHER file changed (not .vipb, testcases/, or _TEST/)
+  #---------------------------------------------------------------------------
+  detect-changes:
+    runs-on: ubuntu-latest
+    outputs:
+      vipb: ${{ steps.detect.outputs.vipb }}
+      testcases: ${{ steps.detect.outputs.testcases }}
+      internal_test: ${{ steps.detect.outputs.internal_test }}
+      source: ${{ steps.detect.outputs.source }}
+    steps:
+      - uses: actions/checkout@v4.2.2
+        with:
+          # Fetch enough history so git diff can compare against the pre-push commit
+          fetch-depth: 0
+
+      - name: Classify changed files
+        id: detect
+        shell: pwsh
+        run: |
+          $base = "${{ github.event.before }}"
+          if (($base.Length -eq 0) -or ($base -eq '0000000000000000000000000000000000000000')) {
+            # workflow_dispatch (no before SHA) or first push to branch
+            # Run both build and test as a full pipeline baseline
+            Write-Host "No valid before SHA — running full pipeline"
+            $source = 'true'
+            $changedLines = @()
+          } else {
+            Write-Host "Comparing $base..HEAD"
+            $changedLines = git diff --name-only "$base" HEAD
+          }
+
+          $vipb = 'false'
+          $testcases = 'false'
+          $internal_test = 'false'
+          $source = 'false'
+
+          foreach ($file in $changedLines) {
+            $f = $file.Trim()
+            if ($f.Length -eq 0) { continue }
+            if ($f -match '\.vipb$')           { $vipb = 'true' }
+            elseif ($f -match '^testcases/')    { $testcases = 'true' }
+            elseif ($f -match '^src/_TEST/')    { $internal_test = 'true' }
+            else                                { $source = 'true' }
+          }
+
+          Write-Host "vipb=$vipb"
+          Write-Host "testcases=$testcases"
+          Write-Host "internal_test=$internal_test"
+          Write-Host "source=$source"
+
+          "vipb=$vipb"          | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          "testcases=$testcases" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          "internal_test=$internal_test" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          "source=$source"      | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+
+  #---------------------------------------------------------------------------
+  # Job: Check for broken VIs — acts as the quality gate
+  # Runs whenever the workflow is triggered (no per-job path filtering).
+  # Next jobs (build / test) only proceed if this succeeds.
+  #---------------------------------------------------------------------------
+  check-broken-vis:
+    needs: detect-changes
+    runs-on: [self-hosted, lv2017]
+    steps:
+      - uses: actions/checkout@v4.2.2
+
+      - id: Check_Broken_VIs
+        uses: NEVSTOP-LAB/lvCICD@main
+        with:
+          LabVIEW_Version: 2017
+          Operation: VIAn_CheckBrokenVIs
+          Parameter1: ${{ github.workspace }}
+          Parameter2: NOPASSWORD
+          Parameter3: YES
+          Parameter4: -placeContent
+
+  #---------------------------------------------------------------------------
+  # Job: Build VIPM Library
+  # Only runs when:
+  #   1. check-broken-vis succeeded (implicit via needs)
+  #   2. Branch does NOT match **testcase** (Build's original branch filter)
+  #   3. Either .vipb or source files changed (not ONLY testcases/_TEST)
+  #---------------------------------------------------------------------------
+  build-vipm:
+    needs: check-broken-vis
+    if: |
+      !contains(github.ref_name, 'testcase') && (
+        needs.detect-changes.outputs.vipb == 'true' ||
+        needs.detect-changes.outputs.source == 'true'
+      )
+    runs-on: [self-hosted, lv2017]
+    steps:
+      # Get env variables (needed for FTP backup step below)
+      # https://github.com/marketplace/actions/github-environment-variables-action
+      - uses: FranzDiebold/github-env-vars-action@v2
+
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4.2.2
+
+      # Runs a set of commands using the runners shell
+      - name: BuildDailyVIP
+        id: build-vip
+        uses: NEVSTOP-LAB/vipm-BuildViPackage@main
+        with:
+          LabVIEW_Version: 2017
+          VipbPath: ${{ github.workspace }}
+        timeout-minutes: 30
+        continue-on-error: true
+
+      - name: Retry BuildDailyVIP if failed
+        id: retry-build-vip
+        if: ${{ steps.build-vip.outcome == 'failure' }}
+        uses: NEVSTOP-LAB/vipm-BuildViPackage@main
+        with:
+          LabVIEW_Version: 2017
+          VipbPath: ${{ github.workspace }}
+        timeout-minutes: 30
+
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v4.3.2
+        with:
+          # Artifact name
+          name: ${{ steps.retry-build-vip.outputs.vipName || steps.build-vip.outputs.vipName }}
+          path: ${{ steps.retry-build-vip.outputs.vipPathName || steps.build-vip.outputs.vipPathName }}
+          # The desired behavior if no files are found using the provided path.
+          if-no-files-found: warn
+          retention-days: 90
+
+      # Backup generated files by ftp
+      # https://github.com/marketplace/actions/simple-ftp-upload
+      - name: backup Build Artifact by ftp
+        uses: dennisameling/ftp-upload-action@v1.0.9
+        with:
+          server: ${{ secrets.VIPM_FTP_IP }}
+          port: ${{ secrets.VIPM_FTP_PORT }}
+          username: ${{ secrets.VIPM_FTP_USER }}
+          password: ${{ secrets.VIPM_FTP_PASSWORD }}
+          secure: false
+          server_dir: /${{ env.CI_REPOSITORY_OWNER_SLUG }}/${{ env.CI_REPOSITORY_NAME }}/${{ env.CI_ACTION_REF_NAME }}/
+          local_dir: ./vip/
+
+  #---------------------------------------------------------------------------
+  # Job: Run Testcases
+  # Runs in parallel with build-vipm after check-broken-vis succeeds.
+  # Skipped when ONLY .vipb files changed (Check/Test's original path filter).
+  #---------------------------------------------------------------------------
+  run-testcases:
+    needs: check-broken-vis
+    if: |
+      needs.detect-changes.outputs.testcases == 'true' ||
+      needs.detect-changes.outputs.internal_test == 'true' ||
+      needs.detect-changes.outputs.source == 'true'
+    runs-on: [self-hosted, lv2017]
+    steps:
+      - uses: actions/checkout@v4.2.2
+
+      - name: Run lvCICD Test cases with VITester
+        id: StartVITester
+        uses: NEVSTOP-LAB/lvCICD@main
+        with:
+          LabVIEW_Version: 2017
+          Operation: StartVITester
+          Parameter1: ${{ github.workspace }}\Communicable State Machine(CSM).lvproj
+        timeout-minutes: 60
+
+  #---------------------------------------------------------------------------
+  # Job: Notify — always runs after build + testcases finish
+  # Serves as the "group completed" signal point.
+  #---------------------------------------------------------------------------
+  notify:
+    if: always()
+    needs: [build-vipm, run-testcases]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check overall status
+        shell: bash
+        run: |
+          echo "Build status: ${{ needs.build-vipm.result }}"
+          echo "Test status: ${{ needs.run-testcases.result }}"
+          if [ "${{ needs.build-vipm.result }}" = "success" ] && [ "${{ needs.run-testcases.result }}" = "success" ]; then
+            echo "✅ All jobs completed successfully"
+          elif [ "${{ needs.build-vipm.result }}" = "skipped" ] && [ "${{ needs.run-testcases.result }}" = "skipped" ]; then
+            echo "⏭️  All jobs skipped (only non-relevant files changed)"
+          else
+            echo "⚠️  Some jobs did not succeed — review the logs above"
+          fi

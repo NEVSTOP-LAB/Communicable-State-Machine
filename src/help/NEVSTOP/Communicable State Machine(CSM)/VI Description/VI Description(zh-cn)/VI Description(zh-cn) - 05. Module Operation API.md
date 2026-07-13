@@ -141,12 +141,13 @@ API: Do Something Else -@ csm
 -- <b>输入控件(Controls)</b> --
 - <b>Current Module ("" to Generate an ID)</b>: 当前模块名称，当没有输入时，生成一个临时ID，便于调试判断位置。
 - <b>CSM Scripts</b>: 待运行的CSM指令。
+- <b>Sync Response Only (F)</b>: <b>Response</b>中是否仅包含同步消息的响应，默认不启用。
 - <b>Continue If Error? (F)</b>: 发生错误时是否继续执行, 默认不继续执行。
 - <b>Wait (5000 ms)</b>: 等待超时时间，默认为5000 ms。
 - <b>Response Timeout (-2 Using Global Settings)</b>: 同步调用的超时时间，默认为-2，使用全局设置。你可以通过CSM - Set TMO of Sync-Reply VI设置全局超时时间。
 
 -- <b>输出控件(Indicators)</b> --
-- <b>Response</b>: 执行脚本的返回结果。只有同步消息才会携带返回，其他的指令对应列为空字符串。
+- <b>Response</b>: 执行脚本的返回结果。<b>Sync Response Only (F)</b>启用时仅包含同步消息的响应，否则每一行指令,包括空行和注释，都对应了一个返回结果，按照顺序排列，非同步消息的响应为空字符串。
 - <b>Scripts Left</b>: 剩余未执行的脚本。
 
 ## CSM - Broadcast Event.vi

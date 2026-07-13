@@ -12,5 +12,4 @@
 	<Item Name="Chain5.vi" Type="VI" URL="../Chain5.vi"/>
 	<Item Name="Chain6.vi" Type="VI" URL="../Chain6.vi"/>
 	<Item Name="Normal-CSM.vi" Type="VI" URL="../Normal-CSM.vi"/>
-	<Item Name="InitCSMs.vi" Type="VI" URL="../InitCSMs.vi"/>
 </Library>

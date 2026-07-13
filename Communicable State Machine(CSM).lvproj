@@ -110,6 +110,11 @@
 			<Item Name="_support" Type="Folder">
 				<Item Name="Generate testcase Started User Log.vi" Type="VI" URL="../testcases/_support/Generate testcase Started User Log.vi"/>
 				<Item Name="Check CSM Modules Exist Or Not.vi" Type="VI" URL="../testcases/_support/Check CSM Modules Exist Or Not.vi"/>
+				<Item Name="InitCSMs.vi" Type="VI" URL="../testcases/CSM/InitCSMs.vi"/>
+				<Item Name="StartCSMs.vi" Type="VI" URL="../testcases/CSM/StartCSMs.vi"/>
+				<Item Name="GetPathByPrototypeName.vi" Type="VI" URL="../testcases/CSM/GetPathByPrototypeName.vi"/>
+				<Item Name="Prototypes.vi" Type="VI" URL="../testcases/CSM/Prototypes.vi"/>
+				<Item Name="Build CSM to PPL.vi" Type="VI" URL="../testcases/CSM/Build CSM to PPL.vi"/>
 				<Item Name="Package Error Info.vi" Type="VI" URL="../testcases/_support/Package Error Info.vi"/>
 				<Item Name="Ensure All Modules Exit.vi" Type="VI" URL="../testcases/_support/Ensure All Modules Exit.vi"/>
 				<Item Name="passifeqal - StringArray.vi" Type="VI" URL="../testcases/_support/passifeqal - StringArray.vi"/>

@@ -56,6 +56,7 @@
 > System-level modules start with a `.` in their name. The target module for a CSM message includes the `.` in the name. For example, if the requested module name is `.System`, the target module for the CSM message is `.System`.
 > In Worker Mode, the target module for a CSM message can only be the overall module name, not the node name. For example, if the requested module name is `Worker#`, the target module for the CSM message is `Worker`.
 > In Chain of Responsibility Mode, the target module for a CSM message can only be the overall module name, not the node name. For example, if the requested module name is `Chain$1`, the target module for the CSM message is `Chain`.
+> In Chain of Responsibility Mode, a message is routed directly based on handling capability and priority (smaller number = higher priority) and is not passed sequentially across nodes.
 
 > [!NOTE]
 > <b>Synchronous Message</b>
