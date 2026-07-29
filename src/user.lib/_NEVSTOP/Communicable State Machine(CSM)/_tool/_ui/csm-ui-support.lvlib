@@ -38,4 +38,5 @@
 	<Item Name="Relocate Splitter Posistion.vi" Type="VI" URL="../Relocate Splitter Posistion.vi"/>
 	<Item Name="Tree Rows from Delimited String Array_csm.vi" Type="VI" URL="../Tree Rows from Delimited String Array_csm.vi"/>
 	<Item Name="Explore to Path.vi" Type="VI" URL="../Explore to Path.vi"/>
+	<Item Name="Distribute Controls Evenly.vi" Type="VI" URL="../Distribute Controls Evenly.vi"/>
 </Library>
