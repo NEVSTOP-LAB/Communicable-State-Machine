@@ -4,24 +4,24 @@
 
 ### Naming Check.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Name("" to use uuid)</b>:
 Returns any argument(s) that may be used in the current state string. These arguments come after the ">>" characters
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Name(dup)</b>:
 Returns any argument(s) that may be used in the current state string. These arguments come after the ">>" characters
 - <b>Name ("" to Use UUID)</b>:Controls
 - <b>Name (Dup)</b>:Indicators
 ### Check.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>BroadcastRegistry in</b>:
 - <b>Status</b>:
 - <b>Source</b>:
 - <b>Target</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>BroadcastRegistry out</b>:
 - <b>Response Message Info</b>:
 - <b>BroadcastRegistry In</b>:Controls
@@ -31,62 +31,62 @@ Returns any argument(s) that may be used in the current state string. These argu
 - <b>Status</b>:Controls
 ### Delete Source Module.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>BroadcastRegistry in</b>:
 - <b>Source</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>BroadcastRegistry out</b>:
 - <b>BroadcastRegistry In</b>:Controls
 - <b>BroadcastRegistry Out</b>:Indicators
 ### Delete Target Module.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>BroadcastRegistry in</b>:
 - <b>Source</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>BroadcastRegistry out</b>:
 - <b>BroadcastRegistry In</b>:Controls
 - <b>BroadcastRegistry Out</b>:Indicators
 ### Initialize.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>BroadcastRegistry in</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>BroadcastRegistry out</b>:
 - <b>BroadcastRegistry Out</b>:Indicators
 ### List Entries.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>BroadcastRegistry in</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>BroadcastRegistry out</b>:
 - <b>Array</b>:
 - <b>Array</b>:Indicators
 - <b>BroadcastRegistry Out</b>:Indicators
 ### List Status in Registry.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>BroadcastRegistry in</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>BroadcastRegistry out</b>:
 - <b>Status</b>:
 - <b>BroadcastRegistry Out</b>:Indicators
 - <b>Status</b>:Indicators
 ### Register.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>BroadcastRegistry in</b>:
 - <b>status</b>:
 - <b>source</b>:
 - <b>api</b>:
 - <b>target</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>BroadcastRegistry out</b>:
 - <b>Api</b>:Controls
 - <b>BroadcastRegistry In</b>:Controls
@@ -95,24 +95,24 @@ Returns any argument(s) that may be used in the current state string. These argu
 - <b>Status</b>:Controls
 ### Remove Module.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>BroadcastRegistry in</b>:
 - <b>Source</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>BroadcastRegistry out</b>:
 - <b>BroadcastRegistry In</b>:Controls
 - <b>BroadcastRegistry Out</b>:Indicators
 ### Unregister.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>BroadcastRegistry in</b>:
 - <b>Status</b>:
 - <b>Source</b>:
 - <b>api</b>:
 - <b>Target</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>BroadcastRegistry out</b>:
 - <b>Api</b>:Controls
 - <b>BroadcastRegistry In</b>:Controls
@@ -121,52 +121,52 @@ Returns any argument(s) that may be used in the current state string. These argu
 - <b>Status</b>:Controls
 ### Broadcast Item Key.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>status</b>:
 - <b>target</b>:
 - <b>source</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>key</b>:
 - <b>Key</b>:Indicators
 - <b>Status</b>:Controls
 - <b>Target</b>:Controls
 ### Preview.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>BroadcastRegistry in</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Registry</b>:
 - <b>BroadcastRegistry out</b>:
 - <b>BroadcastRegistry Out</b>:Indicators
 - <b>Registry</b>:Indicators
 ### Remove response API from List.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>API</b>:
 - <b>output cluster in</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>output cluster out</b>:
 - <b>API</b>:Controls
 - <b>Output Cluster Out</b>:Indicators
 ### Concatenate State with Arguments.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Arguments</b>:
 - <b>State</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>State with Arguments</b>:
 - <b>Arguments</b>:Controls
 - <b>State With Arguements</b>:Indicators
 ### CSM-Name to CSM-Mode.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>String</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>ParentCSM Name</b>:
 - <b>CSM Mode</b>:
 - <b>Requested Name</b>:
@@ -176,46 +176,46 @@ Returns any argument(s) that may be used in the current state string. These argu
 
 ### Hex Str to U8 Data.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>HEX String (0-9,A-F)</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>u8 Data[]</b>:
 - <b>HEX String (0-9,A-F)</b>:Controls
 - <b>U8 Data[]</b>:Indicators
 ### Parse Next Single-line State.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>States Queue</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Next Single-line State</b>:
 - <b>Remaining States Queue</b>:
 
 ### Remove Comments from Line.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>single-line text</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>single-line text without comments</b>:
 
 ### Splite Reason String Part.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Single-line -& Reason</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>CSM Name</b>:
 - <b>`State</b>:
 - <b>`Arguments</b>:
 
 ### Splite Single-line Message.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>single-line text</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>operator</b>:
 - <b>state</b>:
 - <b>args</b>:
@@ -223,39 +223,39 @@ Returns any argument(s) that may be used in the current state string. These argu
 
 ### Trim Single line Text.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>single-line text</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>trimmed text</b>:
 
 ### CSM Not Allowed Message.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>State</b>:
 - <b>CSM</b>:
 - <b>CSM</b>:Controls
 - <b>State</b>:Controls
 ### Cache-Broadcast Registry Search Result.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>CSM Name</b>:
 - <b>Broadcast state</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Array</b>:
 - <b>Array</b>:Indicators
 - <b>CSM Name</b>:Controls
 ### FGV-BroadcastRegistry.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Source</b>:
 - <b>Target</b>:
 - <b>Status</b>:
 - <b>API</b>:
 - <b>Operation</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>response message</b>:
 - <b>API</b>:Controls
 - <b>Response Message</b>:Indicators
@@ -264,36 +264,36 @@ Returns any argument(s) that may be used in the current state string. These argu
 - <b>Target</b>:Controls
 ### global-Broadcast Cache Change Flag.vi
 
-È«¾Ö±äÁ¿£¬ÓÃÓÚ±ê¼Ç¹ã²¥»º´æÊÇ·ñ·¢Éú±ä»¯
+å…¨å±€å˜é‡ï¼Œç”¨äºæ ‡è®°å¹¿æ’­ç¼“å­˜æ˜¯å¦å‘ç”Ÿå˜åŒ–
 
 ### global-CSMQ FGV Change Flag.vi
 
-È«¾Ö±äÁ¿£¬ÓÃÓÚ±ê¼Ç CSM Ä£¿é¹ÜÀíĞÅÏ¢ÊÇ·ñ·¢Éú±ä»¯
+å…¨å±€å˜é‡ï¼Œç”¨äºæ ‡è®° CSM æ¨¡å—ç®¡ç†ä¿¡æ¯æ˜¯å¦å‘ç”Ÿå˜åŒ–
 
 ### global-GEvnt Filter Change Flag.vi
 
-È«¾Ö±äÁ¿£¬ÓÃÓÚ±ê¼Ç Global Event µÄ¹ıÂËÌõ¼şÊÇ·ñ·¢Éú±ä»¯
+å…¨å±€å˜é‡ï¼Œç”¨äºæ ‡è®° Global Event çš„è¿‡æ»¤æ¡ä»¶æ˜¯å¦å‘ç”Ÿå˜åŒ–
 
 ### Cache-GEvt Filter Object.vi
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>CSM:LogFilter.lvclass</b>:
 - <b>CSM:LogFilter.lvclass</b>:Indicators
 ### FGV-GEvt Filter Obj.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Set(T)/Get(F)</b>:
 - <b>Rules-v1</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>CSM:LogFilter.lvclass</b>:
 
 ### FGV-GlobalEventRef.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Create(F)</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>CSM Global Log Event</b>:
 - <b>Event</b>:Indicators
 - <b>Force Destroy?</b>:Controls
@@ -301,29 +301,29 @@ Returns any argument(s) that may be used in the current state string. These argu
 - <b>Timeout In ms (5000 ms)</b>:Controls
 ### FGV-StatusChangeEventRef.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Name("" to use uuid) in</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Status Change Event</b>:
 
 ### GEvt-BackgroundThread.vi
 
 ### GEvt-Convert Filter Rules - v1.0.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Rules-v1</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>GlobalLogFilter</b>:
 - <b>GlobalLogFilter</b>:Indicators
 ### GEvt-Filter Global Log - v1.0.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Rules-v1</b>:
 - <b>Cross CSM Data (in)</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Matched? (dup)</b>:
 - <b>Cross CSM Data</b>:
 - <b>Cross CSM Data</b>:Indicators
@@ -332,13 +332,13 @@ Returns any argument(s) that may be used in the current state string. These argu
 - <b>Rules-v1</b>:Controls
 ### GEvt-Generate Complete Log.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>CSM Global Log Event</b>:
 - <b>event data</b>:
 - <b>Enable?</b>:
 - <b>CSM:LogFilter.lvclass</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>CSM Global Log Event out</b>:
 - <b>CSM Global Log Event Out</b>:Indicators
 - <b>CSM Global Log Event</b>:Controls
@@ -346,14 +346,14 @@ Returns any argument(s) that may be used in the current state string. These argu
 - <b>Event Data</b>:Controls
 ### GEvt-Generate Interrupt Log.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>CSM Global Log Event</b>:
 - <b>Current State</b>:
 - <b>Arguments</b>:
 - <b>Name("" to use uuid)</b>:
 - <b>CSM:LogFilter.lvclass</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>CSM Global Log Event out</b>:
 - <b>event data</b>:
 - <b>Arguments</b>:Controls
@@ -365,13 +365,13 @@ Returns any argument(s) that may be used in the current state string. These argu
 - <b>Name ("" to Use UUID)</b>:Controls
 ### GEvt-Generate Module Created Log.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>CSM Global Log Event</b>:
 - <b>Name("" to use uuid)</b>:
 - <b>Created?</b>:
 - <b>CSM:LogFilter.lvclass</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>CSM Global Log Event out</b>:
 - <b>event data</b>:
 - <b>CSM Global Log Event Out</b>:Indicators
@@ -381,13 +381,13 @@ Returns any argument(s) that may be used in the current state string. These argu
 - <b>Name ("" to Use UUID)</b>:Controls
 ### GEvt-Generate Module Destroyed Log.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>CSM Global Log Event</b>:
 - <b>Name("" to use uuid)</b>:
 - <b>Enable?</b>:
 - <b>CSM:LogFilter.lvclass</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>CSM Global Log Event out</b>:
 - <b>event data</b>:
 - <b>CSM Global Log Event Out</b>:Indicators
@@ -397,14 +397,14 @@ Returns any argument(s) that may be used in the current state string. These argu
 - <b>Name ("" to Use UUID)</b>:Controls
 ### GEvt-Generate Register Log.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>CSM Global Log Event</b>:
 - <b>Current State</b>:
 - <b>Arguments</b>:
 - <b>Name("" to use uuid)</b>:
 - <b>CSM:LogFilter.lvclass</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>CSM Global Log Event out</b>:
 - <b>event data</b>:
 - <b>Arguments</b>:Controls
@@ -416,14 +416,14 @@ Returns any argument(s) that may be used in the current state string. These argu
 - <b>Name ("" to Use UUID)</b>:Controls
 ### GEvt-Generate Remaining States Log.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>CSM Global Log Event</b>:
 - <b>Remaining States</b>:
 - <b>Name("" to use uuid)</b>:
 - <b>Enable?</b>:
 - <b>CSM:LogFilter.lvclass</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>CSM Global Log Event out</b>:
 - <b>event data</b>:
 - <b>CSM Global Log Event Out</b>:Indicators
@@ -434,7 +434,7 @@ Returns any argument(s) that may be used in the current state string. These argu
 - <b>Remaining States</b>:Controls
 ### GEvt-Generate State Change Log.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>CSM Global Log Event</b>:
 - <b>Current State</b>:
 - <b>Arguments</b>:
@@ -444,7 +444,7 @@ Returns any argument(s) that may be used in the current state string. These argu
 - <b>Name("" to use uuid)</b>:
 - <b>CSM:LogFilter.lvclass</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>CSM Global Log Event out</b>:
 - <b>event data</b>:
 - <b>CSM Global Log Event Out</b>:Indicators
@@ -458,14 +458,14 @@ Returns any argument(s) that may be used in the current state string. These argu
 - <b>Source Module</b>:Controls
 ### GEvt-Generate Status Log.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>CSM Global Log Event</b>:
 - <b>Current State</b>:
 - <b>Arguments</b>:
 - <b>Name("" to use uuid)</b>:
 - <b>CSM:LogFilter.lvclass</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>CSM Global Log Event out</b>:
 - <b>event data</b>:
 - <b>Arguments</b>:Controls
@@ -478,14 +478,14 @@ Returns any argument(s) that may be used in the current state string. These argu
 - <b>Source Module</b>:Controls
 ### GEvt-Generate Unregister Log.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>CSM Global Log Event</b>:
 - <b>Current State</b>:
 - <b>Arguments</b>:
 - <b>Name("" to use uuid)</b>:
 - <b>CSM:LogFilter.lvclass</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>CSM Global Log Event out</b>:
 - <b>event data</b>:
 - <b>Arguments</b>:Controls
@@ -498,60 +498,60 @@ Returns any argument(s) that may be used in the current state string. These argu
 - <b>Remove For Module Exit? (F)</b>:Controls
 ### GEvt-Generate with Rule Check.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>LogFilter in</b>:
 - <b>event data</b>:
 - <b>CSM Global Log Event in</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>CSM Global Log Event out</b>:
 - <b>CSM Global Log Event Out</b>:Indicators
 - <b>Event Data</b>:Controls
 - <b>LogFilter In</b>:Controls
 ### GEvt-Set Source Filter Rules - v1.0.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Rules-v1</b>:
 - <b>Rules-v1</b>:Controls
 ### GEvt-ThreadQueueName.vi
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>ThreadQueueName</b>:
 
 ### GEvt-WatchdogThread.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>WatchDogQ</b>:
 
 ### Filter Check.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Cross CSM Data in</b>:
 - <b>GlobalLogFilter in</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Matched? (dup)</b>:
 - <b>Cross CSM Data out</b>:
 - <b>GlobalLogFilter.lvclass (dup)</b>:
 
 ### List Rules as Strings.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>GlobalLogFilter in</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Rule Strings</b>:
 - <b>GlobalLogFilter out</b>:
 - <b>GlobalLogFilter Out</b>:Indicators
 - <b>Rule Strings</b>:Indicators
 ### CSM Check - LogType.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Matched Previous?</b>:
 - <b>Cross CSM Data (in)</b>:
 - <b>GlobalLogFilter.lvclass</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Matched? (dup)</b>:
 - <b>Cross CSM Data</b>:
 - <b>GlobalLogFilter.lvclass (dup)</b>:
@@ -561,12 +561,12 @@ Returns any argument(s) that may be used in the current state string. These argu
 - <b>Matched? (Dup)</b>:Indicators
 ### CSM Check - State.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Matched Previous?</b>:
 - <b>Cross CSM Data (in)</b>:
 - <b>GlobalLogFilter.lvclass</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Matched? (dup)</b>:
 - <b>Cross CSM Data</b>:
 - <b>GlobalLogFilter.lvclass (dup)</b>:
@@ -576,12 +576,12 @@ Returns any argument(s) that may be used in the current state string. These argu
 - <b>Matched? (Dup)</b>:Indicators
 ### CSM Check - StateType.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Matched Previous?</b>:
 - <b>Cross CSM Data (in)</b>:
 - <b>GlobalLogFilter.lvclass</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Matched? (dup)</b>:
 - <b>Cross CSM Data</b>:
 - <b>GlobalLogFilter.lvclass (dup)</b>:
@@ -591,12 +591,12 @@ Returns any argument(s) that may be used in the current state string. These argu
 - <b>Matched? (Dup)</b>:Indicators
 ### Group Check - CSM.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Matched Previous?</b>:
 - <b>Cross CSM Data (in)</b>:
 - <b>GlobalLogFilter.lvclass</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Matched? (dup)</b>:
 - <b>Cross CSM Data</b>:
 - <b>GlobalLogFilter.lvclass (dup)</b>:
@@ -606,12 +606,12 @@ Returns any argument(s) that may be used in the current state string. These argu
 - <b>Matched? (Dup)</b>:Indicators
 ### Group Check - LogType.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Matched Previous?</b>:
 - <b>Cross CSM Data (in)</b>:
 - <b>GlobalLogFilter.lvclass</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Matched? (dup)</b>:
 - <b>Cross CSM Data</b>:
 - <b>GlobalLogFilter.lvclass (dup)</b>:
@@ -621,12 +621,12 @@ Returns any argument(s) that may be used in the current state string. These argu
 - <b>Matched? (Dup)</b>:Indicators
 ### Group Check - State.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Matched Previous?</b>:
 - <b>Cross CSM Data (in)</b>:
 - <b>GlobalLogFilter.lvclass</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Matched? (dup)</b>:
 - <b>Cross CSM Data</b>:
 - <b>GlobalLogFilter.lvclass (dup)</b>:
@@ -636,12 +636,12 @@ Returns any argument(s) that may be used in the current state string. These argu
 - <b>Matched? (Dup)</b>:Indicators
 ### Group Check - StateType.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Matched Previous?</b>:
 - <b>Cross CSM Data (in)</b>:
 - <b>GlobalLogFilter.lvclass</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Matched? (dup)</b>:
 - <b>Cross CSM Data</b>:
 - <b>GlobalLogFilter.lvclass (dup)</b>:
@@ -651,95 +651,95 @@ Returns any argument(s) that may be used in the current state string. These argu
 - <b>Matched? (Dup)</b>:Indicators
 ### Set CSM LogType Filter.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>LogType</b>:
 - <b>GlobalLogFilter in</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>GlobalLogFilter out</b>:
 - <b>GlobalLogFilter Out</b>:Indicators
 - <b>LogType</b>:Controls
 ### Set CSM State Filter.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>CSM:State</b>:
 - <b>GlobalLogFilter in</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>GlobalLogFilter out</b>:
 - <b>CSM:State</b>:Controls
 - <b>GlobalLogFilter Out</b>:Indicators
 ### Set CSM StateType Filter.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>LogType</b>:
 - <b>GlobalLogFilter in</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>GlobalLogFilter out</b>:
 - <b>GlobalLogFilter Out</b>:Indicators
 - <b>LogType</b>:Controls
 ### Set Global CSM Filter.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Group:CSM</b>:
 - <b>GlobalLogFilter in</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>GlobalLogFilter out</b>:
 - <b>GlobalLogFilter Out</b>:Indicators
 - <b>Group:CSM</b>:Controls
 ### Set Global LogType Filter.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Group:LogType</b>:
 - <b>GlobalLogFilter in</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>GlobalLogFilter out</b>:
 - <b>GlobalLogFilter Out</b>:Indicators
 - <b>Group:LogType</b>:Controls
 ### Set Global State Filter.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Group:State</b>:
 - <b>GlobalLogFilter in</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>GlobalLogFilter out</b>:
 - <b>GlobalLogFilter Out</b>:Indicators
 - <b>Group:State</b>:Controls
 ### Set Global StateType Filter.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Group:LogType</b>:
 - <b>GlobalLogFilter in</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>GlobalLogFilter out</b>:
 - <b>GlobalLogFilter Out</b>:Indicators
 - <b>Group:LogType</b>:Controls
 ### Log State Type.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Complete(T)/Start(F)</b>:
 - <b>Source Module</b>:
 - <b>State</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>CSM_GlobalLog_STATE_TYPE</b>:
 - <b>CSM_GlobalLog_STATE_TYPE</b>:Indicators
 - <b>Complete? (T)/Start(F)</b>:Controls
 - <b>Source Module</b>:Controls
-- <b>¡®State</b>:Controls
+- <b>â€˜State</b>:Controls
 ### Parse Register Message.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>state</b>:
 - <b>Module Name </b>:
 - <b>args</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>target</b>:
 - <b>source</b>:
 - <b>status</b>:
@@ -753,11 +753,11 @@ Returns any argument(s) that may be used in the current state string. These argu
 - <b>Target</b>:Indicators
 ### Parse State with Arguments String.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>State with Arguments</b>:
 The State string that requires the argument.
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>State</b>:
 - <b>Arguments</b>:
 - <b>Target Module</b>:
@@ -768,12 +768,12 @@ The State string that requires the argument.
 - <b>Target Module</b>:Indicators
 ### Parse Unregister Message.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>state</b>:
 - <b>Module Name </b>:
 - <b>args</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>target</b>:
 - <b>source</b>:
 - <b>status</b>:
@@ -787,11 +787,11 @@ The State string that requires the argument.
 - <b>Target</b>:Indicators
 ### Dequeue Element.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>timeout in ms (-1)</b>:
 - <b>Priority Queue</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>timed out?</b>:
 - <b>Cross JKI State Machine State</b>:
 - <b>Priority Queue(dup)</b>:
@@ -803,13 +803,13 @@ The State string that requires the argument.
 - <b>Timeout In ms (-1)</b>:Controls
 ### Enqueue Element.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>High Priority?(F)</b>:
 - <b>timeout in ms (-1)</b>:
 - <b>Cross JKI State Machine State</b>:
 - <b>Priority Queue</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Priority Queue(dup)</b>:
 - <b>Cross JKI State Machine State</b>:Controls
 - <b>High Priority? (F)</b>:Controls
@@ -817,10 +817,10 @@ The State string that requires the argument.
 - <b>Timeout In ms (-1)</b>:Controls
 ### Get Queue Status.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Priority Queue in</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b># pending insert</b>:
 - <b># pending remove</b>:
 - <b>Priority Queue out</b>:
@@ -830,20 +830,20 @@ The State string that requires the argument.
 - <b># Pending Remove</b>:Indicators
 ### Not a Refnum.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Priority Queue.lvclass</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>NaN/Path/Refnum?</b>:
 - <b>NaN/Path/Refnum?</b>:Indicators
 - <b>Priority Queue.lvclass</b>:Controls
 ### Obtain Priority Queue.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>create if not found? (T)</b>:
 - <b>name</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>created new?</b>:
 - <b>Priority Queue</b>:
 - <b>Create If Not Found? (T)</b>:Controls
@@ -851,21 +851,21 @@ The State string that requires the argument.
 - <b>Priority Queue</b>:Indicators
 ### Release Priority Queue.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>force destroy? (F)</b>:
 - <b>Priority Queue</b>:
 - <b>Force Destroy? (F)</b>:Controls
 - <b>Priority Queue</b>:Controls
 ### CSMP-Async Call.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>state</b>:
 - <b>args</b>:
 - <b>source/target</b>:
 - <b>Module Name</b>:
 - <b>Msg Type</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>state out</b>:
 - <b>args out</b>:
 - <b>source/target out</b>:
@@ -883,14 +883,14 @@ The State string that requires the argument.
 - <b>State</b>:Controls
 ### CSMP-Broadcast.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>state</b>:
 - <b>args</b>:
 - <b>source/target</b>:
 - <b>Module Name</b>:
 - <b>Msg Type</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>state out</b>:
 - <b>args out</b>:
 - <b>source/target out</b>:
@@ -901,14 +901,14 @@ The State string that requires the argument.
 - <b>Module Name</b>:Controls
 - <b>Pre-Args Out</b>:Indicators
 - <b>Pre-State Out</b>:Indicators
-- <b>Response For Message.¡¯Error</b>:Controls
+- <b>Response For Message.â€™Error</b>:Controls
 - <b>Source/target Out</b>:Indicators
 - <b>Source/target</b>:Controls
 - <b>State Out</b>:Indicators
 - <b>State</b>:Controls
 ### CSMP-PostPostMsg.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>state</b>:
 - <b>args</b>:
 - <b>source/target</b>:
@@ -918,7 +918,7 @@ The State string that requires the argument.
 - <b>Module Name</b>:
 - <b>Response Arguments</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>state out</b>:
 - <b>args out</b>:
 - <b>source/target out</b>:
@@ -938,7 +938,7 @@ The State string that requires the argument.
 - <b>State</b>:Controls
 ### CSMP-PostSendMsg.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>state</b>:
 - <b>args</b>:
 - <b>source/target</b>:
@@ -946,7 +946,7 @@ The State string that requires the argument.
 - <b>Module Name</b>:
 - <b>Response Arguments</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>state out</b>:
 - <b>args out</b>:
 - <b>source/target out</b>:
@@ -960,13 +960,13 @@ The State string that requires the argument.
 - <b>State</b>:Controls
 ### CSMP-Register Status.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>state</b>:
 - <b>args</b>:
 - <b>source/target</b>:
 - <b>Module Name</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>state out</b>:
 - <b>args out</b>:
 - <b>source/target out</b>:
@@ -984,14 +984,14 @@ The State string that requires the argument.
 - <b>State</b>:Controls
 ### CSMP-Sync Call.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>state</b>:
 - <b>args</b>:
 - <b>source/target</b>:
-- <b>Response Timeout(-2 using Global Settings)</b>: Í¬²½µ÷ÓÃµÄ³¬Ê±Ê±¼ä£¬Ä¬ÈÏÎª-2£¬Ê¹ÓÃÈ«¾ÖÉèÖÃ¡£Äã¿ÉÒÔÍ¨¹ı"CSM - Set TMO of Sync-Reply.vi" ÉèÖÃÈ«¾Ö³¬Ê±Ê±¼ä¡£
+- <b>Response Timeout(-2 using Global Settings)</b>: åŒæ­¥è°ƒç”¨çš„è¶…æ—¶æ—¶é—´ï¼Œé»˜è®¤ä¸º-2ï¼Œä½¿ç”¨å…¨å±€è®¾ç½®ã€‚ä½ å¯ä»¥é€šè¿‡"CSM - Set TMO of Sync-Reply.vi" è®¾ç½®å…¨å±€è¶…æ—¶æ—¶é—´ã€‚
 - <b>Module Name</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>state out</b>:
 - <b>args out</b>:
 - <b>source/target out</b>:
@@ -1008,13 +1008,13 @@ The State string that requires the argument.
 - <b>State</b>:Controls
 ### CSMP-Unregister Status.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>state</b>:
 - <b>args</b>:
 - <b>source/target</b>:
 - <b>Module Name</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>state out</b>:
 - <b>args out</b>:
 - <b>source/target out</b>:
@@ -1032,7 +1032,7 @@ The State string that requires the argument.
 - <b>State</b>:Controls
 ### Auto Resize All MultiListbox Columns (Uniform Text).vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>IgnoreCols(Empty as default)</b>:
 - <b>Array</b>:
 - <b>Control in</b>:
@@ -1041,13 +1041,13 @@ The State string that requires the argument.
 - <b>IngoreCols (Empty As Default)</b>:Controls
 ### Dashboard Cell Resize.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Cluster</b>:
 - <b>Cluster Size:Height</b>:
 - <b>Cluster Size:Width</b>:
 - <b>ClusterRef</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Bounds:Area Height</b>:
 - <b>Bounds:Area Width</b>:
 - <b>Bounds:Area Height</b>:Indicators
@@ -1056,7 +1056,7 @@ The State string that requires the argument.
 - <b>Cluster Size:Width</b>:Controls
 ### Dashboard Cell2 Array Resize.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Num Columns</b>:
 - <b>Cluster</b>:
 - <b>Num Rows</b>:
@@ -1071,41 +1071,41 @@ The State string that requires the argument.
 - <b>Num Rows</b>:Controls
 ### Open CSM BD.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Current Module("" to generate a ID)</b>:
 - <b>CSM</b>:
 
 ### Open CSM FP.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Current Module("" to generate a ID)</b>:
 - <b>CSM</b>:
 
 ### Select Greater_nevstop.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>A</b>:
 - <b>B</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>lesser</b>:
 - <b>A</b>:Controls
 - <b>Lesser</b>:Indicators
 ### Append Application Directory If Relative.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>Relative path (.)</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>Application Directory (+ Relative)</b>:
 
 ### Convert File Extension (Path)__ogtk.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>new ending (none)</b>:
 - <b>file name</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>prev ending</b>:
 - <b>new filename</b>:
 - <b>New Ending (None)</b>:Controls
@@ -1113,11 +1113,11 @@ The State string that requires the argument.
 - <b>Prev Ending</b>:Indicators
 ### Convert File Extension (String)__ogtk.vi
 
--- <b>Controls(ÊäÈë¿Ø¼ş)</b> --
+-- <b>Controls(è¾“å…¥æ§ä»¶)</b> --
 - <b>new ending (none)</b>:
 - <b>file name</b>:
 
--- <b>Indicators(Êä³ö¿Ø¼ş)</b> --
+-- <b>Indicators(è¾“å‡ºæ§ä»¶)</b> --
 - <b>prev ending</b>:
 - <b>new filename</b>:
 - <b>New Ending (None)</b>:Controls

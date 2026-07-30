@@ -11,6 +11,7 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">385908736</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
+	<Property Name="NI.SortType" Type="Int">3</Property>
 	<Item Name="Auto Resize Columns" Type="Folder">
 		<Item Name="Auto Resize All MultiListbox Columns (Uniform Text).vi" Type="VI" URL="../Auto Resize All MultiListbox Columns (Uniform Text).vi"/>
 		<Item Name="Auto Resize All Table Columns (Uniform Text).vi" Type="VI" URL="../Auto Resize All Table Columns (Uniform Text).vi"/>
@@ -36,4 +37,6 @@
 	<Item Name="Populate Tree with Delimited Strings_csm.vi" Type="VI" URL="../Populate Tree with Delimited Strings_csm.vi"/>
 	<Item Name="Relocate Splitter Posistion.vi" Type="VI" URL="../Relocate Splitter Posistion.vi"/>
 	<Item Name="Tree Rows from Delimited String Array_csm.vi" Type="VI" URL="../Tree Rows from Delimited String Array_csm.vi"/>
+	<Item Name="Explore to Path.vi" Type="VI" URL="../Explore to Path.vi"/>
+	<Item Name="Distribute Controls Evenly.vi" Type="VI" URL="../Distribute Controls Evenly.vi"/>
 </Library>

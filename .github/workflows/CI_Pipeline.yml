@@ -122,6 +122,7 @@ jobs:
 
   #---------------------------------------------------------------------------
   # Job: Build VIPM Library
+  # Runs first after check-broken-vis; testcases wait for this to succeed.
   # Only runs when:
   #   1. check-broken-vis succeeded (implicit via needs)
   #   2. Branch does NOT match **testcase** (Build's original branch filter)
@@ -150,7 +151,7 @@ jobs:
         with:
           LabVIEW_Version: 2017
           VipbPath: ${{ github.workspace }}
-        timeout-minutes: 30
+        timeout-minutes: 60
         continue-on-error: true
 
       - name: Retry BuildDailyVIP if failed
@@ -160,7 +161,7 @@ jobs:
         with:
           LabVIEW_Version: 2017
           VipbPath: ${{ github.workspace }}
-        timeout-minutes: 30
+        timeout-minutes: 60
 
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4.3.2
@@ -187,15 +188,20 @@ jobs:
 
   #---------------------------------------------------------------------------
   # Job: Run Testcases
-  # Runs in parallel with build-vipm after check-broken-vis succeeds.
-  # Skipped when ONLY .vipb files changed (Check/Test's original path filter).
+  # Runs after build-vipm succeeds (sequential order).
+  # Only runs when testcase-relevant files changed.
+  # When build-vipm is skipped (e.g. only testcases changed), testcases still run.
   #---------------------------------------------------------------------------
   run-testcases:
-    needs: check-broken-vis
+    needs: build-vipm
     if: |
-      needs.detect-changes.outputs.testcases == 'true' ||
-      needs.detect-changes.outputs.internal_test == 'true' ||
-      needs.detect-changes.outputs.source == 'true'
+      always() && (
+        needs.build-vipm.result == 'success' || needs.build-vipm.result == 'skipped'
+      ) && (
+        needs.detect-changes.outputs.testcases == 'true' ||
+        needs.detect-changes.outputs.internal_test == 'true' ||
+        needs.detect-changes.outputs.source == 'true'
+      )
     runs-on: [self-hosted, lv2017]
     steps:
       - uses: actions/checkout@v4.2.2
@@ -210,7 +216,7 @@ jobs:
         timeout-minutes: 60
 
   #---------------------------------------------------------------------------
-  # Job: Notify — always runs after build + testcases finish
+  # Job: Notify — always runs after build → testcases both finish
   # Serves as the "group completed" signal point.
   #---------------------------------------------------------------------------
   notify:

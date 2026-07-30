@@ -17,10 +17,10 @@ _**CSM 函数面板**_
 
 ![image](.doc/_img/CSM%20Palette.png)
 
-**代码模板介绍：**  
+**代码模板介绍：**
 [English](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/Template%20Description(EN).md) | [中文](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/Template%20Description(zh-cn).md)
 
-**API 介绍：**  
+**API 介绍：**
 [English](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/VI%20Description(EN).md) | [中文](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/VI%20Description(zh-cn).md)
 
 ## 创建可重用模块
@@ -82,7 +82,7 @@ _**CSM 函数面板**_
 JKISM 仅支持 STRING 类型参数，但应用需要传输各种数据类型。下表列出了当前参数支持选项，部分为内置功能，其他需要安装插件。
 
 | 参数 | 类型 | 描述 |
-|---|---|---|
+| --- | --- | --- |
 | SafeStr | 内置 | 特殊字符（"->\| -> -@ & <- , ; []{}`"）将被替换为 %[HEXCODE] |
 | HexStr | 内置 | 数据转换为 variant 并编码为十六进制字符串 |
 | [MassData](https://github.com/NEVSTOP-LAB/CSM-MassData-Parameter-Support) | 插件 | 数据存储在循环缓冲区中，传递起始位置和长度作为参数 |

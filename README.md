@@ -17,10 +17,10 @@ _**CSM API Palette**_
 
 ![image](.doc/_img/CSM%20Palette.png)
 
-**Template Description:**  
+**Template Description:**
 [English](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/Template%20Description(EN).md) | [中文](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/Template%20Description(zh-cn).md)
 
-**API Description:**  
+**API Description:**
 [English](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/VI%20Description(EN).md) | [中文](src/help/NEVSTOP/Communicable%20State%20Machine(CSM)/VI%20Description(zh-cn).md)
 
 ## Create Reusable Modules
@@ -82,7 +82,7 @@ See _**/Example/3. Caller is Other Framework Scenario**_ for an example.
 JKISM only supports STRING parameters, but applications need to transmit various data types. The table below lists current parameter support options—some built-in, others requiring addon installation.
 
 | Parameter | Type | Description |
-|---|---|---|
+| --- | --- | --- |
 | SafeStr | Built-in | Special characters ("->\| -> -@ & <- , ; []{}`") are replaced with %[HEXCODE] |
 | HexStr | Built-in | Data is converted to variant and encoded as hex string |
 | [MassData](https://github.com/NEVSTOP-LAB/CSM-MassData-Parameter-Support) | Addon | Data is stored in a circular buffer; StartPos with length is passed as parameter |
