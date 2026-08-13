@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2026-08-11 09:40:26" Creator="liyao" Comments="" ID="49b93972c336b6d7d288b69e9e82c4b2">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2026-08-13 18:41:09" Creator="liyao" Comments="" ID="f1c4ed9ef784dfa4d7bac029ada93517">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2026.7.0.1</Library_Version>
@@ -66,7 +66,7 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
       <Copyright/>
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
-      <Release_Notes/>
+      <Release_Notes>[add] add "String to Path.vi" to csm-shared, which helps to convert backslash for linux.</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>

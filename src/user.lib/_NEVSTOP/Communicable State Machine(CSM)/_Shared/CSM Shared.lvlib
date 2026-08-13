@@ -36,6 +36,7 @@
 		<Item Name="Concatenate Non-Empty Strings.vi" Type="VI" URL="../Concatenate Non-Empty Strings.vi"/>
 		<Item Name="Pick Lines by Section Pattern.vi" Type="VI" URL="../Pick Lines by Section Pattern.vi"/>
 		<Item Name="Parse Contained Variables.vi" Type="VI" URL="../Parse Contained Variables.vi"/>
+		<Item Name="String to Path.vi" Type="VI" URL="../String to Path.vi"/>
 	</Item>
 	<Item Name="Semaphore" Type="Folder">
 		<Item Name="Semaphore Lock.vi" Type="VI" URL="../Semaphore Lock.vi"/>
