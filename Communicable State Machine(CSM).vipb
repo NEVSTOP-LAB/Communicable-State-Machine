@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2026-08-17 15:54:30" Creator="liyao" Comments="" ID="7a25e05f258091f68bd86d3518de0da6">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2026-08-18 14:05:34" Creator="liyao" Comments="" ID="f9f57d544b6e76a67fe521398b11342e">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2026.7.0.1</Library_Version>
@@ -67,7 +67,8 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
       <Release_Notes>[add] add "String to Path.vi" to csm-shared, which helps to convert backslash for linux.
-[update] #633 Set "Seperate Compile Code from Source File" option to false during installation.</Release_Notes>
+[update] #633 Set "Seperate Compile Code from Source File" option to false during installation.
+[update] Skip clearing mutation history steps during installation.</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
