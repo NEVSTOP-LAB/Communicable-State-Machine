@@ -12,6 +12,12 @@
 
 name: LabVIEW CI
 
+# 同一分支/标签的多次触发只保留最新一次运行：新 push 自动取消进行中的上一次运行，
+# 避免多次提交在自托管 runner 上重复构建、排队积压（与 usermanual-ci.yml 同款配置）
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
