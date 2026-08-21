@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2026-08-20 13:45:20" Creator="liyao" Comments="" ID="1602dd1be2c640b4832bd65d340211aa">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2026-08-21 14:58:23" Creator="liyao" Comments="" ID="f7bd3646b3634389753f6738de8ede41">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2026.7.0.1</Library_Version>
@@ -70,6 +70,7 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
 [update] #633 Set "Seperate Compile Code from Source File" option to false during installation.
 [update] Skip clearing mutation history steps during installation.
 [update] #593 enhance SafeStr Argument, which now could support including % in source string.
+[update] #636 Add [SyncMsg Complete] [AsynMsg Complete] LogType, and append response to it.
 [fix] #634 fix that USERLOG could not be managed by Global Filter Rule.</Release_Notes>
     </Description>
     <Destinations>
