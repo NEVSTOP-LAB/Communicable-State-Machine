@@ -93,6 +93,7 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="_CSM_GlobalLog_STATE_TYPE.ctl" Type="VI" URL="../_Support/Typedef/_CSM_GlobalLog_STATE_TYPE.ctl"/>
 			<Item Name="_CSM_GlobalLog Filter Rules - v1.0.ctl" Type="VI" URL="../_Support/Typedef/_CSM_GlobalLog Filter Rules - v1.0.ctl"/>
 			<Item Name="_CSM_GlobalLog Filter Rules - v1.1.ctl" Type="VI" URL="../_Support/Typedef/_CSM_GlobalLog Filter Rules - v1.1.ctl"/>
+			<Item Name="_CSM_GlobalLog Filter Rules - v1.2.ctl" Type="VI" URL="../_Support/Typedef/_CSM_GlobalLog Filter Rules - v1.2.ctl"/>
 			<Item Name="_CSM_List Module Scope.ctl" Type="VI" URL="../_Support/Typedef/_CSM_List Module Scope.ctl"/>
 		</Item>
 		<Item Name="Common" Type="Folder">
@@ -275,10 +276,13 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 				<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 				<Item Name="GEvt-Filter Global Log - v1.0.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Filter Global Log - v1.0.vi"/>
 				<Item Name="GEvt-Filter Global Log - v1.1.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Filter Global Log - v1.1.vi"/>
+				<Item Name="GEvt-Filter Global Log - v1.2.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Filter Global Log - v1.2.vi"/>
 				<Item Name="GEvt-Convert Filter Rules - v1.0.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Convert Filter Rules - v1.0.vi"/>
 				<Item Name="GEvt-Convert Filter Rules - v1.1.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Convert Filter Rules - v1.1.vi"/>
+				<Item Name="GEvt-Convert Filter Rules - v1.2.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Convert Filter Rules - v1.2.vi"/>
 				<Item Name="GEvt-Convert Filter Rules - Periodic Setting Only.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Convert Filter Rules - Periodic Setting Only.vi"/>
 				<Item Name="GEvt-Set Source Filter Rules - v1.0.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Set Source Filter Rules - v1.0.vi"/>
+				<Item Name="GEvt-Set Source Filter Rules - v1.2.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Set Source Filter Rules - v1.2.vi"/>
 			</Item>
 			<Item Name="GEvt-Refs.ctl" Type="VI" URL="../_Support/GlobalEvent/GEvt-Refs.ctl"/>
 			<Item Name="Cache-GEvt Refs.vi" Type="VI" URL="../_Support/GlobalEvent/Cache-GEvt Refs.vi"/>
