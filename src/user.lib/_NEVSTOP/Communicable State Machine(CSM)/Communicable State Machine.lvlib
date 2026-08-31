@@ -267,7 +267,7 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="Cache-BroadcastReg Status of Source.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/Cache-BroadcastReg Status of Source.vi"/>
 			<Item Name="Auto Broadcast State.vi" Type="VI" URL="../_Support/FGV-BroadcastRegistry/Auto Broadcast State.vi"/>
 		</Item>
-		<Item Name="Global Log" Type="Folder">
+		<Item Name="GlobalLog" Type="Folder">
 			<Item Name="LogFilter" Type="Folder">
 				<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 				<Item Name="LogFilter.lvclass" Type="LVClass" URL="../_Support/GlobalEvent/LogFilter/LogFilter.lvclass"/>

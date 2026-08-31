@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2026-08-31 21:43:08" Creator="liyao" Comments="" ID="ccc182fbd79697f7c925059e03027297">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2026-08-31 22:20:36" Creator="liyao" Comments="" ID="af848b1165d6f47534e4b712e88f57ed">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2026.7.0.1</Library_Version>
@@ -74,8 +74,8 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
 [update] #593 enhance SafeStr Argument, which now could support including % in source string.
 [update] #636 Add [SyncMsg Complete] [AsynMsg Complete] LogType, and append response to it.
 [fix] #634 fix that USERLOG could not be managed by Global Filter Rule.
-[add] #463 Add Global.Broadcast Filter rules for global-log
-[add] #463 Add CSM.Broadcast Filter rules for global-log
+[add] #462 Add Global.Broadcast Filter rules for global-log
+[add] #462 Add CSM.Broadcast Filter rules for global-log
 </Release_Notes>
     </Description>
     <Destinations>
