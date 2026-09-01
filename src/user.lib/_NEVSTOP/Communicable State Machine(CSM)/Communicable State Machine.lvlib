@@ -304,8 +304,8 @@ For information on NEVSTOP-LAB, visit: https://github.com/NEVSTOP-LAB</Property>
 			<Item Name="GEvt-Generate Unregister Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate Unregister Log.vi"/>
 			<Item Name="GEvt-Generate Module Created Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate Module Created Log.vi"/>
 			<Item Name="GEvt-Generate Module Destroyed Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate Module Destroyed Log.vi"/>
-			<Item Name="GEvt-Generate with Rule Check.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate with Rule Check.vi"/>
 			<Item Name="GEvt-Generate Message Log.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate Message Log.vi"/>
+			<Item Name="GEvt-Generate with Rule Check.vi" Type="VI" URL="../_Support/GlobalEvent/GEvt-Generate with Rule Check.vi"/>
 		</Item>
 		<Item Name="Message" Type="Folder">
 			<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
