@@ -84,12 +84,23 @@ CSM error handling function. If an error occurs, the error information is publis
 ## CSM - Generate User Global Log.vi
 Generates a custom user log for scenarios such as debugging. When the input parameters of this VI contain error information, CSM - Global Log Error Handler VI is called to record the error information.
 
+> [!NOTE]
+> <b>Custom User Name</b>
+>
+> Users can customize the name of the user log. The default is [User Log].
+>
+> For example: when the user does not customize the name, the default [User Log] is used. When the user customizes the name to [MYLOG], the log will be displayed as [MYLOG]. The comparison is as follows:
+>
+> 14:55:59.676 [14:55:59.676] [User Log] Module | Value >> 0.487854
+> 14:55:59.676 [14:55:59.676] [MYLOG] Module | Value >> 0.487854
+
 -- <b>Controls</b> --
 - <b>Log</b>: Event name.
 - <b>Arguments</b>: Event arguments.
 - <b>From Who</b>: Source.
 - <b>ModuleName</b>: Module name.
 - <b>Place ("" to Use VI's Name)</b>: Location where the error occurred. The default is the name of the VI.
+- <b>UserLog Name("" as Default)</b>: User log name. The default is "User Log".
 
 ## Filter Rules
 
