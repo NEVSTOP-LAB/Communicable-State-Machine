@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2026-07-28 13:59:44" Creator="liyao" Comments="" ID="70691c5c870962702e3ec364d7ff8f97">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2026-09-05 10:21:07" Creator="liyao" Comments="" ID="47c83b83910774b5a2f4aed055af6484">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
-    <Library_Version>2026.4.0.1</Library_Version>
+    <Library_Version>2026.7.0.1</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>src</Library_Source_Folder>
     <Library_Output_Folder>vip</Library_Output_Folder>
@@ -14,6 +14,8 @@
     <Product_Name>Communicable State Machine(CSM)</Product_Name>
     <Was_Built>true</Was_Built>
     <Target>LabVIEW</Target>
+    <Package_LabVIEW_Save_Version>false</Package_LabVIEW_Save_Version>
+    <LabVIEW_Save_Version/>
   </Library_General_Settings>
   <Advanced_Settings>
     <Package_Dependencies>
@@ -66,8 +68,19 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
       <Copyright/>
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
-      <Release_Notes>[feature] #550 Linux support validation
-[fix] #626 lvcsm is created when CSM is not used at all in project.</Release_Notes>
+      <Release_Notes>[add] add "String to Path.vi" to csm-shared, which helps to convert backslash for linux.
+[update] #633 Set "Seperate Compile Code from Source File" option to false during installation.
+[update] Skip clearing mutation history steps during installation.
+[update] #593 enhance SafeStr Argument, which now could support including % in source string.
+[update] #636 Add [SyncMsg Complete] [AsynMsg Complete] LogType, and append response to it.
+[fix] #634 fix that USERLOG could not be managed by Global Filter Rule.
+[add] #462 Add Global.Broadcast Filter rules for global-log
+[add] #462 Add CSM.Broadcast Filter rules for global-log
+[feature] #635 user-defined user log name
+[add] #635 #638 filter for user-defined user log.
+[update] some internal VIs as inline
+[fix][important] #632 fix the bug that state-registration arguments might be interupted by external message. 
+</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>

@@ -86,12 +86,24 @@ CSM错误处理函数。如果发生错误，错误信息将通过CSM Global Log
 ## CSM - Generate User Global Log.vi
 生成一个自定义的用户日志，用于调试等场景。当此VI的输入参数中包含错误信息时，将调用CSM - Global Log Error Handler VI记录错误信息。
 
+> [!NOTE]
+> <b>自定义用户名称</b>
+>
+> 用户可以自定义用户日志的名称，默认为 [User Log]
+>
+> 举例：当用户没有自定义名称时，使用默认的 [User Log]，当用户自定义名称为 [MYLOG]时，日志将会显示为 [MYLOG]。对比如下：
+>
+> 14:55:59.676 [14:55:59.676] [User Log] Module | Value >> 0.487854
+> 14:55:59.676 [14:55:59.676] [MYLOG] Module | Value >> 0.487854
+
+
 -- <b>输入控件(Controls)</b> --
 - <b>Log</b>: 事件名称。
 - <b>Arguments</b>: 事件参数。
 - <b>From Who</b>: 来源。
 - <b>ModuleName</b>: 模块名称。
 - <b>Place ("" to Use VI's Name)</b>: 发生错误的地点，默认使用VI的名称。
+- <b>UserLog Name("" as Default)</b>: 用户日志名称，默认使用 "User Log"。
 
 ## Filter Rules
 
@@ -193,8 +205,8 @@ CSM错误处理函数。如果发生错误，错误信息将通过CSM Global Log
 > 全局日志处理等级用于控制全局日志的处理速度，较高的等级会省略不同的信息，以提高处理速度。
 >
 > - Normal: 正常处理，会统计速率和计数，也会更新最新被过滤的参数;
-> - Level1: 对周期性的日志进行过滤，但只会更新被过滤的列表 
-> - Level2: 对周期性的日志进行过滤，但不更新被过滤列表 
+> - Level1: 对周期性的日志进行过滤，但只会更新被过滤的列表
+> - Level2: 对周期性的日志进行过滤，但不更新被过滤列表
 > - Level3/Level4：自动设置源端过滤规则，周期的日志不会在源头被发送，因此任何工具也将不能再检测到这个log记录。
 
 -- <b>输入控件(Controls)</b> --

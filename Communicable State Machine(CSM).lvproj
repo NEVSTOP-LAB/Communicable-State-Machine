@@ -158,6 +158,7 @@
 			<Item Name="testcase-CSMNonCSMCallerSupportAPI.lvclass" Type="LVClass" URL="../testcases/testcase-CSMNonCSMCallerSupportAPI/testcase-CSMNonCSMCallerSupportAPI.lvclass"/>
 			<Item Name="testcase-CSMAddonLoopSupport.lvclass" Type="LVClass" URL="../testcases/testcase-CSMAddonLoopSupport/testcase-CSMAddonLoopSupport.lvclass"/>
 			<Item Name="testcase-CSMManagementAPI.lvclass" Type="LVClass" URL="../testcases/testcase-CSMManagementAPI/testcase-CSMManagementAPI.lvclass"/>
+			<Item Name="testcase-issue.lvclass" Type="LVClass" URL="../testcases/testcase-issue/testcase-issue.lvclass"/>
 		</Item>
 		<Item Name="_TEST" Type="Folder" URL="../src/_TEST">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
