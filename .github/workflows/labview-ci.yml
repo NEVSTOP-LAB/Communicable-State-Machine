@@ -94,7 +94,21 @@ jobs:
         timeout-minutes: 60
 
       - name: Upload a Build Artifact
+        id: upload-build-artifact
         uses: actions/upload-artifact@v4.3.2
+        continue-on-error: true
+        with:
+          # Artifact name
+          name: ${{ steps.retry-build-vip.outputs.vipName || steps.build-vip.outputs.vipName }}
+          path: ${{ steps.retry-build-vip.outputs.vipPathName || steps.build-vip.outputs.vipPathName }}
+          # The desired behavior if no files are found using the provided path.
+          if-no-files-found: warn
+          retention-days: 90
+
+      - name: Retry Upload a Build Artifact
+        if: ${{ steps.upload-build-artifact.outcome == 'failure' }}
+        uses: actions/upload-artifact@v4.3.2
+        continue-on-error: true
         with:
           # Artifact name
           name: ${{ steps.retry-build-vip.outputs.vipName || steps.build-vip.outputs.vipName }}
