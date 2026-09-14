@@ -13,6 +13,7 @@
 	</Item>
 	<Item Name="LEGO" Type="Folder">
 		<Property Name="NI.SortType" Type="Int">3</Property>
+		<Item Name="Message Console.vi" Type="VI" URL="../Message Console.vi"/>
 		<Item Name="Broadcast Console.vi" Type="VI" URL="../Broadcast Console.vi"/>
 		<Item Name="HistoryList.vi" Type="VI" URL="../HistoryList.vi"/>
 		<Item Name="LogViewer.vi" Type="VI" URL="../LogViewer.vi"/>
