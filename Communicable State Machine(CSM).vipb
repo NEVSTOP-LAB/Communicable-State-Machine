@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2026-09-14 16:11:45" Creator="liyao" Comments="" ID="54346648597cda8c4992eb5bcd741d23">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2026-09-14 20:29:07" Creator="liyao" Comments="" ID="0479be0c47ac0a33a1459ed4df57d769">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
     <Library_Version>2026.7.0.1</Library_Version>
@@ -81,7 +81,7 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
 [update] some internal VIs as inline
 [fix][important] #632 fix the bug that state-registration arguments might be interupted by external message. 
 [update] #639 autofill API scope and support un-predefined API in cmbbox.
-</Release_Notes>
+[update] #639 support get python CSM API list</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
