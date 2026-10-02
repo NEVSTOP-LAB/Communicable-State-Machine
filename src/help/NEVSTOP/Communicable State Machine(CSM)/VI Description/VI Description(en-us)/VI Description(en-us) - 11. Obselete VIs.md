@@ -57,3 +57,5 @@ This VI is obsolete. Please use `Build Status Broadcast Message.vi`
 ## Build State String with Arguments++.vi
 
 This VI is obsolete. Please use `Build Message with Arguments++.vi`
+
+> - Ref: Build Message with Arguments++.vi

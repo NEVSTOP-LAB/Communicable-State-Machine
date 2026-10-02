@@ -7,6 +7,7 @@
 > The following is the information that can be logged:
 > - Module state modifications
 > - Inter-module message communication, including data returns
+> - Message completion records of asynchronous and synchronous messages, `AsyncMsg Complete` and `SyncMsg Complete`, which carry the response
 > - Module status publishing
 > - Module creation and destruction
 > - Module state registration and unregistration
@@ -23,7 +24,8 @@
 ## CSM - Global Log Queue.vi
 Obtains the global log queue refnum. Global log events can be retrieved from this queue.
 
-> - Ref: CSM Global Log Functionality Ref: CSM Global Log Acquisition Methods
+> - Ref: CSM Global Log Functionality
+> - Ref: CSM Global Log Acquisition Methods
 
 <b>Reference Examples</b>:
 - `4. Advance Examples\Filter From Source(Queue).vi`
@@ -125,10 +127,14 @@ Generates a custom user log for scenarios such as debugging. When the input para
 >   - <b>Log Type</b>: Such as state, message, broadcast, module Initialization, and so on.
 >   - <b>State Name</b>: Any module with the state name will be filtered.
 >   - <b>State Type</b>: Type of state, such as internal state, external message, and so on.
+>   - <b>Broadcast</b>: Broadcasts with the specified broadcast name will be filtered. Applies to Status Broadcast and Interrupt Broadcast logs.
+>   - <b>User Log</b>: User logs with the specified user log name will be filtered.
 > - <b>Module Rules</b>: Apply to specific modules. You can configure the following settings:
 >   - <b>Module Log Type</b>: Modules with the specified log types of the module are filtered.
 >   - <b>State Name</b>: Modules with the specified state name are filtered.
 >   - <b>State Type</b>: Modules with the specified state type are filtered.
+>   - <b>Broadcast</b>: Modules with the specified broadcast name are filtered.
+>   - <b>User Log</b>: Modules with the specified user log name are filtered.
 > - <b>Periodic Filter Rules</b>: This rule is currently only effective at the registration point because it is difficult to count numbers at the publication location.
 >   - Whether to enable periodic filtering.
 >   - <b>Threshold (#/s)</b>: Periodic filtering threshold.

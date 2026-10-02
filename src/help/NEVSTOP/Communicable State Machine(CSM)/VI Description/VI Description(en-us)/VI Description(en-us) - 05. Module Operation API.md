@@ -70,7 +70,7 @@ Sends a synchronous message to the CSM and waits for a reply before continuing c
 - If the target module does not exist, this VI returns a "Target Error".
 
 > - Ref: Synchronous Message
-> - Ref: Global Timeout Setting
+> - Ref: CSM Synchronous Message Global Timeout
 > - Ref: CSM Message Target Module Description
 
 -- <b>Controls</b> --
@@ -90,7 +90,7 @@ Sends a synchronous message to the CSM and waits for a reply before continuing c
 - If the message is sent but no reply message is received within the timeout, this VI returns a "CSM Timeout Error".
 
 > - Ref: Synchronous Message
-> - Ref: Global Timeout Setting
+> - Ref: CSM Synchronous Message Global Timeout
 > - Ref: CSM Message Target Module Description
 
 -- <b>Controls</b> --

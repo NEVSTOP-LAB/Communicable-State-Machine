@@ -5,7 +5,7 @@
 ### CSM - Compact Multiple States.vi
 将多个状态紧凑成单个字符串以供输入使用。
 
-> - Ref: CSM 消息拼接API
+> - Ref: 消息拼接API
 
 -- <b>输入控件(Controls)</b> --
 - <b>Multiple States</b>: CSM状态字符串数组。
@@ -25,7 +25,7 @@
 ### CSM - Build Exit Messages of CSMs.vi
 输入CSM模块名称，拼接生成退出消息(`Macro: Exit`)。
 
-> - Ref: CSM 消息拼接API
+> - Ref: 消息拼接API
 
 -- <b>输入控件(Controls)</b> --
 - <b>CSMs</b>: CSM模块名称数组。

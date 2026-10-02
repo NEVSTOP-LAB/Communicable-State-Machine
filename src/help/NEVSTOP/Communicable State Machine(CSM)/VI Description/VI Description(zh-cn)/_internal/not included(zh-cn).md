@@ -638,6 +638,12 @@ Occurrence Speed Counter.vi
 - <b>Period (0.1s)</b>:Controls
 - <b>Speed (#/s)</b>:Indicators
 
+Open VIRef to Compile.vi
+
+- <b>Contains Compiled Code</b>:Controls
+- <b>dup path</b>:Controls
+- <b>milliseconds to wait</b>:Controls
+
 Parse Action State After Exit.vi
 
 - <b>Need to Process</b>:Indicators
@@ -1116,6 +1122,11 @@ Split String Array By Patterns_CSM.vi
 
 
 
+String to Path.vi
+
+- <b>Path</b>:Indicators
+- <b>String</b>:Controls
+
 Text To Lines_CSM.vi
 
 - <b>Lines</b>:Indicators
@@ -1175,6 +1186,15 @@ _Array of VData to VCluster.vi
 
 - <b>Array</b>:Controls
 - <b>VCluster</b>:Indicators
+
+_Autofill API CmbBox.vi
+
+- <b>API Name</b>:Controls
+- <b>CSM Name</b>:Controls
+- <b>CmbBox</b>:Controls
+- <b>Current Module ("" to Generate an ID)</b>:Controls
+- <b>Force? (F)</b>:Controls
+- <b>Interface-Filter</b>:Controls
 
 _BMarkInfo to MCTable.vi
 
@@ -1313,6 +1333,16 @@ _Remove Duplicates Strings.vi
 - <b>Output Array</b>:Indicators
 
 _Request StringList with lvcsm Support.vi
+
+- <b>API Name</b>:Controls
+- <b>API Ref</b>:Controls
+- <b>CSM Name</b>:Controls
+- <b>CSMAPI List</b>:Indicators
+- <b>Config Path ("" For Lvcsm File)</b>:Controls
+- <b>Current Module ("" to Generate an ID)</b>:Controls
+- <b>Force? (F)</b>:Controls
+
+_Request StringList with lvcsm Support2.vi
 
 - <b>API Name</b>:Controls
 - <b>API Ref</b>:Controls

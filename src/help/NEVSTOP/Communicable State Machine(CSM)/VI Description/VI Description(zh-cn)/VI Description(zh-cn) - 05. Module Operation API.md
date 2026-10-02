@@ -70,7 +70,7 @@
 - 目标模块不存在，将返回Target Error。
 
 > - Ref: 同步消息
-> - Ref: 全局超时时间设置
+> - Ref: CSM同步消息全局超时
 > - Ref: CSM消息的目标模块说明
 
 -- <b>输入控件(Controls)</b> --
@@ -90,7 +90,7 @@
 - 可以发送消息，但超时未获取到返回消息，将返回CSM Timeout Error。
 
 > - Ref: 同步消息
-> - Ref: 全局超时时间设置
+> - Ref: CSM同步消息全局超时
 > - Ref: CSM消息的目标模块说明
 
 -- <b>输入控件(Controls)</b> --

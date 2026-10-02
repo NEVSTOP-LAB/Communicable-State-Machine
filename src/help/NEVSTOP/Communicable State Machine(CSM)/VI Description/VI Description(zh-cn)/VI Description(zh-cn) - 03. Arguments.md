@@ -37,13 +37,15 @@
 > <b>CSM安全字符串参数(CSM Safe String Argument)</b>
 >
 > 为了在CSM参数中传递任意字符串且不破坏消息解析，CSM内置了Safe-String编解码方案，其参数类型字符串为SAFESTR。转换过程如下:
-> 1. 扫描输入字符串，若出现CSM关键字(如`->`、`;`、`\r`等)，则将其替换为`%Hex`转义序列；
-> 2. 最终得到形如`<SAFESTR> 已转义字符串`的参数，可安全嵌入状态字符串，不会破坏CSM消息解析。
+> 1. 将输入字符串中的`%`替换为`%25`；
+> 2. 扫描字符串，若出现CSM关键字(如`->`、`;`、`\r`等)，则将其替换为`%Hex`转义序列；
+> 3. 最终得到形如`<SAFESTR> 已转义字符串`的参数，可安全嵌入状态字符串，不会破坏CSM消息解析。
+> 解码为逆过程：先将CSM关键字的`%Hex`转义序列还原，再将`%25`还原为`%`。
 
 ## CSM - Argument Type.vi
 从编码后的参数字符串中提取参数的编码类型标记。
 
-> - Ref: CSM参数类型
+> - Ref: CSM参数类型(Argument Type)
 
 -- <b>输入控件(Controls)</b> --
 - <b>Arguments</b>: 参数字符串。
@@ -65,7 +67,7 @@
 将参数字符串中的CSM关键字转换为%Hex格式，确保不影响CSM消息字符串解析。
 
 > - Ref: CSM消息关键字
-> - Ref: CSM安全字符串参数
+> - Ref: CSM安全字符串参数(CSM Safe String Argument)
 
 <b>参考范例</b>：`[CSM-Example]\0. Base Concepts\4.3 Arguments - Safe Arguments if it contains key words of CSM.vi`。
 
@@ -83,7 +85,7 @@
 - 当<b>Force Convert (F)</b>为TRUE时，无论参数类型标记为何值均进行转换。
 
 > - Ref: CSM消息关键字
-> - Ref: CSM安全字符串参数
+> - Ref: CSM安全字符串参数(CSM Safe String Argument)
 
 <b>参考范例</b>：`[CSM-Example]\0. Base Concepts\4.3 Arguments - Safe Arguments if it contains key words of CSM.vi`。
 
@@ -97,7 +99,7 @@
 ## CSM - Convert Data to HexStr.vi
 将LabVIEW任意数据类型转换为HEXSTR格式参数字符串。
 
-> - Ref: CSM参数类型
+> - Ref: CSM参数类型(Argument Type)
 > - Ref: CSM HEXSTR格式参数
 
 <b>参考范例</b>：`[CSM-Example]\0. Base Concepts\4.1 Arguments - Complex Data As Arguments.vi`。
@@ -111,7 +113,7 @@
 ## CSM - Convert HexStr to Data.vi
 将十六进制字符串参数转换回变体数据。
 
-> - Ref: CSM参数类型
+> - Ref: CSM参数类型(Argument Type)
 > - Ref: CSM HEXSTR格式参数
 
 <b>参考范例</b>：`[CSM-Example]\0. Base Concepts\4.1 Arguments - Complex Data As Arguments.vi`。
@@ -125,8 +127,8 @@
 ## CSM - Convert Error to Argument.vi
 将LabVIEW错误簇转换为CSM错误参数格式。
 
-> - Ref: CSM 参数类型
-> - Ref: CSM ERRSTR 格式参数
+> - Ref: CSM参数类型(Argument Type)
+> - Ref: CSM ERRSTR格式参数
 
 <b>参考范例</b>：`[CSM-Example]\0. Base Concepts\4.2 Arguments - Error As Arguments.vi`。
 
@@ -139,7 +141,7 @@
 ## CSM - Convert Argument to Error.vi
 将CSM错误参数格式转换为LabVIEW错误簇。
 
-> - Ref: CSM参数类型
+> - Ref: CSM参数类型(Argument Type)
 > - Ref: CSM ERRSTR格式参数
 
 <b>参考范例</b>：`[CSM-Example]\0. Base Concepts\4.2 Arguments - Error As Arguments.vi`。
