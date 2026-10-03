@@ -604,6 +604,16 @@ Replace(T) / Skip(F)</b>:Controls
 - <b>Diagram</b>:
 - <b>CSM-Helper out</b>: CSMHelper 输出
 - <b>Diagram</b>:Indicators
+### Read By Message (Resp-StrArray).vi
+
+-- <b>Controls(输入控件)</b> --
+- <b>Current Module ("" to Generate an ID)</b>:
+- <b>CSM Name</b>: CSM module name
+- <b>Arguments ("")</b>: Message arguments.
+- <b>State</b>:
+
+-- <b>Indicators(输出控件)</b> --
+- <b>Value</b>:
 ### Read Case Structure Ref.vi
 
 -- <b>Controls(输入控件)</b> --

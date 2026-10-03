@@ -13,7 +13,7 @@
 ## Parse State Queue++.vi
 解析CSM状态队列，返回将执行的下一个当前状态、参数等信息。
 
-> - Ref: CSM 模块间通信类型
+> - Ref: CSM模块间通信类型
 
 -- <b>输入控件(Controls)</b> --
 - <b>Response Arguments</b>: 来自上一个状态的响应参数。它应该连接到 CSM的移位寄存器，用于传递外部调用的返回值。
@@ -39,8 +39,8 @@
 > [!WARNING]
 > 该VI不能拼接"异步不等待返回"的异步消息，已在函数面板中隐藏，建议使用Build Message with Arguments++ VI代替该 VI。
 
-> - Ref: CSM 消息类型
-> - Ref: CSM 消息格式解析
+> - Ref: CSM消息类型
+> - Ref: CSM消息格式解析
 
       例如:
       发送给本地状态机时，<b>Target Module ("")</b>应设为空
@@ -69,7 +69,7 @@
 ## Build Message with Arguments++.vi
 该VI用于构建CSM消息字符串及操作字符串。
 
-> - Ref: CSM 消息拼接API
+> - Ref: 消息拼接API
 
 > [!NOTE]
 > <b>多态VI(Polymorphic VI)选项</b>
@@ -85,7 +85,7 @@
 > - CSM - Replace Marks in Messages.vi: 替换消息字符串中的占位符。
 > - CSM - Replace Mark with String Array.vi: 将单条状态字符串中的标签替换为数组字符串，并合并成描述一组状态的符串。
 
-> - Ref: CSM 模块间通信类型
+> - Ref: CSM模块间通信类型
 
 ### Build Message with Arguments(Auto Check).vi
 拼接生成CSM消息字符串，消息的类型符号会根据输入的<b>State with Arguments</b>自动检测。
@@ -328,7 +328,7 @@
 ### Add State(s) to Queue By BOOL(Element).vi
 将CSM消息字符串并入CSM消息队列中。提供了TRUE/FALSE两种状态的字符串选项，能够避免使用条件结构，提高代码可读性和编程效率。
 
-> - Ref: CSM的状态队列操作API
+> - Ref: CSM 的状态队列操作API
 
 -- <b>输入控件(Controls)</b> --
 - <b>State Queue ("")</b>: 整个状态队列被连接到此输入。
@@ -343,7 +343,7 @@
 ### Add State(s) to Queue By BOOL(Array Left).vi
 将CSM消息字符串并入CSM消息队列中。提供了TRUE/FALSE两种状态的字符串选项，能够避免使用条件结构，提高代码可读性和编程效率。
 
-> - Ref: CSM的状态队列操作API
+> - Ref: CSM 的状态队列操作API
 
 -- <b>输入控件(Controls)</b> --
 - <b>State Queue ("")</b>: 整个状态队列被连接到此输入。
