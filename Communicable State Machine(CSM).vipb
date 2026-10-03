@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2026-09-14 20:29:07" Creator="liyao" Comments="" ID="0479be0c47ac0a33a1459ed4df57d769">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2023-07-01 11:20:47" Modified_Date="2026-10-03 23:40:28" Creator="liyao" Comments="" ID="0159880eaf1dbc6c94979ab181f8a9ad">
   <Library_General_Settings>
     <Package_File_Name>NEVSTOP_lib_Communicable_State_Machine</Package_File_Name>
-    <Library_Version>2026.7.0.1</Library_Version>
+    <Library_Version>2026.7.1.1</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>src</Library_Source_Folder>
     <Library_Output_Folder>vip</Library_Output_Folder>
@@ -68,20 +68,28 @@ For information on NEVSTOP-LAB, visit: &lt;color=blue&gt;&lt;u&gt;&lt;i&gt;https
       <Copyright/>
       <Packager>NEVSTOP</Packager>
       <URL>https://github.com/NEVSTOP-LAB</URL>
-      <Release_Notes>[add] add "String to Path.vi" to csm-shared, which helps to convert backslash for linux.
-[update] #633 Set "Seperate Compile Code from Source File" option to false during installation.
-[update] Skip clearing mutation history steps during installation.
-[update] #593 enhance SafeStr Argument, which now could support including % in source string.
-[update] #636 Add [SyncMsg Complete] [AsynMsg Complete] LogType, and append response to it.
-[fix] #634 fix that USERLOG could not be managed by Global Filter Rule.
-[add] #462 Add Global.Broadcast Filter rules for global-log
-[add] #462 Add CSM.Broadcast Filter rules for global-log
-[feature] #635 user-defined user log name
-[add] #635 #638 filter for user-defined user log.
-[update] some internal VIs as inline
-[fix][important] #632 fix the bug that state-registration arguments might be interupted by external message. 
-[update] #639 autofill API scope and support un-predefined API in cmbbox.
-[update] #639 support get python CSM API list</Release_Notes>
+      <Release_Notes>## Core
+  [add] Add "String to Path.vi" to csm-shared, which converts paths with backslashes, so CSM works on Linux
+  [add] #587 Convert more internal VIs to inline, to improve the run-time performance
+  [update] #593 Enhance "SafeStr" Argument: source strings that already contain "%" are converted correctly now
+  [update] #633 Set "Separate compiled code from source file" to false during installation, so that the installed VIs open faster
+  [update] Skip mass compiling LLBs and clearing mutation history steps during installation, to shorten the installation time
+  [fix][important] #632 Fix the bug that arguments of state registration might be interrupted by external messages
+
+## Global Log
+  [add] #462 Support broadcast filter rules in global log filter settings, both for all modules ("Global Rules") and for a specific module ("Module Rules")
+  [add] #636 Add "[SyncMsg Complete]" and "[AsyncMsg Complete]" log types, and append the response to these logs
+  [add] #635 Support user-defined USERLOG name, specified by the "UserLog Name" input
+  [add] #638 Support filtering user-defined user logs by global filter rules
+  [update] Refine the "[Module Created]" global log message
+  [fix] #634 Fix that USERLOG could not be managed by global filter rules
+
+## Debug Tools
+  [add] #639 Support Python CSM modules in Debug Console: read the CSM API list of Python modules and cache it
+  [update] #639 Autofill the API scope in the API combo box, and support sending APIs that are not predefined
+
+## Doc/Palette
+  [doc] Update both en-us and zh-cn VI description documents: Python CSM API, global log filter rules and newly added VIs</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
