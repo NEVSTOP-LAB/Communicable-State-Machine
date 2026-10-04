@@ -158,6 +158,7 @@
 			<Item Name="testcase-CSMNonCSMCallerSupportAPI.lvclass" Type="LVClass" URL="../testcases/testcase-CSMNonCSMCallerSupportAPI/testcase-CSMNonCSMCallerSupportAPI.lvclass"/>
 			<Item Name="testcase-CSMAddonLoopSupport.lvclass" Type="LVClass" URL="../testcases/testcase-CSMAddonLoopSupport/testcase-CSMAddonLoopSupport.lvclass"/>
 			<Item Name="testcase-CSMManagementAPI.lvclass" Type="LVClass" URL="../testcases/testcase-CSMManagementAPI/testcase-CSMManagementAPI.lvclass"/>
+			<Item Name="testcase-issue.lvclass" Type="LVClass" URL="../testcases/testcase-issue/testcase-issue.lvclass"/>
 		</Item>
 		<Item Name="_TEST" Type="Folder" URL="../src/_TEST">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
@@ -572,6 +573,7 @@
 				<Item Name="Build Path - File Names Array - path__ogtk__jki_vi_tester.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/VI Tester/_support/Support.llb/Build Path - File Names Array - path__ogtk__jki_vi_tester.vi"/>
 				<Item Name="Build Path - File Names and Paths Arrays - path__ogtk__jki_vi_tester.vi" Type="VI" URL="/&lt;vilib&gt;/addons/_JKI Toolkits/VI Tester/_support/Support.llb/Build Path - File Names and Paths Arrays - path__ogtk__jki_vi_tester.vi"/>
 				<Item Name="Get LV Class Path.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/LVClass/Get LV Class Path.vi"/>
+				<Item Name="UserTags.lvlib" Type="Library" URL="/&lt;vilib&gt;/UserTags/UserTags.lvlib"/>
 			</Item>
 			<Item Name="Shortcut Menu Item Definition.ctl" Type="VI" URL="/&lt;resource&gt;/plugins/PopupMenus/support/Shortcut Menu Item Definition.ctl"/>
 			<Item Name="Transaction Control.ctl" Type="VI" URL="/&lt;resource&gt;/plugins/PopupMenus/support/Transaction Control.ctl"/>

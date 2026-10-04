@@ -7,6 +7,7 @@
 > The following is the information that can be logged:
 > - Module state modifications
 > - Inter-module message communication, including data returns
+> - Message completion records of asynchronous and synchronous messages, `AsyncMsg Complete` and `SyncMsg Complete`, which carry the response
 > - Module status publishing
 > - Module creation and destruction
 > - Module state registration and unregistration
@@ -23,7 +24,8 @@
 ## CSM - Global Log Queue.vi
 Obtains the global log queue refnum. Global log events can be retrieved from this queue.
 
-> - Ref: CSM Global Log Functionality Ref: CSM Global Log Acquisition Methods
+> - Ref: CSM Global Log Functionality
+> - Ref: CSM Global Log Acquisition Methods
 
 <b>Reference Examples</b>:
 - `4. Advance Examples\Filter From Source(Queue).vi`
@@ -84,12 +86,23 @@ CSM error handling function. If an error occurs, the error information is publis
 ## CSM - Generate User Global Log.vi
 Generates a custom user log for scenarios such as debugging. When the input parameters of this VI contain error information, CSM - Global Log Error Handler VI is called to record the error information.
 
+> [!NOTE]
+> <b>Custom User Name</b>
+>
+> Users can customize the name of the user log. The default is [User Log].
+>
+> For example: when the user does not customize the name, the default [User Log] is used. When the user customizes the name to [MYLOG], the log will be displayed as [MYLOG]. The comparison is as follows:
+>
+> 14:55:59.676 [14:55:59.676] [User Log] Module | Value >> 0.487854
+> 14:55:59.676 [14:55:59.676] [MYLOG] Module | Value >> 0.487854
+
 -- <b>Controls</b> --
 - <b>Log</b>: Event name.
 - <b>Arguments</b>: Event arguments.
 - <b>From Who</b>: Source.
 - <b>ModuleName</b>: Module name.
 - <b>Place ("" to Use VI's Name)</b>: Location where the error occurred. The default is the name of the VI.
+- <b>UserLog Name("" as Default)</b>: User log name. The default is "User Log".
 
 ## Filter Rules
 
@@ -114,10 +127,14 @@ Generates a custom user log for scenarios such as debugging. When the input para
 >   - <b>Log Type</b>: Such as state, message, broadcast, module Initialization, and so on.
 >   - <b>State Name</b>: Any module with the state name will be filtered.
 >   - <b>State Type</b>: Type of state, such as internal state, external message, and so on.
+>   - <b>Broadcast</b>: Broadcasts with the specified broadcast name will be filtered. Applies to Status Broadcast and Interrupt Broadcast logs.
+>   - <b>User Log</b>: User logs with the specified user log name will be filtered.
 > - <b>Module Rules</b>: Apply to specific modules. You can configure the following settings:
 >   - <b>Module Log Type</b>: Modules with the specified log types of the module are filtered.
 >   - <b>State Name</b>: Modules with the specified state name are filtered.
 >   - <b>State Type</b>: Modules with the specified state type are filtered.
+>   - <b>Broadcast</b>: Modules with the specified broadcast name are filtered.
+>   - <b>User Log</b>: Modules with the specified user log name are filtered.
 > - <b>Periodic Filter Rules</b>: This rule is currently only effective at the registration point because it is difficult to count numbers at the publication location.
 >   - Whether to enable periodic filtering.
 >   - <b>Threshold (#/s)</b>: Periodic filtering threshold.

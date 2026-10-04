@@ -19,7 +19,7 @@ CSM Debug Console, you can use this tool:
 
 New version of the CSM Debug Console, you can use this tool:
 1. Select an existing CSM instance, open the front panel and block diagram.
-2. Scan the API interfaces of existing CSM instances.
+2. Scan the API interfaces of existing CSM instances, including the API list of Python CSM modules. The API list is auto-filled, and APIs that are not predefined can also be called.
 3. Select an API interface, call synchronously or asynchronously, view the return value.
 4. View the overall program's running log.
 5. Run Scripts.

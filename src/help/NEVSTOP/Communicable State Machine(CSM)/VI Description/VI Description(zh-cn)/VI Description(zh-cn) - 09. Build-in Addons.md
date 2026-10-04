@@ -111,7 +111,7 @@ CSM - Start File Logger VI中原本使用的线程VI。已废弃，目前使用C
 
 <b>参考范例</b>:  `Addons - Loop Support\CSMLS - Continuous Loop in CSM Example.vi`。
 
-> - Ref: CSM Loop Support设计的原因
+> - Ref: CSM LOOP Support设计的原因
 > - Ref: CSM LOOP Support应用范围
 
 > [!WARNING]

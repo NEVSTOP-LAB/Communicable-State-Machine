@@ -11,6 +11,7 @@
 	<Item Name="Support" Type="Folder">
 		<Item Name="_Open VI Reference Without Loading Deps.vi" Type="VI" URL="../_Open VI Reference Without Loading Deps.vi"/>
 		<Item Name="_Request StringList with lvcsm Support.vi" Type="VI" URL="../_Request StringList with lvcsm Support.vi"/>
+		<Item Name="_Request StringList with lvcsm Support2.vi" Type="VI" URL="../_Request StringList with lvcsm Support2.vi"/>
 		<Item Name="_Read ItemArray.vi" Type="VI" URL="../_Read ItemArray.vi"/>
 		<Item Name="_Remove Duplicates Strings.vi" Type="VI" URL="../_Remove Duplicates Strings.vi"/>
 		<Item Name="_UpdatePictureControl.vi" Type="VI" URL="../../../_popupMenuPlugin/_support/_UpdatePictureControl.vi"/>

@@ -317,6 +317,13 @@ Returns any argument(s) that may be used in the current state string. These argu
 -- <b>Indicators(输出控件)</b> --
 - <b>GlobalLogFilter</b>:
 - <b>GlobalLogFilter</b>:Indicators
+### GEvt-Convert Filter Rules - v1.2.vi
+
+-- <b>Controls(输入控件)</b> --
+- <b>Rules-v1.2</b>:
+
+-- <b>Indicators(输出控件)</b> --
+- <b>GlobalLogFilter</b>:
 ### GEvt-Filter Global Log - v1.0.vi
 
 -- <b>Controls(输入控件)</b> --
@@ -330,6 +337,18 @@ Returns any argument(s) that may be used in the current state string. These argu
 - <b>Matched Previous?</b>:Controls
 - <b>Matched? (Dup)</b>:Indicators
 - <b>Rules-v1</b>:Controls
+### GEvt-Filter Global Log - v1.2.vi
+
+-- <b>Controls(输入控件)</b> --
+- <b>Level (Normal)</b>:
+- <b>Rules</b>:
+- <b>Matched Previous?</b>:
+- <b>Cross CSM Data (In)</b>:
+
+-- <b>Indicators(输出控件)</b> --
+- <b>Matched? (Dup)</b>:
+- <b>Additional Info</b>:
+- <b>Cross CSM Data</b>:
 ### GEvt-Generate Complete Log.vi
 
 -- <b>Controls(输入控件)</b> --
@@ -513,6 +532,10 @@ Returns any argument(s) that may be used in the current state string. These argu
 -- <b>Controls(输入控件)</b> --
 - <b>Rules-v1</b>:
 - <b>Rules-v1</b>:Controls
+### GEvt-Set Source Filter Rules - v1.2.vi
+
+-- <b>Controls(输入控件)</b> --
+- <b>Rules-v1.2</b>:
 ### GEvt-ThreadQueueName.vi
 
 -- <b>Indicators(输出控件)</b> --
@@ -544,6 +567,17 @@ Returns any argument(s) that may be used in the current state string. These argu
 - <b>GlobalLogFilter out</b>:
 - <b>GlobalLogFilter Out</b>:Indicators
 - <b>Rule Strings</b>:Indicators
+### CSM Check - Broadcast.vi
+
+-- <b>Controls(输入控件)</b> --
+- <b>Matched Previous?</b>:
+- <b>Cross CSM Data (In)</b>:
+- <b>GlobalLogFilter.lvclass</b>:
+
+-- <b>Indicators(输出控件)</b> --
+- <b>Matched? (Dup)</b>:
+- <b>Cross CSM Data</b>:
+- <b>GlobalLogFilter.lvclass (Dup)</b>:
 ### CSM Check - LogType.vi
 
 -- <b>Controls(输入控件)</b> --
@@ -589,6 +623,28 @@ Returns any argument(s) that may be used in the current state string. These argu
 - <b>GlobalLogFilter.lvclass</b>:Controls
 - <b>Matched Previous?</b>:Controls
 - <b>Matched? (Dup)</b>:Indicators
+### CSM Check - UserLog.vi
+
+-- <b>Controls(输入控件)</b> --
+- <b>Matched Previous?</b>:
+- <b>Cross CSM Data (In)</b>:
+- <b>GlobalLogFilter.lvclass</b>:
+
+-- <b>Indicators(输出控件)</b> --
+- <b>Matched? (Dup)</b>:
+- <b>Cross CSM Data</b>:
+- <b>GlobalLogFilter.lvclass (Dup)</b>:
+### Group Check - Broadcast.vi
+
+-- <b>Controls(输入控件)</b> --
+- <b>Matched Previous?</b>:
+- <b>Cross CSM Data (In)</b>:
+- <b>GlobalLogFilter.lvclass</b>:
+
+-- <b>Indicators(输出控件)</b> --
+- <b>Matched? (Dup)</b>:
+- <b>Cross CSM Data</b>:
+- <b>GlobalLogFilter.lvclass (Dup)</b>:
 ### Group Check - CSM.vi
 
 -- <b>Controls(输入控件)</b> --
@@ -649,6 +705,25 @@ Returns any argument(s) that may be used in the current state string. These argu
 - <b>GlobalLogFilter.lvclass</b>:Controls
 - <b>Matched Previous?</b>:Controls
 - <b>Matched? (Dup)</b>:Indicators
+### Group Check - UserLog.vi
+
+-- <b>Controls(输入控件)</b> --
+- <b>Matched Previous?</b>:
+- <b>Cross CSM Data (In)</b>:
+- <b>GlobalLogFilter.lvclass</b>:
+
+-- <b>Indicators(输出控件)</b> --
+- <b>Matched? (Dup)</b>:
+- <b>Cross CSM Data</b>:
+- <b>GlobalLogFilter.lvclass (Dup)</b>:
+### Set CSM Broadcast Filter.vi
+
+-- <b>Controls(输入控件)</b> --
+- <b>CSM:Broadcast</b>:
+- <b>GlobalLogFilter In</b>:
+
+-- <b>Indicators(输出控件)</b> --
+- <b>GlobalLogFilter Out</b>:
 ### Set CSM LogType Filter.vi
 
 -- <b>Controls(输入控件)</b> --
@@ -679,6 +754,22 @@ Returns any argument(s) that may be used in the current state string. These argu
 - <b>GlobalLogFilter out</b>:
 - <b>GlobalLogFilter Out</b>:Indicators
 - <b>LogType</b>:Controls
+### Set CSM UserLog Filter.vi
+
+-- <b>Controls(输入控件)</b> --
+- <b>CSM:UserLog</b>:
+- <b>GlobalLogFilter In</b>:
+
+-- <b>Indicators(输出控件)</b> --
+- <b>GlobalLogFilter Out</b>:
+### Set Global Broadcast Filter.vi
+
+-- <b>Controls(输入控件)</b> --
+- <b>Group:Broadcast</b>:
+- <b>GlobalLogFilter In</b>:
+
+-- <b>Indicators(输出控件)</b> --
+- <b>GlobalLogFilter Out</b>:
 ### Set Global CSM Filter.vi
 
 -- <b>Controls(输入控件)</b> --
@@ -719,6 +810,14 @@ Returns any argument(s) that may be used in the current state string. These argu
 - <b>GlobalLogFilter out</b>:
 - <b>GlobalLogFilter Out</b>:Indicators
 - <b>Group:LogType</b>:Controls
+### Set Global UserLog Filter.vi
+
+-- <b>Controls(输入控件)</b> --
+- <b>Group:UserLog</b>:
+- <b>GlobalLogFilter In</b>:
+
+-- <b>Indicators(输出控件)</b> --
+- <b>GlobalLogFilter Out</b>:
 ### Log State Type.vi
 
 -- <b>Controls(输入控件)</b> --

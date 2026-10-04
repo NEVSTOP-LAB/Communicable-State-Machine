@@ -33,8 +33,10 @@
 > <b>CSM Safe String Argument</b>
 >
 > To pass arbitrary strings in CSM arguments without disrupting message parsing, CSM has a built-in Safe-String encoding/decoding scheme. The argument type string is SAFESTR. The conversion process is as follows:
-> 1. Scan the input string. If any CSM keywords, such as `->`, `;`, `\r` appear, replace them with `%Hex` escape sequences.
-> 2. Obtain the argument in the form `<SAFESTR> escaped string`, which can be safely embedded in the state string without disrupting CSM message parsing.
+> 1. Replace `%` in the input string with `%25`.
+> 2. Scan the string. If any CSM keywords, such as `->`, `;`, `\r` appear, replace them with `%Hex` escape sequences.
+> 3. Obtain the argument in the form `<SAFESTR> escaped string`, which can be safely embedded in the state string without disrupting CSM message parsing.
+> Decoding is the reverse process: the `%Hex` escape sequences of CSM keywords are converted back first, then `%25` is converted back to `%`.
 
 ## CSM - Argument Type.vi
 Extracts the parameter encoding type tag from the encoded argument string.

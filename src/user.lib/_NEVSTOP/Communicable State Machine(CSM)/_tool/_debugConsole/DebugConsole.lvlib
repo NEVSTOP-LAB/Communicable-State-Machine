@@ -9,13 +9,14 @@
 		<Item Name="_BroadcastDef.ctl" Type="VI" URL="../_BroadcastDef.ctl"/>
 		<Item Name="_Broadcast Message.vi" Type="VI" URL="../_Broadcast Message.vi"/>
 		<Item Name="_ui.vi" Type="VI" URL="../_ui.vi"/>
+		<Item Name="_Autofill API CmbBox.vi" Type="VI" URL="../_Autofill API CmbBox.vi"/>
 	</Item>
 	<Item Name="LEGO" Type="Folder">
 		<Property Name="NI.SortType" Type="Int">3</Property>
+		<Item Name="Message Console.vi" Type="VI" URL="../Message Console.vi"/>
 		<Item Name="Broadcast Console.vi" Type="VI" URL="../Broadcast Console.vi"/>
 		<Item Name="HistoryList.vi" Type="VI" URL="../HistoryList.vi"/>
 		<Item Name="LogViewer.vi" Type="VI" URL="../LogViewer.vi"/>
-		<Item Name="Message Console.vi" Type="VI" URL="../Message Console.vi"/>
 		<Item Name="Registration Console.vi" Type="VI" URL="../Registration Console.vi"/>
 		<Item Name="Script-Window.vi" Type="VI" URL="../Script-Window.vi"/>
 		<Item Name="Module Information.vi" Type="VI" URL="../Module Information.vi"/>
