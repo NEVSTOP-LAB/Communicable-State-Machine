@@ -9,6 +9,7 @@
 #    Check_Broken_VIs / Run Testcases ignored '**.vipb' but not 'testcases/**').
 #   To keep this merged workflow triggering whenever ANY original workflow
 #   would have triggered, only the intersection of the ignore lists is used.
+# 本次修订从 push.paths-ignore 移除 '**.yml'：工作流自身的改动也需要一次构建验证。
 
 name: LabVIEW CI
 
@@ -20,7 +21,11 @@ concurrency:
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
+  # 触发方式：push（任意分支）+ 手动 workflow_dispatch。
+  # 不使用 pull_request(closed)：该事件下 github.ref 是 base 分支（main），与合并产生
+  # 的 push(main) 进入同一个 concurrency 组，先启动的 push 运行会被后启动的 closed
+  # 运行取消，main 的构建与 FTP 归档因此丢失。
+  # paths-ignore 不含 '**.yml'：工作流/配置文件的改动同样需要一次构建验证。
   push:
     paths-ignore:
       - '**.md'
@@ -29,20 +34,6 @@ on:
       - '**.png'
       - '**.svg'
       - '**.json'
-      - '**.yml'
-
-  pull_request:
-    branches:
-      - main
-    types: [closed]
-    paths-ignore:
-      - '**.md'
-      - '**.txt'
-      - '**.drawio'
-      - '**.png'
-      - '**.svg'
-      - '**.json'
-      - '**.yml'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
